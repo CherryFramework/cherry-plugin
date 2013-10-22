@@ -30,12 +30,6 @@
 			$main_page_menu_title = __('Main Page', CHERRY_PLUGIN_DOMIN);
 			add_submenu_page($cherry_plugin_menu, $main_page_menu_title, $main_page_menu_title, $capability, 'plugin-main-page', 'cherry_plugin_main_page');
 
-			/*$shortcode_menu_title = __('Shortcode', CHERRY_PLUGIN_DOMIN);
-			add_submenu_page($cherry_plugin_menu, $shortcode_menu_title, $shortcode_menu_title, $capability, 'shortcode-settings', 'cherry_plugin_shortcode_page');
-
-			$widgets_menu_title = __('Widgets', CHERRY_PLUGIN_DOMIN);
-			add_submenu_page($cherry_plugin_menu, $widgets_menu_title, $widgets_menu_title, $capability, 'widgets-settings', 'cherry_plugin_widgets_page');
-*			*/
 			$import_menu_title = __('Import', CHERRY_PLUGIN_DOMIN);
 			add_submenu_page($cherry_plugin_menu, $import_menu_title, $import_menu_title, $capability, 'import-page', 'cherry_plugin_import_page');
 
