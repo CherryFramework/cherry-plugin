@@ -1,4 +1,9 @@
 /* cherry_plugin */
+hr{
+	border: none;
+	background:#DFDFDF;
+	height: 1px;
+}
 /* header */
 .cherry-plugin header div[class^="icon"]{
 	margin-top: 7px;
@@ -25,3 +30,18 @@
 	vertical-align: middle;
 }
 /* end header */
+/* Import & Export */
+.impotr_export_wrapper{
+	margin: 10px 0 0 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+*[class^="button"].not_active{
+	opacity: 0.5;
+	cursor: default;
+	pointer-events: none;
+}
+.buttin-left{
+	float: right;
+}
+/* End Import & Export */

@@ -19,12 +19,12 @@
 //added menu item
 	if(!function_exists('cherry_plugin_menu')){
 		function cherry_plugin_menu() {
-			global $cherry_plugin_menu, $submenu;
+			global $cherry_plugin_menu, $submenu, $main_page_link;
 			$cherry_plugin_menu = 'cherry-plugin-page';
 			$capability = 'activate_plugins';
+			$main_page_link = 'plugin-main-page';
 
 			$plugin_menu_title = __('Cherry plugin', CHERRY_PLUGIN_DOMIN);
-
 			add_menu_page($plugin_menu_title, $plugin_menu_title, $capability, $cherry_plugin_menu, 'cherry_plugin_main_page', '', 62);
 
 			$main_page_menu_title = __('Main Page', CHERRY_PLUGIN_DOMIN);
@@ -43,9 +43,9 @@
 /* settings link in plugin management screen */
 	if(!function_exists('cherry_plugin_settings_link')){
 		function cherry_plugin_settings_link($actions, $file) {
-			global $cherry_plugin_menu;
+			global $cherry_plugin_menu, $main_page_link;
 			if(false !== strpos($file, strtolower('cherry-plugin')))
-				$actions['settings'] = '<a href="admin.php?page='.$cherry_plugin_menu.'">'.__('Settings', CHERRY_PLUGIN_DOMIN).'</a>';
+				$actions['settings'] = '<a href="admin.php?page='.$main_page_link.'">'.__('Settings', CHERRY_PLUGIN_DOMIN).'</a>';
 			return $actions;
 		}
 		add_filter('plugin_action_links', 'cherry_plugin_settings_link', 2, 2);
