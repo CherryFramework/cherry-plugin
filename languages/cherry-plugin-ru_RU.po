@@ -1,0 +1,3698 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ru_RU\n"
+"POT-Creation-Date: 2013-11-12 17:18+0200\n"
+"PO-Revision-Date: 2013-11-12 17:19+0200\n"
+"Last-Translator: Alex Ross <alex@template-telp.com>\n"
+"Language-Team:  <demolink@info.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ./\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../admin/admin.php:17
+#, fuzzy
+msgid "Cherry plugin"
+msgstr "Настройки Cherry"
+
+#: ../admin/admin.php:20
+#, fuzzy
+msgid "Main Page"
+msgstr "Страница"
+
+#: ../admin/admin.php:23
+msgid "Import"
+msgstr "Импорт"
+
+#: ../admin/admin.php:26
+msgid "Export"
+msgstr "Экспорт"
+
+#: ../admin/admin.php:38
+#, fuzzy
+msgid "Settings"
+msgstr "Настройки ссылок"
+
+#: ../admin/plugin-components.php:36
+msgid "Documentation"
+msgstr "Документация"
+
+#: ../admin/plugin-components.php:37
+msgid "Support"
+msgstr "Поддержка"
+
+#: ../admin/plugin-pages.php:5
+#, fuzzy
+msgid "Cherry Plugin"
+msgstr "Настройки Cherry"
+
+#: ../admin/plugin-pages.php:13
+#, fuzzy
+msgid "Cherry Import"
+msgstr "Магазин Cherry"
+
+#: ../admin/plugin-pages.php:45
+#, fuzzy
+msgid "Cherry Export"
+msgstr "Магазин Cherry"
+
+#: ../admin/import-export/import.php:1
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, "
+"vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo\n"
+"lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend "
+"tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. "
+"Quisque nec\n"
+"mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, "
+"elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam\n"
+"mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. "
+"Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque\n"
+"laoreet sem sit amet orci ullamcorper at ultricies metus viverra. "
+"Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.\n"
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, "
+"vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo\n"
+"lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend "
+"tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. "
+"Quisque nec\n"
+"mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, "
+"elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam\n"
+"mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. "
+"Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque\n"
+"laoreet sem sit amet orci ullamcorper at ultricies metus viverra. "
+"Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam."
+msgstr ""
+
+#: ../admin/import-export/import.php:66
+msgid ""
+"Some of your server settings do not meet the requirements for installing the "
+"sample data. Please, consult with your hosting provider on how to increase "
+"the required values."
+msgstr ""
+"Некоторые из настроек вашего сервера не соответствуют требованиям для "
+"установки демонстрационных данных. Уточните, пожалуйста, у Вашего хостера, "
+"как увеличить требуемые параметры."
+
+#: ../admin/import-export/import.php:69
+msgid "Server Settings"
+msgstr "Настройки сервера"
+
+#: ../admin/import-export/import.php:70
+msgid "Current"
+msgstr "Текущие"
+
+#: ../admin/import-export/import.php:71
+msgid "Required"
+msgstr "Требуется"
+
+#: ../admin/import-export/import.php:104
+#: ../includes/shortcodes/shortcodes.php:213
+msgid "Next"
+msgstr "Следующая"
+
+#: ../admin/shortcodes/dialog.php:21
+msgid "Shortcode Options"
+msgstr "Настройки шорткодов"
+
+#: ../admin/shortcodes/dialog.php:31
+msgid "Cancel"
+msgstr "Отмена"
+
+#: ../admin/shortcodes/dialog.php:32 ../admin/shortcodes/editor-plugin.php:703
+msgid "Insert Shortcode"
+msgstr "Вставить шорткод"
+
+#: ../admin/shortcodes/editor-plugin.php:709
+msgid "Posts"
+msgstr "Записи"
+
+#: ../admin/shortcodes/editor-plugin.php:710
+msgid "Posts Grid"
+msgstr "Сетка записей"
+
+#: ../admin/shortcodes/editor-plugin.php:711
+msgid "Posts List"
+msgstr "Список записей"
+
+#: ../admin/shortcodes/editor-plugin.php:712
+msgid "Mini Posts Grid"
+msgstr "Маленькая сетка записей"
+
+#: ../admin/shortcodes/editor-plugin.php:713
+msgid "Mini Posts List"
+msgstr "Маленький список записей"
+
+#: ../admin/shortcodes/editor-plugin.php:714
+msgid "Recent Posts"
+msgstr "Последние записи"
+
+#: ../admin/shortcodes/editor-plugin.php:715
+msgid "Recent Testimonials"
+msgstr "Последние отзывы"
+
+#: ../admin/shortcodes/editor-plugin.php:716
+msgid "Basic"
+msgstr "Основные"
+
+#: ../admin/shortcodes/editor-plugin.php:717
+msgid "Banner"
+msgstr "Банер"
+
+#: ../admin/shortcodes/editor-plugin.php:718
+#: ../includes/shortcodes/post-cycle.php:141
+#: ../includes/shortcodes/posts-list.php:161
+#: ../includes/shortcodes/posts-list.php:162
+msgid "Comments"
+msgstr "Комментарии"
+
+#: ../admin/shortcodes/editor-plugin.php:719
+msgid "Post Cycle"
+msgstr "Цикл записей"
+
+#: ../admin/shortcodes/editor-plugin.php:720
+msgid "Carousel (Elasti)"
+msgstr "Карусель (Elasti)"
+
+#: ../admin/shortcodes/editor-plugin.php:721
+msgid "Carousel (OWL)"
+msgstr "Карусель (OWL)"
+
+#: ../admin/shortcodes/editor-plugin.php:722
+msgid "Roundabout"
+msgstr "Круговая карусель"
+
+#: ../admin/shortcodes/editor-plugin.php:723
+msgid "Service Box"
+msgstr "Сервисная информация"
+
+#: ../admin/shortcodes/editor-plugin.php:724
+msgid "Hero Unit"
+msgstr "Hero элемент"
+
+#: ../admin/shortcodes/editor-plugin.php:725
+msgid "Categories"
+msgstr "Категории"
+
+#: ../admin/shortcodes/editor-plugin.php:726
+#: ../includes/shortcodes/posts-list.php:281
+msgid "Tags"
+msgstr "Тэги"
+
+#: ../admin/shortcodes/editor-plugin.php:727
+msgid "Columns"
+msgstr "Колонки"
+
+#: ../admin/shortcodes/editor-plugin.php:742
+msgid "Fluid Column"
+msgstr "Тянущиеся колонки"
+
+#: ../admin/shortcodes/editor-plugin.php:751
+msgid "2 Columns"
+msgstr "2 колонки"
+
+#: ../admin/shortcodes/editor-plugin.php:755
+msgid "3 Columns"
+msgstr "3 колонки"
+
+#: ../admin/shortcodes/editor-plugin.php:760
+msgid "4 Columns"
+msgstr "4 колонки"
+
+#: ../admin/shortcodes/editor-plugin.php:762
+msgid "Elements"
+msgstr "Элементы"
+
+#: ../admin/shortcodes/editor-plugin.php:763
+msgid "Label"
+msgstr "Метка"
+
+#: ../admin/shortcodes/editor-plugin.php:764
+msgid "Text Highlight"
+msgstr "Выделение текста"
+
+#: ../admin/shortcodes/editor-plugin.php:765
+msgid "Button"
+msgstr "Кнопка"
+
+#: ../admin/shortcodes/editor-plugin.php:766
+msgid "Drop Cap"
+msgstr "Буквица"
+
+#: ../admin/shortcodes/editor-plugin.php:767
+msgid "Blockquote"
+msgstr "Цитата"
+
+#: ../admin/shortcodes/editor-plugin.php:768
+msgid "Icon"
+msgstr "Иконка"
+
+#: ../admin/shortcodes/editor-plugin.php:769
+msgid "Frame"
+msgstr "Рамка"
+
+#: ../admin/shortcodes/editor-plugin.php:770
+msgid "Horizontal Rule"
+msgstr "Горизонтальная линия"
+
+#: ../admin/shortcodes/editor-plugin.php:771
+msgid "Small Horizontal Rule"
+msgstr "Малая горизонтальная линия"
+
+#: ../admin/shortcodes/editor-plugin.php:772
+msgid "Vertical Rule"
+msgstr "Вертикальная линия"
+
+#: ../admin/shortcodes/editor-plugin.php:773
+msgid "Spacer"
+msgstr "Разделитель"
+
+#: ../admin/shortcodes/editor-plugin.php:774
+msgid "Progressbar"
+msgstr "Индикатор"
+
+#: ../admin/shortcodes/editor-plugin.php:775
+msgid "Address"
+msgstr "Адрес"
+
+#: ../admin/shortcodes/editor-plugin.php:776
+msgid "Clear"
+msgstr "Очистить"
+
+#: ../admin/shortcodes/editor-plugin.php:777
+msgid "Extra Wrap"
+msgstr "Дополнительная упаковка"
+
+#: ../admin/shortcodes/editor-plugin.php:778
+msgid "Lists"
+msgstr "Списки"
+
+#: ../admin/shortcodes/editor-plugin.php:779
+msgid "Unstyled"
+msgstr "Без стилей"
+
+#: ../admin/shortcodes/editor-plugin.php:780
+msgid "Check List"
+msgstr "Список с галочками"
+
+#: ../admin/shortcodes/editor-plugin.php:781
+msgid "Check 2 List"
+msgstr "Список с галочками 2"
+
+#: ../admin/shortcodes/editor-plugin.php:782
+msgid "Arrow List"
+msgstr "Список со стрелками"
+
+#: ../admin/shortcodes/editor-plugin.php:783
+msgid "Arrow 2 List"
+msgstr "Список со стрелками"
+
+#: ../admin/shortcodes/editor-plugin.php:784
+msgid "Star List"
+msgstr "Список со звездочками"
+
+#: ../admin/shortcodes/editor-plugin.php:785
+msgid "Plus List"
+msgstr "Список с плюсами"
+
+#: ../admin/shortcodes/editor-plugin.php:786
+msgid "Minus List"
+msgstr "Список с минусами"
+
+#: ../admin/shortcodes/editor-plugin.php:787
+msgid "Custom List"
+msgstr "Пользовательский список"
+
+#: ../admin/shortcodes/editor-plugin.php:788
+msgid "Misc"
+msgstr "Разное"
+
+#: ../admin/shortcodes/editor-plugin.php:789
+msgid "Alert Box"
+msgstr "Всплывающее сообщение"
+
+#: ../admin/shortcodes/editor-plugin.php:790
+msgid "Close icon"
+msgstr "Иконка закрытия"
+
+#: ../admin/shortcodes/editor-plugin.php:791
+msgid "Well"
+msgstr "Рамка с фоном"
+
+#: ../admin/shortcodes/editor-plugin.php:792
+msgid "Small"
+msgstr "Маленький текст"
+
+#: ../admin/shortcodes/editor-plugin.php:793
+#: ../includes/widgets/my-comment-widget.php:139
+#: ../includes/widgets/my-facebook-widget.php:79
+#: ../includes/widgets/my-flickr-widget.php:57
+#: ../includes/widgets/my-posts-type-widget.php:205
+#: ../includes/widgets/my-recent-posts.php:126
+#: ../includes/widgets/my-recent-posts.php:148
+#: ../includes/widgets/my-social-widget.php:132
+#: ../includes/widgets/my-vcard-widget.php:151
+msgid "Title"
+msgstr "Название"
+
+#: ../admin/shortcodes/editor-plugin.php:794
+msgid "Template URL"
+msgstr "URL шаблона"
+
+#: ../admin/shortcodes/editor-plugin.php:795
+msgid "Sitemap"
+msgstr "Карта сайта."
+
+#: ../admin/shortcodes/editor-plugin.php:796
+msgid "Video Preview"
+msgstr "Предпросмотр видео"
+
+#: ../admin/shortcodes/editor-plugin.php:797
+msgid "Tabs"
+msgstr "Вкладки"
+
+#: ../admin/shortcodes/editor-plugin.php:798
+msgid "Accordion"
+msgstr "Аккордион"
+
+#: ../admin/shortcodes/editor-plugin.php:799
+msgid "Table"
+msgstr "Таблица"
+
+#: ../admin/shortcodes/editor-plugin.php:800
+#: ../includes/widgets/my-vcard-widget.php:156
+msgid "Google Map"
+msgstr "Google карты"
+
+#: ../includes/shortcodes/carousel-owl.php:95
+#: ../includes/shortcodes/carousel.php:173
+#: ../includes/shortcodes/posts-list.php:152
+msgid "by "
+msgstr "по"
+
+#: ../includes/shortcodes/carousel.php:18
+#: ../includes/shortcodes/hero-unit.php:13 ../includes/shortcodes/html.php:25
+#: ../includes/shortcodes/post-cycle.php:19
+#: ../includes/shortcodes/posts-grid.php:22
+#: ../includes/shortcodes/posts-list.php:19
+#: ../includes/shortcodes/service-box.php:15
+#: ../includes/widgets/my-posts-type-widget.php:145
+#: ../includes/widgets/my-recent-posts.php:87
+msgid "Read more"
+msgstr "Читать далее"
+
+#: ../includes/shortcodes/media.php:82 ../includes/shortcodes/media.php:205
+#: ../includes/shortcodes/media.php:216
+#: ../includes/shortcodes/shortcodes.php:211
+#: ../includes/shortcodes/shortcodes.php:309
+#: ../includes/shortcodes/shortcodes.php:320
+msgid "Play"
+msgstr "Воспроизведение"
+
+#: ../includes/shortcodes/media.php:83 ../includes/shortcodes/media.php:217
+#: ../includes/shortcodes/shortcodes.php:212
+#: ../includes/shortcodes/shortcodes.php:321
+msgid "Pause"
+msgstr "Пауза"
+
+#: ../includes/shortcodes/media.php:84 ../includes/shortcodes/media.php:218
+#: ../includes/shortcodes/shortcodes.php:214
+#: ../includes/shortcodes/shortcodes.php:322
+msgid "Stop"
+msgstr "Стоп"
+
+#: ../includes/shortcodes/media.php:90 ../includes/shortcodes/media.php:224
+#: ../includes/shortcodes/shortcodes.php:220
+#: ../includes/shortcodes/shortcodes.php:328
+msgid "Mute"
+msgstr "Без звука"
+
+#: ../includes/shortcodes/media.php:91 ../includes/shortcodes/media.php:225
+#: ../includes/shortcodes/shortcodes.php:221
+#: ../includes/shortcodes/shortcodes.php:329
+msgid "Unmute"
+msgstr "Включить звук"
+
+#: ../includes/shortcodes/media.php:96 ../includes/shortcodes/media.php:229
+#: ../includes/shortcodes/shortcodes.php:226
+#: ../includes/shortcodes/shortcodes.php:333
+#, fuzzy
+msgid "Update Required."
+msgstr "Требуется"
+
+#: ../includes/shortcodes/media.php:96 ../includes/shortcodes/media.php:229
+#: ../includes/shortcodes/shortcodes.php:226
+#: ../includes/shortcodes/shortcodes.php:333
+#, fuzzy
+msgid ""
+"To play the media you will need to either update your browser to a recent "
+"version or update your "
+msgstr ""
+"<span>Требуется обновление. </span>Для воспроизведения вам нужно обновить "
+"браузер до последней версии или обновить <a href='http://get.adobe.com/"
+"flashplayer/' target='_blank'>Flash плагин</a>."
+
+#: ../includes/shortcodes/media.php:96 ../includes/shortcodes/media.php:229
+#: ../includes/shortcodes/shortcodes.php:226
+#: ../includes/shortcodes/shortcodes.php:333
+msgid "Flash plugin"
+msgstr ""
+
+#: ../includes/shortcodes/post-cycle.php:168
+msgid "Client"
+msgstr "Клиент"
+
+#: ../includes/shortcodes/post-cycle.php:169
+#: ../includes/widgets/my-comment-widget.php:90
+#: ../includes/widgets/my-recent-posts.php:147
+msgid "Date"
+msgstr "Дата"
+
+#: ../includes/shortcodes/post-cycle.php:170
+msgid "Info"
+msgstr "Информация"
+
+#: ../includes/shortcodes/post-cycle.php:171
+msgid "Launch Project"
+msgstr "Запустить проект"
+
+#: ../includes/shortcodes/posts-list.php:128
+#: ../includes/shortcodes/posts-list.php:137
+msgid "Posted in"
+msgstr "Опубликовано в"
+
+#: ../includes/shortcodes/shortcodes.php:210
+msgid "Previous"
+msgstr "Предыдущая"
+
+#: ../includes/widgets/my-banners-widget.php:13
+msgid "Add 125x125 ads."
+msgstr "Добавить банер 125x125"
+
+#: ../includes/widgets/my-banners-widget.php:17
+#, fuzzy
+msgid "Cherry - 125x125 Ads."
+msgstr "Cherry - банер 125x125"
+
+#: ../includes/widgets/my-banners-widget.php:60
+msgid "Ad 1"
+msgstr "Банер 1"
+
+#: ../includes/widgets/my-banners-widget.php:62
+#: ../includes/widgets/my-banners-widget.php:71
+#: ../includes/widgets/my-banners-widget.php:80
+#: ../includes/widgets/my-banners-widget.php:89
+msgid "Image Ad Link:"
+msgstr "Адрес изображения (125x125px):"
+
+#: ../includes/widgets/my-banners-widget.php:66
+#: ../includes/widgets/my-banners-widget.php:75
+#: ../includes/widgets/my-banners-widget.php:84
+#: ../includes/widgets/my-banners-widget.php:93
+msgid "Ad Link:"
+msgstr "Рекламная ссылка:"
+
+#: ../includes/widgets/my-banners-widget.php:69
+msgid "Ad 2"
+msgstr "Банер 2"
+
+#: ../includes/widgets/my-banners-widget.php:78
+msgid "Ad 3"
+msgstr "Банер 3"
+
+#: ../includes/widgets/my-banners-widget.php:87
+msgid "Ad 4"
+msgstr "Банер 4"
+
+#: ../includes/widgets/my-comment-widget.php:4
+msgid "Cherry - Recent Comments"
+msgstr "Cherry - Последние комментарии"
+
+#: ../includes/widgets/my-comment-widget.php:11
+#: ../includes/widgets/my-comment-widget.php:126
+msgid "My Recent Comments"
+msgstr "Мои последние комментарии"
+
+#: ../includes/widgets/my-comment-widget.php:71
+msgid "Comment in"
+msgstr "Комментарий в"
+
+#: ../includes/widgets/my-comment-widget.php:80
+#: ../includes/widgets/widgets-manager.php:478
+#: ../includes/widgets/widgets-manager.php:486
+msgid "Author"
+msgstr "Автор"
+
+#: ../includes/widgets/my-comment-widget.php:98
+msgid "Go to this comment"
+msgstr "Перейти к комментарию"
+
+#: ../includes/widgets/my-comment-widget.php:140
+msgid "Number of comments to show"
+msgstr "Количество комментариев для отображения"
+
+#: ../includes/widgets/my-comment-widget.php:141
+msgid "Display avatar"
+msgstr "Показывать аватар"
+
+#: ../includes/widgets/my-comment-widget.php:142
+msgid "Avatar size (px)"
+msgstr "Размер аватара (px)"
+
+#: ../includes/widgets/my-comment-widget.php:151
+msgid "Display the comment author"
+msgstr "Показывать авторство комментария"
+
+#: ../includes/widgets/my-comment-widget.php:152
+msgid "Display the comment date"
+msgstr "Показывать дату комментария"
+
+#: ../includes/widgets/my-comment-widget.php:153
+msgid "Display post title"
+msgstr "Показывать дату записи"
+
+#: ../includes/widgets/my-comment-widget.php:154
+#: ../includes/widgets/my-vcard-widget.php:191
+msgid "Meta format"
+msgstr "Формат Meta"
+
+#: ../includes/widgets/my-comment-widget.php:156
+#: ../includes/widgets/my-vcard-widget.php:193
+#: ../includes/widgets/widgets-manager.php:505
+msgid "None"
+msgstr "Отсутствует"
+
+#: ../includes/widgets/my-comment-widget.php:157
+#: ../includes/widgets/my-social-widget.php:209
+#: ../includes/widgets/my-vcard-widget.php:194
+msgid "Icons"
+msgstr "Иконки"
+
+#: ../includes/widgets/my-comment-widget.php:158
+#: ../includes/widgets/my-social-widget.php:210
+#: ../includes/widgets/my-vcard-widget.php:195
+msgid "Labels"
+msgstr "Метки"
+
+#: ../includes/widgets/my-facebook-widget.php:4
+msgid "Cherry - Facebook Like Box Widget"
+msgstr "Cherry - виджет отображения Facebook"
+
+#: ../includes/widgets/my-facebook-widget.php:9
+msgid "My Facebook Page"
+msgstr "Моя страницы Facebook"
+
+#: ../includes/widgets/my-facebook-widget.php:84
+msgid "Facebook page url"
+msgstr "Адрес страницы Facebook"
+
+#: ../includes/widgets/my-facebook-widget.php:86
+msgid "The Like Box only works with "
+msgstr ""
+
+#: ../includes/widgets/my-facebook-widget.php:86
+#, fuzzy
+msgid "Facebook Pages."
+msgstr "Моя страницы Facebook"
+
+#: ../includes/widgets/my-facebook-widget.php:90
+#: ../includes/widgets/my-posts-type-widget.php:347
+msgid "Width"
+msgstr "Ширина"
+
+#: ../includes/widgets/my-facebook-widget.php:95
+#: ../includes/widgets/my-posts-type-widget.php:352
+msgid "Height"
+msgstr "Высота"
+
+#: ../includes/widgets/my-facebook-widget.php:100
+msgid "Color Scheme"
+msgstr "Цветовая схема"
+
+#: ../includes/widgets/my-facebook-widget.php:102
+msgid "Light"
+msgstr "Светлая"
+
+#: ../includes/widgets/my-facebook-widget.php:103
+msgid "Dark"
+msgstr "Темная"
+
+#: ../includes/widgets/my-facebook-widget.php:109
+msgid "Display header"
+msgstr "Показывать заголовок"
+
+#: ../includes/widgets/my-facebook-widget.php:113
+msgid "Display faces"
+msgstr "Показывать друзей"
+
+#: ../includes/widgets/my-facebook-widget.php:117
+msgid "Display stream"
+msgstr "Показывать ленту"
+
+#: ../includes/widgets/my-facebook-widget.php:121
+msgid "Display border"
+msgstr "Показывать границы"
+
+#: ../includes/widgets/my-flickr-widget.php:6
+msgid "Cherry - Flickr"
+msgstr "Cherry - Flickr"
+
+#: ../includes/widgets/my-flickr-widget.php:59
+#, fuzzy
+msgid "Flickr ID"
+msgstr "Flickr ID:"
+
+#: ../includes/widgets/my-flickr-widget.php:60
+#, fuzzy
+msgid "Images count"
+msgstr "Счетчик изображений:"
+
+#: ../includes/widgets/my-flickr-widget.php:61
+#: ../includes/widgets/my-posts-type-widget.php:325
+#: ../includes/widgets/my-posts-type-widget.php:372
+#: ../includes/widgets/my-recent-posts.php:158
+#, fuzzy
+msgid "Link Text"
+msgstr "Текст ссылки"
+
+#: ../includes/widgets/my-posts-type-widget.php:7
+msgid "Show custom posts"
+msgstr "Отображение записей любого типа"
+
+#: ../includes/widgets/my-posts-type-widget.php:9
+msgid "Cherry - Advanced Cycle"
+msgstr "Cherry - Расширенный цикл"
+
+#: ../includes/widgets/my-posts-type-widget.php:152
+msgid "View all"
+msgstr "Посмотреть все"
+
+#: ../includes/widgets/my-posts-type-widget.php:212
+msgid "Posts type"
+msgstr "Типы записей"
+
+#: ../includes/widgets/my-posts-type-widget.php:229
+msgid "Number of posts to show"
+msgstr "Количество постов для отображения"
+
+#: ../includes/widgets/my-posts-type-widget.php:236
+msgid "Sort by"
+msgstr "Сортировать по"
+
+#: ../includes/widgets/my-posts-type-widget.php:250
+msgid "Reverse sort order (ascending)"
+msgstr "Обратный порядок сортировки (по возрастанию)"
+
+#: ../includes/widgets/my-posts-type-widget.php:256
+msgid "Show number of comments"
+msgstr "Показать количество комментариев"
+
+#: ../includes/widgets/my-posts-type-widget.php:263
+msgid "Show meta"
+msgstr "Показывать Meta"
+
+#: ../includes/widgets/my-posts-type-widget.php:269
+msgid "Container class"
+msgstr "Класс контейнера"
+
+#: ../includes/widgets/my-posts-type-widget.php:270
+#, fuzzy
+msgid "default: \"featured_custom_posts\""
+msgstr "(по умолчанию: \"featured_custom_posts\")"
+
+#: ../includes/widgets/my-posts-type-widget.php:275
+msgid "Post title"
+msgstr "Заголовок записи"
+
+#: ../includes/widgets/my-posts-type-widget.php:279
+msgid "Show post title"
+msgstr "Показывать заголовок записи"
+
+#: ../includes/widgets/my-posts-type-widget.php:285
+#, fuzzy
+msgid "Date as title "
+msgstr "Показывать дату записи"
+
+#: ../includes/widgets/my-posts-type-widget.php:292
+msgid "Excerpt"
+msgstr "Выдержка (excerpt)"
+
+#: ../includes/widgets/my-posts-type-widget.php:296
+msgid "Show post excerpt"
+msgstr "Показывать выдержку (excerpt) записи"
+
+#: ../includes/widgets/my-posts-type-widget.php:301
+#: ../includes/widgets/my-recent-posts.php:156
+#, fuzzy
+msgid "Excerpt length (words)"
+msgstr "Длинна цитаты (слов):"
+
+#: ../includes/widgets/my-posts-type-widget.php:308
+msgid "Excerpt as link"
+msgstr "Выдержка (excerpt), как ссылка"
+
+#: ../includes/widgets/my-posts-type-widget.php:315
+msgid "More link"
+msgstr "Ссылка читать далее"
+
+#: ../includes/widgets/my-posts-type-widget.php:319
+msgid "Show \"More link"
+msgstr "Показывать ссылку  \"Читать далее"
+
+#: ../includes/widgets/my-posts-type-widget.php:326
+#, fuzzy
+msgid "default: \"Read more\""
+msgstr "(по умолчанию: \"Читать далее\")"
+
+#: ../includes/widgets/my-posts-type-widget.php:331
+msgid "Link class"
+msgstr "Класс ссылки"
+
+#: ../includes/widgets/my-posts-type-widget.php:332
+#, fuzzy
+msgid "default: \"link\""
+msgstr "(по умолчанию: \"ссылка\")"
+
+#: ../includes/widgets/my-posts-type-widget.php:337
+msgid "Thumbnail dimensions"
+msgstr "Размеры миниатюры"
+
+#: ../includes/widgets/my-posts-type-widget.php:342
+msgid "Show post thumbnail"
+msgstr "Показывать миниатюру записи"
+
+#: ../includes/widgets/my-posts-type-widget.php:358
+msgid "Thumbnail as link"
+msgstr "Миниатюра, как ссылка"
+
+#: ../includes/widgets/my-posts-type-widget.php:363
+msgid "Link to all posts"
+msgstr "Ссылка на все записи"
+
+#: ../includes/widgets/my-posts-type-widget.php:367
+msgid "Show global link to all posts"
+msgstr "Показывать глобальную ссылку на все записи"
+
+#: ../includes/widgets/my-posts-type-widget.php:373
+#, fuzzy
+msgid "default: \"View all\""
+msgstr "(По умолчанию: \"Смотреть все\")"
+
+#: ../includes/widgets/my-posts-type-widget.php:378
+#: ../includes/widgets/my-recent-posts.php:160
+msgid "Link URL"
+msgstr "Адрес ссылки"
+
+#: ../includes/widgets/my-recent-posts.php:6
+msgid "Cherry - Recent Posts"
+msgstr "Cherry - Последние записи"
+
+#: ../includes/widgets/my-recent-posts.php:76
+msgid "Permanent Link to"
+msgstr "Постоянная ссылка на"
+
+#: ../includes/widgets/my-recent-posts.php:128
+#, fuzzy
+msgid "Category Slug"
+msgstr "Слаг категории:"
+
+#: ../includes/widgets/my-recent-posts.php:130
+#, fuzzy
+msgid "Post format"
+msgstr "Формат записи:"
+
+#: ../includes/widgets/my-recent-posts.php:133
+msgid "Standard"
+msgstr "Стандартный"
+
+#: ../includes/widgets/my-recent-posts.php:134
+msgid "Aside"
+msgstr "Заметка"
+
+#: ../includes/widgets/my-recent-posts.php:135
+msgid "Quote"
+msgstr "Цитата"
+
+#: ../includes/widgets/my-recent-posts.php:136
+msgid "Link"
+msgstr "Ссылка"
+
+#: ../includes/widgets/my-recent-posts.php:137
+msgid "Image"
+msgstr "Изображение"
+
+#: ../includes/widgets/my-recent-posts.php:138
+msgid "Gallery"
+msgstr "Галерея"
+
+#: ../includes/widgets/my-recent-posts.php:139
+msgid "Audio"
+msgstr "Аудио"
+
+#: ../includes/widgets/my-recent-posts.php:140
+msgid "Video"
+msgstr "Видео"
+
+#: ../includes/widgets/my-recent-posts.php:144
+#, fuzzy
+msgid "Post order"
+msgstr "Порядок записей:"
+
+#: ../includes/widgets/my-recent-posts.php:149
+msgid "Comment count"
+msgstr "Счетчик комментариев"
+
+#: ../includes/widgets/my-recent-posts.php:150
+msgid "Random"
+msgstr "Случайный"
+
+#: ../includes/widgets/my-recent-posts.php:154
+#, fuzzy
+msgid "Posts per page"
+msgstr "Записей на странице:"
+
+#: ../includes/widgets/my-social-widget.php:6
+msgid "Link to your social networks."
+msgstr "Ссылки на Ваши социальные сети."
+
+#: ../includes/widgets/my-social-widget.php:7
+msgid "Cherry - Social Networks"
+msgstr "Cherry - Социальные сети"
+
+#: ../includes/widgets/my-social-widget.php:136
+#, fuzzy
+msgid "Facebook"
+msgstr "Моя страницы Facebook"
+
+#: ../includes/widgets/my-social-widget.php:138
+#, fuzzy
+msgid "Facebook URL"
+msgstr "Моя страницы Facebook"
+
+#: ../includes/widgets/my-social-widget.php:141
+#, fuzzy
+msgid "Facebook label"
+msgstr "Адрес страницы Facebook"
+
+#: ../includes/widgets/my-social-widget.php:146
+#, fuzzy
+msgid "Twitter"
+msgstr "Имя в Twitter:"
+
+#: ../includes/widgets/my-social-widget.php:147
+#, fuzzy
+msgid "Twitter URL"
+msgstr "Имя в Twitter:"
+
+#: ../includes/widgets/my-social-widget.php:149
+#, fuzzy
+msgid "Twitter label"
+msgstr "Имя в Twitter:"
+
+#: ../includes/widgets/my-social-widget.php:154
+#, fuzzy
+msgid "Flickr"
+msgstr "Flickr ID:"
+
+#: ../includes/widgets/my-social-widget.php:155
+#, fuzzy
+msgid "Flickr URL"
+msgstr "Flickr ID:"
+
+#: ../includes/widgets/my-social-widget.php:157
+#, fuzzy
+msgid "Flickr label"
+msgstr "Flickr ID:"
+
+#: ../includes/widgets/my-social-widget.php:162
+#: ../includes/widgets/my-social-widget.php:163
+msgid "RSS feed"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:165
+msgid "RSS label"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:170
+#, fuzzy
+msgid "Linkedin"
+msgstr "Ссылка"
+
+#: ../includes/widgets/my-social-widget.php:171
+#, fuzzy
+msgid "Linkedin URL"
+msgstr "Адрес ссылки"
+
+#: ../includes/widgets/my-social-widget.php:173
+msgid "Linkedin label"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:178
+msgid "Delicious"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:179
+msgid "Delicious URL"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:181
+msgid "Delicious label"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:186
+msgid "Youtube"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:188
+msgid "Youtube URL"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:191
+msgid "Youtube label"
+msgstr ""
+
+#: ../includes/widgets/my-social-widget.php:197
+#, fuzzy
+msgid "Google+"
+msgstr "Google карты"
+
+#: ../includes/widgets/my-social-widget.php:199
+#, fuzzy
+msgid "Google+ URL"
+msgstr "Google карты"
+
+#: ../includes/widgets/my-social-widget.php:202
+#, fuzzy
+msgid "Google+ label"
+msgstr "Google карты"
+
+#: ../includes/widgets/my-social-widget.php:208
+#, fuzzy
+msgid "Display"
+msgstr "Отображать:"
+
+#: ../includes/widgets/my-social-widget.php:211
+msgid "Both"
+msgstr "Оба"
+
+#: ../includes/widgets/my-vcard-widget.php:4
+msgid "Use this widget to add a vCard"
+msgstr "Используйте этот виджет для добавления vCard"
+
+#: ../includes/widgets/my-vcard-widget.php:5
+msgid "Cherry - vCard"
+msgstr "Cherry - vCard"
+
+#: ../includes/widgets/my-vcard-widget.php:32
+msgid "vCard"
+msgstr "vCard"
+
+#: ../includes/widgets/my-vcard-widget.php:51
+#: ../includes/widgets/my-vcard-widget.php:167
+#, fuzzy
+msgid "Street Address"
+msgstr "Улица/Дом:"
+
+#: ../includes/widgets/my-vcard-widget.php:52
+#: ../includes/widgets/my-vcard-widget.php:171
+#, fuzzy
+msgid "City/Locality"
+msgstr "Город/Область:"
+
+#: ../includes/widgets/my-vcard-widget.php:53
+#: ../includes/widgets/my-vcard-widget.php:175
+#, fuzzy
+msgid "State/Region"
+msgstr "Страна/Область"
+
+#: ../includes/widgets/my-vcard-widget.php:54
+#: ../includes/widgets/my-vcard-widget.php:179
+#, fuzzy
+msgid "Zipcode/Postal Code"
+msgstr "Почтовый код"
+
+#: ../includes/widgets/my-vcard-widget.php:55
+#: ../includes/widgets/my-vcard-widget.php:183
+#, fuzzy
+msgid "Telephone"
+msgstr "Телефон:"
+
+#: ../includes/widgets/my-vcard-widget.php:56
+#: ../includes/widgets/my-vcard-widget.php:187
+#, fuzzy
+msgid "Email"
+msgstr "Email:"
+
+#: ../includes/widgets/my-vcard-widget.php:158
+msgid "Display map"
+msgstr "Отображать карту"
+
+#: ../includes/widgets/my-vcard-widget.php:161
+#, fuzzy
+msgid "HTML map code"
+msgstr "HTML код карты:"
+
+#: ../includes/widgets/widgets-manager.php:457
+msgid "Custom CSS class"
+msgstr "Пользовательский класс CSS"
+
+#: ../includes/widgets/widgets-manager.php:459
+msgid "Visibility"
+msgstr "Видимость"
+
+#: ../includes/widgets/widgets-manager.php:462
+msgid "Visible at"
+msgstr "Отображать в"
+
+#: ../includes/widgets/widgets-manager.php:464
+msgid "All pages"
+msgstr "Все страницы"
+
+#: ../includes/widgets/widgets-manager.php:465
+msgid "All pages expecting"
+msgstr "Отображать на всех страницах кроме"
+
+#: ../includes/widgets/widgets-manager.php:466
+msgid "No pages expecting"
+msgstr "Скрыть на всех страницах кроме"
+
+#: ../includes/widgets/widgets-manager.php:470
+msgid "Select page to add"
+msgstr "Выберите страницу для добавления"
+
+#: ../includes/widgets/widgets-manager.php:472
+msgid "Homepage"
+msgstr "Главная страница"
+
+#: ../includes/widgets/widgets-manager.php:473
+msgid "Page"
+msgstr "Страница"
+
+#: ../includes/widgets/widgets-manager.php:474
+msgid "Post"
+msgstr "Запись"
+
+#: ../includes/widgets/widgets-manager.php:475
+#: ../includes/widgets/widgets-manager.php:477
+msgid "Archive"
+msgstr "Архив"
+
+#: ../includes/widgets/widgets-manager.php:476
+msgid "Tag"
+msgstr "Тэг"
+
+#: ../includes/widgets/widgets-manager.php:479
+msgid "Search page"
+msgstr "Страница поиска"
+
+#: ../includes/widgets/widgets-manager.php:480
+msgid "404 page"
+msgstr "404 страница"
+
+#: ../includes/widgets/widgets-manager.php:482
+msgid "Page ID/Title/slug"
+msgstr "ID страницы/Заголовок/слаг"
+
+#: ../includes/widgets/widgets-manager.php:483
+msgid "Post ID/Title/slug"
+msgstr "ID записи/Заголовок/слаг"
+
+#: ../includes/widgets/widgets-manager.php:484
+msgid "Category ID/Name/slug"
+msgstr "ID категории/Название/слаг"
+
+#: ../includes/widgets/widgets-manager.php:485
+msgid "Tag ID/Name"
+msgstr "ID тэга/Название"
+
+#: ../includes/widgets/widgets-manager.php:487
+msgid "Add page"
+msgstr "Добавить страницу"
+
+#: ../includes/widgets/widgets-manager.php:490
+msgid "Selected pages"
+msgstr "Выбранные страницы"
+
+#: ../includes/widgets/widgets-manager.php:491
+msgid "No pages"
+msgstr "Нет страниц"
+
+#: ../includes/widgets/widgets-manager.php:509
+msgid "All devices"
+msgstr "Все устройства"
+
+#: ../includes/widgets/widgets-manager.php:510
+msgid "Desktops"
+msgstr "Компьютеры"
+
+#: ../includes/widgets/widgets-manager.php:511
+msgid "Tablets"
+msgstr "Планшеты"
+
+#: ../includes/widgets/widgets-manager.php:512
+msgid "Phones"
+msgstr "Телефоны"
+
+#: ../includes/widgets/widgets-manager.php:513
+msgid "Desktops/Tablets"
+msgstr "Компьютеры и планшеты"
+
+#: ../includes/widgets/widgets-manager.php:514
+msgid "Tablets/Phones"
+msgstr "Планшеты и телефоны"
+
+#: ../includes/widgets/widgets-manager.php:515
+msgid "Desktops/Phones"
+msgstr "Компьютеры и телефоны"
+
+#: ../includes/widgets/widgets-manager.php:518
+msgid "Visible on"
+msgstr "Отображать на"
+
+#: ../includes/widgets/widgets-manager.php:527
+msgid "All users"
+msgstr "Все пользователи"
+
+#: ../includes/widgets/widgets-manager.php:528
+msgid "Only guests"
+msgstr "Только гости"
+
+#: ../includes/widgets/widgets-manager.php:529
+msgid "Only registered users"
+msgstr "Только зарегистрированные"
+
+#: ../includes/widgets/widgets-manager.php:530
+msgid "Only administrator"
+msgstr "Только администратор"
+
+#: ../includes/widgets/widgets-manager.php:533
+msgid "Visible for"
+msgstr "Отображать для"
+
+#~ msgid "No Repeat"
+#~ msgstr "Без повторов"
+
+#~ msgid "Repeat Horizontally"
+#~ msgstr "Повторять горизонтально"
+
+#~ msgid "Repeat Vertically"
+#~ msgstr "Повторять вертикально"
+
+#~ msgid "Repeat All"
+#~ msgstr "Повторять везде"
+
+#~ msgid "Top Left"
+#~ msgstr "Вверху слева"
+
+#~ msgid "Top Center"
+#~ msgstr "Вверху по центру"
+
+#~ msgid "Top Right"
+#~ msgstr "Вверху справа"
+
+#~ msgid "Middle Left"
+#~ msgstr "По центру слева"
+
+#~ msgid "Middle Center"
+#~ msgstr "По центру"
+
+#~ msgid "Middle Right"
+#~ msgstr "По центру справа"
+
+#~ msgid "Bottom Left"
+#~ msgstr "Внизу слева"
+
+#~ msgid "Bottom Center"
+#~ msgstr "Внизу по центру"
+
+#~ msgid "Bottom Right"
+#~ msgstr "Внизу справа"
+
+#~ msgid "Scroll Normally"
+#~ msgstr "Нормальная прокрутка"
+
+#~ msgid "Fixed in Place"
+#~ msgstr "Зафиксировать на месте"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "1.2"
+#~ msgstr "1.2"
+
+#~ msgid "1.5"
+#~ msgstr "1.5"
+
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgid "Latin"
+#~ msgstr "Латиница"
+
+#~ msgid "Latin Extended"
+#~ msgstr "Латиница расширенная"
+
+#~ msgid "Greek"
+#~ msgstr "Греческий"
+
+#~ msgid "Greek Extended"
+#~ msgstr "Греческий расширенный"
+
+#~ msgid "Cyrillic"
+#~ msgstr "Кириллица"
+
+#~ msgid "Cyrillic Extended"
+#~ msgstr "Кириллица расширенная"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Вьетнамский"
+
+#~ msgid "Normal"
+#~ msgstr "Нормально"
+
+#~ msgid "Italic"
+#~ msgstr "Курсив"
+
+#~ msgid "Bold"
+#~ msgstr "Жирный"
+
+#~ msgid "Bold Italic"
+#~ msgstr "Жирный курсив"
+
+#~ msgid "There was an error when reading this WXR file"
+#~ msgstr "Произошла ошибка при чтении WXR файла"
+
+#~ msgid ""
+#~ "Details are shown above. The importer will now try again with a different "
+#~ "parser..."
+#~ msgstr ""
+#~ "Детали показаны ниже. Импортер попробует выполнить задачу еще раз с "
+#~ "помощью другого парсера..."
+
+#~ msgid ""
+#~ "This does not appear to be a WXR file, missing/invalid WXR version number"
+#~ msgstr "Это не WXR файл. Отсутствует или ошибка версии WXR"
+
+#~ msgid "Return to the dashboard"
+#~ msgstr "Вернуться к контрольной панели"
+
+#~ msgid "The following plugin was activated successfully:"
+#~ msgstr "Следующий плагин был успешно активирован:"
+
+#~ msgid "Dismiss this notice"
+#~ msgstr "Закрыть это уведомление"
+
+#~ msgid "No"
+#~ msgstr "Нет"
+
+#~ msgid "Yes"
+#~ msgstr "Да"
+
+#~ msgid "Slow"
+#~ msgstr "Медленно"
+
+#~ msgid "Fast"
+#~ msgstr "Быстро"
+
+#~ msgid "Normal size"
+#~ msgstr "Нормальный размер"
+
+#~ msgid "Large size"
+#~ msgstr "Большой размер"
+
+#~ msgid "Font Size"
+#~ msgstr "Размер шрифта"
+
+#~ msgid "Lineheight"
+#~ msgstr "Высота строки"
+
+#~ msgid "Font Face"
+#~ msgstr "Шрифт"
+
+#~ msgid "Character Sets"
+#~ msgstr "Наборы символов"
+
+#~ msgid "Font Style"
+#~ msgstr "Стиль шрифта"
+
+#~ msgid "Color"
+#~ msgstr "Цвет"
+
+#~ msgid "Done"
+#~ msgstr "Готово"
+
+#~ msgid "Error"
+#~ msgstr "Ошибка"
+
+#~ msgid "success"
+#~ msgstr "успех"
+
+#~ msgid "Upload"
+#~ msgstr "Загрузить"
+
+#~ msgid "try again"
+#~ msgstr "попробуйте еще раз"
+
+#~ msgid "Finish"
+#~ msgstr "Закончить"
+
+#~ msgid "Skip this step"
+#~ msgstr "Пропустить"
+
+#~ msgid "next"
+#~ msgstr "далее"
+
+#~ msgid "Enable Lightbox"
+#~ msgstr "Включить Лайтбокс"
+
+#~ msgid "Check this to enable the lightbox."
+#~ msgstr "Отметьте тут для включения лайтбокса"
+
+#~ msgid "Permalink"
+#~ msgstr "Постояная ссылка"
+
+#~ msgid "Show All"
+#~ msgstr "Показать все"
+
+#~ msgid "search"
+#~ msgstr "поиск"
+
+#~ msgid "Go"
+#~ msgstr "Поиск"
+
+#~ msgid "&laquo; Previous post."
+#~ msgstr "&laquo; Предыдущая запись."
+
+#~ msgid "Next Post &raquo;"
+#~ msgstr "Следующая запись &raquo;"
+
+#~ msgid "URL"
+#~ msgstr "URL"
+
+#~ msgid "URL #1"
+#~ msgstr "URL #1"
+
+#~ msgid "URL #2"
+#~ msgstr "URL #2"
+
+#~ msgid "Uncategorized"
+#~ msgstr "Нет категории"
+
+#~ msgid "Last"
+#~ msgstr "Последняя"
+
+#~ msgid "First"
+#~ msgstr "Первая"
+
+#~ msgid "Delete"
+#~ msgstr "Удалить"
+
+#~ msgid "Customize"
+#~ msgstr "Настроить"
+
+#~ msgid "Save Options"
+#~ msgstr "Сохранить настройки"
+
+#~ msgid "Restore Defaults"
+#~ msgstr "восстановить значения по умолчанию"
+
+#~ msgid "Click OK to reset. Any theme settings will be lost!"
+#~ msgstr "Нажмите ДА для сброса. Все настройки темы будут утеряны!"
+
+#~ msgid "General"
+#~ msgstr "Общие"
+
+#~ msgid "Body styling"
+#~ msgstr "Настройки страниц"
+
+#~ msgid "Change the background style"
+#~ msgstr "Изменить стиль фона"
+
+#~ msgid "Background Image"
+#~ msgstr "Фоновое изображение"
+
+#~ msgid "Background Color"
+#~ msgstr "Цвет фона"
+
+#~ msgid "Header background color"
+#~ msgstr "Цвет фона шапки сайта"
+
+#~ msgid "Change the header background color"
+#~ msgstr "Изменить цвет фона шапки."
+
+#~ msgid "Link color"
+#~ msgstr "Цвет ссылки"
+
+#~ msgid "Change the color of link"
+#~ msgstr "Изменить цвет ссылок"
+
+#~ msgid "Link color hover"
+#~ msgstr "Цвет ссылки при наведении"
+
+#~ msgid "Change the color of link hover state"
+#~ msgstr "Изменить цвета ссылок при наведении"
+
+#~ msgid "Body Text"
+#~ msgstr "Текст в контентной части"
+
+#~ msgid ""
+#~ "Choose your prefered font for body text. <em>Note: fonts marked with "
+#~ "<strong>*</strong> symbol will be loaded from the <a href='http://www."
+#~ "google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Выберите предпочитаемый текст для контентной части сайта. <em>Внимание: "
+#~ "шрифты помеченные символом <strong>*</strong> будут загружаться из "
+#~ "библиотеки <a href='http://www.google.com/webfonts'>Google Web Fonts</a>."
+#~ "</em>"
+
+#~ msgid "H1 Heading"
+#~ msgstr "Заголовок H1"
+
+#~ msgid ""
+#~ "Choose your prefered font for H1 heading and titles. <em>Note: fonts "
+#~ "marked with <strong>*</strong> symbol will be loaded from the <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Выберите предпочитаемый шрифт для заголовков H1. <em>Внимание: шрифты "
+#~ "помеченные символом <strong>*</strong> будут загружаться из библиотеки <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a>.</em>"
+
+#~ msgid "H2 Heading"
+#~ msgstr "Заголовок H2"
+
+#~ msgid ""
+#~ "Choose your prefered font for H2 heading and titles. <em>Note: fonts "
+#~ "marked with <strong>*</strong> symbol will be loaded from the <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Выберите предпочитаемый шрифт для заголовков H2. <em>Внимание: шрифты "
+#~ "помеченные символом <strong>*</strong> будут загружаться из библиотеки <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a>.</em>"
+
+#~ msgid "H3 Heading"
+#~ msgstr "Заголовок H3"
+
+#~ msgid ""
+#~ "Choose your prefered font for H3 heading and titles. <em>Note: fonts "
+#~ "marked with <strong>*</strong> symbol will be loaded from the <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Выберите предпочитаемый шрифт для заголовков H3. <em>Внимание: шрифты "
+#~ "помеченные символом <strong>*</strong> будут загружаться из библиотеки <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a>.</em>"
+
+#~ msgid "H4 Heading"
+#~ msgstr "Заголовок H4"
+
+#~ msgid ""
+#~ "Choose your prefered font for H4 heading and titles. <em>Note: fonts "
+#~ "marked with <strong>*</strong> symbol will be loaded from the <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Выберите предпочитаемый шрифт для заголовков H4. <em>Внимание: шрифты "
+#~ "помеченные символом <strong>*</strong> будут загружаться из библиотеки <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a>.</em>"
+
+#~ msgid "H5 Heading"
+#~ msgstr "Заголовок H5"
+
+#~ msgid ""
+#~ "Choose your prefered font for H5 heading and titles. <em>Note: fonts "
+#~ "marked with <strong>*</strong> symbol will be loaded from the <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Выберите предпочитаемый шрифт для заголовков H5. <em>Внимание: шрифты "
+#~ "помеченные символом <strong>*</strong> будут загружаться из библиотеки <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a>.</em>"
+
+#~ msgid "H6 Heading"
+#~ msgstr "Заголовок H6"
+
+#~ msgid ""
+#~ "Choose your prefered font for H6 heading and titles. <em>Note: fonts "
+#~ "marked with <strong>*</strong> symbol will be loaded from the <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Выберите предпочитаемый шрифт для заголовков H6. <em>Внимание: шрифты "
+#~ "помеченные символом <strong>*</strong> будут загружаться из библиотеки <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a>.</em>"
+
+#~ msgid "Display search box?"
+#~ msgstr "Показывать форму поиска?"
+
+#~ msgid "Display search box in the header?"
+#~ msgstr "Показывать форму поиска в шапке?"
+
+#~ msgid "Display breadcrumbs?"
+#~ msgstr "Показывать навигационную цепочку?"
+
+#~ msgid "Display breadcrumbs in the page?"
+#~ msgstr ""
+#~ "Навигационная цепочка (Breadcrumbs) — элемент навигации по сайту, "
+#~ "представляющий собой путь от «корня» сайта до страницы, на которой "
+#~ "находится пользователь."
+
+#~ msgid "Custom CSS"
+#~ msgstr "Пользовательский CSS"
+
+#~ msgid ""
+#~ "Want to add any custom CSS code? Put in here, and the rest is taken care "
+#~ "of. This overrides any other stylesheets. eg: a.button{color:green}"
+#~ msgstr ""
+#~ "Хотите добавить пользовательский CSS код? Просто разместите его тут, а мы "
+#~ "позаботимся об остальном. Он перезапишет любые другие стили. К примеру a."
+#~ "button{color:green}"
+
+#~ msgid "Logo"
+#~ msgstr "Логотип"
+
+#~ msgid "Logo & Favicon"
+#~ msgstr "Логотип и фавиконка"
+
+#~ msgid "What kind of logo?"
+#~ msgstr "Какой тип логотипа?"
+
+#~ msgid ""
+#~ "Select whether you want your main logo to be an image or text. If you "
+#~ "select \"image\" you can put in the image url in the next option, and if "
+#~ "you select \"text\" your Site Title will be shown instead."
+#~ msgstr ""
+#~ "Выберите, должен ли Ваш логотип быть изображением или текстом. Если вы "
+#~ "выберите  \"Графический логотип\"  то вы можете указать ссылку на "
+#~ "изображение в следующем пункте настроек, а если выберете  \"Текстовый "
+#~ "логотип\", то будет отображаться заголовок вашего сайта."
+
+#~ msgid "Image Logo"
+#~ msgstr "Графический логотип"
+
+#~ msgid "Text Logo"
+#~ msgstr "Текстовый логотип"
+
+#~ msgid "Logo Typography"
+#~ msgstr "Типографика логотипа"
+
+#~ msgid ""
+#~ "Choose your prefered font for menu. <em>Note: fonts marked with "
+#~ "<strong>*</strong> symbol will be loaded from the <a href='http://www."
+#~ "google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Выберите предпочитаемый шрифт для меню. <em>Внимание: шрифты помеченные "
+#~ "символом <strong>*</strong> будут загружаться из библиотеки <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a>.</em>"
+
+#~ msgid "Logo Image Path"
+#~ msgstr "Путь к изображению логотипа"
+
+#~ msgid ""
+#~ "Click Upload or Enter the direct path to your <strong>logo image</"
+#~ "strong>. For example <em>http://your_website_url_here/wp-content/themes/"
+#~ "themeXXXX/images/logo.png</em>"
+#~ msgstr ""
+#~ "Нажмите Загрузить или укажите прямой путь к <strong>изображению логотипа</"
+#~ "strong>. К примеру, <em>http://your_website_url_here/wp-content/themes/"
+#~ "themeXXXX/images/logo.png</em>"
+
+#~ msgid "Favicon"
+#~ msgstr "Фавиконка"
+
+#~ msgid ""
+#~ "Click Upload or Enter the direct path to your <strong>favicon</strong>. "
+#~ "For example <em>http://your_website_url_here/wp-content/themes/themeXXXX/"
+#~ "favicon.ico</em>"
+#~ msgstr ""
+#~ "Нажмите Загрузить или укажите прямой путь к <strong>фавиконке</strong>. К "
+#~ "примеру, <em>http://your_website_url_here/wp-content/themes/themeXXXX/"
+#~ "favicon.ico</em>"
+
+#~ msgid "Navigation"
+#~ msgstr "Навигация"
+
+#~ msgid "Menu Typography"
+#~ msgstr "Типографика в меню"
+
+#~ msgid "Delay"
+#~ msgstr "Задержка"
+
+#~ msgid "Miliseconds delay on mouseout."
+#~ msgstr "Задержка в милисекундах при выводе курсора мышки."
+
+#~ msgid "Fade-in animation"
+#~ msgstr "Анимация с постепенным появлением (Fade-in)"
+
+#~ msgid "Fade-in animation."
+#~ msgstr "Анимация с постепенным появлением (Fade-in)."
+
+#~ msgid "Slide-down animation."
+#~ msgstr "Анимация со смещением вниз (Slide-down)."
+
+#~ msgid "Enable fade-in animation"
+#~ msgstr "Включить анимацию с постепенным появлением"
+
+#~ msgid "Disable fade-in animation"
+#~ msgstr "Отключить анимацию с постепенным появлением"
+
+#~ msgid "Enable slide-down animation"
+#~ msgstr "Включить анимацию со смещением вниз (Slide-down)."
+
+#~ msgid "Disable slide-down animation"
+#~ msgstr "Отключить анимацию со смещением вниз (Slide-down)."
+
+#~ msgid "Speed"
+#~ msgstr "Скорость"
+
+#~ msgid "Animation speed."
+#~ msgstr "Скорость анимации."
+
+#~ msgid "Arrows markup."
+#~ msgstr "Специальная разметка для меню с вложенными подпунктами."
+
+#~ msgid "Do you want to generate arrow mark-up?"
+#~ msgstr ""
+#~ "Вы хотите отдельно пометить, что некоторые пункты вашего меню имеют "
+#~ "вложенные подпункты. Эта настройка добавляет специальные стрелочки, "
+#~ "которые облегчат навигацию для посетителей вашего сайта."
+
+#~ msgid "Mobile menu label."
+#~ msgstr "Метка мобильного меню."
+
+#~ msgid "This text is visible in mobile select menu."
+#~ msgstr "Этот текст отображается в мобильной версии меню."
+
+#~ msgid "Navigate to..."
+#~ msgstr "Перейти в..."
+
+#~ msgid "Slider Settings"
+#~ msgstr "Настройки слайдера"
+
+#~ msgid "Slider"
+#~ msgstr "Слайдер"
+
+#~ msgid "The type of slider"
+#~ msgstr "Тип слайдера"
+
+#~ msgid "You can choose the type of slider that suits you best."
+#~ msgstr "Вы можете выбрать наиболее подходящий тип слайдера."
+
+#~ msgid "Disable slider"
+#~ msgstr "Отключить слайдер"
+
+#~ msgid "Slideshow"
+#~ msgstr "Слайдшоу"
+
+#~ msgid "Slides"
+#~ msgstr "Слайды"
+
+#~ msgid "Sliding effect"
+#~ msgstr "Эффект при смене изображения"
+
+#~ msgid "Select your animation type."
+#~ msgstr "Выберите тип анимации при смене изображения слайдера"
+
+#~ msgid "random"
+#~ msgstr "Случайный"
+
+#~ msgid "simpleFade"
+#~ msgstr "Простое проявление (simpleFade)"
+
+#~ msgid "curtainTopLeft"
+#~ msgstr "Занавес слева сверху (curtainTopLeft)"
+
+#~ msgid "curtainTopRight"
+#~ msgstr "Занавес справа сверху (curtainTopRight)"
+
+#~ msgid "curtainBottomLeft"
+#~ msgstr "Занавес слева снизу (curtainBottomLeft)"
+
+#~ msgid "curtainBottomRight"
+#~ msgstr "Занавес справа снизу (curtainBottomRight)"
+
+#~ msgid "curtainSliceLeft"
+#~ msgstr "Занавес полосами слева (curtainSliceLeft)"
+
+#~ msgid "curtainSliceRight"
+#~ msgstr "Занавес полосами справа (curtainSliceRight)"
+
+#~ msgid "blindCurtainTopLeft"
+#~ msgstr "Горизонтальный занавес слева сверху (blindCurtainTopLeft)"
+
+#~ msgid "blindCurtainTopRight"
+#~ msgstr "Горизонтальный занавес справа сверху (blindCurtainTopRight)"
+
+#~ msgid "blindCurtainBottomLeft"
+#~ msgstr "Горизонтальный занавес слева снизу (blindCurtainBottomLeft)"
+
+#~ msgid "blindCurtainBottomRight"
+#~ msgstr "Горизонтальный занавес справа снизу (blindCurtainBottomRight)"
+
+#~ msgid "blindCurtainSliceBottom"
+#~ msgstr "Горизонтальный занавес снизу (blindCurtainSliceBottom)"
+
+#~ msgid "blindCurtainSliceTop"
+#~ msgstr "Горизонтальный занавес сверху (blindCurtainSliceTop)"
+
+#~ msgid "stampede"
+#~ msgstr "Бегство (stampede)"
+
+#~ msgid "mosaic"
+#~ msgstr "Мозаика (mosaic)"
+
+#~ msgid "mosaicReverse"
+#~ msgstr "Обратная мозаика (mosaicReverse)"
+
+#~ msgid "mosaicRandom"
+#~ msgstr "Случайная мозаика (mosaicRandom)"
+
+#~ msgid "mosaicSpiral"
+#~ msgstr "Спиральная мозаика (mosaicSpiral)"
+
+#~ msgid "mosaicSpiralReverse"
+#~ msgstr "Обратная спиральная мозаика (mosaicSpiralReverse)"
+
+#~ msgid "topLeftBottomRight"
+#~ msgstr "Диагональ слева сверху (topLeftBottomRight)"
+
+#~ msgid "bottomRightTopLeft"
+#~ msgstr "Диагональ справа снизу (bottomRightTopLeft)"
+
+#~ msgid "bottomLeftTopRight"
+#~ msgstr "Диагональ слева снизу (bottomLeftTopRight)"
+
+#~ msgid "Number of columns"
+#~ msgstr "Количество колонок (используется в некоторых эффектах слайдера)"
+
+#~ msgid "Number of rows"
+#~ msgstr "Количество строк (используется в некоторых эффектах слайдера)"
+
+#~ msgid "Banner effect"
+#~ msgstr "Эффект банера"
+
+#~ msgid "moveFromLeft"
+#~ msgstr "Движение слева (moveFromLeft)"
+
+#~ msgid "moveFromRight"
+#~ msgstr "Движение справа (moveFromRight)"
+
+#~ msgid "moveFromTop"
+#~ msgstr "Движение сверху (moveFromTop)"
+
+#~ msgid "moveFromBottom"
+#~ msgstr "Движение снизу (moveFromBottom)"
+
+#~ msgid "fadeIn"
+#~ msgstr "Постепенное проявление (fadeIn)"
+
+#~ msgid "fadeFromLeft"
+#~ msgstr "Проявление слева (fadeFromLeft)"
+
+#~ msgid "fadeFromRight"
+#~ msgstr "Проявление справа (fadeFromRight)"
+
+#~ msgid "fadeFromTop"
+#~ msgstr "Проявление сверху (fadeFromTop)"
+
+#~ msgid "fadeFromBottom"
+#~ msgstr "Проявление снизу (fadeFromBottom)"
+
+#~ msgid "Select your banner animation type."
+#~ msgstr "Выберите тип анимации банера."
+
+#~ msgid "Pause time"
+#~ msgstr "Время паузы"
+
+#~ msgid "Pause time (ms)."
+#~ msgstr "Время паузы (мс)."
+
+#~ msgid "Animation speed"
+#~ msgstr "Скорость анимации"
+
+#~ msgid "Animation speed (ms)"
+#~ msgstr "Скорость анимации (мс)"
+
+#~ msgid "Animate slider automatically?"
+#~ msgstr "Вы можете включить или выключить анимацию слайдера по умолчанию."
+
+#~ msgid "Thumbnails"
+#~ msgstr "Миниатюры"
+
+#~ msgid "Display thumbnails?"
+#~ msgstr "Показывать миниатюры остальных слайдов?"
+
+#~ msgid "Pagination"
+#~ msgstr "Постраничная навигация"
+
+#~ msgid "Display pagination?"
+#~ msgstr ""
+#~ "Показывать постраничную навигацию для возможности перехода к любому "
+#~ "слайду?"
+
+#~ msgid "Next & Prev navigation"
+#~ msgstr "Кнопки Назад и Вперед"
+
+#~ msgid "Display next & prev navigation?"
+#~ msgstr "Показывать кнопки Назад и Вперед для ручной прокрутки слайдов?"
+
+#~ msgid "Display next & prev navigation only on hover?"
+#~ msgstr "Показывать кнопки Назад и Вперед только при наведении?"
+
+#~ msgid ""
+#~ "If true the navigation button (prev, next and play/stop buttons) will be "
+#~ "visible on hover state only, if false they will be visible always"
+#~ msgstr ""
+#~ "При включении этой настройки кнопки управления слайдером будут видны "
+#~ "только при наведении мыши."
+
+#~ msgid "Play/Pause button"
+#~ msgstr "Кнопка воспроизведение/пауза"
+
+#~ msgid "Display Play/Pause button?"
+#~ msgstr ""
+#~ "Показывать кнопку воспроизведение/пауза для управления слайдером Вашего "
+#~ "сайта?"
+
+#~ msgid "Loader"
+#~ msgstr "Загрузчик"
+
+#~ msgid "Slider loader"
+#~ msgstr "Полоса загрузки"
+
+#~ msgid "Pie"
+#~ msgstr "Диаграмма загрузки"
+
+#~ msgid "Bar"
+#~ msgstr "Полоса"
+
+#~ msgid "Slides to display"
+#~ msgstr "Слайды для отображения"
+
+#~ msgid ""
+#~ "Select the slides that you want to be displayed on slider. If no slide is "
+#~ "selected, all slides will be displayed."
+#~ msgstr ""
+#~ "Выберите слайды, которые должны отображаться на слайдере. Если ни один "
+#~ "слайд не выбран, то будут отображаться все."
+
+#~ msgid "Pause on mouseover"
+#~ msgstr "Пауза при наведении мыши"
+
+#~ msgid "The auto play will pause when you mouse over the slider."
+#~ msgstr ""
+#~ "Автовоспроизведение будет приостановлено, пока мышь наведена на слайд."
+
+#~ msgid "Animation slowdown"
+#~ msgstr "Замедление анимации"
+
+#~ msgid ""
+#~ "You can choose different types of animation slowdown for transition of "
+#~ "slides."
+#~ msgstr "Вы можете определить варианты замедления анимации смены слайдов."
+
+#~ msgid "Mouse events for transition of slides"
+#~ msgstr "События мыши для смены слайдов"
+
+#~ msgid ""
+#~ "You can choose different types of mouse events for transition of slides."
+#~ msgstr "Вы можете выбрать типы событий мыши для смены слайдов."
+
+#~ msgid "Click"
+#~ msgstr "Клик"
+
+#~ msgid "Mouseover"
+#~ msgstr "Курсор мыши наведен"
+
+#~ msgid "Double click"
+#~ msgstr "Двойной клик"
+
+#~ msgid "Active slide"
+#~ msgstr "Активный слайд"
+
+#~ msgid ""
+#~ "Set the number of slide that will be active by default. If the value is "
+#~ "0, all slides will be of the same width when page loads."
+#~ msgstr ""
+#~ "Установите номер слайда активного по умолчанию. При значении 0 все слайды "
+#~ "будут одинаковой ширины при загрузке страницы."
+
+#~ msgid "linear"
+#~ msgstr "linear"
+
+#~ msgid "easeInSine"
+#~ msgstr "easeInSine"
+
+#~ msgid "easeOutSine"
+#~ msgstr "easeOutSine"
+
+#~ msgid "easeInOutSine"
+#~ msgstr "easeInOutSine"
+
+#~ msgid "easeInQuad"
+#~ msgstr "easeInQuad"
+
+#~ msgid "easeOutQuad"
+#~ msgstr "easeOutQuad"
+
+#~ msgid "easeInOutQuad"
+#~ msgstr "easeInOutQuad"
+
+#~ msgid "easeInCubic"
+#~ msgstr "easeInCubic"
+
+#~ msgid "easeOutCubic"
+#~ msgstr "easeOutCubic"
+
+#~ msgid "easeInOutCubic"
+#~ msgstr "easeInOutCubic"
+
+#~ msgid "easeInQuart"
+#~ msgstr "easeInQuart"
+
+#~ msgid "easeOutQuart"
+#~ msgstr "easeOutQuart"
+
+#~ msgid "easeInOutQuart"
+#~ msgstr "easeInOutQuart"
+
+#~ msgid "easeInQuint"
+#~ msgstr "easeInQuint"
+
+#~ msgid "easeOutQuint"
+#~ msgstr "easeOutQuint"
+
+#~ msgid "easeInOutQuint"
+#~ msgstr "easeInOutQuint"
+
+#~ msgid "easeInExpo"
+#~ msgstr "easeInExpo"
+
+#~ msgid "easeOutExpo"
+#~ msgstr "easeOutExpo"
+
+#~ msgid "easeInOutExpo"
+#~ msgstr "easeInOutExpo"
+
+#~ msgid "easeInCirc"
+#~ msgstr "easeInCirc"
+
+#~ msgid "easeOutCirc"
+#~ msgstr "easeOutCirc"
+
+#~ msgid "easeInOutCirc"
+#~ msgstr "easeInOutCirc"
+
+#~ msgid "easeInBack"
+#~ msgstr "easeInBack"
+
+#~ msgid "easeOutBack"
+#~ msgstr "easeOutBack"
+
+#~ msgid "easeInOutBack"
+#~ msgstr "easeInOutBack"
+
+#~ msgid "easeInElastic"
+#~ msgstr "easeInElastic"
+
+#~ msgid "easeOutElastic"
+#~ msgstr "easeOutElastic"
+
+#~ msgid "easeInOutElastic"
+#~ msgstr "easeInOutElastic"
+
+#~ msgid "easeInBounce"
+#~ msgstr "easeInBounce"
+
+#~ msgid "easeOutBounce"
+#~ msgstr "easeOutBounce"
+
+#~ msgid "easeInOutBounce"
+#~ msgstr "easeInOutBounce"
+
+#~ msgid "Blog"
+#~ msgstr "Блог"
+
+#~ msgid "Blog Title"
+#~ msgstr "Заголовок блога"
+
+#~ msgid "Enter Your Blog Title used on Blog page."
+#~ msgstr "Введите название блога. Будет использоваться на странице Блог."
+
+#~ msgid "Related Posts Title"
+#~ msgstr "Заголовок раздела Похожие записи"
+
+#~ msgid "Enter Your Title used on Single Post page for related posts."
+#~ msgstr ""
+#~ "Введите заголовок для раздела похожих записей. Будет использоваться на "
+#~ "страницах вашего блога."
+
+#~ msgid "Related Posts"
+#~ msgstr "Похожие записи"
+
+#~ msgid "Sidebar position"
+#~ msgstr "Расположение сайдбара"
+
+#~ msgid "Choose sidebar position."
+#~ msgstr "Выберите расположение сайдбара"
+
+#~ msgid "Blog image size"
+#~ msgstr "Размер изображений блога"
+
+#~ msgid "Featured image size on the blog."
+#~ msgstr "Размер избранных изображений в блоге"
+
+#~ msgid "Should images be uploaded on page scroll?"
+#~ msgstr "Изображения должны загружаться при прокрутке страницы?"
+
+#~ msgid ""
+#~ "You can enable images load only as you scroll down the page. Otherwise "
+#~ "images will load all at once."
+#~ msgstr ""
+#~ "Вы можете включить загрузку изображений только при прокрутке страницы. В "
+#~ "противном случае, они все будут загружаться сразу."
+
+#~ msgid "Display share button in single post?"
+#~ msgstr "Отображать кнопку \"поделиться\" на странице записи."
+
+#~ msgid "Single post image size"
+#~ msgstr "Размер изображений на странице записей блога"
+
+#~ msgid "Featured image size on the single page."
+#~ msgstr "Размер избранных изображений на странице записей блога."
+
+#~ msgid "View meta of the blog."
+#~ msgstr "Просмотреть мета-данные блога."
+
+#~ msgid ""
+#~ "Select meta block type which will be displayed on blog and post pages."
+#~ msgstr ""
+#~ "Выберите тип блока мета-данных, который будет отображаться на страницах "
+#~ "блога и страницах записей."
+
+#~ msgid "Enable excerpt for blog posts?"
+#~ msgstr "Включить выдержку (excerpt) для записей в блоге?"
+
+#~ msgid "Enable or Disable excerpt for blog posts."
+#~ msgstr ""
+#~ "Разрешить или запретить использовать выдержку (excerpt) для записей в "
+#~ "блоге?"
+
+#~ msgid "Button text for blog posts."
+#~ msgstr "Текст кнопки для записей блога."
+
+#~ msgid "Do not show."
+#~ msgstr "Не показывать"
+
+#~ msgid "Lines."
+#~ msgstr "Линии"
+
+#~ msgid "Columns."
+#~ msgstr "Колонки"
+
+#~ msgid "Icons."
+#~ msgstr "Иконки"
+
+#~ msgid "Post publication date."
+#~ msgstr "Дата публикации записи."
+
+#~ msgid "Should the post publication date be displayed?"
+#~ msgstr "Отображать дату публикации поста?"
+
+#~ msgid "Author of the post."
+#~ msgstr "Автор записи."
+
+#~ msgid "Display the author of the post?"
+#~ msgstr "Показывать автора поста"
+
+#~ msgid "Direct link to the post."
+#~ msgstr "Прямая ссылка на запись."
+
+#~ msgid "Should the direct link to the post be displayed? "
+#~ msgstr "Отображать прямую ссылку на запись?"
+
+#~ msgid "Post categories."
+#~ msgstr "Категории поста"
+
+#~ msgid "Should the post categories be displayed?"
+#~ msgstr "Отображать категории записи?"
+
+#~ msgid "Tags be displayed."
+#~ msgstr "Отображать теги"
+
+#~ msgid "Should the tags be displayed?"
+#~ msgstr "Отображать теги (метки)?"
+
+#~ msgid "Number of comments."
+#~ msgstr "Количество комментариев"
+
+#~ msgid "Should the number of comments be displayed?"
+#~ msgstr "Отображать количество комментариев?"
+
+#~ msgid "Number of view."
+#~ msgstr "Количество просмотров."
+
+#~ msgid "Should the number of view be displayed?"
+#~ msgstr "Отображать количество просмотров?"
+
+#~ msgid "Number of likes."
+#~ msgstr "Количество \"лайков\"."
+
+#~ msgid "Should the number of likes be displayed?"
+#~ msgstr "Отображать количество \"лайков\"?"
+
+#~ msgid "Number of dislikes."
+#~ msgstr "Количество \"дизлайков\"."
+
+#~ msgid "Should the number of dislikes be displayed?"
+#~ msgstr "Отображать количество \"дизлайков\"?"
+
+#~ msgid "Portfolio"
+#~ msgstr "Портфолио"
+
+#~ msgid "Filter"
+#~ msgstr "Фильтр"
+
+#~ msgid "Portfolio filter."
+#~ msgstr "Фильтр портфолио."
+
+#~ msgid "By category"
+#~ msgstr "По категории"
+
+#~ msgid "By tags"
+#~ msgstr "По тэгам"
+
+#~ msgid "Both (by category and tags)"
+#~ msgstr "Оба (по категориям и тэгам)"
+
+#~ msgid "Show title?"
+#~ msgstr "Показывать заголовок?"
+
+#~ msgid "Enable or Disable title for portfolio posts."
+#~ msgstr "Включить или отключить заголовки для записей портфолио."
+
+#~ msgid "Show excerpt?"
+#~ msgstr "Показывать выдержку (excerpt)?"
+
+#~ msgid "Enable or Disable excerpt for portfolio posts."
+#~ msgstr "Включить или отключить выдержку (excerpt) для записей портфолио."
+
+#~ msgid "Button text for portfolio posts."
+#~ msgstr "Текст кнопки для записей портфолио."
+
+#~ msgid "Excerpt words"
+#~ msgstr "Слова выдержки (excerpt)"
+
+#~ msgid "Excerpt length (words)."
+#~ msgstr "Длина выдержки (excerpt) (слова)."
+
+#~ msgid "Show button?"
+#~ msgstr "Показывать кнопку?"
+
+#~ msgid "Enable or Disable button for portfolio posts."
+#~ msgstr "Включить или отключить заголовки для записей портфолио."
+
+#~ msgid "Show portfolio meta?"
+#~ msgstr "Показывать мета данные Портфолио?"
+
+#~ msgid "Enable or Disable meta for single portfolio posts."
+#~ msgstr "Включить или отключить мета-данные для записей портфолио."
+
+#~ msgid "Enable or Disable lightbox for portfolio posts."
+#~ msgstr "Включить или отключить лайтбокс для записей портфолио."
+
+#~ msgid "Layout"
+#~ msgstr "Макет"
+
+#~ msgid ""
+#~ "Portfolio has different layout modes. You can set and change the layout "
+#~ "mode via this option."
+#~ msgstr ""
+#~ "Потфолио имеет несколько макетов для отображения. Вы можете выбрать макет "
+#~ "с помощью этой опции."
+
+#~ msgid "Fit rows"
+#~ msgstr "Ровные ряды"
+
+#~ msgid "Masonry"
+#~ msgstr "Кирпич"
+
+#~ msgid "Portfolio 2 columns items amount"
+#~ msgstr "Количество элементов в портфолио с двумя колонками"
+
+#~ msgid "Portfolio items amount for Portfolio 2 columns template."
+#~ msgstr ""
+#~ "Количество элементов, которое будет отображаться при выборе макета "
+#~ "портфолио с двумя колонками (рекомендуется четное число)."
+
+#~ msgid "Portfolio 3 columns items amount"
+#~ msgstr "Количество элементов в портфолио с тремя колонками"
+
+#~ msgid "Portfolio items amount for Portfolio 3 columns template."
+#~ msgstr ""
+#~ "Количество элементов, которое будет отображаться при выборе макета "
+#~ "портфолио с двумя колонками (рекомендуется количество кратное трем)."
+
+#~ msgid "Portfolio 4 columns items amount"
+#~ msgstr "Количество элементов в портфолио с четырьмя колонками"
+
+#~ msgid "Portfolio items amount for Portfolio 4 columns template."
+#~ msgstr ""
+#~ "Количество элементов, которое будет отображаться при выборе макета "
+#~ "портфолио с двумя колонками (рекомендуется количество кратное четырем)."
+
+#~ msgid "Footer"
+#~ msgstr "Футер"
+
+#~ msgid "Footer copyright text"
+#~ msgstr "Текст об авторском праве"
+
+#~ msgid ""
+#~ "Enter text used in the right side of the footer. HTML tags are allowed."
+#~ msgstr ""
+#~ "Введите текст, который будет отображаться в правой части футера. Могут "
+#~ "использоваться HTML тэги."
+
+#~ msgid "Google Analytics Code"
+#~ msgstr "Код Google Analytics"
+
+#~ msgid ""
+#~ "You can paste your Google Analytics or other tracking code in this box. "
+#~ "This will be automatically added to the footer."
+#~ msgstr ""
+#~ "Вы можете вставить код Google Analytics в это поле. Он будет "
+#~ "автоматически добавлен в футер всех страниц."
+
+#~ msgid "Feedburner URL"
+#~ msgstr "Feedburner URL"
+
+#~ msgid ""
+#~ "Feedburner is a Google service that takes care of your RSS feed. Paste "
+#~ "your Feedburner URL here to let readers see it in your website."
+#~ msgstr ""
+#~ "Feedburner это сервис от Google, который обеспечивает работу Вашего RSS "
+#~ "потока. Вставьте Ваш Feedburner URL в это поле, чтобы Ваши пользователи "
+#~ "смогли увидеть его на сайте."
+
+#~ msgid "Display Footer Menu?"
+#~ msgstr "Показывать меню в футере?"
+
+#~ msgid "Do you want to display footer menu?"
+#~ msgstr "Вы хотите показывать меню в футере?"
+
+#~ msgid "Footer Menu Typography"
+#~ msgstr "Типографика меню в футере"
+
+#~ msgid ""
+#~ "Choose your prefered font for menu. <em>Note: fonts marked with "
+#~ "<strong>*</strong> symbol will be loaded from the <a href=\"http://www."
+#~ "google.com/webfonts\">Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Выберите шрифт для меню. <em>Внимание: шрифты помеченные символом "
+#~ "<strong>*</strong> будут загружаться из библиотеки <a href='http://www."
+#~ "google.com/webfonts'>Google Web Fonts</a>.</em>"
+
+#~ msgid "<span>Step <i>1</i></span>Theme Options Import"
+#~ msgstr "<span>Шаг <i>1</i></span>Импорт настроек темы"
+
+#~ msgid ""
+#~ "Select the file that contains Theme Options (e.g. <b>options.json</b> )"
+#~ msgstr "Выберите файл содержащий настройки темы ( <b>options.json</b> )"
+
+#~ msgid "Upload File and Import"
+#~ msgstr "Загрузить файл и импортировать"
+
+#~ msgid "<span>Step <i>1</i></span>Theme Options Export"
+#~ msgstr "<span>Шаг <i>1</i></span>Экспорт настроек темы"
+
+#~ msgid "Welcome to the OptionsFramework Backup Manager."
+#~ msgstr ""
+#~ "Добро пожаловать в Менеджер резервного копировапния OptionsFramework."
+
+#~ msgid "There was a problem importing your settings. Please Try again."
+#~ msgstr "Возникла проблема с импортом ваших настроек. Попробуйте еще раз."
+
+#~ msgid "There was a problem exporting your settings. Please Try again."
+#~ msgstr "Возникла проблема с экспортом ваших настроек. Попробуйте еще раз."
+
+#~ msgid "The import file you've provided is invalid. Please try again."
+#~ msgstr "Ваш импортируемый файл содержит ошибки. Попробуйте еще раз."
+
+#~ msgid "<span>Step <i>1</i></span> Widget Settings Export"
+#~ msgstr "<span>Шаг <i>1</i></span> Экспорт настроек виджетов"
+
+#~ msgid "<span>Step <i>3</i></span> Widget Settings Import"
+#~ msgstr "<span>Шаг <i>3</i></span> Импорт настроек виджетов"
+
+#~ msgid "<span>Step <i>4</i></span> Widget Settings Import"
+#~ msgstr "<span>Шаг <i>4</i></span> Импорт настроек виджетов"
+
+#~ msgid "Import Settings"
+#~ msgstr "Импортировать настройки "
+
+#~ msgid ""
+#~ "Incorrect file. Please, <a href='admin.php?page=options-framework-"
+#~ "import&amp;step=1'>try again</a>."
+#~ msgstr ""
+#~ "Ошибка файла. Пожалуйста, <a href='admin.php?page=options-framework-"
+#~ "import&amp;step=1'>попробуйте еще раз</a>."
+
+#~ msgid ""
+#~ "Select the file that contains Widget Settings (e.g. "
+#~ "<b>your_template_package/sources/sample_data/widgets.json</b>)"
+#~ msgstr ""
+#~ "Выберите файл с настройками виджетов (<b>your_template_package/sources/"
+#~ "sample_data/widgets.json</b>)"
+
+#~ msgid "Show Widget Settings"
+#~ msgstr "Показать настройки виджетов"
+
+#~ msgid "Your have no widgets. Please, click next to go to the next step."
+#~ msgstr ""
+#~ "В Вашей теме нет виджетов. Пожалуйста, нажмите Далее для перехода к "
+#~ "следующему шагу."
+
+#~ msgid ""
+#~ "Disable the widgets you don't need and click \"Next\". All the selected "
+#~ "widgets will be imported into the theme by default."
+#~ msgstr ""
+#~ "Отключите, возможно ненужные Вам виджеты, и кликните Далее. По умолчанию, "
+#~ "все выбранные виджеты будут импортированы в тему."
+
+#~ msgid "go to widgets"
+#~ msgstr "перейти к виджетам"
+
+#~ msgid ""
+#~ "File widgets.json incorrect or empty. For this reason, none of the widget "
+#~ "will be imported into your theme."
+#~ msgstr ""
+#~ "Файл widgets.json \"не правильный\" или пустой. По-этому ни одного "
+#~ "виджета не будет импортировано в Вашу тему. "
+
+#~ msgid "Sorry, there has been an error."
+#~ msgstr "Извините, произошла ошибка."
+
+#~ msgid "The file does not exist, please "
+#~ msgstr "Файл не существует"
+
+#~ msgid "Please"
+#~ msgstr "Пожалуйста"
+
+#~ msgid ""
+#~ "This WXR file (version %s) may not be supported by this version of the "
+#~ "importer. Please consider updating."
+#~ msgstr ""
+#~ "WXR файл (версия %s) может не поддерживаться вашей версией импортере. "
+#~ "Подумайте об обновлении."
+
+#~ msgid ""
+#~ "The export file could not be found at <code>%s</code>. It is likely that "
+#~ "this was caused by a permissions problem."
+#~ msgstr ""
+#~ "Файл для экспорта не может быть найден в <code>%s</code>. Скорее всего, "
+#~ "это произошло из-за проблем с правами доступа."
+
+#~ msgid ""
+#~ "Failed to import author %s. Their posts will be attributed to the current "
+#~ "user."
+#~ msgstr ""
+#~ "Не получается импортировать %s авторов. Их записи будут добавлены "
+#~ "текущему пользователю."
+
+#~ msgid "Assign Authors"
+#~ msgstr "Назначить авторов"
+
+#~ msgid ""
+#~ "To make it easier for you to edit and save the imported content, you may "
+#~ "want to reassign the author of the imported item to an existing user of "
+#~ "this site. For example, you may want to import all the entries as "
+#~ "<b>admin</b> entries."
+#~ msgstr ""
+#~ "Для того, чтобы облегчить сохранение и редактирование импортированного "
+#~ "контента, Вы можете предпочесть переназначить авторство импортированных "
+#~ "записей уже существующему пользователю. К примеру, вы можете указать "
+#~ "пользователя <b>admin</b> автором всех записей."
+
+#~ msgid ""
+#~ "If a new user is created by WordPress, a new password will be randomly "
+#~ "generated and the new user&#8217;s role will be set as %s. Manually "
+#~ "changing the new user&#8217;s details will be necessary."
+#~ msgstr ""
+#~ "При создании нового пользователя WordPress будет создан случайный пароль, "
+#~ "а роль пользователя будет установлена, как %s. Вам потребуется вручную "
+#~ "изменить детали пользователя при необходимости."
+
+#~ msgid "Download and import file attachments"
+#~ msgstr "Скачать и импортировать файловые приложения"
+
+#~ msgid "Import Data"
+#~ msgstr "Импортировать данные"
+
+#~ msgid "Import author:"
+#~ msgstr "Импортировать автора:"
+
+#~ msgid "assign posts to an existing user:"
+#~ msgstr "Назначить автором записей существующего пользователя:"
+
+#~ msgid "- Select -"
+#~ msgstr "-Выберите-"
+
+#~ msgid ""
+#~ "Failed to create new user for %s. Their posts will be attributed to the "
+#~ "current user."
+#~ msgstr ""
+#~ "Ошибка при создании пользователя %s. Их записи будут перемещены текущему "
+#~ "пользователю."
+
+#~ msgid "Failed to import category %s "
+#~ msgstr "Ошибка при импорте категории %s"
+
+#~ msgid "Failed to import post tag %s"
+#~ msgstr "Ошибка при импорте тэга записей %s"
+
+#~ msgid "Failed to import %s %s "
+#~ msgstr "Ошибка при импорте %s %s"
+
+#~ msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s "
+#~ msgstr "Ошибка при импорте &#8220;%s&#8221;: неправильный тип записи %s "
+
+#~ msgid "%s &#8220;%s&#8221; already exists."
+#~ msgstr "%s &#8220;%s&#8221; уже существует."
+
+#~ msgid "Failed to import %s &#8220;%s&#8221; "
+#~ msgstr "Ошибка при импорте %s &#8220;%s&#8221; "
+
+#~ msgid "Menu item skipped due to missing menu slug "
+#~ msgstr "Элемент меню пропущен, так как отсутствует слаг меню"
+
+#~ msgid "Menu item skipped due to invalid menu slug: %s "
+#~ msgstr "Элемент меню пропущен, так как отсутствует слаг меню: %s"
+
+#~ msgid "Fetching attachments is not enabled "
+#~ msgstr "Извлечение вложений не включено"
+
+#~ msgid "Invalid file type"
+#~ msgstr "Неправильный тип файла"
+
+#~ msgid "Remote server did not respond"
+#~ msgstr "Удаленный сервер не отвечает"
+
+#~ msgid "Remote server returned error response %1$d %2$s "
+#~ msgstr "Удаленный сервер вернул ошибку с кодом %1$d %2$s "
+
+#~ msgid "Remote file is incorrect size "
+#~ msgstr "Удаленный файл имеет ошибку размера"
+
+#~ msgid "Zero size file downloaded "
+#~ msgstr "Скачан файл нулевого размера"
+
+#~ msgid "Remote file is too large, limit is %s "
+#~ msgstr "Удаленный файл слишком большой, ограничение %s "
+
+#~ msgid "<span>Step <i>1</i></span> Data Import"
+#~ msgstr "<span>Шаг <i>1</i></span> Импорт данных"
+
+#~ msgid "<span>Step <i>2</i></span> Assign Authors"
+#~ msgstr "<span>Шаг <i>2</i></span> Назначить Авторов"
+
+#~ msgid ""
+#~ "A new version of this importer is available. Please update to version %s "
+#~ "to ensure compatibility with newer export files. "
+#~ msgstr ""
+#~ "Доступна новая версия импортера. Обновитесь, пожалуйста, до версии %s для "
+#~ "совместимости с новыми файлами импорта."
+
+#~ msgid ""
+#~ "Select (<b>.xml</b>) file to upload sample data.<br>If you do not want to "
+#~ "install sample data from livedemo you need to <b>skip this step</b>."
+#~ msgstr ""
+#~ "Выберите <b>.xml</b> файл для импорта данных. <br>Если вы не хотите "
+#~ "устанавливать контент с Демо версии, то <b>пропустите</b> этот шаг."
+
+#~ msgid ""
+#~ "Please note that certain content is already installed. You may simply "
+#~ "need to skip this step. Otherwise, you can proceed with the installation."
+#~ msgstr ""
+#~ "Обратите внимание, что некий контент уже установлен. Возможно, Вам просто "
+#~ "нужно пропустить этот шаг. Впротивном случае, Вы можете продолжить "
+#~ "установку. "
+
+#~ msgid "NOTE"
+#~ msgstr "ВНИМАНИЕ"
+
+#~ msgid ""
+#~ "if for some reason those settings can not be adjusted, you may install "
+#~ "the sample data using an <strong>alternative method</strong> - importing "
+#~ "the <strong>.sql</strong> file directly into the database. Refer to the "
+#~ "template documentation for instructions."
+#~ msgstr ""
+#~ "Если по каким-либо причинам эти настройки не могут быть изменены, мы "
+#~ "предлагаем Вам <strong>альтернативный метод</strong> - импортируйте "
+#~ "<strong>.sql</strong> файл прямо в базу данных. Вы найдете инструкции в "
+#~ "документации к шаблону."
+
+#~ msgid ""
+#~ "You can proceed with the template installation without updating server "
+#~ "settings, however in this case you can get errors or only part of your "
+#~ "content will be loaded."
+#~ msgstr ""
+#~ "Вы можете продолжить установку шаблона без обновления настроек сервера. В "
+#~ "таком случае могут произойти ошибки или будет загружена только часть "
+#~ "данных."
+
+#~ msgid "Congratulations"
+#~ msgstr "Поздравляем"
+
+#~ msgid ""
+#~ "You have successfully installed your <b>Cherry WordPress Theme</b>.<br /> "
+#~ "You can look theme now"
+#~ msgstr ""
+#~ "Вы успешно установили <b>Cherry WordPress Theme</b>. <br /> Вы можете "
+#~ "посмотреть тему сейчас"
+
+#~ msgid "visit site"
+#~ msgstr "посетить сайт"
+
+#~ msgid ""
+#~ "You might see only the white screen on the next step. Don't worry, the "
+#~ "importing is being continued. Please wait until the installation is "
+#~ "finished."
+#~ msgstr ""
+#~ "Возможно на следующем шаге Вы увидите только белый экран. Не волнуйтесь, "
+#~ "импорт при этом продолжается. Пожалуйста, дождитесь завершения установки"
+
+#~ msgid ""
+#~ "<b>Attention:</b> the Jigoshop plugin is not activated. We recommend that "
+#~ "you install and activate this plugin to ensure correct data importing. "
+#~ "Otherwise, some data may be lost during the import."
+#~ msgstr ""
+#~ "<b>Внимание.</b> Плагин Jigoshop не активирован. Рекомендуем Вам "
+#~ "установить и активировать данный плагин для корректного импорта данных. В "
+#~ "противном случае возможна потеря данных во время импорта."
+
+#~ msgid ""
+#~ "<b>Attention:</b> the WooCommerce plugin is not activated. We recommend "
+#~ "that you install and activate this plugin to ensure correct data "
+#~ "importing. Otherwise, some data may be lost during the import."
+#~ msgstr ""
+#~ "<b>Внимание.</b> Плагин WooCommerce не активирован. Рекомендуем Вам "
+#~ "установить и активировать данный плагин для корректного импорта данных. В "
+#~ "противном случае возможна потеря данных во время импорта."
+
+#~ msgid "The login information you have entered is incorrect."
+#~ msgstr "Вы указали некорректные данные при авторизации."
+
+#~ msgid ""
+#~ "You need to enable write permissions on your server to use these "
+#~ "functions."
+#~ msgstr ""
+#~ "Вы должны предоставить права на запись на Вашем сервере для использования "
+#~ "этих функций."
+
+#~ msgid ""
+#~ "Cherry Framework is not able to perform necessary changes for the correct "
+#~ "work with your child theme."
+#~ msgstr ""
+#~ "Cherry фреймворк не может произвести необходимые изменения для корректной "
+#~ "работы с Вашей дочерней темой."
+
+#~ msgid ""
+#~ "See <a target=\"_blank\" href=\"http://codex.wordpress.org/"
+#~ "Changing_File_Permissions\">the Codex</a> for more information."
+#~ msgstr ""
+#~ "Проверьте <a target=\"_blank\" href=\"http://codex.wordpress.org/"
+#~ "Changing_File_Permissions\">справочник WordPress (Codex)</a> для "
+#~ "получения дополнительной информации."
+
+#~ msgid "Header Menu"
+#~ msgstr "Меню в шапке"
+
+#~ msgid "Footer Menu"
+#~ msgstr "Меню в футере"
+
+#~ msgid "Testimonial"
+#~ msgstr "Отзывы"
+
+#~ msgid "Services"
+#~ msgstr "Услуги"
+
+#~ msgid "FAQs"
+#~ msgstr "FAQs"
+
+#~ msgid "Our Team"
+#~ msgstr "Наша команда"
+
+#~ msgid "Category"
+#~ msgstr "Категория"
+
+#~ msgid "Thumbnail"
+#~ msgstr "Миниатюра"
+
+#~ msgid "Your comment is awaiting moderation."
+#~ msgstr "Ваш комментарий ожидает утверждения"
+
+#~ msgid "Please choose desired Portfolio Format and fill additional fields."
+#~ msgstr "Выберите желаемый формат Портфолио и заполните дополнительные поля."
+
+#~ msgid "Grid Gallery"
+#~ msgstr "Сетка галереи"
+
+#~ msgid "Portfolio Options"
+#~ msgstr "Настройки портфолио"
+
+#~ msgid "Format"
+#~ msgstr "Формат"
+
+#~ msgid "Choose post format that most fit your needs."
+#~ msgstr "Выберите подходящий формат записи."
+
+#~ msgid "Input project end date."
+#~ msgstr "Укажите дату окончания проекта."
+
+#~ msgid "Input project owner name."
+#~ msgstr "Укажите имя заказчика проекта."
+
+#~ msgid "Additional info for this portfolio item."
+#~ msgstr "Дополнительная информация для этого элемента портфолио."
+
+#~ msgid "Input the project URL (external link)"
+#~ msgstr "Укажите URL проекта (внешняя ссылка)"
+
+#~ msgid "Image Settings"
+#~ msgstr "Настройки изображения"
+
+#~ msgid "Video Settings"
+#~ msgstr "Настройки видео"
+
+#~ msgid "Input the video title (for playlist)"
+#~ msgstr "Добавить видео файл (для списка воспроизведения)"
+
+#~ msgid "Artist"
+#~ msgstr "Исполнитель"
+
+#~ msgid "Input the video artist (for playlist)."
+#~ msgstr "Укажите исполнителя на видео (для списка воспроизведения)"
+
+#~ msgid "Input URL to the <b>m4v</b> video format."
+#~ msgstr "Укажите путь к <b>m4v</b> видео файлу."
+
+#~ msgid "Input URL to the <b>ogv</b> video format."
+#~ msgstr "Укажите путь к <b>ogv</b> видео файлу."
+
+#~ msgid "Embedded Code"
+#~ msgstr "Встраиваемый код"
+
+#~ msgid ""
+#~ "You can include embedded code here.<br><b>Attention!</b> This code "
+#~ "overwrite your video URL(s)."
+#~ msgstr ""
+#~ "Вы можете добавить встраиваемый код сюда.<br><b>Внимание!</b> Этот код "
+#~ "перезапишет URL адрес Вашего видео."
+
+#~ msgid "Audio Settings"
+#~ msgstr "Аудио настройки"
+
+#~ msgid "Input the audio title (for playlist)."
+#~ msgstr "Добавить аудио файл (для списка воспроизведения)"
+
+#~ msgid "Input the audio artist (for playlist)."
+#~ msgstr "Укажите исполнителя аудио файла (для списка воспроизведения)"
+
+#~ msgid "Audio format"
+#~ msgstr "Аудио формат"
+
+#~ msgid "Choose audio format."
+#~ msgstr "Выберите аудио формат."
+
+#~ msgid "Audio URL"
+#~ msgstr "Аудио URL"
+
+#~ msgid "Input the audio URL."
+#~ msgstr "Укажите аудио URL."
+
+#~ msgid "Slider Options"
+#~ msgstr "Настройки слайдера"
+
+#~ msgid "Caption"
+#~ msgstr "Подпись"
+
+#~ msgid "Input your caption for slide (HTML tags are allowed)."
+#~ msgstr "Укажате подпись слайда (HTML тэги разрешены)"
+
+#~ msgid "Input the slide URL (can be external link)"
+#~ msgstr "Укажате URL слайда (может быть внешней ссылкой)"
+
+#~ msgid "Please fill additional fields for slide."
+#~ msgstr "Заполните дополнительные поля для слайда."
+
+#~ msgid "Personal Options"
+#~ msgstr "Личные настройки"
+
+#~ msgid "Please fill additional fields for person."
+#~ msgstr "Заполните дополнительные поля личных настроек."
+
+#~ msgid "Position"
+#~ msgstr "Должность"
+
+#~ msgid "Input position of the person."
+#~ msgstr "Укажите должность сторудника"
+
+#~ msgid "Input additional info."
+#~ msgstr "Введите дополнительные данные."
+
+#~ msgid "Social Networks"
+#~ msgstr "Социальные Сети"
+
+#~ msgid "Page URL"
+#~ msgstr "Адрес страницы"
+
+#~ msgid "Your Social Networks."
+#~ msgstr "Ваши Социальные Сети"
+
+#~ msgid ""
+#~ "In icon field you need to specify the icon name that can be copied from "
+#~ "the <a target=\"_blank\" href=\"http://fortawesome.github.io/Font-Awesome/"
+#~ "icons/#brand\">website</a>. E.g. \"icon-facebook\"."
+#~ msgstr ""
+#~ "В поле иконка (icon) Вам нужно указать имя иконки, которое может быть "
+#~ "скопировано с этой <a target=\"_blank\" href=\"http://fortawesome.github."
+#~ "io/Font-Awesome/icons/#brand\">страницы</a>. К примеру, \"icon-facebook\"."
+
+#~ msgid "Social Networks Title"
+#~ msgstr "Заголовок Социальных Сетей"
+
+#~ msgid "Specify the heading for the social networks block."
+#~ msgstr "Укажите заголовок для блока социальных сетей."
+
+#~ msgid "Testimonial Options"
+#~ msgstr "Настройки отзывов"
+
+#~ msgid "Please fill additional fields for testimonial."
+#~ msgstr "Заполните дополнительные поля для отзывов."
+
+#~ msgid "Name"
+#~ msgstr "Имя"
+
+#~ msgid "Input author's name."
+#~ msgstr "Укажите имя автора."
+
+#~ msgid "Input author's URL."
+#~ msgstr "Укажите URL автора."
+
+#~ msgid "Input author's additional info."
+#~ msgstr "Укажите дополнительную информацию автора."
+
+#~ msgid "Quote Settings"
+#~ msgstr "Настройки цитат"
+
+#~ msgid "The Quote"
+#~ msgstr "Цитата"
+
+#~ msgid "Put your quote in this field."
+#~ msgstr "Вставьте цитату в поле"
+
+#~ msgid "Put quote author in this field."
+#~ msgstr "Укажите цитату автора в этом поле."
+
+#~ msgid "The URL"
+#~ msgstr "Ссылка"
+
+#~ msgid "Insert the URL you wish to link to."
+#~ msgstr "Добавьте нужную ссылку"
+
+#~ msgid "Input the video title (for playlist)."
+#~ msgstr "Укажите заголовок видео (для списка воспроизведения)"
+
+#~ msgid "Category Include"
+#~ msgstr "Категория включает"
+
+#~ msgid "The Category Slug"
+#~ msgstr "Слаг категории"
+
+#~ msgid ""
+#~ "Name of the custom category that is displayed on this page. You need to "
+#~ "use the slug of the category here."
+#~ msgstr ""
+#~ "Название пользовательской категории, которая отображается на этой "
+#~ "странице. Вы должны указать здесь слаг категории."
+
+#~ msgid "Install Required Plugins"
+#~ msgstr "Установите необходимые плагины"
+
+#~ msgid "Install Plugins"
+#~ msgstr "Установите плагины"
+
+#~ msgid "Installing Plugin: %s"
+#~ msgstr "Установите плагины: %s"
+
+#~ msgid "Something went wrong"
+#~ msgstr "Что-то пошло не так"
+
+#~ msgid "This theme requires the following plugin: %1$s."
+#~ msgstr "Этому шаблону требуются следующий плагин: %1$s."
+
+#~ msgid "This theme requires the following plugins: %1$s."
+#~ msgstr "Этому шаблону требуются следующие плагины: %1$s."
+
+#~ msgid "This theme recommends the following plugin: %1$s."
+#~ msgstr "К этому шаблону рекомендуется следующий плагин: %1$s."
+
+#~ msgid "This theme recommends the following plugins: %1$s."
+#~ msgstr "К этому шаблону рекомендуются следующие плагины: %1$s."
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to install the %s "
+#~ "plugin. Contact the administrator of this site for help on getting the "
+#~ "plugin installed."
+#~ msgstr ""
+#~ "К сожалению, Ваша настройка прав доступа не позволяет установить плагин "
+#~ "%s. Свяжитесь с администратором сайта для получения помощи в установке "
+#~ "плагина."
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to install the %s "
+#~ "plugins. Contact the administrator of this site for help on getting the "
+#~ "plugins installed."
+#~ msgstr ""
+#~ "К сожалению, Ваша настройка прав доступа не позволяет установить плагинов "
+#~ "%s. Свяжитесь с администратором сайта для получения помощи в установке "
+#~ "плагина."
+
+#~ msgid "The following required plugin is currently inactive: %1$s."
+#~ msgstr "Следующий требуемый плагин в настоящее время неактивен: %1$s."
+
+#~ msgid "The following required plugins are currently inactive: %1$s."
+#~ msgstr "Следующие требуемые плагины в настоящее время неактивны: %1$s."
+
+#~ msgid "The following recommended plugin is currently inactive: %1$s"
+#~ msgstr "Следующий рекомендуемый плагин в настоящее время неактивен: %1$s."
+
+#~ msgid "The following recommended plugins are currently inactive: %1$s."
+#~ msgstr "Следующие рекомендуемые плагины в настоящее время неактивны: %1$s."
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to activate the %s "
+#~ "plugin. Contact the administrator of this site for help on getting the "
+#~ "plugin activated."
+#~ msgstr ""
+#~ "К сожалению, Ваша настройка прав доступа не позволяет активировать плагин "
+#~ "%s. Свяжитесь с администратором сайта для получения помощи в активации "
+#~ "плагина."
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to activate the %s "
+#~ "plugins. Contact the administrator of this site for help on getting the "
+#~ "plugins activated."
+#~ msgstr ""
+#~ "К сожалению, Ваша настройка прав доступа не позволяет активировать "
+#~ "плагины %s. Свяжитесь с администратором сайта для получения помощи в "
+#~ "активации плагина."
+
+#~ msgid ""
+#~ "The following plugin needs to be updated to its latest version to ensure "
+#~ "maximum compatibility with this theme: %1$s."
+#~ msgstr ""
+#~ "Следующий плагин требует обновления до последней версии для обеспечения "
+#~ "совместимости с текущей темой: %1$s."
+
+#~ msgid ""
+#~ "The following plugins need to be updated to their latest version to "
+#~ "ensure maximum compatibility with this theme: %1$s"
+#~ msgstr ""
+#~ "Следующие плагины требуют обновления до последней версии для обеспечения "
+#~ "совместимости с текущей темой: %1$s."
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to update the %s "
+#~ "plugin. Contact the administrator of this site for help on getting the "
+#~ "plugin updated."
+#~ msgstr ""
+#~ "К сожалению, Ваша настройка прав доступа не позволяет активировать плагин "
+#~ "%s. Свяжитесь с администратором сайта для получения помощи в активации "
+#~ "плагина."
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to update the %s "
+#~ "plugins. Contact the administrator of this site for help on getting the "
+#~ "plugins updated."
+#~ msgstr ""
+#~ "К сожалению, Ваша настройка прав доступа не позволяет активировать "
+#~ "плагины %s. Свяжитесь с администратором сайта для получения помощи в "
+#~ "активации плагинов."
+
+#~ msgid "Begin installing plugin"
+#~ msgstr "Начать установку плагина"
+
+#~ msgid "Begin installing plugins"
+#~ msgstr "Начать установку плагинов"
+
+#~ msgid "Activate installed plugin"
+#~ msgstr "Активировать установленный плагин"
+
+#~ msgid "Activate installed plugins"
+#~ msgstr "Активировать установленные плагины"
+
+#~ msgid "Return to Required Plugins Installer"
+#~ msgstr "Вернуться к установщику требуемых плагинов"
+
+#~ msgid "Plugin activated successfully"
+#~ msgstr "Плагин успешно активирован"
+
+#~ msgid "All plugins installed and activated successfully. %1$s"
+#~ msgstr "Все плагины установлены и успешно активированы.  %1$s"
+
+#~ msgid "Return to the Dashboard"
+#~ msgstr "Вернуться к контрольной панели."
+
+#~ msgid "The following plugin was activated successfully: %s."
+#~ msgstr "Следующий плагин был успешно активирован:  %s."
+
+#~ msgid "External Link"
+#~ msgstr "Внешняя ссылка"
+
+#~ msgid "Private Repository"
+#~ msgstr "Частный репозиторий"
+
+#~ msgid "Pre-Packaged"
+#~ msgstr "Предварительно собранные"
+
+#~ msgid "WordPress Repository"
+#~ msgstr "Репозиторий WordPress"
+
+#~ msgid "Recommended"
+#~ msgstr "Рекомендуется"
+
+#~ msgid "Not Installed"
+#~ msgstr "Не установлен"
+
+#~ msgid "Installed But Not Activated"
+#~ msgstr "Установлен, но не активирован"
+
+#~ msgid "No plugins to install or activate."
+#~ msgstr "Установка плагина не удалась."
+
+#~ msgid "Plugin"
+#~ msgstr "Плагин"
+
+#~ msgid "Source"
+#~ msgstr "Исходник"
+
+#~ msgid "Type"
+#~ msgstr "Тип"
+
+#~ msgid "Status"
+#~ msgstr "Статус"
+
+#~ msgid "Install"
+#~ msgstr "Установка"
+
+#~ msgid "Activate"
+#~ msgstr "Активировать"
+
+#~ msgid "The following plugins were activated successfully:"
+#~ msgstr "Следующие плагины были успешно активированы:"
+
+#~ msgid "Install package not available."
+#~ msgstr "Пакет установки не доступен."
+
+#~ msgid "Downloading install package from <span class='code'>%s</span>&#8230;"
+#~ msgstr "Загрузка пакета установки из <span class='code'>%s</span>&#8230;"
+
+#~ msgid "Unpacking the package&#8230;"
+#~ msgstr "Распаковка пакета&#8230;"
+
+#~ msgid "Installing the plugin&#8230;"
+#~ msgstr "Установка плагина&#8230;"
+
+#~ msgid "Plugin install failed."
+#~ msgstr "Установка плагина не удалась."
+
+#~ msgid "Plugin installed successfully."
+#~ msgstr "Плагин успешно установлен."
+
+#~ msgid "Plugin activation failed."
+#~ msgstr "Активация плагина не удалась."
+
+#~ msgid "Plugin activated successfully."
+#~ msgstr "Плагин успешно активирован."
+
+#~ msgid ""
+#~ "The installation and activation process is starting. This process may "
+#~ "take a while on some hosts, so please be patient."
+#~ msgstr ""
+#~ "Процесс установки и активации начинается. Длительность процесса может "
+#~ "зависеть от Вашего сервера. Будьте терпеливы."
+
+#~ msgid "%1$s installed and activated successfully."
+#~ msgstr "%1$s установлен и активирован успешно."
+
+#~ msgid "Show Details"
+#~ msgstr "Показать подробности"
+
+#~ msgid "Hide Details"
+#~ msgstr "Скрыть подробности"
+
+#~ msgid "All installations and activations have been completed."
+#~ msgstr "Все установки и активации были завершены."
+
+#~ msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "Установка и активация плагина %1$s (%2$d/%3$d)"
+
+#~ msgid ""
+#~ "The installation process is starting. This process may take a while on "
+#~ "some hosts, so please be patient."
+#~ msgstr ""
+#~ "Процесс установки и активации начинается. Длительность процесса может "
+#~ "зависеть от Вашего сервера. Будьте терпеливы."
+
+#~ msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+#~ msgstr "Произошла ошибка во время установки %1$s: <strong>%2$s</strong>."
+
+#~ msgid "The installation of %1$s failed."
+#~ msgstr "Установка %1$s не удалась."
+
+#~ msgid "%1$s installed successfully."
+#~ msgstr "%1$s успешно установлен."
+
+#~ msgid "All installations have been completed."
+#~ msgstr "Все установки были завершены."
+
+#~ msgid "Installing Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "Установка плагина %1$s (%2$d/%3$d)"
+
+#~ msgid "Something went wrong with the plugin API._"
+#~ msgstr "Произошла ошибка с плагином API. "
+
+#~ msgid "updated"
+#~ msgstr "обновлено"
+
+#~ msgid "Close"
+#~ msgstr "Закрыть"
+
+#~ msgid "Sidebar"
+#~ msgstr "Сайдбар"
+
+#~ msgid "Located at the right side of pages."
+#~ msgstr "Расположен в правой части страницы."
+
+#~ msgid "Footer Area 1"
+#~ msgstr "Зона футера 1"
+
+#~ msgid "Footer Area 2"
+#~ msgstr "Зона футера 2"
+
+#~ msgid "Footer Area 3"
+#~ msgstr "Зона футера 3"
+
+#~ msgid "Footer Area 4"
+#~ msgstr "Зона футера 4"
+
+#~ msgid "Located at the bottom of pages."
+#~ msgstr "Расположен в нижней части страницы."
+
+#~ msgid "Archives"
+#~ msgstr "Архивы"
+
+#~ msgid "Meta"
+#~ msgstr "Мета"
+
+#~ msgid "No comments"
+#~ msgstr "Нет комментариев"
+
+#~ msgid "1 comment"
+#~ msgstr "1 комментарий"
+
+#~ msgid "comments"
+#~ msgstr "комментариев"
+
+#~ msgid "comments-link"
+#~ msgstr "ссылки в комментариях"
+
+#~ msgid "Comments are closed"
+#~ msgstr "Комментарии закрыты"
+
+#~ msgid "No tags"
+#~ msgstr "Нет тэгов"
+
+#~ msgid "No category"
+#~ msgstr "Без категории."
+
+#~ msgid "I like it."
+#~ msgstr "Мне нравится."
+
+#~ msgid "I don't like."
+#~ msgstr "Мне не нравится."
+
+#~ msgid "Only registered users can vote!"
+#~ msgstr "Только зарегистрированные пользователи могут голосовать!"
+
+#~ msgid "You have already voted."
+#~ msgstr "Вы уже проголосовали."
+
+#~ msgid "&laquo; Older Entries"
+#~ msgstr "&laquo; Старые записи"
+
+#~ msgid "Newer Entries &raquo;"
+#~ msgstr "новые записи &raquo;"
+
+#~ msgid "Audio & Video"
+#~ msgstr "Аудио и видео"
+
+#~ msgid "Title Box"
+#~ msgstr "Поле заголовка"
+
+#~ msgid ""
+#~ "Date as title <span style='font-size:11px; color:#999;'>('[mm-dd-yyyy]')</"
+#~ "span>"
+#~ msgstr ""
+#~ "Дата, как заголовок <span style='font-size:11px; color:#999;'>('[mm-dd-"
+#~ "yyyy]')</span>"
+
+#~ msgid "Cherry - Twitter"
+#~ msgstr "Cherry - Twitter"
+
+#~ msgid "Twitts Number:"
+#~ msgstr "Количество твитов:"
+
+#~ msgid "Map width:"
+#~ msgstr "Ширина карты"
+
+#~ msgid "Map height:"
+#~ msgstr "Высота:"
+
+#~ msgid ""
+#~ "The Like Box only works with <a target=\"_blank\" href=\"https://www."
+#~ "facebook.com/help/174987089221178/\" title=\"Facebook Pages\">Facebook "
+#~ "Pages.</a>"
+#~ msgstr ""
+#~ "Like Box работает только со <a target=\"_blank\" href=\"https://www."
+#~ "facebook.com/help/174987089221178/\" title=\"Facebook Pages\">страницами "
+#~ "Facebook.</a>"
+
+#~ msgid "Default options restored."
+#~ msgstr "Настройки по умолчанию восстановлены."
+
+#~ msgid "Options saved."
+#~ msgstr "Настройки сохранены."
+
+#~ msgid "Latest Templates"
+#~ msgstr "Свежие шаблоны"
+
+#~ msgid "News & Updates"
+#~ msgstr "Новости и обновления"
+
+#~ msgid "Help & Support"
+#~ msgstr "Поддержка и помощь"
+
+#~ msgid "No items"
+#~ msgstr "Нет элементов"
+
+#~ msgid "Posted"
+#~ msgstr "Опубликовано"
+
+#~ msgid "All templates"
+#~ msgstr "Все шаблоны"
+
+#~ msgid "Start"
+#~ msgstr "Старт"
+
+#~ msgid "Data Management"
+#~ msgstr "Управление данными"
+
+#~ msgid "Cherry Framework"
+#~ msgstr "Cherry Framework"
+
+#~ msgid "Update Info"
+#~ msgstr "Информация об обновлении."
+
+#~ msgid "Child Theme"
+#~ msgstr "Дочерняя тема"
+
+#~ msgid "Update"
+#~ msgstr "Oбновить"
+
+#~ msgid "Backup"
+#~ msgstr "Резервная копия"
+
+#~ msgid "Restore"
+#~ msgstr "Восстановить"
+
+#~ msgid "Download Backup"
+#~ msgstr "Скачать резервную копию"
+
+#~ msgid "Your Version"
+#~ msgstr "Ваша версия"
+
+#~ msgid "Update Version"
+#~ msgstr "Версия обновления"
+
+#~ msgid "Backup Version"
+#~ msgstr "Версия резервной копии"
+
+#~ msgid "Last Backup Date"
+#~ msgstr "Дата последней резервной копии"
+
+#~ msgid "Preview"
+#~ msgstr "Предыдущая"
+
+#~ msgid "Description"
+#~ msgstr "Описание"
+
+#~ msgid "No backup."
+#~ msgstr "Нет резервных копий."
+
+#~ msgid "Not defined"
+#~ msgstr "Не найдено"
+
+#~ msgid "Unfortunately theme "
+#~ msgstr "К сожалению, шаблон"
+
+#~ msgid " backup file not found. Please try to create backup once again."
+#~ msgstr "не имеет резервной копии. Попробуйте создать ее еще раз."
+
+#~ msgid ""
+#~ "Data Management allows to update or backup framework and themes. "
+#~ "Framework is regularly updated thus delivering new opportunities for your "
+#~ "site.<br> To keep your data safe, you can back up the framework or child "
+#~ "theme, to be able to download it later. If necessary, you can restore the "
+#~ "framework or your theme using the backup."
+#~ msgstr ""
+#~ "Управление данными позволяет Вам делать резервные копии фреймворка и "
+#~ "шаблонов. Фреймворк регулярно обновляется, чтобы расширить Ваши "
+#~ "возможности при работе с сайтом. <br> Для обеспечения сохранности Ваших "
+#~ "данных, Вы можете сделать резервную копию фреймворки или дочерней темы, "
+#~ "чтобы иметь возможность скачать их позже. При необходимости вы сможете "
+#~ "восстановить данные из резервной копии."
+
+#~ msgid ""
+#~ "<b>Warning!</b> Before updating framework you are strongly advised to "
+#~ "backup your data."
+#~ msgstr ""
+#~ "<b>Внимание!</b> Перед обновлением фреймворка мы настоятельно рекомендуем "
+#~ "Вам сделать резервную копию всех данных."
+
+#~ msgid ""
+#~ "You can back up your theme. If the theme has a backup copy, it is "
+#~ "possible to restore it or download. The date of the latest backup copy is "
+#~ "displayed in the column <b>Last Backup Date</b>."
+#~ msgstr ""
+#~ "Вы можете создать резервную копию Вашего шаблона. Если копия создана, Вы "
+#~ "всегда сможете восстановить его или скачать данные. Дата последней "
+#~ "резервной копии отображается в колонке <b>Дата последней резервной копии</"
+#~ "b>"
+
+#~ msgid ""
+#~ "<b style=\"color:red;\">Warning!</b> Before updating framework you are "
+#~ "strongly advised to <a href=\"admin.php?page=options-framework-data-"
+#~ "management\">backup</a> your data."
+#~ msgstr ""
+#~ "<b style=\"color:red;\">Предупреждение!</b>Перед обновлением фреймворка "
+#~ "настоятельно рекомендуется<a href=\"admin.php?page=options-framework-data-"
+#~ "management\">сделать резервную копию</a> Ваших данных."
+
+#~ msgid "View File"
+#~ msgstr "Посмотреть файл"
+
+#~ msgid "Previously Uploaded"
+#~ msgstr "Загруженные ранее"
+
+#~ msgid ""
+#~ "<p>An Unexpected HTTP Error occurred during the API request.</p><p><a "
+#~ "href='#' onclick='document.location.reload(); return false;'>Try again</"
+#~ "a></p>"
+#~ msgstr ""
+#~ "<p>во время запроса к API произошла неопределенная ошибка HTTP.</"
+#~ "p><p>Попробуйте <a href='#' onclick='document.location.reload(); return "
+#~ "false;'>еще раз</a></p>"
+
+#~ msgid "An unknown error occurred"
+#~ msgstr "Произошла неизвестная ошибка"
+
+#~ msgid "There is a new version of Cherry framework available"
+#~ msgstr "Доступна новая версия фреймворка Cherry"
+
+#~ msgid "View version "
+#~ msgstr "Посмотреть версию"
+
+#~ msgid " details"
+#~ msgstr "Показать подробности"
+
+#~ msgid "or"
+#~ msgstr "или"
+
+#~ msgid "update now."
+#~ msgstr "обновить сейчас."
+
+#~ msgid "Please do not load this page directly. Thanks!"
+#~ msgstr "Не загружайте, пожалуйста, эту страницу напрямую. Спасибо!"
+
+#~ msgid ""
+#~ "This post is password protected. Enter the password to view comments."
+#~ msgstr ""
+#~ "Эта запись защищена паролем. Введите пароль для просмотра комментариев."
+
+#~ msgid "1 Response"
+#~ msgstr "1 ответ"
+
+#~ msgid "%1$s Responses"
+#~ msgstr "%1$s ответов"
+
+#~ msgid "No Comments Yet."
+#~ msgstr "Комментариев еще нет."
+
+#~ msgid "Comments are closed."
+#~ msgstr "Комментарии закрыты."
+
+#~ msgid "Leave a comment"
+#~ msgstr "Оставить комментарий"
+
+#~ msgid "You must be"
+#~ msgstr "Вы должны войти"
+
+#~ msgid "to post a comment."
+#~ msgstr "чтобы оставить комментарий."
+
+#~ msgid "Logged in"
+#~ msgstr "Авторизованы"
+
+#~ msgid "Logged in as"
+#~ msgstr "Авторизованы как"
+
+#~ msgid "Log out of this account;"
+#~ msgstr "Выйти из этой учетной записи;"
+
+#~ msgid "Log out &raquo;"
+#~ msgstr "Выйти &raquo;"
+
+#~ msgid "Email (will not be published)"
+#~ msgstr "Email (не публикуется)"
+
+#~ msgid "Website"
+#~ msgstr "Сайт"
+
+#~ msgid "Your comment*"
+#~ msgstr "Ваш комментарий*"
+
+#~ msgid "Submit Comment"
+#~ msgstr "Оставить комментарий"
+
+#~ msgid "Tweet this article"
+#~ msgstr "Твитнуть эту статью"
+
+#~ msgid "Continue Reading"
+#~ msgstr "Читать далее"
+
+#~ msgid "Pages:"
+#~ msgstr "Страницы:"
+
+#~ msgid "Last 30 Posts"
+#~ msgstr "Последние 30 записей"
+
+#~ msgid "Archives by Month:"
+#~ msgstr "Архив по Месяцам:"
+
+#~ msgid "Archives by Subject:"
+#~ msgstr "Архив по Категории:"
+
+#~ msgid "About:"
+#~ msgstr "Описание:"
+
+#~ msgid "Recent Posts by"
+#~ msgstr "Последние записи автора"
+
+#~ msgid "No post yet"
+#~ msgstr "Записей еще нет"
+
+#~ msgid "Recent Comments by"
+#~ msgstr "Последние комментарии от"
+
+#~ msgid "%1$s on %2$s"
+#~ msgstr "%1$s в %2$s"
+
+#~ msgid "No comments by"
+#~ msgstr "Комментарии от"
+
+#~ msgid "yet."
+#~ msgstr "еще."
+
+#~ msgid "There has been an error."
+#~ msgstr "Произошла ошибка."
+
+#~ msgid "We apologize for any inconvenience, please"
+#~ msgstr "Приносим извинения за возникшие неудобства"
+
+#~ msgid "return to the home page"
+#~ msgstr "вернуться на главную страницу"
+
+#~ msgid "or use the search form below."
+#~ msgstr "или используйте поисковую форму ниже."
+
+#~ msgid "Q?"
+#~ msgstr "В?"
+
+#~ msgid "A."
+#~ msgstr "О."
+
+#~ msgid "Written by"
+#~ msgstr "Автор"
+
+#~ msgid "View all posts by"
+#~ msgstr "Посмотреть все записи пользователя"
+
+#~ msgid "Not Found"
+#~ msgstr "Не найдено"
+
+#~ msgid ""
+#~ "Apologies, but no results were found for the requested archive. Perhaps "
+#~ "searching will help find a related post."
+#~ msgstr ""
+#~ "К сожалению, в запрошенном архиве ничего не найдено. Скорее всего, поиск "
+#~ "поможет вам найти похожие записи."
+
+#~ msgid "is proudly powered by"
+#~ msgstr "с гордостью работает на"
+
+#~ msgid "Entries (RSS)"
+#~ msgstr "Записи (RSS)"
+
+#~ msgid "Comments (RSS)"
+#~ msgstr "Комментарии (RSS)"
+
+#~ msgid "Privacy Policy"
+#~ msgstr "Политика конфиденциальности"
+
+#~ msgid "Category Archives"
+#~ msgstr "Архив категорий"
+
+#~ msgid "Portfolio Category"
+#~ msgstr "Категория портфолио"
+
+#~ msgid "Search for"
+#~ msgstr "Искать"
+
+#~ msgid "Daily Archives"
+#~ msgstr "Ежедневный архив"
+
+#~ msgid "Monthly Archives"
+#~ msgstr "Месячный архив"
+
+#~ msgid "Yearly Archives"
+#~ msgstr "Годовой архив"
+
+#~ msgid "Tag Archives"
+#~ msgstr "Архив тэгов"
+
+#~ msgid "Portfolio Tag"
+#~ msgstr "Портфолио тэг"
+
+#~ msgid "Category Archive for"
+#~ msgstr "Архив категории"
+
+#~ msgid "Tag Archive for"
+#~ msgstr "Архив тэга"
+
+#~ msgid "Error 404 Not Found"
+#~ msgstr "Ошибка 404. Не найдено!"
+
+#~ msgid "Sorry!"
+#~ msgstr "Извините!"
+
+#~ msgid "Page Not Found"
+#~ msgstr "Страница не найдена"
+
+#~ msgid ""
+#~ "The page you are looking for might have been removed, had its name "
+#~ "changed, or is temporarily unavailable."
+#~ msgstr ""
+#~ "Страница, которую Вы ищите, была перемещена, переименована или временно "
+#~ "недоступна. "
+
+#~ msgid ""
+#~ "Please try using our search box below to look for information on the "
+#~ "internet."
+#~ msgstr "Воспользуйтесь формой поиска ниже, чтобы найти информацию."
+
+#~ msgid "Featured"
+#~ msgstr "Возможности"
+
+#~ msgid "Submit Permalink Structure"
+#~ msgstr "Сохранить структуру ссылок"
+
+#~ msgid ""
+#~ "This way of links configuration can be used by not only our blog "
+#~ "followers but will help in SEO-optimisation as well. The effectiveness "
+#~ "and main features of this link configuration method are revealed <a "
+#~ "href='http://codex.wordpress.org/Using_Permalinks'>here</a>"
+#~ msgstr ""
+#~ "Такая настройка ссылок будет полезной не только для посетителей Вашего "
+#~ "сайта, но и для SEO оптимизации. Сфера применения и основные настройки "
+#~ "ЧПУ описаны <a href='http://codex.wordpress.org/Using_Permalinks'>тут</a>"
+
+#~ msgid "Import Sample Data"
+#~ msgstr "Импотрировать демо-данные"
+
+#~ msgid ""
+#~ "If you want to install sample data from livedemo you need to go to "
+#~ "<strong>Cherry Options</strong> > <strong>Import</strong> and follow the "
+#~ "tips."
+#~ msgstr ""
+#~ "Если Вы хотите установить тестовые даные, как на Демо, перейдите в "
+#~ "<strong>Настройки Cherry</strong> > <strong>Импорт</strong> и следуйте "
+#~ "инструкциям."
+
+#~ msgid ""
+#~ "If you want to install sample data from livedemo you need to go to "
+#~ "<strong>Import</strong> and follow the tips."
+#~ msgstr ""
+#~ "Если Вы хотите установить тестовые даные, как на Демо, перейдите в "
+#~ "<strong>Импорт</strong> и следуйте инструкциям."
+
+#~ msgid "No lable."
+#~ msgstr "Нет метки."
+
+#~ msgid "Theme Options Media"
+#~ msgstr "Медиа для настройки шаблона"
+
+#~ msgid "Page Template"
+#~ msgstr "Шаблон страницы"
+
+#~ msgid "Template"
+#~ msgstr "Шаблон"
+
+#~ msgid "Sitemap XML"
+#~ msgstr "Карта сайта XML."
+
+#~ msgid "Include post types."
+#~ msgstr "Добавляемые типы постов."
+
+#~ msgid "Priority."
+#~ msgstr "Приоритет."
+
+#~ msgid "Change freq."
+#~ msgstr "Частота изменения."
+
+#~ msgid "Post types settings."
+#~ msgstr "Настройки типов записей"
+
+#~ msgid ""
+#~ "<strong>Include post types</strong> - specify the post types which will "
+#~ "be included into your sitemap."
+#~ msgstr ""
+#~ "<strong>Добавляемые типы постов</strong> - Укажите типы постов, которые "
+#~ "будут включены в карту Вашего сайта."
+
+#~ msgid ""
+#~ "<strong>Priority</strong> - set post type priorities on your site. For "
+#~ "example, if the blog page content is more important for search engines "
+#~ "than the portfolio page content, set the priority for blog posts as 1, "
+#~ "for portfolio pages as 0.9 and so on."
+#~ msgstr ""
+#~ "<strong>Приоритет</strong> -  Установите приоритеты типов постов на Вашем "
+#~ "сайте. Например, если страницы блога имеют более важное содержимое для "
+#~ "поисковых систем, чем содержимое на страницах портфолио. В таком случае, "
+#~ "вы устанавливаете приоритет для постов блога 1, а для страниц портфолио "
+#~ "устанавливаете 0,9 и так далее."
+
+#~ msgid ""
+#~ "<strong>Change frequency</strong> - specify how often you change certain "
+#~ "post types. It helps the search engines to determine how relevant your "
+#~ "information is at the moment of search."
+#~ msgstr ""
+#~ "<strong>Частота изменения</strong> - Укажите, как часто Вы изменяете "
+#~ "определенные типы постов. Это нужно для того, чтобы поисковые системы "
+#~ "могли определить насколько информация актуальна на момент поиска."
+
+#~ msgid ""
+#~ "<strong>Ping sitemap</strong> - choose the search engines which will "
+#~ "receive the link to your sitemap."
+#~ msgstr ""
+#~ "<strong>Пингование карты сайта</strong> - Выберите поисковые системы, "
+#~ "которым будет отправлена ссылка на карту Вашего сайта. "
+
+#~ msgid "Ping sitemap."
+#~ msgstr "Пингование карты сайта."
+
+#~ msgid "SEO"
+#~ msgstr "SEO"
+
+#~ msgid "Your website indexation settings."
+#~ msgstr "Настройки индексации Вашего сайта. "
+
+#~ msgid ""
+#~ "Forbid the search engines to index the following directories of your site."
+#~ msgstr ""
+#~ "Запретить поисковым системам индексировать следующие директории Вашего "
+#~ "сайта."
+
+#~ msgid ""
+#~ "These settings will help reduce the information search range on your "
+#~ "site. "
+#~ msgstr ""
+#~ "Эти настройки помогут сузить круг поиска информации на вашем сайте. "
+
+#~ msgid "WordPress engine system files and folders <em>(recommended)</em>"
+#~ msgstr "Системные файлы и папки WordPress <em>(рекомендуется)</em>"
+
+#~ msgid "Your plugins system files and folders <em>(recommended)</em>"
+#~ msgstr "Системные файлы и папки Ваших плагинов <em>(рекомендуется)</em>"
+
+#~ msgid "Your themes system files and folders <em>(recommended)</em>"
+#~ msgstr "Системные файлы и папки Ваших тем <em>(рекомендуется)</em>"
+
+#~ msgid ""
+#~ "Media library files (images, video, audio, etc.) <em>(not recommended)</"
+#~ "em>"
+#~ msgstr ""
+#~ "Файлы медиа библиотеки. (Картинки, видео, аудио и тд.) <em> (не "
+#~ "рекомендуется)</em>"
+
+#~ msgid ""
+#~ "Add the <em>\"rel\"</em> attribute with the <em>\"nofollow\"</em> value "
+#~ "to content links."
+#~ msgstr ""
+#~ "Добавлять атрибут  <em>\"rel\"</em> со значением <em>\"nofollow\"</em>к "
+#~ "ссылкам в контенте."
+
+#~ msgid ""
+#~ "This option will stop the search engines from going to other sites "
+#~ "following the links in your site content."
+#~ msgstr ""
+#~ "Эта опция запретит поисковым системам переходить на другие сайты по "
+#~ "ссылкам в контенте Вашего сайта."
+
+#, fuzzy
+#~ msgid "."
+#~ msgstr "О."
+
+#~ msgid "Skip"
+#~ msgstr "Пропустить"
+
+#~ msgid "Enable or Disable meta information for blog posts."
+#~ msgstr ""
+#~ "Разрешить или запретить использовать Meta данные для записей в блоге?"
+
+#, fuzzy
+#~ msgid "Show all"
+#~ msgstr "Показать все"
+
+#~ msgid "Buttons and links color."
+#~ msgstr "Цвета кнопок и ссылок"
+
+#~ msgid "Leave a reply"
+#~ msgstr "Оставить ответ"

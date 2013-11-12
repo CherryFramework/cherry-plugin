@@ -1,0 +1,47 @@
+/* cherry_plugin */
+hr{
+	border: none;
+	background:#DFDFDF;
+	height: 1px;
+}
+/* header */
+.cherry-plugin header div[class^="icon"]{
+	margin-top: 7px;
+	height: 34px;
+	width: 36px;
+}
+.cherry-plugin header h2{
+	float: left;
+}
+.cherry-plugin .extern-links{
+	float: right;
+	display: inline-block;
+	margin: 15px 8px 0 0;
+	font-size: 14px;
+}
+.cherry-plugin .extern-links>a{
+	margin-left: 20px;
+	text-decoration: none;
+}
+.cherry-plugin .extern-links>a>span[class^='icon-']{
+	margin-right: 7px;
+	color: #464646 !important;
+	font-size: 18px;
+	vertical-align: middle;
+}
+/* end header */
+/* Import & Export */
+.impotr_export_wrapper{
+	margin: 10px 0 0 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+*[class^="button"].not_active{
+	opacity: 0.5;
+	cursor: default;
+	pointer-events: none;
+}
+.buttin-left{
+	float: right;
+}
+/* End Import & Export */

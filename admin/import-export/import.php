@@ -7,7 +7,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu
 lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec
 mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam
 mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque
-laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.', CHERRY_PLUGIN_DOMIN); ?></p>
+laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.', CHERRY_PLUGIN_DOMAIN); ?></p>
 <?php
 	/**
 	 * Check server settings
@@ -63,12 +63,12 @@ laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque a
 	}
 	if ( !empty($result) ) {
 		echo '<h3>Server Settings</h3><hr>';
-		echo "<h4 class='title'>" . __('Some of your server settings do not meet the requirements for installing the sample data. Please, consult with your hosting provider on how to increase the required values.', CHERRY_PLUGIN_DOMIN) . "</h4>";
+		echo "<h4 class='title'>" . __('Some of your server settings do not meet the requirements for installing the sample data. Please, consult with your hosting provider on how to increase the required values.', CHERRY_PLUGIN_DOMAIN) . "</h4>";
 		echo "<table width='100%' border='0' cellspacing='0' cellpadding='4' style='border-radius:3px; border-collapse: collapse; margin-bottom:10px;'>";
 		echo "<thead><tr border='0' align='center' bgcolor='#87c1ee' style='color:#fff;'>";
-		echo "<th style='border:1px solid #87c1ee;'>" . __('Server Settings', CHERRY_PLUGIN_DOMIN) . "</th>";
-		echo "<th style='border:1px solid #87c1ee;'>" . __('Current', CHERRY_PLUGIN_DOMIN) . "</th>";
-		echo "<th style='border:1px solid #87c1ee;'>" . __('Required', CHERRY_PLUGIN_DOMIN) . "</th>";
+		echo "<th style='border:1px solid #87c1ee;'>" . __('Server Settings', CHERRY_PLUGIN_DOMAIN) . "</th>";
+		echo "<th style='border:1px solid #87c1ee;'>" . __('Current', CHERRY_PLUGIN_DOMAIN) . "</th>";
+		echo "<th style='border:1px solid #87c1ee;'>" . __('Required', CHERRY_PLUGIN_DOMAIN) . "</th>";
 		echo "</tr></thead>";
 		echo "<tbody>";
 		$count = 0;
@@ -91,7 +91,7 @@ laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque a
 		}
 		echo "</tbody>";
 		echo "</table>";
-		//echo "<div class='note'><p><strong>" . __('NOTE', CHERRY_PLUGIN_DOMIN) . ": </strong>" . __('if for some reason those settings can not be adjusted, you may install the sample data using an <strong>alternative method</strong> - importing the <strong>.sql</strong> file directly into the database. Refer to the template documentation for instructions.', CHERRY_PLUGIN_DOMIN) . "</p>" . __('You can proceed with the template installation without updating server settings, however in this case you can get errors or only part of your content will be loaded.', CHERRY_PLUGIN_DOMIN) . "</div>";
+		//echo "<div class='note'><p><strong>" . __('NOTE', CHERRY_PLUGIN_DOMAIN) . ": </strong>" . __('if for some reason those settings can not be adjusted, you may install the sample data using an <strong>alternative method</strong> - importing the <strong>.sql</strong> file directly into the database. Refer to the template documentation for instructions.', CHERRY_PLUGIN_DOMAIN) . "</p>" . __('You can proceed with the template installation without updating server settings, however in this case you can get errors or only part of your content will be loaded.', CHERRY_PLUGIN_DOMAIN) . "</div>";
 		//echo "<p class='text-style'>" . theme_locals('template_installation') . "</p>";
 
 		$href = '#';
@@ -101,6 +101,6 @@ laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque a
 		$class = '';
 	}
 
-	echo '<a class="button button-primary '.$class.' buttin-left" href="'.$href.'">'.__('Next', CHERRY_PLUGIN_DOMIN).'</a>';
+	echo '<a class="button button-primary '.$class.' buttin-left" href="'.$href.'">'.__('Next', CHERRY_PLUGIN_DOMAIN).'</a>';
 	do_action('check_shop_activation');
 ?>
