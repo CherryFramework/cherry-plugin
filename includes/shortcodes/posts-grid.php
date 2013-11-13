@@ -109,7 +109,7 @@ if (!function_exists('posts_grid_shortcode')) {
 
 			$output = '<ul class="posts-grid row-fluid unstyled '. $custom_class .'">';
 
-			for ( $j=0; $j < count($posts); $j++ ) {
+			foreach ( $posts as $j => $post ) {
 				// Unset not translated posts
 				if ( function_exists( 'wpml_get_language_information' ) ) {
 					global $sitepress;
