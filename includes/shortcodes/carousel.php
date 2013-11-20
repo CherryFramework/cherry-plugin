@@ -202,6 +202,8 @@ if (!function_exists('shortcode_carousel')) {
 			$output .= '</li>';
 
 		}
+		wp_reset_postdata(); // restore the global $post variable
+		
 		$output .= '</ul>';
 		$output .= '</div></div>';
 		$output .= '<script>

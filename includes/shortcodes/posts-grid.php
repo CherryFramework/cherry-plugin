@@ -284,6 +284,7 @@ if (!function_exists('posts_grid_shortcode')) {
 			$i++;
 
 		} // end for
+		wp_reset_postdata(); // restore the global $post variable
 
 		return $output;
 	}

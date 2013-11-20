@@ -209,6 +209,7 @@ if (!function_exists('mini_posts_list_shortcode')) {
 						$i++;
 
 			} // end foreach
+			wp_reset_postdata(); // restore the global $post variable
 
 			$output .= '</ul><!-- .mini-posts-list (end) -->';
 			return $output;

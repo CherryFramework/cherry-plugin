@@ -292,6 +292,8 @@ if (!function_exists('posts_list_shortcode')) {
 					$i++;
 
 			} // end foreach
+			wp_reset_postdata(); // restore the global $post variable
+			
 		$output .= '</div><!-- .posts-list (end) -->';
 		return $output;
 	} 

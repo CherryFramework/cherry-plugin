@@ -187,6 +187,8 @@ if (!function_exists('mini_posts_grid_shortcode')) {
 				$i++;
 
 			} // end foreach
+			wp_reset_postdata(); // restore the global $post variable
+			
 			$output .= '</ul><!-- .posts-grid (end) -->';
 		$output .= '<div class="clear"></div>';
 		return $output;
