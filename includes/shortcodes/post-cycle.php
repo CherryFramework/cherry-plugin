@@ -190,7 +190,6 @@ if (!function_exists('shortcode_post_cycle')) {
 				$output .= '</li>';
 			}
 			wp_reset_postdata(); // restore the global $post variable
-			
 			$output .= '</ul>';
 		$output .= '</div>';
 		return $output;

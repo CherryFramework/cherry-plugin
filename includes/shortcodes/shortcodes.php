@@ -384,7 +384,6 @@ if (!function_exists('shortcode_recent_posts')) {
 			$output .= '</li><!-- .entry (end) -->';
 		}
 		wp_reset_postdata(); // restore the global $post variable
-
 		$output .= '</ul><!-- .recent-posts (end) -->';
 		return $output;
 	}
@@ -533,7 +532,6 @@ if (!function_exists('shortcode_recenttesti')) {
 
 		}
 		wp_reset_postdata(); // restore the global $post variable
-
 		$output .= '</div>';
 		return $output;
 	}

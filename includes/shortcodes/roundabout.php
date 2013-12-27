@@ -100,7 +100,6 @@ if (!function_exists('shortcode_roundabout')) {
 			}
 		}
 		wp_reset_postdata(); // restore the global $post variable
-		
 		$output .= '</ul>';
 
 		if (($more_button_text != '') && ($more_button_link != '')) {
