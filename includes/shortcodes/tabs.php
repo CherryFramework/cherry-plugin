@@ -1,61 +1,61 @@
 <?php
 /**
  * Tabs
- *
  */
-if (!function_exists('tabs_shortcode')) {
+if ( !function_exists('tabs_shortcode') ) {
+	function tabs_shortcode( $atts, $content = null ) {
+		if ( !array_key_exists('direction', $atts) ) {
+			$direct = array(
+				'direction' => 'top'
+				);
+			$atts = array_merge( $direct, $atts );
+		}
+		$output = '<div class="tabs-wrapper tabbable tabs-' . $atts["direction"] . '">';
 
-	function tabs_shortcode($atts, $content = null) {
-		$output = '<div class="tabs-wrapper">';
-		$output .= '<ul class="nav nav-tabs">';
-			
-		//Create unique ID for this tab set
-		$id = rand();
+			// Build tab menu
+			$nav_tabs = '<ul class="nav nav-tabs">';
+				$id       = rand(); // Create unique ID for this tab set
+				$tab_menu = array();
+				$tab_menu = $atts;
+				array_shift( $tab_menu );
+				$num_tabs = count( $tab_menu );
 
-		//Build tab menu
-		$numTabs = count($atts);
+				for ( $i = 1; $i <= $num_tabs; $i++ ) {
+					$addclass = ($i == 1) ? 'active tab-' . $i : 'tab-' . $i ;
+					$link     = preg_replace("/\W/", "", strtolower($tab_menu['tab' . $i]) );
+					$nav_tabs .= '<li class="' . $addclass . '"><a href="#tab-' . $link . '-' . $id . '" data-toggle="tab">' . $tab_menu['tab' . $i] . '</a></li>';
+				}
+			$nav_tabs .= '</ul>';
 
-		for($i = 1; $i <= $numTabs; $i++){
+			// Build content of tabs
+			$tab_content = '<div class="tab-content">';
+				$i          = 1;
+				$tabContent = do_shortcode( $content );
+				$find       = array();
+				$replace    = array();
 
-			if($i==1) { 
-				$addclass = "active";
+				foreach ( $tab_menu as $key => $value ) {
+					$addclass  = ($i == 1) ? 'in active' : '' ;
+					$find[]    = '[' . $key . ']';
+					$find[]    = '[/' . $key . ']';
+					$link      = preg_replace("/\W/", "", strtolower($tab_menu['tab' . $i]) );
+					$replace[] = '<div id="tab-' . $link . '-' . $id . '" class="tab-pane fade ' . $addclass . '">';
+					$replace[] = '</div><!-- .tab (end) -->';
+					$i++;
+				}
+				$tabContent = str_replace( $find, $replace, $tabContent );
+				$tab_content .= $tabContent;
+			$tab_content .= '</div><!-- .tab-content (end) -->';
+
+			if ( $atts['direction'] == 'below' ) {
+				$output .= $tab_content . $nav_tabs;
+			} else {
+				$output .= $nav_tabs . $tab_content;
 			}
 
-			$output .= '<li class="'.$addclass.'"><a href="#tab-'.$id.'-'.$i.'" data-toggle="tab">'.$atts['tab'.$i].'</a></li>';
-
-			$addclass = "";
-		}
-
-		$output .= '</ul>';
-		$output .= '<div class="tab-content">';
-
-		//Build content of tabs
-		$i = 1;
-		$tabContent = do_shortcode($content);
-		$find = array();
-		$replace = array();
-		foreach($atts as $key => $value){
-			if($i==1) { 
-				$addclass = "in active";
-			}
-			$find[] = '['.$key.']';
-			$find[] = '[/'.$key.']';
-			$replace[] = '<div id="tab-'.$id.'-'.$i.'" class="tab-pane fade '.$addclass.'">';
-			$replace[] = '</div><!-- .tab (end) -->';
-			$i++;
-			$addclass = "";
-		}
-
-		$tabContent = str_replace($find, $replace, $tabContent);
-
-		$output .= $tabContent;
-
-		$output .= '</div><!-- .tab-content (end) -->';
 		$output .= '</div><!-- .tabs-wrapper (end) -->';
 
 		return $output;
-
 	}
-	add_shortcode('tabs', 'tabs_shortcode');
-
-}?>
+	add_shortcode( 'tabs', 'tabs_shortcode' );
+} ?>
