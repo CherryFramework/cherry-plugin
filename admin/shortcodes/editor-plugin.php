@@ -160,6 +160,26 @@ require_once( $wp_url.'/wp-load.php' );
 
 								break;
 
+				// OK-circle List
+
+								case 'ok_circle_list':
+
+								var a = '[ok_circle_list]'+selectedText+'[/ok_circle_list]';
+
+								tinyMCE.activeEditor.execCommand("mceInsertContent", false, a);
+
+								break;
+
+				// OK-sign List
+
+								case 'ok_sign_list':
+
+								var a = '[ok_sign_list]'+selectedText+'[/ok_sign_list]';
+
+								tinyMCE.activeEditor.execCommand("mceInsertContent", false, a);
+
+								break;
+
 				// Arrow list
 
 								case 'arrow_list':
@@ -175,6 +195,46 @@ require_once( $wp_url.'/wp-load.php' );
 								case 'arrow2_list':
 
 								var a = '[arrow2_list]'+selectedText+'[/arrow2_list]';
+
+								tinyMCE.activeEditor.execCommand("mceInsertContent", false, a);
+
+								break;
+
+				// Circle Arrow list
+
+								case 'circle_arrow_list':
+
+								var a = '[circle_arrow_list]'+selectedText+'[/circle_arrow_list]';
+
+								tinyMCE.activeEditor.execCommand("mceInsertContent", false, a);
+
+								break;
+
+				// Caret List
+
+								case 'caret_list':
+
+								var a = '[caret_list]'+selectedText+'[/caret_list]';
+
+								tinyMCE.activeEditor.execCommand("mceInsertContent", false, a);
+
+								break;
+
+				// Angle List
+
+								case 'angle_list':
+
+								var a = '[angle_list]'+selectedText+'[/angle_list]';
+
+								tinyMCE.activeEditor.execCommand("mceInsertContent", false, a);
+
+								break;
+
+				// Double-Angle List
+
+								case 'double_angle_list':
+
+								var a = '[double_angle_list]'+selectedText+'[/double_angle_list]';
 
 								tinyMCE.activeEditor.execCommand("mceInsertContent", false, a);
 
@@ -205,6 +265,26 @@ require_once( $wp_url.'/wp-load.php' );
 								case 'minus_list':
 
 								var a = '[minus_list]'+selectedText+'[/minus_list]';
+
+								tinyMCE.activeEditor.execCommand("mceInsertContent", false, a);
+
+								break;
+
+				// Circle List
+
+								case 'circle_list':
+
+								var a = '[circle_list]'+selectedText+'[/circle_list]';
+
+								tinyMCE.activeEditor.execCommand("mceInsertContent", false, a);
+
+								break;
+
+				// Circle Blank List
+
+								case 'circle_blank_list':
+
+								var a = '[circle_blank_list]'+selectedText+'[/circle_blank_list]';
 
 								tinyMCE.activeEditor.execCommand("mceInsertContent", false, a);
 
@@ -779,11 +859,19 @@ require_once( $wp_url.'/wp-load.php' );
 										a.addWithDialog(c,"<?php _e('Unstyled', CHERRY_PLUGIN_DOMAIN); ?>","list_un");
 										a.addWithDialog(c,"<?php _e('Check List', CHERRY_PLUGIN_DOMAIN); ?>","check_list");
 										a.addWithDialog(c,"<?php _e('Check 2 List', CHERRY_PLUGIN_DOMAIN); ?>","check2_list");
+										a.addWithDialog(c,"<?php _e('OK Circle List', CHERRY_PLUGIN_DOMAIN); ?>","ok_circle_list");
+										a.addWithDialog(c,"<?php _e('OK Sign List', CHERRY_PLUGIN_DOMAIN); ?>","ok_sign_list");
 										a.addWithDialog(c,"<?php _e('Arrow List', CHERRY_PLUGIN_DOMAIN); ?>","arrow_list");
 										a.addWithDialog(c,"<?php _e('Arrow 2 List', CHERRY_PLUGIN_DOMAIN); ?>","arrow2_list");
+										a.addWithDialog(c,"<?php _e('Circle Arrow List', CHERRY_PLUGIN_DOMAIN); ?>","circle_arrow_list");
+										a.addWithDialog(c,"<?php _e('Caret List', CHERRY_PLUGIN_DOMAIN); ?>","caret_list");
+										a.addWithDialog(c,"<?php _e('Angle List', CHERRY_PLUGIN_DOMAIN); ?>","angle_list");
+										a.addWithDialog(c,"<?php _e('Double Angle List', CHERRY_PLUGIN_DOMAIN); ?>","double_angle_list");
 										a.addWithDialog(c,"<?php _e('Star List', CHERRY_PLUGIN_DOMAIN); ?>","star_list");
 										a.addWithDialog(c,"<?php _e('Plus List', CHERRY_PLUGIN_DOMAIN); ?>","plus_list");
 										a.addWithDialog(c,"<?php _e('Minus List', CHERRY_PLUGIN_DOMAIN); ?>","minus_list");
+										a.addWithDialog(c,"<?php _e('Circle List', CHERRY_PLUGIN_DOMAIN); ?>","circle_list");
+										a.addWithDialog(c,"<?php _e('Circle Blank List', CHERRY_PLUGIN_DOMAIN); ?>","circle_blank_list");
 										a.addWithDialog(c,"<?php _e('Custom List', CHERRY_PLUGIN_DOMAIN); ?>","custom_list");
 								c=b.addMenu({title:"<?php _e('Misc', CHERRY_PLUGIN_DOMAIN); ?>"});
 										a.addWithDialog(c,"<?php _e('Alert Box', CHERRY_PLUGIN_DOMAIN); ?>","alert_box");

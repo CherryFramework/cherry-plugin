@@ -1,5 +1,55 @@
-/* cherry_plugin */
+/* #Misc
+================================================== */
 
-/*body{
-	background:red;
-}*/
+/* List styling */
+.list > ul { margin:0; }
+
+/* Unstyled */
+.list.unstyled > ul li {
+	margin:0 0 .5em 0;
+	padding:0;
+	border:none;
+	background:none;
+	list-style-type:none;
+}
+.list.unstyled > ul li:before { display:none; }
+
+/* Styled */
+.list.styled > ul { margin:0 0 1em 0; }
+.list.styled > ul li {
+	position:relative;
+	margin:0 0 .5em 0;
+	padding:0;
+	border:none;
+	background:none;
+	list-style-type:none;
+}
+.list li { position:relative; }
+.list li:before {
+	display:inline-block;
+	margin-right:5px;
+	width:14px;
+	height:14px;
+	content:attr(data-icon);
+	font-family:'FontAwesome';
+	line-height:14px;
+	speak:none;
+	*margin-right:.3em;
+}
+.list > ul li:before { color:#999; }
+.list.check-list > ul li:before { content:"\f00c"; }
+.list.check2-list > ul li:before { content:"\f078"; }
+.list.ok-circle-list > ul li:before { content:"\f05d"; }
+.list.ok-sign-list > ul li:before { content:"\f058"; }
+.list.arrow-list > ul li:before { content:"\f054"; }
+.list.arrow2-list > ul li:before { content:"\f061"; }
+.list.circle-arrow-list > ul li:before { content:"\f0a9"; }
+.list.caret-list > ul li:before { content:"\f0da"; }
+.list.angle-list > ul li:before { content:"\f105"; }
+.list.double-angle-list > ul li:before { content:"\f101"; }
+.list.star-list > ul li:before { content:"\f005"; }
+.list.plus-list > ul li:before { content:"\f067"; }
+.list.minus-list > ul li:before { content:"\f068"; }
+.list.circle-list > ul li:before { content:"\f111"; }
+.list.circle-blank-list > ul li:before { content:"\f10c"; }
+/*/ Misc */

@@ -170,13 +170,15 @@ if (!function_exists('address_shortcode')) {
 	add_shortcode('address', 'address_shortcode');
 }
 
-// Lists
+/**
+ * Lists
+ */
 
 // Unstyled
-if (!function_exists('list_un_shortcode')) {
-	function list_un_shortcode($atts, $content = null) {
+if ( !function_exists('list_un_shortcode') ) {
+	function list_un_shortcode( $atts, $content = null ) {
 		$output = '<div class="list unstyled">';
-		$output .= do_shortcode($content);
+		$output .= do_shortcode( $content );
 		$output .= '</div>';
 		return $output;
 	}
@@ -184,21 +186,43 @@ if (!function_exists('list_un_shortcode')) {
 }
 
 // Check List
-if (!function_exists('check_list_shortcode')) {
-	function check_list_shortcode($atts, $content = null) {
+if ( !function_exists('check_list_shortcode') ) {
+	function check_list_shortcode( $atts, $content = null ) {
 		$output = '<div class="list styled check-list">';
-		$output .= do_shortcode($content);
+		$output .= do_shortcode( $content );
 		$output .= '</div>';
 		return $output;
 	}
 	add_shortcode('check_list', 'check_list_shortcode');
 }
 
+// OK-circle List
+if ( !function_exists('ok_circle_list_shortcode') ) {
+	function ok_circle_list_shortcode( $atts, $content = null ) {
+		$output = '<div class="list styled ok-circle-list">';
+		$output .= do_shortcode( $content );
+		$output .= '</div>';
+		return $output;
+	}
+	add_shortcode('ok_circle_list', 'ok_circle_list_shortcode');
+}
+
+// OK-sign List
+if ( !function_exists('ok_sign_list_shortcode') ) {
+	function ok_sign_list_shortcode( $atts, $content = null ) {
+		$output = '<div class="list styled ok-sign-list">';
+		$output .= do_shortcode( $content );
+		$output .= '</div>';
+		return $output;
+	}
+	add_shortcode('ok_sign_list', 'ok_sign_list_shortcode');
+}
+
 // Check2 List
-if (!function_exists('check2_list_shortcode')) {
-	function check2_list_shortcode($atts, $content = null) {
+if ( !function_exists('check2_list_shortcode') ) {
+	function check2_list_shortcode( $atts, $content = null ) {
 		$output = '<div class="list styled check2-list">';
-		$output .= do_shortcode($content);
+		$output .= do_shortcode( $content );
 		$output .= '</div>';
 		return $output;
 	}
@@ -206,10 +230,10 @@ if (!function_exists('check2_list_shortcode')) {
 }
 
 // Arrow List
-if (!function_exists('arrow_list_shortcode')) {
-	function arrow_list_shortcode($atts, $content = null) {
+if ( !function_exists('arrow_list_shortcode') ) {
+	function arrow_list_shortcode( $atts, $content = null ) {
 		$output = '<div class="list styled arrow-list">';
-		$output .= do_shortcode($content);
+		$output .= do_shortcode( $content );
 		$output .= '</div>';
 		return $output;
 	}
@@ -217,21 +241,65 @@ if (!function_exists('arrow_list_shortcode')) {
 }
 
 // Arrow2 List
-if (!function_exists('arrow2_list_shortcode')) {
-	function arrow2_list_shortcode($atts, $content = null) {
+if ( !function_exists('arrow2_list_shortcode') ) {
+	function arrow2_list_shortcode( $atts, $content = null ) {
 		$output = '<div class="list styled arrow2-list">';
-		$output .= do_shortcode($content);
+		$output .= do_shortcode( $content );
 		$output .= '</div>';
 		return $output;
 	}
 	add_shortcode('arrow2_list', 'arrow2_list_shortcode');
 }
 
+// Circle-Arrow List
+if ( !function_exists('circle_arrow_list_shortcode') ) {
+	function circle_arrow_list_shortcode( $atts, $content = null ) {
+		$output = '<div class="list styled circle-arrow-list">';
+		$output .= do_shortcode( $content );
+		$output .= '</div>';
+		return $output;
+	}
+	add_shortcode('circle_arrow_list', 'circle_arrow_list_shortcode');
+}
+
+// Caret List
+if ( !function_exists('caret_list_shortcode') ) {
+	function caret_list_shortcode( $atts, $content = null ) {
+		$output = '<div class="list styled caret-list">';
+		$output .= do_shortcode( $content );
+		$output .= '</div>';
+		return $output;
+	}
+	add_shortcode('caret_list', 'caret_list_shortcode');
+}
+
+// Angle List
+if ( !function_exists('angle_list_shortcode') ) {
+	function angle_list_shortcode( $atts, $content = null ) {
+		$output = '<div class="list styled angle-list">';
+		$output .= do_shortcode( $content );
+		$output .= '</div>';
+		return $output;
+	}
+	add_shortcode('angle_list', 'angle_list_shortcode');
+}
+
+// Double-Angle List
+if ( !function_exists('double_angle_list_shortcode') ) {
+	function double_angle_list_shortcode( $atts, $content = null ) {
+		$output = '<div class="list styled double-angle-list">';
+		$output .= do_shortcode( $content );
+		$output .= '</div>';
+		return $output;
+	}
+	add_shortcode('double_angle_list', 'double_angle_list_shortcode');
+}
+
 // Star List
-if (!function_exists('star_list_shortcode')) {
-	function star_list_shortcode($atts, $content = null) {
+if ( !function_exists( 'star_list_shortcode') ) {
+	function star_list_shortcode( $atts, $content = null ) {
 		$output = '<div class="list styled star-list">';
-		$output .= do_shortcode($content);
+		$output .= do_shortcode( $content );
 		$output .= '</div>';
 		return $output;
 	}
@@ -239,10 +307,10 @@ if (!function_exists('star_list_shortcode')) {
 }
 
 // Plus List
-if (!function_exists('plus_list_shortcode')) {
-	function plus_list_shortcode($atts, $content = null) {
+if ( !function_exists('plus_list_shortcode') ) {
+	function plus_list_shortcode( $atts, $content = null ) {
 		$output = '<div class="list styled plus-list">';
-		$output .= do_shortcode($content);
+		$output .= do_shortcode( $content );
 		$output .= '</div>';
 		return $output;
 	}
@@ -250,20 +318,43 @@ if (!function_exists('plus_list_shortcode')) {
 }
 
 // Minus List
-if (!function_exists('minus_list_shortcode')) {
-	function minus_list_shortcode($atts, $content = null) {
+if ( !function_exists('minus_list_shortcode') ) {
+	function minus_list_shortcode( $atts, $content = null ) {
 		$output = '<div class="list styled minus-list">';
-		$output .= do_shortcode($content);
+		$output .= do_shortcode( $content );
 		$output .= '</div>';
 		return $output;
 	}
 	add_shortcode('minus_list', 'minus_list_shortcode');
 }
+
+// Circle List
+if ( !function_exists('circle_list_shortcode') ) {
+	function circle_list_shortcode( $atts, $content = null ) {
+		$output = '<div class="list styled circle-list">';
+		$output .= do_shortcode( $content );
+		$output .= '</div>';
+		return $output;
+	}
+	add_shortcode('circle_list', 'circle_list_shortcode');
+}
+
+// Circle Blank List
+if ( !function_exists('circle_blank_list_shortcode') ) {
+	function circle_blank_list_shortcode( $atts, $content = null ) {
+		$output = '<div class="list styled circle-blank-list">';
+		$output .= do_shortcode( $content );
+		$output .= '</div>';
+		return $output;
+	}
+	add_shortcode('circle_blank_list', 'circle_blank_list_shortcode');
+}
+
 // Custom List
-if (!function_exists('custom_list_shortcode')) {
-	function custom_list_shortcode($atts, $content = null) {
+if ( !function_exists('custom_list_shortcode') ) {
+	function custom_list_shortcode( $atts, $content = null ) {
 		$output = '<div class="list styled custom-list">';
-		$output .= do_shortcode($content);
+		$output .= do_shortcode( $content );
 		$output .= '</div>';
 		return $output;
 	}
