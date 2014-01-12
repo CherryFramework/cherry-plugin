@@ -13,18 +13,18 @@ frameworkShortcodeAtts={
 			{
 				label:"Type of posts",
 				id:"type",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['blog', 'portfolio', 'testimonial'],
-				defaultValue: 'post', 
+				defaultValue: 'post',
 				defaultText: 'blog',
 				help:"Choose the type of posts."
 			},
 			{
 				label:"Do you want to show the featured image?",
 				id:"thumb",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['true', 'false'],
-				defaultValue: 'true', 
+				defaultValue: 'true',
 				defaultText: 'true',
 				help:"Enable or disable featured image."
 			},
@@ -54,34 +54,43 @@ frameworkShortcodeAtts={
 				help:"Enter the slug of the category you'd like to pull posts from. Leave blank if you'd like to pull from all categories."
 			},
 			{
-				label:"The number of characters in the excerpt",
+				label:"The number of words in the content (or excerpt if it's set)",
 				id:"excerpt_count",
-				help:"How many characters are displayed in the excerpt?"
+				help:"How many words are displayed in the content (or excerpt if it's set) ?"
 			},
 			{
 				label:"Display post date?",
 				id:"date",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['yes', 'no'],
-				defaultValue: 'yes', 
+				defaultValue: 'yes',
 				defaultText: 'yes',
 				help:"Enable or disable post date."
 			},
 			{
 				label:"Display post author?",
 				id:"author",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['yes', 'no'],
-				defaultValue: 'yes', 
+				defaultValue: 'yes',
 				defaultText: 'yes',
 				help:"Enable or disable post author."
 			},
 			{
+				label:"Display post comments?",
+				id:"comments",
+				controlType:"select-control",
+				selectValues:['yes', 'no'],
+				defaultValue: 'no',
+				defaultText: 'no',
+				help:"Enable or disable post comments."
+			},
+			{
 				label:"Min Items",
 				id:"min_items",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['1', '2', '3', '4'],
-				defaultValue: '3', 
+				defaultValue: '3',
 				defaultText: '3',
 				help:"This params for better handling responsive behaviour."
 			},

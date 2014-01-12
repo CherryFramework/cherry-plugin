@@ -7,7 +7,7 @@
 
 //includ Aqua Resizer
 	if(!function_exists('aq_resize')){
-		include_once (CHERRY_PLUGIN_DIR . 'lib/aq_resizer.php');
+		include_once (CHERRY_PLUGIN_DIR . 'lib/php/aq_resizer.php');
 	}
 //Shortcodes
 	include_once (CHERRY_PLUGIN_DIR . 'includes/shortcodes/columns.php');

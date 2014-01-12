@@ -8,9 +8,9 @@ frameworkShortcodeAtts={
 			{
 				label:"Type of posts",
 				id:"post_type",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['Blog', 'Portfolio', 'Testimonial', 'Services', 'Our team'],
-				defaultValue: 'post', 
+				defaultValue: 'post',
 				defaultText: 'Blog',
 				help:"Choose the type of posts."
 			},
@@ -27,14 +27,14 @@ frameworkShortcodeAtts={
 			{
 				label:"Number of visibility items?",
 				id:"visibility_items",
-				help:"This is how many visibility items in carusell."
+				help:"This is how many visibility items in carousel."
 			},
 			{
 				label:"Do you want to show the featured image?",
 				id:"thumb",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['yes', 'no'],
-				defaultValue: 'yes', 
+				defaultValue: 'yes',
 				defaultText: 'yes',
 				help:"Enable or disable featured image."
 			},
@@ -51,20 +51,29 @@ frameworkShortcodeAtts={
 			{
 				label:"Display post date?",
 				id:"date",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['yes', 'no'],
-				defaultValue: 'yes', 
+				defaultValue: 'yes',
 				defaultText: 'yes',
 				help:"Enable or disable post date."
 			},
 			{
 				label:"Display post author?",
 				id:"author",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['yes', 'no'],
-				defaultValue: 'yes', 
+				defaultValue: 'yes',
 				defaultText: 'yes',
 				help:"Enable or disable post author."
+			},
+			{
+				label:"Display post comments?",
+				id:"comments",
+				controlType:"select-control",
+				selectValues:['yes', 'no'],
+				defaultValue: 'no',
+				defaultText: 'no',
+				help:"Enable or disable post comments."
 			},
 			{
 				label:"Link Text for post",
@@ -72,30 +81,30 @@ frameworkShortcodeAtts={
 				help:"Link Text for post."
 			},
 			{
-				label:"The number of characters in the excerpt",
+				label:"The number of words in the content (or excerpt if it's set)",
 				id:"excerpt_count",
-				help:"How many characters are displayed in the excerpt?"
+				help:"How many words are displayed in the content (or excerpt if it's set) ?"
 			},
 			{
-				label:"Pause time.",
+				label:"Pause time",
 				id:"auto_play",
 				help:"Pause time (ms)."
 			},
 			{
 				label:"Next & Prev navigation",
 				id:"display_navs",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['yes', 'no'],
-				defaultValue: 'yes', 
+				defaultValue: 'yes',
 				defaultText: 'yes',
 				help:"Display next & prev navigation?"
 			},
 			{
-				label:"Pagination.",
+				label:"Pagination",
 				id:"display_pagination",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['yes', 'no'],
-				defaultValue: 'yes', 
+				defaultValue: 'yes',
 				defaultText: 'yes',
 				help:"Display pagination?"
 			},
