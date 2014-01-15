@@ -15,7 +15,7 @@ $plugin_path = trailingslashit( '../wp-content' . substr( $path_to_wp[1], 0, -3 
 
 //URL to TinyMCE plugin folder
 $plugin_url = CHERRY_PLUGIN_URL.'admin/shortcodes/';
-	
+
 ?>
 
 var framework_url = '<?php echo dirname( __FILE__ ); ?>';
@@ -24,32 +24,32 @@ var shortcode_generator_path = '<?php echo $plugin_path; ?>';
 var shortcode_generator_url = '<?php echo $plugin_url; ?>';
 
 var tb_dialog_helper = {
-	
-		// ---------------------------------------------------------
-    // TickBox popup controls
-    // ---------------------------------------------------------
-    
-    needsPreview: false,
-    setUpButtons: function () {
-        var a = this;
-        jQuery("#cancel-button").click(function () {
-            a.closeDialog()
-        });
-        jQuery("#insert-button").click(function () {
-            a.insertAction()
-        });
-    },
 
-    loadShortcodeDetails: function () {
-        if (myThemeSelectedShortcodeType) {
+	// ---------------------------------------------------------
+	// TickBox popup controls
+	// ---------------------------------------------------------
 
-            var a = this;
-            jQuery.getScript(shortcode_generator_url + "shortcodes/my_" + myThemeSelectedShortcodeType + ".js", function () {
-                a.initializeDialog();
-                
-                // Set the default content to the highlighted text, for certain shortcode types.
-                switch ( myThemeSelectedShortcodeType ) {
-				
+	needsPreview: false,
+	setUpButtons: function () {
+		var a = this;
+		jQuery("#cancel-button").click(function () {
+			a.closeDialog()
+		});
+		jQuery("#insert-button").click(function () {
+			a.insertAction()
+		});
+	},
+
+	loadShortcodeDetails: function () {
+		if (myThemeSelectedShortcodeType) {
+
+			var a = this;
+			jQuery.getScript(shortcode_generator_url + "shortcodes/my_" + myThemeSelectedShortcodeType + ".js", function () {
+				a.initializeDialog();
+
+				// Set the default content to the highlighted text, for certain shortcode types.
+				switch ( myThemeSelectedShortcodeType ) {
+
 					case 'box':
 					case 'ilink':
 					case 'quote':
@@ -58,392 +58,438 @@ var tb_dialog_helper = {
 					case 'unordered_list':
 					case 'ordered_list':
 					case 'typography':
-					
+
 						jQuery('input#value-content').val( selectedText );
-						
+
 					case 'toggle':
-					
+
 						jQuery('textarea#value-content').val( selectedText );
-					
+
 					break;
-				
+
 				} // End SWITCH Statement
-                
-                // Automatic preview generation on load.
-                a.previewAction();
-            })
 
-        }
+				// Automatic preview generation on load.
+				a.previewAction();
+			})
 
-    },
-    initializeDialog: function () {
+		}
 
-        if (typeof frameworkShortcodeAtts == "undefined") {
-            jQuery("#shortcode-options").append("<p>Error loading details for shortcode: " + myThemeSelectedShortcodeType + "</p>");
-        } else {
+	},
+	initializeDialog: function () {
 
-            var a = frameworkShortcodeAtts.attributes,
-                b = jQuery("#options-table");
+		if (typeof frameworkShortcodeAtts == "undefined") {
+			jQuery("#shortcode-options").append("<p>Error loading details for shortcode: " + myThemeSelectedShortcodeType + "</p>");
+		} else {
 
-            for (var c in a) {
-                var f = "mytheme-value-" + a[c].id,
-                    d = a[c].isRequired ? "mytheme-required" : "",
-                    g = jQuery('<th valign="top" scope="row"></th>');
+			var a = frameworkShortcodeAtts.attributes,
+				b = jQuery("#options-table");
 
-                var requiredSpan = '<span class="optional"></span>';
+			for (var c in a) {
+				var f = "mytheme-value-" + a[c].id,
+					d = a[c].isRequired ? "mytheme-required" : "",
+					g = jQuery('<th valign="top" scope="row"></th>');
 
-                if (a[c].isRequired) {
+				var requiredSpan = '<span class="optional"></span>';
 
-                    requiredSpan = '<span class="required">*</span>';
+				if (a[c].isRequired) {
 
-                } // End IF Statement
-                jQuery("<label/>").attr("for", f).attr("class", d).html(a[c].label).append(requiredSpan).appendTo(g);
-                f = jQuery("<td/>");
+					requiredSpan = '<span class="required">*</span>';
 
-                d = (d = a[c].controlType) ? d : "text-control";
+				} // End IF Statement
+				jQuery("<label/>").attr("for", f).attr("class", a[c].id).html(a[c].label).append(requiredSpan).appendTo(g);
+				f = jQuery("<td/>");
 
-                switch (d) {
-                    
-                case "tab-control":
+				d = (d = a[c].controlType) ? d : "text-control";
 
-                    this.createTabControl(a[c], f, c == 0);
+				switch (d) {
 
-                    break;
+				case "tab-control":
 
-                case "icon-control":
-                case "link-control":
-                case "text-control":
+					this.createTabControl(a[c], f, c == 0);
 
-                    this.createTextControl(a[c], f, c == 0);
+					break;
 
-                    break;
-                    
-                case "textarea-control":
+				case "icon-control":
+				case "link-control":
+				case "text-control":
 
-                    this.createTextAreaControl(a[c], f, c == 0);
+					this.createTextControl(a[c], f, c == 0);
 
-                    break;
+					break;
 
-                case "select-control":
+				case "textarea-control":
 
-                    this.createSelectControl(a[c], f, c == 0);
+					this.createTextAreaControl(a[c], f, c == 0);
 
-                    break;
+					break;
 
-                }
+				case "select-control":
 
-                jQuery("<tr/>").append(g).append(f).appendTo(b)
-            }
-            jQuery(".mytheme-focus-here:first").focus()
+					this.createSelectControl(a[c], f, c == 0);
+
+					break;
+
+				}
+
+				jQuery("<tr/>").append(g).append(f).appendTo(b)
+			}
+			jQuery(".mytheme-focus-here:first").focus()
 
 			// Add additional wrappers, etc, to each select box.
-			
+
 			jQuery('#shortcode-options select').wrap( '<div class="select_wrapper"></div>' ).before('<span></span>');
-			
+
 			jQuery('#shortcode-options select option:selected').each( function () {
-			
+
 				jQuery(this).parents('.select_wrapper').find('span').text( jQuery(this).text() );
-			
+
 			});
 
-        } // End IF Statement
-    },
-    
-     /* Tab Generator Element */
+		} // End IF Statement
+	},
 
-    createTabControl: function (a, b, c) {
-        new myThemeTabMaker(b, 6, c ? "mytheme-focus-here" : null);
-        b.addClass("mytheme-marker-tab-control")
-    },
+	 /* Tab Generator Element */
 
-    // ---------------------------------------------------------
-    // Generic Text Element
-    // ---------------------------------------------------------
+	createTabControl: function (a, b, c) {
+		new myThemeTabMaker(b, 6, c ? "mytheme-focus-here" : null);
+		b.addClass("mytheme-marker-tab-control")
+	},
 
-    createTextControl: function (a, b, c) {
-
-        var f = a.validateLink ? "mytheme-validation-marker" : "",
-            d = a.isRequired ? "mytheme-required" : "",
-            g = "framework-" + a.id,
-            item_class = (a.item_class!=undefined && a.item_class!="") ? a.item_class : "";
-
-        jQuery('<input type="text">').attr("id", g).attr("name", g).addClass(f).addClass(d).addClass(item_class).addClass('txt input-text').addClass(c ? "mytheme-focus-here" : "").appendTo(b);
-
-        if (a = a.help) {
-            jQuery("<br/>").appendTo(b);
-            jQuery("<span/>").addClass("input-help").html(a).appendTo(b)
-        }
-
-        var h = this;
-        b.find("#" + g).bind("keydown focusout", function (e) {
-            if (e.type == "keydown" && e.which != 13 && e.which != 9 && !e.shiftKey) h.needsPreview = true;
-            else if (h.needsPreview && (e.type == "focusout" || e.which == 13)) {
-                h.previewAction(e.target);
-                h.needsPreview = false
-            }
-        })
-
-    },
-	
 	// ---------------------------------------------------------
-    // Generic TextArea Element
-    // ---------------------------------------------------------
-	
-    createTextAreaControl: function (a, b, c) {
-
-        var f = a.validateLink ? "mytheme-validation-marker" : "",
-            d = a.isRequired ? "mytheme-required" : "",
-            g = "framework-" + a.id,
-            item_class = (a.item_class!=undefined && a.item_class!="") ? a.item_class : "";
-
-        jQuery('<textarea>').attr("id", g).attr("name", g).attr("rows", 10).attr("cols", 30).addClass(item_class).addClass(f).addClass(d).addClass('txt input-textarea').addClass(c ? "mytheme-focus-here" : "").appendTo(b);
-        b.addClass("framework-marker-textarea-control");
-
-        if (a = a.help) {
-            jQuery("<br/>").appendTo(b);
-            jQuery("<span/>").addClass("input-help").html(a).appendTo(b)
-        }
-
-        var h = this;
-        b.find("#" + g).bind("keydown focusout", function (e) {
-            if (e.type == "keydown" && e.which != 13 && e.which != 9 && !e.shiftKey) h.needsPreview = true;
-            else if (h.needsPreview && (e.type == "focusout" || e.which == 13)) {
-                h.previewAction(e.target);
-                h.needsPreview = false
-            }
-        })
-
-    },
-	
-	
+	// Generic Text Element
 	// ---------------------------------------------------------
-    // Select Box Element
-    // ---------------------------------------------------------
 
-    createSelectControl: function (a, b, c) {
+	createTextControl: function (a, b, c) {
 
-        var f = a.validateLink ? "mytheme-validation-marker" : "",
-            d = a.isRequired ? "mytheme-required" : "",
-            g = "framework-" + a.id,
-            item_class = (a.item_class!=undefined && a.item_class!="") ? a.item_class : "";
-            
-        var selectNode = jQuery('<select>').attr("id", g).attr("name", g).addClass(f).addClass(item_class).addClass(d).addClass('select input-select').addClass(c ? "mytheme-focus-here" : "");
+		var f = a.validateLink ? "mytheme-validation-marker" : "",
+			d = a.isRequired ? "mytheme-required" : "",
+			g = "framework-" + a.id,
+			item_class = (a.item_class!=undefined && a.item_class!="") ? a.item_class : "";
 
-        b.addClass('framework-marker-select-control');
+		jQuery('<input type="text">').attr("id", g).attr("name", g).addClass(f).addClass(d).addClass(item_class).addClass('txt input-text').addClass(c ? "mytheme-focus-here" : "").appendTo(b);
 
-        var selectBoxValues = a.selectValues;
-        
-        var labelValues = a.selectValues;
+		if (a = a.help) {
+			jQuery("<br/>").appendTo(b);
+			jQuery("<span/>").addClass("input-help").html(a).appendTo(b)
+		}
 
-        for (v in selectBoxValues) {
+		var h = this;
+		b.find("#" + g).bind("keydown focusout", function (e) {
+			if (e.type == "keydown" && e.which != 13 && e.which != 9 && !e.shiftKey) h.needsPreview = true;
+			else if (h.needsPreview && (e.type == "focusout" || e.which == 13)) {
+				h.previewAction(e.target);
+				h.needsPreview = false
+			}
+		})
 
-            var value = selectBoxValues[v];
-            var label = labelValues[v];
-            var selected = '';
+	},
 
-            if (value == '') {
+	// ---------------------------------------------------------
+	// Generic TextArea Element
+	// ---------------------------------------------------------
 
-                if (a.defaultValue == value) {
+	createTextAreaControl: function (a, b, c) {
 
-                    label = a.defaultText;
+		var f = a.validateLink ? "mytheme-validation-marker" : "",
+			d = a.isRequired ? "mytheme-required" : "",
+			g = "framework-" + a.id,
+			item_class = (a.item_class!=undefined && a.item_class!="") ? a.item_class : "";
 
-                } // End IF Statement
-            } else {
+		jQuery('<textarea>').attr("id", g).attr("name", g).attr("rows", 10).attr("cols", 30).addClass(item_class).addClass(f).addClass(d).addClass('txt input-textarea').addClass(c ? "mytheme-focus-here" : "").appendTo(b);
+		b.addClass("framework-marker-textarea-control");
 
-                if (value == a.defaultValue) {
-                    label = a.defaultText;
-                } // End IF Statement
-            } // End IF Statement
-            if (value == a.defaultValue) {
-                selected = ' selected="selected"';
-            } // End IF Statement
-            
-            selectNode.append('<option value="' + value + '"' + selected + '>' + label + '</option>');
+		if (a = a.help) {
+			jQuery("<br/>").appendTo(b);
+			jQuery("<span/>").addClass("input-help").html(a).appendTo(b)
+		}
 
-        } // End FOREACH Loop
-        
-        selectNode.appendTo(b);
+		var h = this;
+		b.find("#" + g).bind("keydown focusout", function (e) {
+			if (e.type == "keydown" && e.which != 13 && e.which != 9 && !e.shiftKey) h.needsPreview = true;
+			else if (h.needsPreview && (e.type == "focusout" || e.which == 13)) {
+				h.previewAction(e.target);
+				h.needsPreview = false
+			}
+		})
 
-        if (a = a.help) {
-            jQuery("<br/>").appendTo(b);
-            jQuery("<span/>").addClass("input-help").html(a).appendTo(b)
-        }
+	},
 
-        var h = this;
 
-        b.find("#" + g).bind("change", function (e) {
+	// ---------------------------------------------------------
+	// Select Box Element
+	// ---------------------------------------------------------
 
-            if ((e.type == "change" || e.type == "focusout") || e.which == 9) {
+	createSelectControl: function (a, b, c) {
 
-                h.needsPreview = true;
+		var f = a.validateLink ? "mytheme-validation-marker" : "",
+			d = a.isRequired ? "mytheme-required" : "",
+			g = "framework-" + a.id,
+			item_class = (a.item_class!=undefined && a.item_class!="") ? a.item_class : "";
 
-            }
+		var selectNode = jQuery('<select>').attr("id", g).attr("name", g).addClass(f).addClass(item_class).addClass(d).addClass('select input-select').addClass(c ? "mytheme-focus-here" : "");
 
-            if (h.needsPreview) {
+		b.addClass('framework-marker-select-control');
 
-                h.previewAction(e.target);
+		var selectBoxValues = a.selectValues;
 
-                h.needsPreview = false
-            }
-            
-            // Update the text in the appropriate span tag.
-            var newText = jQuery(this).children('option:selected').text();
-            
-            jQuery(this).parents('.select_wrapper').find('span').text( newText );
-        })
+		var labelValues = a.selectValues;
 
-    },
-    
+		for (v in selectBoxValues) {
+
+			var value = selectBoxValues[v];
+			var label = labelValues[v];
+			var selected = '';
+
+			if (value == '') {
+
+				if (a.defaultValue == value) {
+
+					label = a.defaultText;
+
+				} // End IF Statement
+			} else {
+
+				if (value == a.defaultValue) {
+					label = a.defaultText;
+				} // End IF Statement
+			} // End IF Statement
+			if (value == a.defaultValue) {
+				selected = ' selected="selected"';
+			} // End IF Statement
+
+			selectNode.append('<option value="' + value + '"' + selected + '>' + label + '</option>');
+
+		} // End FOREACH Loop
+
+		selectNode.appendTo(b);
+
+		if (a = a.help) {
+			jQuery("<br/>").appendTo(b);
+			jQuery("<span/>").addClass("input-help").html(a).appendTo(b)
+		}
+
+		var h = this;
+
+		b.find("#" + g).bind("change", function (e) {
+
+			if ((e.type == "change" || e.type == "focusout") || e.which == 9) {
+
+				h.needsPreview = true;
+
+			}
+
+			if (h.needsPreview) {
+
+				h.previewAction(e.target);
+
+				h.needsPreview = false
+			}
+
+			// Update the text in the appropriate span tag.
+			var newText = jQuery(this).children('option:selected').text();
+
+			jQuery(this).parents('.select_wrapper').find('span').text( newText );
+		})
+
+	},
+
 	getTextKeyValue: function (a) {
-        var b = a.find("input");
-        if (!b.length) return null;
-        a = b.attr("id").substring(10);
-        b = b.val();
-        return {
-            key: a,
-            value: b
-        }
-    },
+		var b = a.find("input");
+		if (!b.length) return null;
+		a = b.attr("id").substring(10);
+		b = b.val();
+		return {
+			key: a,
+			value: b
+		}
+	},
 
 	getTextAreaKeyValue: function (a) {
-        var b = a.find("textarea");
-        if (!b.length) return null;
-        a = b.attr("id").substring(10);
-        b = b.val();
-        return {
-            key: a,
-            value: b
-        }
-    },
+		var b = a.find("textarea");
+		if (!b.length) return null;
+		a = b.attr("id").substring(10);
+		b = b.val();
+		return {
+			key: a,
+			value: b
+		}
+	},
 
-    getColumnKeyValue: function (a) {
-        var b = a.find("#framework-column-text").text();
-        if (a = Number(a.find("select option:selected").val())) return {
-            key: "data",
-            value: {
-                content: b,
-                numColumns: a
-            }
-        }
-    },
-    
-    getTabKeyValue: function (a) {
-        var b = a.find("#framework-tab-text").text();
-        if (a = Number(a.find("select option:selected").val())) return {
-            key: "data",
-            value: {
-                content: b,
-                numTabs: a
-            }
-        }
-    },
+	getColumnKeyValue: function (a) {
+		var b = a.find("#framework-column-text").text();
+		if (a = Number(a.find("select option:selected").val())) return {
+			key: "data",
+			value: {
+				content: b,
+				numColumns: a
+			}
+		}
+	},
 
-    makeShortcode: function () {
+	getTabKeyValue: function (a) {
+		var b = a.find("#framework-tab-text").text();
+		if (a = Number(a.find("select option:selected").val())) return {
+			key: "data",
+			value: {
+				content: b,
+				numTabs: a
+			}
+		}
+	},
 
-        var a = {},
-            b = this;
+	makeShortcode: function () {
 
-        jQuery("#options-table td").each(function () {
+		var a = {},
+			b = this;
 
-            var h = jQuery(this),
-                e = null;
+		jQuery("#options-table td").each(function () {
 
-            if (e = h.hasClass("framework-marker-select-control") ? b.getSelectKeyValue(h) : b.getTextKeyValue(h)) a[e.key] = e.value
-            if (e = h.hasClass("framework-marker-tab-control") ? b.getTabKeyValue(h) : b.getTextKeyValue(h)) a[e.key] = e.value
-            if (e = h.hasClass("framework-marker-textarea-control") ? b.getTextAreaKeyValue(h) : b.getTextKeyValue(h)) a[e.key] = e.value
+			var h = jQuery(this),
+				e = null;
 
-        });
+			if (e = h.hasClass("framework-marker-select-control") ? b.getSelectKeyValue(h) : b.getTextKeyValue(h)) a[e.key] = e.value
+			if (e = h.hasClass("framework-marker-tab-control") ? b.getTabKeyValue(h) : b.getTextKeyValue(h)) a[e.key] = e.value
+			if (e = h.hasClass("framework-marker-textarea-control") ? b.getTextAreaKeyValue(h) : b.getTextKeyValue(h)) a[e.key] = e.value
 
-        if (frameworkShortcodeAtts.customMakeShortcode) return frameworkShortcodeAtts.customMakeShortcode(a);
-        var c = a.content ? a.content : frameworkShortcodeAtts.defaultContent,
-            f = "";
-        for (var d in a) {
-            var g = a[d];
-            if (g && d != "content") f += " " + d + '="' + g + '"'
-        }
-        
-        // Customise the shortcode output for various shortcode types.
-        
-        switch ( frameworkShortcodeAtts.shortcodeType ) {
-        
-        	case 'text-replace':
-        	
-        		var shortcode = "[" + frameworkShortcodeAtts.shortcode + f + "]" + (c ? c + "[/" + frameworkShortcodeAtts.shortcode + "]" : " ")
-        	
-        	break;
-        	
-        	default:
-        	
-        		var shortcode = "[" + frameworkShortcodeAtts.shortcode + f + "]" + (c ? c + "[/" + frameworkShortcodeAtts.shortcode + "] " : " ")
-        	
-        	break;
-        
-        } // End SWITCH Statement
-        
-        return shortcode;
-    },
+		});
 
-    getSelectKeyValue: function (a) {
-        var b = a.find("select");
-        if (!b.length) return null;
-        a = b.attr("id").substring(10);
-        b = b.val();
-        return {
-            key: a,
-            value: b
-        }
-    },
+		if (frameworkShortcodeAtts.customMakeShortcode) return frameworkShortcodeAtts.customMakeShortcode(a);
+		var c = a.content ? a.content : frameworkShortcodeAtts.defaultContent,
+			f = "";
+		for (var d in a) {
+			var g = a[d];
+			if (g && d != "content") f += " " + d + '="' + g + '"'
+		}
 
-    insertAction: function () {
-        if (typeof frameworkShortcodeAtts != "undefined") {
-            var a = this.makeShortcode();
-            tinyMCE.activeEditor.execCommand("mceInsertContent", false, a);
-            this.closeDialog()
-        }
-    },
+		// Customise the shortcode output for various shortcode types.
 
-    closeDialog: function () {
-        this.needsPreview = false;
-        tb_remove();
-        jQuery("#dialog").remove()
-    },
+		switch ( frameworkShortcodeAtts.shortcodeType ) {
 
-    previewAction: function (a) {
-    
-    	var fontValue = '';
-    	
-    	jQuery('#options-table').find('select.input-select-font').each ( function () {
-    	
-    		fontValue = jQuery(this).val();
-    	
-    	});
-    
-        jQuery(a).hasClass("mytheme-validation-marker") && this.validateLinkFor(a);
-    },
+			case 'text-replace':
 
-    validateLinkFor: function (a) {
-        var b = jQuery(a);
-        b.removeClass("framework-validation-error");
-        b.removeClass("framework-validated");
-        if (a = b.val()) {
-            b.addClass("framework-validating");
-            jQuery.ajax({
-                url: ajaxurl,
-                dataType: "json",
-                data: {
-                    action: "framework_check_url_action",
-                    url: a
-                },
-                error: function () {
-                    b.removeClass("framework-validating")
-                },
-                success: function (c) {
-                    b.removeClass("framework-validating");
-                    c.error || b.addClass(c.exists ? "framework-validated" : "framework-validation-error")
-                }
-            })
-        }
-    }
+				var shortcode = "[" + frameworkShortcodeAtts.shortcode + f + "]" + (c ? c + "[/" + frameworkShortcodeAtts.shortcode + "]" : " ")
+
+			break;
+
+			default:
+
+				var shortcode = "[" + frameworkShortcodeAtts.shortcode + f + "]" + (c ? c + "[/" + frameworkShortcodeAtts.shortcode + "] " : " ")
+
+			break;
+
+		} // End SWITCH Statement
+
+		return shortcode;
+	},
+
+	getSelectKeyValue: function (a) {
+		var b = a.find("select");
+		if (!b.length) return null;
+		a = b.attr("id").substring(10);
+		b = b.val();
+		return {
+			key: a,
+			value: b
+		}
+	},
+
+	insertAction: function () {
+		if (typeof frameworkShortcodeAtts != "undefined") {
+			var a = this.makeShortcode(),
+				name = jQuery('#selected-shortcode').val(),
+				columnNum = 1,
+				rowNum = 4,
+				i;
+
+			if (name == 'chp_pricing_table') {
+				columnNum = jQuery('#shortcode-options .columns').parent().parent().find('.select_wrapper > span').html();
+				labelled = jQuery('#shortcode-options .labelled').parent().parent().find('.select_wrapper > span').html();
+				a += '<br/><br/>';
+
+				if (labelled == 'yes') {
+					i=2;
+					a += '[chp_pricing_column_label title="Features"]<br/>';
+					for(var n=1;n<=rowNum;n++) {
+						if (n % 2 == 0) {
+							a += '[chp_pricing_row_label] Label ' + n + ' [/chp_pricing_row_label]<br/>';
+						} else {
+							a += '[chp_pricing_row_label odd="true"] Label ' + n + ' [/chp_pricing_row_label]<br/>';
+						}
+					}
+					a += '[/chp_pricing_column_label]<br/><br/>';
+				} else {
+					i=1;
+				}
+
+				for(;i<=columnNum;i++) {
+					if(i == 2) {
+						a += '[chp_pricing_column title="Column '+i+'" highlight="true" highlight_reason="Most Popular" price="'+100*i+'" currency_symbol="$" interval="Per Month"]<br/>';
+					} else {
+						a += '[chp_pricing_column title="Column '+i+'" price="'+100*i+'" currency_symbol="$" interval="Per Month"]<br/>';
+					}
+					for(var n=1;n<=rowNum;n++) {
+						if (labelled == 'yes') {
+							a += '[chp_pricing_row_label] Label ' + n + ' [/chp_pricing_row_label]<br/>';
+						}
+						if (n % 2 == 0) {
+							a += '[chp_pricing_row] Your text here [/chp_pricing_row]<br/>';
+						} else {
+							a += '[chp_pricing_row odd="true"] Your text here [/chp_pricing_row]<br/>';
+						}
+					}
+					a += '[button text="Sign Up" link="#" style="default" size="normal" target="_self" display="inline" icon="no"]<br/>';
+					a += '[/chp_pricing_column]<br/><br/>';
+				}
+				a += '[/' + name + ']';
+			}
+			tinyMCE.activeEditor.execCommand("mceInsertContent", false, a);
+			this.closeDialog()
+		}
+	},
+
+	closeDialog: function () {
+		this.needsPreview = false;
+		tb_remove();
+		jQuery("#dialog").remove()
+	},
+
+	previewAction: function (a) {
+
+		var fontValue = '';
+
+		jQuery('#options-table').find('select.input-select-font').each ( function () {
+
+			fontValue = jQuery(this).val();
+
+		});
+
+		jQuery(a).hasClass("mytheme-validation-marker") && this.validateLinkFor(a);
+	},
+
+	validateLinkFor: function (a) {
+		var b = jQuery(a);
+		b.removeClass("framework-validation-error");
+		b.removeClass("framework-validated");
+		if (a = b.val()) {
+			b.addClass("framework-validating");
+			jQuery.ajax({
+				url: ajaxurl,
+				dataType: "json",
+				data: {
+					action: "framework_check_url_action",
+					url: a
+				},
+				error: function () {
+					b.removeClass("framework-validating")
+				},
+				success: function (c) {
+					b.removeClass("framework-validating");
+					c.error || b.addClass(c.exists ? "framework-validated" : "framework-validation-error")
+				}
+			})
+		}
+	}
 
 };
 

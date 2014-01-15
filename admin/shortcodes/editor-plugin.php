@@ -769,6 +769,7 @@ require_once( $wp_url.'/wp-load.php' );
 						}
 
 					)
+					.complete(function() { jQuery('#selected-shortcode').val( myThemeSelectedShortcodeType ); });
 
 					}
 				);
@@ -885,6 +886,7 @@ require_once( $wp_url.'/wp-load.php' );
 								a.addWithDialog(b,"<?php _e('Tabs', CHERRY_PLUGIN_DOMAIN); ?>","tabs");
 								a.addWithDialog(b,"<?php _e('Accordion', CHERRY_PLUGIN_DOMAIN); ?>","accordions");
 								a.addWithDialog(b,"<?php _e('Table', CHERRY_PLUGIN_DOMAIN); ?>","table");
+								a.addWithDialog(b,"<?php _e('Pricing Table', CHERRY_PLUGIN_DOMAIN); ?>","chp_pricing_table");
 								a.addWithDialog(b,"<?php _e('Google Map', CHERRY_PLUGIN_DOMAIN); ?>","map");
 
 							});

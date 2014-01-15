@@ -25,13 +25,14 @@ $plugin_url = CHERRY_PLUGIN_URL.'/includes/shortcodes/';
 	<div id="shortcode-options" class="alignleft">
 		<table id="options-table">
 		</table>
+		<input type="hidden" id="selected-shortcode" value="">
 	</div>
 	<div class="clear"></div>
 	<div class="buttons-wrapper">
 		<input type="button" id="cancel-button" class="button alignleft" name="cancel" value="<?php _e('Cancel', CHERRY_PLUGIN_DOMAIN) ?>" accesskey="C" />
 		<input type="button" id="insert-button" class="button-primary alignright" name="insert" value="<?php _e('Insert Shortcode', CHERRY_PLUGIN_DOMAIN) ?>" accesskey="I" />
-	<div class="clear"></div>
-</div>
+		<div class="clear"></div>
+	</div>
 	<script type="text/javascript" src="<?php echo CHERRY_PLUGIN_URL ?>admin/shortcodes/dialog-js.php"></script>
 </div><!-- #dialog (end) -->
 
