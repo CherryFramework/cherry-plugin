@@ -4,14 +4,13 @@
  */
 if ( !function_exists('shortcode_carousel') ) {
 	function shortcode_carousel( $atts ) {
-		wp_enqueue_style( 'elastislide', CHERRY_PLUGIN_URL . 'lib/js/elasti-carousel/elastislide.css', false, CHERRY_PLUGIN_VERSION, 'all' );
 		wp_enqueue_script( 'elastislide', CHERRY_PLUGIN_URL . 'lib/js/elasti-carousel/jquery.elastislide.js', array('jquery', 'easing'), CHERRY_PLUGIN_VERSION, true );
 		wp_enqueue_script( 'easing', CHERRY_PLUGIN_URL . 'lib/js/jquery.easing.1.3.js', array('jquery'), '1.3', true );
 
 		extract( shortcode_atts( array(
 			'title'            => '',
 			'num'              => 8,
-			'type'             => '',
+			'type'             => 'post',
 			'thumb'            => 'true',
 			'thumb_width'      => 220,
 			'thumb_height'     => 180,
@@ -54,13 +53,13 @@ if ( !function_exists('shortcode_carousel') ) {
 					$suppress_filters = get_option( 'suppress_filters' );
 
 					$args = array(
-						'post_type'              => $type,
-						'category_name'          => $category,
+						'post_type'         => $type,
+						'category_name'     => $category,
 						$type . '_category' => $custom_category,
-						'numberposts'            => $num,
-						'orderby'                => 'post_date',
-						'order'                  => 'DESC',
-						'suppress_filters'       => $suppress_filters
+						'numberposts'       => $num,
+						'orderby'           => 'post_date',
+						'order'             => 'DESC',
+						'suppress_filters'  => $suppress_filters
 					);
 
 					global $post; // very important
@@ -73,11 +72,15 @@ if ( !function_exists('shortcode_carousel') ) {
 						$post_title_attr = esc_attr( strip_tags( get_the_title( $post_id ) ) );
 						$format          = get_post_format( $post_id );
 						$format          = (empty( $format )) ? 'format-standart' : 'format-' . $format;
-						$post_permalink  = ( $format == 'format-link' ) ? esc_url( get_post_meta( $post_id, 'tz_link_url', true ) ) : get_permalink( $post_id );
-						if ( has_excerpt( $post_id ) ) {
-							$excerpt = esc_html( get_the_excerpt() );
+						if ( get_post_meta( $post_id, 'tz_link_url', true ) ) {
+							$post_permalink = ( $format == 'format-link' ) ? esc_url( get_post_meta( $post_id, 'tz_link_url', true ) ) : get_permalink( $post_id );
 						} else {
-							$excerpt = esc_html( get_the_content() );
+							$post_permalink = get_permalink( $post_id );
+						}
+						if ( has_excerpt( $post_id ) ) {
+							$excerpt = wp_strip_all_tags( get_the_excerpt() );
+						} else {
+							$excerpt = wp_strip_all_tags( strip_shortcodes (get_the_content() ) );
 						}
 
 						// Unset not translated posts
@@ -159,15 +162,15 @@ if ( !function_exists('shortcode_carousel') ) {
 								}
 
 								// post title
-								$output .= '<h5><a href="' . $post_permalink . '" title="' . $post_title_attr . '">';
-									$output .= $post_title;
-								$output .= '</a></h5>';
+								if ( !empty($post_title{0}) ) {
+									$output .= '<h5><a href="' . $post_permalink . '" title="' . $post_title_attr . '">';
+										$output .= $post_title;
+									$output .= '</a></h5>';
+								}
 
 								// post excerpt
-								if ( $excerpt_count ) {
-									$output .= '<p class="excerpt">';
-										$output .= my_string_limit_words( $excerpt, $excerpt_count );
-									$output .= '</p>';
+								if ( !empty($excerpt{0}) ) {
+									$output .= $excerpt_count > 0 ? '<p class="excerpt">' . my_string_limit_words( $excerpt, $excerpt_count ) . '</p>' : '';
 								}
 
 								// post more button

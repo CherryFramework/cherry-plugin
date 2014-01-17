@@ -13,11 +13,7 @@ frameworkShortcodeAtts={
 			{
 				label:"Type of posts",
 				id:"type",
-				controlType:"select-control",
-				selectValues:['blog', 'portfolio', 'testimonial'],
-				defaultValue: 'post',
-				defaultText: 'blog',
-				help:"Choose the type of posts."
+				help:"Input the type of posts (default is post)."
 			},
 			{
 				label:"Do you want to show the featured image?",

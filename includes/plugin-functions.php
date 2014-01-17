@@ -87,3 +87,19 @@ if(!function_exists('gener_random')){
 		return $random_id;
 	}
 }
+//------------------------------------------------------
+// Remove Empty Paragraphs
+//------------------------------------------------------
+if ( !function_exists('shortcode_empty_paragraph_fix') ) {
+
+	add_filter('the_content', 'shortcode_empty_paragraph_fix');
+	function shortcode_empty_paragraph_fix($content) {
+		$array = array(
+				'<p>['    => '[',
+				']</p>'   => ']',
+				']<br />' => ']'
+		);
+		$content = strtr($content, $array);
+		return $content;
+	}
+}

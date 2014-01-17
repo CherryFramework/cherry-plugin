@@ -8,11 +8,7 @@ frameworkShortcodeAtts={
 			{
 				label:"Type of posts",
 				id:"post_type",
-				controlType:"select-control",
-				selectValues:['Blog', 'Portfolio', 'Testimonial', 'Services', 'Our team'],
-				defaultValue: 'post',
-				defaultText: 'Blog',
-				help:"Choose the type of posts."
+				help:"Input the type of posts (default is post)."
 			},
 			{
 				label:"Which category to pull from?",

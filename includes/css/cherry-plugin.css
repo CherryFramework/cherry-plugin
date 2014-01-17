@@ -1,3 +1,125 @@
+/* #Shortcodes
+================================================== */
+/* Carousel (OWL)
+---------------------------------------- */
+.owl-carousel {
+  margin-bottom: 15px;
+}
+.owl-carousel .item {
+  margin: 3px;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+.owl-carousel .item figure {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+.owl-carousel .item figure a {
+  display: block;
+}
+.owl-carousel .item figure a img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.owl-carousel .owl-wrapper-outer {
+  margin: 0 0 15px 0;
+}
+/* Carousel (Elasti)
+---------------------------------------- */
+.carousel-wrap {
+  position: relative;
+  margin: 0;
+}
+.es-carousel {
+  overflow: hidden;
+}
+.es-carousel-wrapper {
+  position: relative;
+  padding: 0;
+}
+.es-carousel_list {
+  display: none;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+.es-carousel_list:before,
+.es-carousel_list:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.es-carousel_list:after {
+  clear: both;
+}
+.es-carousel_li {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+.es-carousel_li .featured-thumbnail {
+  float: none;
+  margin: 0 0 20px;
+}
+.es-carousel_li .featured-thumbnail img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  max-height: 100%;
+  border: none;
+}
+.es-carousel_li .desc {
+  margin: 0;
+  padding: 0;
+}
+.es-carousel_li h5 {
+  margin-bottom: .5em;
+  font-weight: bold;
+}
+.es-carousel_li h5 a {
+  text-decoration: underline;
+}
+.es-carousel_li h5 a:hover {
+  text-decoration: none;
+}
+.es-carousel_li .excerpt {
+  margin-bottom: 10px;
+}
+.es-nav span {
+  position: absolute;
+  top: 0;
+  right: 32px;
+  margin-top: -35px;
+  width: 14px;
+  height: 26px;
+  background: transparent url(../images/nav.png) no-repeat top left;
+  text-indent: -9000px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.es-nav span.es-nav-next {
+  right: 12px;
+  left: auto;
+  background-position: top right;
+}
+.es-nav span.es-nav-next:hover {
+  opacity: 1.0;
+}
 /* #Misc
 ================================================== */
 /* List styling */
@@ -112,6 +234,12 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
   -webkit-transition: box-shadow 0.2s linear;
   -moz-transition: box-shadow 0.2s linear;
   -o-transition: box-shadow 0.2s linear;
@@ -167,6 +295,7 @@
 .price-plans .plan.plan-labelled {
   margin-top: 61px;
   border-bottom: none;
+  background-color: transparent;
   text-transform: none;
 }
 @media (max-width: 767px) {
@@ -201,6 +330,7 @@
   color: #fff;
 }
 .price-plans .plan .btn {
+  display: inline-block;
   margin-bottom: 20px;
   margin-top: 20px;
 }

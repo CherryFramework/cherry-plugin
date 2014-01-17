@@ -4,29 +4,27 @@
  */
 if ( !function_exists('shortcode_carousel_owl') ) {
 	function shortcode_carousel_owl( $args ) {
-		wp_enqueue_style( 'owl-carousel', CHERRY_PLUGIN_URL . 'lib/js/owl-carousel/owl.carousel.css', false, '1.24', 'all' );
-		wp_enqueue_style( 'owl-theme', CHERRY_PLUGIN_URL . 'lib/js/owl-carousel/owl.theme.css', false, '1.24', 'all' );
 		wp_enqueue_script( 'owl-carousel', CHERRY_PLUGIN_URL . 'lib/js/owl-carousel/owl.carousel.min.js', array('jquery'), '1.31', true );
 
 		extract( shortcode_atts( array(
-				'title'              => '',
-				'posts_count'        => 10,
-				'post_type'          => 'blog',
-				'post_status'        => 'publish',
-				'visibility_items'   => 5,
-				'thumb'              => 'yes',
-				'thumb_width'        => 220,
-				'thumb_height'       => 180,
-				'more_text_single'   => '',
-				'categories'         => '',
-				'excerpt_count'      => 15,
-				'date'               => 'yes',
-				'author'             => 'yes',
-				'comments'           => 'no',
-				'auto_play'          => 0,
-				'display_navs'       => 'yes',
-				'display_pagination' => 'yes',
-				'custom_class'       => ''
+			'title'              => '',
+			'posts_count'        => 10,
+			'post_type'          => 'blog',
+			'post_status'        => 'publish',
+			'visibility_items'   => 5,
+			'thumb'              => 'yes',
+			'thumb_width'        => 220,
+			'thumb_height'       => 180,
+			'more_text_single'   => '',
+			'categories'         => '',
+			'excerpt_count'      => 15,
+			'date'               => 'yes',
+			'author'             => 'yes',
+			'comments'           => 'no',
+			'auto_play'          => 0,
+			'display_navs'       => 'yes',
+			'display_pagination' => 'yes',
+			'custom_class'       => ''
 		), $args) );
 
 		$random_ID          = uniqid();
@@ -103,11 +101,15 @@ if ( !function_exists('shortcode_carousel_owl') ) {
 					$post_title_attr = esc_attr( strip_tags( get_the_title( $post_id ) ) );
 					$format          = get_post_format( $post_id );
 					$format          = (empty( $format )) ? 'format-standart' : 'format-' . $format;
-					$post_permalink  = ( $format == 'format-link' ) ? esc_url( get_post_meta( $post_id, 'tz_link_url', true ) ) : get_permalink( $post_id );
-					if ( has_excerpt( $post_id ) ) {
-						$excerpt = wp_kses_data( get_the_excerpt() );
+					if ( get_post_meta( $post_id, 'tz_link_url', true ) ) {
+						$post_permalink = ( $format == 'format-link' ) ? esc_url( get_post_meta( $post_id, 'tz_link_url', true ) ) : get_permalink( $post_id );
 					} else {
-						$excerpt = wp_kses_data( get_the_content() );
+						$post_permalink = get_permalink( $post_id );
+					}
+					if ( has_excerpt( $post_id ) ) {
+						$excerpt = wp_strip_all_tags( get_the_excerpt() );
+					} else {
+						$excerpt = wp_strip_all_tags( strip_shortcodes (get_the_content() ) );
 					}
 
 					$output .= '<div class="item ' . $format . '">';
@@ -174,12 +176,16 @@ if ( !function_exists('shortcode_carousel_owl') ) {
 							}
 
 							// post title
-							$output .= '<h5><a href="' . $post_permalink . '" title="' . $post_title_attr . '">';
-								$output .= $post_title;
-							$output .= '</a></h5>';
+							if ( !empty($post_title{0}) ) {
+								$output .= '<h5><a href="' . $post_permalink . '" title="' . $post_title_attr . '">';
+									$output .= $post_title;
+								$output .= '</a></h5>';
+							}
 
 							// post excerpt
-							$output .= $excerpt_count > 0 ? '<p class="excerpt">' . my_string_limit_words( $excerpt, $excerpt_count ) . '</p>' : '';
+							if ( !empty($excerpt{0}) ) {
+								$output .= $excerpt_count > 0 ? '<p class="excerpt">' . my_string_limit_words( $excerpt, $excerpt_count ) . '</p>' : '';
+							}
 
 							// post more button
 							$more_text_single = esc_html( wp_kses_data( $more_text_single ) );
