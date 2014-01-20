@@ -22,7 +22,7 @@ if (!function_exists('service_box_shortcode')) {
 		$output =  '<div class="service-box '.$custom_class.'">';
 	
 		if($icon != 'no'){
-			$icon_url = CHERRY_PLUGIN_URL . 'includes/assets/images/' . strtolower($icon) . '.png' ;
+			$icon_url = CHERRY_PLUGIN_URL . 'includes/images/' . strtolower($icon) . '.png' ;
 			if( defined ('CHILD_DIR') ) {
 				if(file_exists(CHILD_DIR.'/images/'.strtolower($icon).'.png')){
 					$icon_url = CHILD_URL.'/images/'.strtolower($icon).'.png';

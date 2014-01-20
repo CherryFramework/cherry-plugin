@@ -425,7 +425,7 @@ if (!function_exists('icon_shortcode')) {
 		), $atts));
 
 		if ($icon_type == 'Images' || $icon_type == '') {
-			$icon_url = CHERRY_PLUGIN_URL . 'includes/assets/images/iconSweets/' . strtolower($icon) . '.png' ;
+			$icon_url = CHERRY_PLUGIN_URL . 'includes/images/iconSweets/' . strtolower($icon) . '.png' ;
 			if( defined ('CHILD_DIR') ) {
 				if(file_exists(CHILD_DIR.'/images/iconSweets/'.strtolower($icon).'.png')){
 					$icon_url = CHILD_URL.'/images/iconSweets/'.strtolower($icon).'.png';
