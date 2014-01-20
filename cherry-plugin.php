@@ -16,8 +16,10 @@
 
 			if ( !function_exists( 'get_plugin_data' ) ) require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
+			$upload_dir = wp_upload_dir();
 			$plugin_data = get_plugin_data(plugin_dir_path(__FILE__).'cherry-plugin.php');
 
+			//Cherry plugin constant variables
 			define('CHERRY_PLUGIN_DIR', plugin_dir_path(__FILE__));
 			define('CHERRY_PLUGIN_URL', plugin_dir_url(__FILE__));
 			define('CHERRY_PLUGIN_DOMAIN', $plugin_data['TextDomain']);
@@ -25,6 +27,10 @@
 			define('CHERRY_PLUGIN_VERSION', $plugin_data['Version']);
 			define('CHERRY_PLUGIN_NAME', $plugin_data['Name']);
 			define('CHERRY_PLUGIN_DB', $wpdb->prefix.CHERRY_PLUGIN_DOMAIN);
+
+			//Other constant variables
+			define('UPLOAD_BASE_DIR', str_replace("\\", "/", $upload_dir['basedir'].'/'));
+			define('UPLOAD_DIR', str_replace("\\", "/", $upload_dir['path'].'/'));
 
 			load_plugin_textdomain( CHERRY_PLUGIN_DOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/'.CHERRY_PLUGIN_DOMAIN_DIR);
 
@@ -51,7 +57,6 @@
 //activate plugin
 	if(!function_exists('cherry_plugin_activate')){
 		function cherry_plugin_activate(){
-			//var_dump(CHERRY_PLUGIN_DB);
 			do_action( 'cherry_plugin_activate' );
 		}
 		register_activation_hook( __FILE__, 'cherry_plugin_activate' );

@@ -326,6 +326,7 @@ if (!function_exists('icon_shortcode')) {
 			array(
 				'icon_type'       => '',
 				'icon'     => 'alert',
+				'icon_images'=> '',
 				'icon_font'       => '',
 				'icon_font_size'  => '',
 				'icon_font_color' => '',
@@ -333,11 +334,12 @@ if (!function_exists('icon_shortcode')) {
 				'align'           => ''
 		), $atts));
 
+		$icon_images = ($icon_images)?:$icon;
 		if ($icon_type == 'Images' || $icon_type == '') {
-			$icon_url = CHERRY_PLUGIN_URL . 'includes/assets/images/iconSweets/' . strtolower($icon) . '.png' ;
+			$icon_url = CHERRY_PLUGIN_URL . 'includes/images/iconSweets/' . strtolower($icon_images) . '.png' ;
 			if( defined ('CHILD_DIR') ) {
-				if(file_exists(CHILD_DIR.'/images/iconSweets/'.strtolower($icon).'.png')){
-					$icon_url = CHILD_URL.'/images/iconSweets/'.strtolower($icon).'.png';
+				if(file_exists(CHILD_DIR.'/images/iconSweets/'.strtolower($icon_images).'.png')){
+					$icon_url = CHILD_URL.'/images/iconSweets/'.strtolower($icon_images).'.png';
 				}
 			}
 			$output = '<figure class="align'. $align ." ".$custom_class.'"><img src="'. $icon_url .'" alt=""></figure>';

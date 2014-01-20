@@ -102,7 +102,7 @@ if (!function_exists('shortcode_carousel_owl')) {
 			endif;
 			$output .= '</div></div>';
 			wp_reset_query();
-			echo $output;
+			return $output;
 		}
 	}
 	add_shortcode('carousel_owl', 'shortcode_carousel_owl');

@@ -11,8 +11,8 @@ if (!function_exists('shortcode_close_icon')) {
 					'dismiss' => 'alert'
 				), $atts));
 		
-		 $output = '<a class="close" href="#" data-dismiss="'.$dismiss.'">&times;</a>';
-		 return $output;
+		$output = '<a class="close" href="#" data-dismiss="'.$dismiss.'">&times;</a>';
+		return $output;
 	}
 	add_shortcode('close', 'shortcode_close_icon');
 }
@@ -25,11 +25,11 @@ if (!function_exists('shortcode_well')) {
 					'size' => 'normal'
 				), $atts));
 		
-		 $output = '<div class="well '.$size.'">';
-		 $output .= do_shortcode($content);
-		 $output .= '</div>';
-		 
-		 return $output;
+		$output = '<div class="well '.$size.'">';
+		$output .= do_shortcode($content);
+		$output .= '</div>';
+		
+		return $output;
 	}
 	add_shortcode('well', 'shortcode_well');
 }
@@ -59,7 +59,7 @@ if (!function_exists('title_shortcode')) {
 		$output =  '<div class="title-box clearfix '.$custom_class.'">';
 
 		if ($icon!="") {
-			$icon_url = CHERRY_PLUGIN_URL . 'includes/assets/images/' . strtolower($icon) . '.png' ;
+			$icon_url = CHERRY_PLUGIN_URL . 'includes/images/' . strtolower($icon) . '.png' ;
 			if( defined ('CHILD_DIR') ) {
 				if(file_exists(CHILD_DIR.'/images/'.strtolower($icon).'.png')){
 					$icon_url = CHILD_URL.'/images/'.strtolower($icon).'.png';
@@ -69,19 +69,19 @@ if (!function_exists('title_shortcode')) {
 			$output .= '<img src="'.$icon_url.'" alt="" />';
 			$output .= '</span>';
 		}
-	 
+	
 			$output .= '<h2 class="title-box_primary">';
 			$output .= $title;
 			$output .= '</h2>';
-	 
+	
 		if ($subtitle!="") {
 			$output .= '<h3 class="title-box_secondary">';
 			$output .= $subtitle;
 			$output .= '</h3>';
 		}
-	 
+	
 			$output .= '</div><!-- //.title-box -->';
-	 
+	
 			return $output;
 	} 
 	add_shortcode('title_box', 'title_shortcode');
@@ -110,22 +110,21 @@ if (!function_exists('shortcode_site_map')) {
 		foreach( $post_types as $post_type ) {
 			if(!empty($post_type)){
 				$output .= ($span_counter==0 && $type!='line') ? '<div class="'.$wrapp_class.'">' : '' ;
-				//var_dump($post_type);
-			   	$pt = get_post_type_object( $post_type );
-			  	$output .= '<div class="'.$item_class.'"><h2>'.$pt->labels->name.'</h2><ul>';
+				$pt = get_post_type_object( $post_type );
+				$output .= '<div class="'.$item_class.'"><h2>'.$pt->labels->name.'</h2><ul>';
 
-			   	query_posts('post_type='.$post_type.'&posts_per_page=-1&orderby=title&order=ASC');
-			   	if ( have_posts() ) while( have_posts() )  {
-			     	the_post();
-			     	$output .= '<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
-			   	}
+				query_posts('post_type='.$post_type.'&posts_per_page=-1&orderby=title&order=ASC');
+				if ( have_posts() ) while( have_posts() )  {
+					the_post();
+					$output .= '<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
+				}
 				wp_reset_query();
-			   	if($span_counter>2 && $type!='line'){
+				if($span_counter>2 && $type!='line'){
 					$span_counter=0;
 					$output .= '</div>';
-			   	}else{
-			   		$span_counter++;
-			   	}
+				}else{
+					$span_counter++;
+				}
 				$output .= '</ul></div>';
 			}
 		}
