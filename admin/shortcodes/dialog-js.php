@@ -400,7 +400,7 @@ var tb_dialog_helper = {
 				name = jQuery('#selected-shortcode').val(),
 				columnNum = 1,
 				rowNum = 4,
-				i;
+				i = 1;
 
 			if (name == 'chp_pricing_table') {
 				columnNum = jQuery('#shortcode-options .columns').parent().parent().find('.select_wrapper > span').html();
@@ -408,7 +408,6 @@ var tb_dialog_helper = {
 				a += '<br/><br/>';
 
 				if (labelled == 'yes') {
-					i=2;
 					a += '[chp_pricing_column_label title="Features"]<br/>';
 					for(var n=1;n<=rowNum;n++) {
 						if (n % 2 == 0) {
@@ -418,8 +417,6 @@ var tb_dialog_helper = {
 						}
 					}
 					a += '[/chp_pricing_column_label]<br/><br/>';
-				} else {
-					i=1;
 				}
 
 				for(;i<=columnNum;i++) {
