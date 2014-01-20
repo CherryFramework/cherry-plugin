@@ -2,6 +2,14 @@
 	include_once (CHERRY_PLUGIN_DIR . 'admin/plugin-admin-script.php');
 	include_once (CHERRY_PLUGIN_DIR . 'admin/plugin-components.php');
 	include_once (CHERRY_PLUGIN_DIR . 'admin/plugin-pages.php');
+	include_once (CHERRY_PLUGIN_DIR . 'admin/plugin-function.php');
+
+	//xml parser class
+	include_once (CHERRY_PLUGIN_DIR . 'lib/php/parsers.php');
+
+	//import ajax function
+	include_once (CHERRY_PLUGIN_DIR . 'admin/import-export/import-functions.php');
+	include_once (CHERRY_PLUGIN_DIR . 'admin/import-export/export-functions.php');
 
 	//Shortcodes tinyMCE includes
 	include_once (CHERRY_PLUGIN_DIR . 'admin/shortcodes/tinymce-shortcodes.php');

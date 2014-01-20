@@ -1,106 +1,125 @@
-<p><?php _e('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo
-lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec
-mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam
-mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque
-laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo
-lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec
-mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam
-mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque
-laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.', CHERRY_PLUGIN_DOMAIN); ?></p>
-<?php
-	/**
-	 * Check server settings
-	 */
-	// correct settings for server
-	$must_settings = array(
-		'safe_mode'           => 'on',
-		'file_uploads'        => 'off',
-		'memory_limit'        => 200000,
-		'post_max_size'       => 500,
-		'upload_max_filesize' => 400,
-		'max_input_time'      => 60000,
-		'max_execution_time'  => 30000
-	);
+<?php 
+	do_action( 'cherry_plugin_pre_import' );
+	wp_enqueue_script('cherry-plugin-import', CHERRY_PLUGIN_URL.'admin/js/import.js', array('jquery'), '0.1', true);
 
-	/*$must_settings = array(
-		'safe_mode'           => 'off',
-		'file_uploads'        => 'on',
-		'memory_limit'        => 128,
-		'post_max_size'       => 8,
-		'upload_max_filesize' => 8,
-		'max_input_time'      => 60,
-		'max_execution_time'  => 30
-	);*/
+	$upload_size_unit = $max_upload_size = wp_max_upload_size();
+	$byte_sizes = array( 'KB', 'MB', 'GB' );
 
-	// curret server settings
-	$current_settings = array();
-
-	//result array
-	$result = array();
-
-	if ( ini_get('safe_mode') ) $current_settings['safe_mode'] = 'on';
-		else $current_settings['safe_mode'] = 'off';
-	if ( ini_get('file_uploads') ) $current_settings['file_uploads'] = 'on';
-		else $current_settings['file_uploads'] = 'off';
-	$current_settings['memory_limit'] = (int)ini_get('memory_limit');
-	$current_settings['post_max_size'] = (int)ini_get('post_max_size');
-	$current_settings['upload_max_filesize'] = (int)ini_get('upload_max_filesize');
-	$current_settings['max_input_time'] = (int)ini_get('max_input_time');
-	$current_settings['max_execution_time'] = (int)ini_get('max_execution_time');
-
-	$diff = array_diff_assoc($must_settings, $current_settings);
-
-	if ( strcmp($must_settings["safe_mode"], $current_settings["safe_mode"]) )
-		$result["safe_mode"] = $must_settings["safe_mode"];
-	if ( strcmp($must_settings["file_uploads"], $current_settings["file_uploads"]) )
-		$result["file_uploads"] = $must_settings["file_uploads"];
-
-	foreach ($diff as $key => $value) {
-		if ( $current_settings[$key] < $value ) {
-			$result[$key] = $value;
-		}
-	}
-	if ( !empty($result) ) {
-		echo '<h3>Server Settings</h3><hr>';
-		echo "<h4 class='title'>" . __('Some of your server settings do not meet the requirements for installing the sample data. Please, consult with your hosting provider on how to increase the required values.', CHERRY_PLUGIN_DOMAIN) . "</h4>";
-		echo "<table width='100%' border='0' cellspacing='0' cellpadding='4' style='border-radius:3px; border-collapse: collapse; margin-bottom:10px;'>";
-		echo "<thead><tr border='0' align='center' bgcolor='#87c1ee' style='color:#fff;'>";
-		echo "<th style='border:1px solid #87c1ee;'>" . __('Server Settings', CHERRY_PLUGIN_DOMAIN) . "</th>";
-		echo "<th style='border:1px solid #87c1ee;'>" . __('Current', CHERRY_PLUGIN_DOMAIN) . "</th>";
-		echo "<th style='border:1px solid #87c1ee;'>" . __('Required', CHERRY_PLUGIN_DOMAIN) . "</th>";
-		echo "</tr></thead>";
-		echo "<tbody>";
-		$count = 0;
-		foreach ($result as $key => $value) {
-			$units = '';
-			if ( $key=='memory_limit' || $key=='post_max_size' || $key=='upload_max_filesize' ) {
-				$units = ' (Mb)';
-			}
-			if ( $key=='max_input_time' || $key=='max_execution_time' ) {
-				$units = ' (s)';
-			}
-			echo "<tr>";
-			echo "<td style='border:1px solid #9BCDF1;'>" . $key . $units . "</td>";
-			echo "<td align='center' style='color:#BD362F; border:1px solid #9BCDF1;'>" . $current_settings[$key] . "</td>";
-			echo "<td align='center' style='border:1px solid #9BCDF1;'>" . $must_settings[$key] . "</td>";
-			$count++;
-			if ( $count == 3 ) {
-				echo "</tr>";
-			}
-		}
-		echo "</tbody>";
-		echo "</table>";
-		//echo "<div class='note'><p><strong>" . __('NOTE', CHERRY_PLUGIN_DOMAIN) . ": </strong>" . __('if for some reason those settings can not be adjusted, you may install the sample data using an <strong>alternative method</strong> - importing the <strong>.sql</strong> file directly into the database. Refer to the template documentation for instructions.', CHERRY_PLUGIN_DOMAIN) . "</p>" . __('You can proceed with the template installation without updating server settings, however in this case you can get errors or only part of your content will be loaded.', CHERRY_PLUGIN_DOMAIN) . "</div>";
-		//echo "<p class='text-style'>" . theme_locals('template_installation') . "</p>";
-
-		$href = '#';
-		$class = 'not_active';
-	}else{
-		$href = 'admin.php?page=import-page&amp;step=1';
-		$class = '';
+	for ( $u = -1; $upload_size_unit > 1024 && $u < count( $byte_sizes ) - 1; $u++ ) {
+		$upload_size_unit /= 1024;
 	}
 
-	echo '<a class="button button-primary '.$class.' buttin-left" href="'.$href.'">'.__('Next', CHERRY_PLUGIN_DOMAIN).'</a>';
-	do_action('check_shop_activation');
+	if ( $u < 0 ) {
+		$upload_size_unit = 0;
+		$u = 0;
+	} else {
+		$upload_size_unit = (int) $upload_size_unit;
+	}
+	$upload_dir = wp_upload_dir();
+	$upload_dir = $upload_dir['path'].'/';
+	$action_url = CHERRY_PLUGIN_URL.'admin/import-export/upload.php?upload_dir='.str_replace("\\", "/", $upload_dir);
+
+	echo cherry_plugin_help_import_popup();
 ?>
+<script type="text/javascript">
+	var import_text = new Array(),
+		action_url = '<?php echo $action_url ?>',
+		max_file_size = <?php echo wp_max_upload_size(); ?>,
+		step_href = 'admin.php?page=import-page&step=2';
+
+		import_text['error_upload']		= '<?php _e( "Upload Error", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['error_size']		= '<?php _e( "The file is too big!", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['error_type']		= '<?php _e( "The file type is error!", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['error_folder']		= '<?php _e( "Folder cannot be uploaded!", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['uploading']		= '<?php _e( "Uploading", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['upload']			= '<?php _e( "Upload", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['upload_complete']	= '<?php _e( "Upload Complete", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['item']				= '<?php _e( "item", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['items']			= '<?php _e( "items", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['uploaded_status_text']= '<?php _e( "Sample data installing. Some steps may take some time depending on your server settings. Please please be patient.", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['uploaded_status_text_1']= '<?php _e( "Upload complete please click Continue Install button to proceed.", CHERRY_PLUGIN_DOMAIN) ?>';
+		//xml status text
+		import_text['import_xml']= '<?php _e( "Importing XML", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['import_categories']= '<?php _e( "Importing categories", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['import_tags']= '<?php _e( "Importing tags", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['process_terms']= '<?php _e( "Processing dependencies", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['import_posts']= '<?php _e( "Importing posts", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['import_menu_item']= '<?php _e( "Importing menu items", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['import_attachment']= '<?php _e( "Importing media library", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['import_parents']= '<?php _e( "Generating content hierarchy", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['update_featured_images']= '<?php _e( "Updating featured images", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['update_attachment']= '<?php _e( "Updating attachments", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['import_json']= '<?php _e( "Importing JSON", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['import_complete']= '<?php _e( "Installing content complete", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['instal_error']= '<?php _e( "Installing content error", CHERRY_PLUGIN_DOMAIN) ?>';
+</script>
+<!-- drag drop form -->
+<form enctype="multipart/form-data" method="post" action="<?php echo $action_url ?>" id="upload_files">
+		<div id="area-drag-drop">
+			<div class="drag-drop-inside">
+				<p class="drag-drop-info"><?php _e('Please Drop all needed files here <br> to import sample data', CHERRY_PLUGIN_DOMAIN); ?></p>
+				<p><?php _e('or', CHERRY_PLUGIN_DOMAIN); ?></p>
+				<p class="drag-drop-buttons">
+					<input class="uplupload-files" type="button" value="<?php _e('Browse local files', CHERRY_PLUGIN_DOMAIN); ?>" class="button" >
+					<input id="upload_files_html5" style="visibility: hidden; width: 0; height: 0; overflow: hidden; margin:0;" type="file" multiple>
+				</p>
+				<p class="max-upload-size"><?php printf( __( 'Maximum upload file size: %d %s.', CHERRY_PLUGIN_DOMAIN), esc_html($upload_size_unit), esc_html($byte_sizes[$u]) ); ?></p>
+				<p id="import-demo-video">
+					<a href="#TB_inline?width=600&height=510&inlineId=help_import" class="thickbox" title="<?php _e('Files Import demo', CHERRY_PLUGIN_DOMAIN); ?>">
+						<?php _e('View Demo', CHERRY_PLUGIN_DOMAIN); ?> 
+						<i class="icon-facetime-video"></i>
+					</a>
+				</p>
+			</div>
+		</div>
+</form>
+<!-- end drag drop form -->
+<div id="import_step_2" class="hidden_ell">
+<!-- file_list -->
+	<div id="file_list_holder">
+		<div id="file_list">
+			<div id="file_list_header">
+				<div class='row'>
+					<div class="column_1"><?php _e( "File name", CHERRY_PLUGIN_DOMAIN) ?></div><div class="column_2"><?php _e( "File size", CHERRY_PLUGIN_DOMAIN) ?></div><div class="column_3"><?php _e('Uploaded file:', CHERRY_PLUGIN_DOMAIN); ?> <span id="upload_counter"><b>0</b></span> <span class="items_name"><?php _e( "item", CHERRY_PLUGIN_DOMAIN) ?></span></div>
+				</div>
+			</div>
+			<div id="file_list_body"></div>
+		</div>
+	</div>
+<!-- end file_list -->
+<!-- log -->
+	<div id="import_xml_status" class="hidden_ell">
+		<div id="status_log">
+			<p><i class ="spinner"></i><?php _e('Installing content started.', CHERRY_PLUGIN_DOMAIN); ?></p>
+		</div>
+	</div>
+<!--end log -->
+	<div id="import_status" class="clearfix">
+		<div id='upload_status'>
+			<div style="text-align: right; margin: 0 10px 3px 0;"><?php _e('Upload', CHERRY_PLUGIN_DOMAIN); ?></div>
+			<div class="loader_bar"><span class='transition_2'></span></div>
+		</div>
+		<div id='import_data' class="clearfix">
+			<div  style="margin: 0 0 3px 10px;"><?php _e('Install', CHERRY_PLUGIN_DOMAIN); ?></div>
+			<div class="loader_bar"><span class='transition'></span></div>
+		</div>
+		<div id="info_holder" class="hidden_ell">
+			<p>
+				<span class="upload_status_text"><?php _e( "Files successfully uploaded. Please make sure you have uploaded <b>.JSON</b> and <b>.XML</b> files to install theme sample data.", CHERRY_PLUGIN_DOMAIN) ?><a href="http://info.template-help.com/help/quick-start-guide/wordpress-themes/master/index_en.html#theme_sample_data" target="_blank" id="info_link"><i class="icon-info-sign"></i></a></span>
+				<br>
+				<a class="uplupload-files" href="#"><?php _e('Add More Files', CHERRY_PLUGIN_DOMAIN); ?></a>
+			</p>
+			<a class="button button-primary not_active next_step" href="#"><?php _e('Continue Install', CHERRY_PLUGIN_DOMAIN); ?></a><span id="not_load_file" class="hidden_ell"><?php _e('Missing .XML or .JSON file', CHERRY_PLUGIN_DOMAIN); ?></span>
+		</div>
+	</div>
+</div>
+<div id="import_step_3" class="hidden_ell">
+	<div class="clearfix">
+		<h2 id="import_title"><?php _e('Congratulations', CHERRY_PLUGIN_DOMAIN); ?></h2>
+		<span id="import_description"><?php _e('Content has been installed successfully', CHERRY_PLUGIN_DOMAIN); ?></span>
+		<div id="import_links">
+			<a href="<?php echo home_url(); ?>" target="_blank"><?php _e('View your site', CHERRY_PLUGIN_DOMAIN); ?></a> <?php _e('or', CHERRY_PLUGIN_DOMAIN); ?>
+			<a href="<?php echo bloginfo( 'wpurl' ).'/wp-admin/admin.php?page=options-framework'; ?>"><?php _e('go to Cherry Options', CHERRY_PLUGIN_DOMAIN); ?></a>
+		</div>
+	</div>
+</div>
