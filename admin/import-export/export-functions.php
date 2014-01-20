@@ -2,11 +2,10 @@
 	include_once (ABSPATH . '/wp-admin/includes/class-pclzip.php');
 	require_once(ABSPATH . 'wp-admin/includes/dashboard.php');
 	require('includes/export.php');
-	add_action('wp_ajax_not_supported_browser', 'wp_dashboard_browser_nag');
 
 	add_action('wp_ajax_export_content', 'cherry_plugin_export_content');
 	function cherry_plugin_export_content() {
-		$exclude_files = array('xml','json');
+		$exclude_files = array('xml', 'json');
 		$exclude_folder = array();
 		$response = array(
 			'what'=>'status',
@@ -66,7 +65,7 @@
 		$xml = iconv('utf-8', 'utf-8//IGNORE', $xml);
 		$xml = preg_replace('/[^\x{0009}\x{000a}\x{000d}\x{0020}-\x{D7FF}\x{E000}-\x{FFFD}]+/u', '', $xml);
 
-		$xml_dir = UPLOAD_BASE_DIR.'/sample_data.xml';
+		$xml_dir = UPLOAD_BASE_DIR.'sample_data.xml';
 		file_put_contents($xml_dir, $xml);
 
 		return $xml_dir;

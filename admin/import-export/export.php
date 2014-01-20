@@ -7,7 +7,7 @@
 			button.off('click').addClass('not_active').next('.spinner').css({'display':'block'});
 
 			jQuery.post(ajaxurl, {action: 'export_content'}, function(response) {
-				var res = wpAjax.parseAjaxResponse(response, 'ajax-response');
+				var res = wpAjax.parseAjaxResponse(response, "ajax-response");
 				if(!res.errors){
 					var file = res.responses[1].data,
 						status = res.responses[0].data;
