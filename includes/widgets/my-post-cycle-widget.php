@@ -232,21 +232,6 @@ class MY_CycleWidget extends WP_Widget {
 
 	<p><label for="<?php echo $this->get_field_id('thumb_height'); ?>"><?php _e('Thumbnail Height (in pixels):', CHERRY_PLUGIN_DOMAIN); ?><input class="widefat" style="width:60px; display:block; text-align:center" id="<?php echo $this->get_field_id('thumb_height'); ?>" name="<?php echo $this->get_field_name('thumb_height'); ?>" type="number" value="<?php echo $thumb_height; ?>" /></label></p>
 
-	<?php
-		// Get a list of all terms in a taxonomy
-		$terms = get_terms( "portfolio_category", array(
-			'hide_empty' => 0,
-		) );
-		$locations = array();
-		if ( count($terms) > 0 ):
-			foreach ( $terms as $term )
-				$locations[] = $term->name;
-
-			$locations_str = implode(', ', $locations);
-		endif;
-		// var_dump($locations_str);
-	?>
-
 	<p><label for="<?php echo $this->get_field_id('show_title'); ?>"><?php _e('Show titles:', CHERRY_PLUGIN_DOMAIN); ?><br />
 		<select id="<?php echo $this->get_field_id('show_title'); ?>" name="<?php echo $this->get_field_name('show_title'); ?>" style="width:100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" >
 			<?php
