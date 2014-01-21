@@ -73,13 +73,15 @@
 			foreach ( $widget_value as $widget_key => $widget_value ) {
 				// fix for nav_menu widget
 				if ( $widget_title == 'nav_menu' ) {
-					if ( array_key_exists('nav_menu_slug', $widget_data[$widget_title][$widget_key]) ) {
-						$nav_menu_slug = $widget_data[$widget_title][$widget_key]['nav_menu_slug'];
+					if(is_array($widget_data[$widget_title][$widget_key])){
+						if ( array_key_exists('nav_menu_slug', $widget_data[$widget_title][$widget_key]) ) {
+							$nav_menu_slug = $widget_data[$widget_title][$widget_key]['nav_menu_slug'];
 
-						$term_id = term_exists( $nav_menu_slug, 'nav_menu' );
-						if ( $term_id ) {
-							if ( is_array($term_id) ) $term_id = $term_id['term_id'];
-							$widget_data['nav_menu'][$widget_key]['nav_menu'] = $term_id;
+							$term_id = term_exists( $nav_menu_slug, 'nav_menu' );
+							if ( $term_id ) {
+								if ( is_array($term_id) ) $term_id = $term_id['term_id'];
+								$widget_data['nav_menu'][$widget_key]['nav_menu'] = $term_id;
+							}
 						}
 					}
 				}
