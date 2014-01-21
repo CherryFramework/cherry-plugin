@@ -25,7 +25,7 @@
 			$plugin_menu_title = __('Cherry plugin', CHERRY_PLUGIN_DOMAIN);
 			add_menu_page($plugin_menu_title, $plugin_menu_title, $capability, $cherry_plugin_menu, 'cherry_plugin_main_page', 'none', 62);
 
-			$main_page_menu_title = __('Description', CHERRY_PLUGIN_DOMAIN);
+			$main_page_menu_title = __('Summary', CHERRY_PLUGIN_DOMAIN);
 			add_submenu_page($cherry_plugin_menu, $main_page_menu_title, $main_page_menu_title, $capability, 'plugin-main-page', 'cherry_plugin_main_page');
 
 			$import_menu_title = __('Import Content', CHERRY_PLUGIN_DOMAIN);
