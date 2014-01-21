@@ -567,6 +567,9 @@
 		$posts_array = $_SESSION['posts'];
 		$posts_array = apply_filters( 'wp_import_posts', $posts_array );
 
+		unregister_nav_menu('Header Menu');
+		unregister_nav_menu('Footer Menu');
+
 		foreach ( $posts_array as $post ) {
 			$post = apply_filters( 'wp_import_post_data_raw', $post );
 			if ( 'nav_menu_item' == $post['post_type'] ) {

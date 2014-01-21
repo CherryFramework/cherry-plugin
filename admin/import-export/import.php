@@ -19,6 +19,7 @@
 	$upload_dir = $upload_dir['path'].'/';
 	$action_url = CHERRY_PLUGIN_URL.'admin/import-export/upload.php?upload_dir='.str_replace("\\", "/", $upload_dir);
 
+	add_thickbox();
 	echo cherry_plugin_help_import_popup();
 ?>
 <script type="text/javascript">
@@ -43,9 +44,9 @@
 		import_text['import_categories']= '<?php _e( "Importing categories", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['import_tags']= '<?php _e( "Importing tags", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['process_terms']= '<?php _e( "Processing dependencies", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['import_posts']= '<?php _e( "Importing posts", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['import_menu_item']= '<?php _e( "Importing menu items", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['import_attachment']= '<?php _e( "Importing media library", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['import_posts']= '<?php _e( "Importing posts. This may take some time. Please wait.", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['import_menu_item']= '<?php _e( "Importing menu items. This may take some time. Please wait.", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['import_attachment']= '<?php _e( "Importing media library. This may take some time. Please wait.", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['import_parents']= '<?php _e( "Generating content hierarchy", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['update_featured_images']= '<?php _e( "Updating featured images", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['update_attachment']= '<?php _e( "Updating attachments", CHERRY_PLUGIN_DOMAIN) ?>';
@@ -53,25 +54,28 @@
 		import_text['import_complete']= '<?php _e( "Installing content complete", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['instal_error']= '<?php _e( "Installing content error", CHERRY_PLUGIN_DOMAIN) ?>';
 </script>
+<div id="importing_warning" class="error">
+	<p><b><?php _e('Warning!', CHERRY_PLUGIN_DOMAIN); ?></b> <?php _e('Installing sample data will replace your website content. Please make sure to backup your website data before importing content.', CHERRY_PLUGIN_DOMAIN); ?></p>
+</div>
 <!-- drag drop form -->
 <form enctype="multipart/form-data" method="post" action="<?php echo $action_url ?>" id="upload_files">
-		<div id="area-drag-drop">
-			<div class="drag-drop-inside">
-				<p class="drag-drop-info"><?php _e('Please Drop all needed files here <br> to import sample data', CHERRY_PLUGIN_DOMAIN); ?></p>
-				<p><?php _e('or', CHERRY_PLUGIN_DOMAIN); ?></p>
-				<p class="drag-drop-buttons">
-					<input class="uplupload-files" type="button" value="<?php _e('Browse local files', CHERRY_PLUGIN_DOMAIN); ?>" class="button" >
-					<input id="upload_files_html5" style="visibility: hidden; width: 0; height: 0; overflow: hidden; margin:0;" type="file" multiple>
-				</p>
-				<p class="max-upload-size"><?php printf( __( 'Maximum upload file size: %d %s.', CHERRY_PLUGIN_DOMAIN), esc_html($upload_size_unit), esc_html($byte_sizes[$u]) ); ?></p>
-				<p id="import-demo-video">
-					<a href="#TB_inline?width=600&height=510&inlineId=help_import" class="thickbox" title="<?php _e('Files Import demo', CHERRY_PLUGIN_DOMAIN); ?>">
-						<?php _e('View Demo', CHERRY_PLUGIN_DOMAIN); ?> 
-						<i class="icon-facetime-video"></i>
-					</a>
-				</p>
-			</div>
+	<div id="area-drag-drop">
+		<div class="drag-drop-inside">
+			<p class="drag-drop-info"><?php _e('Please Drop all needed files here <br> to import sample data', CHERRY_PLUGIN_DOMAIN); ?></p>
+			<p><?php _e('or', CHERRY_PLUGIN_DOMAIN); ?></p>
+			<p class="drag-drop-buttons">
+				<input class="uplupload-files" type="button" value="<?php _e('Browse local files', CHERRY_PLUGIN_DOMAIN); ?>" class="button" >
+				<input id="upload_files_html5" style="visibility: hidden; width: 0; height: 0; overflow: hidden; margin:0;" type="file" multiple>
+			</p>
+			<p class="max-upload-size"><?php printf( __( 'Maximum upload file size: %d %s.', CHERRY_PLUGIN_DOMAIN), esc_html($upload_size_unit), esc_html($byte_sizes[$u]) ); ?></p>
+			<p id="import-demo-video">
+				<a href="#TB_inline?width=600&height=505&inlineId=help_import" class="thickbox" title="<?php _e('Files Import demo', CHERRY_PLUGIN_DOMAIN); ?>">
+					<?php _e('View Demo', CHERRY_PLUGIN_DOMAIN); ?> 
+					<i class="icon-facetime-video"></i>
+				</a>
+			</p>
 		</div>
+	</div>
 </form>
 <!-- end drag drop form -->
 <div id="import_step_2" class="hidden_ell">

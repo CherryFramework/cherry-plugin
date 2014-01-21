@@ -33,8 +33,9 @@ $plugin_url = CHERRY_PLUGIN_URL.'/includes/shortcodes/';
 		<input type="button" id="insert-button" class="button-primary alignright" name="insert" value="<?php _e('Insert Shortcode', CHERRY_PLUGIN_DOMAIN) ?>" accesskey="I" />
 		<div class="clear"></div>
 	</div>
-	<script type="text/javascript" src="<?php echo CHERRY_PLUGIN_URL ?>admin/shortcodes/dialog-js.php"></script>
+	<?php
+		include_once( CHERRY_PLUGIN_DIR.'admin/shortcodes/dialog-js.php' );
+	?>
 </div><!-- #dialog (end) -->
-
 </body>
 </html>

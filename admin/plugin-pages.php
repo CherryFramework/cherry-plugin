@@ -8,22 +8,22 @@
 			add_thickbox();
 			?>
 
-			<p><?php _e( 'Since version 3.0.1 of CherryFramework shortcodes, widgets and import/export options have been moved to CherryPlugin. It is installed automatically on CherryFramework installation and is required for the framework correct work. ', CHERRY_PLUGIN_DOMAIN); ?></p><br>
+			<p><?php _e( 'Cherry Plugin has been released with intention to separate widgets, shortcodes and data management logics with theme editor options. Cherry Plugin is installed automatically on CherryFramework installation and is required for the correct work of CherryFramework.  ', CHERRY_PLUGIN_DOMAIN); ?></p><br>
 				<div class="cols cols-2">
 					<div class="col">
-					<div class="plugin-option">
-						<a href="#TB_inline?width=640&height=480&inlineId=help_import" class="demo-vid thickbox" title="<?php _e('Files Import demo', CHERRY_PLUGIN_DOMAIN); ?>"><i class="icon-facetime-video"></i></a>
-						<div class="thumb-icon">
-							<i class="icon-download-alt"></i>
-						</div>
-						<h4><a href="?page=import-page"><?php _e('Import', CHERRY_PLUGIN_DOMAIN); ?></a></h4>
-						<p><small><?php _e('Option to import website content from the backup. Select all files from the backup archive and drag them to the upload files area to start uploading.', CHERRY_PLUGIN_DOMAIN); ?></small></p>
+						<div class="plugin-option">
+							<a href="#TB_inline?width=600&height=505&inlineId=help_import" class="demo-vid thickbox" title="<?php _e('Files Import demo', CHERRY_PLUGIN_DOMAIN); ?>"><i class="icon-facetime-video"></i></a>
+							<div class="thumb-icon">
+								<i class="icon-download-alt"></i>
+							</div>
+							<h4><a href="?page=import-page"><?php _e('Import', CHERRY_PLUGIN_DOMAIN); ?></a></h4>
+							<p><small><?php _e('Option to import website content from the backup. Select all files from the backup archive and drag them to the upload files area to start uploading.', CHERRY_PLUGIN_DOMAIN); ?></small></p>
 						</div>
 					</div>
 
 					<div class="col">
 						<div class="plugin-option">
-							<a href="#TB_inline?width=600&height=510&inlineId=help_export" class="demo-vid thickbox" title="<?php _e('Files Export demo', CHERRY_PLUGIN_DOMAIN); ?>"><i class="icon-facetime-video"></i></a>
+							<a href="#TB_inline?width=600&height=505&inlineId=help_export" class="demo-vid thickbox" title="<?php _e('Files Export demo', CHERRY_PLUGIN_DOMAIN); ?>"><i class="icon-facetime-video"></i></a>
 							<div class="thumb-icon">
 								<i class="icon-upload-alt"></i>
 							</div>
@@ -31,6 +31,29 @@
 							<p><small><?php _e('Option to backup your website data creating a downloadable archive. Use this option to keep your website data on performing some serious modifications or moving website to other hosting.', CHERRY_PLUGIN_DOMAIN); ?></small></p>
 						</div>
 				</div>
+			</div>
+			<div class="cols cols-2">
+
+				<div class="col">
+					<div class="plugin-option">
+						<div class="thumb-icon">
+							<i class="icon-puzzle-piece"></i>
+						</div>
+						<h4><a href="widgets.php"><?php _e('Widgets', CHERRY_PLUGIN_DOMAIN); ?></a></h4>
+						<p><small>Cherry Widgets offer additional ways to place content to widget areas. Several available widget will allow you to add more functionality to your website.</small></p>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="plugin-option">
+						<div class="thumb-icon">
+							<i class="icon-th-large"></i>
+						</div>
+						<h4><?php _e('Shortcodes', CHERRY_PLUGIN_DOMAIN); ?></h4>
+						<p><small>Cherry Plugin adds various widgets to the post editor. Shortcodes allow to create various content structures in WordPress posts. Use "Insert Shortcode" icon in post editor toolbar to add shortcodes. <a href="//info.template-help.com/help/quick-start-guide/wordpress-themes/master/index_en.html#shortcodes" target="_blank">Learn more</a></small></p>
+					</div>
+				</div>
+
 			</div>
 			<?php
 			echo cherry_plugin_help_import_popup();

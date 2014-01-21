@@ -29,6 +29,9 @@ hr{
 	-webkit-transition:all 0.5s ease-out;
 	transition:all 0.5s ease-out;
 }
+.pointer_events{
+	pointer-events: none;
+}
 .clearfix { *zoom:1; }
 .clearfix:before, .clearfix:after {
 	display:table;
@@ -37,7 +40,7 @@ hr{
 }
 .clearfix:after { clear:both; }
 #toplevel_page_cherry-plugin-page div.wp-menu-image:before{
-	color: #BB2222;
+	color: #B22 !important;
 	display: inline;
 	width: auto;
 	height: auto;

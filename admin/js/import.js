@@ -26,10 +26,14 @@ jQuery(document).ready(function() {
 			return false;
 		});
 		upload_button.on('click', function (){
+			drop_zone.addClass('pointer_events');
 			upload_files_html5.click();
 		});
 		upload_files_html5.on('change', function(){
 			get_file_list(jQuery(this)[0].files);
+		})
+		jQuery("form#upload_files").on('mouseenter', function(){
+			drop_zone.removeClass('pointer_events');
 		})
 
 	}
@@ -149,6 +153,7 @@ jQuery(document).ready(function() {
 				jQuery('#info_holder').find('.uplupload-files').addClass('hidden_ell');
 				jQuery('#import_xml_status').removeClass('hidden_ell');
 				jQuery('#file_list_holder').addClass('hidden_ell');
+				jQuery('#importing_warning').addClass('hidden_ell');
 				jQuery(this).off('click').addClass('hidden_ell');
 				return false;
 			});
