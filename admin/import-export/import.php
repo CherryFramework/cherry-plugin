@@ -56,6 +56,9 @@
 </script>
 <!-- drag drop form -->
 <form enctype="multipart/form-data" method="post" action="<?php echo $action_url ?>" id="upload_files">
+		<div class="error">
+			<p><b>Warning!</b> Installing sample data will replace your website content. Please make sure to backup your website data before importing content.</p>
+		</div>
 		<div id="area-drag-drop">
 			<div class="drag-drop-inside">
 				<p class="drag-drop-info"><?php _e('Please Drop all needed files here <br> to import sample data', CHERRY_PLUGIN_DOMAIN); ?></p>
