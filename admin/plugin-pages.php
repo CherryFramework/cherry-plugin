@@ -12,7 +12,7 @@
 				<div class="cols cols-2">
 					<div class="col">
 					<div class="plugin-option">
-						<a href="#TB_inline?width=600&height=510&inlineId=help_import" class="demo-vid thickbox" title="<?php _e('Files Import demo', CHERRY_PLUGIN_DOMAIN); ?>"><i class="icon-facetime-video"></i></a>
+						<a href="#TB_inline?width=640&height=480&inlineId=help_import" class="demo-vid thickbox" title="<?php _e('Files Import demo', CHERRY_PLUGIN_DOMAIN); ?>"><i class="icon-facetime-video"></i></a>
 						<div class="thumb-icon">
 							<i class="icon-download-alt"></i>
 						</div>

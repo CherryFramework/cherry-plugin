@@ -36,7 +36,7 @@
 		import_text['upload_complete']	= '<?php _e( "Upload Complete", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['item']				= '<?php _e( "item", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['items']			= '<?php _e( "items", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['uploaded_status_text']= '<?php _e( "Sample data installing. Some steps may take some time depending on your server settings. Please please be patient.", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['uploaded_status_text']= '<?php _e( "Sample data installing. Some steps may take some time depending on your server settings. Please be patient.", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['uploaded_status_text_1']= '<?php _e( "Upload complete please click Continue Install button to proceed.", CHERRY_PLUGIN_DOMAIN) ?>';
 		//xml status text
 		import_text['import_xml']= '<?php _e( "Importing XML", CHERRY_PLUGIN_DOMAIN) ?>';
