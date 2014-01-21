@@ -755,10 +755,8 @@ require_once( $wp_url.'/wp-load.php' );
 								jQuery("body").append(b);
 								jQuery("#dialog").hide();
 								var f=jQuery(window).width();
-								b=jQuery(window).height();
-								f=720<f?720:f;
-								f-=80;
-								b-=84;
+								b=jQuery(window).height()-116;
+								f=720<f?640:f-80;
 
 							tb_show("Insert "+ myThemeSelectedShortcodeTitle +" Shortcode", "#TB_inline?width="+f+"&height="+b+"&inlineId=dialog");jQuery("#shortcode-options h3:first").text(""+c.title+" Shortcode Settings");
 

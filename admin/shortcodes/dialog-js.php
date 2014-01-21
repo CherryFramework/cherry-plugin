@@ -1,5 +1,5 @@
 <?php
-header("Content-Type:text/javascript");
+//eader("Content-Type:text/javascript");
 
 //Setup URL to WordPres
 $absolute_path = __FILE__;
@@ -14,14 +14,9 @@ $path_to_wp = explode( 'wp-content', dirname(__FILE__) );
 $plugin_path = trailingslashit( '../wp-content' . substr( $path_to_wp[1], 0, -3 ) );
 
 //URL to TinyMCE plugin folder
-$plugin_url = CHERRY_PLUGIN_URL.'admin/shortcodes/';
-
 ?>
-
-var framework_url = '<?php echo dirname( __FILE__ ); ?>';
-
-var shortcode_generator_path = '<?php echo $plugin_path; ?>';
-var shortcode_generator_url = '<?php echo $plugin_url; ?>';
+<script>
+var shortcode_generator_url = "<?php echo CHERRY_PLUGIN_URL.'admin/shortcodes/' ?>";
 
 var tb_dialog_helper = {
 
@@ -492,3 +487,4 @@ var tb_dialog_helper = {
 
 tb_dialog_helper.setUpButtons();
 tb_dialog_helper.loadShortcodeDetails();
+</script>

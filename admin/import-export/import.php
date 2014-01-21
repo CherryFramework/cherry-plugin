@@ -19,6 +19,7 @@
 	$upload_dir = $upload_dir['path'].'/';
 	$action_url = CHERRY_PLUGIN_URL.'admin/import-export/upload.php?upload_dir='.str_replace("\\", "/", $upload_dir);
 
+	add_thickbox();
 	echo cherry_plugin_help_import_popup();
 ?>
 <script type="text/javascript">
@@ -65,7 +66,7 @@
 				</p>
 				<p class="max-upload-size"><?php printf( __( 'Maximum upload file size: %d %s.', CHERRY_PLUGIN_DOMAIN), esc_html($upload_size_unit), esc_html($byte_sizes[$u]) ); ?></p>
 				<p id="import-demo-video">
-					<a href="#TB_inline?width=600&height=510&inlineId=help_import" class="thickbox" title="<?php _e('Files Import demo', CHERRY_PLUGIN_DOMAIN); ?>">
+					<a href="#TB_inline?width=600&height=505&inlineId=help_import" class="thickbox" title="<?php _e('Files Import demo', CHERRY_PLUGIN_DOMAIN); ?>">
 						<?php _e('View Demo', CHERRY_PLUGIN_DOMAIN); ?> 
 						<i class="icon-facetime-video"></i>
 					</a>
