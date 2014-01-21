@@ -50,7 +50,7 @@
 							<i class="icon-th-large"></i>
 						</div>
 						<h4><?php _e('Shortcodes', CHERRY_PLUGIN_DOMAIN); ?></h4>
-						<p><small>Cherry Plugin adds various widgets to the post editor. Shortcodes allow to create various content structures in WordPress posts. Use "Insert Shortcode" icon in post editor toolbar to add shortcodes. <a href="//info.template-help.com/help/quick-start-guide/wordpress-themes/master/index_en.html">Learn more</a></small></p>
+						<p><small>Cherry Plugin adds various widgets to the post editor. Shortcodes allow to create various content structures in WordPress posts. Use "Insert Shortcode" icon in post editor toolbar to add shortcodes. <a href="//info.template-help.com/help/quick-start-guide/wordpress-themes/master/index_en.html#shortcodes" target="_blank">Learn more</a></small></p>
 					</div>
 				</div>
 
