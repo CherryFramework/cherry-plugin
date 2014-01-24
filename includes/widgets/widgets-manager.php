@@ -5,10 +5,10 @@
  *
  **/
 
-// get theme name for cherry
+// get theme name
 function get_cherry_name() {
 	if (function_exists('wp_get_theme')) {
-		$theme = wp_get_theme('CherryFramework');
+		$theme = wp_get_theme();
 		if ( $theme->exists() ) {
 			$theme_name = $theme->Name;
 		}
@@ -16,6 +16,7 @@ function get_cherry_name() {
 		$theme_data = get_theme_data( get_template_directory() . '/style.css' );
 		$theme_name = $theme_data['Name'];
 	}
+	$theme_name = preg_replace("/\W/", "_", strtolower($theme_name) );
 	return $theme_name;
 }
 

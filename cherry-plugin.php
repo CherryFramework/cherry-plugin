@@ -54,6 +54,29 @@
 		add_action('init', 'cherry_plugin_init', 0);
 	};
 
+//upgrade plugin's version
+	if(!function_exists('cherry_plugin_upgrade')){
+		function cherry_plugin_upgrade() {
+			$opt = get_option( 'cherry_plugin' );
+
+			if ( ! is_array( $opt ) )
+				$opt = array();
+
+			$old_ver = isset( $opt['version'] ) ? (string) $opt['version'] : '0';
+			$new_ver = CHERRY_PLUGIN_VERSION;
+
+			if ( $old_ver == $new_ver )
+				return;
+
+			do_action( 'cherry_plugin_upgrade_ver', $new_ver, $old_ver );
+
+			$opt['version'] = $new_ver;
+
+			update_option( 'cherry_plugin', $opt );
+		}
+		add_action( 'admin_init', 'cherry_plugin_upgrade' );
+	};
+
 //activate plugin
 	if(!function_exists('cherry_plugin_activate')){
 		function cherry_plugin_activate(){
