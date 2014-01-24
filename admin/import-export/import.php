@@ -1,6 +1,7 @@
 <?php 
 	do_action( 'cherry_plugin_pre_import' );
-	wp_enqueue_script('cherry-plugin-import', CHERRY_PLUGIN_URL.'admin/js/import.js', array('jquery'), '0.1', true);
+	wp_enqueue_script('cherry-plugin-import', CHERRY_PLUGIN_URL.'admin/js/import.js', array('jquery'), '1', true);
+	wp_localize_script( 'cherry-plugin-import', 'import_ajax', array('url' => admin_url('admin-ajax.php'), 'nonce' => wp_create_nonce('import_ajax-nonce')));
 
 	$upload_size_unit = $max_upload_size = wp_max_upload_size();
 	$byte_sizes = array( 'KB', 'MB', 'GB' );
@@ -46,7 +47,9 @@
 		import_text['process_terms']= '<?php _e( "Processing dependencies", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['import_posts']= '<?php _e( "Importing posts. This may take some time. Please wait.", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['import_menu_item']= '<?php _e( "Importing menu items. This may take some time. Please wait.", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['import_attachment']= '<?php _e( "Importing media library. This may take some time. Please wait.", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['import_attachment']= '<?php _e( "Importing media library.", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['import_attachment_metadata']= '<?php _e( "Importing attachements meta.", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['generate_attachment_metadata']= '<?php _e( "Generating attachements meta. This may take some time. Please wait.", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['import_parents']= '<?php _e( "Generating content hierarchy", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['update_featured_images']= '<?php _e( "Updating featured images", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['update_attachment']= '<?php _e( "Updating attachments", CHERRY_PLUGIN_DOMAIN) ?>';

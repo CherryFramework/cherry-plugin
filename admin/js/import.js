@@ -166,22 +166,30 @@ jQuery(document).ready(function() {
 	function ajax_post(action, file){
 		var data = {
 			action: action,
-			file:file!=0 ? file : 0
+			file:file!=0 ? file : 0,
+			nonce : import_ajax.nonce
 		};
 
 		if(import_text[action]!=undefined){
 			add_text_status(action);
-			jQuery.post(ajaxurl, data, function(response) {
-				if(response=="error"){
+			jQuery.ajax({
+				url: ajaxurl,
+				data: data,
+				type:'POST',
+				success:function(response) {
+					if(response=="error"){
+						error_status();
+					}else if(loaded_XML){
+						switch_ajax_post(response);
+					}else{
+						//import complete
+						add_text_status('import_complete');
+					}
+				},
+				error:function(response) {
 					error_status();
-				}else if(loaded_XML){
-					switch_ajax_post(response);
-				}else{
-					//import complete
-					add_text_status('import_complete');
-				}
-			}).error(function(response) {
-				error_status();
+				},
+				timeout: 900000
 			});
 		}else{
 			error_status();

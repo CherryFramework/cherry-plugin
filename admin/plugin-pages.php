@@ -40,7 +40,7 @@
 							<i class="icon-puzzle-piece"></i>
 						</div>
 						<h4><a href="widgets.php"><?php _e('Widgets', CHERRY_PLUGIN_DOMAIN); ?></a></h4>
-						<p><small>Cherry Widgets offer additional ways to place content to widget areas. Several available widget will allow you to add more functionality to your website.</small></p>
+						<p><small><?php _e('Cherry Widgets offer additional ways to place content to widget areas. Several available widget will allow you to add more functionality to your website.', CHERRY_PLUGIN_DOMAIN); ?></small></p>
 					</div>
 				</div>
 
@@ -50,14 +50,13 @@
 							<i class="icon-th-large"></i>
 						</div>
 						<h4><?php _e('Shortcodes', CHERRY_PLUGIN_DOMAIN); ?></h4>
-						<p><small>Cherry Plugin adds various widgets to the post editor. Shortcodes allow to create various content structures in WordPress posts. Use "Insert Shortcode" icon in post editor toolbar to add shortcodes. <a href="//info.template-help.com/help/quick-start-guide/wordpress-themes/master/index_en.html#shortcodes" target="_blank">Learn more</a></small></p>
+						<p><small><?php _e('Cherry Plugin adds various widgets to the post editor. Shortcodes allow to create various content structures in WordPress posts. Use "Insert Shortcode" icon in post editor toolbar to add shortcodes.', CHERRY_PLUGIN_DOMAIN); ?> <a href="//info.template-help.com/help/quick-start-guide/wordpress-themes/master/index_en.html#shortcodes" target="_blank"><?php _e('Learn more', CHERRY_PLUGIN_DOMAIN); ?></a></small></p>
 					</div>
 				</div>
 
 			</div>
 			<?php
-			echo cherry_plugin_help_import_popup();
-			echo cherry_plugin_help_export_popup();
+			echo cherry_plugin_help_import_popup().cherry_plugin_help_export_popup();
 			$cherry_plugin_components -> get_footer();
 		}
 	}

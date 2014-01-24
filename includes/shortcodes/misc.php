@@ -110,22 +110,22 @@ if (!function_exists('shortcode_site_map')) {
 		foreach( $post_types as $post_type ) {
 			if(!empty($post_type)){
 				$output .= ($span_counter==0 && $type!='line') ? '<div class="'.$wrapp_class.'">' : '' ;
-				//var_dump($post_type);
-			   	$pt = get_post_type_object( $post_type );
-			  	$output .= '<div class="'.$item_class.'"><h2>'.$pt->labels->name.'</h2><ul>';
 
-			   	query_posts('post_type='.$post_type.'&posts_per_page=-1&orderby=title&order=ASC');
-			   	if ( have_posts() ) while( have_posts() )  {
-			     	the_post();
-			     	$output .= '<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
-			   	}
+				$pt = get_post_type_object( $post_type );
+				$output .= '<div class="'.$item_class.'"><h2>'.$pt->labels->name.'</h2><ul>';
+
+				query_posts('post_type='.$post_type.'&posts_per_page=-1&orderby=title&order=ASC');
+				if ( have_posts() ) while( have_posts() )  {
+					the_post();
+					$output .= '<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
+				}
 				wp_reset_query();
-			   	if($span_counter>2 && $type!='line'){
+				if($span_counter>2 && $type!='line'){
 					$span_counter=0;
 					$output .= '</div>';
-			   	}else{
-			   		$span_counter++;
-			   	}
+				}else{
+					$span_counter++;
+				}
 				$output .= '</ul></div>';
 			}
 		}

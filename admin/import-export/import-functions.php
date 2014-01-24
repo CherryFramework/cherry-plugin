@@ -4,17 +4,11 @@
 		do_action( 'cherry_plugin_import_json' );
 
 		$json_file = isset($_POST['file']) ? $_POST['file'] : 'false' ;
-		$response = new WP_Ajax_Response();
 
 		$json = file_get_contents(UPLOAD_DIR.$json_file);
-		$json_response = array(
-			'what' => 'cherry_plugin_widget_import',
-			'action' => 'import_content',
-			'id' => 2
-		);
 
 		if( is_wp_error($json) ) {
-			die('error');
+			exit('error');
 		};
 
 		$json_data    = json_decode( $json, true );
@@ -91,9 +85,9 @@
 		$sidebar_data = array( array_filter( $sidebar_data ), $widget_data );
 
 		if( cherry_plugin_parse_import_data( $sidebar_data ) ) {
-			die('import_end');
+			exit('import_end');
 		}else{
-			die('error');
+			exit('error');
 		};
 	}
 	function cherry_plugin_parse_import_data( $import_array ) {
@@ -174,6 +168,10 @@
 
 	add_action('wp_ajax_import_xml', 'cherry_plugin_import_xml');
 	function cherry_plugin_import_xml(){
+		$nonce = $_POST['nonce'];
+		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
+			exit ( 'instal_error');
+
 		session_name("import_xml");
 		session_start();
 		do_action( 'cherry_plugin_start_import' );
@@ -187,7 +185,7 @@
 		$import_data = cherry_plugin_parse_xml( UPLOAD_DIR.$xml_file );
 
 		if ( is_wp_error( $import_data ) ) {
-			die('error');
+			exit('error');
 		}
 
 		$_SESSION['categories'] = $import_data['categories'];
@@ -198,7 +196,7 @@
 
 		cherry_plugin_import_start();
 
-		die('import_categories');
+		exit('import_categories');
 	}
 	function cherry_plugin_import_start(){
 		wp_defer_term_counting( true );
@@ -225,10 +223,14 @@
 		do_action( 'cherry_plugin_import_end' );
 		session_name("import_xml");
 		session_destroy();
-		die('import_json');
+		exit('import_json');
 	}
 	add_action('wp_ajax_import_categories', 'cherry_plugin_import_categories');
 	function cherry_plugin_import_categories() {
+		$nonce = $_POST['nonce'];
+		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
+			exit ( 'instal_error');
+
 		session_name("import_xml");
 		session_start();
 
@@ -268,10 +270,14 @@
 			}
 		}
 		unset($_SESSION['categories']);
-		die('import_tags');
+		exit('import_tags');
 	}
 	add_action('wp_ajax_import_tags', 'cherry_plugin_import_tags');
 	function cherry_plugin_import_tags() {
+		$nonce = $_POST['nonce'];
+		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
+			exit ( 'instal_error');
+
 		session_name("import_xml");
 		session_start();
 
@@ -305,10 +311,14 @@
 			}
 		}
 		unset($_SESSION['tags']);
-		die('process_terms');
+		exit('process_terms');
 	}
 	add_action('wp_ajax_process_terms', 'cherry_plugin_process_terms');
 	function cherry_plugin_process_terms() {
+		$nonce = $_POST['nonce'];
+		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
+			exit ( 'instal_error');
+
 		session_name("import_xml");
 		session_start();
 
@@ -355,10 +365,14 @@
 		}
 	
 		unset($_SESSION['terms']);
-		die('import_posts');
+		exit('import_posts');
 	}
 	add_action('wp_ajax_import_posts', 'cherry_plugin_import_posts');
 	function cherry_plugin_import_posts() {
+		$nonce = $_POST['nonce'];
+		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
+			exit ( 'instal_error');
+
 		session_name("import_xml");
 		session_start();
 
@@ -366,9 +380,11 @@
 
 		$_SESSION['url_remap'] = array();
 		$_SESSION['featured_images'] = array();
+		$_SESSION['attachment_posts'] = array();
 		$posts_array = $_SESSION['posts'];
 		$posts_array = apply_filters( 'wp_import_posts', $posts_array );
-
+		$attachment_posts = array();
+		
 		foreach ( $posts_array as $post ) {
 			$post = apply_filters( 'wp_import_post_data_raw', $post );
 
@@ -422,7 +438,12 @@
 				$original_post_ID = $post['post_id'];
 				$postdata = apply_filters( 'wp_import_post_data_processed', $postdata, $post );
 
+				if ( 'attachment' == $postdata['post_type'] ) {
+					array_push($attachment_posts, $post);
+				}
 				if ( 'attachment' != $postdata['post_type'] ) {
+					ini_set('max_execution_time', -1);
+					set_time_limit(0);
 					$comment_post_ID = $post_id = wp_insert_post( $postdata, true );
 					do_action( 'wp_import_insert_post', $post_id, $original_post_ID, $postdata, $post );
 
@@ -540,7 +561,8 @@
 								// export gets meta straight from the DB so could have a serialized string
 								if ( ! $value )
 									$value = maybe_unserialize( $meta['value'] );
-
+								ini_set('max_execution_time', -1);
+								set_time_limit(0);
 								add_post_meta( $post_id, $key, $value );
 								do_action( 'cherry_plugin_import_post_meta', $post_id, $key, $value );
 
@@ -553,11 +575,15 @@
 				}
 			}
 		}
-
-		die('import_menu_item');
+		$_SESSION['attachment_posts'] = $attachment_posts;
+		exit('import_menu_item');
 	}
 	add_action('wp_ajax_import_menu_item', 'cherry_plugin_import_menu_item');
 	function cherry_plugin_import_menu_item() {
+		$nonce = $_POST['nonce'];
+		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
+			exit ( 'instal_error');
+
 		session_name("import_xml");
 		session_start();
 
@@ -578,8 +604,8 @@
 				continue;
 			}
 		}
-
-		die('import_attachment');
+		unset( $_SESSION['posts'] );
+		exit('import_attachment');
 	}
 	function cherry_plugin_add_item( $item ) {
 		// skip draft, orphaned menu items
@@ -651,74 +677,68 @@
 			'menu-item-xfn'         => $_menu_item_xfn,
 			'menu-item-status'      => $item['status']
 		);
-		/*$get_items = wp_get_nav_menu_items( $menu_id, $args );
-		foreach ($get_items as $get_item_menu) {
-			if($get_item_menu -> post_title == $item['post_title']){
-				echo $get_item_menu -> post_title;
-				echo $item['post_title'];
-				return;
-			}
-		}*/
 		$id = wp_update_nav_menu_item( $menu_id, 0, $args );
 		if ( $id && ! is_wp_error( $id ) ) $_SESSION['processed_menu_items'][intval($item['post_id'])] = (int) $id;
 	}
 	add_action('wp_ajax_import_attachment', 'cherry_plugin_import_attachment');
 	function cherry_plugin_import_attachment() {
+		$nonce = $_POST['nonce'];
+		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
+			exit ( 'instal_error');
+
 		session_name("import_xml");
 		session_start();
 
-		do_action( 'cherry_plugin_import_attachment' );
+		if(!empty($_SESSION['attachment_posts'])){
+			do_action( 'cherry_plugin_import_attachment' );
 
-		$_SESSION['missing_menu_items'] = array();
-		$posts_array = $_SESSION['posts'];
-		$posts_array = apply_filters( 'wp_import_posts', $posts_array );
-		$author = (int) get_current_user_id();
+			$_SESSION['missing_menu_items'] = array();
+			$_SESSION['attachment_metapost'] = array();
+			$posts_array = $_SESSION['attachment_posts'];
+			$posts_array = apply_filters( 'wp_import_posts', $posts_array );
+			$author = (int) get_current_user_id();
 
-		foreach ( $posts_array as $post ) {
-			$post = apply_filters( 'wp_import_post_data_raw', $post );
+			foreach ( $posts_array as $post ) {
+				$post = apply_filters( 'wp_import_post_data_raw', $post );
 
-			$post_parent = (int) $post['post_parent'];
-			if ( $post_parent ) {
-				// if we already know the parent, map it to the new local ID
-				if ( isset( $_SESSION['processed_posts'][$post_parent] ) ) {
-					$post_parent = $_SESSION['processed_posts'][$post_parent];
-				// otherwise record the parent for later
-				} else {
-					$_SESSION['post_orphans'][intval($post['post_id'])] = $post_parent;
-					$post_parent = 0;
-				}
-			}
-			$postdata = array(
-				'import_id' => $post['post_id'], 'post_author' => $author, 'post_date' => $post['post_date'],
-				'post_date_gmt' => $post['post_date_gmt'], 'post_content' => $post['post_content'],
-				'post_excerpt' => $post['post_excerpt'], 'post_title' => $post['post_title'],
-				'post_status' => $post['status'], 'post_name' => $post['post_name'],
-				'comment_status' => $post['comment_status'], 'ping_status' => $post['ping_status'],
-				'guid' => $post['guid'], 'post_parent' => $post_parent, 'menu_order' => $post['menu_order'],
-				'post_type' => $post['post_type'], 'post_password' => $post['post_password']
-			);
+				$postdata = array(
+					'import_id' => $post['post_id'], 
+					'post_author' => $author, 
+					'post_date' => $post['post_date'],
+					'post_date_gmt' => $post['post_date_gmt'], 
+					'post_content' => $post['post_content'],
+					'post_excerpt' => $post['post_excerpt'], 
+					'post_title' => $post['post_title'],
+					'post_status' => $post['status'], 
+					'post_name' => $post['post_name'],
+					'comment_status' => $post['comment_status'], 
+					'ping_status' => $post['ping_status'],
+					'guid' => $post['guid'], 
+					/*'post_parent' => $post_parent,*/ 
+					'menu_order' => $post['menu_order'],
+					'post_type' => $post['post_type'], 
+					'post_password' => $post['post_password']
+				);
 
-			$postdata = apply_filters( 'wp_import_post_data_processed', $postdata, $post );
+				$postdata = apply_filters( 'wp_import_post_data_processed', $postdata, $post );
 
-			if ( 'attachment' == $postdata['post_type'] ) {
 				$remote_url = ! empty($post['attachment_url']) ? $post['attachment_url'] : $post['guid'];
 				// try to use _wp_attached file for upload folder placement to ensure the same location as the export site
 				// e.g. location is 2003/05/image.jpg but the attachment post_date is 2010/09, see media_handle_upload()
 				$postdata['upload_date'] = $post['post_date'];
-				cherry_plugin_add_attachment( $postdata, $remote_url );
-			}else{
-				continue;
+				$file_url = UPLOAD_DIR.basename( $remote_url );
+				if(file_exists($file_url)){
+					cherry_plugin_add_attachment( $postdata, $remote_url );
+				}
 			}
 		}
 		wp_suspend_cache_invalidation( false );
-		unset( $_SESSION['posts'] );
-		die('import_parents');
+		exit('generate_attachment_metadata');
 	}
 	function cherry_plugin_add_attachment( $post, $url ) {
 		$file_name = basename( $url );
 		$upload['url'] = $url;
 		$upload['file'] = UPLOAD_DIR.$file_name;
-		//$upload = cherry_plugin_fetch_remote_file( $url, $post, UPLOAD_DIR );
 		if ( is_wp_error( $upload ) )
 			return $upload;
 
@@ -730,8 +750,10 @@
 		$post['guid'] = $upload['url'];
 
 		// as per wp-admin/includes/upload.php
+		ini_set('max_execution_time', -1);
+		set_time_limit(0);
 		$post_id = wp_insert_attachment( $post, $upload['file'] );
-		wp_update_attachment_metadata( $post_id, wp_generate_attachment_metadata( $post_id, $upload['file'] ) );
+		array_push($_SESSION['attachment_metapost'], array('post_id'=>$post_id, 'file'=>$upload['file']));
 
 		// remap resized image URLs, works by stripping the extension and remapping the URL stub.
 		if ( preg_match( '!^image/!', $info['type'] ) ) {
@@ -745,56 +767,51 @@
 		}
 		return $post_id;
 	}
-	function cherry_plugin_fetch_remote_file( $url, $post, $file_dir ) {
-	// extract the file name and extension from the url
-		$file_name = basename( $url );
-		$upload['url'] = $url;
-		$upload['file'] = $file_dir.$file_name;
+	add_action('wp_ajax_generate_attachment_metadata', 'cherry_plugin_generate_attachment_metadata');
+	function cherry_plugin_generate_attachment_metadata() {
+		$nonce = $_POST['nonce'];
+		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
+			exit ( 'instal_error');
 
-		// fetch the remote url and write it to the placeholder file
-		$headers = wp_get_http( $url, $upload['file'] );
+		session_name("import_xml");
+		session_start();
+		if(!empty($_SESSION['attachment_posts'])){
+			$metadata = $_SESSION['attachment_metapost'];
 
-		// request failed
-		if ( ! $headers ) {
-			@unlink( $upload['file'] );
-			//return new WP_Error( 'import_file_error', "remote" );
+			foreach ($metadata as $key => $value) {
+				ini_set('max_execution_time', -1);
+				set_time_limit(0);
+				$_SESSION['attachment_metapost'][$key]['file'] = wp_generate_attachment_metadata($value['post_id'], $value['file']);
+			}
 		}
+		exit('import_attachment_metadata');
+	}
 
-		// make sure the fetch was successful
-		if ( $headers['response'] != '200' ) {
-			@unlink( $upload['file'] );
-			//return new WP_Error( 'import_file_error', sprintf("remote_2", esc_html($headers['response']), get_status_header_desc($headers['response']) ) );
+	add_action('wp_ajax_import_attachment_metadata', 'cherry_plugin_import_attachment_metadata');
+	function cherry_plugin_import_attachment_metadata() {
+		$nonce = $_POST['nonce'];
+		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
+			exit ( 'instal_error');
+
+		session_name("import_xml");
+		session_start();
+		if(!empty($_SESSION['attachment_posts'])){
+			$generate_metadata = $_SESSION['attachment_metapost'];
+			foreach ($generate_metadata as $key => $value) {
+				ini_set('max_execution_time', -1);
+				set_time_limit(0);
+				wp_update_attachment_metadata($value['post_id'], $value['file']);
+			}
 		}
-		$filesize = @filesize( $upload['file'] );
-
-		if ( isset( $headers['content-length'] ) && $filesize != $headers['content-length'] ) {
-			@unlink( $upload['file'] );
-			//return new WP_Error( 'import_file_error', "remote_3");
-		}
-
-		if ( 0 == $filesize ) {
-			@unlink( $upload['file'] );
-			//return new WP_Error( 'import_file_error', "zero_size");
-		}
-
-		$max_size = (int) wp_max_upload_size();
-		if ( ! empty( $max_size ) && $filesize > $max_size ) {
-			@unlink( $upload['file'] );
-			//return new WP_Error( 'import_file_error', sprintf("remote_4", size_format($max_size) ) );
-		}
-
-		// keep track of the old and new urls so we can substitute them later
-		$_SESSION['url_remap'][$url] = $upload['url'];
-		$_SESSION['url_remap'][$post['guid']] = $upload['url']; // r13735, really needed?
-
-		// keep track of the destination if the remote url is redirected somewhere else
-		if ( isset($headers['x-final-location']) && $headers['x-final-location'] != $url ){
-			$_SESSION['url_remap'][$headers['x-final-location']] = $upload['url'];
-		}
-		return $upload;
+		unset($_SESSION['attachment_metapost']);
+		exit('import_parents');
 	}
 	add_action('wp_ajax_import_parents', 'cherry_plugin_import_parents');
 	function cherry_plugin_import_parents() {
+		$nonce = $_POST['nonce'];
+		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
+			exit ( 'instal_error');
+
 		session_name("import_xml");
 		session_start();
 		global $wpdb;
@@ -831,11 +848,15 @@
 			if ( $local_child_id && $local_parent_id )
 				update_post_meta( $local_child_id, '_menu_item_menu_item_parent', (int) $local_parent_id );
 		}
-		die('update_featured_images');
+		exit('update_featured_images');
 	}
 
 	add_action('wp_ajax_update_attachment', 'cherry_plugin_update_attachment');
 	function cherry_plugin_update_attachment() {
+		$nonce = $_POST['nonce'];
+		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
+			exit ( 'instal_error');
+
 		session_name("import_xml");
 		session_start();
 		global $wpdb;
@@ -857,6 +878,10 @@
 	}
 	add_action('wp_ajax_update_featured_images', 'cherry_plugin_update_featured_images');
 	function cherry_plugin_update_featured_images() {
+		$nonce = $_POST['nonce'];
+		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
+			exit ( 'instal_error');
+
 		session_name("import_xml");
 		session_start();
 
@@ -871,7 +896,7 @@
 					update_post_meta( $post_id, '_thumbnail_id', $new_id );
 			}
 		}
-		die('update_attachment');
+		exit('update_attachment');
 	}
 	function cherry_plugin_parse_xml( $file ) {
 		$file_content = file_get_contents($file);
@@ -908,7 +933,7 @@
 			);
 			return $parser_array;
 		}else{
-			die('error');
+			exit('error');
 		}
 	}
 	function settings() {
