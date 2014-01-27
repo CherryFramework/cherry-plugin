@@ -25,10 +25,7 @@ jQuery(document).ready(function() {
 			get_file_list(event.originalEvent.dataTransfer.files);
 			return false;
 		});
-		upload_button.on('click', function (){
-			drop_zone.addClass('pointer_events');
-			upload_files_html5.click();
-		});
+		upload_button.on('click', add_more_files);
 		upload_files_html5.on('change', function(){
 			get_file_list(jQuery(this)[0].files);
 		})
@@ -37,7 +34,14 @@ jQuery(document).ready(function() {
 		})
 
 	}
+	function add_more_files(){
+		drop_zone.addClass('pointer_events');
+		upload_files_html5.click();
+		return !1;
+	}
 	function get_file_list(file_list){
+		upload_button.off();
+
 		drop_file_list = file_list;
 		last_add_file=0;
 
@@ -131,6 +135,7 @@ jQuery(document).ready(function() {
 	}
 	function load_all_content(){
 		jQuery('#info_holder').removeClass('hidden_ell');
+		upload_button.on('click', add_more_files);
 		continue_install.off();
 		if(loaded_XML && loaded_JSON){
 			jQuery('#info_holder p .upload_status_text').html(import_text['uploaded_status_text_1']);
