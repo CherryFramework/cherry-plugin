@@ -381,6 +381,7 @@
 		$_SESSION['url_remap'] = array();
 		$_SESSION['featured_images'] = array();
 		$_SESSION['attachment_posts'] = array();
+		$_SESSION['processed_posts'] = array();
 		$posts_array = $_SESSION['posts'];
 		$posts_array = apply_filters( 'wp_import_posts', $posts_array );
 		$attachment_posts = array();
@@ -455,7 +456,7 @@
 					if ( $post['is_sticky'] == 1 ) stick_post( $post_id );
 
 					// map pre-import ID to local ID
-					$_SESSION['processed_posts'][intval($post['post_id'])] = (int) $post_id;
+					$_SESSION['processed_posts'][intval($post['post_id'])] = intval($post_id);
 
 					if ( ! isset( $post['terms'] ) )
 						$post['terms'] = array();
@@ -567,8 +568,9 @@
 								do_action( 'cherry_plugin_import_post_meta', $post_id, $key, $value );
 
 								// if the post has a featured image, take note of this in case of remap
-								if ( '_thumbnail_id' == $key )
+								if ( '_thumbnail_id' == $key ){
 									$_SESSION['featured_images'][$post_id] = (int) $value;
+								}
 							}
 						}
 					}
@@ -748,12 +750,17 @@
 			return new WP_Error( 'attachment_processing_error', theme_locals('Invalid file type'));
 
 		$post['guid'] = $upload['url'];
+		$_SESSION['url_remap'][$url] = $upload['url'];
+		$_SESSION['url_remap'][$post['guid']] = $upload['url'];
+
 
 		// as per wp-admin/includes/upload.php
 		ini_set('max_execution_time', -1);
 		set_time_limit(0);
 		$post_id = wp_insert_attachment( $post, $upload['file'] );
 		array_push($_SESSION['attachment_metapost'], array('post_id'=>$post_id, 'file'=>$upload['file']));
+
+		$_SESSION['processed_posts'][intval($post['import_id'])] = intval($post_id);
 
 		// remap resized image URLs, works by stripping the extension and remapping the URL stub.
 		if ( preg_match( '!^image/!', $info['type'] ) ) {
@@ -862,13 +869,13 @@
 		global $wpdb;
 
 		do_action( 'cherry_plugin_update_attachment' );
-
+		$url_remap=$_SESSION['url_remap'];
 		// make sure we do the longest urls first, in case one is a substring of another
-		uksort( $_SESSION['url_remap'], function ( $a, $b ) {
+		uksort( $url_remap, function ( $a, $b ) {
 								return strlen($b) - strlen($a);
 							});
 
-		foreach ( $_SESSION['url_remap'] as $from_url => $to_url ) {
+		foreach ( $url_remap as $from_url => $to_url ) {
 			// remap urls in post_content
 			$wpdb->query( $wpdb->prepare("UPDATE {$wpdb->posts} SET post_content = REPLACE(post_content, %s, %s)", $from_url, $to_url) );
 			// remap enclosure urls
@@ -886,9 +893,9 @@
 		session_start();
 
 		do_action( 'cherry_plugin_update_featured_images' );
-
+		$featured_images = $_SESSION['featured_images'];
 		// cycle through posts that have a featured image
-		foreach ( $_SESSION['featured_images'] as $post_id => $value ) {
+		foreach ( $featured_images as $post_id => $value ) {
 			if ( isset( $_SESSION['processed_posts'][$value] ) ) {
 				$new_id = $_SESSION['processed_posts'][$value];
 				// only update if there's a difference
@@ -914,12 +921,15 @@
 			$upload_dir = $upload_dir['url'];
 			$cut_upload_dir = substr($upload_dir, strpos($upload_dir, 'wp-content/uploads'), strlen($upload_dir)-1);
 			$cut_date_upload_dir = '<![CDATA['.substr($upload_dir, strpos($upload_dir, 'wp-content/uploads')+19, strlen($upload_dir)-1);
-
+			$cut_date_upload_dir_2 = "\"".substr($upload_dir, strpos($upload_dir, 'wp-content/uploads')+19, strlen($upload_dir)-1);
+			
 			$pattern = '/wp-content\/uploads\/\d{4}\/\d{2}/i';
 			$patternCDATA = '/<!\[CDATA\[\d{4}\/\d{2}/i';
+			$pattern_meta_value = '/("|\')\d{4}\/\d{2}/i';
 
 			$file_content = str_replace($old_upload_url, site_url(), $file_content);
 			$file_content = preg_replace($patternCDATA, $cut_date_upload_dir, $file_content);
+			$file_content = preg_replace($pattern_meta_value, $cut_date_upload_dir_2, $file_content);
 			$file_content = preg_replace($pattern, $cut_upload_dir, $file_content);
 
 			$parser = new WXR_Parser();
@@ -931,6 +941,7 @@
 				'pubDate' => 		implode ($xml->xpath('/rss/channel/pubDate')),
 				'language' => 		implode ($xml->xpath('/rss/channel/language'))*/
 			);
+
 			return $parser_array;
 		}else{
 			exit('error');
