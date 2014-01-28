@@ -871,9 +871,7 @@
 		do_action( 'cherry_plugin_update_attachment' );
 		$url_remap=$_SESSION['url_remap'];
 		// make sure we do the longest urls first, in case one is a substring of another
-		uksort( $url_remap, function ( $a, $b ) {
-								return strlen($b) - strlen($a);
-							});
+		uksort( $url_remap, 'sort_array');
 
 		foreach ( $url_remap as $from_url => $to_url ) {
 			// remap urls in post_content
@@ -882,6 +880,9 @@
 			$result = $wpdb->query( $wpdb->prepare("UPDATE {$wpdb->postmeta} SET meta_value = REPLACE(meta_value, %s, %s) WHERE meta_key='enclosure'", $from_url, $to_url) );
 		}
 		cherry_plugin_import_end();
+	}
+	function sort_array( $a, $b ) {
+		return strlen($b) - strlen($a);
 	}
 	add_action('wp_ajax_update_featured_images', 'cherry_plugin_update_featured_images');
 	function cherry_plugin_update_featured_images() {
