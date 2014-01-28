@@ -72,7 +72,8 @@
 	}
 	function cherry_plugin_export_json() {
 		$themename = 'cherry';
-		$sidebar_export = array_filter(get_option( 'sidebars_widgets' ), function($array){ return (!empty($array) && is_array($array)); });
+		$sidebars_widgets = get_option( 'sidebars_widgets' );
+		$sidebar_export = array_filter($sidebars_widgets, 'sort_widget_array');
 
 		$widgets = array( );
 		foreach ($sidebar_export as $sidebar_widgets => $sidebar_widget) {
@@ -141,6 +142,9 @@
 		file_put_contents($json_dir, $json);
 
 		return $json_dir;
+	}
+	function sort_widget_array($array){ 
+		return (!empty($array) && is_array($array));
 	}
 	function cherry_plugin_delete_file($file){
 		if(is_readable($file)){
