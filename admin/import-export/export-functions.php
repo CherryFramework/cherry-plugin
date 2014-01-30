@@ -6,7 +6,7 @@
 	add_action('wp_ajax_export_content', 'cherry_plugin_export_content');
 	function cherry_plugin_export_content() {
 		$exclude_files = array('xml', 'json');
-		$exclude_folder = array();
+		$exclude_folder = array('woocommerce_uploads');
 		$response = array(
 			'what'=>'status',
 			'action'=>'export_content',
