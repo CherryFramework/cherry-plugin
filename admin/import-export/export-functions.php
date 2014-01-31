@@ -162,7 +162,8 @@
 
 		foreach ($scand_dir as $file) {
 			$scan_file = $dir.'/'.$file;
-			$extensionend_file = end(explode(".", $scan_file));
+			$file_extension = explode(".", $scan_file);
+			$extensionend_file = end($file_extension);
 			if(is_dir($scan_file)){
 				$scan_file= cherry_plugin_scan_dir($scan_file, $exceptions_folder, $exceptions_files);
 			}else if(in_array($extensionend_file, $exceptions_files)){
