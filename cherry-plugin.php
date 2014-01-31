@@ -29,7 +29,9 @@
 			define('CHERRY_PLUGIN_DB', $wpdb->prefix.CHERRY_PLUGIN_DOMAIN);
 
 			//Other constant variables
-			define('UPLOAD_BASE_DIR', str_replace("\\", "/", $upload_dir['basedir'].'/'));
+			define('CURRENT_THEME_DIR', get_stylesheet_directory());
+			define('CURRENT_THEME_URI', get_stylesheet_directory_uri());
+			define('UPLOAD_BASE_DIR', str_replace("\\", "/", $upload_dir['basedir']));
 			define('UPLOAD_DIR', str_replace("\\", "/", $upload_dir['path'].'/'));
 
 			load_plugin_textdomain( CHERRY_PLUGIN_DOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/'.CHERRY_PLUGIN_DOMAIN_DIR);

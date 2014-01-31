@@ -4,15 +4,21 @@
  *
  */
 function load_my_widgets(){
-	include_once ( CHERRY_PLUGIN_DIR . '/includes/widgets/my-recent-posts.php' );
-	include_once ( CHERRY_PLUGIN_DIR . '/includes/widgets/my-comment-widget.php' );
-	include_once ( CHERRY_PLUGIN_DIR . '/includes/widgets/my-social-widget.php' );
-	include_once ( CHERRY_PLUGIN_DIR . '/includes/widgets/my-posts-type-widget.php' );
-	include_once ( CHERRY_PLUGIN_DIR . '/includes/widgets/my-flickr-widget.php' );
-	include_once ( CHERRY_PLUGIN_DIR . '/includes/widgets/my-banners-widget.php' );
-	include_once ( CHERRY_PLUGIN_DIR . '/includes/widgets/my-vcard-widget.php' );
-	include_once ( CHERRY_PLUGIN_DIR . '/includes/widgets/my-facebook-widget.php' );
-	include_once ( CHERRY_PLUGIN_DIR . '/includes/widgets/my-post-cycle-widget.php' );
+	$widget_files = array(
+		'my-recent-posts.php',
+		'my-comment-widget.php',
+		'my-social-widget.php',
+		'my-posts-type-widget.php',
+		'my-flickr-widget.php',
+		'my-banners-widget.php',
+		'my-vcard-widget.php',
+		'my-facebook-widget.php',
+		'my-post-cycle-widget.php'
+	);
+	foreach ($widget_files as $files) {
+		$widget_dir = file_exists(CURRENT_THEME_DIR . '/includes/widgets/' . $files) ? CURRENT_THEME_DIR . '/includes/widgets/' . $files : CHERRY_PLUGIN_DIR . 'includes/widgets/' . $files ;
+		include_once ($widget_dir);
+	}
 
 	register_widget('MY_PostWidget');
 	register_widget('MY_CommentWidget');

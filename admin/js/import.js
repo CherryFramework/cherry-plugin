@@ -32,7 +32,6 @@ jQuery(document).ready(function() {
 		jQuery("form#upload_files").on('mouseenter', function(){
 			drop_zone.removeClass('pointer_events');
 		})
-
 	}
 	function add_more_files(){
 		drop_zone.addClass('pointer_events');

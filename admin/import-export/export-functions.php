@@ -65,7 +65,7 @@
 		$xml = iconv('utf-8', 'utf-8//IGNORE', $xml);
 		$xml = preg_replace('/[^\x{0009}\x{000a}\x{000d}\x{0020}-\x{D7FF}\x{E000}-\x{FFFD}]+/u', '', $xml);
 
-		$xml_dir = UPLOAD_BASE_DIR.'sample_data.xml';
+		$xml_dir = UPLOAD_BASE_DIR.'/sample_data.xml';
 		file_put_contents($xml_dir, $xml);
 
 		return $xml_dir;
@@ -158,6 +158,7 @@
 		$exceptions_folder =  array_merge(array('.', '..'), $exceptions_folder);
 		$scand_dir = array_diff(scandir($dir), $exceptions_folder);
 		$scan_dir_string = array();
+		$extensionend_file = "";
 
 		foreach ($scand_dir as $file) {
 			$scan_file = $dir.'/'.$file;

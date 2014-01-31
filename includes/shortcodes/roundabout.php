@@ -18,8 +18,8 @@ if (!function_exists('shortcode_roundabout')) {
 			'custom_class'     => ''
 		), $atts));
 
-		wp_enqueue_script( 'roundabout_script', CHERRY_PLUGIN_URL . 'includes/js/jquery.roundabout.min.js', array('jquery') );
-		wp_enqueue_script( 'roundabout_shape', CHERRY_PLUGIN_URL . 'includes/js/jquery.roundabout-shapes.min.js', array('jquery') );
+		wp_enqueue_script( 'roundabout_script', CHERRY_PLUGIN_URL . 'lib/roundabout/jquery.roundabout.min.js', array('jquery') );
+		wp_enqueue_script( 'roundabout_shape', CHERRY_PLUGIN_URL . 'lib/roundabout/jquery.roundabout-shapes.min.js', array('jquery') );
 
 		$ra_id = uniqid();
 

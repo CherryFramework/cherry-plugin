@@ -4,9 +4,6 @@
  */
 if ( !function_exists('shortcode_carousel') ) {
 	function shortcode_carousel( $atts ) {
-		wp_enqueue_script( 'elastislide', CHERRY_PLUGIN_URL . 'lib/js/elasti-carousel/jquery.elastislide.js', array('jquery', 'easing'), CHERRY_PLUGIN_VERSION, true );
-		wp_enqueue_script( 'easing', CHERRY_PLUGIN_URL . 'lib/js/jquery.easing.1.3.js', array('jquery'), '1.3', true );
-
 		extract( shortcode_atts( array(
 			'title'            => '',
 			'num'              => 8,

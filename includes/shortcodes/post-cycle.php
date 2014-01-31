@@ -6,8 +6,6 @@
 if (!function_exists('shortcode_post_cycle')) {
 
 	function shortcode_post_cycle($atts, $content = null) {
-		wp_enqueue_script('flexslider', CHERRY_PLUGIN_URL . 'includes/js/jquery.flexslider.js', array('jquery'), '2.1', true);
-		
 		extract(shortcode_atts(array(
 				'num'              => '5',
 				'type'             => 'post',

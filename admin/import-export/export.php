@@ -6,7 +6,6 @@
 		function post_export_content(){
 			var button = jQuery(this);
 			button.off('click').addClass('not_active').next('.spinner').css({'display':'block'});
-
 			jQuery.post(ajaxurl, {action: 'export_content'}, function(response) {
 				var res = wpAjax.parseAjaxResponse(response, "ajax-response");
 				if(!res.errors){

@@ -37,7 +37,7 @@ function widgets_scripts($hook) {
 // Clean up the variables
 add_action('widgets_init', 'clean_rules');
 function clean_rules() {
-	$themename = get_cherry_name();
+	$themename = 'cherry';
 
 	// get option and style value
 	$options_type = get_option($themename . '_widget_rules_type');
@@ -119,7 +119,7 @@ add_filter( 'widget_update_callback', 'cherry_widget_update', 10, 4);
 
 // definition of the additional operation
 function cherry_widget_update($instance, $new_instance, $old_instance, $widget) {
-	$themename = get_cherry_name();
+	$themename = 'cherry';
 	clean_rules();
 
 	// check if param was set
@@ -180,7 +180,7 @@ function cherry_widget_update($instance, $new_instance, $old_instance, $widget) 
 
 add_filter('widget_form_callback', 'kc_widget_form_extend', 10, 2);
 function kc_widget_form_extend( $instance, $widget ) {
-	$themename = get_cherry_name();
+	$themename = 'cherry';
 
 	// get option and style value
 	$options_type = get_option($themename . '_widget_rules_type');
@@ -261,7 +261,7 @@ add_filter( 'dynamic_sidebar_params', 'cherry_dynamic_sidebar_params' );
 function cherry_dynamic_sidebar_params( $params ) {
 	global $wp_registered_widgets;
 
-	$themename = get_cherry_name();
+	$themename = 'cherry';
 	$widget_id  = $params[0]['widget_id'];
 
 	// get option and style value
@@ -302,7 +302,7 @@ function cherry_add_widget_control() {
 	global $wp_registered_widgets; 
 	global $wp_registered_widget_controls;
 
-	$themename = get_cherry_name();
+	$themename = 'cherry';
 
 	// get option value
 	$options_type = get_option($themename . '_widget_rules_type');
@@ -369,7 +369,7 @@ function cherry_widget_control() {
 	// get the access to the registered widget controls
 	global $wp_registered_widget_controls;
 
-	$themename = get_cherry_name();
+	$themename = 'cherry';
 
 	// get the widget parameters
 	$params = func_get_args();
@@ -499,7 +499,7 @@ function cherry_widget_control() {
 }
 
 function cherry_widget_control_styles_list($widget_name, $id, $value2, $value3) {
-	$themename = get_cherry_name();
+	$themename = 'cherry';
 
 	echo '<div>';
 	// prepare an array of options
@@ -552,7 +552,7 @@ function check_widget_visibility($id) {
 	// sidebar flag
 	$sidebar_flag = false;
 
-	$themename = get_cherry_name();
+	$themename = 'cherry';
 
 	// get the widget showing rules
 	$options_type = get_option($themename . '_widget_rules_type');
