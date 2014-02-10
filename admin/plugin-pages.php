@@ -93,3 +93,14 @@
 			$cherry_plugin_components -> get_footer();
 		}
 	}
+//under construction page
+	if( !function_exists('cherry_maintenance_mode_admin_page') ){
+		function cherry_maintenance_mode_admin_page(){
+			$cherry_plugin_components = new cherry_plugin_components;
+			$cherry_plugin_components -> get_header(array('title' => __('Maintenance Mode', CHERRY_PLUGIN_DOMAIN), 'wrapper_class' => ''));
+
+			include_once (CHERRY_PLUGIN_DIR.'admin/plugin-maintenance-mode.php');
+
+			$cherry_plugin_components -> get_footer();
+		}
+	}

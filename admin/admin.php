@@ -28,6 +28,9 @@
 			$main_page_menu_title = __('Summary', CHERRY_PLUGIN_DOMAIN);
 			add_submenu_page($cherry_plugin_menu, $main_page_menu_title, $main_page_menu_title, $capability, 'plugin-main-page', 'cherry_plugin_main_page');
 
+			$under_construction_menu_title = __('Maintenance Mode', CHERRY_PLUGIN_DOMAIN);
+			add_submenu_page($cherry_plugin_menu, $under_construction_menu_title, $under_construction_menu_title, $capability, 'maintenance-mode-page', 'cherry_maintenance_mode_admin_page');
+
 			$import_menu_title = __('Import Content', CHERRY_PLUGIN_DOMAIN);
 			add_submenu_page($cherry_plugin_menu, $import_menu_title, $import_menu_title, $capability, 'import-page', 'cherry_plugin_import_page');
 

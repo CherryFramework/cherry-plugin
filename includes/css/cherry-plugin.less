@@ -1435,3 +1435,79 @@ iframe .uiHeader h3{
 .extra-wrap {
 	overflow:hidden;
 }
+//--------------------------------------------------------
+// Maintenance mode notice style
+//--------------------------------------------------------
+#maintenance_mode_notice{
+	position: fixed;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	padding: 5px;
+	text-align: center;
+	background: #222;
+	z-index: 999999;
+	p{
+		margin: 0;
+		color: #FF5C00;
+		a{
+			color: #2EA2CC;
+		}
+	}
+}
+//--------------------------------------------------------
+// Under Construction Page style
+//--------------------------------------------------------
+#under_construction_page{
+	text-align: center;
+	position: relative;
+	margin-top: 150px;
+	#under_construction_logo{
+		.logo, h1{
+			float: none;
+		}
+	}
+	#under_construction_description{
+		clear: both;
+	}
+	#under_construction_timer{
+		margin: 40px -20px 40px 0;
+		.box{
+			display: inline-block;
+			margin-right: 30px;
+			&:first-child{
+				.numbers:before{
+					content:'';
+				}
+			};
+			.lable{
+				font-size: 16px;
+				margin-top: 15px;
+			}
+			.numbers{
+				position: relative;
+				&:before{
+					content: ':';
+					position: absolute;
+					left: -28px;
+					top: 0px;
+					font-size: 80px;
+					line-height: 1.2em;
+				};
+
+				span{
+					font-size: 80px;
+					line-height: 1.2em;
+					padding: 5px 15px;
+					margin-right: 3px;
+					background: rgba(0, 0, 0, 0.2);
+					border-radius: 5px;
+					display: inline-block;
+				}
+			}
+		}
+		.web_site_message{
+			font-size: 40px;
+		}
+	}
+}
