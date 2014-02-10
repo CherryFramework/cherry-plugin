@@ -1,7 +1,7 @@
 <?php
 	include_once (ABSPATH . '/wp-admin/includes/class-pclzip.php');
 	require_once(ABSPATH . 'wp-admin/includes/dashboard.php');
-	require('includes/export.php');
+	require_once(ABSPATH . 'wp-admin/includes/export.php');
 
 	add_action('wp_ajax_export_content', 'cherry_plugin_export_content');
 	function cherry_plugin_export_content() {

@@ -21,6 +21,13 @@ hr{
 	visibility: visible;
 	opacity: 1;
 }
+.small_size{
+	width: 60px;
+	display: inline-block;
+}
+.small_size + .small-text {
+	margin-right: 15px;
+}
 .transition{
 	-webkit-transition:all 1s ease-in-out;
 	transition:all 1s ease-in-out;
@@ -37,6 +44,11 @@ hr{
 	display:table;
 	content:"";
 	line-height:0;
+}
+span.error{
+	color: red;
+	font-size: 12px;
+	display: none;
 }
 .clearfix:after { clear:both; }
 #toplevel_page_cherry-plugin-page div.wp-menu-image:before{
