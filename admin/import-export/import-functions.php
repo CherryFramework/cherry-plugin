@@ -6,6 +6,14 @@
 		$json_file = isset($_POST['file']) ? $_POST['file'] : 'false' ;
 
 		$json = file_get_contents(UPLOAD_DIR.$json_file);
+		
+		$upload_dir = wp_upload_dir();
+		$upload_dir = $upload_dir['url'];
+		$cut_upload_dir = substr($upload_dir, strpos($upload_dir, 'wp-content/uploads'), strlen($upload_dir)-1);
+		$cut_upload_dir = str_replace('/', '\/', $cut_upload_dir);
+
+		$pattern = "#wp-content\\\/uploads\\\/\d{4}\\\/\d{2}#i";
+		$json = preg_replace($pattern, $cut_upload_dir, $json);
 
 		if( is_wp_error($json) ) {
 			exit('error');
@@ -97,11 +105,12 @@
 		$new_widgets = array();
 		$inactive_widgets  = array();
 		foreach ( $current_sidebars as $import_sidebars => $import_sidebar ){
-			if(!empty($import_sidebar) && is_array($import_sidebar)){
+			array_push($import_sidebar, array());
+			/*if(!empty($import_sidebar) && is_array($import_sidebar)){
 				foreach ( $import_sidebar as $inactive_widget){
 					array_push($inactive_widgets, $inactive_widget);
 				}
-			}
+			}*/
 		}
 		foreach ( $sidebars_data as $import_sidebar => $import_widgets ) :
 			$current_sidebars[$import_sidebar] = array();
@@ -158,9 +167,9 @@
 				}
 			}
 		}
-		while ( in_array( $widget_name . '-' . $widget_index, $all_widget_array ) ) {
+		/*while ( in_array( $widget_name . '-' . $widget_index, $all_widget_array ) ) {
 			$widget_index++;
-		}
+		}*/
 		$new_widget_name = $widget_name . '-' . $widget_index;
 		return $new_widget_name;
 	}

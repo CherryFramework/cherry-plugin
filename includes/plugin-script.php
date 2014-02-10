@@ -25,9 +25,12 @@
 
 			//include elastislide
 			wp_deregister_script( 'easing' );
-			wp_enqueue_script( 'easing', CHERRY_PLUGIN_URL . 'lib/js/jquery.easing.1.3.js', array('jquery'), '1.3', true );
+			wp_register_script( 'easing', CHERRY_PLUGIN_URL . 'lib/js/jquery.easing.1.3.js', array('jquery'), '1.3' );
+			wp_enqueue_script( 'easing' );
+
 			wp_deregister_script( 'elastislide' );
-			wp_enqueue_script( 'elastislide', CHERRY_PLUGIN_URL . 'lib/js/elasti-carousel/jquery.elastislide.js', array('jquery', 'easing'), CHERRY_PLUGIN_VERSION, true );
+			wp_register_script( 'elastislide', CHERRY_PLUGIN_URL . 'lib/js/elasti-carousel/jquery.elastislide.js', array('jquery', 'easing'), CHERRY_PLUGIN_VERSION );
+			wp_enqueue_script( 'elastislide' );
 		}
 		add_action( 'wp_enqueue_scripts', 'cherry_include_script' );
 	}
