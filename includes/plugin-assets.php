@@ -38,7 +38,9 @@
 		}
 	}
 	function cherry_under_construction_page_content(){
-		include_once (CHERRY_PLUGIN_DIR . 'includes/plugin-under-construction-content.php');
+		$files = '/plugin-under-construction-content.php';
+		$template_dir = file_exists(CURRENT_THEME_DIR . $files) ? CURRENT_THEME_DIR . $files : CHERRY_PLUGIN_DIR .'includes' . $files ;
+		include_once ($template_dir);
 		exit;
 	}
 	function cherry_maintenance_mode_notice(){
