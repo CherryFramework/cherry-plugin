@@ -57,9 +57,14 @@
 		import_text['import_complete']= '<?php _e( "Installing content complete", CHERRY_PLUGIN_DOMAIN) ?>';
 		import_text['instal_error']= '<?php _e( "Installing content error", CHERRY_PLUGIN_DOMAIN) ?>';
 </script>
-<div id="importing_warning" class="error">
-	<p><b><?php _e('Warning!', CHERRY_PLUGIN_DOMAIN); ?></b> <?php _e('Installing sample data will replace your website content. Please make sure to backup your website data before importing content.', CHERRY_PLUGIN_DOMAIN); ?></p>
-</div>
+<?php
+	echo cherry_add_notice(array(
+			'wrapper_id' => 'importing_warning', 
+			'wrapper_class' => 'error', 
+			'notice_content' => '<b>'.__('Warning!', CHERRY_PLUGIN_DOMAIN).'</b> '.__('Installing sample data will replace your website content. Please make sure to backup your website data before importing content.', CHERRY_PLUGIN_DOMAIN)
+		)
+	);
+?>
 <!-- drag drop form -->
 <form enctype="multipart/form-data" method="post" action="<?php echo $action_url ?>" id="upload_files">
 	<div id="area-drag-drop">

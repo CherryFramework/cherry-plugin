@@ -1,13 +1,14 @@
 <?php
 /*
 	Plugin Name: Cherry Plugin
-	Version: 1.0
+	Version: 1.1
 	Plugin URI: http://www.cherryframework.com/update/meet-the-cherry-plugin-bare-functionalities-no-strings-attached/
 	Description: Cherry team has already created a Cherry framework that can be reasonably called perfect, but we are always looking for more improvements. Meet the Cherry Plugin. This is an extension for our Cherry framework where we've included all shortcodes and widgets you will ever need. The plugin is fully compatible with any WordPress theme powered by Cherry Framework. So far the plugin is a beta release, but we're going to keep on improving it, to deliver even more cool features.
 	Author: Cherry Team.
 	Author URI: http://www.cherryframework.com/
 	Text Domain: cherry-plugin
 	Domain Path: languages/
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 //plugin settings
 	if(!function_exists('cherry_plugin_settings')){
@@ -26,7 +27,9 @@
 			define('CHERRY_PLUGIN_DOMAIN_DIR', $plugin_data['DomainPath']);
 			define('CHERRY_PLUGIN_VERSION', $plugin_data['Version']);
 			define('CHERRY_PLUGIN_NAME', $plugin_data['Name']);
+			define('CHERRY_PLUGIN_SLUG', plugin_basename( __FILE__ ));
 			define('CHERRY_PLUGIN_DB', $wpdb->prefix.CHERRY_PLUGIN_DOMAIN);
+			define('CHERRY_PLUGIN_REMOTE_SERVER', 'http://www.cherryframework.com/components_update/');
 
 			//Other constant variables
 			define('CURRENT_THEME_DIR', get_stylesheet_directory());
@@ -44,12 +47,12 @@
 	if(!function_exists('cherry_plugin_init')){
 		function cherry_plugin_init(){
 
+			include_once (CHERRY_PLUGIN_DIR . 'includes/plugin-assets.php');
 			if(is_admin()){
 				include_once (CHERRY_PLUGIN_DIR . 'admin/admin.php');
 			}else{
 				include_once (CHERRY_PLUGIN_DIR . 'includes/plugin-includes.php');
 			}
-			include_once (CHERRY_PLUGIN_DIR . 'includes/plugin-assets.php');
 
 			if ( defined('CHERRY_VER') ) {
 				if ( function_exists('of_get_option') ) {

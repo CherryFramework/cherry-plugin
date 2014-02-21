@@ -11,7 +11,7 @@ frameworkShortcodeAtts={
 			},
 			{
 				label:"Image",
-				id:"icon_images",
+				id:"icon",
 				help:"Name of icon's image {image_name}.png.",
 				item_class:"tupe_images"
 			},

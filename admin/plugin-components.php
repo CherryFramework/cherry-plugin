@@ -3,30 +3,30 @@ class cherry_plugin_components {
 	public function get_header($attr){
 		$default = array('title' => '', 'wrapper_class' => '', 'wrapper_id' => '');
 		extract(array_merge($default, $attr));
+		$language = get_bloginfo("language");
 
-		switch (get_bloginfo("language")) {
-			case 'ru_RU':
-				$locals = 'ru';
+		switch ($language) {
+			case 'ru-RU':
+				$locals = '_'.$language;
 				break;
-			case 'es_ES':
-				$locals = 'es';
+			case 'es-ES':
+				$locals = '_'.$language;
 				break;
-			case 'de_DE':
-				$locals = 'de';
+			case 'de-DE':
+				$locals = '_'.$language;
 				break;
 			default:
 				$locals = '';
 				break;
 		}
-		$support_link = 'http://info.template-help.com/help/'.$locals.'cms-blog-templates/wordpress/wordpress-tutorials/';
+		$get_remote_info = cherry_plugin_remote_query(array('data_type' => 'info'));
+		$support_link = $get_remote_info['support_url'.$locals];
+		$doc_link = $get_remote_info['document_url'];
 
-		$doc_link = 'http://info.template-help.com/help/quick-start-guide/';
 		if (class_exists('Woocommerce')) {
-			$doc_link .= 'woocommerce/';
+			$doc_link = $get_remote_info['document_url_woocommerce'];
 		} elseif (function_exists('jigoshop_init')) {
-			$doc_link .= 'jigoshop-cherry-framework/';
-		} else {
-			$doc_link .= 'cherry-framework/';
+			$doc_link = $get_remote_info['document_url_jigoshop'];
 		}
 
 		$output = '<div class="wrap cherry-plugin">';

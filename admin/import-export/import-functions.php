@@ -105,12 +105,9 @@
 		$new_widgets = array();
 		$inactive_widgets  = array();
 		foreach ( $current_sidebars as $import_sidebars => $import_sidebar ){
-			array_push($import_sidebar, array());
-			/*if(!empty($import_sidebar) && is_array($import_sidebar)){
-				foreach ( $import_sidebar as $inactive_widget){
-					array_push($inactive_widgets, $inactive_widget);
-				}
-			}*/
+			if(is_array($import_sidebar)){
+				array_push($import_sidebar, array());
+			}
 		}
 		foreach ( $sidebars_data as $import_sidebar => $import_widgets ) :
 			$current_sidebars[$import_sidebar] = array();
@@ -181,8 +178,11 @@
 		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
 			exit ( 'instal_error');
 
-		session_name("import_xml");
-		session_start();
+		if(session_id()!="import_xml"){
+			session_name("import_xml");
+			session_start();
+		}
+
 		do_action( 'cherry_plugin_start_import' );
 
 		$_SESSION = array();
@@ -240,8 +240,10 @@
 		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
 			exit ( 'instal_error');
 
-		session_name("import_xml");
-		session_start();
+		if(session_id()!="import_xml"){
+			session_name("import_xml");
+			session_start();
+		}
 
 		do_action( 'cherry_plugin_import_categories' );
 
@@ -287,8 +289,10 @@
 		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
 			exit ( 'instal_error');
 
-		session_name("import_xml");
-		session_start();
+		if(session_id()!="import_xml"){
+			session_name("import_xml");
+			session_start();
+		}
 
 		do_action( 'cherry_plugin_import_tags' );
 
@@ -328,8 +332,10 @@
 		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
 			exit ( 'instal_error');
 
-		session_name("import_xml");
-		session_start();
+		if(session_id()!="import_xml"){
+			session_name("import_xml");
+			session_start();
+		}
 
 		do_action( 'cherry_plugin_process_terms' );
 
@@ -382,8 +388,10 @@
 		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
 			exit ( 'instal_error');
 
-		session_name("import_xml");
-		session_start();
+		if(session_id()!="import_xml"){
+			session_name("import_xml");
+			session_start();
+		}
 
 		do_action( 'cherry_plugin_import_posts' );
 
@@ -595,8 +603,10 @@
 		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
 			exit ( 'instal_error');
 
-		session_name("import_xml");
-		session_start();
+		if(session_id()!="import_xml"){
+			session_name("import_xml");
+			session_start();
+		}
 
 		do_action( 'cherry_plugin_import_menu_item' );
 
@@ -697,8 +707,10 @@
 		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
 			exit ( 'instal_error');
 
-		session_name("import_xml");
-		session_start();
+		if(session_id()!="import_xml"){
+			session_name("import_xml");
+			session_start();
+		}
 
 		if(!empty($_SESSION['attachment_posts'])){
 			do_action( 'cherry_plugin_import_attachment' );
@@ -789,8 +801,11 @@
 		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
 			exit ( 'instal_error');
 
-		session_name("import_xml");
-		session_start();
+		if(session_id()!="import_xml"){
+			session_name("import_xml");
+			session_start();
+		}
+		do_action( 'cherry_plugin_generate_attachment_metadata' );
 		if(!empty($_SESSION['attachment_posts'])){
 			$metadata = $_SESSION['attachment_metapost'];
 
@@ -809,8 +824,10 @@
 		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
 			exit ( 'instal_error');
 
-		session_name("import_xml");
-		session_start();
+		if(session_id()!="import_xml"){
+			session_name("import_xml");
+			session_start();
+		}
 		if(!empty($_SESSION['attachment_posts'])){
 			$generate_metadata = $_SESSION['attachment_metapost'];
 			foreach ($generate_metadata as $key => $value) {
@@ -828,8 +845,10 @@
 		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
 			exit ( 'instal_error');
 
-		session_name("import_xml");
-		session_start();
+		if(session_id()!="import_xml"){
+			session_name("import_xml");
+			session_start();
+		}
 		global $wpdb;
 
 		do_action( 'cherry_plugin_import_parents' );
@@ -873,8 +892,10 @@
 		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
 			exit ( 'instal_error');
 
-		session_name("import_xml");
-		session_start();
+		if(session_id()!="import_xml"){
+			session_name("import_xml");
+			session_start();
+		}
 		global $wpdb;
 
 		do_action( 'cherry_plugin_update_attachment' );
@@ -899,8 +920,10 @@
 		if ( !wp_verify_nonce( $nonce, 'import_ajax-nonce' ) )
 			exit ( 'instal_error');
 
-		session_name("import_xml");
-		session_start();
+		if(session_id()!="import_xml"){
+			session_name("import_xml");
+			session_start();
+		}
 
 		do_action( 'cherry_plugin_update_featured_images' );
 		$featured_images = $_SESSION['featured_images'];

@@ -14,6 +14,9 @@
 	//Shortcodes tinyMCE includes
 	include_once (CHERRY_PLUGIN_DIR . 'admin/shortcodes/tinymce-shortcodes.php');
 
+	//Plugin updater
+	include_once (CHERRY_PLUGIN_DIR . 'admin/plugin-updater.php');
+
 //added menu item
 	if(!function_exists('cherry_plugin_menu')){
 		function cherry_plugin_menu() {
@@ -46,8 +49,15 @@
 		function cherry_plugin_settings_link($actions, $file) {
 			global $cherry_plugin_menu, $main_page_link;
 			if(false !== strpos($file, strtolower('cherry-plugin')))
-				$actions['settings'] = '<a href="admin.php?page='.$main_page_link.'">'.__('Settings', CHERRY_PLUGIN_DOMAIN).'</a>';
+				$actions['summary'] = '<a href="admin.php?page='.$main_page_link.'">'.__('Summary', CHERRY_PLUGIN_DOMAIN).'</a>';
 			return $actions;
 		}
 		add_filter('plugin_action_links', 'cherry_plugin_settings_link', 2, 2);
+	}
+	if(!function_exists('cherry_plugin_update')){
+		function cherry_plugin_update() {
+			
+			//var_dump($plugin_update -> plugins_api());
+		}
+		add_action('init', 'cherry_plugin_update');
 	}
