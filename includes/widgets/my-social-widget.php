@@ -10,7 +10,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 	function widget( $args, $instance ) {
 		extract($args);
 		$title = apply_filters( 'widget_title', empty($instance['title']) ? '' : $instance['title'], $instance );
-		
+
 		$networks['Twitter']['link']    = $instance['twitter'];
 		$networks['Facebook']['link']   = $instance['facebook'];
 		$networks['Flickr']['link']     = $instance['flickr'];
@@ -19,7 +19,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 		$networks['Delicious']['link']  = $instance['delicious'];
 		$networks['Youtube']['link']    = $instance['youtube'];
 		$networks['Google+']['link']    = $instance['google'];
-		
+
 		$networks['Twitter']['label']   = $instance['twitter_label'];
 		$networks['Facebook']['label']  = $instance['facebook_label'];
 		$networks['Flickr']['label']    = $instance['flickr_label'];
@@ -38,30 +38,30 @@ class My_SocialNetworksWidget extends WP_Widget {
 		}
 
 		$display = $instance['display'];
-		
+
 		echo $before_widget;
 		if( $title ) {
 			echo $before_title;
 				echo $title;
 			echo $after_title;
 		} ?>
-		
+
 		<!-- BEGIN SOCIAL NETWORKS -->
 		<?php if ($display == "both" or $display =="labels") {
 			$addClass = "social__list";
-		} elseif ($display == "icons") { 
+		} elseif ($display == "icons") {
 			$addClass = "social__row clearfix";
 		} ?>
-		
+
 		<ul class="social <?php echo $addClass ?> unstyled">
-			
+
 		<?php foreach(array("Facebook", "Twitter", "Flickr", "Feed", "Linkedin", "Delicious", "Youtube", "Google+") as $network) : ?>
 			<?php if (!empty($networks[$network]['link'])) : ?>
 			<li class="social_li">
 				<a class="social_link social_link__<?php echo strtolower($network); ?>" rel="tooltip" data-original-title="<?php echo strtolower($network); ?>" href="<?php echo $networks[$network]['link']; ?>">
 					<?php if (($display == "both") or ($display =="icons")) { ?>
 						<span class="social_ico"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/<?php echo strtolower($network);?>.png" alt=""></span>
-					<?php } if (($display == "labels") or ($display == "both")) { ?> 
+					<?php } if (($display == "labels") or ($display == "both")) { ?>
 						<span class="social_label"><?php if (($networks[$network]['label'])!=="") { echo $networks[$network]['label']; } else { echo $network; } ?></span>
 					<?php } ?>
 				</a>
@@ -78,7 +78,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 	function update( $new_instance, $old_instance ) {
 		$instance                    = $old_instance;
 		$instance['title']           = strip_tags($new_instance['title']);
-		
+
 		$instance['twitter']         = $new_instance['twitter'];
 		$instance['facebook']        = $new_instance['facebook'];
 		$instance['flickr']          = $new_instance['flickr'];
@@ -87,7 +87,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 		$instance['delicious']       = $new_instance['delicious'];
 		$instance['youtube']         = $new_instance['youtube'];
 		$instance['google']          = $new_instance['google'];
-		
+
 		$instance['twitter_label']   = $new_instance['twitter_label'];
 		$instance['facebook_label']  = $new_instance['facebook_label'];
 		$instance['flickr_label']    = $new_instance['flickr_label'];
@@ -96,7 +96,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 		$instance['delicious_label'] = $new_instance['delicious_label'];
 		$instance['youtube_label']   = $new_instance['youtube_label'];
 		$instance['google_label']    = $new_instance['google_label'];
-		
+
 		$instance['display']         = $new_instance['display'];
 
 		return $instance;
@@ -106,7 +106,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 		/* Set up some default widget settings. */
 		$defaults = array( 'title' => '', 'twitter' => '', 'twitter_label' => '', 'facebook' => '', 'facebook_label' => '', 'flickr' => '', 'flickr_label' => '', 'feed' => '', 'feed_label' => '', 'linkedin' => '', 'linkedin_label' => '', 'delicious' => '', 'delicious_label' => '', 'youtube' => '', 'youtube_label' => '', 'google' => '', 'google_label' => '', 'display' => 'icons', 'text' => '');
 		$instance = wp_parse_args( (array) $instance, $defaults );
-			
+
 		$twitter         = $instance['twitter'];
 		$facebook        = $instance['facebook'];
 		$flickr          = $instance['flickr'];
@@ -115,7 +115,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 		$delicious       = $instance['delicious'];
 		$youtube         = $instance['youtube'];
 		$google          = $instance['google'];
-		
+
 		$twitter_label   = $instance['twitter_label'];
 		$facebook_label  = $instance['facebook_label'];
 		$flickr_label    = $instance['flickr_label'];
@@ -124,7 +124,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 		$delicious_label = $instance['delicious_label'];
 		$youtube_label   = $instance['youtube_label'];
 		$google_label    = $instance['google_label'];
-		
+
 		$display         = $instance['display'];
 		$title           = strip_tags($instance['title']);
 		$text            = format_to_edit($instance['text']);
@@ -134,22 +134,22 @@ class My_SocialNetworksWidget extends WP_Widget {
 
 	<fieldset style="border:1px solid #dfdfdf; padding:10px 10px 0; margin-bottom:1em;">
 		<legend style="padding:0 5px;"><?php _e('Facebook', CHERRY_PLUGIN_DOMAIN); ?>:</legend>
-		
+
 		<p><label for="<?php echo $this->get_field_id('facebook'); ?>"><?php _e('Facebook URL', CHERRY_PLUGIN_DOMAIN) ?>:</label>
 		<input class="widefat" id="<?php echo $this->get_field_id('facebook'); ?>" name="<?php echo $this->get_field_name('facebook'); ?>" type="text" value="<?php echo esc_attr($facebook); ?>" /></p>
-		
+
 		<p><label for="<?php echo $this->get_field_id('facebook_label'); ?>"><?php _e('Facebook label', CHERRY_PLUGIN_DOMAIN) ?>:</label>
 		<input class="widefat" id="<?php echo $this->get_field_id('facebook_label'); ?>" name="<?php echo $this->get_field_name('facebook_label'); ?>" type="text" value="<?php echo esc_attr($facebook_label); ?>" /></p>
 	</fieldset>
-	
+
 	<fieldset style="border:1px solid #dfdfdf; padding:10px 10px 0; margin-bottom:1em;">
 		<legend style="padding:0 5px;"><?php _e('Twitter', CHERRY_PLUGIN_DOMAIN); ?>:</legend>
 	<p><label for="<?php echo $this->get_field_id('twitter'); ?>"><?php _e('Twitter URL', CHERRY_PLUGIN_DOMAIN); ?>:</label>
 	<input class="widefat" id="<?php echo $this->get_field_id('twitter'); ?>" name="<?php echo $this->get_field_name('twitter'); ?>" type="text" value="<?php echo esc_attr($twitter); ?>" /></p>
 	<p><label for="<?php echo $this->get_field_id('twitter_label'); ?>"><?php _e('Twitter label', CHERRY_PLUGIN_DOMAIN); ?>:</label>
 		<input class="widefat" id="<?php echo $this->get_field_id('twitter_label'); ?>" name="<?php echo $this->get_field_name('twitter_label'); ?>" type="text" value="<?php echo esc_attr($twitter_label); ?>" /></p>
-	</fieldset>	
-	
+	</fieldset>
+
 	<fieldset style="border:1px solid #dfdfdf; padding:10px 10px 0; margin-bottom:1em;">
 		<legend style="padding:0 5px;"><?php _e('Flickr', CHERRY_PLUGIN_DOMAIN); ?>:</legend>
 	<p><label for="<?php echo $this->get_field_id('flickr'); ?>"><?php _e('Flickr URL', CHERRY_PLUGIN_DOMAIN); ?>:</label>
@@ -157,7 +157,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 	<p><label for="<?php echo $this->get_field_id('flickr_label'); ?>"><?php _e('Flickr label', CHERRY_PLUGIN_DOMAIN) ?>:</label>
 		<input class="widefat" id="<?php echo $this->get_field_id('flickr_label'); ?>" name="<?php echo $this->get_field_name('flickr_label'); ?>" type="text" value="<?php echo esc_attr($flickr_label); ?>" /></p>
 	</fieldset>
-	
+
 	<fieldset style="border:1px solid #dfdfdf; padding:10px 10px 0; margin-bottom:1em;">
 		<legend style="padding:0 5px;"><?php _e('RSS feed', CHERRY_PLUGIN_DOMAIN); ?>:</legend>
 	<p><label for="<?php echo $this->get_field_id('feed'); ?>"><?php _e('RSS feed', CHERRY_PLUGIN_DOMAIN); ?>:</label>
@@ -165,7 +165,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 	<p><label for="<?php echo $this->get_field_id('feed_label'); ?>"><?php _e('RSS label', CHERRY_PLUGIN_DOMAIN) ?>:</label>
 		<input class="widefat" id="<?php echo $this->get_field_id('feed_label'); ?>" name="<?php echo $this->get_field_name('feed_label'); ?>" type="text" value="<?php echo esc_attr($feed_label); ?>" /></p>
 	</fieldset>
-	
+
 	<fieldset style="border:1px solid #dfdfdf; padding:10px 10px 0; margin-bottom:1em;">
 			<legend style="padding:0 5px;"><?php _e('Linkedin', CHERRY_PLUGIN_DOMAIN); ?>:</legend>
 	<p><label for="<?php echo $this->get_field_id('linkedin'); ?>"><?php _e('Linkedin URL', CHERRY_PLUGIN_DOMAIN); ?>:</label>
@@ -173,15 +173,15 @@ class My_SocialNetworksWidget extends WP_Widget {
 		<p><label for="<?php echo $this->get_field_id('linkedin_label'); ?>"><?php _e('Linkedin label', CHERRY_PLUGIN_DOMAIN) ?>:</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('linkedin_label'); ?>" name="<?php echo $this->get_field_name('linkedin_label'); ?>" type="text" value="<?php echo esc_attr($linkedin_label); ?>" /></p>
 		</fieldset>
-	
+
 	<fieldset style="border:1px solid #dfdfdf; padding:10px 10px 0; margin-bottom:1em;">
 			<legend style="padding:0 5px;"><?php _e('Delicious', CHERRY_PLUGIN_DOMAIN); ?>:</legend>
 	<p><label for="<?php echo $this->get_field_id('delicious'); ?>"><?php _e('Delicious URL', CHERRY_PLUGIN_DOMAIN); ?>:</label>
 		<input class="widefat" id="<?php echo $this->get_field_id('delicious'); ?>" name="<?php echo $this->get_field_name('delicious'); ?>" type="text" value="<?php echo esc_attr($delicious); ?>" /></p>
-		<p><label for="<?php echo $this->get_field_id('delicious_label'); ?>"><?php __('Delicious label', CHERRY_PLUGIN_DOMAIN) ?>:</label>
+		<p><label for="<?php echo $this->get_field_id('delicious_label'); ?>"><?php _e('Delicious label', CHERRY_PLUGIN_DOMAIN) ?>:</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('delicious_label'); ?>" name="<?php echo $this->get_field_name('delicious_label'); ?>" type="text" value="<?php echo esc_attr($delicious_label); ?>" /></p>
 		</fieldset>
-	
+
 	<fieldset style="border:1px solid #dfdfdf; padding:10px 10px 0; margin-bottom:1em;">
 		<legend style="padding:0 5px;"><?php _e('Youtube', CHERRY_PLUGIN_DOMAIN); ?>:</legend>
 		<p>
@@ -192,7 +192,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 			<input class="widefat" id="<?php echo $this->get_field_id('youtube_label'); ?>" name="<?php echo $this->get_field_name('youtube_label'); ?>" type="text" value="<?php echo esc_attr($youtube_label); ?>" />
 		</p>
 	</fieldset>
-	
+
 	<fieldset style="border:1px solid #dfdfdf; padding:10px 10px 0; margin-bottom:1em;">
 		<legend style="padding:0 5px;"><?php _e('Google+', CHERRY_PLUGIN_DOMAIN); ?>:</legend>
 		<p>
