@@ -89,18 +89,22 @@ if (!function_exists('mini_posts_list_shortcode')) {
 			$i = 0;
 
 			$output = '<ul class="mini-posts-list '.$custom_class.'">';
-			
+
 			foreach($posts as $key => $post) {
-				// Unset not translated posts
-				if ( function_exists( 'wpml_get_language_information' ) ) {
+				//Check if WPML is activated
+				if ( defined( 'ICL_SITEPRESS_VERSION' ) ) {
 					global $sitepress;
 
-					$check              = wpml_get_language_information( $post->ID );
-					$language_code      = substr( $check['locale'], 0, 2 );
-					if ( $language_code != $sitepress->get_current_language() ) unset( $posts[$key] );
-
+					$post_lang = $sitepress->get_language_for_element($post->ID, 'post_' . $type);
+					$curr_lang = $sitepress->get_current_language();
+					// Unset not translated posts
+					if ( $post_lang != $curr_lang ) {
+						unset( $posts[$key] );
+					}
 					// Post ID is different in a second language Solution
-					if ( function_exists( 'icl_object_id' ) ) $post = get_post( icl_object_id( $post->ID, $type, true ) );
+					if ( function_exists( 'icl_object_id' ) ) {
+						$post = get_post( icl_object_id( $post->ID, $type, true ) );
+					}
 				}
 				setup_postdata($post);
 				$excerpt        = get_the_excerpt();
@@ -135,7 +139,7 @@ if (!function_exists('mini_posts_list_shortcode')) {
 								'post_mime_type' => 'image',
 								'post_status'    => null,
 								'numberposts'    => -1
-							) ); 
+							) );
 
 							if ( $images ) {
 
@@ -213,7 +217,7 @@ if (!function_exists('mini_posts_list_shortcode')) {
 
 			$output .= '</ul><!-- .mini-posts-list (end) -->';
 			return $output;
-	} 
+	}
 	add_shortcode('mini_posts_list', 'mini_posts_list_shortcode');
-	
+
 }?>

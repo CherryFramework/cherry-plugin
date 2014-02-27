@@ -82,7 +82,7 @@ if (!function_exists('posts_list_shortcode')) {
 			$thumbs_class = 'large';
 
 		$output = '<div class="posts-list '.$custom_class.'">';
-		
+
 		foreach($posts as $key => $post) {
 			// Unset not translated posts
 			if ( function_exists( 'wpml_get_language_information' ) ) {
@@ -103,7 +103,7 @@ if (!function_exists('posts_list_shortcode')) {
 				$image = aq_resize($url, $thumb_width, $thumb_height, true);
 			else
 				$image = aq_resize($url, $thumb_x, $thumb_y, true);
-			
+
 			$mediaType = get_post_meta($post->ID, 'tz_portfolio_type', true);
 			$format = get_post_format();
 
@@ -190,7 +190,7 @@ if (!function_exists('posts_list_shortcode')) {
 							'post_mime_type' => 'image',
 							'post_status'    => null,
 							'numberposts'    => -1
-						) ); 
+						) );
 
 						if ( $images ) {
 
@@ -205,7 +205,7 @@ if (!function_exists('posts_list_shortcode')) {
 								} else {
 									$img = aq_resize($url, $thumb_x, $thumb_y, true);
 								}
-	
+
 								$alt = get_post_meta($attachment->ID, '_wp_attachment_image_alt', true);
 								$image_title = $attachment->post_title;
 
@@ -264,7 +264,7 @@ if (!function_exists('posts_list_shortcode')) {
 								break;
 							case 'none':
 								break;
-							
+
 						}
 						if($link == 'yes'){
 							$output .= '<a href="'.get_permalink($post->ID).'" class="btn btn-primary" title="'.get_the_title($post->ID).'">';
@@ -280,7 +280,7 @@ if (!function_exists('posts_list_shortcode')) {
 						if ($posttags) {
 							$output .= '<footer class="post_footer">'.__('Tags', CHERRY_PLUGIN_DOMAIN).": ";
 							  foreach($posttags as $tag) {
-							    $output .= '<a href="'.get_tag_link($tag->term_id).'" rel="tag">'.$tag->name . '</a> '; 
+							    $output .= '<a href="'.get_tag_link($tag->term_id).'" rel="tag">'.$tag->name . '</a> ';
 							 }
 							 $output .= '</footer>';
 						}
@@ -295,7 +295,7 @@ if (!function_exists('posts_list_shortcode')) {
 			wp_reset_postdata(); // restore the global $post variable
 		$output .= '</div><!-- .posts-list (end) -->';
 		return $output;
-	} 
+	}
 	add_shortcode('posts_list', 'posts_list_shortcode');
 
 }?>

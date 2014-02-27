@@ -25,7 +25,7 @@ if (!function_exists('shortcode_recent_posts')) {
 
 		// WPML filter
 		$suppress_filters = get_option('suppress_filters');
-		
+
 		if($post_format == 'standard') {
 
 			$args = array(
@@ -46,9 +46,9 @@ if (!function_exists('shortcode_recent_posts')) {
 						),
 						'suppress_filters' => $suppress_filters
 					);
-		
+
 		} else {
-		
+
 			$args = array(
 				'post_type'         => $type,
 				'category_name'     => $category,
@@ -69,25 +69,29 @@ if (!function_exists('shortcode_recent_posts')) {
 		}
 
 		$latest = get_posts($args);
-		
+
 		foreach($latest as $k => $post) {
-				// Unset not translated posts
-				if ( function_exists( 'wpml_get_language_information' ) ) {
+				//Check if WPML is activated
+				if ( defined( 'ICL_SITEPRESS_VERSION' ) ) {
 					global $sitepress;
 
-					$check              = wpml_get_language_information( $post->ID );
-					$language_code      = substr( $check['locale'], 0, 2 );
-					if ( $language_code != $sitepress->get_current_language() ) unset( $latest[$k] );
-
+					$post_lang = $sitepress->get_language_for_element($post->ID, 'post_' . $type);
+					$curr_lang = $sitepress->get_current_language();
+					// Unset not translated posts
+					if ( $post_lang != $curr_lang ) {
+						unset( $latest[$k] );
+					}
 					// Post ID is different in a second language Solution
-					if ( function_exists( 'icl_object_id' ) ) $post = get_post( icl_object_id( $post->ID, $type, true ) );
+					if ( function_exists( 'icl_object_id' ) ) {
+						$post = get_post( icl_object_id( $post->ID, $type, true ) );
+					}
 				}
 				setup_postdata($post);
 				$excerpt        = get_the_excerpt();
 				$attachment_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 				$url            = $attachment_url['0'];
 				$image          = aq_resize($url, $thumb_width, $thumb_height, true);
-				
+
 				$post_classes = get_post_class();
 				foreach ($post_classes as $key => $value) {
 					$pos = strripos($value, 'tag-');
@@ -98,62 +102,62 @@ if (!function_exists('shortcode_recent_posts')) {
 				$post_classes = implode(' ', $post_classes);
 
 				$output .= '<li class="recent-posts_li ' . $post_classes . '">';
-				
+
 				//Aside
 				if($post_format == "aside") {
-					
+
 					$output .= the_content($post->ID);
-				
+
 				} elseif ($post_format == "link") {
-				
+
 					$url =  get_post_meta(get_the_ID(), 'tz_link_url', true);
-				
+
 					$output .= '<a target="_blank" href="'. $url . '">';
 					$output .= get_the_title($post->ID);
 					$output .= '</a>';
-				
+
 				//Quote
 				} elseif ($post_format == "quote") {
-				
+
 					$quote =  get_post_meta(get_the_ID(), 'tz_quote', true);
-					
+
 					$output .= '<div class="quote-wrap clearfix">';
-							
+
 							$output .= '<blockquote>';
 								$output .= $quote;
 							$output .= '</blockquote>';
-							
+
 					$output .= '</div>';
-				
+
 				//Image
 				} elseif ($post_format == "image") {
-				
+
 				if (has_post_thumbnail() ) :
-				
+
 					// $lightbox = get_post_meta(get_the_ID(), 'tz_image_lightbox', TRUE);
-					
+
 					$src      = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), array( '9999','9999' ), false, '' );
-					
+
 					$thumb    = get_post_thumbnail_id();
 					$img_url  = wp_get_attachment_url( $thumb,'full'); //get img URL
 					$image    = aq_resize( $img_url, 200, 120, true ); //resize & crop img
-					
-					
+
+
 					$output .= '<figure class="thumbnail featured-thumbnail large">';
 						$output .= '<a class="image-wrap" rel="prettyPhoto" title="' . get_the_title($post->ID) . '" href="' . $src[0] . '">';
 						$output .= '<img src="' . $image . '" alt="' . get_the_title($post->ID) .'" />';
 						$output .= '<span class="zoom-icon"></span></a>';
 					$output .= '</figure>';
-				
+
 				endif;
-				
-				
+
+
 				//Audio
 				} elseif ($post_format == "audio") {
-				
+
 					$template_url = get_template_directory_uri();
 					$id           = $post->ID;
-					
+
 					// get audio attribute
 					$audio_title  = get_post_meta(get_the_ID(), 'tz_audio_title', true);
 					$audio_artist = get_post_meta(get_the_ID(), 'tz_audio_artist', true);
@@ -162,7 +166,7 @@ if (!function_exists('shortcode_recent_posts')) {
 
 					$content_url = content_url();
 					$content_str = 'wp-content';
-					
+
 					$pos    = strpos($audio_url, $content_str);
 					if ($pos === false) {
 						$file = $audio_url;
@@ -170,7 +174,7 @@ if (!function_exists('shortcode_recent_posts')) {
 						$audio_new = substr($audio_url, $pos+strlen($content_str), strlen($audio_url) - $pos);
 						$file      = $content_url.$audio_new;
 					}
-						
+
 					$output .= '<script type="text/javascript">
 						jQuery(document).ready(function(){
 							var myPlaylist_'. $id.'  = new jPlayerPlaylist({
@@ -181,7 +185,7 @@ if (!function_exists('shortcode_recent_posts')) {
 								title:"'. $audio_title .'",
 								artist:"'. $audio_artist .'",
 								'. $audio_format .' : "'. stripslashes(htmlspecialchars_decode($file)) .'"}
-							], { 
+							], {
 								playlistOptions: {enableRemoveControls: false},
 								ready: function () {jQuery(this).jPlayer("setMedia", {'. $audio_format .' : "'. stripslashes(htmlspecialchars_decode($file)) .'", poster: "'. $image .'"});
 							},
@@ -191,7 +195,7 @@ if (!function_exists('shortcode_recent_posts')) {
 							});
 						});
 						</script>';
-						
+
 					$output .= '<div id="jquery_jplayer_'.$id.'" class="jp-jplayer"></div>
 								<div id="jp_container_'.$id.'" class="jp-audio">
 									<div class="jp-type-single">
@@ -233,18 +237,18 @@ if (!function_exists('shortcode_recent_posts')) {
 										</ul>
 									</div>
 								</div>';
-				
-				
+
+
 				$output .= '<div class="entry-content">';
 					$output .= get_the_content($post->ID);
 				$output .= '</div>';
-				
+
 				//Video
 				} elseif ($post_format == "video") {
-					
+
 					$template_url = get_template_directory_uri();
 					$id           = $post->ID;
-				
+
 					// get video attribute
 					$video_title  = get_post_meta(get_the_ID(), 'tz_video_title', true);
 					$video_artist = get_post_meta(get_the_ID(), 'tz_video_artist', true);
@@ -254,7 +258,7 @@ if (!function_exists('shortcode_recent_posts')) {
 
 					$content_url = content_url();
 					$content_str = 'wp-content';
-					
+
 					$pos1 = strpos($m4v_url, $content_str);
 					if ($pos1 === false) {
 						$file1 = $m4v_url;
@@ -270,7 +274,7 @@ if (!function_exists('shortcode_recent_posts')) {
 						$ogv_new  = substr($ogv_url, $pos2+strlen($content_str), strlen($ogv_url) - $pos2);
 						$file2    = $content_url.$ogv_new;
 					}
-					
+
 					// get thumb
 					if(has_post_thumbnail()) {
 						$thumb   = get_post_thumbnail_id();
@@ -336,16 +340,16 @@ if (!function_exists('shortcode_recent_posts')) {
 					} else {
 						$output .= '<div class="video-wrap">' . stripslashes(htmlspecialchars_decode($embed)) . '</div>';
 					}
-					
+
 					if($excerpt_count >= 1){
 						$output .= '<div class="excerpt">';
 							$output .= my_string_limit_words($excerpt,$excerpt_count);
 						$output .= '</div>';
 				}
-				
+
 				//Standard
 				} else {
-				
+
 					if ($thumb == 'true') {
 						if ( has_post_thumbnail($post->ID) ){
 							$output .= '<figure class="thumbnail featured-thumbnail"><a href="'.get_permalink($post->ID).'" title="'.get_the_title($post->ID).'">';
@@ -406,23 +410,23 @@ if (!function_exists('shortcode_recent_comments')) {
 			global $sitepress;
 			$sql = "
 				SELECT * FROM {$wpdb->comments}
-				JOIN {$wpdb->prefix}icl_translations 
-				ON {$wpdb->comments}.comment_post_id = {$wpdb->prefix}icl_translations.element_id 
-				AND {$wpdb->prefix}icl_translations.element_type='post_post' 
-				WHERE comment_approved = '1' 
-				AND language_code = '".$sitepress->get_current_language()."' 
+				JOIN {$wpdb->prefix}icl_translations
+				ON {$wpdb->comments}.comment_post_id = {$wpdb->prefix}icl_translations.element_id
+				AND {$wpdb->prefix}icl_translations.element_type='post_post'
+				WHERE comment_approved = '1'
+				AND language_code = '".$sitepress->get_current_language()."'
 				ORDER BY comment_date_gmt DESC LIMIT {$num}";
 		} else {
 			$sql = "
 				SELECT * FROM $wpdb->comments
-				LEFT OUTER JOIN $wpdb->posts 
+				LEFT OUTER JOIN $wpdb->posts
 				ON ($wpdb->comments.comment_post_ID = $wpdb->posts.ID)
-				WHERE comment_approved = '1' 
-				AND comment_type = '' 
+				WHERE comment_approved = '1'
+				AND comment_type = ''
 				AND post_password = ''
 				ORDER BY comment_date_gmt DESC LIMIT {$num}";
 		}
-		
+
 		$comment_len = 100;
 		$comments = $wpdb->get_results($sql);
 
@@ -431,7 +435,7 @@ if (!function_exists('shortcode_recent_comments')) {
 		foreach ($comments as $comment) {
 			$output .= '<li>';
 				$output .= '<a href="'.get_comment_link($comment->comment_ID).'" title="on '.get_the_title($comment->comment_post_ID).'">';
-					$output .= strip_tags($comment->comment_author).' : ' . strip_tags(substr(apply_filters('get_comment_text', $comment->comment_content), 0, $comment_len)); 
+					$output .= strip_tags($comment->comment_author).' : ' . strip_tags(substr(apply_filters('get_comment_text', $comment->comment_content), 0, $comment_len));
 					if (strlen($comment->comment_content) > $comment_len) $output .= '...';
 				$output .= '</a>';
 			$output .= '</li>';
@@ -467,21 +471,25 @@ if (!function_exists('shortcode_recenttesti')) {
 		$testi = get_posts($args);
 
 		$output = '<div class="testimonials '.$custom_class.'">';
-		
+
 		global $post;
 		global $my_string_limit_words;
 
 		foreach ($testi as $k => $post) {
-			// Unset not translated posts
-			if ( function_exists( 'wpml_get_language_information' ) ) {
+			//Check if WPML is activated
+			if ( defined( 'ICL_SITEPRESS_VERSION' ) ) {
 				global $sitepress;
 
-				$check              = wpml_get_language_information( $post->ID );
-				$language_code      = substr( $check['locale'], 0, 2 );
-				if ( $language_code != $sitepress->get_current_language() ) unset( $testi[$k] );
-
+				$post_lang = $sitepress->get_language_for_element($post->ID, 'post_testi');
+				$curr_lang = $sitepress->get_current_language();
+				// Unset not translated posts
+				if ( $post_lang != $curr_lang ) {
+					unset( $testi[$k] );
+				}
 				// Post ID is different in a second language Solution
-				if ( function_exists( 'icl_object_id' ) ) $post = get_post( icl_object_id( $post->ID, 'testi', true ) );
+				if ( function_exists( 'icl_object_id' ) ) {
+					$post = get_post( icl_object_id( $post->ID, 'testi', true ) );
+				}
 			}
 			setup_postdata($post);
 			$excerpt        = get_the_excerpt();
@@ -508,26 +516,26 @@ if (!function_exists('shortcode_recenttesti')) {
 				$output .= '</blockquote>';
 
 				$output .= '<small class="testi-meta">';
-					if( isset($testiname) ) { 
+					if( isset($testiname) ) {
 						$output .= '<span class="user">';
 							$output .= $testiname;
 						$output .= '</span>';
 					}
-					
-					if( isset($testiinfo) ) { 
+
+					if( isset($testiinfo) ) {
 						$output .= ', <span class="info">';
 							$output .= $testiinfo;
 						$output .= '</span><br>';
 					}
-					
-					if( isset($testiurl) ) { 
+
+					if( isset($testiurl) ) {
 						$output .= '<a href="'.$testiurl.'">';
 							$output .= $testiurl;
 						$output .= '</a>';
 					}
-					
+
 				$output .= '</small>';
-					
+
 			$output .= '</div>';
 
 		}
@@ -579,7 +587,7 @@ if (!function_exists('shortcode_video_preview')) {
 		$video_url = parser_video_url(get_post_meta($post_ID, 'tz_video_embed', true));
 		$get_image_url = video_image($video_url);
 		$img='';
-		
+
 		if($title=="yes"){
 			$output_title = '<h4><a href="'.$post_url.'" title="'.$get_post->post_title.'">'.$get_post->post_title.'</a></h4>';
 		}

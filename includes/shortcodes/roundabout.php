@@ -18,8 +18,8 @@ if (!function_exists('shortcode_roundabout')) {
 			'custom_class'     => ''
 		), $atts));
 
-		wp_enqueue_script( 'roundabout_script', CHERRY_PLUGIN_URL . 'lib/roundabout/jquery.roundabout.min.js', array('jquery') );
-		wp_enqueue_script( 'roundabout_shape', CHERRY_PLUGIN_URL . 'lib/roundabout/jquery.roundabout-shapes.min.js', array('jquery') );
+		wp_enqueue_script( 'roundabout_script', CHERRY_PLUGIN_URL . 'lib/js/roundabout/jquery.roundabout.min.js', array('jquery') );
+		wp_enqueue_script( 'roundabout_shape', CHERRY_PLUGIN_URL . 'lib/js/roundabout/jquery.roundabout-shapes.min.js', array('jquery') );
 
 		$ra_id = uniqid();
 
@@ -47,7 +47,7 @@ if (!function_exists('shortcode_roundabout')) {
 			$output .= '<h2>'.$title.'</h2>';
 		}
 		$output .= '<ul id="roundabout-list-'.$ra_id.'" class="unstyled">';
-		
+
 		global $post;
 
 		// WPML filter
@@ -65,18 +65,22 @@ if (!function_exists('shortcode_roundabout')) {
 
 		$posts = get_posts($args);
 		$i = 1;
-		
+
 		foreach($posts as $key => $post) {
-			// Unset not translated posts
-			if ( function_exists( 'wpml_get_language_information' ) ) {
+			//Check if WPML is activated
+			if ( defined( 'ICL_SITEPRESS_VERSION' ) ) {
 				global $sitepress;
 
-				$check              = wpml_get_language_information( $post->ID );
-				$language_code      = substr( $check['locale'], 0, 2 );
-				if ( $language_code != $sitepress->get_current_language() ) unset( $posts[$key] );
-
+				$post_lang = $sitepress->get_language_for_element($post->ID, 'post_' . $type_post);
+				$curr_lang = $sitepress->get_current_language();
+				// Unset not translated posts
+				if ( $post_lang != $curr_lang ) {
+					unset( $posts[$key] );
+				}
 				// Post ID is different in a second language Solution
-				if ( function_exists( 'icl_object_id' ) ) $post = get_post( icl_object_id( $post->ID, $type_post, true ) );
+				if ( function_exists( 'icl_object_id' ) ) {
+					$post = get_post( icl_object_id( $post->ID, $type_post, true ) );
+				}
 			}
 			setup_postdata($post);
 

@@ -22,7 +22,7 @@ if (!function_exists('shortcode_post_cycle')) {
 				'navigation'       => 'true',
 				'custom_class'     => ''
 		), $atts));
-		
+
 		$type_post         = $type;
 		$slider_pagination = $pagination;
 		$slider_navigation = $navigation;
@@ -42,13 +42,13 @@ if (!function_exists('shortcode_post_cycle')) {
 		$output .= '</script>';
 		$output .= '<div id="flexslider_'.$random.'" class="flexslider no-bg '.$custom_class.'">';
 			$output .= '<ul class="slides">';
-			
+
 			global $post;
 			global $my_string_limit_words;
 
 			// WPML filter
 			$suppress_filters = get_option('suppress_filters');
-			
+
 			$args = array(
 				'post_type'              => $type_post,
 				'category_name'          => $category,
@@ -60,18 +60,22 @@ if (!function_exists('shortcode_post_cycle')) {
 			);
 
 			$latest = get_posts($args);
-			
+
 			foreach($latest as $key => $post) {
-				// Unset not translated posts
-				if ( function_exists( 'wpml_get_language_information' ) ) {
+				//Check if WPML is activated
+				if ( defined( 'ICL_SITEPRESS_VERSION' ) ) {
 					global $sitepress;
 
-					$check              = wpml_get_language_information( $post->ID );
-					$language_code      = substr( $check['locale'], 0, 2 );
-					if ( $language_code != $sitepress->get_current_language() ) unset( $latest[$key] );
-
+					$post_lang = $sitepress->get_language_for_element($post->ID, 'post_' . $type_post);
+					$curr_lang = $sitepress->get_current_language();
+					// Unset not translated posts
+					if ( $post_lang != $curr_lang ) {
+						unset( $latest[$key] );
+					}
 					// Post ID is different in a second language Solution
-					if ( function_exists( 'icl_object_id' ) ) $post = get_post( icl_object_id( $post->ID, $type_post, true ) );
+					if ( function_exists( 'icl_object_id' ) ) {
+						$post = get_post( icl_object_id( $post->ID, $type_post, true ) );
+					}
 				}
 				setup_postdata($post);
 				$excerpt        = get_the_excerpt();
@@ -80,7 +84,7 @@ if (!function_exists('shortcode_post_cycle')) {
 				$image          = aq_resize($url, $thumb_width, $thumb_height, true);
 
 				$output .= '<li>';
-					
+
 					if ($thumb == 'true') {
 
 						if ( has_post_thumbnail($post->ID) ){
@@ -100,7 +104,7 @@ if (!function_exists('shortcode_post_cycle')) {
 								'post_mime_type' => 'image',
 								'post_status'    => null,
 								'numberposts'    => -1
-							) ); 
+							) );
 
 							if ( $images ) {
 
@@ -126,11 +130,11 @@ if (!function_exists('shortcode_post_cycle')) {
 							}
 						}
 					}
-					
+
 					$output .= '<h5><a href="'.get_permalink($post->ID).'" title="'.get_the_title($post->ID).'">';
 					$output .= get_the_title($post->ID);
 					$output .= '</a></h5>';
-					
+
 					if($meta == 'true'){
 						$output .= '<span class="meta">';
 						$output .= '<span class="post-date">';
@@ -172,19 +176,19 @@ if (!function_exists('shortcode_post_cycle')) {
 							$output .="";
 					};
 					$output .= '</div>';
-					
+
 					if($excerpt_count >= 1){
 						$output .= '<p class="excerpt">';
 						$output .= my_string_limit_words($excerpt,$excerpt_count);
 						$output .= '</p>';
 					}
-					
+
 					if($more_text_single!=""){
 						$output .= '<a href="'.get_permalink($post->ID).'" class="btn btn-primary" title="'.get_the_title($post->ID).'">';
 						$output .= $more_text_single;
 						$output .= '</a>';
 					}
-					
+
 				$output .= '</li>';
 			}
 			wp_reset_postdata(); // restore the global $post variable
@@ -193,5 +197,5 @@ if (!function_exists('shortcode_post_cycle')) {
 		return $output;
 	}
 	add_shortcode('post_cycle', 'shortcode_post_cycle');
-	
+
 }?>
