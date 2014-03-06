@@ -63,8 +63,24 @@ if ( !function_exists('shortcode_carousel') ) {
 					$carousel_posts = get_posts( $args );
 
 					foreach ( $carousel_posts as $key => $post ) {
+						$post_id = $post->ID;
+
+						//Check if WPML is activated
+						if ( defined( 'ICL_SITEPRESS_VERSION' ) ) {
+							global $sitepress;
+
+							$post_lang = $sitepress->get_language_for_element( $post_id, 'post_' . $type );
+							$curr_lang = $sitepress->get_current_language();
+							// Unset not translated posts
+							if ( $post_lang != $curr_lang ) {
+								unset( $carousel_posts[$j] );
+							}
+							// Post ID is different in a second language Solution
+							if ( function_exists( 'icl_object_id' ) ) {
+								$post = get_post( icl_object_id( $post_id, $type, true ) );
+							}
+						}
 						setup_postdata( $post ); // very important
-						$post_id         = $post->ID;
 						$post_title      = esc_html( get_the_title( $post_id ) );
 						$post_title_attr = esc_attr( strip_tags( get_the_title( $post_id ) ) );
 						$format          = get_post_format( $post_id );
@@ -78,18 +94,6 @@ if ( !function_exists('shortcode_carousel') ) {
 							$excerpt = wp_strip_all_tags( get_the_excerpt() );
 						} else {
 							$excerpt = wp_strip_all_tags( strip_shortcodes (get_the_content() ) );
-						}
-
-						// Unset not translated posts
-						if ( function_exists( 'wpml_get_language_information' ) ) {
-							global $sitepress;
-
-							$check              = wpml_get_language_information( $post_id );
-							$language_code      = substr( $check['locale'], 0, 2 );
-							if ( $language_code != $sitepress->get_current_language() ) unset( $carousel_posts[$key] );
-
-							// Post ID is different in a second language Solution
-							if ( function_exists( 'icl_object_id' ) ) $post = get_post( icl_object_id( $post_id, $type, true ) );
 						}
 
 						$output .= '<li class="es-carousel_li ' . $format . ' clearfix">';
