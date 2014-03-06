@@ -1512,3 +1512,153 @@ iframe .uiHeader h3{
 		}
 	}
 }
+//--------------------------------------------------------
+// Instagram Widget
+//--------------------------------------------------------
+div[id^="cherry_instagram_widget"]{
+	ul{
+		margin: 0;
+		li{
+			list-style: none;
+			
+			figure{
+				margin: 0 0 9px 0;
+				position: relative;
+				.img_wrapp{
+					display: block;
+					position: relative;
+					margin-bottom: 10px;
+				}
+				.img_likes, .img_commetn_count, .img_public_date, .img_description{
+					i{
+						font-size: 16px;
+						margin-right: 0em;
+						padding-right: 0.5em;
+						color: #999;
+					}
+				}
+				.img_likes, .img_commetn_count{
+					-webkit-transition:all 0.3s ease-out;
+					transition:all 0.3s ease-out;
+					opacity: 0;
+					visibility: hidden;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					text-align: center;
+					width: 35px;
+					padding-top: 9px;
+					i{
+						font-size: 35px;
+						position: absolute;
+						top: 0;
+						left: 0;
+						z-index: 5;
+					}
+					.counter{
+						position: relative;
+						z-index: 6;
+						color: #fff;
+						font-size: 15px;
+						font-weight: 700;
+					}
+				}
+				&:hover{
+					.img_likes, .img_commetn_count{
+						visibility: visible;
+						opacity: 1;
+					}
+				};
+				.img_likes{
+					margin: -15px 0 0 -40px;
+					padding-top: 7px;
+					i{
+						color: rgba(255, 0, 0, 0.8);
+
+					}
+				}
+				.img_commetn_count{
+					margin: -15px 0 0 5px;
+					i{
+						color: rgba(0, 122, 255, 0.8);
+					}
+				}
+				.img_public_date{
+					display: block;
+					margin-bottom: 10px;
+				}
+				.img_description{
+					display: block;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+	.img_thumbnail{
+		ul{
+			margin-left: -10px;
+			li{
+				display: inline-block;
+				vertical-align: top;
+				width: 145px;
+				margin-left: 10px;
+			}
+		}
+		@media (min-width: 1200px){
+			ul{
+				margin-left: -30px;
+				li{
+					margin-left: 30px;
+					width: 150px;
+				}
+			}
+		}
+		@media (max-width: 979px) and (min-width: 768px){
+			ul{
+				li{
+					width: 109px;
+				}
+			}
+		}
+		@media (max-width: 767px){
+			ul{
+				margin-left: -2%;
+				li{
+					margin-left: 2%;
+					width: 18%;
+				}
+			}
+		}
+		@media (max-width: 610px){
+			ul{
+				li{
+					width: 23%;
+				}
+			}
+		}
+		@media (max-width: 480px){
+			ul{
+				margin-left: -3%;
+				li{
+					margin-left: 3%;
+					width: 30%;
+				}
+			}
+		}
+	}
+}
+/*.ie8{
+	div[id^="cherry_instagram_widget"]{
+		.img_likes{
+			i{
+				color: rgba(255, 0, 0);
+
+			}
+		}
+		.img_commetn_count{
+			i{
+				color: rgba(0, 122, 255);
+			}
+		}
+	}
+}*/

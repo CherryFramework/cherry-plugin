@@ -1,7 +1,8 @@
 jQuery(document).ready(function(){
-	var inactive_holder = jQuery('#wp_inactive_widgets');
-
-	jQuery('.description', inactive_holder).after('<a href="#" style="float: right; margin: 2px 4px 5px 5px;" class="button remove_inactive">'+remove_widgets_text+'</a>')
+	if(remove_widgets_text){
+		var inactive_holder = jQuery('#wp_inactive_widgets');
+		jQuery('.description', inactive_holder).after('<a href="#" style="float: right; margin: 2px 4px 5px 5px;" class="button remove_inactive">'+remove_widgets_text+'</a>');
+	}
 	jQuery('.remove_inactive').click(
 		function () {
 			jQuery.post(

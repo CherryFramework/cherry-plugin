@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ru_RU\n"
-"POT-Creation-Date: 2013-11-12 17:18+0200\n"
-"PO-Revision-Date: 2013-11-12 17:19+0200\n"
+"POT-Creation-Date: 2014-02-25 10:48+0200\n"
+"PO-Revision-Date: 2014-03-03 15:09+0200\n"
 "Last-Translator: Alex Ross <alex@template-telp.com>\n"
 "Language-Team:  <demolink@info.org>\n"
 "MIME-Version: 1.0\n"
@@ -11,30 +11,29 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ./\n"
+"Language: ru_RU\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../admin/admin.php:17
-#, fuzzy
+#: ../admin/admin.php:28
 msgid "Cherry plugin"
-msgstr "Настройки Cherry"
+msgstr "Плагин Cherry"
 
-#: ../admin/admin.php:20
-#, fuzzy
-msgid "Main Page"
-msgstr "Страница"
+#: ../admin/admin.php:31 ../admin/admin.php:52
+msgid "Summary"
+msgstr "Основные положения"
 
-#: ../admin/admin.php:23
-msgid "Import"
-msgstr "Импорт"
+#: ../admin/admin.php:34 ../admin/plugin-maintenance-mode.php:57
+#: ../admin/plugin-pages.php:100
+msgid "Maintenance Mode"
+msgstr "Режим технического обслуживания"
 
-#: ../admin/admin.php:26
-msgid "Export"
-msgstr "Экспорт"
+#: ../admin/admin.php:37
+msgid "Import Content"
+msgstr "Импортировать контент"
 
-#: ../admin/admin.php:38
-#, fuzzy
-msgid "Settings"
-msgstr "Настройки ссылок"
+#: ../admin/admin.php:40 ../admin/import-export/export.php:30
+msgid "Export Content"
+msgstr "Экспортировать контент"
 
 #: ../admin/plugin-components.php:36
 msgid "Documentation"
@@ -44,48 +43,235 @@ msgstr "Документация"
 msgid "Support"
 msgstr "Поддержка"
 
-#: ../admin/plugin-pages.php:5
-#, fuzzy
-msgid "Cherry Plugin"
-msgstr "Настройки Cherry"
+#: ../admin/plugin-function.php:5
+msgid "Remove Inactive Widgets"
+msgstr "Удалить неактивные виджеты"
 
-#: ../admin/plugin-pages.php:13
-#, fuzzy
-msgid "Cherry Import"
-msgstr "Магазин Cherry"
+#: ../admin/plugin-function.php:23
+msgid "CTRL+A (Command-A) to select all files"
+msgstr "CTRL+A (Command-A) чтобы выбрать все файлы"
 
-#: ../admin/plugin-pages.php:45
-#, fuzzy
-msgid "Cherry Export"
-msgstr "Магазин Cherry"
+#: ../admin/plugin-function.php:37
+msgid "Files are downloaded as a .zip archive"
+msgstr "Файлы скачены как архив .zip "
 
-#: ../admin/import-export/import.php:1
-msgid ""
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, "
-"vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo\n"
-"lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend "
-"tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. "
-"Quisque nec\n"
-"mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, "
-"elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam\n"
-"mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. "
-"Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque\n"
-"laoreet sem sit amet orci ullamcorper at ultricies metus viverra. "
-"Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.\n"
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, "
-"vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo\n"
-"lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend "
-"tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. "
-"Quisque nec\n"
-"mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, "
-"elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam\n"
-"mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. "
-"Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque\n"
-"laoreet sem sit amet orci ullamcorper at ultricies metus viverra. "
-"Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam."
+#: ../admin/plugin-maintenance-mode.php:62
+msgid "Enable this option to activate website maintenance mode."
 msgstr ""
+"Включите эту опцию, чтобы активировать режим технического обслуживания на "
+"сайте."
 
-#: ../admin/import-export/import.php:66
+#: ../admin/plugin-maintenance-mode.php:68
+msgid "Display Logo?"
+msgstr "Отображать лого?"
+
+#: ../admin/plugin-maintenance-mode.php:73
+msgid ""
+"Enable this option to display website logo at the under construction page"
+msgstr ""
+"Включите эту опцию, чтобы отображать логотип сайта на странице \"В стадии "
+"разработки\"."
+
+#: ../admin/plugin-maintenance-mode.php:79
+msgid "Description."
+msgstr "Описание."
+
+#: ../admin/plugin-maintenance-mode.php:89
+#: ../admin/plugin-maintenance-mode.php:94
+msgid "Display timer?"
+msgstr "Отображать таймер?"
+
+#: ../admin/plugin-maintenance-mode.php:100
+msgid "Website launch date."
+msgstr "Дата запуска сайта."
+
+#: ../admin/plugin-maintenance-mode.php:101
+msgid "Date is not correct."
+msgstr "Неправильная дата."
+
+#: ../admin/plugin-maintenance-mode.php:105
+msgid "Year:"
+msgstr "Год:"
+
+#: ../admin/plugin-maintenance-mode.php:107
+msgid "Month:"
+msgstr "Месяц:"
+
+#: ../admin/plugin-maintenance-mode.php:109
+msgid "Day:"
+msgstr "День:"
+
+#: ../admin/plugin-maintenance-mode.php:113
+msgid "Hour:"
+msgstr "Час:"
+
+#: ../admin/plugin-maintenance-mode.php:115
+msgid "Minute:"
+msgstr "Минута:"
+
+#: ../admin/plugin-maintenance-mode.php:123
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: ../admin/plugin-pages.php:6
+msgid "Cherry Plugin"
+msgstr "Плагин Cherry"
+
+#: ../admin/plugin-pages.php:11
+msgid ""
+"Cherry Plugin has been released with intention to separate widgets, "
+"shortcodes and data management logics with theme editor options. Cherry "
+"Plugin is installed automatically on CherryFramework installation and is "
+"required for the correct work of CherryFramework.  "
+msgstr ""
+"Плагин Cherry был создан с целью разделения управления виджетами, "
+"шорткодами, контентом с  редактором опций темы. Плагин Cherry "
+"устанавливается автоматически на Cherry Framework и необходим для корректной "
+"работы фреймворка."
+
+#: ../admin/plugin-pages.php:15 ../admin/import-export/import.php:80
+msgid "Files Import demo"
+msgstr "Демонстрация импорта файлов"
+
+#: ../admin/plugin-pages.php:19
+msgid "Import"
+msgstr "Импорт"
+
+#: ../admin/plugin-pages.php:20
+msgid ""
+"Option to import website content from the backup. Select all files from the "
+"backup archive and drag them to the upload files area to start uploading."
+msgstr ""
+"Опция импорта контента сайта с резервной копии. Выберите все файлы из архива "
+"резервной копии и перетащите их в зону загрузки файлов, чтобы начать "
+"загрузку."
+
+#: ../admin/plugin-pages.php:26
+msgid "Files Export demo"
+msgstr "Демонстрация экспорта файлов"
+
+#: ../admin/plugin-pages.php:30
+msgid "Export"
+msgstr "Экспорт"
+
+#: ../admin/plugin-pages.php:31
+msgid ""
+"Option to backup your website data creating a downloadable archive. Use this "
+"option to keep your website data on performing some serious modifications or "
+"moving website to other hosting."
+msgstr ""
+"Опция создания резервной копии контента сайта с помощью скачиваемого архива. "
+"Используйте ее для сохранения контента сайта при различных серьезных "
+"изменениях или при перенесении сайта на другой хостинг."
+
+#: ../admin/plugin-pages.php:42
+msgid "Widgets"
+msgstr "Виджеты"
+
+#: ../admin/plugin-pages.php:43
+msgid ""
+"Cherry Widgets offer additional ways to place content to widget areas. "
+"Several available widget will allow you to add more functionality to your "
+"website."
+msgstr ""
+"Виджеты Cherry предлагают дополнительные способы размещения контента в поля "
+"для виджетов. Доступные виджеты позволят Вам добавить на сайт больше "
+"функционала."
+
+#: ../admin/plugin-pages.php:52
+msgid "Shortcodes"
+msgstr "Шорткоды"
+
+#: ../admin/plugin-pages.php:53
+msgid ""
+"Cherry Plugin adds various widgets to the post editor. Shortcodes allow to "
+"create various content structures in WordPress posts. Use \"Insert Shortcode"
+"\" icon in post editor toolbar to add shortcodes."
+msgstr ""
+"Плагин Cherry добавляет различные виджеты в редактор записей. Шорткоды "
+"позволяют создавать разные структуры контента в постах WordPress. "
+"Используйте иконку \"Вставить шорткод\" на панели инструментов редактора, "
+"чтобы добавить шорткод."
+
+#: ../admin/plugin-pages.php:53
+msgid "Learn more"
+msgstr "Подробнее"
+
+#: ../admin/plugin-pages.php:79
+msgid "Cherry Content Import"
+msgstr "Импорт контента Cherry"
+
+#: ../admin/plugin-pages.php:90
+msgid "Cherry Content Export"
+msgstr "Экспорт контента Cherry"
+
+#: ../admin/import-export/export-functions.php:14
+msgid "Export content done"
+msgstr "Экспорт контента завершен"
+
+#: ../admin/import-export/export.php:28
+msgid ""
+"Export allows you to create a backup of your website content in one click. "
+"You'll get a downloaded archive containing all website data: images, audio, "
+"video and other files from your media library. XML file with your posts and "
+"categories data, JSON file with widget settings. You can use downloaded "
+"archive to move your website to other hosting server or restore website "
+"data. "
+msgstr ""
+"Экспорт позволяет создать резервную копию контента Вашего сайта одним "
+"нажатием кнопки. Вы получите скачиваемый архив, который содержит контент "
+"сайта: картинки, аудио, видео и другие файлы из Медиа библиотеки. Файл XML "
+"содержит ваши посты и информацию о категориях, файл JSON  - настройки "
+"виджетов. Вы можете использовать скаченый архив для того, чтобы перенести "
+"ваш сайт на другой хостинг сервер или восстановить контент сайта."
+
+#: ../admin/import-export/export.php:29
+msgid "Please note! "
+msgstr "Внимание!"
+
+#: ../admin/import-export/export.php:29
+msgid ""
+"XML file doesn't contain any user data except name and email of the website "
+"administrator."
+msgstr ""
+"Файл .XML не содержит никакой информации пользователя кроме имени и адреса "
+"электронной почты администратора сайта."
+
+#: ../admin/import-export/import-check-settings.php:46
+msgid "Your browser is out of date!"
+msgstr "Ваш браузер устарел!"
+
+#: ../admin/import-export/import-check-settings.php:49
+#, php-format
+msgid ""
+"It looks like you're using an insecure version of <a href='%s'>%s</a>. Using "
+"an outdated browser makes your computer unsafe. For the best WordPress "
+"experience, please update your browser."
+msgstr ""
+"Вы используете ненадежную версию <a href='%s'>%s</a>.  Использование "
+"устаревшего браузера делает Ваш компьютер уязвимым. Для лучшей работы "
+"WordPress, пожалуйста, обновите Ваш браузер."
+
+#: ../admin/import-export/import-check-settings.php:51
+#, php-format
+msgid ""
+"It looks like you're using an old version of <a href='%s'>%s</a>. For the "
+"best WordPress experience, please update your browser."
+msgstr ""
+"Вы используете устаревшую версию <a href='%s'>%s</a>.  Для лучшей работы "
+"WordPress, пожалуйста, обновите Ваш браузер."
+
+#: ../admin/import-export/import-check-settings.php:68
+#, php-format
+msgid ""
+"<a href=\"%1$s\" class=\"update-browser-link\">Update %2$s</a> or learn how "
+"to <a href=\"%3$s\" class=\"browse-happy-link\">browse happy</a>"
+msgstr ""
+"<a href=\"%1$s\" class=\"update-browser-link\">Обновить %2$s</a> или узнать "
+"как <a href=\"%3$s\" class=\"browse-happy-link\">использовать другой "
+"браузер</a>"
+
+#: ../admin/import-export/import-check-settings.php:75
 msgid ""
 "Some of your server settings do not meet the requirements for installing the "
 "sample data. Please, consult with your hosting provider on how to increase "
@@ -95,257 +281,497 @@ msgstr ""
 "установки демонстрационных данных. Уточните, пожалуйста, у Вашего хостера, "
 "как увеличить требуемые параметры."
 
-#: ../admin/import-export/import.php:69
+#: ../admin/import-export/import-check-settings.php:78
 msgid "Server Settings"
 msgstr "Настройки сервера"
 
-#: ../admin/import-export/import.php:70
+#: ../admin/import-export/import-check-settings.php:79
 msgid "Current"
 msgstr "Текущие"
 
-#: ../admin/import-export/import.php:71
+#: ../admin/import-export/import-check-settings.php:80
 msgid "Required"
 msgstr "Требуется"
 
-#: ../admin/import-export/import.php:104
-#: ../includes/shortcodes/shortcodes.php:213
-msgid "Next"
-msgstr "Следующая"
+#: ../admin/import-export/import-check-settings.php:104
+msgid "Continue"
+msgstr "Продолжить"
+
+#: ../admin/import-export/import.php:32
+msgid "Upload Error"
+msgstr "Ошибка загрузки"
+
+#: ../admin/import-export/import.php:33
+msgid "The file is too big!"
+msgstr "Файл слишком тяжелый!"
+
+#: ../admin/import-export/import.php:34
+msgid "The file type is error!"
+msgstr "Ошибка формата файла!"
+
+#: ../admin/import-export/import.php:35
+msgid "Folder cannot be uploaded!"
+msgstr "Папка не может быть загружена!"
+
+#: ../admin/import-export/import.php:36
+msgid "Uploading"
+msgstr "Загрузка"
+
+#: ../admin/import-export/import.php:37 ../admin/import-export/import.php:111
+msgid "Upload"
+msgstr "Загрузить"
+
+#: ../admin/import-export/import.php:38
+msgid "Upload Complete"
+msgstr "Загрузка завершена"
+
+#: ../admin/import-export/import.php:39 ../admin/import-export/import.php:95
+msgid "item"
+msgstr "пункт"
+
+#: ../admin/import-export/import.php:40
+msgid "items"
+msgstr "пункты"
+
+#: ../admin/import-export/import.php:41
+msgid ""
+"Sample data installing. Some steps may take some time depending on your "
+"server settings. Please be patient."
+msgstr ""
+"Идет установка демо-контента. Некоторые шаги могут занять время, в "
+"зависимости от настроек Вашего сервера. Пожалуйста, будьте терпеливы."
+
+#: ../admin/import-export/import.php:42
+msgid "Upload complete please click Continue Install button to proceed."
+msgstr ""
+"Загрузка завершена, пожалуйста, нажмите кнопку  \"Продолжить установку\", "
+"чтобы перейти к следующему шагу."
+
+#: ../admin/import-export/import.php:44
+msgid "Importing XML"
+msgstr "Импорт XML"
+
+#: ../admin/import-export/import.php:45
+msgid "Importing categories"
+msgstr "Идет импорт категорий."
+
+#: ../admin/import-export/import.php:46
+msgid "Importing tags"
+msgstr "Импорт тегов."
+
+#: ../admin/import-export/import.php:47
+msgid "Processing dependencies"
+msgstr "Обработка структур"
+
+#: ../admin/import-export/import.php:48
+msgid "Importing posts. This may take some time. Please wait."
+msgstr ""
+"Импорт постов. Это может занять некоторое время. Пожалуйста, подождите."
+
+#: ../admin/import-export/import.php:49
+msgid "Importing menu items. This may take some time. Please wait."
+msgstr ""
+"Импорт пунктов меню. Это может занять некоторое время. Пожалуйста, подождите."
+
+#: ../admin/import-export/import.php:50
+msgid "Importing media library."
+msgstr "Импорт медиа библиотеки."
+
+#: ../admin/import-export/import.php:51
+msgid "Importing attachements meta."
+msgstr "Идет импорт мета данных вложений."
+
+#: ../admin/import-export/import.php:52
+msgid "Generating attachements meta. This may take some time. Please wait."
+msgstr ""
+"Идет создание мета данныхвложений. Это может занять некоторое время. "
+"Пожалуйста, подождите."
+
+#: ../admin/import-export/import.php:53
+msgid "Generating content hierarchy"
+msgstr "Идет создание иерархии контента."
+
+#: ../admin/import-export/import.php:54
+msgid "Updating featured images"
+msgstr "Обновление миниатюр (featured images)"
+
+#: ../admin/import-export/import.php:55
+msgid "Updating attachments"
+msgstr "Обновление вложений."
+
+#: ../admin/import-export/import.php:56
+msgid "Importing JSON"
+msgstr "Идет импорт JSON."
+
+#: ../admin/import-export/import.php:57
+msgid "Installing content complete"
+msgstr "Установка контента завершена."
+
+#: ../admin/import-export/import.php:58
+msgid "Installing content error"
+msgstr "Ошибка установки контента."
+
+#: ../admin/import-export/import.php:64
+msgid "Warning!"
+msgstr "Предупреждение!"
+
+#: ../admin/import-export/import.php:64
+msgid ""
+"Installing sample data will replace your website content. Please make sure "
+"to backup your website data before importing content."
+msgstr ""
+"Установка демо-контента удалит Вашу информацию на сайте. Пожалуйста, "
+"убедитесь что Вы создали резервную копию контента сайта перед импортом демо-"
+"контента."
+
+#: ../admin/import-export/import.php:72
+msgid "Please Drop all needed files here <br> to import sample data"
+msgstr ""
+"Пожалуйста, перетащите все необходимые файлы сюда <br> , чтобы импортировать "
+"демо-контент."
+
+#: ../admin/import-export/import.php:73 ../admin/import-export/import.php:133
+msgid "or"
+msgstr "или"
+
+#: ../admin/import-export/import.php:75
+msgid "Browse local files"
+msgstr "Выбрать файлы"
+
+#: ../admin/import-export/import.php:78
+#, php-format
+msgid "Maximum upload file size: %d %s."
+msgstr "Максимальный размер загружаемого файла: %d %s."
+
+#: ../admin/import-export/import.php:81
+msgid "View Demo"
+msgstr "Просмотреть демо"
+
+#: ../admin/import-export/import.php:95
+msgid "File name"
+msgstr "Название файла"
+
+#: ../admin/import-export/import.php:95
+msgid "File size"
+msgstr "Размер файла"
+
+#: ../admin/import-export/import.php:95
+msgid "Uploaded file:"
+msgstr "Загруженый файл:"
+
+#: ../admin/import-export/import.php:105
+msgid "Installing content started."
+msgstr "Начало установки контента."
+
+#: ../admin/import-export/import.php:115
+msgid "Install"
+msgstr "Установка"
+
+#: ../admin/import-export/import.php:120
+msgid ""
+"Files successfully uploaded. Please make sure you have uploaded <b>.JSON</b> "
+"and <b>.XML</b> files to install theme sample data."
+msgstr ""
+"Файлы успешно загружены. Пожалуйста, убедитесь, что Вы загрузили  <b>.JSON</"
+"b>  и <b>.XML</b> файлы, чтобы установить демо-контент."
+
+#: ../admin/import-export/import.php:122
+msgid "Add More Files"
+msgstr "Добавить еще файлы"
+
+#: ../admin/import-export/import.php:124
+msgid "Continue Install"
+msgstr "Продолжить установку"
+
+#: ../admin/import-export/import.php:124
+msgid "Missing .XML or .JSON file"
+msgstr "Файл .XML или .JSON не найден"
+
+#: ../admin/import-export/import.php:130
+msgid "Congratulations"
+msgstr "Поздравляем"
+
+#: ../admin/import-export/import.php:131
+msgid "Content has been installed successfully"
+msgstr "Контент был успешно установлен"
+
+#: ../admin/import-export/import.php:133
+msgid "View your site"
+msgstr "Просмотреть Ваш сайт"
+
+#: ../admin/import-export/import.php:134
+msgid "go to Cherry Options"
+msgstr "Перейдите в Опции Cherry"
 
 #: ../admin/shortcodes/dialog.php:21
 msgid "Shortcode Options"
 msgstr "Настройки шорткодов"
 
-#: ../admin/shortcodes/dialog.php:31
+#: ../admin/shortcodes/dialog.php:32
 msgid "Cancel"
 msgstr "Отмена"
 
-#: ../admin/shortcodes/dialog.php:32 ../admin/shortcodes/editor-plugin.php:703
+#: ../admin/shortcodes/dialog.php:33 ../admin/shortcodes/editor-plugin.php:782
 msgid "Insert Shortcode"
 msgstr "Вставить шорткод"
 
-#: ../admin/shortcodes/editor-plugin.php:709
+#: ../admin/shortcodes/editor-plugin.php:788
 msgid "Posts"
 msgstr "Записи"
 
-#: ../admin/shortcodes/editor-plugin.php:710
+#: ../admin/shortcodes/editor-plugin.php:789
 msgid "Posts Grid"
 msgstr "Сетка записей"
 
-#: ../admin/shortcodes/editor-plugin.php:711
+#: ../admin/shortcodes/editor-plugin.php:790
 msgid "Posts List"
 msgstr "Список записей"
 
-#: ../admin/shortcodes/editor-plugin.php:712
+#: ../admin/shortcodes/editor-plugin.php:791
 msgid "Mini Posts Grid"
 msgstr "Маленькая сетка записей"
 
-#: ../admin/shortcodes/editor-plugin.php:713
+#: ../admin/shortcodes/editor-plugin.php:792
 msgid "Mini Posts List"
 msgstr "Маленький список записей"
 
-#: ../admin/shortcodes/editor-plugin.php:714
+#: ../admin/shortcodes/editor-plugin.php:793
 msgid "Recent Posts"
 msgstr "Последние записи"
 
-#: ../admin/shortcodes/editor-plugin.php:715
+#: ../admin/shortcodes/editor-plugin.php:794
 msgid "Recent Testimonials"
 msgstr "Последние отзывы"
 
-#: ../admin/shortcodes/editor-plugin.php:716
+#: ../admin/shortcodes/editor-plugin.php:795
 msgid "Basic"
 msgstr "Основные"
 
-#: ../admin/shortcodes/editor-plugin.php:717
+#: ../admin/shortcodes/editor-plugin.php:796
 msgid "Banner"
 msgstr "Банер"
 
-#: ../admin/shortcodes/editor-plugin.php:718
-#: ../includes/shortcodes/post-cycle.php:141
+#: ../admin/shortcodes/editor-plugin.php:797
+#: ../includes/shortcodes/carousel-owl.php:171
+#: ../includes/shortcodes/carousel.php:154
+#: ../includes/shortcodes/post-cycle.php:139
 #: ../includes/shortcodes/posts-list.php:161
 #: ../includes/shortcodes/posts-list.php:162
+#: ../includes/widgets/my-post-cycle-widget.php:127
 msgid "Comments"
 msgstr "Комментарии"
 
-#: ../admin/shortcodes/editor-plugin.php:719
+#: ../admin/shortcodes/editor-plugin.php:798
 msgid "Post Cycle"
 msgstr "Цикл записей"
 
-#: ../admin/shortcodes/editor-plugin.php:720
+#: ../admin/shortcodes/editor-plugin.php:799
 msgid "Carousel (Elasti)"
 msgstr "Карусель (Elasti)"
 
-#: ../admin/shortcodes/editor-plugin.php:721
+#: ../admin/shortcodes/editor-plugin.php:800
 msgid "Carousel (OWL)"
 msgstr "Карусель (OWL)"
 
-#: ../admin/shortcodes/editor-plugin.php:722
+#: ../admin/shortcodes/editor-plugin.php:801
 msgid "Roundabout"
 msgstr "Круговая карусель"
 
-#: ../admin/shortcodes/editor-plugin.php:723
+#: ../admin/shortcodes/editor-plugin.php:802
 msgid "Service Box"
 msgstr "Сервисная информация"
 
-#: ../admin/shortcodes/editor-plugin.php:724
+#: ../admin/shortcodes/editor-plugin.php:803
 msgid "Hero Unit"
 msgstr "Hero элемент"
 
-#: ../admin/shortcodes/editor-plugin.php:725
+#: ../admin/shortcodes/editor-plugin.php:804
 msgid "Categories"
 msgstr "Категории"
 
-#: ../admin/shortcodes/editor-plugin.php:726
+#: ../admin/shortcodes/editor-plugin.php:805
 #: ../includes/shortcodes/posts-list.php:281
 msgid "Tags"
 msgstr "Тэги"
 
-#: ../admin/shortcodes/editor-plugin.php:727
+#: ../admin/shortcodes/editor-plugin.php:806
 msgid "Columns"
 msgstr "Колонки"
 
-#: ../admin/shortcodes/editor-plugin.php:742
+#: ../admin/shortcodes/editor-plugin.php:821
 msgid "Fluid Column"
 msgstr "Тянущиеся колонки"
 
-#: ../admin/shortcodes/editor-plugin.php:751
+#: ../admin/shortcodes/editor-plugin.php:830
 msgid "2 Columns"
 msgstr "2 колонки"
 
-#: ../admin/shortcodes/editor-plugin.php:755
+#: ../admin/shortcodes/editor-plugin.php:834
 msgid "3 Columns"
 msgstr "3 колонки"
 
-#: ../admin/shortcodes/editor-plugin.php:760
+#: ../admin/shortcodes/editor-plugin.php:839
 msgid "4 Columns"
 msgstr "4 колонки"
 
-#: ../admin/shortcodes/editor-plugin.php:762
+#: ../admin/shortcodes/editor-plugin.php:841
 msgid "Elements"
 msgstr "Элементы"
 
-#: ../admin/shortcodes/editor-plugin.php:763
+#: ../admin/shortcodes/editor-plugin.php:842
 msgid "Label"
 msgstr "Метка"
 
-#: ../admin/shortcodes/editor-plugin.php:764
+#: ../admin/shortcodes/editor-plugin.php:843
 msgid "Text Highlight"
 msgstr "Выделение текста"
 
-#: ../admin/shortcodes/editor-plugin.php:765
+#: ../admin/shortcodes/editor-plugin.php:844
 msgid "Button"
 msgstr "Кнопка"
 
-#: ../admin/shortcodes/editor-plugin.php:766
+#: ../admin/shortcodes/editor-plugin.php:845
 msgid "Drop Cap"
 msgstr "Буквица"
 
-#: ../admin/shortcodes/editor-plugin.php:767
+#: ../admin/shortcodes/editor-plugin.php:846
 msgid "Blockquote"
 msgstr "Цитата"
 
-#: ../admin/shortcodes/editor-plugin.php:768
+#: ../admin/shortcodes/editor-plugin.php:847
 msgid "Icon"
 msgstr "Иконка"
 
-#: ../admin/shortcodes/editor-plugin.php:769
+#: ../admin/shortcodes/editor-plugin.php:848
 msgid "Frame"
 msgstr "Рамка"
 
-#: ../admin/shortcodes/editor-plugin.php:770
+#: ../admin/shortcodes/editor-plugin.php:849
 msgid "Horizontal Rule"
 msgstr "Горизонтальная линия"
 
-#: ../admin/shortcodes/editor-plugin.php:771
+#: ../admin/shortcodes/editor-plugin.php:850
 msgid "Small Horizontal Rule"
 msgstr "Малая горизонтальная линия"
 
-#: ../admin/shortcodes/editor-plugin.php:772
+#: ../admin/shortcodes/editor-plugin.php:851
 msgid "Vertical Rule"
 msgstr "Вертикальная линия"
 
-#: ../admin/shortcodes/editor-plugin.php:773
+#: ../admin/shortcodes/editor-plugin.php:852
 msgid "Spacer"
 msgstr "Разделитель"
 
-#: ../admin/shortcodes/editor-plugin.php:774
+#: ../admin/shortcodes/editor-plugin.php:853
 msgid "Progressbar"
 msgstr "Индикатор"
 
-#: ../admin/shortcodes/editor-plugin.php:775
+#: ../admin/shortcodes/editor-plugin.php:854
 msgid "Address"
 msgstr "Адрес"
 
-#: ../admin/shortcodes/editor-plugin.php:776
+#: ../admin/shortcodes/editor-plugin.php:855
 msgid "Clear"
 msgstr "Очистить"
 
-#: ../admin/shortcodes/editor-plugin.php:777
+#: ../admin/shortcodes/editor-plugin.php:856
 msgid "Extra Wrap"
-msgstr "Дополнительная упаковка"
+msgstr "Блок без переполнения"
 
-#: ../admin/shortcodes/editor-plugin.php:778
+#: ../admin/shortcodes/editor-plugin.php:857
 msgid "Lists"
 msgstr "Списки"
 
-#: ../admin/shortcodes/editor-plugin.php:779
+#: ../admin/shortcodes/editor-plugin.php:858
 msgid "Unstyled"
 msgstr "Без стилей"
 
-#: ../admin/shortcodes/editor-plugin.php:780
+#: ../admin/shortcodes/editor-plugin.php:859
 msgid "Check List"
 msgstr "Список с галочками"
 
-#: ../admin/shortcodes/editor-plugin.php:781
+#: ../admin/shortcodes/editor-plugin.php:860
 msgid "Check 2 List"
 msgstr "Список с галочками 2"
 
-#: ../admin/shortcodes/editor-plugin.php:782
+#: ../admin/shortcodes/editor-plugin.php:861
+msgid "OK Circle List"
+msgstr "Список с кругами OK"
+
+#: ../admin/shortcodes/editor-plugin.php:862
+msgid "OK Sign List"
+msgstr "Список со значками OK"
+
+#: ../admin/shortcodes/editor-plugin.php:863
 msgid "Arrow List"
 msgstr "Список со стрелками"
 
-#: ../admin/shortcodes/editor-plugin.php:783
+#: ../admin/shortcodes/editor-plugin.php:864
 msgid "Arrow 2 List"
 msgstr "Список со стрелками"
 
-#: ../admin/shortcodes/editor-plugin.php:784
+#: ../admin/shortcodes/editor-plugin.php:865
+msgid "Circle Arrow List"
+msgstr "Список с круглыми стрелками"
+
+#: ../admin/shortcodes/editor-plugin.php:866
+msgid "Caret List"
+msgstr "Список со знаками вставки"
+
+#: ../admin/shortcodes/editor-plugin.php:867
+msgid "Angle List"
+msgstr "Угловой список"
+
+#: ../admin/shortcodes/editor-plugin.php:868
+msgid "Double Angle List"
+msgstr "Двойной угловой список"
+
+#: ../admin/shortcodes/editor-plugin.php:869
 msgid "Star List"
 msgstr "Список со звездочками"
 
-#: ../admin/shortcodes/editor-plugin.php:785
+#: ../admin/shortcodes/editor-plugin.php:870
 msgid "Plus List"
 msgstr "Список с плюсами"
 
-#: ../admin/shortcodes/editor-plugin.php:786
+#: ../admin/shortcodes/editor-plugin.php:871
 msgid "Minus List"
 msgstr "Список с минусами"
 
-#: ../admin/shortcodes/editor-plugin.php:787
+#: ../admin/shortcodes/editor-plugin.php:872
+msgid "Circle List"
+msgstr "Список с кругами"
+
+#: ../admin/shortcodes/editor-plugin.php:873
+msgid "Circle Blank List"
+msgstr "Список с пустыми кругами"
+
+#: ../admin/shortcodes/editor-plugin.php:874
 msgid "Custom List"
 msgstr "Пользовательский список"
 
-#: ../admin/shortcodes/editor-plugin.php:788
+#: ../admin/shortcodes/editor-plugin.php:875
 msgid "Misc"
 msgstr "Разное"
 
-#: ../admin/shortcodes/editor-plugin.php:789
+#: ../admin/shortcodes/editor-plugin.php:876
 msgid "Alert Box"
 msgstr "Всплывающее сообщение"
 
-#: ../admin/shortcodes/editor-plugin.php:790
+#: ../admin/shortcodes/editor-plugin.php:877
 msgid "Close icon"
 msgstr "Иконка закрытия"
 
-#: ../admin/shortcodes/editor-plugin.php:791
+#: ../admin/shortcodes/editor-plugin.php:878
 msgid "Well"
 msgstr "Рамка с фоном"
 
-#: ../admin/shortcodes/editor-plugin.php:792
+#: ../admin/shortcodes/editor-plugin.php:879
 msgid "Small"
 msgstr "Маленький текст"
 
-#: ../admin/shortcodes/editor-plugin.php:793
-#: ../includes/widgets/my-comment-widget.php:139
+#: ../admin/shortcodes/editor-plugin.php:880
+#: ../includes/widgets/my-comment-widget.php:140
 #: ../includes/widgets/my-facebook-widget.php:79
 #: ../includes/widgets/my-flickr-widget.php:57
 #: ../includes/widgets/my-posts-type-widget.php:205
@@ -356,44 +782,116 @@ msgstr "Маленький текст"
 msgid "Title"
 msgstr "Название"
 
-#: ../admin/shortcodes/editor-plugin.php:794
+#: ../admin/shortcodes/editor-plugin.php:881
 msgid "Template URL"
 msgstr "URL шаблона"
 
-#: ../admin/shortcodes/editor-plugin.php:795
+#: ../admin/shortcodes/editor-plugin.php:882
 msgid "Sitemap"
-msgstr "Карта сайта."
+msgstr "Карта сайта"
 
-#: ../admin/shortcodes/editor-plugin.php:796
+#: ../admin/shortcodes/editor-plugin.php:883
 msgid "Video Preview"
 msgstr "Предпросмотр видео"
 
-#: ../admin/shortcodes/editor-plugin.php:797
+#: ../admin/shortcodes/editor-plugin.php:884
 msgid "Tabs"
 msgstr "Вкладки"
 
-#: ../admin/shortcodes/editor-plugin.php:798
+#: ../admin/shortcodes/editor-plugin.php:885
 msgid "Accordion"
 msgstr "Аккордион"
 
-#: ../admin/shortcodes/editor-plugin.php:799
+#: ../admin/shortcodes/editor-plugin.php:886
 msgid "Table"
 msgstr "Таблица"
 
-#: ../admin/shortcodes/editor-plugin.php:800
+#: ../admin/shortcodes/editor-plugin.php:887
+msgid "Pricing Table"
+msgstr "Таблица цен"
+
+#: ../admin/shortcodes/editor-plugin.php:888
 #: ../includes/widgets/my-vcard-widget.php:156
 msgid "Google Map"
-msgstr "Google карты"
+msgstr "Google карта"
 
-#: ../includes/shortcodes/carousel-owl.php:95
-#: ../includes/shortcodes/carousel.php:173
+#: ../includes/plugin-assets.php:32
+msgid "Under Construction Page Widgets Area."
+msgstr "Поле для виджетов страницы \"В стадии разработки\"."
+
+#: ../includes/plugin-assets.php:34
+msgid "Under construction page widgets area."
+msgstr "Поле для виджетов страницы \"В стадии разработки\"."
+
+#: ../includes/plugin-assets.php:52
+msgid "Maintenance mode activated. Website is blocked from public"
+msgstr ""
+"Режим обслуживания активирован. Сайт заблокирован от общественного доступа."
+
+#: ../includes/plugin-assets.php:52
+msgid "Settings."
+msgstr "Настройки."
+
+#: ../includes/plugin-under-construction-content.php:31
+msgid "Website is currently down for maintenance."
+msgstr "Сайт в стадии разработки."
+
+#: ../includes/plugin-under-construction-content.php:77
+msgid "Days"
+msgstr "Дни"
+
+#: ../includes/plugin-under-construction-content.php:81
+msgid "Hours"
+msgstr "Часы"
+
+#: ../includes/plugin-under-construction-content.php:85
+msgid "Minuts"
+msgstr "Минуты"
+
+#: ../includes/plugin-under-construction-content.php:89
+msgid "Seconds"
+msgstr "Секунды"
+
+#: ../includes/gt-custom/gt-custom.php:112
+msgid "Style Switcher Preview"
+msgstr "Предварительный просмотр переключателя стилей"
+
+#: ../includes/gt-custom/gt-customize.php:17
+msgid "Cheatin&#8217; uh?"
+msgstr "Обманываешь&#8217; ?"
+
+#: ../includes/gt-custom/gt-customize.php:84
+#, php-format
+msgid "%1$s &#8212; WordPress"
+msgstr "%1$s &#8212; WordPress"
+
+#: ../includes/gt-custom/gt-customize.php:84
+#, php-format
+msgid "Customize %s"
+msgstr "Настроить %s"
+
+#: ../includes/gt-custom/gt-customize.php:112
+msgid "Style Switcher"
+msgstr "Переключатель стилей"
+
+#: ../includes/shortcodes/carousel-owl.php:165
 #: ../includes/shortcodes/posts-list.php:152
 msgid "by "
-msgstr "по"
+msgstr " "
 
-#: ../includes/shortcodes/carousel.php:18
+#: ../includes/shortcodes/carousel-owl.php:173
+#: ../includes/shortcodes/carousel.php:156
+#: ../includes/widgets/my-post-cycle-widget.php:129
+msgid "Comment"
+msgstr "Комментарий"
+
+#: ../includes/shortcodes/carousel.php:147
+#: ../includes/widgets/my-post-cycle-widget.php:118
+msgid "by"
+msgstr " "
+
 #: ../includes/shortcodes/hero-unit.php:13 ../includes/shortcodes/html.php:25
-#: ../includes/shortcodes/post-cycle.php:19
+#: ../includes/shortcodes/post-cycle.php:17
 #: ../includes/shortcodes/posts-grid.php:22
 #: ../includes/shortcodes/posts-list.php:19
 #: ../includes/shortcodes/service-box.php:15
@@ -437,43 +935,40 @@ msgstr "Включить звук"
 #: ../includes/shortcodes/media.php:96 ../includes/shortcodes/media.php:229
 #: ../includes/shortcodes/shortcodes.php:226
 #: ../includes/shortcodes/shortcodes.php:333
-#, fuzzy
 msgid "Update Required."
-msgstr "Требуется"
+msgstr "Требуется обновление."
 
 #: ../includes/shortcodes/media.php:96 ../includes/shortcodes/media.php:229
 #: ../includes/shortcodes/shortcodes.php:226
 #: ../includes/shortcodes/shortcodes.php:333
-#, fuzzy
 msgid ""
 "To play the media you will need to either update your browser to a recent "
 "version or update your "
 msgstr ""
-"<span>Требуется обновление. </span>Для воспроизведения вам нужно обновить "
-"браузер до последней версии или обновить <a href='http://get.adobe.com/"
-"flashplayer/' target='_blank'>Flash плагин</a>."
+"Для того, чтобы проиграть медиа файл, Вам необходимо либо обновить Ваш "
+"браузер до последней версии, либо обновить Ваш"
 
 #: ../includes/shortcodes/media.php:96 ../includes/shortcodes/media.php:229
 #: ../includes/shortcodes/shortcodes.php:226
 #: ../includes/shortcodes/shortcodes.php:333
 msgid "Flash plugin"
-msgstr ""
+msgstr "Flash плеер плагин"
 
-#: ../includes/shortcodes/post-cycle.php:168
+#: ../includes/shortcodes/post-cycle.php:166
 msgid "Client"
 msgstr "Клиент"
 
-#: ../includes/shortcodes/post-cycle.php:169
-#: ../includes/widgets/my-comment-widget.php:90
+#: ../includes/shortcodes/post-cycle.php:167
+#: ../includes/widgets/my-comment-widget.php:91
 #: ../includes/widgets/my-recent-posts.php:147
 msgid "Date"
 msgstr "Дата"
 
-#: ../includes/shortcodes/post-cycle.php:170
+#: ../includes/shortcodes/post-cycle.php:168
 msgid "Info"
 msgstr "Информация"
 
-#: ../includes/shortcodes/post-cycle.php:171
+#: ../includes/shortcodes/post-cycle.php:169
 msgid "Launch Project"
 msgstr "Запустить проект"
 
@@ -486,14 +981,17 @@ msgstr "Опубликовано в"
 msgid "Previous"
 msgstr "Предыдущая"
 
+#: ../includes/shortcodes/shortcodes.php:213
+msgid "Next"
+msgstr "Следующая"
+
 #: ../includes/widgets/my-banners-widget.php:13
 msgid "Add 125x125 ads."
-msgstr "Добавить банер 125x125"
+msgstr "Добавить банер 125x125."
 
 #: ../includes/widgets/my-banners-widget.php:17
-#, fuzzy
 msgid "Cherry - 125x125 Ads."
-msgstr "Cherry - банер 125x125"
+msgstr "Cherry - 125x125 реклама."
 
 #: ../includes/widgets/my-banners-widget.php:60
 msgid "Ad 1"
@@ -530,66 +1028,66 @@ msgid "Cherry - Recent Comments"
 msgstr "Cherry - Последние комментарии"
 
 #: ../includes/widgets/my-comment-widget.php:11
-#: ../includes/widgets/my-comment-widget.php:126
+#: ../includes/widgets/my-comment-widget.php:127
 msgid "My Recent Comments"
 msgstr "Мои последние комментарии"
 
-#: ../includes/widgets/my-comment-widget.php:71
+#: ../includes/widgets/my-comment-widget.php:72
 msgid "Comment in"
 msgstr "Комментарий в"
 
-#: ../includes/widgets/my-comment-widget.php:80
-#: ../includes/widgets/widgets-manager.php:478
-#: ../includes/widgets/widgets-manager.php:486
+#: ../includes/widgets/my-comment-widget.php:81
+#: ../includes/widgets/widgets-manager.php:479
+#: ../includes/widgets/widgets-manager.php:487
 msgid "Author"
 msgstr "Автор"
 
-#: ../includes/widgets/my-comment-widget.php:98
+#: ../includes/widgets/my-comment-widget.php:99
 msgid "Go to this comment"
 msgstr "Перейти к комментарию"
 
-#: ../includes/widgets/my-comment-widget.php:140
+#: ../includes/widgets/my-comment-widget.php:141
 msgid "Number of comments to show"
 msgstr "Количество комментариев для отображения"
 
-#: ../includes/widgets/my-comment-widget.php:141
+#: ../includes/widgets/my-comment-widget.php:142
 msgid "Display avatar"
 msgstr "Показывать аватар"
 
-#: ../includes/widgets/my-comment-widget.php:142
+#: ../includes/widgets/my-comment-widget.php:143
 msgid "Avatar size (px)"
 msgstr "Размер аватара (px)"
 
-#: ../includes/widgets/my-comment-widget.php:151
-msgid "Display the comment author"
-msgstr "Показывать авторство комментария"
-
 #: ../includes/widgets/my-comment-widget.php:152
+msgid "Display the comment author"
+msgstr "Отображать автора комментария"
+
+#: ../includes/widgets/my-comment-widget.php:153
 msgid "Display the comment date"
 msgstr "Показывать дату комментария"
 
-#: ../includes/widgets/my-comment-widget.php:153
+#: ../includes/widgets/my-comment-widget.php:154
 msgid "Display post title"
 msgstr "Показывать дату записи"
 
-#: ../includes/widgets/my-comment-widget.php:154
+#: ../includes/widgets/my-comment-widget.php:155
 #: ../includes/widgets/my-vcard-widget.php:191
 msgid "Meta format"
-msgstr "Формат Meta"
+msgstr "Формат мeta данных"
 
-#: ../includes/widgets/my-comment-widget.php:156
+#: ../includes/widgets/my-comment-widget.php:157
 #: ../includes/widgets/my-vcard-widget.php:193
-#: ../includes/widgets/widgets-manager.php:505
+#: ../includes/widgets/widgets-manager.php:506
 msgid "None"
 msgstr "Отсутствует"
 
-#: ../includes/widgets/my-comment-widget.php:157
+#: ../includes/widgets/my-comment-widget.php:158
 #: ../includes/widgets/my-social-widget.php:209
 #: ../includes/widgets/my-vcard-widget.php:194
 msgid "Icons"
 msgstr "Иконки"
 
-#: ../includes/widgets/my-comment-widget.php:158
+#: ../includes/widgets/my-comment-widget.php:159
 #: ../includes/widgets/my-social-widget.php:210
 #: ../includes/widgets/my-vcard-widget.php:195
 msgid "Labels"
@@ -609,12 +1107,11 @@ msgstr "Адрес страницы Facebook"
 
 #: ../includes/widgets/my-facebook-widget.php:86
 msgid "The Like Box only works with "
-msgstr ""
+msgstr " Like Box работает только с"
 
 #: ../includes/widgets/my-facebook-widget.php:86
-#, fuzzy
 msgid "Facebook Pages."
-msgstr "Моя страницы Facebook"
+msgstr "Facebook страницы."
 
 #: ../includes/widgets/my-facebook-widget.php:90
 #: ../includes/widgets/my-posts-type-widget.php:347
@@ -659,26 +1156,111 @@ msgid "Cherry - Flickr"
 msgstr "Cherry - Flickr"
 
 #: ../includes/widgets/my-flickr-widget.php:59
-#, fuzzy
 msgid "Flickr ID"
-msgstr "Flickr ID:"
+msgstr "Flickr ID"
 
 #: ../includes/widgets/my-flickr-widget.php:60
-#, fuzzy
 msgid "Images count"
-msgstr "Счетчик изображений:"
+msgstr "Количество картинок"
 
 #: ../includes/widgets/my-flickr-widget.php:61
 #: ../includes/widgets/my-posts-type-widget.php:325
 #: ../includes/widgets/my-posts-type-widget.php:372
 #: ../includes/widgets/my-recent-posts.php:158
-#, fuzzy
 msgid "Link Text"
 msgstr "Текст ссылки"
 
+#: ../includes/widgets/my-post-cycle-widget.php:6
+msgid "Cherry - Post Cycle"
+msgstr "Cherry -Цикл записей"
+
+#: ../includes/widgets/my-post-cycle-widget.php:195
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:197
+msgid "Select post type:"
+msgstr "Выберите тип поста:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:227
+msgid "Categories (names separated by \",\"):"
+msgstr "Категории (названия  разделенные  \",\"):"
+
+#: ../includes/widgets/my-post-cycle-widget.php:229
+msgid "Posts count:"
+msgstr "Количество постов"
+
+#: ../includes/widgets/my-post-cycle-widget.php:231
+msgid "Thumbnail Width (in pixels):"
+msgstr "Ширина картинки (в пикселях):"
+
+#: ../includes/widgets/my-post-cycle-widget.php:233
+msgid "Thumbnail Height (in pixels):"
+msgstr "Высота картинки (в пикселях):"
+
+#: ../includes/widgets/my-post-cycle-widget.php:235
+msgid "Show titles:"
+msgstr "Показывать заголовки:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:242
+#: ../includes/widgets/my-post-cycle-widget.php:261
+#: ../includes/widgets/my-post-cycle-widget.php:280
+#: ../includes/widgets/my-post-cycle-widget.php:299
+#: ../includes/widgets/my-post-cycle-widget.php:318
+#: ../includes/widgets/my-post-cycle-widget.php:343
+#: ../includes/widgets/my-post-cycle-widget.php:362
+msgid "yes"
+msgstr "да"
+
+#: ../includes/widgets/my-post-cycle-widget.php:247
+#: ../includes/widgets/my-post-cycle-widget.php:266
+#: ../includes/widgets/my-post-cycle-widget.php:285
+#: ../includes/widgets/my-post-cycle-widget.php:304
+#: ../includes/widgets/my-post-cycle-widget.php:323
+#: ../includes/widgets/my-post-cycle-widget.php:348
+#: ../includes/widgets/my-post-cycle-widget.php:367
+msgid "no"
+msgstr "нет"
+
+#: ../includes/widgets/my-post-cycle-widget.php:254
+msgid "Show date:"
+msgstr "Показывать дату:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:273
+msgid "Show author:"
+msgstr "Показывать автора:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:292
+msgid "Show comments:"
+msgstr "Показывать коментарии:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:311
+msgid "Show excerpt:"
+msgstr "Показывать цитату:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:330
+msgid "Excerpt word count:"
+msgstr "Количество слов цитаты:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:332
+msgid "More Button Text:"
+msgstr "Текст кнопки \"Далее\""
+
+#: ../includes/widgets/my-post-cycle-widget.php:334
+msgid "Slideshow cycling speed (in sec.):"
+msgstr "Скорость слайдшоу (в сек.):"
+
+#: ../includes/widgets/my-post-cycle-widget.php:336
+msgid "Arrows:"
+msgstr "Стрелки:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:355
+msgid "Pagination:"
+msgstr "Нумерация страниц:"
+
 #: ../includes/widgets/my-posts-type-widget.php:7
 msgid "Show custom posts"
-msgstr "Отображение записей любого типа"
+msgstr "Отображать записи пользовательского типа"
 
 #: ../includes/widgets/my-posts-type-widget.php:9
 msgid "Cherry - Advanced Cycle"
@@ -710,16 +1292,15 @@ msgstr "Показать количество комментариев"
 
 #: ../includes/widgets/my-posts-type-widget.php:263
 msgid "Show meta"
-msgstr "Показывать Meta"
+msgstr "Показывать мета данные"
 
 #: ../includes/widgets/my-posts-type-widget.php:269
 msgid "Container class"
 msgstr "Класс контейнера"
 
 #: ../includes/widgets/my-posts-type-widget.php:270
-#, fuzzy
 msgid "default: \"featured_custom_posts\""
-msgstr "(по умолчанию: \"featured_custom_posts\")"
+msgstr "по умолчанию: \"featured_custom_posts\""
 
 #: ../includes/widgets/my-posts-type-widget.php:275
 msgid "Post title"
@@ -730,9 +1311,8 @@ msgid "Show post title"
 msgstr "Показывать заголовок записи"
 
 #: ../includes/widgets/my-posts-type-widget.php:285
-#, fuzzy
 msgid "Date as title "
-msgstr "Показывать дату записи"
+msgstr "Дата как заголовок"
 
 #: ../includes/widgets/my-posts-type-widget.php:292
 msgid "Excerpt"
@@ -744,9 +1324,8 @@ msgstr "Показывать выдержку (excerpt) записи"
 
 #: ../includes/widgets/my-posts-type-widget.php:301
 #: ../includes/widgets/my-recent-posts.php:156
-#, fuzzy
 msgid "Excerpt length (words)"
-msgstr "Длинна цитаты (слов):"
+msgstr "Длина цитаты (количество слов)"
 
 #: ../includes/widgets/my-posts-type-widget.php:308
 msgid "Excerpt as link"
@@ -754,25 +1333,23 @@ msgstr "Выдержка (excerpt), как ссылка"
 
 #: ../includes/widgets/my-posts-type-widget.php:315
 msgid "More link"
-msgstr "Ссылка читать далее"
+msgstr "Ссылка Читать далее"
 
 #: ../includes/widgets/my-posts-type-widget.php:319
 msgid "Show \"More link"
-msgstr "Показывать ссылку  \"Читать далее"
+msgstr "Показывать ссылку \"Читать далее"
 
 #: ../includes/widgets/my-posts-type-widget.php:326
-#, fuzzy
 msgid "default: \"Read more\""
-msgstr "(по умолчанию: \"Читать далее\")"
+msgstr "по умолчанию: \"Read more\""
 
 #: ../includes/widgets/my-posts-type-widget.php:331
 msgid "Link class"
 msgstr "Класс ссылки"
 
 #: ../includes/widgets/my-posts-type-widget.php:332
-#, fuzzy
 msgid "default: \"link\""
-msgstr "(по умолчанию: \"ссылка\")"
+msgstr "по умолчанию: \"link\""
 
 #: ../includes/widgets/my-posts-type-widget.php:337
 msgid "Thumbnail dimensions"
@@ -795,9 +1372,8 @@ msgid "Show global link to all posts"
 msgstr "Показывать глобальную ссылку на все записи"
 
 #: ../includes/widgets/my-posts-type-widget.php:373
-#, fuzzy
 msgid "default: \"View all\""
-msgstr "(По умолчанию: \"Смотреть все\")"
+msgstr "по умолчанию: \"View all\""
 
 #: ../includes/widgets/my-posts-type-widget.php:378
 #: ../includes/widgets/my-recent-posts.php:160
@@ -813,14 +1389,12 @@ msgid "Permanent Link to"
 msgstr "Постоянная ссылка на"
 
 #: ../includes/widgets/my-recent-posts.php:128
-#, fuzzy
 msgid "Category Slug"
-msgstr "Слаг категории:"
+msgstr "Слаг категории"
 
 #: ../includes/widgets/my-recent-posts.php:130
-#, fuzzy
 msgid "Post format"
-msgstr "Формат записи:"
+msgstr "Формат постов"
 
 #: ../includes/widgets/my-recent-posts.php:133
 msgid "Standard"
@@ -855,9 +1429,8 @@ msgid "Video"
 msgstr "Видео"
 
 #: ../includes/widgets/my-recent-posts.php:144
-#, fuzzy
 msgid "Post order"
-msgstr "Порядок записей:"
+msgstr "Порядок записей"
 
 #: ../includes/widgets/my-recent-posts.php:149
 msgid "Comment count"
@@ -868,9 +1441,8 @@ msgid "Random"
 msgstr "Случайный"
 
 #: ../includes/widgets/my-recent-posts.php:154
-#, fuzzy
 msgid "Posts per page"
-msgstr "Записей на странице:"
+msgstr "Записи на странице"
 
 #: ../includes/widgets/my-social-widget.php:6
 msgid "Link to your social networks."
@@ -881,116 +1453,101 @@ msgid "Cherry - Social Networks"
 msgstr "Cherry - Социальные сети"
 
 #: ../includes/widgets/my-social-widget.php:136
-#, fuzzy
 msgid "Facebook"
-msgstr "Моя страницы Facebook"
+msgstr "Facebook"
 
 #: ../includes/widgets/my-social-widget.php:138
-#, fuzzy
 msgid "Facebook URL"
-msgstr "Моя страницы Facebook"
+msgstr "Facebook URL (ссылка)"
 
 #: ../includes/widgets/my-social-widget.php:141
-#, fuzzy
 msgid "Facebook label"
-msgstr "Адрес страницы Facebook"
+msgstr "Ярлык Facebook"
 
 #: ../includes/widgets/my-social-widget.php:146
-#, fuzzy
 msgid "Twitter"
-msgstr "Имя в Twitter:"
+msgstr "Twitter"
 
 #: ../includes/widgets/my-social-widget.php:147
-#, fuzzy
 msgid "Twitter URL"
-msgstr "Имя в Twitter:"
+msgstr "Twitter URL (ссылка)"
 
 #: ../includes/widgets/my-social-widget.php:149
-#, fuzzy
 msgid "Twitter label"
-msgstr "Имя в Twitter:"
+msgstr "Ярлык Twitter"
 
 #: ../includes/widgets/my-social-widget.php:154
-#, fuzzy
 msgid "Flickr"
-msgstr "Flickr ID:"
+msgstr "Flickr"
 
 #: ../includes/widgets/my-social-widget.php:155
-#, fuzzy
 msgid "Flickr URL"
-msgstr "Flickr ID:"
+msgstr "Flickr URL (сайт)"
 
 #: ../includes/widgets/my-social-widget.php:157
-#, fuzzy
 msgid "Flickr label"
-msgstr "Flickr ID:"
+msgstr "Ярлык Flickr"
 
 #: ../includes/widgets/my-social-widget.php:162
 #: ../includes/widgets/my-social-widget.php:163
 msgid "RSS feed"
-msgstr ""
+msgstr "RSS лента"
 
 #: ../includes/widgets/my-social-widget.php:165
 msgid "RSS label"
-msgstr ""
+msgstr "Ярлык RSS"
 
 #: ../includes/widgets/my-social-widget.php:170
-#, fuzzy
 msgid "Linkedin"
-msgstr "Ссылка"
+msgstr "Linkedin"
 
 #: ../includes/widgets/my-social-widget.php:171
-#, fuzzy
 msgid "Linkedin URL"
-msgstr "Адрес ссылки"
+msgstr "Linkedin URL (ссылка)"
 
 #: ../includes/widgets/my-social-widget.php:173
 msgid "Linkedin label"
-msgstr ""
+msgstr "Ярлык Linkedin"
 
 #: ../includes/widgets/my-social-widget.php:178
 msgid "Delicious"
-msgstr ""
+msgstr "Delicious"
 
 #: ../includes/widgets/my-social-widget.php:179
 msgid "Delicious URL"
-msgstr ""
+msgstr "Delicious URL (ссылка)"
 
 #: ../includes/widgets/my-social-widget.php:181
 msgid "Delicious label"
-msgstr ""
+msgstr "Ярлык Delicious"
 
 #: ../includes/widgets/my-social-widget.php:186
 msgid "Youtube"
-msgstr ""
+msgstr "Youtube"
 
 #: ../includes/widgets/my-social-widget.php:188
 msgid "Youtube URL"
-msgstr ""
+msgstr "Youtube URL (ссылка)"
 
 #: ../includes/widgets/my-social-widget.php:191
 msgid "Youtube label"
-msgstr ""
+msgstr "Ярлык Youtube"
 
 #: ../includes/widgets/my-social-widget.php:197
-#, fuzzy
 msgid "Google+"
-msgstr "Google карты"
+msgstr "Google+"
 
 #: ../includes/widgets/my-social-widget.php:199
-#, fuzzy
 msgid "Google+ URL"
-msgstr "Google карты"
+msgstr "Google+ URL (ссылка)"
 
 #: ../includes/widgets/my-social-widget.php:202
-#, fuzzy
 msgid "Google+ label"
-msgstr "Google карты"
+msgstr "Ярлык Google+"
 
 #: ../includes/widgets/my-social-widget.php:208
-#, fuzzy
 msgid "Display"
-msgstr "Отображать:"
+msgstr "Отображать"
 
 #: ../includes/widgets/my-social-widget.php:211
 msgid "Both"
@@ -1010,185 +1567,201 @@ msgstr "vCard"
 
 #: ../includes/widgets/my-vcard-widget.php:51
 #: ../includes/widgets/my-vcard-widget.php:167
-#, fuzzy
 msgid "Street Address"
-msgstr "Улица/Дом:"
+msgstr "Адрес "
 
 #: ../includes/widgets/my-vcard-widget.php:52
 #: ../includes/widgets/my-vcard-widget.php:171
-#, fuzzy
 msgid "City/Locality"
-msgstr "Город/Область:"
+msgstr "Город/Населенный пункт"
 
 #: ../includes/widgets/my-vcard-widget.php:53
 #: ../includes/widgets/my-vcard-widget.php:175
-#, fuzzy
 msgid "State/Region"
 msgstr "Страна/Область"
 
 #: ../includes/widgets/my-vcard-widget.php:54
 #: ../includes/widgets/my-vcard-widget.php:179
-#, fuzzy
 msgid "Zipcode/Postal Code"
-msgstr "Почтовый код"
+msgstr "Почтовый индекс"
 
 #: ../includes/widgets/my-vcard-widget.php:55
 #: ../includes/widgets/my-vcard-widget.php:183
-#, fuzzy
 msgid "Telephone"
-msgstr "Телефон:"
+msgstr "Телефон"
 
 #: ../includes/widgets/my-vcard-widget.php:56
 #: ../includes/widgets/my-vcard-widget.php:187
-#, fuzzy
 msgid "Email"
-msgstr "Email:"
+msgstr "Электронная почта"
 
 #: ../includes/widgets/my-vcard-widget.php:158
 msgid "Display map"
 msgstr "Отображать карту"
 
 #: ../includes/widgets/my-vcard-widget.php:161
-#, fuzzy
 msgid "HTML map code"
-msgstr "HTML код карты:"
+msgstr "HTML код карты"
 
-#: ../includes/widgets/widgets-manager.php:457
+#: ../includes/widgets/widgets-manager.php:458
 msgid "Custom CSS class"
-msgstr "Пользовательский класс CSS"
+msgstr "Пользовательский CSS класс"
 
-#: ../includes/widgets/widgets-manager.php:459
+#: ../includes/widgets/widgets-manager.php:460
 msgid "Visibility"
 msgstr "Видимость"
 
-#: ../includes/widgets/widgets-manager.php:462
+#: ../includes/widgets/widgets-manager.php:463
 msgid "Visible at"
-msgstr "Отображать в"
-
-#: ../includes/widgets/widgets-manager.php:464
-msgid "All pages"
-msgstr "Все страницы"
+msgstr "Отображать на"
 
 #: ../includes/widgets/widgets-manager.php:465
+msgid "All pages"
+msgstr "Всех страницах"
+
+#: ../includes/widgets/widgets-manager.php:466
 msgid "All pages expecting"
 msgstr "Отображать на всех страницах кроме"
 
-#: ../includes/widgets/widgets-manager.php:466
+#: ../includes/widgets/widgets-manager.php:467
 msgid "No pages expecting"
 msgstr "Скрыть на всех страницах кроме"
 
-#: ../includes/widgets/widgets-manager.php:470
+#: ../includes/widgets/widgets-manager.php:471
 msgid "Select page to add"
 msgstr "Выберите страницу для добавления"
 
-#: ../includes/widgets/widgets-manager.php:472
+#: ../includes/widgets/widgets-manager.php:473
 msgid "Homepage"
 msgstr "Главная страница"
 
-#: ../includes/widgets/widgets-manager.php:473
+#: ../includes/widgets/widgets-manager.php:474
 msgid "Page"
 msgstr "Страница"
 
-#: ../includes/widgets/widgets-manager.php:474
+#: ../includes/widgets/widgets-manager.php:475
 msgid "Post"
 msgstr "Запись"
 
-#: ../includes/widgets/widgets-manager.php:475
-#: ../includes/widgets/widgets-manager.php:477
+#: ../includes/widgets/widgets-manager.php:476
+#: ../includes/widgets/widgets-manager.php:478
 msgid "Archive"
 msgstr "Архив"
 
-#: ../includes/widgets/widgets-manager.php:476
+#: ../includes/widgets/widgets-manager.php:477
 msgid "Tag"
 msgstr "Тэг"
 
-#: ../includes/widgets/widgets-manager.php:479
+#: ../includes/widgets/widgets-manager.php:480
 msgid "Search page"
 msgstr "Страница поиска"
 
-#: ../includes/widgets/widgets-manager.php:480
+#: ../includes/widgets/widgets-manager.php:481
 msgid "404 page"
 msgstr "404 страница"
 
-#: ../includes/widgets/widgets-manager.php:482
+#: ../includes/widgets/widgets-manager.php:483
 msgid "Page ID/Title/slug"
 msgstr "ID страницы/Заголовок/слаг"
 
-#: ../includes/widgets/widgets-manager.php:483
+#: ../includes/widgets/widgets-manager.php:484
 msgid "Post ID/Title/slug"
 msgstr "ID записи/Заголовок/слаг"
 
-#: ../includes/widgets/widgets-manager.php:484
+#: ../includes/widgets/widgets-manager.php:485
 msgid "Category ID/Name/slug"
 msgstr "ID категории/Название/слаг"
 
-#: ../includes/widgets/widgets-manager.php:485
+#: ../includes/widgets/widgets-manager.php:486
 msgid "Tag ID/Name"
 msgstr "ID тэга/Название"
 
-#: ../includes/widgets/widgets-manager.php:487
+#: ../includes/widgets/widgets-manager.php:488
 msgid "Add page"
 msgstr "Добавить страницу"
 
-#: ../includes/widgets/widgets-manager.php:490
+#: ../includes/widgets/widgets-manager.php:491
 msgid "Selected pages"
 msgstr "Выбранные страницы"
 
-#: ../includes/widgets/widgets-manager.php:491
+#: ../includes/widgets/widgets-manager.php:492
 msgid "No pages"
 msgstr "Нет страниц"
 
-#: ../includes/widgets/widgets-manager.php:509
+#: ../includes/widgets/widgets-manager.php:510
 msgid "All devices"
 msgstr "Все устройства"
 
-#: ../includes/widgets/widgets-manager.php:510
+#: ../includes/widgets/widgets-manager.php:511
 msgid "Desktops"
 msgstr "Компьютеры"
 
-#: ../includes/widgets/widgets-manager.php:511
+#: ../includes/widgets/widgets-manager.php:512
 msgid "Tablets"
 msgstr "Планшеты"
 
-#: ../includes/widgets/widgets-manager.php:512
+#: ../includes/widgets/widgets-manager.php:513
 msgid "Phones"
 msgstr "Телефоны"
 
-#: ../includes/widgets/widgets-manager.php:513
+#: ../includes/widgets/widgets-manager.php:514
 msgid "Desktops/Tablets"
 msgstr "Компьютеры и планшеты"
 
-#: ../includes/widgets/widgets-manager.php:514
+#: ../includes/widgets/widgets-manager.php:515
 msgid "Tablets/Phones"
 msgstr "Планшеты и телефоны"
 
-#: ../includes/widgets/widgets-manager.php:515
+#: ../includes/widgets/widgets-manager.php:516
 msgid "Desktops/Phones"
 msgstr "Компьютеры и телефоны"
 
-#: ../includes/widgets/widgets-manager.php:518
+#: ../includes/widgets/widgets-manager.php:519
 msgid "Visible on"
 msgstr "Отображать на"
 
-#: ../includes/widgets/widgets-manager.php:527
+#: ../includes/widgets/widgets-manager.php:528
 msgid "All users"
 msgstr "Все пользователи"
 
-#: ../includes/widgets/widgets-manager.php:528
+#: ../includes/widgets/widgets-manager.php:529
 msgid "Only guests"
 msgstr "Только гости"
 
-#: ../includes/widgets/widgets-manager.php:529
+#: ../includes/widgets/widgets-manager.php:530
 msgid "Only registered users"
 msgstr "Только зарегистрированные"
 
-#: ../includes/widgets/widgets-manager.php:530
+#: ../includes/widgets/widgets-manager.php:531
 msgid "Only administrator"
-msgstr "Только администратор"
+msgstr "Только администраторы"
 
-#: ../includes/widgets/widgets-manager.php:533
+#: ../includes/widgets/widgets-manager.php:534
 msgid "Visible for"
 msgstr "Отображать для"
+
+#: ../lib/php/parsers.php:43 ../lib/php/parsers.php:75
+#: ../lib/php/parsers.php:83
+msgid "There was an error when reading this WXR file"
+msgstr "Произошла ошибка при чтении WXR файла"
+
+#: ../lib/php/parsers.php:44
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr ""
+"Детали показаны ниже. Импортер попробует выполнить задачу еще раз с помощью "
+"другого парсера..."
+
+#: ../lib/php/parsers.php:87 ../lib/php/parsers.php:92
+#: ../lib/php/parsers.php:284 ../lib/php/parsers.php:475
+msgid ""
+"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr "Это не WXR файл. Отсутствует или ошибка версии WXR"
+
+#, fuzzy
+#~ msgid "Main Page"
+#~ msgstr "Страница"
 
 #~ msgid "No Repeat"
 #~ msgstr "Без повторов"
@@ -1265,9 +1838,6 @@ msgstr "Отображать для"
 #~ msgid "Cyrillic Extended"
 #~ msgstr "Кириллица расширенная"
 
-#~ msgid "Vietnamese"
-#~ msgstr "Вьетнамский"
-
 #~ msgid "Normal"
 #~ msgstr "Нормально"
 
@@ -1279,20 +1849,6 @@ msgstr "Отображать для"
 
 #~ msgid "Bold Italic"
 #~ msgstr "Жирный курсив"
-
-#~ msgid "There was an error when reading this WXR file"
-#~ msgstr "Произошла ошибка при чтении WXR файла"
-
-#~ msgid ""
-#~ "Details are shown above. The importer will now try again with a different "
-#~ "parser..."
-#~ msgstr ""
-#~ "Детали показаны ниже. Импортер попробует выполнить задачу еще раз с "
-#~ "помощью другого парсера..."
-
-#~ msgid ""
-#~ "This does not appear to be a WXR file, missing/invalid WXR version number"
-#~ msgstr "Это не WXR файл. Отсутствует или ошибка версии WXR"
 
 #~ msgid "Return to the dashboard"
 #~ msgstr "Вернуться к контрольной панели"
@@ -1306,9 +1862,6 @@ msgstr "Отображать для"
 #~ msgid "No"
 #~ msgstr "Нет"
 
-#~ msgid "Yes"
-#~ msgstr "Да"
-
 #~ msgid "Slow"
 #~ msgstr "Медленно"
 
@@ -1317,9 +1870,6 @@ msgstr "Отображать для"
 
 #~ msgid "Normal size"
 #~ msgstr "Нормальный размер"
-
-#~ msgid "Large size"
-#~ msgstr "Большой размер"
 
 #~ msgid "Font Size"
 #~ msgstr "Размер шрифта"
@@ -1347,9 +1897,6 @@ msgstr "Отображать для"
 
 #~ msgid "success"
 #~ msgstr "успех"
-
-#~ msgid "Upload"
-#~ msgstr "Загрузить"
 
 #~ msgid "try again"
 #~ msgstr "попробуйте еще раз"
@@ -1407,9 +1954,6 @@ msgstr "Отображать для"
 
 #~ msgid "Delete"
 #~ msgstr "Удалить"
-
-#~ msgid "Customize"
-#~ msgstr "Настроить"
 
 #~ msgid "Save Options"
 #~ msgstr "Сохранить настройки"
@@ -1838,9 +2382,6 @@ msgstr "Отображать для"
 #~ msgid "Display thumbnails?"
 #~ msgstr "Показывать миниатюры остальных слайдов?"
 
-#~ msgid "Pagination"
-#~ msgstr "Постраничная навигация"
-
 #~ msgid "Display pagination?"
 #~ msgstr ""
 #~ "Показывать постраничную навигацию для возможности перехода к любому "
@@ -1919,9 +2460,6 @@ msgstr "Отображать для"
 
 #~ msgid "Mouseover"
 #~ msgstr "Курсор мыши наведен"
-
-#~ msgid "Double click"
-#~ msgstr "Двойной клик"
 
 #~ msgid "Active slide"
 #~ msgstr "Активный слайд"
@@ -2127,9 +2665,6 @@ msgstr "Отображать для"
 #~ msgid "Should the direct link to the post be displayed? "
 #~ msgstr "Отображать прямую ссылку на запись?"
 
-#~ msgid "Post categories."
-#~ msgstr "Категории поста"
-
 #~ msgid "Should the post categories be displayed?"
 #~ msgstr "Отображать категории записи?"
 
@@ -2181,23 +2716,14 @@ msgstr "Отображать для"
 #~ msgid "Both (by category and tags)"
 #~ msgstr "Оба (по категориям и тэгам)"
 
-#~ msgid "Show title?"
-#~ msgstr "Показывать заголовок?"
-
 #~ msgid "Enable or Disable title for portfolio posts."
 #~ msgstr "Включить или отключить заголовки для записей портфолио."
-
-#~ msgid "Show excerpt?"
-#~ msgstr "Показывать выдержку (excerpt)?"
 
 #~ msgid "Enable or Disable excerpt for portfolio posts."
 #~ msgstr "Включить или отключить выдержку (excerpt) для записей портфолио."
 
 #~ msgid "Button text for portfolio posts."
 #~ msgstr "Текст кнопки для записей портфолио."
-
-#~ msgid "Excerpt words"
-#~ msgstr "Слова выдержки (excerpt)"
 
 #~ msgid "Excerpt length (words)."
 #~ msgstr "Длина выдержки (excerpt) (слова)."
@@ -2343,9 +2869,6 @@ msgstr "Отображать для"
 #~ msgid "<span>Step <i>4</i></span> Widget Settings Import"
 #~ msgstr "<span>Шаг <i>4</i></span> Импорт настроек виджетов"
 
-#~ msgid "Import Settings"
-#~ msgstr "Импортировать настройки "
-
 #~ msgid ""
 #~ "Incorrect file. Please, <a href='admin.php?page=options-framework-"
 #~ "import&amp;step=1'>try again</a>."
@@ -2375,9 +2898,6 @@ msgstr "Отображать для"
 #~ "Отключите, возможно ненужные Вам виджеты, и кликните Далее. По умолчанию, "
 #~ "все выбранные виджеты будут импортированы в тему."
 
-#~ msgid "go to widgets"
-#~ msgstr "перейти к виджетам"
-
 #~ msgid ""
 #~ "File widgets.json incorrect or empty. For this reason, none of the widget "
 #~ "will be imported into your theme."
@@ -2390,9 +2910,6 @@ msgstr "Отображать для"
 
 #~ msgid "The file does not exist, please "
 #~ msgstr "Файл не существует"
-
-#~ msgid "Please"
-#~ msgstr "Пожалуйста"
 
 #~ msgid ""
 #~ "This WXR file (version %s) may not be supported by this version of the "
@@ -2440,12 +2957,6 @@ msgstr "Отображать для"
 
 #~ msgid "Download and import file attachments"
 #~ msgstr "Скачать и импортировать файловые приложения"
-
-#~ msgid "Import Data"
-#~ msgstr "Импортировать данные"
-
-#~ msgid "Import author:"
-#~ msgstr "Импортировать автора:"
 
 #~ msgid "assign posts to an existing user:"
 #~ msgstr "Назначить автором записей существующего пользователя:"
@@ -2555,9 +3066,6 @@ msgstr "Отображать для"
 #~ "Вы можете продолжить установку шаблона без обновления настроек сервера. В "
 #~ "таком случае могут произойти ошибки или будет загружена только часть "
 #~ "данных."
-
-#~ msgid "Congratulations"
-#~ msgstr "Поздравляем"
 
 #~ msgid ""
 #~ "You have successfully installed your <b>Cherry WordPress Theme</b>.<br /> "
@@ -2978,9 +3486,6 @@ msgstr "Отображать для"
 #~ msgid "Recommended"
 #~ msgstr "Рекомендуется"
 
-#~ msgid "Not Installed"
-#~ msgstr "Не установлен"
-
 #~ msgid "Installed But Not Activated"
 #~ msgstr "Установлен, но не активирован"
 
@@ -2998,9 +3503,6 @@ msgstr "Отображать для"
 
 #~ msgid "Status"
 #~ msgstr "Статус"
-
-#~ msgid "Install"
-#~ msgstr "Установка"
 
 #~ msgid "Activate"
 #~ msgstr "Активировать"
@@ -3067,12 +3569,6 @@ msgstr "Отображать для"
 #~ msgid "The installation of %1$s failed."
 #~ msgstr "Установка %1$s не удалась."
 
-#~ msgid "%1$s installed successfully."
-#~ msgstr "%1$s успешно установлен."
-
-#~ msgid "All installations have been completed."
-#~ msgstr "Все установки были завершены."
-
 #~ msgid "Installing Plugin %1$s (%2$d/%3$d)"
 #~ msgstr "Установка плагина %1$s (%2$d/%3$d)"
 
@@ -3111,9 +3607,6 @@ msgstr "Отображать для"
 
 #~ msgid "Meta"
 #~ msgstr "Мета"
-
-#~ msgid "No comments"
-#~ msgstr "Нет комментариев"
 
 #~ msgid "1 comment"
 #~ msgstr "1 комментарий"
@@ -3200,9 +3693,6 @@ msgstr "Отображать для"
 #~ msgid "Help & Support"
 #~ msgstr "Поддержка и помощь"
 
-#~ msgid "No items"
-#~ msgstr "Нет элементов"
-
 #~ msgid "Posted"
 #~ msgstr "Опубликовано"
 
@@ -3250,9 +3740,6 @@ msgstr "Отображать для"
 
 #~ msgid "Preview"
 #~ msgstr "Предыдущая"
-
-#~ msgid "Description"
-#~ msgstr "Описание"
 
 #~ msgid "No backup."
 #~ msgstr "Нет резервных копий."
@@ -3306,9 +3793,6 @@ msgstr "Отображать для"
 #~ "настоятельно рекомендуется<a href=\"admin.php?page=options-framework-data-"
 #~ "management\">сделать резервную копию</a> Ваших данных."
 
-#~ msgid "View File"
-#~ msgstr "Посмотреть файл"
-
 #~ msgid "Previously Uploaded"
 #~ msgstr "Загруженные ранее"
 
@@ -3332,9 +3816,6 @@ msgstr "Отображать для"
 
 #~ msgid " details"
 #~ msgstr "Показать подробности"
-
-#~ msgid "or"
-#~ msgstr "или"
 
 #~ msgid "update now."
 #~ msgstr "обновить сейчас."
@@ -3394,9 +3875,6 @@ msgstr "Отображать для"
 
 #~ msgid "Tweet this article"
 #~ msgstr "Твитнуть эту статью"
-
-#~ msgid "Continue Reading"
-#~ msgstr "Читать далее"
 
 #~ msgid "Pages:"
 #~ msgstr "Страницы:"
@@ -3577,9 +4055,6 @@ msgstr "Отображать для"
 
 #~ msgid "Sitemap XML"
 #~ msgstr "Карта сайта XML."
-
-#~ msgid "Include post types."
-#~ msgstr "Добавляемые типы постов."
 
 #~ msgid "Priority."
 #~ msgstr "Приоритет."

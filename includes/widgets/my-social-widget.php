@@ -58,11 +58,11 @@ class My_SocialNetworksWidget extends WP_Widget {
 		<?php foreach(array("Facebook", "Twitter", "Flickr", "Feed", "Linkedin", "Delicious", "Youtube", "Google+") as $network) : ?>
 			<?php if (!empty($networks[$network]['link'])) : ?>
 			<li class="social_li">
-				<a class="social_link social_link__<?php echo strtolower($network); ?>" rel="tooltip" data-original-title="<?php echo strtolower($network); ?>" href="<?php echo $networks[$network]['link']; ?>">
+				<a class="social_link social_link__<?php echo strtolower($network); ?>" rel="tooltip" data-original-title="<?php echo strtolower($networks[$network]['label']); ?>" href="<?php echo $networks[$network]['link']; ?>" target="_blank">
 					<?php if (($display == "both") or ($display =="icons")) { ?>
 						<span class="social_ico"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/<?php echo strtolower($network);?>.png" alt=""></span>
 					<?php } if (($display == "labels") or ($display == "both")) { ?> 
-						<span class="social_label"><?php if (($networks[$network]['label'])!=="") { echo $networks[$network]['label']; } else { echo $network; } ?></span>
+						<?php if ( $networks[$network]['label'] != "" ) { echo '<span class="social_label">'.$networks[$network]['label'].'</span>'; }?>
 					<?php } ?>
 				</a>
 			</li>
@@ -76,30 +76,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 	}
 
 	function update( $new_instance, $old_instance ) {
-		$instance                    = $old_instance;
-		$instance['title']           = strip_tags($new_instance['title']);
-		
-		$instance['twitter']         = $new_instance['twitter'];
-		$instance['facebook']        = $new_instance['facebook'];
-		$instance['flickr']          = $new_instance['flickr'];
-		$instance['feed']            = $new_instance['feed'];
-		$instance['linkedin']        = $new_instance['linkedin'];
-		$instance['delicious']       = $new_instance['delicious'];
-		$instance['youtube']         = $new_instance['youtube'];
-		$instance['google']          = $new_instance['google'];
-		
-		$instance['twitter_label']   = $new_instance['twitter_label'];
-		$instance['facebook_label']  = $new_instance['facebook_label'];
-		$instance['flickr_label']    = $new_instance['flickr_label'];
-		$instance['feed_label']      = $new_instance['feed_label'];
-		$instance['linkedin_label']  = $new_instance['linkedin_label'];
-		$instance['delicious_label'] = $new_instance['delicious_label'];
-		$instance['youtube_label']   = $new_instance['youtube_label'];
-		$instance['google_label']    = $new_instance['google_label'];
-		
-		$instance['display']         = $new_instance['display'];
-
-		return $instance;
+		return $new_instance;
 	}
 
 	function form( $instance ) {
