@@ -1,0 +1,88 @@
+* 1ac8c70 : add Banner widget
+* c30dfc6 : add Banner widget
+*   931c675 : fix conflict
+|\  
+| * 40ddac0 : Improvement wpml-compatibility. Added support for Chinese (Simplified)/Chinese (Traditional) and Portuguese (Portugal)/Portuguese (Brazil)
+| * 5b75cc6 : Bug-fix on back-end output label for Delicious in social-network widget
+* | e0df8c1 : localization changes, add new instagram widget, changed social widget
+|/  
+* f365927 : Добавлен функционал обновления плагина, добавленна возможность выводит динамический контент в плагине, контент подгрибается с удаленного сервера, появилась возможность вывода уведомления с удаленного сервера
+* cb607fa : Добавил возможность перезаписывать файл plugin-under-construction-content.php в дочерней теме
+*   0f2115a : Merge branch 'develop' of https://github.com/templatemonster/cherry-plugin into develop
+|\  
+| *   4e93926 : Исправил конфликт предыдущего коммита
+| |\  
+| * | d1681cb : Изменил подключение скрипта карусели, изменил логику импорта классов виджетов.
+* | | f6e0140 : Add Style Switcher logic
+| |/  
+|/|   
+* |   9ba9765 : Merge branch 'develop' of https://github.com/templatemonster/cherry-plugin into develop
+|\ \  
+| |/  
+| * 380e0c6 : Добавил возможность включать режим 'Maintenance Mode'
+| * be3ff9e : Добавил возможность включать режим 'Maintenance Mode'
+* | 38d9050 : Фикс шорткода carousel Elasti: добавил подключение скрипта в файл plugin-script.php
+|/  
+* 2b81cd5 : Дофиксил экспортер
+* 901557d : Удалил лишние файлы.
+* e8bd2ef : Поправил экспорт. Добавил возможность переписывать виджиты, просто копируя их в дочернюю тему. Поправил кастомные классы у виджетов.
+* 9141c27 : Добавил в исключения папку woocommerce_uploads, файлы из этой папки не попадают в конечный архив экспорта
+* 9eee99f : Исправил функцию сортировки для экспорта
+* 385695f : Исправил функцию сортировки
+* fda486f : Добавил блокировку на добавление файлов во время аплоадинга
+* e14c45a : Исправил ошибки импорта контента.
+*   ac8d59c : Merge branch 'develop' of https://github.com/templatemonster/cherry-plugin into develop
+|\  
+| * b190f2e : Added record cherry_plugin option to the DB
+| *   84089a5 : Merge branch 'develop' of https://github.com/templatemonster/cherry-plugin into develop
+| |\  
+| * | d0e7238 : Fixed init variable in widget manager for !cherry themes
+* | | c5a4d8f : Исправил логику установки контента, обернул все текста в функцию для локализации, добавил секюрность на ajax запросы, убрал лишний var_dump из шорткодов
+| |/  
+|/|   
+* | f98a03e : Поправил импорт меню, поправил драг&дроп, поправил цвет иконки
+* | a5006aa : Added warning to import screen
+* | 5a74ef5 : Updated summary content
+* |   82b9047 : Merge branch 'develop' of https://github.com/templatemonster/cherry-plugin into develop
+|\ \  
+| |/  
+| * a40a130 : removed fake script
+* | dcb780e : Поправил вывод диалогового окна шорткодов на серверe xampp, поправил диалоговые окна с превью видео, поправил размер диалогового окна с шорткодами.
+|/  
+*   d2dd8e9 : Merge branch 'develop' of https://github.com/templatemonster/cherry-plugin into develop
+|\  
+| * 29cf3f0 : Replaced GIF with YouTube videos
+* | 08b431a : Исправил импорт Json
+|/  
+* 1224dbf : Добавил обект wpAJAX для импорта контента
+*   d2d7f1b : Merge branch 'develop' of https://github.com/templatemonster/cherry-plugin into develop
+|\  
+| * 6283280 : Поправил авто-нумерацию колок в шорткоде Pricing Table
+* | acef40b : исправлина иконка и экспорт контента
+|/  
+* 6f17f19 : добавлен новый функционал импорта и экспорта контента
+* 91befd1 : добавлен новый функционал импорта и экспорта контента
+*   4d162e1 : Дополнил стили. Поправил вывод иконки для шорткодов icon, title, services. Добавил подключение стилей для font-awesome
+|\  
+| * 9f4c4dd : добавил стили для виджетов и шорткодов - продублировал из фреймворка
+* | 45894b7 : Подключил стили плагина на фронтеде после всех доп. стилей. В шорткодах для карусели для установки типа поста селекст заменил на инпут
+* | 8756fbd : source-файлы Флекс-Слайдера перенес в директорию \lib\js"
+|/  
+* 60cad97 : add pricing table shortcode
+*   165ec04 : Правка после слияния веток
+|\  
+| * 3260a2b : В оба шорткода для карусели добавил возможность вкл/откл к-ва комментов + фиксы и улучшения
+* | 46a5feb : создал виджет Post Cycle (my-post-cycle-widget.php)
+* | c7c6e79 : добавил дополнительные шорткоды для списков
+* | 4b8b875 : для шорткода табов сделал возможность устанавливать разположение табов (top, right, below, left) + добавил уникальные классы на вкладки табов
+|/  
+* eef88ef : для шорткодов которые работают на основе get_posts ф-и добавил сброс запроса
+* 415a15e : fix: add in shortcodes function restoring global var $post
+* 912e3a4 : fix: comment count in Cherry Recent Comment considering PHP >= v.5.4
+* 6a69b18 : hotfix: out excert in post-grid shortcode
+* 67c233e : удаление страрых файлов
+* 809e55f : изменилась структура плагина
+* 528c5da : Добавил заготовки страниц импорта. Сделал функционал первой страницы импорта.
+* 5651c16 : Убрал лишние пункты меню и страницы
+* 0449667 : Заготовку плагина.
+* b20140f : Initial commit
