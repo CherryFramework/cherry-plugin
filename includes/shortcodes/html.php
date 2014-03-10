@@ -416,7 +416,7 @@ if (!function_exists('icon_shortcode')) {
 		extract(shortcode_atts(
 			array(
 				'icon_type'       => '',
-				'icon'     => 'alert',
+				'icon'            => 'alert',
 				'icon_font'       => '',
 				'icon_font_size'  => '',
 				'icon_font_color' => '',
@@ -425,6 +425,7 @@ if (!function_exists('icon_shortcode')) {
 		), $atts));
 
 		if ($icon_type == 'Images' || $icon_type == '') {
+			$icon = isset($icon_images) ? $icon_images : $icon ;
 			$icon_url = CHERRY_PLUGIN_URL . 'includes/images/iconSweets/' . strtolower($icon) . '.png' ;
 			if( defined ('CHILD_DIR') ) {
 				if(file_exists(CHILD_DIR.'/images/iconSweets/'.strtolower($icon).'.png')){
