@@ -1,0 +1,4187 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ru_RU\n"
+"POT-Creation-Date: 2014-02-25 10:49+0200\n"
+"PO-Revision-Date: 2014-03-03 15:09+0200\n"
+"Last-Translator: Barbara <babyjewel@gmail.com>\n"
+"Language-Team:  <demolink@info.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ./\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../admin/admin.php:28
+msgid "Cherry plugin"
+msgstr "Plugin Cherry "
+
+#: ../admin/admin.php:31 ../admin/admin.php:52
+msgid "Summary"
+msgstr "Sommario "
+
+#: ../admin/admin.php:34 ../admin/plugin-maintenance-mode.php:57
+#: ../admin/plugin-pages.php:100
+msgid "Maintenance Mode"
+msgstr "Modalità Manutenzione "
+
+#: ../admin/admin.php:37
+msgid "Import Content"
+msgstr "Importa Contenuto "
+
+#: ../admin/admin.php:40 ../admin/import-export/export.php:30
+msgid "Export Content"
+msgstr "Esporta Contenuto "
+
+#: ../admin/plugin-components.php:36
+msgid "Documentation"
+msgstr "Documentazione"
+
+#: ../admin/plugin-components.php:37
+msgid "Support"
+msgstr "Supporto"
+
+#: ../admin/plugin-function.php:5
+msgid "Remove Inactive Widgets"
+msgstr "Rimuovi Widget Inattivi "
+
+#: ../admin/plugin-function.php:23
+msgid "CTRL+A (Command-A) to select all files"
+msgstr "CTRL+A (Command-A) per selezionare tutti i file "
+
+#: ../admin/plugin-function.php:37
+msgid "Files are downloaded as a .zip archive"
+msgstr "I file sono scaricati come archivio .zip"
+
+#: ../admin/plugin-maintenance-mode.php:62
+msgid "Enable this option to activate website maintenance mode."
+msgstr "Abilita questa opzione per attivare la modalità manutenzione sito."
+
+#: ../admin/plugin-maintenance-mode.php:68
+msgid "Display Logo?"
+msgstr "Mostrare Logo?"
+
+#: ../admin/plugin-maintenance-mode.php:73
+msgid ""
+"Enable this option to display website logo at the under construction page"
+msgstr ""
+"Abilita questa opzione per mostrare il logo del sito web nella pagina in "
+"costruzione"
+
+#: ../admin/plugin-maintenance-mode.php:79
+msgid "Description."
+msgstr "Descrizione."
+
+#: ../admin/plugin-maintenance-mode.php:89
+#: ../admin/plugin-maintenance-mode.php:94
+msgid "Display timer?"
+msgstr "Mostrare il timer?"
+
+#: ../admin/plugin-maintenance-mode.php:100
+msgid "Website launch date."
+msgstr "Data di lancio del sito web. "
+
+#: ../admin/plugin-maintenance-mode.php:101
+msgid "Date is not correct."
+msgstr "La data non è corretta."
+
+#: ../admin/plugin-maintenance-mode.php:105
+msgid "Year:"
+msgstr "Anno:"
+
+#: ../admin/plugin-maintenance-mode.php:107
+msgid "Month:"
+msgstr "Mese:"
+
+#: ../admin/plugin-maintenance-mode.php:109
+msgid "Day:"
+msgstr "Giorno:"
+
+#: ../admin/plugin-maintenance-mode.php:113
+msgid "Hour:"
+msgstr "Ora:"
+
+#: ../admin/plugin-maintenance-mode.php:115
+msgid "Minute:"
+msgstr "Minuto:"
+
+#: ../admin/plugin-maintenance-mode.php:123
+msgid "Save Changes"
+msgstr "Salva Modifiche "
+
+#: ../admin/plugin-pages.php:6
+msgid "Cherry Plugin"
+msgstr "Plugin Cherry "
+
+#: ../admin/plugin-pages.php:11
+msgid ""
+"Cherry Plugin has been released with intention to separate widgets, "
+"shortcodes and data management logics with theme editor options. Cherry "
+"Plugin is installed automatically on CherryFramework installation and is "
+"required for the correct work of CherryFramework.  "
+msgstr ""
+"Il Plugin Cherry è stato rilasciato con lo scopo di separare widgets, "
+"shortcodes e i logics gestione dati dalle opzioni editor del tema. Il Plugin "
+"Cherry è installato automaticamente con l'installazione di CherryFramework "
+"ed è necessario per il corretto funzionamento di CherryFramework."
+
+#: ../admin/plugin-pages.php:15 ../admin/import-export/import.php:80
+msgid "Files Import demo"
+msgstr "Demo Importazione File "
+
+#: ../admin/plugin-pages.php:19
+msgid "Import"
+msgstr "Importa"
+
+#: ../admin/plugin-pages.php:20
+msgid ""
+"Option to import website content from the backup. Select all files from the "
+"backup archive and drag them to the upload files area to start uploading."
+msgstr ""
+"Opzione per importare il contenuto del sito web dal backup. Seleziona tutti "
+"i file dall'archivio di backup e trascinali nell'area upload per iniziare il "
+"caricamento."
+
+#: ../admin/plugin-pages.php:26
+msgid "Files Export demo"
+msgstr "Demo Esportazione File "
+
+#: ../admin/plugin-pages.php:30
+msgid "Export"
+msgstr "Esporta"
+
+#: ../admin/plugin-pages.php:31
+msgid ""
+"Option to backup your website data creating a downloadable archive. Use this "
+"option to keep your website data on performing some serious modifications or "
+"moving website to other hosting."
+msgstr ""
+"Opzione per eseguire il backup dei dati del tuo sito web creando un archivio "
+"scaricabile. Utilizza questa opzione per mantenere i dati del sito quando "
+"effettui modifiche sostanziali o sposti il sito ad un altro hosting."
+
+#: ../admin/plugin-pages.php:42
+msgid "Widgets"
+msgstr "Widget"
+
+#: ../admin/plugin-pages.php:43
+msgid ""
+"Cherry Widgets offer additional ways to place content to widget areas. "
+"Several available widget will allow you to add more functionality to your "
+"website."
+msgstr ""
+"Cherry Widgets offre modi aggiuntivi per inserire contenuto nelle aree "
+"widget. Diversi widget disponibili ti permetteranno di aggiungere più "
+"funzionalità al tuo sito web."
+
+#: ../admin/plugin-pages.php:52
+msgid "Shortcodes"
+msgstr "Shortcodes"
+
+#: ../admin/plugin-pages.php:53
+msgid ""
+"Cherry Plugin adds various widgets to the post editor. Shortcodes allow to "
+"create various content structures in WordPress posts. Use \"Insert Shortcode"
+"\" icon in post editor toolbar to add shortcodes."
+msgstr ""
+"Il Plugin Cherry aggiunge vari widget all'editor dei post. Gli shortcodes "
+"consentono di creare varie strutture di contenuto nei post di WordPress. Usa "
+"l'icona \"Inserisci Shortcode\" nella barra strumenti dell'editor di post "
+"per aggiungere shortcodes."
+
+#: ../admin/plugin-pages.php:53
+msgid "Learn more"
+msgstr "Per saperne di più"
+
+#: ../admin/plugin-pages.php:79
+msgid "Cherry Content Import"
+msgstr "Importa Contenuto Cherry"
+
+#: ../admin/plugin-pages.php:90
+msgid "Cherry Content Export"
+msgstr "Esporta Contenuto Cherry"
+
+#: ../admin/import-export/export-functions.php:14
+msgid "Export content done"
+msgstr "Esportazione contenuto effettuata "
+
+#: ../admin/import-export/export.php:28
+msgid ""
+"Export allows you to create a backup of your website content in one click. "
+"You'll get a downloaded archive containing all website data: images, audio, "
+"video and other files from your media library. XML file with your posts and "
+"categories data, JSON file with widget settings. You can use downloaded "
+"archive to move your website to other hosting server or restore website "
+"data. "
+msgstr ""
+"Esporta ti consente di creare un backup del tuo sito web solo con un click. "
+"Otterrai cosi un archivio contenente tutti i dati del sito web: immagini, "
+"audio, video e altri file dalla tua libreria multimediale. File XML con i "
+"tuoi post e i dati delle categorie, file JSON con le impostazioni dei "
+"widget. Puoi usare l'archivio scaricato per spostare il tuo sito su un altro "
+"server di hosting o ripristinare i dati del sito web."
+
+#: ../admin/import-export/export.php:29
+msgid "Please note! "
+msgstr "Attenzione!"
+
+#: ../admin/import-export/export.php:29
+msgid ""
+"XML file doesn't contain any user data except name and email of the website "
+"administrator."
+msgstr ""
+"Il File XML non contiene alcun dato utente ad eccezione del nome e "
+"dell'email dell'amministratore del sito web."
+
+#: ../admin/import-export/import-check-settings.php:46
+msgid "Your browser is out of date!"
+msgstr "Il tuo browser non è aggiornato!"
+
+#: ../admin/import-export/import-check-settings.php:49
+#, php-format
+msgid ""
+"It looks like you're using an insecure version of <a href='%s'>%s</a>. Using "
+"an outdated browser makes your computer unsafe. For the best WordPress "
+"experience, please update your browser."
+msgstr ""
+"Sembra che tu stia usando una versione non sicura di <a href='%s'>%s</a>. "
+"Usare un browser non aggiornato mette a rischio il tuo computer. Per "
+"un'esperienza WordPress ottimale, per favore aggiorna il tuo browser."
+
+#: ../admin/import-export/import-check-settings.php:51
+#, php-format
+msgid ""
+"It looks like you're using an old version of <a href='%s'>%s</a>. For the "
+"best WordPress experience, please update your browser."
+msgstr ""
+"Sembra che tu stia usando una vecchia versione di <a href='%s'>%s</a>. Per "
+"un'esperienza WordPress ottimale, per favore aggiorna il tuo browser."
+
+#: ../admin/import-export/import-check-settings.php:68
+#, php-format
+msgid ""
+"<a href=\"%1$s\" class=\"update-browser-link\">Update %2$s</a> or learn how "
+"to <a href=\"%3$s\" class=\"browse-happy-link\">browse happy</a>"
+msgstr ""
+"<a href=\"%1$s\" class=\"update-browser-link\">Aggiorna %2$s</a> o impara "
+"come <a href=\"%3$s\" class=\"browse-happy-link\">navigare felice</a>"
+
+#: ../admin/import-export/import-check-settings.php:75
+msgid ""
+"Some of your server settings do not meet the requirements for installing the "
+"sample data. Please, consult with your hosting provider on how to increase "
+"the required values."
+msgstr ""
+"Alcune delle vostre impostazioni del server non soddisfano i requisiti per "
+"l'installazione dei dati di esempio. Si prega di consultare il proprio "
+"fornitore di hosting su come aumentare i valori richiesti."
+
+#: ../admin/import-export/import-check-settings.php:78
+msgid "Server Settings"
+msgstr "Impostazioni server"
+
+#: ../admin/import-export/import-check-settings.php:79
+msgid "Current"
+msgstr "Attuale"
+
+#: ../admin/import-export/import-check-settings.php:80
+msgid "Required"
+msgstr "Richiesto"
+
+#: ../admin/import-export/import-check-settings.php:104
+msgid "Continue"
+msgstr "Continua "
+
+#: ../admin/import-export/import.php:32
+msgid "Upload Error"
+msgstr "Errore di Caricamento "
+
+#: ../admin/import-export/import.php:33
+msgid "The file is too big!"
+msgstr "Il file è troppo grosso!"
+
+#: ../admin/import-export/import.php:34
+msgid "The file type is error!"
+msgstr "Il tipo di file è sbagliato!"
+
+#: ../admin/import-export/import.php:35
+msgid "Folder cannot be uploaded!"
+msgstr "La cartella non può essere caricata!"
+
+#: ../admin/import-export/import.php:36
+msgid "Uploading"
+msgstr "Sto caricando"
+
+#: ../admin/import-export/import.php:37 ../admin/import-export/import.php:111
+msgid "Upload"
+msgstr "Caricare"
+
+#: ../admin/import-export/import.php:38
+msgid "Upload Complete"
+msgstr "Caricamento Completato"
+
+#: ../admin/import-export/import.php:39 ../admin/import-export/import.php:95
+msgid "item"
+msgstr "oggetto"
+
+#: ../admin/import-export/import.php:40
+msgid "items"
+msgstr "oggetti"
+
+#: ../admin/import-export/import.php:41
+msgid ""
+"Sample data installing. Some steps may take some time depending on your "
+"server settings. Please be patient."
+msgstr ""
+"Sto installando i dati campione. Alcuni processi possono richiedere del "
+"tempo a seconda delle impostazioni del tuo server. Per favore attendi."
+
+#: ../admin/import-export/import.php:42
+msgid "Upload complete please click Continue Install button to proceed."
+msgstr ""
+"Caricamento completato per favore clicca sul pulsante Continua Installazione "
+"per procedere."
+
+#: ../admin/import-export/import.php:44
+msgid "Importing XML"
+msgstr "Sto importando XML"
+
+#: ../admin/import-export/import.php:45
+msgid "Importing categories"
+msgstr "Sto importando le categorie "
+
+#: ../admin/import-export/import.php:46
+msgid "Importing tags"
+msgstr "Sto importando i tag"
+
+#: ../admin/import-export/import.php:47
+msgid "Processing dependencies"
+msgstr "Sto processando le dipendenze"
+
+#: ../admin/import-export/import.php:48
+msgid "Importing posts. This may take some time. Please wait."
+msgstr "Sto importando i post. Può richiedere del tempo. Per favore attendi."
+
+#: ../admin/import-export/import.php:49
+msgid "Importing menu items. This may take some time. Please wait."
+msgstr ""
+"Sto importando gli oggetti del menu. Può richiedere del tempo. Per favore "
+"attendi."
+
+#: ../admin/import-export/import.php:50
+msgid "Importing media library."
+msgstr "Sto importando la libreria multimediale."
+
+#: ../admin/import-export/import.php:51
+msgid "Importing attachements meta."
+msgstr "Sto importando gli allegati meta."
+
+#: ../admin/import-export/import.php:52
+msgid "Generating attachements meta. This may take some time. Please wait."
+msgstr ""
+"Sto generando gli allegati meta. Può richiedere del tempo. Per favore "
+"attendi."
+
+#: ../admin/import-export/import.php:53
+msgid "Generating content hierarchy"
+msgstr "Sto generando la gerarchia del contenuto"
+
+#: ../admin/import-export/import.php:54
+msgid "Updating featured images"
+msgstr "Sto aggiornando le immagini in evidenza "
+
+#: ../admin/import-export/import.php:55
+msgid "Updating attachments"
+msgstr "Sto aggiornando gli allegati "
+
+#: ../admin/import-export/import.php:56
+msgid "Importing JSON"
+msgstr "Sto importando JSON"
+
+#: ../admin/import-export/import.php:57
+msgid "Installing content complete"
+msgstr "Installazione del contenuto completata"
+
+#: ../admin/import-export/import.php:58
+msgid "Installing content error"
+msgstr "Errore nell'installazione del contenuto"
+
+#: ../admin/import-export/import.php:64
+msgid "Warning!"
+msgstr "Avvertenza!"
+
+#: ../admin/import-export/import.php:64
+msgid ""
+"Installing sample data will replace your website content. Please make sure "
+"to backup your website data before importing content."
+msgstr ""
+"Installare i dati campione sostituirà il contenuto del tuo sito web. "
+"Asicurati di eseguire un backup del tuo sito prima di importare del "
+"contenuto."
+
+#: ../admin/import-export/import.php:72
+msgid "Please Drop all needed files here <br> to import sample data"
+msgstr ""
+"Per favore Trascina tutti i file necessari qui <br> per importare i dati "
+"campione "
+
+#: ../admin/import-export/import.php:73 ../admin/import-export/import.php:133
+msgid "or"
+msgstr "oppure"
+
+#: ../admin/import-export/import.php:75
+msgid "Browse local files"
+msgstr "Sfoglia i file locali "
+
+#: ../admin/import-export/import.php:78
+#, php-format
+msgid "Maximum upload file size: %d %s."
+msgstr "Dimensione massima file da caricare: %d %s."
+
+#: ../admin/import-export/import.php:81
+msgid "View Demo"
+msgstr "Vedi Demo "
+
+#: ../admin/import-export/import.php:95
+msgid "File name"
+msgstr "Nome file "
+
+#: ../admin/import-export/import.php:95
+msgid "File size"
+msgstr "Dimensione file "
+
+#: ../admin/import-export/import.php:95
+msgid "Uploaded file:"
+msgstr "Carica il file:"
+
+#: ../admin/import-export/import.php:105
+msgid "Installing content started."
+msgstr "Installazione contenuto iniziata."
+
+#: ../admin/import-export/import.php:115
+msgid "Install"
+msgstr "Installa"
+
+#: ../admin/import-export/import.php:120
+msgid ""
+"Files successfully uploaded. Please make sure you have uploaded <b>.JSON</b> "
+"and <b>.XML</b> files to install theme sample data."
+msgstr ""
+"File caricati con successo. Assicurati di aver caricato i file <b>.JSON</b> "
+"e <b>.XML</b> per installare i dati campione del tema."
+
+#: ../admin/import-export/import.php:122
+msgid "Add More Files"
+msgstr "Aggiungi Altri File "
+
+#: ../admin/import-export/import.php:124
+msgid "Continue Install"
+msgstr "Continua Installazione"
+
+#: ../admin/import-export/import.php:124
+msgid "Missing .XML or .JSON file"
+msgstr "File .XML o .JSON mancante"
+
+#: ../admin/import-export/import.php:130
+msgid "Congratulations"
+msgstr "Congratulazioni"
+
+#: ../admin/import-export/import.php:131
+msgid "Content has been installed successfully"
+msgstr "Il contenuto è stato installato con successo"
+
+#: ../admin/import-export/import.php:133
+msgid "View your site"
+msgstr "Vedi il tuo sito "
+
+#: ../admin/import-export/import.php:134
+msgid "go to Cherry Options"
+msgstr "vai alle Opzioni Cherry "
+
+#: ../admin/shortcodes/dialog.php:21
+msgid "Shortcode Options"
+msgstr "Shortcode Opzioni"
+
+#: ../admin/shortcodes/dialog.php:32
+msgid "Cancel"
+msgstr "Annullare"
+
+#: ../admin/shortcodes/dialog.php:33 ../admin/shortcodes/editor-plugin.php:782
+msgid "Insert Shortcode"
+msgstr "Inserire Shortcode"
+
+#: ../admin/shortcodes/editor-plugin.php:788
+msgid "Posts"
+msgstr "Messaggi"
+
+#: ../admin/shortcodes/editor-plugin.php:789
+msgid "Posts Grid"
+msgstr "Griglia Messaggi"
+
+#: ../admin/shortcodes/editor-plugin.php:790
+msgid "Posts List"
+msgstr "Lista Messaggi"
+
+#: ../admin/shortcodes/editor-plugin.php:791
+msgid "Mini Posts Grid"
+msgstr "Mini Griglia Messaggi"
+
+#: ../admin/shortcodes/editor-plugin.php:792
+msgid "Mini Posts List"
+msgstr "Mini Lista Messaggi"
+
+#: ../admin/shortcodes/editor-plugin.php:793
+msgid "Recent Posts"
+msgstr "Messaggi recenti"
+
+#: ../admin/shortcodes/editor-plugin.php:794
+msgid "Recent Testimonials"
+msgstr "Testimonianze recenti"
+
+#: ../admin/shortcodes/editor-plugin.php:795
+msgid "Basic"
+msgstr "Di base"
+
+#: ../admin/shortcodes/editor-plugin.php:796
+msgid "Banner"
+msgstr "Banner"
+
+#: ../admin/shortcodes/editor-plugin.php:797
+#: ../includes/shortcodes/carousel-owl.php:171
+#: ../includes/shortcodes/carousel.php:154
+#: ../includes/shortcodes/post-cycle.php:139
+#: ../includes/shortcodes/posts-list.php:161
+#: ../includes/shortcodes/posts-list.php:162
+#: ../includes/widgets/my-post-cycle-widget.php:127
+msgid "Comments"
+msgstr "Commenti"
+
+#: ../admin/shortcodes/editor-plugin.php:798
+msgid "Post Cycle"
+msgstr "Ciclo Messaggio"
+
+#: ../admin/shortcodes/editor-plugin.php:799
+msgid "Carousel (Elasti)"
+msgstr "Carosello (Elasti)"
+
+#: ../admin/shortcodes/editor-plugin.php:800
+msgid "Carousel (OWL)"
+msgstr "Carosello (OWL)"
+
+#: ../admin/shortcodes/editor-plugin.php:801
+msgid "Roundabout"
+msgstr "Giostra"
+
+#: ../admin/shortcodes/editor-plugin.php:802
+msgid "Service Box"
+msgstr "Box Servizio"
+
+#: ../admin/shortcodes/editor-plugin.php:803
+msgid "Hero Unit"
+msgstr "Unità Eroe"
+
+#: ../admin/shortcodes/editor-plugin.php:804
+msgid "Categories"
+msgstr "Categorie"
+
+#: ../admin/shortcodes/editor-plugin.php:805
+#: ../includes/shortcodes/posts-list.php:281
+msgid "Tags"
+msgstr "Tag"
+
+#: ../admin/shortcodes/editor-plugin.php:806
+msgid "Columns"
+msgstr "Colonne"
+
+#: ../admin/shortcodes/editor-plugin.php:821
+msgid "Fluid Column"
+msgstr "Colonna fluida"
+
+#: ../admin/shortcodes/editor-plugin.php:830
+msgid "2 Columns"
+msgstr "2 Colonne"
+
+#: ../admin/shortcodes/editor-plugin.php:834
+msgid "3 Columns"
+msgstr "3 Colonne"
+
+#: ../admin/shortcodes/editor-plugin.php:839
+msgid "4 Columns"
+msgstr "4 Colonne"
+
+#: ../admin/shortcodes/editor-plugin.php:841
+msgid "Elements"
+msgstr "Elementi"
+
+#: ../admin/shortcodes/editor-plugin.php:842
+msgid "Label"
+msgstr "Etichetta"
+
+#: ../admin/shortcodes/editor-plugin.php:843
+msgid "Text Highlight"
+msgstr "Evidenziatore Testo"
+
+#: ../admin/shortcodes/editor-plugin.php:844
+msgid "Button"
+msgstr "Pulsante"
+
+#: ../admin/shortcodes/editor-plugin.php:845
+msgid "Drop Cap"
+msgstr "Drop Cap "
+
+#: ../admin/shortcodes/editor-plugin.php:846
+msgid "Blockquote"
+msgstr "Blockquote"
+
+#: ../admin/shortcodes/editor-plugin.php:847
+msgid "Icon"
+msgstr "Icona"
+
+#: ../admin/shortcodes/editor-plugin.php:848
+msgid "Frame"
+msgstr "Frame"
+
+#: ../admin/shortcodes/editor-plugin.php:849
+msgid "Horizontal Rule"
+msgstr "Righello Orizzontale "
+
+#: ../admin/shortcodes/editor-plugin.php:850
+msgid "Small Horizontal Rule"
+msgstr "Righello Orizzontale Piccolo "
+
+#: ../admin/shortcodes/editor-plugin.php:851
+msgid "Vertical Rule"
+msgstr "Righello Verticale "
+
+#: ../admin/shortcodes/editor-plugin.php:852
+msgid "Spacer"
+msgstr "Spaziatore "
+
+#: ../admin/shortcodes/editor-plugin.php:853
+msgid "Progressbar"
+msgstr "Barra progresso"
+
+#: ../admin/shortcodes/editor-plugin.php:854
+msgid "Address"
+msgstr "Indirizzo"
+
+#: ../admin/shortcodes/editor-plugin.php:855
+msgid "Clear"
+msgstr "Cancella"
+
+#: ../admin/shortcodes/editor-plugin.php:856
+msgid "Extra Wrap"
+msgstr "Extra Wrap"
+
+#: ../admin/shortcodes/editor-plugin.php:857
+msgid "Lists"
+msgstr "Elenchi"
+
+#: ../admin/shortcodes/editor-plugin.php:858
+msgid "Unstyled"
+msgstr "Senza stile"
+
+#: ../admin/shortcodes/editor-plugin.php:859
+msgid "Check List"
+msgstr "Lista Check"
+
+#: ../admin/shortcodes/editor-plugin.php:860
+msgid "Check 2 List"
+msgstr "Lista Check 2 "
+
+#: ../admin/shortcodes/editor-plugin.php:861
+msgid "OK Circle List"
+msgstr "Lista Circle OK "
+
+#: ../admin/shortcodes/editor-plugin.php:862
+msgid "OK Sign List"
+msgstr "Lista Sign OK "
+
+#: ../admin/shortcodes/editor-plugin.php:863
+msgid "Arrow List"
+msgstr "Lista Arrow"
+
+#: ../admin/shortcodes/editor-plugin.php:864
+msgid "Arrow 2 List"
+msgstr "List Arrow 2"
+
+#: ../admin/shortcodes/editor-plugin.php:865
+msgid "Circle Arrow List"
+msgstr "Lista Circle Arrow "
+
+#: ../admin/shortcodes/editor-plugin.php:866
+msgid "Caret List"
+msgstr "Lista Caret "
+
+#: ../admin/shortcodes/editor-plugin.php:867
+msgid "Angle List"
+msgstr "Lista Angle "
+
+#: ../admin/shortcodes/editor-plugin.php:868
+msgid "Double Angle List"
+msgstr "Lista Double Angle"
+
+#: ../admin/shortcodes/editor-plugin.php:869
+msgid "Star List"
+msgstr "Lista Star  "
+
+#: ../admin/shortcodes/editor-plugin.php:870
+msgid "Plus List"
+msgstr "Lista plus"
+
+#: ../admin/shortcodes/editor-plugin.php:871
+msgid "Minus List"
+msgstr "Lista minima"
+
+#: ../admin/shortcodes/editor-plugin.php:872
+msgid "Circle List"
+msgstr "Lista Circle "
+
+#: ../admin/shortcodes/editor-plugin.php:873
+msgid "Circle Blank List"
+msgstr "Lista Vuota Circle "
+
+#: ../admin/shortcodes/editor-plugin.php:874
+msgid "Custom List"
+msgstr "Elenco personalizzato"
+
+#: ../admin/shortcodes/editor-plugin.php:875
+msgid "Misc"
+msgstr "Varie"
+
+#: ../admin/shortcodes/editor-plugin.php:876
+msgid "Alert Box"
+msgstr "Alert Box"
+
+#: ../admin/shortcodes/editor-plugin.php:877
+msgid "Close icon"
+msgstr "Chiudi icona"
+
+#: ../admin/shortcodes/editor-plugin.php:878
+msgid "Well"
+msgstr "Bene"
+
+#: ../admin/shortcodes/editor-plugin.php:879
+msgid "Small"
+msgstr "Piccolo"
+
+#: ../admin/shortcodes/editor-plugin.php:880
+#: ../includes/widgets/my-comment-widget.php:140
+#: ../includes/widgets/my-facebook-widget.php:79
+#: ../includes/widgets/my-flickr-widget.php:57
+#: ../includes/widgets/my-posts-type-widget.php:205
+#: ../includes/widgets/my-recent-posts.php:126
+#: ../includes/widgets/my-recent-posts.php:148
+#: ../includes/widgets/my-social-widget.php:132
+#: ../includes/widgets/my-vcard-widget.php:151
+msgid "Title"
+msgstr "Titolo"
+
+#: ../admin/shortcodes/editor-plugin.php:881
+msgid "Template URL"
+msgstr "URL Template "
+
+#: ../admin/shortcodes/editor-plugin.php:882
+msgid "Sitemap"
+msgstr "Mappa del sito"
+
+#: ../admin/shortcodes/editor-plugin.php:883
+msgid "Video Preview"
+msgstr "Anteprima Video"
+
+#: ../admin/shortcodes/editor-plugin.php:884
+msgid "Tabs"
+msgstr "Tabs"
+
+#: ../admin/shortcodes/editor-plugin.php:885
+msgid "Accordion"
+msgstr "Fisarmonica"
+
+#: ../admin/shortcodes/editor-plugin.php:886
+msgid "Table"
+msgstr "Tavolo"
+
+#: ../admin/shortcodes/editor-plugin.php:887
+msgid "Pricing Table"
+msgstr "Tabella Prezzi"
+
+#: ../admin/shortcodes/editor-plugin.php:888
+#: ../includes/widgets/my-vcard-widget.php:156
+msgid "Google Map"
+msgstr "Google Map"
+
+#: ../includes/plugin-assets.php:32
+msgid "Under Construction Page Widgets Area."
+msgstr "Area Widget Pagina In Costruzione."
+
+#: ../includes/plugin-assets.php:34
+msgid "Under construction page widgets area."
+msgstr "Area widget pagina in costruzione."
+
+#: ../includes/plugin-assets.php:52
+msgid "Maintenance mode activated. Website is blocked from public"
+msgstr "Modalità manutenzione attivata. Il sito web è bloccato al pubblico "
+
+#: ../includes/plugin-assets.php:52
+msgid "Settings."
+msgstr "Impostazioni."
+
+#: ../includes/plugin-under-construction-content.php:31
+msgid "Website is currently down for maintenance."
+msgstr "Il sito è attualmente chiuso per manutenzione."
+
+#: ../includes/plugin-under-construction-content.php:77
+msgid "Days"
+msgstr "Giorni"
+
+#: ../includes/plugin-under-construction-content.php:81
+msgid "Hours"
+msgstr "Ore"
+
+#: ../includes/plugin-under-construction-content.php:85
+msgid "Minuts"
+msgstr "Minuti"
+
+#: ../includes/plugin-under-construction-content.php:89
+msgid "Seconds"
+msgstr "Secondi"
+
+#: ../includes/gt-custom/gt-custom.php:112
+msgid "Style Switcher Preview"
+msgstr "Anteprima Variatore Stile "
+
+#: ../includes/gt-custom/gt-customize.php:17
+msgid "Cheatin&#8217; uh?"
+msgstr "Stai barando eh?"
+
+#: ../includes/gt-custom/gt-customize.php:84
+#, php-format
+msgid "%1$s &#8212; WordPress"
+msgstr "%1$s &#8212; WordPress"
+
+#: ../includes/gt-custom/gt-customize.php:84
+#, php-format
+msgid "Customize %s"
+msgstr "Personalizza %s"
+
+#: ../includes/gt-custom/gt-customize.php:112
+msgid "Style Switcher"
+msgstr "Variatore Stile "
+
+#: ../includes/shortcodes/carousel-owl.php:165
+#: ../includes/shortcodes/posts-list.php:152
+msgid "by "
+msgstr "da "
+
+#: ../includes/shortcodes/carousel-owl.php:173
+#: ../includes/shortcodes/carousel.php:156
+#: ../includes/widgets/my-post-cycle-widget.php:129
+msgid "Comment"
+msgstr "Commento"
+
+#: ../includes/shortcodes/carousel.php:147
+#: ../includes/widgets/my-post-cycle-widget.php:118
+msgid "by"
+msgstr "di"
+
+#: ../includes/shortcodes/hero-unit.php:13 ../includes/shortcodes/html.php:25
+#: ../includes/shortcodes/post-cycle.php:17
+#: ../includes/shortcodes/posts-grid.php:22
+#: ../includes/shortcodes/posts-list.php:19
+#: ../includes/shortcodes/service-box.php:15
+#: ../includes/widgets/my-posts-type-widget.php:145
+#: ../includes/widgets/my-recent-posts.php:87
+msgid "Read more"
+msgstr "Per saperne di più"
+
+#: ../includes/shortcodes/media.php:82 ../includes/shortcodes/media.php:205
+#: ../includes/shortcodes/media.php:216
+#: ../includes/shortcodes/shortcodes.php:211
+#: ../includes/shortcodes/shortcodes.php:309
+#: ../includes/shortcodes/shortcodes.php:320
+msgid "Play"
+msgstr "Play"
+
+#: ../includes/shortcodes/media.php:83 ../includes/shortcodes/media.php:217
+#: ../includes/shortcodes/shortcodes.php:212
+#: ../includes/shortcodes/shortcodes.php:321
+msgid "Pause"
+msgstr "Pausa"
+
+#: ../includes/shortcodes/media.php:84 ../includes/shortcodes/media.php:218
+#: ../includes/shortcodes/shortcodes.php:214
+#: ../includes/shortcodes/shortcodes.php:322
+msgid "Stop"
+msgstr "Stop"
+
+#: ../includes/shortcodes/media.php:90 ../includes/shortcodes/media.php:224
+#: ../includes/shortcodes/shortcodes.php:220
+#: ../includes/shortcodes/shortcodes.php:328
+msgid "Mute"
+msgstr "Mute"
+
+#: ../includes/shortcodes/media.php:91 ../includes/shortcodes/media.php:225
+#: ../includes/shortcodes/shortcodes.php:221
+#: ../includes/shortcodes/shortcodes.php:329
+msgid "Unmute"
+msgstr "Riattivare"
+
+#: ../includes/shortcodes/media.php:96 ../includes/shortcodes/media.php:229
+#: ../includes/shortcodes/shortcodes.php:226
+#: ../includes/shortcodes/shortcodes.php:333
+msgid "Update Required."
+msgstr "Aggiornamento Necessario."
+
+#: ../includes/shortcodes/media.php:96 ../includes/shortcodes/media.php:229
+#: ../includes/shortcodes/shortcodes.php:226
+#: ../includes/shortcodes/shortcodes.php:333
+msgid ""
+"To play the media you will need to either update your browser to a recent "
+"version or update your "
+msgstr ""
+"Per poter riprodurre il contenuto multimediale è necessario aggiornare il "
+"browser o "
+
+#: ../includes/shortcodes/media.php:96 ../includes/shortcodes/media.php:229
+#: ../includes/shortcodes/shortcodes.php:226
+#: ../includes/shortcodes/shortcodes.php:333
+msgid "Flash plugin"
+msgstr "Plugin Flash"
+
+#: ../includes/shortcodes/post-cycle.php:166
+msgid "Client"
+msgstr "Cliente"
+
+#: ../includes/shortcodes/post-cycle.php:167
+#: ../includes/widgets/my-comment-widget.php:91
+#: ../includes/widgets/my-recent-posts.php:147
+msgid "Date"
+msgstr "Data"
+
+#: ../includes/shortcodes/post-cycle.php:168
+msgid "Info"
+msgstr "Info"
+
+#: ../includes/shortcodes/post-cycle.php:169
+msgid "Launch Project"
+msgstr "Lancia Progetto"
+
+#: ../includes/shortcodes/posts-list.php:128
+#: ../includes/shortcodes/posts-list.php:137
+msgid "Posted in"
+msgstr "Pubblicato in "
+
+#: ../includes/shortcodes/shortcodes.php:210
+msgid "Previous"
+msgstr "Precedente"
+
+#: ../includes/shortcodes/shortcodes.php:213
+msgid "Next"
+msgstr "Successivo"
+
+#: ../includes/widgets/my-banners-widget.php:13
+msgid "Add 125x125 ads."
+msgstr "Aggiungi 125x125 annunci."
+
+#: ../includes/widgets/my-banners-widget.php:17
+msgid "Cherry - 125x125 Ads."
+msgstr "Cherry - 125x125 Ads."
+
+#: ../includes/widgets/my-banners-widget.php:60
+msgid "Ad 1"
+msgstr "Annuncio 1"
+
+#: ../includes/widgets/my-banners-widget.php:62
+#: ../includes/widgets/my-banners-widget.php:71
+#: ../includes/widgets/my-banners-widget.php:80
+#: ../includes/widgets/my-banners-widget.php:89
+msgid "Image Ad Link:"
+msgstr "Immagine Ad Link:"
+
+#: ../includes/widgets/my-banners-widget.php:66
+#: ../includes/widgets/my-banners-widget.php:75
+#: ../includes/widgets/my-banners-widget.php:84
+#: ../includes/widgets/my-banners-widget.php:93
+msgid "Ad Link:"
+msgstr "Ad Link:"
+
+#: ../includes/widgets/my-banners-widget.php:69
+msgid "Ad 2"
+msgstr "Annuncio 2"
+
+#: ../includes/widgets/my-banners-widget.php:78
+msgid "Ad 3"
+msgstr "Annuncio 3"
+
+#: ../includes/widgets/my-banners-widget.php:87
+msgid "Ad 4"
+msgstr "Annuncio 4"
+
+#: ../includes/widgets/my-comment-widget.php:4
+msgid "Cherry - Recent Comments"
+msgstr "Cherry - commenti recenti"
+
+#: ../includes/widgets/my-comment-widget.php:11
+#: ../includes/widgets/my-comment-widget.php:127
+msgid "My Recent Comments"
+msgstr "I miei commenti recenti"
+
+#: ../includes/widgets/my-comment-widget.php:72
+msgid "Comment in"
+msgstr "Commento in"
+
+#: ../includes/widgets/my-comment-widget.php:81
+#: ../includes/widgets/widgets-manager.php:479
+#: ../includes/widgets/widgets-manager.php:487
+msgid "Author"
+msgstr "Autore"
+
+#: ../includes/widgets/my-comment-widget.php:99
+msgid "Go to this comment"
+msgstr "Vai a questo commento"
+
+#: ../includes/widgets/my-comment-widget.php:141
+msgid "Number of comments to show"
+msgstr "Numero di commenti da mostrare"
+
+#: ../includes/widgets/my-comment-widget.php:142
+msgid "Display avatar"
+msgstr "Visualizzare avatar"
+
+#: ../includes/widgets/my-comment-widget.php:143
+msgid "Avatar size (px)"
+msgstr "Dimensione Avatar (px)"
+
+#: ../includes/widgets/my-comment-widget.php:152
+msgid "Display the comment author"
+msgstr "Visualizzare il commento dell'autore"
+
+#: ../includes/widgets/my-comment-widget.php:153
+msgid "Display the comment date"
+msgstr "Visualizzare la data di commento"
+
+#: ../includes/widgets/my-comment-widget.php:154
+msgid "Display post title"
+msgstr "Mostra titolo del post"
+
+#: ../includes/widgets/my-comment-widget.php:155
+#: ../includes/widgets/my-vcard-widget.php:191
+msgid "Meta format"
+msgstr "formato di Meta"
+
+#: ../includes/widgets/my-comment-widget.php:157
+#: ../includes/widgets/my-vcard-widget.php:193
+#: ../includes/widgets/widgets-manager.php:506
+msgid "None"
+msgstr "Nessuno"
+
+#: ../includes/widgets/my-comment-widget.php:158
+#: ../includes/widgets/my-social-widget.php:209
+#: ../includes/widgets/my-vcard-widget.php:194
+msgid "Icons"
+msgstr "Icone"
+
+#: ../includes/widgets/my-comment-widget.php:159
+#: ../includes/widgets/my-social-widget.php:210
+#: ../includes/widgets/my-vcard-widget.php:195
+msgid "Labels"
+msgstr "Etichette"
+
+#: ../includes/widgets/my-facebook-widget.php:4
+msgid "Cherry - Facebook Like Box Widget"
+msgstr "Cherry - Facebook Like Box Widget"
+
+#: ../includes/widgets/my-facebook-widget.php:9
+msgid "My Facebook Page"
+msgstr "La mia pagina Facebook"
+
+#: ../includes/widgets/my-facebook-widget.php:84
+msgid "Facebook page url"
+msgstr "URL pagina Facebook"
+
+#: ../includes/widgets/my-facebook-widget.php:86
+msgid "The Like Box only works with "
+msgstr "Il Riquadro Like funziona solo son "
+
+#: ../includes/widgets/my-facebook-widget.php:86
+msgid "Facebook Pages."
+msgstr "Pagine Facebook."
+
+#: ../includes/widgets/my-facebook-widget.php:90
+#: ../includes/widgets/my-posts-type-widget.php:347
+msgid "Width"
+msgstr "Larghezza"
+
+#: ../includes/widgets/my-facebook-widget.php:95
+#: ../includes/widgets/my-posts-type-widget.php:352
+msgid "Height"
+msgstr "Altezza"
+
+#: ../includes/widgets/my-facebook-widget.php:100
+msgid "Color Scheme"
+msgstr "Schema dei colori"
+
+#: ../includes/widgets/my-facebook-widget.php:102
+msgid "Light"
+msgstr "Chiaro"
+
+#: ../includes/widgets/my-facebook-widget.php:103
+msgid "Dark"
+msgstr "Scuro"
+
+#: ../includes/widgets/my-facebook-widget.php:109
+msgid "Display header"
+msgstr "Mostra intestazione"
+
+#: ../includes/widgets/my-facebook-widget.php:113
+msgid "Display faces"
+msgstr "Mostra volti"
+
+#: ../includes/widgets/my-facebook-widget.php:117
+msgid "Display stream"
+msgstr "Visualizzazione flusso"
+
+#: ../includes/widgets/my-facebook-widget.php:121
+msgid "Display border"
+msgstr "Visualizzare bordo"
+
+#: ../includes/widgets/my-flickr-widget.php:6
+msgid "Cherry - Flickr"
+msgstr "Cherry - Flickr"
+
+#: ../includes/widgets/my-flickr-widget.php:59
+msgid "Flickr ID"
+msgstr "ID Flickr"
+
+#: ../includes/widgets/my-flickr-widget.php:60
+msgid "Images count"
+msgstr "Conteggio immagini "
+
+#: ../includes/widgets/my-flickr-widget.php:61
+#: ../includes/widgets/my-posts-type-widget.php:325
+#: ../includes/widgets/my-posts-type-widget.php:372
+#: ../includes/widgets/my-recent-posts.php:158
+msgid "Link Text"
+msgstr "Testo Link"
+
+#: ../includes/widgets/my-post-cycle-widget.php:6
+msgid "Cherry - Post Cycle"
+msgstr "Cherry - Posta Cycle"
+
+#: ../includes/widgets/my-post-cycle-widget.php:195
+msgid "Title:"
+msgstr "Titolo:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:197
+msgid "Select post type:"
+msgstr "Seleziona tipo di post:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:227
+msgid "Categories (names separated by \",\"):"
+msgstr "Categorie (nomi separati da \",\"):"
+
+#: ../includes/widgets/my-post-cycle-widget.php:229
+msgid "Posts count:"
+msgstr "Conteggio messaggi:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:231
+msgid "Thumbnail Width (in pixels):"
+msgstr "Larghezza thumbnail (in pixel):"
+
+#: ../includes/widgets/my-post-cycle-widget.php:233
+msgid "Thumbnail Height (in pixels):"
+msgstr "Altezza thumbnail (in pixel):"
+
+#: ../includes/widgets/my-post-cycle-widget.php:235
+msgid "Show titles:"
+msgstr "Mostra titoli:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:242
+#: ../includes/widgets/my-post-cycle-widget.php:261
+#: ../includes/widgets/my-post-cycle-widget.php:280
+#: ../includes/widgets/my-post-cycle-widget.php:299
+#: ../includes/widgets/my-post-cycle-widget.php:318
+#: ../includes/widgets/my-post-cycle-widget.php:343
+#: ../includes/widgets/my-post-cycle-widget.php:362
+msgid "yes"
+msgstr "si"
+
+#: ../includes/widgets/my-post-cycle-widget.php:247
+#: ../includes/widgets/my-post-cycle-widget.php:266
+#: ../includes/widgets/my-post-cycle-widget.php:285
+#: ../includes/widgets/my-post-cycle-widget.php:304
+#: ../includes/widgets/my-post-cycle-widget.php:323
+#: ../includes/widgets/my-post-cycle-widget.php:348
+#: ../includes/widgets/my-post-cycle-widget.php:367
+msgid "no"
+msgstr "no"
+
+#: ../includes/widgets/my-post-cycle-widget.php:254
+msgid "Show date:"
+msgstr "Mostra data:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:273
+msgid "Show author:"
+msgstr "Mostra autore:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:292
+msgid "Show comments:"
+msgstr "Mostra commenti:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:311
+msgid "Show excerpt:"
+msgstr "Mostra un estratto:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:330
+msgid "Excerpt word count:"
+msgstr "Conteggio parole estratto:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:332
+msgid "More Button Text:"
+msgstr "Testo Pulsante Di Più:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:334
+msgid "Slideshow cycling speed (in sec.):"
+msgstr "Velocità ciclo diapositive (in sec.):"
+
+#: ../includes/widgets/my-post-cycle-widget.php:336
+msgid "Arrows:"
+msgstr "Frecce:"
+
+#: ../includes/widgets/my-post-cycle-widget.php:355
+msgid "Pagination:"
+msgstr "Numerazione pagine:"
+
+#: ../includes/widgets/my-posts-type-widget.php:7
+msgid "Show custom posts"
+msgstr "Mostra i messaggi personalizzati"
+
+#: ../includes/widgets/my-posts-type-widget.php:9
+msgid "Cherry - Advanced Cycle"
+msgstr "Cherry - ciclo avanzato"
+
+#: ../includes/widgets/my-posts-type-widget.php:152
+msgid "View all"
+msgstr "Vedi tutti"
+
+#: ../includes/widgets/my-posts-type-widget.php:212
+msgid "Posts type"
+msgstr "Tipo di messaggi"
+
+#: ../includes/widgets/my-posts-type-widget.php:229
+msgid "Number of posts to show"
+msgstr "Numero di messaggi da mostrare"
+
+#: ../includes/widgets/my-posts-type-widget.php:236
+msgid "Sort by"
+msgstr "Ordina per"
+
+#: ../includes/widgets/my-posts-type-widget.php:250
+msgid "Reverse sort order (ascending)"
+msgstr "Ordinamento inverso (crescente)"
+
+#: ../includes/widgets/my-posts-type-widget.php:256
+msgid "Show number of comments"
+msgstr "Mostra numero di commenti"
+
+#: ../includes/widgets/my-posts-type-widget.php:263
+msgid "Show meta"
+msgstr "Mostra meta"
+
+#: ../includes/widgets/my-posts-type-widget.php:269
+msgid "Container class"
+msgstr "Classe Container "
+
+#: ../includes/widgets/my-posts-type-widget.php:270
+msgid "default: \"featured_custom_posts\""
+msgstr "predefinito: \"featured_custom_posts\""
+
+#: ../includes/widgets/my-posts-type-widget.php:275
+msgid "Post title"
+msgstr "Titolo del post"
+
+#: ../includes/widgets/my-posts-type-widget.php:279
+msgid "Show post title"
+msgstr "Mostra titolo del post"
+
+#: ../includes/widgets/my-posts-type-widget.php:285
+msgid "Date as title "
+msgstr "Data come titolo "
+
+#: ../includes/widgets/my-posts-type-widget.php:292
+msgid "Excerpt"
+msgstr "Estratto"
+
+#: ../includes/widgets/my-posts-type-widget.php:296
+msgid "Show post excerpt"
+msgstr "Mostra estratto messaggio "
+
+#: ../includes/widgets/my-posts-type-widget.php:301
+#: ../includes/widgets/my-recent-posts.php:156
+msgid "Excerpt length (words)"
+msgstr "Lunghezza estratto (parole)"
+
+#: ../includes/widgets/my-posts-type-widget.php:308
+msgid "Excerpt as link"
+msgstr "Estratto come link "
+
+#: ../includes/widgets/my-posts-type-widget.php:315
+msgid "More link"
+msgstr "Pià collegamenti"
+
+#: ../includes/widgets/my-posts-type-widget.php:319
+msgid "Show \"More link"
+msgstr "Mostra  \"Più collegamento "
+
+#: ../includes/widgets/my-posts-type-widget.php:326
+msgid "default: \"Read more\""
+msgstr "predefinito: \"Per saperne di più\""
+
+#: ../includes/widgets/my-posts-type-widget.php:331
+msgid "Link class"
+msgstr "Classe link "
+
+#: ../includes/widgets/my-posts-type-widget.php:332
+msgid "default: \"link\""
+msgstr "predefinito: \"link\""
+
+#: ../includes/widgets/my-posts-type-widget.php:337
+msgid "Thumbnail dimensions"
+msgstr " Dimensioni Thumbnail"
+
+#: ../includes/widgets/my-posts-type-widget.php:342
+msgid "Show post thumbnail"
+msgstr "Visualizza miniatura messaggio"
+
+#: ../includes/widgets/my-posts-type-widget.php:358
+msgid "Thumbnail as link"
+msgstr "Miniatura come collegamento"
+
+#: ../includes/widgets/my-posts-type-widget.php:363
+msgid "Link to all posts"
+msgstr "Link a tutti i messaggi"
+
+#: ../includes/widgets/my-posts-type-widget.php:367
+msgid "Show global link to all posts"
+msgstr "Mostra collegamento globale di tutti i messaggi"
+
+#: ../includes/widgets/my-posts-type-widget.php:373
+msgid "default: \"View all\""
+msgstr "predefinito: \"Vedi tutto\""
+
+#: ../includes/widgets/my-posts-type-widget.php:378
+#: ../includes/widgets/my-recent-posts.php:160
+msgid "Link URL"
+msgstr "URL Link "
+
+#: ../includes/widgets/my-recent-posts.php:6
+msgid "Cherry - Recent Posts"
+msgstr "Cherry - Messaggi recenti"
+
+#: ../includes/widgets/my-recent-posts.php:76
+msgid "Permanent Link to"
+msgstr "Link Permanente a "
+
+#: ../includes/widgets/my-recent-posts.php:128
+msgid "Category Slug"
+msgstr "Slug Categoria "
+
+#: ../includes/widgets/my-recent-posts.php:130
+msgid "Post format"
+msgstr "Formato post "
+
+#: ../includes/widgets/my-recent-posts.php:133
+msgid "Standard"
+msgstr "Standard"
+
+#: ../includes/widgets/my-recent-posts.php:134
+msgid "Aside"
+msgstr "A parte"
+
+#: ../includes/widgets/my-recent-posts.php:135
+msgid "Quote"
+msgstr "Cita"
+
+#: ../includes/widgets/my-recent-posts.php:136
+msgid "Link"
+msgstr "Collegamento"
+
+#: ../includes/widgets/my-recent-posts.php:137
+msgid "Image"
+msgstr "Immagine"
+
+#: ../includes/widgets/my-recent-posts.php:138
+msgid "Gallery"
+msgstr "Galleria"
+
+#: ../includes/widgets/my-recent-posts.php:139
+msgid "Audio"
+msgstr "Audio"
+
+#: ../includes/widgets/my-recent-posts.php:140
+msgid "Video"
+msgstr "Video"
+
+#: ../includes/widgets/my-recent-posts.php:144
+msgid "Post order"
+msgstr "Ordine post "
+
+#: ../includes/widgets/my-recent-posts.php:149
+msgid "Comment count"
+msgstr "Numero commenti"
+
+#: ../includes/widgets/my-recent-posts.php:150
+msgid "Random"
+msgstr "Casuale"
+
+#: ../includes/widgets/my-recent-posts.php:154
+msgid "Posts per page"
+msgstr "Post per pagina "
+
+#: ../includes/widgets/my-social-widget.php:6
+msgid "Link to your social networks."
+msgstr "Link al tuo social networks."
+
+#: ../includes/widgets/my-social-widget.php:7
+msgid "Cherry - Social Networks"
+msgstr "Cherry - Social Networks"
+
+#: ../includes/widgets/my-social-widget.php:136
+msgid "Facebook"
+msgstr "Facebook "
+
+#: ../includes/widgets/my-social-widget.php:138
+msgid "Facebook URL"
+msgstr "URL Facebook"
+
+#: ../includes/widgets/my-social-widget.php:141
+msgid "Facebook label"
+msgstr "Etichetta Facebook "
+
+#: ../includes/widgets/my-social-widget.php:146
+msgid "Twitter"
+msgstr "Twitter "
+
+#: ../includes/widgets/my-social-widget.php:147
+msgid "Twitter URL"
+msgstr "URL Twitter "
+
+#: ../includes/widgets/my-social-widget.php:149
+msgid "Twitter label"
+msgstr "Etichetta Twitter "
+
+#: ../includes/widgets/my-social-widget.php:154
+msgid "Flickr"
+msgstr "Flickr "
+
+#: ../includes/widgets/my-social-widget.php:155
+msgid "Flickr URL"
+msgstr "URL Flickr"
+
+#: ../includes/widgets/my-social-widget.php:157
+msgid "Flickr label"
+msgstr "Etichetta Flickr"
+
+#: ../includes/widgets/my-social-widget.php:162
+#: ../includes/widgets/my-social-widget.php:163
+msgid "RSS feed"
+msgstr "Feed RSS"
+
+#: ../includes/widgets/my-social-widget.php:165
+msgid "RSS label"
+msgstr "Etichetta RSS"
+
+#: ../includes/widgets/my-social-widget.php:170
+msgid "Linkedin"
+msgstr "Linkedin "
+
+#: ../includes/widgets/my-social-widget.php:171
+msgid "Linkedin URL"
+msgstr "URL Linkedin "
+
+#: ../includes/widgets/my-social-widget.php:173
+msgid "Linkedin label"
+msgstr "Etichetta Linkedin "
+
+#: ../includes/widgets/my-social-widget.php:178
+msgid "Delicious"
+msgstr "Delicious "
+
+#: ../includes/widgets/my-social-widget.php:179
+msgid "Delicious URL"
+msgstr "URL Delicious "
+
+#: ../includes/widgets/my-social-widget.php:181
+msgid "Delicious label"
+msgstr "Etichetta Delicious "
+
+#: ../includes/widgets/my-social-widget.php:186
+msgid "Youtube"
+msgstr "Youtube "
+
+#: ../includes/widgets/my-social-widget.php:188
+msgid "Youtube URL"
+msgstr "URL Youtube "
+
+#: ../includes/widgets/my-social-widget.php:191
+msgid "Youtube label"
+msgstr "Etichetta Youtube "
+
+#: ../includes/widgets/my-social-widget.php:197
+msgid "Google+"
+msgstr "Google+"
+
+#: ../includes/widgets/my-social-widget.php:199
+msgid "Google+ URL"
+msgstr "URL Google+"
+
+#: ../includes/widgets/my-social-widget.php:202
+msgid "Google+ label"
+msgstr "Etichetta Google+"
+
+#: ../includes/widgets/my-social-widget.php:208
+msgid "Display"
+msgstr "Mostra "
+
+#: ../includes/widgets/my-social-widget.php:211
+msgid "Both"
+msgstr "Entrambi"
+
+#: ../includes/widgets/my-vcard-widget.php:4
+msgid "Use this widget to add a vCard"
+msgstr "Utilizzare questo widget per aggiungere un vCard"
+
+#: ../includes/widgets/my-vcard-widget.php:5
+msgid "Cherry - vCard"
+msgstr "Cherry - vCard"
+
+#: ../includes/widgets/my-vcard-widget.php:32
+msgid "vCard"
+msgstr "vCard"
+
+#: ../includes/widgets/my-vcard-widget.php:51
+#: ../includes/widgets/my-vcard-widget.php:167
+msgid "Street Address"
+msgstr "Via Indirizzo "
+
+#: ../includes/widgets/my-vcard-widget.php:52
+#: ../includes/widgets/my-vcard-widget.php:171
+msgid "City/Locality"
+msgstr "Città/Località"
+
+#: ../includes/widgets/my-vcard-widget.php:53
+#: ../includes/widgets/my-vcard-widget.php:175
+msgid "State/Region"
+msgstr "Stato/Regione "
+
+#: ../includes/widgets/my-vcard-widget.php:54
+#: ../includes/widgets/my-vcard-widget.php:179
+msgid "Zipcode/Postal Code"
+msgstr "Codice postale "
+
+#: ../includes/widgets/my-vcard-widget.php:55
+#: ../includes/widgets/my-vcard-widget.php:183
+msgid "Telephone"
+msgstr "Telefono "
+
+#: ../includes/widgets/my-vcard-widget.php:56
+#: ../includes/widgets/my-vcard-widget.php:187
+msgid "Email"
+msgstr "Email "
+
+#: ../includes/widgets/my-vcard-widget.php:158
+msgid "Display map"
+msgstr "Visualizzazione mappa"
+
+#: ../includes/widgets/my-vcard-widget.php:161
+msgid "HTML map code"
+msgstr "Codice mappa HTML"
+
+#: ../includes/widgets/widgets-manager.php:458
+msgid "Custom CSS class"
+msgstr "Classe CSS personalizzata "
+
+#: ../includes/widgets/widgets-manager.php:460
+msgid "Visibility"
+msgstr "Visibilità"
+
+#: ../includes/widgets/widgets-manager.php:463
+msgid "Visible at"
+msgstr "Visibile a"
+
+#: ../includes/widgets/widgets-manager.php:465
+msgid "All pages"
+msgstr "Tutte le pagine"
+
+#: ../includes/widgets/widgets-manager.php:466
+msgid "All pages expecting"
+msgstr "Tutte le pagine in attesa"
+
+#: ../includes/widgets/widgets-manager.php:467
+msgid "No pages expecting"
+msgstr "Nessuna delle pagine in attesa"
+
+#: ../includes/widgets/widgets-manager.php:471
+msgid "Select page to add"
+msgstr "Seleziona pagina da aggiungere "
+
+#: ../includes/widgets/widgets-manager.php:473
+msgid "Homepage"
+msgstr "Homepage"
+
+#: ../includes/widgets/widgets-manager.php:474
+msgid "Page"
+msgstr "Pagina"
+
+#: ../includes/widgets/widgets-manager.php:475
+msgid "Post"
+msgstr "Post"
+
+#: ../includes/widgets/widgets-manager.php:476
+#: ../includes/widgets/widgets-manager.php:478
+msgid "Archive"
+msgstr "Archivio"
+
+#: ../includes/widgets/widgets-manager.php:477
+msgid "Tag"
+msgstr "Tag"
+
+#: ../includes/widgets/widgets-manager.php:480
+msgid "Search page"
+msgstr "Pagina di ricerca"
+
+#: ../includes/widgets/widgets-manager.php:481
+msgid "404 page"
+msgstr "404 pagina"
+
+#: ../includes/widgets/widgets-manager.php:483
+msgid "Page ID/Title/slug"
+msgstr "ID Pagina / Titolo / slug"
+
+#: ../includes/widgets/widgets-manager.php:484
+msgid "Post ID/Title/slug"
+msgstr "Post ID / Titolo / slug"
+
+#: ../includes/widgets/widgets-manager.php:485
+msgid "Category ID/Name/slug"
+msgstr "Categoria ID / Nome / slug"
+
+#: ../includes/widgets/widgets-manager.php:486
+msgid "Tag ID/Name"
+msgstr "ID / Nome Tag"
+
+#: ../includes/widgets/widgets-manager.php:488
+msgid "Add page"
+msgstr "Aggiungi pagina"
+
+#: ../includes/widgets/widgets-manager.php:491
+msgid "Selected pages"
+msgstr "Pagine selezionate"
+
+#: ../includes/widgets/widgets-manager.php:492
+msgid "No pages"
+msgstr "Nessuna pagina"
+
+#: ../includes/widgets/widgets-manager.php:510
+msgid "All devices"
+msgstr "Tutti i dispositivi"
+
+#: ../includes/widgets/widgets-manager.php:511
+msgid "Desktops"
+msgstr "Desktops"
+
+#: ../includes/widgets/widgets-manager.php:512
+msgid "Tablets"
+msgstr "Tablets "
+
+#: ../includes/widgets/widgets-manager.php:513
+msgid "Phones"
+msgstr "Cellulari"
+
+#: ../includes/widgets/widgets-manager.php:514
+msgid "Desktops/Tablets"
+msgstr "Desktops/Tablets"
+
+#: ../includes/widgets/widgets-manager.php:515
+msgid "Tablets/Phones"
+msgstr "Tablets/Telefoni"
+
+#: ../includes/widgets/widgets-manager.php:516
+msgid "Desktops/Phones"
+msgstr "Desktop / Telefoni"
+
+#: ../includes/widgets/widgets-manager.php:519
+msgid "Visible on"
+msgstr "Visibile"
+
+#: ../includes/widgets/widgets-manager.php:528
+msgid "All users"
+msgstr "Tutti gli utenti"
+
+#: ../includes/widgets/widgets-manager.php:529
+msgid "Only guests"
+msgstr "Solo gli ospiti"
+
+#: ../includes/widgets/widgets-manager.php:530
+msgid "Only registered users"
+msgstr "Solo gli utenti registrati"
+
+#: ../includes/widgets/widgets-manager.php:531
+msgid "Only administrator"
+msgstr "Solo amministratore "
+
+#: ../includes/widgets/widgets-manager.php:534
+msgid "Visible for"
+msgstr "Visibile per"
+
+#: ../lib/php/parsers.php:43 ../lib/php/parsers.php:75
+#: ../lib/php/parsers.php:83
+msgid "There was an error when reading this WXR file"
+msgstr "Si è verificato un errore durante la lettura di questo file WXR"
+
+#: ../lib/php/parsers.php:44
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr ""
+"I dettagli sono riportati sopra. L'importatore tenterà ora di nuovo con un "
+"parser diverso ..."
+
+#: ../lib/php/parsers.php:87 ../lib/php/parsers.php:92
+#: ../lib/php/parsers.php:284 ../lib/php/parsers.php:475
+msgid ""
+"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""
+"Questo non sembra essere un file WXR, mancante / non valido numero di "
+"versione WXR"
+
+#, fuzzy
+#~ msgid "Main Page"
+#~ msgstr "Pagina"
+
+#~ msgid "No Repeat"
+#~ msgstr "Non Ripetere"
+
+#~ msgid "Repeat Horizontally"
+#~ msgstr "Ripeti Orizzontalmente"
+
+#~ msgid "Repeat Vertically"
+#~ msgstr "Ripeti Verticalmente"
+
+#~ msgid "Repeat All"
+#~ msgstr "Ripeti Tutto"
+
+#~ msgid "Top Left"
+#~ msgstr "In alto a sinistra"
+
+#~ msgid "Top Center"
+#~ msgstr "In alto al centro"
+
+#~ msgid "Top Right"
+#~ msgstr "In alto a destra"
+
+#~ msgid "Middle Left"
+#~ msgstr "Centro a sinistra"
+
+#~ msgid "Middle Center"
+#~ msgstr "Middle Centro"
+
+#~ msgid "Middle Right"
+#~ msgstr "Centro a destra"
+
+#~ msgid "Bottom Left"
+#~ msgstr "In basso a sinistra"
+
+#~ msgid "Bottom Center"
+#~ msgstr "In basso al centro "
+
+#~ msgid "Bottom Right"
+#~ msgstr "In basso a destra "
+
+#~ msgid "Scroll Normally"
+#~ msgstr "Scorrere normalmente"
+
+#~ msgid "Fixed in Place"
+#~ msgstr "Fissata al suo posto "
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "1.2"
+#~ msgstr "1.2"
+
+#~ msgid "1.5"
+#~ msgstr "1.2"
+
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgid "Latin"
+#~ msgstr "Latina "
+
+#~ msgid "Latin Extended"
+#~ msgstr "Esteso Latina "
+
+#~ msgid "Greek"
+#~ msgstr "Greco"
+
+#~ msgid "Greek Extended"
+#~ msgstr "Greco esteso"
+
+#~ msgid "Cyrillic"
+#~ msgstr "Cirillico"
+
+#~ msgid "Cyrillic Extended"
+#~ msgstr "Cirillico esteso"
+
+#~ msgid "Normal"
+#~ msgstr "Normale"
+
+#~ msgid "Italic"
+#~ msgstr "Corsivo"
+
+#~ msgid "Bold"
+#~ msgstr "Grassetto"
+
+#~ msgid "Bold Italic"
+#~ msgstr "Grassetto Italic"
+
+#~ msgid "Return to the dashboard"
+#~ msgstr "Ritorna al Pannello di Controllo"
+
+#~ msgid "The following plugin was activated successfully:"
+#~ msgstr "Il seguente plugin è stato attivato con successo:"
+
+#~ msgid "Dismiss this notice"
+#~ msgstr "Ignora questo avviso"
+
+#~ msgid "No"
+#~ msgstr "no"
+
+#~ msgid "Slow"
+#~ msgstr "Rallentare"
+
+#~ msgid "Fast"
+#~ msgstr "Veloce"
+
+#~ msgid "Normal size"
+#~ msgstr "Formato normale"
+
+#~ msgid "Font Size"
+#~ msgstr "Dimensione carattere"
+
+#~ msgid "Lineheight"
+#~ msgstr "linea Altezza"
+
+#~ msgid "Font Face"
+#~ msgstr "Tipo di caratteri"
+
+#~ msgid "Character Sets"
+#~ msgstr "Set di caratteri"
+
+#~ msgid "Font Style"
+#~ msgstr "Stile caratteri"
+
+#~ msgid "Color"
+#~ msgstr "Colore"
+
+#~ msgid "Done"
+#~ msgstr "Fatto "
+
+#~ msgid "Error"
+#~ msgstr "Errore"
+
+#~ msgid "success"
+#~ msgstr "successo"
+
+#~ msgid "try again"
+#~ msgstr "riprovare "
+
+#~ msgid "Finish"
+#~ msgstr "Terminare"
+
+#~ msgid "Skip this step"
+#~ msgstr "Saltare questo passaggio"
+
+#~ msgid "next"
+#~ msgstr "successivo"
+
+#~ msgid "Enable Lightbox"
+#~ msgstr "Abilita Lightbox"
+
+#~ msgid "Check this to enable the lightbox."
+#~ msgstr "Selezionare questa opzione per abilitare la lightbox."
+
+#~ msgid "Permalink"
+#~ msgstr "Permalink a:"
+
+#~ msgid "Show All"
+#~ msgstr "Mostra tutti"
+
+#~ msgid "search"
+#~ msgstr "ricerca"
+
+#~ msgid "Go"
+#~ msgstr "Vai"
+
+#~ msgid "&laquo; Previous post."
+#~ msgstr "Precedente post"
+
+#~ msgid "Next Post &raquo;"
+#~ msgstr "Prossimo post"
+
+#~ msgid "URL"
+#~ msgstr "URL"
+
+#~ msgid "URL #1"
+#~ msgstr "URL #1"
+
+#~ msgid "URL #2"
+#~ msgstr "URL #1"
+
+#~ msgid "Uncategorized"
+#~ msgstr "Senza categoria"
+
+#~ msgid "Last"
+#~ msgstr "Ultimo"
+
+#~ msgid "First"
+#~ msgstr "Primo"
+
+#~ msgid "Delete"
+#~ msgstr "Cancella"
+
+#~ msgid "Save Options"
+#~ msgstr "Opzioni di salvataggio"
+
+#~ msgid "Restore Defaults"
+#~ msgstr "Ripristina impostazioni predefinite"
+
+#~ msgid "Click OK to reset. Any theme settings will be lost!"
+#~ msgstr ""
+#~ "Fare clic su OK per ripristinare. Eventuali impostazioni del tema saranno "
+#~ "perse!"
+
+#~ msgid "General"
+#~ msgstr "Generale"
+
+#~ msgid "Body styling"
+#~ msgstr "Styling corpo."
+
+#~ msgid "Change the background style"
+#~ msgstr "Modificare lo stile di fondo."
+
+#~ msgid "Background Image"
+#~ msgstr "Immagine di sfondo"
+
+#~ msgid "Background Color"
+#~ msgstr "Colore di sfondo"
+
+#~ msgid "Header background color"
+#~ msgstr "Colore di sfondo dell'intestazione."
+
+#~ msgid "Change the header background color"
+#~ msgstr "Modificare il colore di sfondo dell'intestazione."
+
+#~ msgid "Link color"
+#~ msgstr "Link class"
+
+#~ msgid "Change the color of link"
+#~ msgstr "Cambiare il colore dei pulsanti e collegamenti."
+
+#~ msgid "Link color hover"
+#~ msgstr "Colore Link Sopra"
+
+#~ msgid "Change the color of link hover state"
+#~ msgstr "Cambiare il colore dei pulsanti e collegamenti."
+
+#~ msgid "Body Text"
+#~ msgstr "Corpo del testo."
+
+#~ msgid ""
+#~ "Choose your prefered font for body text. <em>Note: fonts marked with "
+#~ "<strong>*</strong> symbol will be loaded from the <a href='http://www."
+#~ "google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Scegliete il vostro font preferito per il corpo del testo. <em> Nota: "
+#~ "caratteri marcati con <strong>*</strong> simbolo verranno caricati dai <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> biblioteca </"
+#~ "em>"
+
+#~ msgid "H1 Heading"
+#~ msgstr "H1 Rubrica"
+
+#~ msgid ""
+#~ "Choose your prefered font for H1 heading and titles. <em>Note: fonts "
+#~ "marked with <strong>*</strong> symbol will be loaded from the <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Scegliete il vostro font preferito per H1 voce e titoli. <em>Nota: "
+#~ "caratteri marcati con <strong>*</strong> simbolo verranno caricati dai <a "
+#~ "href='http://www.google.com/webfonts'> Google Web Fonts</a> biblioteca.</"
+#~ "em>"
+
+#~ msgid "H2 Heading"
+#~ msgstr "H2 Rubrica"
+
+#~ msgid ""
+#~ "Choose your prefered font for H2 heading and titles. <em>Note: fonts "
+#~ "marked with <strong>*</strong> symbol will be loaded from the <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Scegliete il vostro font preferito per H2 voce e titoli. <em> Nota: "
+#~ "caratteri marcati con <strong>*</strong> simbolo verranno caricati dai <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> biblioteca.</"
+#~ "em>"
+
+#~ msgid "H3 Heading"
+#~ msgstr "H3 Rubrica"
+
+#~ msgid ""
+#~ "Choose your prefered font for H3 heading and titles. <em>Note: fonts "
+#~ "marked with <strong>*</strong> symbol will be loaded from the <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Scegliete il vostro font preferito per H3 voce e titoli. <em>Nota: "
+#~ "caratteri marcati con <strong>*</strong> simbolo verranno caricati dai <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> biblioteca.</"
+#~ "em>"
+
+#~ msgid "H4 Heading"
+#~ msgstr "H4 Rubrica"
+
+#~ msgid ""
+#~ "Choose your prefered font for H4 heading and titles. <em>Note: fonts "
+#~ "marked with <strong>*</strong> symbol will be loaded from the <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Scegliete il vostro font preferito per H4 voce e titoli. <em>Nota: "
+#~ "caratteri marcati con <strong>*</strong> simbolo verranno caricati dai <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> biblioteca.</"
+#~ "em>"
+
+#~ msgid "H5 Heading"
+#~ msgstr "H5 Rubrica"
+
+#~ msgid ""
+#~ "Choose your prefered font for H5 heading and titles. <em>Note: fonts "
+#~ "marked with <strong>*</strong> symbol will be loaded from the <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Scegliete il vostro font preferito per H5 voce e titoli. <em>Nota: "
+#~ "caratteri marcati con <strong>*</strong> simbolo verranno caricati dai <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> biblioteca.</"
+#~ "em>"
+
+#~ msgid "H6 Heading"
+#~ msgstr "H6 Rubrica"
+
+#~ msgid ""
+#~ "Choose your prefered font for H6 heading and titles. <em>Note: fonts "
+#~ "marked with <strong>*</strong> symbol will be loaded from the <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Scegliete il vostro font preferito per H6 voce e titoli. <em>Nota: "
+#~ "caratteri marcati con <strong>*</strong> simbolo verranno caricati dai <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> biblioteca.</"
+#~ "em>"
+
+#~ msgid "Display search box?"
+#~ msgstr "Mostra casella di ricerca?"
+
+#~ msgid "Display search box in the header?"
+#~ msgstr "Mostra casella di ricerca nell'intestazione?"
+
+#~ msgid "Display breadcrumbs?"
+#~ msgstr "Visualizzare pangrattato?"
+
+#~ msgid "Display breadcrumbs in the page?"
+#~ msgstr "Visualizzare pangrattato con la pagina?"
+
+#~ msgid "Custom CSS"
+#~ msgstr "CSS personalizzato"
+
+#~ msgid ""
+#~ "Want to add any custom CSS code? Put in here, and the rest is taken care "
+#~ "of. This overrides any other stylesheets. eg: a.button{color:green}"
+#~ msgstr ""
+#~ "Vuoi aggiungere il codice CSS personalizzato? Mettere in qui, e il resto "
+#~ "è preso cura di. Questo sovrascrive tutti gli altri fogli di stile. ad "
+#~ "esempio: a.button {color: green}"
+
+#~ msgid "Logo"
+#~ msgstr "Logo"
+
+#~ msgid "Logo & Favicon"
+#~ msgstr "Logo & Favicon"
+
+#~ msgid "What kind of logo?"
+#~ msgstr "Che tipo di logo?"
+
+#~ msgid ""
+#~ "Select whether you want your main logo to be an image or text. If you "
+#~ "select \"image\" you can put in the image url in the next option, and if "
+#~ "you select \"text\" your Site Title will be shown instead."
+#~ msgstr ""
+#~ "Selezionare se si desidera che il logo principale per essere un'immagine "
+#~ "o un testo. Se si seleziona \"immagine \" si può mettere l'URL "
+#~ "dell'immagine nella opzione successiva, e se si seleziona \"testo \" il "
+#~ "tuo sito titolo sarà visualizzato. "
+
+#~ msgid "Image Logo"
+#~ msgstr "Immagine Logo"
+
+#~ msgid "Text Logo"
+#~ msgstr "Testo Logo"
+
+#~ msgid "Logo Typography"
+#~ msgstr "Logo Tipografia"
+
+#~ msgid ""
+#~ "Choose your prefered font for menu. <em>Note: fonts marked with "
+#~ "<strong>*</strong> symbol will be loaded from the <a href='http://www."
+#~ "google.com/webfonts'>Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Scegliete il vostro font preferito per il menu. <em>Nota: caratteri "
+#~ "marcati con <strong>*</strong> simbolo verranno caricati dai <a "
+#~ "href='http://www.google.com/webfonts'>Google Web Fonts</a> biblioteca.</"
+#~ "em>"
+
+#~ msgid "Logo Image Path"
+#~ msgstr "Logo Percorso immagine"
+
+#~ msgid ""
+#~ "Click Upload or Enter the direct path to your <strong>logo image</"
+#~ "strong>. For example <em>http://your_website_url_here/wp-content/themes/"
+#~ "themeXXXX/images/logo.png</em>"
+#~ msgstr ""
+#~ "Fare clic su Carica o Immettere il percorso diretto per la vostra "
+#~ "<strong>immagine logo</strong>. Per esempio <em>http://"
+#~ "your_website_url_here/wp-content/themes/themeXXXX/images/logo.png</em>"
+
+#~ msgid "Favicon"
+#~ msgstr "Favicon"
+
+#~ msgid ""
+#~ "Click Upload or Enter the direct path to your <strong>favicon</strong>. "
+#~ "For example <em>http://your_website_url_here/wp-content/themes/themeXXXX/"
+#~ "favicon.ico</em>"
+#~ msgstr ""
+#~ "Fare clic su Carica o Immettere il percorso diretto al vostro "
+#~ "<strong>favicon</strong>. Per esempio <em>http://your_website_url_here/wp-"
+#~ "content/themes/themeXXXX/favicon.ico</em>"
+
+#~ msgid "Navigation"
+#~ msgstr "Navigazione"
+
+#~ msgid "Menu Typography"
+#~ msgstr "Tipografia Menu"
+
+#~ msgid "Delay"
+#~ msgstr "Ritardo"
+
+#~ msgid "Miliseconds delay on mouseout."
+#~ msgstr "Millisecondi di ritardo sulla mouseout."
+
+#~ msgid "Fade-in animation"
+#~ msgstr "Fade-in animazione"
+
+#~ msgid "Fade-in animation."
+#~ msgstr "Fade-in animazione"
+
+#~ msgid "Slide-down animation."
+#~ msgstr "Animazione scivolare verso il basso."
+
+#~ msgid "Enable fade-in animation"
+#~ msgstr "Abilita fade-in animazione"
+
+#~ msgid "Disable fade-in animation"
+#~ msgstr "Disabilitare fade-in animazione"
+
+#~ msgid "Enable slide-down animation"
+#~ msgstr "Abilita animazione diapositiva verso il basso"
+
+#~ msgid "Disable slide-down animation"
+#~ msgstr "Disabilitare l'animazione diapositiva verso il basso"
+
+#~ msgid "Speed"
+#~ msgstr "Velocità"
+
+#~ msgid "Animation speed."
+#~ msgstr "Velocità di animazione."
+
+#~ msgid "Arrows markup."
+#~ msgstr "Frecce markup."
+
+#~ msgid "Do you want to generate arrow mark-up?"
+#~ msgstr "Vuoi generare freccia mark-up?"
+
+#~ msgid "Mobile menu label."
+#~ msgstr "Etichetta menù Mobile."
+
+#~ msgid "This text is visible in mobile select menu."
+#~ msgstr "Questo testo è visibile nel menu di selezione mobile."
+
+#~ msgid "Navigate to..."
+#~ msgstr "Navigazione"
+
+#~ msgid "Slider Settings"
+#~ msgstr "Impostazioni Slider"
+
+#~ msgid "Slider"
+#~ msgstr "Slider"
+
+#~ msgid "The type of slider"
+#~ msgstr "Il tipo di barra cursore"
+
+#~ msgid "You can choose the type of slider that suits you best."
+#~ msgstr ""
+#~ "È possibile scegliere il tipo di barra del cursore che meglio vi si "
+#~ "addice."
+
+#~ msgid "Disable slider"
+#~ msgstr "Disabilitare l'animazione diapositiva verso il basso"
+
+#~ msgid "Slideshow"
+#~ msgstr "Slideshow"
+
+#~ msgid "Slides"
+#~ msgstr "Slides"
+
+#~ msgid "Sliding effect"
+#~ msgstr "Effetto scorrevole"
+
+#~ msgid "Select your animation type."
+#~ msgstr "Selezionare il tipo di animazione."
+
+#~ msgid "random"
+#~ msgstr "casuale"
+
+#~ msgid "simpleFade"
+#~ msgstr "semplice Fade"
+
+#~ msgid "curtainTopLeft"
+#~ msgstr "tendina in alto a sinistra"
+
+#~ msgid "curtainTopRight"
+#~ msgstr "tenda in alto a destra"
+
+#~ msgid "curtainBottomLeft"
+#~ msgstr "tenda In basso a sinistra"
+
+#~ msgid "curtainBottomRight"
+#~ msgstr "tenda in basso a destra"
+
+#~ msgid "curtainSliceLeft"
+#~ msgstr "tenda Slice Sinistra"
+
+#~ msgid "curtainSliceRight"
+#~ msgstr "tenda Slice Diritto"
+
+#~ msgid "blindCurtainTopLeft"
+#~ msgstr "Cortina cieca In alto a sinistra"
+
+#~ msgid "blindCurtainTopRight"
+#~ msgstr "cieco Cortina In alto a destra"
+
+#~ msgid "blindCurtainBottomLeft"
+#~ msgstr "cieco Inferiore Cortina Sinistra"
+
+#~ msgid "blindCurtainBottomRight"
+#~ msgstr "cieco Cortina In basso a destra"
+
+#~ msgid "blindCurtainSliceBottom"
+#~ msgstr "cieco Cortina Slice Inferiore"
+
+#~ msgid "blindCurtainSliceTop"
+#~ msgstr "cieco Cortina Slice Top"
+
+#~ msgid "stampede"
+#~ msgstr "stampede"
+
+#~ msgid "mosaic"
+#~ msgstr "mosaico"
+
+#~ msgid "mosaicReverse"
+#~ msgstr "mosaico Reverse"
+
+#~ msgid "mosaicRandom"
+#~ msgstr "mosaico casuale"
+
+#~ msgid "mosaicSpiral"
+#~ msgstr "mosaico a spirale"
+
+#~ msgid "mosaicSpiralReverse"
+#~ msgstr "mosaico a spirale inversa"
+
+#~ msgid "topLeftBottomRight"
+#~ msgstr "alto a sinistra in basso a destra"
+
+#~ msgid "bottomRightTopLeft"
+#~ msgstr "inferiore destra di sinistra"
+
+#~ msgid "bottomLeftTopRight"
+#~ msgstr "In basso a sinistra In alto a destra"
+
+#~ msgid "Number of columns"
+#~ msgstr "Numero di colonne"
+
+#~ msgid "Number of rows"
+#~ msgstr "Numero di righe"
+
+#~ msgid "Banner effect"
+#~ msgstr "Effetto Banner"
+
+#~ msgid "moveFromLeft"
+#~ msgstr "spostare FromLeft"
+
+#~ msgid "moveFromRight"
+#~ msgstr "spostarsi da destra"
+
+#~ msgid "moveFromTop"
+#~ msgstr "spostarsi da Top"
+
+#~ msgid "moveFromBottom"
+#~ msgstr "spostarsi da Basso"
+
+#~ msgid "fadeIn"
+#~ msgstr "In dissolvenza"
+
+#~ msgid "fadeFromLeft"
+#~ msgstr "dissolvenza da sinistra"
+
+#~ msgid "fadeFromRight"
+#~ msgstr "dissolvenza Da destra"
+
+#~ msgid "fadeFromTop"
+#~ msgstr "dissolvenza Da Top"
+
+#~ msgid "fadeFromBottom"
+#~ msgstr "dissolvenza Dal basso"
+
+#~ msgid "Select your banner animation type."
+#~ msgstr "Selezionare il tipo di animazione banner."
+
+#~ msgid "Pause time"
+#~ msgstr "Tempo di pausa"
+
+#~ msgid "Pause time (ms)."
+#~ msgstr "Tempo di pausa (ms)."
+
+#~ msgid "Animation speed"
+#~ msgstr "Velocità di animazione"
+
+#~ msgid "Animation speed (ms)"
+#~ msgstr "Velocità di animazione (ms)"
+
+#~ msgid "Animate slider automatically?"
+#~ msgstr "Animare automaticamente cursore?"
+
+#~ msgid "Thumbnails"
+#~ msgstr "Miniature"
+
+#~ msgid "Display thumbnails?"
+#~ msgstr "Visualizzare le miniature?"
+
+#~ msgid "Display pagination?"
+#~ msgstr "Visualizzare l'impaginazione?"
+
+#~ msgid "Next & Prev navigation"
+#~ msgstr "Avanti e Indietro navigazione"
+
+#~ msgid "Display next & prev navigation?"
+#~ msgstr "Visualizza la successiva navigazione & prev?"
+
+#~ msgid "Display next & prev navigation only on hover?"
+#~ msgstr ""
+#~ "Visualizza la successiva navigazione & prev solo al passaggio del mouse?"
+
+#~ msgid ""
+#~ "If true the navigation button (prev, next and play/stop buttons) will be "
+#~ "visible on hover state only, if false they will be visible always"
+#~ msgstr ""
+#~ "Se fosse vero il pulsante di navigazione (prev, next e pulsanti PLAY / "
+#~ "STOP) sarà visibile sul stato hover solo, se falsi saranno visibili sempre"
+
+#~ msgid "Play/Pause button"
+#~ msgstr "pulsante Play/Pause "
+
+#~ msgid "Display Play/Pause button?"
+#~ msgstr "Visualizzare il pulsante Play / Pause?"
+
+#~ msgid "Loader"
+#~ msgstr "Caricamento"
+
+#~ msgid "Slider loader"
+#~ msgstr "Caricamento Slider "
+
+#~ msgid "Pie"
+#~ msgstr "Pie"
+
+#~ msgid "Bar"
+#~ msgstr "Bar"
+
+#~ msgid "Slides to display"
+#~ msgstr "Immagini da visualizzare"
+
+#~ msgid ""
+#~ "Select the slides that you want to be displayed on slider. If no slide is "
+#~ "selected, all slides will be displayed."
+#~ msgstr ""
+#~ "Selezionare le Immagini da visualizzare sul dispositivo di scorrimento. "
+#~ "Se non è selezionata alcuna presentazione, verranno visualizzate tutte le "
+#~ "diapositive."
+
+#~ msgid "Pause on mouseover"
+#~ msgstr "Pausa Mouse sopra"
+
+#~ msgid "The auto play will pause when you mouse over the slider."
+#~ msgstr ""
+#~ "La riproduzione Automatica si mettera' in pausa quando il mouse  e' sopra "
+#~ "il cursore."
+
+#~ msgid "Animation slowdown"
+#~ msgstr "Velocità di animazione"
+
+#~ msgid ""
+#~ "You can choose different types of animation slowdown for transition of "
+#~ "slides."
+#~ msgstr ""
+#~ "È possibile scegliere diversi tipi di animazione rallentamento per la "
+#~ "transizione delle immagini."
+
+#~ msgid "Mouse events for transition of slides"
+#~ msgstr "Eventi del mouse per la transizione delle immagini"
+
+#~ msgid ""
+#~ "You can choose different types of mouse events for transition of slides."
+#~ msgstr ""
+#~ "È possibile scegliere diversi tipi di eventi del mouse per la transizione "
+#~ "delle immagini."
+
+#~ msgid "Click"
+#~ msgstr "Click"
+
+#~ msgid "Mouseover"
+#~ msgstr "Mouse sopra"
+
+#~ msgid "Active slide"
+#~ msgstr "Attiva"
+
+#~ msgid ""
+#~ "Set the number of slide that will be active by default. If the value is "
+#~ "0, all slides will be of the same width when page loads."
+#~ msgstr ""
+#~ "Impostare il numero di immagini che sarà attivata per impostazione "
+#~ "predefinita. Se il valore è 0, tutte le immagini saranno della stessa "
+#~ "larghezza quando il caricamento della pagina."
+
+#~ msgid "linear"
+#~ msgstr "linear"
+
+#~ msgid "easeInSine"
+#~ msgstr "easeInSine"
+
+#~ msgid "easeOutSine"
+#~ msgstr "easeOutSine"
+
+#~ msgid "easeInOutSine"
+#~ msgstr "easeInOutSine"
+
+#~ msgid "easeInQuad"
+#~ msgstr "easeInQuad"
+
+#~ msgid "easeOutQuad"
+#~ msgstr "easeOutQuad"
+
+#~ msgid "easeInOutQuad"
+#~ msgstr "easeInOutQuad"
+
+#~ msgid "easeInCubic"
+#~ msgstr "easeInCubic"
+
+#~ msgid "easeOutCubic"
+#~ msgstr "easeOutCubic"
+
+#~ msgid "easeInOutCubic"
+#~ msgstr "easeInOutCubic"
+
+#~ msgid "easeInQuart"
+#~ msgstr "easeInQuart"
+
+#~ msgid "easeOutQuart"
+#~ msgstr "easeOutQuart"
+
+#~ msgid "easeInOutQuart"
+#~ msgstr "easeInOutQuart"
+
+#~ msgid "easeInQuint"
+#~ msgstr "easeInQuint"
+
+#~ msgid "easeOutQuint"
+#~ msgstr "easeOutQuint"
+
+#~ msgid "easeInOutQuint"
+#~ msgstr "easeInOutQuint"
+
+#~ msgid "easeInExpo"
+#~ msgstr "easeInExpo"
+
+#~ msgid "easeOutExpo"
+#~ msgstr "easeOutExpo"
+
+#~ msgid "easeInOutExpo"
+#~ msgstr "easeInOutExpo"
+
+#~ msgid "easeInCirc"
+#~ msgstr "easeInCirc"
+
+#~ msgid "easeOutCirc"
+#~ msgstr "easeOutCirc"
+
+#~ msgid "easeInOutCirc"
+#~ msgstr "easeInOutCirc"
+
+#~ msgid "easeInBack"
+#~ msgstr "easeInBack"
+
+#~ msgid "easeOutBack"
+#~ msgstr "easeOutBack"
+
+#~ msgid "easeInOutBack"
+#~ msgstr "easeInOutBack"
+
+#~ msgid "easeInElastic"
+#~ msgstr "easeInElastic"
+
+#~ msgid "easeOutElastic"
+#~ msgstr "easeOutElastic"
+
+#~ msgid "easeInOutElastic"
+#~ msgstr "easeInOutElastic"
+
+#~ msgid "easeInBounce"
+#~ msgstr "easeInBounce"
+
+#~ msgid "easeOutBounce"
+#~ msgstr "easeOutBounce"
+
+#~ msgid "easeInOutBounce"
+#~ msgstr "easeInOutBounce"
+
+#~ msgid "Blog"
+#~ msgstr "Blog"
+
+#~ msgid "Blog Title"
+#~ msgstr "Blog Titolo"
+
+#~ msgid "Enter Your Blog Title used on Blog page."
+#~ msgstr "Inserisci il tuo blog titolo usato a pagina Blog."
+
+#~ msgid "Related Posts Title"
+#~ msgstr "Posts Related Titolo"
+
+#~ msgid "Enter Your Title used on Single Post page for related posts."
+#~ msgstr ""
+#~ "Inserisci il tuo titolo utilizzato sulla singola pagina di post per post "
+#~ "correlati."
+
+#~ msgid "Related Posts"
+#~ msgstr "Related Posts"
+
+#~ msgid "Sidebar position"
+#~ msgstr "Posizione Sidebar"
+
+#~ msgid "Choose sidebar position."
+#~ msgstr "Scegliere la posizione sidebar."
+
+#~ msgid "Blog image size"
+#~ msgstr "Blog dimensioni dell'immagine"
+
+#~ msgid "Featured image size on the blog."
+#~ msgstr "Presentato dimensioni dell'immagine sul blog."
+
+#~ msgid "Should images be uploaded on page scroll?"
+#~ msgstr ""
+#~ "Dovrebbero le immagini  essere caricare sulla pagina di scorrimento?"
+
+#~ msgid ""
+#~ "You can enable images load only as you scroll down the page. Otherwise "
+#~ "images will load all at once."
+#~ msgstr ""
+#~ "È possibile abilitare carica immagini solo quando scorri la pagina. In "
+#~ "caso contrario, le immagini verranno caricate tutte in una volta."
+
+#~ msgid "Display share button in single post?"
+#~ msgstr "Mostra quota pulsante sul singolo messaggio?"
+
+#~ msgid "Single post image size"
+#~ msgstr "Singolo dimensioni dell'immagine postale"
+
+#~ msgid "Featured image size on the single page."
+#~ msgstr "Dimensioni dell'immagine in vetrina sulla pagina singola."
+
+#~ msgid "View meta of the blog."
+#~ msgstr "Guarda meta del blog."
+
+#~ msgid ""
+#~ "Select meta block type which will be displayed on blog and post pages."
+#~ msgstr ""
+#~ "Selezionare il tipo di blocco meta che verrà visualizzato su pagine di "
+#~ "blog e post."
+
+#~ msgid "Enable excerpt for blog posts?"
+#~ msgstr "Abilita stralcio per i post del blog?"
+
+#~ msgid "Enable or Disable excerpt for blog posts."
+#~ msgstr "Attiva o Disattiva stralcio per i post del blog."
+
+#~ msgid "Button text for blog posts."
+#~ msgstr "Testo del pulsante per i post del blog."
+
+#~ msgid "Do not show."
+#~ msgstr "Non mostrare."
+
+#~ msgid "Lines."
+#~ msgstr "Linee."
+
+#~ msgid "Columns."
+#~ msgstr "Colonne."
+
+#~ msgid "Icons."
+#~ msgstr "Icone."
+
+#~ msgid "Post publication date."
+#~ msgstr "Data di pubblicazione Post."
+
+#~ msgid "Should the post publication date be displayed?"
+#~ msgstr "Deve essere visualizzata la data di pubblicazione dei post?"
+
+#~ msgid "Author of the post."
+#~ msgstr "Autore del post."
+
+#~ msgid "Display the author of the post?"
+#~ msgstr "Visualizza  l'autore del post?"
+
+#~ msgid "Direct link to the post."
+#~ msgstr "Link diretto al post."
+
+#~ msgid "Should the direct link to the post be displayed? "
+#~ msgstr "Deve essere visualizzato il link diretto al post?"
+
+#~ msgid "Should the post categories be displayed?"
+#~ msgstr "Devono essere visualizzate le categorie dei post?"
+
+#~ msgid "Tags be displayed."
+#~ msgstr "Visualizzare le tag."
+
+#~ msgid "Should the tags be displayed?"
+#~ msgstr "Devono essere visualizzate  le tag?"
+
+#~ msgid "Number of comments."
+#~ msgstr "Numero dei commenti."
+
+#~ msgid "Should the number of comments be displayed?"
+#~ msgstr "Deve essere visualizzato il numero di commenti?"
+
+#~ msgid "Number of view."
+#~ msgstr "Numero delle Visite."
+
+#~ msgid "Should the number of view be displayed?"
+#~ msgstr "Deve essere visualizzato il numero delle viste?"
+
+#~ msgid "Number of likes."
+#~ msgstr "Numero di mi piace."
+
+#~ msgid "Should the number of likes be displayed?"
+#~ msgstr "Deve essere visualizzato il numero di mi piace?"
+
+#~ msgid "Number of dislikes."
+#~ msgstr "Numero dei non mi piace."
+
+#~ msgid "Should the number of dislikes be displayed?"
+#~ msgstr "Deve essere visualizzato il numero di non mi piace?"
+
+#~ msgid "Portfolio"
+#~ msgstr "Portfolio"
+
+#~ msgid "Filter"
+#~ msgstr "Filtra"
+
+#~ msgid "Portfolio filter."
+#~ msgstr "Filtro Portfolio."
+
+#~ msgid "By category"
+#~ msgstr "Per categoria"
+
+#~ msgid "By tags"
+#~ msgstr "Con i tag"
+
+#~ msgid "Both (by category and tags)"
+#~ msgstr "Entrambi (per categoria e tag)"
+
+#~ msgid "Enable or Disable title for portfolio posts."
+#~ msgstr "Attiva o Disattiva titolo di portafoglio messaggi."
+
+#~ msgid "Enable or Disable excerpt for portfolio posts."
+#~ msgstr "Attiva o Disattiva estratto di portafoglio messaggi."
+
+#~ msgid "Button text for portfolio posts."
+#~ msgstr "Testo del pulsante di portafoglio messaggi."
+
+#~ msgid "Excerpt length (words)."
+#~ msgstr "Lunghezza Estratto (parole)."
+
+#~ msgid "Show button?"
+#~ msgstr "Mostra pulsante?"
+
+#~ msgid "Enable or Disable button for portfolio posts."
+#~ msgstr "Abilitare o disabilitare il pulsante di portafoglio messaggi."
+
+#~ msgid "Show portfolio meta?"
+#~ msgstr "Mostra meta"
+
+#~ msgid "Enable or Disable meta for single portfolio posts."
+#~ msgstr "Attiva o Disattiva estratto di portafoglio messaggi."
+
+#~ msgid "Enable or Disable lightbox for portfolio posts."
+#~ msgstr "Attiva o Disattiva lightbox per portfolio post."
+
+#~ msgid "Layout"
+#~ msgstr "Disposizione"
+
+#~ msgid ""
+#~ "Portfolio has different layout modes. You can set and change the layout "
+#~ "mode via this option."
+#~ msgstr ""
+#~ "Portfolio ha diverse modalità di layout. È possibile impostare e cambiare "
+#~ "la modalità di layout tramite questa opzione."
+
+#~ msgid "Fit rows"
+#~ msgstr "Montare le righe"
+
+#~ msgid "Masonry"
+#~ msgstr "Massoneria"
+
+#~ msgid "Portfolio 2 columns items amount"
+#~ msgstr "Portfolio 2 colonne articoli importo"
+
+#~ msgid "Portfolio items amount for Portfolio 2 columns template."
+#~ msgstr "Elementi del parco importo per Portfolio 2 colonne template."
+
+#~ msgid "Portfolio 3 columns items amount"
+#~ msgstr "Portfolio 3 colonne articoli importo"
+
+#~ msgid "Portfolio items amount for Portfolio 3 columns template."
+#~ msgstr "Elementi del parco importo per Portfolio 3 colonne template."
+
+#~ msgid "Portfolio 4 columns items amount"
+#~ msgstr "Portafoglio 4 colonne articoli importo"
+
+#~ msgid "Portfolio items amount for Portfolio 4 columns template."
+#~ msgstr "Elementi del parco importo per Portfolio 4 colonne template."
+
+#~ msgid "Footer"
+#~ msgstr "Piè di pagina"
+
+#~ msgid "Footer copyright text"
+#~ msgstr "Testo piè di pagina copyright"
+
+#~ msgid ""
+#~ "Enter text used in the right side of the footer. HTML tags are allowed."
+#~ msgstr ""
+#~ "Inserisci il testo utilizzato nel lato destro del piè di pagina. Sono "
+#~ "consentiti i tag HTML."
+
+#~ msgid "Google Analytics Code"
+#~ msgstr "Google Codice Analytics"
+
+#~ msgid ""
+#~ "You can paste your Google Analytics or other tracking code in this box. "
+#~ "This will be automatically added to the footer."
+#~ msgstr ""
+#~ "È possibile incollare le Google Analytics o altro codice di monitoraggio "
+#~ "in questa casella. Questo verrà automaticamente aggiunto al piè di pagina."
+
+#~ msgid "Feedburner URL"
+#~ msgstr "Feedburner URL"
+
+#~ msgid ""
+#~ "Feedburner is a Google service that takes care of your RSS feed. Paste "
+#~ "your Feedburner URL here to let readers see it in your website."
+#~ msgstr ""
+#~ "Feedburner è un servizio di Google che si prende cura del tuo feed RSS. "
+#~ "Incolla il tuo Feedburner URL qui per lasciare che i lettori vedono nel "
+#~ "tuo sito web."
+
+#~ msgid "Display Footer Menu?"
+#~ msgstr "Visualizzare Footer Menu?"
+
+#~ msgid "Do you want to display footer menu?"
+#~ msgstr "Vuoi visualizzare menu di piè di pagina?"
+
+#~ msgid "Footer Menu Typography"
+#~ msgstr "Tipografia Menu Footer"
+
+#~ msgid ""
+#~ "Choose your prefered font for menu. <em>Note: fonts marked with "
+#~ "<strong>*</strong> symbol will be loaded from the <a href=\"http://www."
+#~ "google.com/webfonts\">Google Web Fonts</a> library.</em>"
+#~ msgstr ""
+#~ "Scegliete il vostro font preferito per il menu. <em>Nota: caratteri "
+#~ "marcati con <strong>*</strong> simbolo verranno caricati dalla <a href="
+#~ "\"http://www.google.com/webfonts\">Google Web Fonts</a> biblioteca.</em>"
+
+#~ msgid "<span>Step <i>1</i></span>Theme Options Import"
+#~ msgstr "<span>Passo <i>1</i></span>Tema Opzioni Import"
+
+#~ msgid ""
+#~ "Select the file that contains Theme Options (e.g. <b>options.json</b> )"
+#~ msgstr ""
+#~ "Selezionare il file che contiene le opzioni a tema (ad es <b>options."
+#~ "json</b>)"
+
+#~ msgid "Upload File and Import"
+#~ msgstr "Carica file e importazione"
+
+#~ msgid "<span>Step <i>1</i></span>Theme Options Export"
+#~ msgstr "<span>Passo <i>1</i></span>Tema Opzioni Export"
+
+#~ msgid "Welcome to the OptionsFramework Backup Manager."
+#~ msgstr "Benvenuti nel OptionsFramework Backup Manager."
+
+#~ msgid "There was a problem importing your settings. Please Try again."
+#~ msgstr "C'è stato un problema importando le impostazioni. Riprova."
+
+#~ msgid "There was a problem exporting your settings. Please Try again."
+#~ msgstr "C'è stato un problema di esportare le impostazioni. Riprova."
+
+#~ msgid "The import file you've provided is invalid. Please try again."
+#~ msgstr "Il file di importazione che ci hai fornito non è valido. Riprova."
+
+#~ msgid "<span>Step <i>1</i></span> Widget Settings Export"
+#~ msgstr "<span>Passo <i>1</i></span> Impostazioni Widget Export"
+
+#~ msgid "<span>Step <i>3</i></span> Widget Settings Import"
+#~ msgstr "<span>Passo <i>3</i></span> Widget Impostazioni importa"
+
+#~ msgid "<span>Step <i>4</i></span> Widget Settings Import"
+#~ msgstr "<spanPpasso <i>4</i></span>Widget Impostazioni Importa"
+
+#~ msgid ""
+#~ "Incorrect file. Please, <a href='admin.php?page=options-framework-"
+#~ "import&amp;step=1'>try again</a>."
+#~ msgstr ""
+#~ "File errato. Per favore, se <a href='admin.php?page=options-framework-"
+#~ "import&amp;step=1'>provare di nuovo</a>."
+
+#~ msgid ""
+#~ "Select the file that contains Widget Settings (e.g. "
+#~ "<b>your_template_package/sources/sample_data/widgets.json</b>)"
+#~ msgstr ""
+#~ "Selezionare il file che contiene le impostazioni del widget ( e.g."
+#~ "<b>your_template_package/sources/sample_data/widgets.json</b>)"
+
+#~ msgid "Show Widget Settings"
+#~ msgstr "Mostra impostazioni Widget"
+
+#~ msgid "Your have no widgets. Please, click next to go to the next step."
+#~ msgstr ""
+#~ "Il tuo non hanno widgets. Per favore, cliccare vicino ad andare al passo "
+#~ "successivo."
+
+#~ msgid ""
+#~ "Disable the widgets you don't need and click \"Next\". All the selected "
+#~ "widgets will be imported into the theme by default."
+#~ msgstr ""
+#~ "Disabilita i widget che non utilizzi e clicca su “Avanti”. Tutti i "
+#~ "widgets selezionati saranno importati all’interno del tema da default."
+
+#~ msgid ""
+#~ "File widgets.json incorrect or empty. For this reason, none of the widget "
+#~ "will be imported into your theme."
+#~ msgstr ""
+#~ "File widgets.json errato o vuoto. Per questo motivo, nessuno dei widget "
+#~ "verrà importato nel vostro tema."
+
+#~ msgid "Sorry, there has been an error."
+#~ msgstr "Siamo spiacenti, si è verificato un errore."
+
+#~ msgid "The file does not exist, please "
+#~ msgstr "Il file non esiste, si prega di riprovare"
+
+#~ msgid ""
+#~ "This WXR file (version %s) may not be supported by this version of the "
+#~ "importer. Please consider updating."
+#~ msgstr ""
+#~ "Questo file WXR (versione% s) potrebbe non essere supportato da questa "
+#~ "versione di dell'importatore. Ti consigliamo di aggiornare."
+
+#~ msgid ""
+#~ "The export file could not be found at <code>%s</code>. It is likely that "
+#~ "this was caused by a permissions problem."
+#~ msgstr ""
+#~ "Il file di esportazione non è stato trovato presso <code>%s</code>. È "
+#~ "probabile che questo è stato causato da un problema di autorizzazioni."
+
+#~ msgid ""
+#~ "Failed to import author %s. Their posts will be attributed to the current "
+#~ "user."
+#~ msgstr ""
+#~ "Impossibile importare autore% s. I loro posti saranno attribuiti per "
+#~ "l'utente corrente."
+
+#~ msgid "Assign Authors"
+#~ msgstr "Assegnare Autori"
+
+#~ msgid ""
+#~ "To make it easier for you to edit and save the imported content, you may "
+#~ "want to reassign the author of the imported item to an existing user of "
+#~ "this site. For example, you may want to import all the entries as "
+#~ "<b>admin</b> entries."
+#~ msgstr ""
+#~ "Per rendere più facile per voi di modificare e salvare il contenuto "
+#~ "importato, è possibile riassegnare l'autore della voce importata a un "
+#~ "utente esistente di questo sito. Ad esempio, si può decidere di importare "
+#~ "tutte le voci come <b>amministratore</b> le voci."
+
+#~ msgid ""
+#~ "If a new user is created by WordPress, a new password will be randomly "
+#~ "generated and the new user&#8217;s role will be set as %s. Manually "
+#~ "changing the new user&#8217;s details will be necessary."
+#~ msgstr ""
+#~ "Se un nuovo utente viene creato da WordPress, una nuova password verrà "
+#~ "generata in modo casuale e il ruolo del nuovo utente sarà impostato come% "
+#~ "s. La modifica manuale dettagli del nuovo utente sarà necessario."
+
+#~ msgid "Download and import file attachments"
+#~ msgstr "Scaricare e importare i file allegati"
+
+#~ msgid "assign posts to an existing user:"
+#~ msgstr "assegnare i messaggi di un utente esistente:"
+
+#~ msgid "- Select -"
+#~ msgstr "- Seleziona -"
+
+#~ msgid ""
+#~ "Failed to create new user for %s. Their posts will be attributed to the "
+#~ "current user."
+#~ msgstr ""
+#~ "Impossibile creare un nuovo utente per% s. I loro posti saranno "
+#~ "attribuiti per l'utente corrente."
+
+#~ msgid "Failed to import category %s "
+#~ msgstr "Impossibile importare categoria% s"
+
+#~ msgid "Failed to import post tag %s"
+#~ msgstr "Impossibile importare messaggi tag% s"
+
+#~ msgid "Failed to import %s %s "
+#~ msgstr "Impossibile importare% s% s"
+
+#~ msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s "
+#~ msgstr ""
+#~ "Impossibile importare &#8220;%s&#8221;:  non valido di tipo messaggio%s "
+
+#~ msgid "%s &#8220;%s&#8221; already exists."
+#~ msgstr "%s &#8220;%s&#8221; esiste già. "
+
+#~ msgid "Failed to import %s &#8220;%s&#8221; "
+#~ msgstr "Impossibile importare%s &#8220;%s&#8221;"
+
+#~ msgid "Menu item skipped due to missing menu slug "
+#~ msgstr "Voce di menu saltato a causa di menu mancanti slug"
+
+#~ msgid "Menu item skipped due to invalid menu slug: %s "
+#~ msgstr "Voce di menu saltato a causa di menù slug non valida:% s"
+
+#~ msgid "Fetching attachments is not enabled "
+#~ msgstr "Recupero di allegati non è abilitato"
+
+#~ msgid "Invalid file type"
+#~ msgstr "Tipo di file non valido"
+
+#~ msgid "Remote server did not respond"
+#~ msgstr "Il server remoto non ha risposto"
+
+#~ msgid "Remote server returned error response %1$d %2$s "
+#~ msgstr "Server remoto ha restituito risposta di errore%1$d %2$s "
+
+#~ msgid "Remote file is incorrect size "
+#~ msgstr "File remoto è formato errato"
+
+#~ msgid "Zero size file downloaded "
+#~ msgstr "Zero dimensione del file scaricato"
+
+#~ msgid "Remote file is too large, limit is %s "
+#~ msgstr "File remoto è troppo grande, il limite è% s"
+
+#~ msgid "<span>Step <i>1</i></span> Data Import"
+#~ msgstr "<span>Passo <i>1</i></span> Importa Dati"
+
+#~ msgid "<span>Step <i>2</i></span> Assign Authors"
+#~ msgstr "<span>Passo <i> 2 </ i> </ span> Assegna Autori"
+
+#~ msgid ""
+#~ "A new version of this importer is available. Please update to version %s "
+#~ "to ensure compatibility with newer export files. "
+#~ msgstr ""
+#~ "Una nuova versione di questo importatore è disponibile. Si prega di "
+#~ "aggiornare alla versione% s per garantire la compatibilità con i file di "
+#~ "esportazione più recenti."
+
+#~ msgid ""
+#~ "Select (<b>.xml</b>) file to upload sample data.<br>If you do not want to "
+#~ "install sample data from livedemo you need to <b>skip this step</b>."
+#~ msgstr ""
+#~ "Seleziona (<b>. Xml </ b>) file da caricare  dati di esempio. <br> Se non "
+#~ "si desidera installare i dati di esempio da LIVEDEMO devi <b> saltare "
+#~ "questo passaggio </ b>."
+
+#~ msgid ""
+#~ "Please note that certain content is already installed. You may simply "
+#~ "need to skip this step. Otherwise, you can proceed with the installation."
+#~ msgstr ""
+#~ "Ricorda che alcuni contenuti sono già installati. E’ quindi possibile "
+#~ "saltare questo passaggio. In caso contrario, si potrà procedere con "
+#~ "l’installazione."
+
+#~ msgid "NOTE"
+#~ msgstr "NOTA"
+
+#~ msgid ""
+#~ "if for some reason those settings can not be adjusted, you may install "
+#~ "the sample data using an <strong>alternative method</strong> - importing "
+#~ "the <strong>.sql</strong> file directly into the database. Refer to the "
+#~ "template documentation for instructions."
+#~ msgstr ""
+#~ "Se per qualche motivo le impostazioni non possono essere regolate, è "
+#~ "possibile installare i dati di esempio utilizzando un <strong>metodo "
+#~ "alternativo</strong> -. l'importazione del <strong>.sql</strong> del file "
+#~ "direttamente nel database. Fare riferimento alla documentazione del "
+#~ "modello per le istruzioni."
+
+#~ msgid ""
+#~ "You can proceed with the template installation without updating server "
+#~ "settings, however in this case you can get errors or only part of your "
+#~ "content will be loaded."
+#~ msgstr ""
+#~ "Si può procedere con l'installazione template senza aggiornare le "
+#~ "impostazioni del server, tuttavia in questo caso è possibile ottenere "
+#~ "saranno caricati errori o solo parte del contenuto."
+
+#~ msgid ""
+#~ "You have successfully installed your <b>Cherry WordPress Theme</b>.<br /> "
+#~ "You can look theme now"
+#~ msgstr ""
+#~ "È stato installato con successo il tuo <b>Cherry WordPress Theme</b>.<br /"
+#~ ">Si può guardare tema ora"
+
+#~ msgid "visit site"
+#~ msgstr "visita il sito"
+
+#~ msgid ""
+#~ "You might see only the white screen on the next step. Don't worry, the "
+#~ "importing is being continued. Please wait until the installation is "
+#~ "finished."
+#~ msgstr ""
+#~ "Potresti vedere solo una schermata bianca nel prossimo passaggio. Non "
+#~ "preoccuparti, l’importazione dei dati è in corso. Attendere finchè "
+#~ "l’installazione non sarà completata."
+
+#~ msgid ""
+#~ "<b>Attention:</b> the Jigoshop plugin is not activated. We recommend that "
+#~ "you install and activate this plugin to ensure correct data importing. "
+#~ "Otherwise, some data may be lost during the import."
+#~ msgstr ""
+#~ "<b>Attenzione:</b> il plugin Jigoshop non è attivato. Si raccomandano "
+#~ "l’installazione e l’attivazione di questo plugin per assicurare la "
+#~ "corretta importazione dei dati. In caso contrario, alcuni dati potrebbero "
+#~ "perdersi durante il processo."
+
+#~ msgid ""
+#~ "<b>Attention:</b> the WooCommerce plugin is not activated. We recommend "
+#~ "that you install and activate this plugin to ensure correct data "
+#~ "importing. Otherwise, some data may be lost during the import."
+#~ msgstr ""
+#~ "<b>Attenzione:</b> il plugin WooCommerce non è attivato. Si raccomandano "
+#~ "l’installazione e l’attivazione di questo plugin per assicurare la "
+#~ "corretta importazione dei dati. In caso contrario, alcuni dati potrebbero "
+#~ "perdersi durante il processo."
+
+#~ msgid "The login information you have entered is incorrect."
+#~ msgstr "Le informazioni di login che avete inserito non sono corrette."
+
+#~ msgid ""
+#~ "You need to enable write permissions on your server to use these "
+#~ "functions."
+#~ msgstr ""
+#~ "È necessario abilitare i permessi di scrittura sul server per utilizzare "
+#~ "queste funzioni."
+
+#~ msgid ""
+#~ "Cherry Framework is not able to perform necessary changes for the correct "
+#~ "work with your child theme."
+#~ msgstr ""
+#~ "Cherry Framework non è in grado di eseguire le modifiche necessarie per "
+#~ "il lavoro corretto con il vostro Child Theme."
+
+#~ msgid ""
+#~ "See <a target=\"_blank\" href=\"http://codex.wordpress.org/"
+#~ "Changing_File_Permissions\">the Codex</a> for more information."
+#~ msgstr ""
+#~ "Vedi<a target=\"_blank\" href=\"http://codex.wordpress.org/"
+#~ "Changing_File_Permissions\">il codex</a>per ulteriori informazioni."
+
+#~ msgid "Header Menu"
+#~ msgstr "Menu Header"
+
+#~ msgid "Footer Menu"
+#~ msgstr "Footer Menu"
+
+#~ msgid "Testimonial"
+#~ msgstr "Testimonial"
+
+#~ msgid "Services"
+#~ msgstr "Servizi"
+
+#~ msgid "FAQs"
+#~ msgstr "FAQ"
+
+#~ msgid "Our Team"
+#~ msgstr "Il Nostro Team"
+
+#~ msgid "Category"
+#~ msgstr "Categoria"
+
+#~ msgid "Thumbnail"
+#~ msgstr "Thumbnail"
+
+#~ msgid "Your comment is awaiting moderation."
+#~ msgstr "Il tuo commento è in attesa di moderazione."
+
+#~ msgid "Please choose desired Portfolio Format and fill additional fields."
+#~ msgstr ""
+#~ "Scegliere Formato portafoglio desiderato e riempire i campi aggiuntivi."
+
+#~ msgid "Grid Gallery"
+#~ msgstr "Griglia Galleria"
+
+#~ msgid "Portfolio Options"
+#~ msgstr "Opzioni di portafoglio"
+
+#~ msgid "Format"
+#~ msgstr "Formato"
+
+#~ msgid "Choose post format that most fit your needs."
+#~ msgstr "Scegli il formato post che più si adatta alle vostre esigenze."
+
+#~ msgid "Input project end date."
+#~ msgstr "Progetto Input data di fine."
+
+#~ msgid "Input project owner name."
+#~ msgstr "Ingresso nome del proprietario del progetto."
+
+#~ msgid "Additional info for this portfolio item."
+#~ msgstr "Ulteriori informazioni per questo articolo portafoglio."
+
+#~ msgid "Input the project URL (external link)"
+#~ msgstr "Inserire l'URL del progetto (link esterno)"
+
+#~ msgid "Image Settings"
+#~ msgstr "Impostazioni immagine"
+
+#~ msgid "Video Settings"
+#~ msgstr "Impostazioni video"
+
+#~ msgid "Input the video title (for playlist)"
+#~ msgstr "Immettere il titolo del video (per la riproduzione)"
+
+#~ msgid "Artist"
+#~ msgstr "Artista"
+
+#~ msgid "Input the video artist (for playlist)."
+#~ msgstr "Ingresso l'artista video (per playlist)."
+
+#~ msgid "Input URL to the <b>m4v</b> video format."
+#~ msgstr "URL di ingresso al <b>m4v</b> formato video."
+
+#~ msgid "Input URL to the <b>ogv</b> video format."
+#~ msgstr "URL di ingresso al <b>ogv</b> formato video."
+
+#~ msgid "Embedded Code"
+#~ msgstr "Codice incorporato"
+
+#~ msgid ""
+#~ "You can include embedded code here.<br><b>Attention!</b> This code "
+#~ "overwrite your video URL(s)."
+#~ msgstr ""
+#~ "È possibile includere codice incorporato qui. <br><b>Attenzione!</b> "
+#~ "Questo codice sovrascrive il vostro URL del video (s)."
+
+#~ msgid "Audio Settings"
+#~ msgstr "Impostazioni Audio"
+
+#~ msgid "Input the audio title (for playlist)."
+#~ msgstr "Inserire il titolo di audio (per la riproduzione)."
+
+#~ msgid "Input the audio artist (for playlist)."
+#~ msgstr "Ingresso l'artista audio (per la riproduzione)."
+
+#~ msgid "Audio format"
+#~ msgstr "Formato audio"
+
+#~ msgid "Choose audio format."
+#~ msgstr "Scegli il formato audio."
+
+#~ msgid "Audio URL"
+#~ msgstr "Audio URL"
+
+#~ msgid "Input the audio URL."
+#~ msgstr "Inserire l'URL audio."
+
+#~ msgid "Slider Options"
+#~ msgstr "Opzioni Slider"
+
+#~ msgid "Caption"
+#~ msgstr "Titolo"
+
+#~ msgid "Input your caption for slide (HTML tags are allowed)."
+#~ msgstr ""
+#~ "Inserisci il didascalia per diapositive (i tag HTML sono consentiti)."
+
+#~ msgid "Input the slide URL (can be external link)"
+#~ msgstr "Inserire l'URL slitta (può essere link esterno)"
+
+#~ msgid "Please fill additional fields for slide."
+#~ msgstr "Si prega di compilare i campi aggiuntivi per diapositiva."
+
+#~ msgid "Personal Options"
+#~ msgstr "Opzioni personali"
+
+#~ msgid "Please fill additional fields for person."
+#~ msgstr "Si prega di compilare i campi aggiuntivi per la persona."
+
+#~ msgid "Position"
+#~ msgstr "Posizione"
+
+#~ msgid "Input position of the person."
+#~ msgstr "Posizione di inserimento della persona."
+
+#~ msgid "Input additional info."
+#~ msgstr "Ingresso informazioni aggiuntive."
+
+#~ msgid "Social Networks"
+#~ msgstr "Social Networks"
+
+#~ msgid "Page URL"
+#~ msgstr "Pagina URL"
+
+#~ msgid "Your Social Networks."
+#~ msgstr "il tuo Social Network."
+
+#~ msgid ""
+#~ "In icon field you need to specify the icon name that can be copied from "
+#~ "the <a target=\"_blank\" href=\"http://fortawesome.github.io/Font-Awesome/"
+#~ "icons/#brand\">website</a>. E.g. \"icon-facebook\"."
+#~ msgstr ""
+#~ "Nel campo dell'icona è necessario specificare il nome dell'icona che può "
+#~ "essere copiato dal<a target=\"_blank\" href=\"http://fortawesome.github."
+#~ "io/Font-Awesome/icons/#brand\">website</a>. E.g. \"icon-facebook\"."
+
+#~ msgid "Social Networks Title"
+#~ msgstr "Titolo Social Network"
+
+#~ msgid "Specify the heading for the social networks block."
+#~ msgstr "Specifica il titolo per la sezione dedicata ai social network."
+
+#~ msgid "Testimonial Options"
+#~ msgstr "Opzioni Testimonial"
+
+#~ msgid "Please fill additional fields for testimonial."
+#~ msgstr "Si prega di compilare i campi aggiuntivi per testimonial."
+
+#~ msgid "Name"
+#~ msgstr "Nome"
+
+#~ msgid "Input author's name."
+#~ msgstr "Il nome dell'autore di ingresso."
+
+#~ msgid "Input author's URL."
+#~ msgstr "URL dell'autore di ingresso."
+
+#~ msgid "Input author's additional info."
+#~ msgstr "Informazioni aggiuntive dell'autore ingresso."
+
+#~ msgid "Quote Settings"
+#~ msgstr "Impostazioni Citazione"
+
+#~ msgid "The Quote"
+#~ msgstr "La Citazione"
+
+#~ msgid "Put your quote in this field."
+#~ msgstr "Metti il tuo preventivo in questo campo."
+
+#~ msgid "Put quote author in this field."
+#~ msgstr "Mettere quote author in questo campo."
+
+#~ msgid "The URL"
+#~ msgstr "L'URL"
+
+#~ msgid "Insert the URL you wish to link to."
+#~ msgstr "Inserire l'URL che si desidera collegare."
+
+#~ msgid "Input the video title (for playlist)."
+#~ msgstr "Immettere il titolo del video (per la riproduzione)."
+
+#~ msgid "Category Include"
+#~ msgstr "Categorie Slug:"
+
+#~ msgid "The Category Slug"
+#~ msgstr "Categorie Slug:"
+
+#~ msgid ""
+#~ "Name of the custom category that is displayed on this page. You need to "
+#~ "use the slug of the category here."
+#~ msgstr ""
+#~ "Nome della categoria personalizzata che viene visualizzata su questa "
+#~ "pagina. È necessario utilizzare lo slug della categoria qui."
+
+#~ msgid "Install Required Plugins"
+#~ msgstr "Installa plugin necessario"
+
+#~ msgid "Install Plugins"
+#~ msgstr "Installare plugin"
+
+#~ msgid "Installing Plugin: %s"
+#~ msgstr "Installazione Plugin:% s"
+
+#~ msgid "Something went wrong"
+#~ msgstr "Qualcosa è andato storto"
+
+#~ msgid "This theme requires the following plugin: %1$s."
+#~ msgstr "Questo tema richiede il seguente plugin:%1$s."
+
+#~ msgid "This theme requires the following plugins: %1$s."
+#~ msgstr "Questo tema richiede il plugin seguenti:%1$s."
+
+#~ msgid "This theme recommends the following plugin: %1$s."
+#~ msgstr "Questo tema consiglia il seguente plugin:%1$s."
+
+#~ msgid "This theme recommends the following plugins: %1$s."
+#~ msgstr "Questo tema consiglia i seguenti plugin:%1$s."
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to install the %s "
+#~ "plugin. Contact the administrator of this site for help on getting the "
+#~ "plugin installed."
+#~ msgstr ""
+#~ "Siamo spiacenti, ma non si dispone delle autorizzazioni necessarie per "
+#~ "installare il plugin% s. Contattare l'amministratore di questo sito per "
+#~ "un aiuto su come installare il plugin."
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to install the %s "
+#~ "plugins. Contact the administrator of this site for help on getting the "
+#~ "plugins installed."
+#~ msgstr ""
+#~ "Siamo spiacenti, ma non si dispone delle autorizzazioni necessarie per "
+#~ "installare il plugin% s. Contattare l'amministratore di questo sito per "
+#~ "un aiuto su come ottenere i plugin installati."
+
+#~ msgid "The following required plugin is currently inactive: %1$s."
+#~ msgstr "Il seguente plug-in richiesto non è al momento inattiva:%1$s."
+
+#~ msgid "The following required plugins are currently inactive: %1$s."
+#~ msgstr "I seguenti plugin richiesti sono attualmente inattive:%1$s."
+
+#~ msgid "The following recommended plugin is currently inactive: %1$s"
+#~ msgstr "Il seguente plugin raccomandato è attualmente inattivo:%1$s"
+
+#~ msgid "The following recommended plugins are currently inactive: %1$s."
+#~ msgstr "The following recommended plugins are currently inactive: %1$s."
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to activate the %s "
+#~ "plugin. Contact the administrator of this site for help on getting the "
+#~ "plugin activated."
+#~ msgstr ""
+#~ "Siamo spiacenti, ma non si dispone delle autorizzazioni necessarie per "
+#~ "attivare il plugin% s. Contattare l'amministratore di questo sito per un "
+#~ "aiuto su come ottenere il plugin attivato."
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to activate the %s "
+#~ "plugins. Contact the administrator of this site for help on getting the "
+#~ "plugins activated."
+#~ msgstr ""
+#~ "Siamo spiacenti, ma non si dispone delle autorizzazioni necessarie per "
+#~ "attivare il plugin% s. Contattare l'amministratore di questo sito per un "
+#~ "aiuto su come ottenere i plugin attivati."
+
+#~ msgid ""
+#~ "The following plugin needs to be updated to its latest version to ensure "
+#~ "maximum compatibility with this theme: %1$s."
+#~ msgstr ""
+#~ "Il seguente plug-in deve essere aggiornato alla versione più recente per "
+#~ "garantire la massima compatibilità con questo tema:%1$s."
+
+#~ msgid ""
+#~ "The following plugins need to be updated to their latest version to "
+#~ "ensure maximum compatibility with this theme: %1$s"
+#~ msgstr ""
+#~ "I seguenti plugin devono essere aggiornati alla loro ultima versione per "
+#~ "garantire la massima compatibilità con questo tema:%1$s"
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to update the %s "
+#~ "plugin. Contact the administrator of this site for help on getting the "
+#~ "plugin updated."
+#~ msgstr ""
+#~ "Siamo spiacenti, ma non si dispone delle autorizzazioni necessarie per "
+#~ "aggiornare il plugin% s. Contattare l'amministratore di questo sito per "
+#~ "un aiuto su come ottenere il plugin aggiornato."
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to update the %s "
+#~ "plugins. Contact the administrator of this site for help on getting the "
+#~ "plugins updated."
+#~ msgstr ""
+#~ "Siamo spiacenti, ma non si dispone delle autorizzazioni necessarie per "
+#~ "aggiornare il plugin% s. Contattare l'amministratore di questo sito per "
+#~ "un aiuto su come ottenere i plugin aggiornati."
+
+#~ msgid "Begin installing plugin"
+#~ msgstr "Iniziare l'installazione di plug-in"
+
+#~ msgid "Begin installing plugins"
+#~ msgstr "Iniziare l'installazione di plugin"
+
+#~ msgid "Activate installed plugin"
+#~ msgstr "Attiva plug-in installato"
+
+#~ msgid "Activate installed plugins"
+#~ msgstr "Attiva plugin installati"
+
+#~ msgid "Return to Required Plugins Installer"
+#~ msgstr "Ritorna al plugin necessario Installer"
+
+#~ msgid "Plugin activated successfully"
+#~ msgstr "Plugin attivato con successo"
+
+#~ msgid "All plugins installed and activated successfully. %1$s"
+#~ msgstr "Tutti i plugin sono stati installati e attivati con successo.%1$s"
+
+#~ msgid "Return to the Dashboard"
+#~ msgstr "Rientro in Dashboard"
+
+#~ msgid "The following plugin was activated successfully: %s."
+#~ msgstr "Il seguente plugin è stato attivato con successo:% s."
+
+#~ msgid "External Link"
+#~ msgstr "Link Esterno"
+
+#~ msgid "Private Repository"
+#~ msgstr "Repository Privato"
+
+#~ msgid "Pre-Packaged"
+#~ msgstr "Pre-confezionati"
+
+#~ msgid "WordPress Repository"
+#~ msgstr "WordPress Repository"
+
+#~ msgid "Recommended"
+#~ msgstr "Raccomandato"
+
+#~ msgid "Installed But Not Activated"
+#~ msgstr "Installato ma non attivato"
+
+#~ msgid "No plugins to install or activate."
+#~ msgstr "Nessun plugin da installare o attivare."
+
+#~ msgid "Plugin"
+#~ msgstr "Plugin"
+
+#~ msgid "Source"
+#~ msgstr "Fonte"
+
+#~ msgid "Type"
+#~ msgstr "Tipo"
+
+#~ msgid "Status"
+#~ msgstr "Stato"
+
+#~ msgid "Activate"
+#~ msgstr "Attiva"
+
+#~ msgid "The following plugins were activated successfully:"
+#~ msgstr "I seguenti plugin sono stati attivati con successo:"
+
+#~ msgid "Install package not available."
+#~ msgstr "Installare il pacchetto non è disponibile."
+
+#~ msgid "Downloading install package from <span class='code'>%s</span>&#8230;"
+#~ msgstr ""
+#~ "Download di pacchetto di installazione da <span class='code'>%s</"
+#~ "span>&#8230;"
+
+#~ msgid "Unpacking the package&#8230;"
+#~ msgstr "Decomprimere il pacchetto ..."
+
+#~ msgid "Installing the plugin&#8230;"
+#~ msgstr "Installare il plugin ..."
+
+#~ msgid "Plugin install failed."
+#~ msgstr "Plugin di installazione non è riuscita."
+
+#~ msgid "Plugin installed successfully."
+#~ msgstr "Plugin installato con successo."
+
+#~ msgid "Plugin activation failed."
+#~ msgstr "Attivazione del plugin non è riuscita."
+
+#~ msgid "Plugin activated successfully."
+#~ msgstr "Plugin attivato con successo."
+
+#~ msgid ""
+#~ "The installation and activation process is starting. This process may "
+#~ "take a while on some hosts, so please be patient."
+#~ msgstr ""
+#~ "Il processo di installazione e di attivazione è di partenza. Questo "
+#~ "processo può richiedere un po 'su alcuni host, quindi per favore sii "
+#~ "paziente."
+
+#~ msgid "%1$s installed and activated successfully."
+#~ msgstr "%1$s installato e attivato con successo."
+
+#~ msgid "Show Details"
+#~ msgstr "Mostra dettagli"
+
+#~ msgid "Hide Details"
+#~ msgstr "Nascondere i dettagli"
+
+#~ msgid "All installations and activations have been completed."
+#~ msgstr "Tutte le installazioni e le attivazioni sono state completate."
+
+#~ msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "Installazione e attivazione Plugin%1$s (%2$d/%3$d)"
+
+#~ msgid ""
+#~ "The installation process is starting. This process may take a while on "
+#~ "some hosts, so please be patient."
+#~ msgstr ""
+#~ "Il processo di installazione si avvia. Questo processo può richiedere un "
+#~ "po 'su alcuni host, quindi per favore sii paziente."
+
+#~ msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+#~ msgstr ""
+#~ " Si è verificato un errore durante l'installazione di %1$s: <strong>%2$s</"
+#~ "strong>."
+
+#~ msgid "The installation of %1$s failed."
+#~ msgstr "L'installazione di%1$s non riuscito."
+
+#~ msgid "Installing Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "Installazione Plugin%1$s (%2$d/%3$d)"
+
+#~ msgid "Something went wrong with the plugin API._"
+#~ msgstr "Qualcosa è andato storto con il plugin API._"
+
+#~ msgid "updated"
+#~ msgstr "aggiornato"
+
+#~ msgid "Close"
+#~ msgstr "Chiudere"
+
+#~ msgid "Sidebar"
+#~ msgstr "Sidebar"
+
+#~ msgid "Located at the right side of pages."
+#~ msgstr "Situato sul lato destro della pagina."
+
+#~ msgid "Footer Area 1"
+#~ msgstr "Area Footer 1"
+
+#~ msgid "Footer Area 2"
+#~ msgstr "Area Footer 2"
+
+#~ msgid "Footer Area 3"
+#~ msgstr "Area Footer 3"
+
+#~ msgid "Footer Area 4"
+#~ msgstr "Area Footer 4"
+
+#~ msgid "Located at the bottom of pages."
+#~ msgstr "Situato nella parte inferiore della pagina."
+
+#~ msgid "Archives"
+#~ msgstr "Archivio"
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "1 comment"
+#~ msgstr "1 commento"
+
+#~ msgid "comments"
+#~ msgstr "commenti"
+
+#~ msgid "comments-link"
+#~ msgstr "commenti-link"
+
+#~ msgid "Comments are closed"
+#~ msgstr "I commenti sono chiusi"
+
+#~ msgid "No tags"
+#~ msgstr "Nessuna tag"
+
+#~ msgid "No category"
+#~ msgstr "Senza categoria"
+
+#~ msgid "I like it."
+#~ msgstr "Mi piace."
+
+#~ msgid "I don't like."
+#~ msgstr "Non mi piace."
+
+#~ msgid "Only registered users can vote!"
+#~ msgstr "Solo gli utenti registrati possono votare!"
+
+#~ msgid "You have already voted."
+#~ msgstr "Hai già votato."
+
+#~ msgid "&laquo; Older Entries"
+#~ msgstr "«Vecchi"
+
+#~ msgid "Newer Entries &raquo;"
+#~ msgstr "Voci più recenti »"
+
+#~ msgid "Audio & Video"
+#~ msgstr "Audio & Video"
+
+#~ msgid "Title Box"
+#~ msgstr "Titolo box"
+
+#~ msgid ""
+#~ "Date as title <span style='font-size:11px; color:#999;'>('[mm-dd-yyyy]')</"
+#~ "span>"
+#~ msgstr ""
+#~ "Data come titolo <span style='font-size:11px; color:#999;'>('[mm-dd-"
+#~ "yyyy]')</span>"
+
+#~ msgid "Cherry - Twitter"
+#~ msgstr "Cherry - Twitter"
+
+#~ msgid "Twitts Number:"
+#~ msgstr "Twitts Numero:"
+
+#~ msgid "Map width:"
+#~ msgstr "Larghezza mappa:"
+
+#~ msgid "Map height:"
+#~ msgstr "Altezza mappa:"
+
+#~ msgid ""
+#~ "The Like Box only works with <a target=\"_blank\" href=\"https://www."
+#~ "facebook.com/help/174987089221178/\" title=\"Facebook Pages\">Facebook "
+#~ "Pages.</a>"
+#~ msgstr ""
+#~ "Il box dei mi piace funziona solo con<a target=\"_blank\" href=\"https://"
+#~ "www.facebook.com/help/174987089221178/\" title=\"pagine Facebook "
+#~ "\">Facebook"
+
+#~ msgid "Default options restored."
+#~ msgstr "Ripristinare leopzioni predefinite."
+
+#~ msgid "Options saved."
+#~ msgstr "Opzioni salvate."
+
+#~ msgid "Latest Templates"
+#~ msgstr "Ultimi Modelli"
+
+#~ msgid "News & Updates"
+#~ msgstr "Notizie e aggiornamenti"
+
+#~ msgid "Help & Support"
+#~ msgstr "Supporto"
+
+#~ msgid "Posted"
+#~ msgstr "Pubblicato in "
+
+#~ msgid "All templates"
+#~ msgstr "Tutti i Template"
+
+#~ msgid "Start"
+#~ msgstr "Inizio"
+
+#~ msgid "Data Management"
+#~ msgstr "Gestione dei dati"
+
+#~ msgid "Cherry Framework"
+#~ msgstr "Cherry Framework"
+
+#~ msgid "Update Info"
+#~ msgstr "Aggiorna informazioni"
+
+#~ msgid "Child Theme"
+#~ msgstr "Child Theme"
+
+#~ msgid "Update"
+#~ msgstr "Aggiornare"
+
+#~ msgid "Backup"
+#~ msgstr "Backup"
+
+#~ msgid "Restore"
+#~ msgstr "Ripristinare"
+
+#~ msgid "Download Backup"
+#~ msgstr "Scarica Backup"
+
+#~ msgid "Your Version"
+#~ msgstr "La tua versione"
+
+#~ msgid "Update Version"
+#~ msgstr "Aggiorna versione"
+
+#~ msgid "Backup Version"
+#~ msgstr "Backup versione"
+
+#~ msgid "Last Backup Date"
+#~ msgstr "Ultimo Backup Data"
+
+#~ msgid "Preview"
+#~ msgstr "Anteprima"
+
+#~ msgid "No backup."
+#~ msgstr "Nessun backup."
+
+#~ msgid "Not defined"
+#~ msgstr "Non definito"
+
+#~ msgid "Unfortunately theme "
+#~ msgstr "Unfortunately theme"
+
+#~ msgid " backup file not found. Please try to create backup once again."
+#~ msgstr ""
+#~ "file di backup non trovato. Si prega di provare a creare di nuovo il "
+#~ "backup."
+
+#~ msgid ""
+#~ "Data Management allows to update or backup framework and themes. "
+#~ "Framework is regularly updated thus delivering new opportunities for your "
+#~ "site.<br> To keep your data safe, you can back up the framework or child "
+#~ "theme, to be able to download it later. If necessary, you can restore the "
+#~ "framework or your theme using the backup."
+#~ msgstr ""
+#~ "Gestione dei dati permette di aggiornare o eseguire il Salvataggio del "
+#~ "Framework   e dei Temi . Framework  è aggiornato regolarmente offrendo "
+#~ "così nuove opportunità per il tuo sito. <br> Per proteggere i dati, è "
+#~ "possibile eseguire il Backup del Framework   o il Child Theme , e avere "
+#~ "la possibilita'  di scaricarlo  in un secondo momento. Se necessario, è "
+#~ "possibile ripristinare il Framework o il tema utilizzando il backup."
+
+#~ msgid ""
+#~ "<b>Warning!</b> Before updating framework you are strongly advised to "
+#~ "backup your data."
+#~ msgstr ""
+#~ "<b> Attenzione! </ b> Prima di aggiornare il Framework si consiglia "
+#~ "vivamente di eseguire il backup dei tuoi dati."
+
+#~ msgid ""
+#~ "You can back up your theme. If the theme has a backup copy, it is "
+#~ "possible to restore it or download. The date of the latest backup copy is "
+#~ "displayed in the column <b>Last Backup Date</b>."
+#~ msgstr ""
+#~ "È possibile eseguire il backup del tema. Se il tema ha una copia di "
+#~ "backup, è possibile ripristinarlo o scaricarlo. La data dell'ultima copia "
+#~ "di backup viene visualizzata nella colonna<b> ultimo backup</b>."
+
+#~ msgid ""
+#~ "<b style=\"color:red;\">Warning!</b> Before updating framework you are "
+#~ "strongly advised to <a href=\"admin.php?page=options-framework-data-"
+#~ "management\">backup</a> your data."
+#~ msgstr ""
+#~ "<b style=\"color:red;\">Attenzione!</b>Prima di aggiornare il framework "
+#~ "si consiglia vivamente di <a href=\"admin.php?page=options-framework-data-"
+#~ "management\">backup</a>tuoi dati."
+
+#~ msgid "Previously Uploaded"
+#~ msgstr "Caricato in precedenza"
+
+#~ msgid ""
+#~ "<p>An Unexpected HTTP Error occurred during the API request.</p><p><a "
+#~ "href='#' onclick='document.location.reload(); return false;'>Try again</"
+#~ "a></p>"
+#~ msgstr ""
+#~ "<p>un errore HTTP imprevisto si è verificato durante la richiesta API. </"
+#~ "p><p><a href='#' onclick='document.location.reload(); return false;'> "
+#~ "Prova di nuovo</a></p>"
+
+#~ msgid "An unknown error occurred"
+#~ msgstr "Si è verificato un errore sconosciuto "
+
+#~ msgid "There is a new version of Cherry framework available"
+#~ msgstr "Vi è una nuova versione del framework Cherry disponibile"
+
+#~ msgid "View version "
+#~ msgstr "Visualizza versione"
+
+#~ msgid " details"
+#~ msgstr "Mostra dettagli"
+
+#~ msgid "update now."
+#~ msgstr "aggiornato"
+
+#~ msgid "Please do not load this page directly. Thanks!"
+#~ msgstr "Si prega di non caricare direttamente questa pagina. Grazie! "
+
+#~ msgid ""
+#~ "This post is password protected. Enter the password to view comments."
+#~ msgstr ""
+#~ "Questo post è protetto da password. Inserisci la password per "
+#~ "visualizzare i commenti. "
+
+#~ msgid "1 Response"
+#~ msgstr "1 Risposta"
+
+#~ msgid "%1$s Responses"
+#~ msgstr "%1$s Risposta"
+
+#~ msgid "No Comments Yet."
+#~ msgstr "Nessun commento ancora"
+
+#~ msgid "Comments are closed."
+#~ msgstr "I commenti sono chiusi"
+
+#~ msgid "Leave a comment"
+#~ msgstr "Lascia un commento"
+
+#~ msgid "You must be"
+#~ msgstr "E' necessario essere"
+
+#~ msgid "to post a comment."
+#~ msgstr "per pubblicare un commento"
+
+#~ msgid "Logged in"
+#~ msgstr "Accesso effettuato"
+
+#~ msgid "Logged in as"
+#~ msgstr "Collegato come"
+
+#~ msgid "Log out of this account;"
+#~ msgstr "Esci da questo account;"
+
+#~ msgid "Log out &raquo;"
+#~ msgstr "Esci"
+
+#~ msgid "Email (will not be published)"
+#~ msgstr "Email (non sarà pubblicata)"
+
+#~ msgid "Website"
+#~ msgstr "sito"
+
+#~ msgid "Your comment*"
+#~ msgstr "Il tuo commento"
+
+#~ msgid "Submit Comment"
+#~ msgstr "Invia commento"
+
+#~ msgid "Tweet this article"
+#~ msgstr "Tweet questo articolo"
+
+#~ msgid "Pages:"
+#~ msgstr "Pagine:"
+
+#~ msgid "Last 30 Posts"
+#~ msgstr "Ultimi 30 messaggi"
+
+#~ msgid "Archives by Month:"
+#~ msgstr "Archivio per mese:"
+
+#~ msgid "Archives by Subject:"
+#~ msgstr "Archivio per argomento:"
+
+#~ msgid "About:"
+#~ msgstr "Informazioni su:"
+
+#~ msgid "Recent Posts by"
+#~ msgstr "Messaggi recenti:"
+
+#~ msgid "No post yet"
+#~ msgstr "Nessun messaggio"
+
+#~ msgid "Recent Comments by"
+#~ msgstr "Recenti commenti"
+
+#~ msgid "%1$s on %2$s"
+#~ msgstr "%1$s on %2$s"
+
+#~ msgid "No comments by"
+#~ msgstr "Nessun commento da parte "
+
+#~ msgid "yet."
+#~ msgstr "ancora. "
+
+#~ msgid "There has been an error."
+#~ msgstr "C'è stato un errore. "
+
+#~ msgid "We apologize for any inconvenience, please"
+#~ msgstr "Ci scusiamo per gli eventuali disagi, si prega di "
+
+#~ msgid "return to the home page"
+#~ msgstr "tornare alla home page "
+
+#~ msgid "or use the search form below."
+#~ msgstr "oppure utilizzare il modulo di ricerca in basso. "
+
+#~ msgid "Q?"
+#~ msgstr "Q?"
+
+#~ msgid "A."
+#~ msgstr "A."
+
+#~ msgid "Written by"
+#~ msgstr "Scritto da "
+
+#~ msgid "View all posts by"
+#~ msgstr "Guarda tutti i messaggi di "
+
+#~ msgid "Not Found"
+#~ msgstr "Not Found "
+
+#~ msgid ""
+#~ "Apologies, but no results were found for the requested archive. Perhaps "
+#~ "searching will help find a related post."
+#~ msgstr ""
+#~ "Spiacente, ma non sono stati trovati risultati per l'archivio richiesto. "
+#~ "Forse la ricerca aiuterà a trovare un post correlato. "
+
+#~ msgid "is proudly powered by"
+#~ msgstr "è orgogliosamente powered by "
+
+#~ msgid "Entries (RSS)"
+#~ msgstr "Articoli (RSS) "
+
+#~ msgid "Comments (RSS)"
+#~ msgstr "Commenti (RSS) "
+
+#~ msgid "Privacy Policy"
+#~ msgstr "Politica sulla privacy "
+
+#~ msgid "Category Archives"
+#~ msgstr "Archivi categoria "
+
+#~ msgid "Portfolio Category"
+#~ msgstr "Portfolio Categoria "
+
+#~ msgid "Search for"
+#~ msgstr "Cerca "
+
+#~ msgid "Daily Archives"
+#~ msgstr "Daily Archives "
+
+#~ msgid "Monthly Archives"
+#~ msgstr "Archivio mensile "
+
+#~ msgid "Yearly Archives"
+#~ msgstr "Archivi annuali "
+
+#~ msgid "Tag Archives"
+#~ msgstr "Tag Archives "
+
+#~ msgid "Portfolio Tag"
+#~ msgstr "Portfolio Tag"
+
+#~ msgid "Category Archive for"
+#~ msgstr "Archivio per Categoria "
+
+#~ msgid "Tag Archive for"
+#~ msgstr "Tag Archivio per"
+
+#~ msgid "Error 404 Not Found"
+#~ msgstr "Errore 404 Not Found "
+
+#~ msgid "Sorry!"
+#~ msgstr "Spiacente! "
+
+#~ msgid "Page Not Found"
+#~ msgstr "Pagina non trovata "
+
+#~ msgid ""
+#~ "The page you are looking for might have been removed, had its name "
+#~ "changed, or is temporarily unavailable."
+#~ msgstr ""
+#~ "La pagina che stai cercando potrebbe essere stata rimossa, aver cambiato "
+#~ "nome, o è temporaneamente non disponibile. "
+
+#~ msgid ""
+#~ "Please try using our search box below to look for information on the "
+#~ "internet."
+#~ msgstr ""
+#~ "Si prega di provare a utilizzare la nostra funzione di ricerca per "
+#~ "cercare informazioni su internet. "
+
+#~ msgid "Featured"
+#~ msgstr "Caratteristiche"
+
+#~ msgid "Submit Permalink Structure"
+#~ msgstr "Invia Permalink Structure "
+
+#~ msgid ""
+#~ "This way of links configuration can be used by not only our blog "
+#~ "followers but will help in SEO-optimisation as well. The effectiveness "
+#~ "and main features of this link configuration method are revealed <a "
+#~ "href='http://codex.wordpress.org/Using_Permalinks'>here</a>"
+#~ msgstr ""
+#~ "This way of links configuration can be used by not only our blog "
+#~ "followers but will help in SEO-optimisation as well. The effectiveness "
+#~ "and main features of this link configuration method are revealed <a "
+#~ "href='http://codex.wordpress.org/Using_Permalinks'>qui</a>"
+
+#~ msgid "Import Sample Data"
+#~ msgstr "Importa dati di esempio "
+
+#~ msgid ""
+#~ "If you want to install sample data from livedemo you need to go to "
+#~ "<strong>Cherry Options</strong> > <strong>Import</strong> and follow the "
+#~ "tips."
+#~ msgstr ""
+#~ "Se si desidera installare i dati di esempio da LIVEDEMO è necessario "
+#~ "andare a <strong>Opzioni Cherry</strong> > <strong>Importa</strong> e "
+#~ "seguire i suggerimenti."
+
+#~ msgid ""
+#~ "If you want to install sample data from livedemo you need to go to "
+#~ "<strong>Import</strong> and follow the tips."
+#~ msgstr ""
+#~ "Se si desidera installare i dati di esempio da LIVEDEMO è necessario "
+#~ "andare a <strong>Importa</strong> e seguire i suggerimenti. "
+
+#~ msgid "No lable."
+#~ msgstr "Nessuna etichetta."
+
+#~ msgid "Theme Options Media"
+#~ msgstr "Opzioni del tema supporti "
+
+#~ msgid "Page Template"
+#~ msgstr "Template  pagina"
+
+#~ msgid "Template"
+#~ msgstr "Template"
+
+#~ msgid "Sitemap XML"
+#~ msgstr "Mappa del sito XML"
+
+#~ msgid "Priority."
+#~ msgstr "Priorita'."
+
+#~ msgid "Change freq."
+#~ msgstr "Cambiare frequenza."
+
+#~ msgid "Post types settings."
+#~ msgstr "Post Tipologie Impostazioni."
+
+#~ msgid ""
+#~ "<strong>Include post types</strong> - specify the post types which will "
+#~ "be included into your sitemap."
+#~ msgstr ""
+#~ "<strong>Inserisci tipi di post</strong> – specificare i tipi di post che "
+#~ "si intende includere nella mappa del sito. "
+
+#~ msgid ""
+#~ "<strong>Priority</strong> - set post type priorities on your site. For "
+#~ "example, if the blog page content is more important for search engines "
+#~ "than the portfolio page content, set the priority for blog posts as 1, "
+#~ "for portfolio pages as 0.9 and so on."
+#~ msgstr ""
+#~ "<strong>Priorità</strong> – imposta le priorità di scelta tra i tipi di "
+#~ "post nel vostro sito. Per esempio, se il contenuto della pagina del blog  "
+#~ "è più importante della pagina dei contenuti del portfolio per i motori di "
+#~ "ricerca, impostare il valore 1 come priorità per i post del blog, 0.9 per "
+#~ "le pagine del portfolio e così via."
+
+#~ msgid ""
+#~ "<strong>Change frequency</strong> - specify how often you change certain "
+#~ "post types. It helps the search engines to determine how relevant your "
+#~ "information is at the moment of search."
+#~ msgstr ""
+#~ "<strong>Modifica frequenza</strong> – specifica la frequenza di modifica "
+#~ "dei post. Permette ai motori di ricerca di determinare la rilevanza delle "
+#~ "vostre informazioni al momento della ricerca."
+
+#~ msgid ""
+#~ "<strong>Ping sitemap</strong> - choose the search engines which will "
+#~ "receive the link to your sitemap."
+#~ msgstr ""
+#~ "<strong>Ping della Sitemap</strong> – scegli i motori di ricerca ai quali "
+#~ "inviare il link della tua sitemap. "
+
+#~ msgid "Ping sitemap."
+#~ msgstr "Ping Mappa del sito"
+
+#~ msgid "SEO"
+#~ msgstr "SEO"
+
+#~ msgid "Your website indexation settings."
+#~ msgstr "Impostazioni di indicizzazione del tuo sitoweb."
+
+#~ msgid ""
+#~ "Forbid the search engines to index the following directories of your site."
+#~ msgstr ""
+#~ "Impedisci ai motori di ricerca di indicizzare le seguenti directory dal "
+#~ "tuo sito."
+
+#~ msgid ""
+#~ "These settings will help reduce the information search range on your "
+#~ "site. "
+#~ msgstr ""
+#~ "Queste impostazioni permetteranno di ridurre il raggio di ricerca "
+#~ "informazioni sul vostro sito."
+
+#~ msgid "WordPress engine system files and folders <em>(recommended)</em>"
+#~ msgstr "File di sistema e cartelle di WordPress <em>(raccomandato)</em>"
+
+#~ msgid "Your plugins system files and folders <em>(recommended)</em>"
+#~ msgstr "File di sistema e cartelle dei tuoi plugin <em>(raccomandato)</em>"
+
+#~ msgid "Your themes system files and folders <em>(recommended)</em>"
+#~ msgstr "Your themes system files and folders <em>(recommended)</em>"
+
+#~ msgid ""
+#~ "Media library files (images, video, audio, etc.) <em>(not recommended)</"
+#~ "em>"
+#~ msgstr ""
+#~ "File della libreria multimediale (immagini, video, audio, ecc.) <em>(non "
+#~ "raccomandato)</em> "
+
+#~ msgid ""
+#~ "Add the <em>\"rel\"</em> attribute with the <em>\"nofollow\"</em> value "
+#~ "to content links."
+#~ msgstr ""
+#~ "Aggiungi all’attributo <em>\"rel\"</em> il valore <em>\"nofollow\"</em> "
+#~ "per i link dei contenuti. "
+
+#~ msgid ""
+#~ "This option will stop the search engines from going to other sites "
+#~ "following the links in your site content."
+#~ msgstr ""
+#~ "Questa opzione impedirà ai motori di ricerca di accedere ad altri siti "
+#~ "tramite i link sulla vostra pagina web."
+
+#~ msgid "Skip"
+#~ msgstr "Salta"
+
+#~ msgid "Enable or Disable meta information for blog posts."
+#~ msgstr "Attiva o Disattiva meta informazioni per i post del blog."
+
+#, fuzzy
+#~ msgid "Author:"
+#~ msgstr "Autore"
+
+#~ msgid "Show all"
+#~ msgstr "Mostra tutti"
+
+#~ msgid "Buttons and links color."
+#~ msgstr "Pulsanti e colore link."
