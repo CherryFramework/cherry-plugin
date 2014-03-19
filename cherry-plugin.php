@@ -53,14 +53,6 @@
 			}else{
 				include_once (CHERRY_PLUGIN_DIR . 'includes/plugin-includes.php');
 			}
-
-			if ( defined('CHERRY_VER') ) {
-				if ( function_exists('of_get_option') ) {
-					if ( of_get_option('visible_style_switcher') == 'true' ) {
-						include_once (CHERRY_PLUGIN_DIR . 'includes/gt-custom/gt-custom.php');
-					}
-				}
-			}
 			do_action( 'cherry_plugin_init' );
 		}
 		add_action('init', 'cherry_plugin_init', 0);
@@ -114,19 +106,3 @@
 		}
 		register_uninstall_hook(__FILE__, 'cherry_plugin_uninstall');
 	};
-
-//include wp_customize
-	if (!function_exists('cherry_plugin_wp_customize_include')) {
-		function cherry_plugin_wp_customize_include() {
-			if ( ! ( ( isset( $_REQUEST['gt_customize'] ) && 'on' == $_REQUEST['wp_customize'] )
-				|| ( 'gt-customize.php' == basename( $_SERVER['PHP_SELF'] ) )
-			) )
-				return;
-
-			require( ABSPATH . WPINC . '/class-wp-customize-manager.php' );
-			// Init Customize class
-			$GLOBALS['wp_customize'] = new WP_Customize_Manager;
-		}
-
-		add_action( 'plugins_loaded', 'cherry_plugin_wp_customize_include' );
-	}
