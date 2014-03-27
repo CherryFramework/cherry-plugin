@@ -251,7 +251,7 @@
 		$categories_array = apply_filters( 'wp_import_categories', $categories_array );
 
 		if ( empty( $categories_array ) )
-			return;
+			exit('import_tags');
 
 		foreach ( $categories_array as $cat ) {
 			// if the category already exists leave it alone
@@ -300,7 +300,7 @@
 		$tag_array = apply_filters( 'wp_import_tags', $tag_array );
 
 		if ( empty( $tag_array ) )
-			return;
+			exit('process_terms');
 
 		foreach ( $tag_array as $tag ) {
 			// if the tag already exists leave it alone
@@ -343,7 +343,7 @@
 		$terms = apply_filters( 'wp_import_terms', $terms );
 
 		if ( empty( $terms ) )
-			return;
+			exit('import_posts');
 
 		foreach ( $terms as $term ) {
 			// if the term already exists in the correct taxonomy leave it alone
