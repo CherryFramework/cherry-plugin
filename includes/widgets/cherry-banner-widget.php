@@ -14,9 +14,9 @@
 			$output = $before_widget;
 			$output .= $link_url ? '<a class="banner_link" href="'.$link_url.'" target="_blank">' : '' ;
 			$output .= '<div class="banner_wrapper ';
-			$output .= $fill ? 'fill_class" style="background-image: url('.$image_url.')' : '' ;
+			$output .= isset($fill) ? 'fill_class" style="background-image: url('.$image_url.')' : '' ;
 			$output .= '">';
-				$output .= (!$fill && $image_url)? '<figure class="thumbnail"><a href="'.$link_url.'"><img src="'.$image_url.'" alt=""></a></figure>' : '' ;
+				$output .= (!isset($fill) && $image_url)? '<figure class="thumbnail"><a href="'.$link_url.'"><img src="'.$image_url.'" alt=""></a></figure>' : '' ;
 				$output .= $title ? $before_title . $title . $after_title : '' ;
 				$output .= '<p class="excerpt">'.$description_text.'</p>';
 			$output .= '</div>';
@@ -96,8 +96,8 @@
 		}
 
 		public function upload_scripts(){
-				wp_enqueue_script('media-upload');
-				wp_enqueue_script('thickbox');
+				wp_enqueue_media();
+				wp_print_media_templates();
 				wp_enqueue_script('upload_media_widget', CHERRY_PLUGIN_URL . 'admin/js/upload-media-files.js');
 		}
 

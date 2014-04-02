@@ -120,8 +120,8 @@
 			$counter= 0;
 			$response = wp_remote_get('http://instagram.com/'.$user_name);
 
-			if($response ['response']['code'] != "200" && is_wp_error($response)){
-				return false;
+			if(is_wp_error($response) || empty($response) || $response ['response']['code'] != "200"){
+				return array();
 			}
 
 			$get_images_array = explode('window._sharedData = ', $response['body']);

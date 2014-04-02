@@ -1,5 +1,5 @@
 jQuery(document).ready(function(){
-	if(remove_widgets_text){
+	if(typeof remove_widgets_text != 'undefined'){
 		var inactive_holder = jQuery('#wp_inactive_widgets');
 		jQuery('.description', inactive_holder).after('<a href="#" style="float: right; margin: 2px 4px 5px 5px;" class="button remove_inactive">'+remove_widgets_text+'</a>');
 	}
