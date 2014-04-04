@@ -1,4 +1,4 @@
-<?php 
+<?php
 	do_action( 'cherry_plugin_pre_import' );
 	wp_enqueue_script('cherry-plugin-import', CHERRY_PLUGIN_URL.'admin/js/import.js', array('jquery'), '1', true);
 	wp_localize_script( 'cherry-plugin-import', 'import_ajax', array('url' => admin_url('admin-ajax.php'), 'nonce' => wp_create_nonce('import_ajax-nonce')));
@@ -29,38 +29,38 @@
 		max_file_size = <?php echo wp_max_upload_size(); ?>,
 		step_href = 'admin.php?page=import-page&step=2';
 
-		import_text['error_upload']		= '<?php _e( "Upload Error", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['error_size']		= '<?php _e( "The file is too big!", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['error_type']		= '<?php _e( "The file type is error!", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['error_folder']		= '<?php _e( "Folder cannot be uploaded!", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['uploading']		= '<?php _e( "Uploading", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['upload']			= '<?php _e( "Upload", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['upload_complete']	= '<?php _e( "Upload Complete", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['item']				= '<?php _e( "item", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['items']			= '<?php _e( "items", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['uploaded_status_text']= '<?php _e( "Sample data installing. Some steps may take some time depending on your server settings. Please be patient.", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['uploaded_status_text_1']= '<?php _e( "Upload complete please click Continue Install button to proceed.", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['error_upload']		= "<?php _e( 'Upload Error', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['error_size']		= "<?php _e( 'The file is too big!', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['error_type']		= "<?php _e( 'The file type is error!', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['error_folder']		= "<?php _e( 'Folder cannot be uploaded!', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['uploading']		= "<?php _e( 'Uploading', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['upload']			= "<?php _e( 'Upload', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['upload_complete']	= "<?php _e( 'Upload Complete', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['item']				= "<?php _e( 'item', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['items']			= "<?php _e( 'items', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['uploaded_status_text']= "<?php _e( 'Sample data installing. Some steps may take some time depending on your server settings. Please be patient.', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['uploaded_status_text_1']= "<?php _e( 'Upload complete please click Continue Install button to proceed.', CHERRY_PLUGIN_DOMAIN) ?>";
 		//xml status text
-		import_text['import_xml']= '<?php _e( "Importing XML", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['import_categories']= '<?php _e( "Importing categories", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['import_tags']= '<?php _e( "Importing tags", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['process_terms']= '<?php _e( "Processing dependencies", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['import_posts']= '<?php _e( "Importing posts. This may take some time. Please wait.", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['import_menu_item']= '<?php _e( "Importing menu items. This may take some time. Please wait.", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['import_attachment']= '<?php _e( "Importing media library.", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['import_attachment_metadata']= '<?php _e( "Importing attachements meta.", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['generate_attachment_metadata']= '<?php _e( "Generating attachements meta. This may take some time. Please wait.", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['import_parents']= '<?php _e( "Generating content hierarchy", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['update_featured_images']= '<?php _e( "Updating featured images", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['update_attachment']= '<?php _e( "Updating attachments", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['import_json']= '<?php _e( "Importing JSON", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['import_complete']= '<?php _e( "Installing content complete", CHERRY_PLUGIN_DOMAIN) ?>';
-		import_text['instal_error']= '<?php _e( "Installing content error", CHERRY_PLUGIN_DOMAIN) ?>';
+		import_text['import_xml']= "<?php _e( 'Importing XML', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['import_categories']= "<?php _e( 'Importing categories', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['import_tags']= "<?php _e( 'Importing tags', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['process_terms']= "<?php _e( 'Processing dependencies', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['import_posts']= "<?php _e( 'Importing posts. This may take some time. Please wait.', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['import_menu_item']= "<?php _e( 'Importing menu items. This may take some time. Please wait.', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['import_attachment']= "<?php _e( 'Importing media library.', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['import_attachment_metadata']= "<?php _e( 'Importing attachements meta.', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['generate_attachment_metadata']= "<?php _e( 'Generating attachements meta. This may take some time. Please wait.', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['import_parents']= "<?php _e( 'Generating content hierarchy', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['update_featured_images']= "<?php _e( 'Updating featured images', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['update_attachment']= "<?php _e( 'Updating attachments', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['import_json']= "<?php _e( 'Importing JSON', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['import_complete']= "<?php _e( 'Installing content complete', CHERRY_PLUGIN_DOMAIN) ?>";
+		import_text['instal_error']= "<?php _e( 'Installing content error', CHERRY_PLUGIN_DOMAIN) ?>";
 </script>
 <?php
 	echo cherry_add_notice(array(
-			'wrapper_id' => 'importing_warning', 
-			'wrapper_class' => 'error', 
+			'wrapper_id' => 'importing_warning',
+			'wrapper_class' => 'error',
 			'notice_content' => '<b>'.__('Warning!', CHERRY_PLUGIN_DOMAIN).'</b> '.__('Installing sample data will replace your website content. Please make sure to backup your website data before importing content.', CHERRY_PLUGIN_DOMAIN)
 		)
 	);
@@ -78,7 +78,7 @@
 			<p class="max-upload-size"><?php printf( __( 'Maximum upload file size: %d %s.', CHERRY_PLUGIN_DOMAIN), esc_html($upload_size_unit), esc_html($byte_sizes[$u]) ); ?></p>
 			<p id="import-demo-video">
 				<a href="#TB_inline?width=600&height=505&inlineId=help_import" class="thickbox" title="<?php _e('Files Import demo', CHERRY_PLUGIN_DOMAIN); ?>">
-					<?php _e('View Demo', CHERRY_PLUGIN_DOMAIN); ?> 
+					<?php _e('View Demo', CHERRY_PLUGIN_DOMAIN); ?>
 					<i class="icon-facetime-video"></i>
 				</a>
 			</p>
