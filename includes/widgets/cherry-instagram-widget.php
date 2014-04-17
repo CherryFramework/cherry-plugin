@@ -9,6 +9,8 @@
 		public function widget($args, $instance) {
 			extract(array_merge($args , $instance));
 
+			$button_text = apply_filters( 'cherry_text_translate', $instance['button_text'], $instance['title'] . ' button_text' );
+
 			$user_name = strtolower(trim($user_name));
 			$date_format = get_option('date_format');
 			$img_list = $this->get_user_profile($user_name, $image_counter);
@@ -97,7 +99,7 @@
 					case 'checkbox':
 						$checked = isset($instance[$key]) ? 'checked' : '' ;
 						$output .= '<label for="'.$field_id.'"><input value="on" '.$inline_style.' class="'.$field_class.'" id="'.$field_id.'" name="'.$field_name.'" type="checkbox" '.$checked.' />'.$field_title.'</label>';
-						
+
 					break;
 					case 'select':
 						$output .= '<label for="'.$field_id.'">'.$field_title.':</label>';

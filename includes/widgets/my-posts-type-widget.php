@@ -5,7 +5,7 @@ class MY_PostsTypeWidget extends WP_Widget {
 
 function MY_PostsTypeWidget() {
 	$widget_ops = array('classname' => 'my_posts_type_widget', 'description' => __('Show custom posts', CHERRY_PLUGIN_DOMAIN));
-	$control_ops = array('width' => 500, 'height' => 350);
+	$control_ops = array('width' => 510, 'height' => 350);
 	parent::WP_Widget(false, __('Cherry - Advanced Cycle', CHERRY_PLUGIN_DOMAIN), $widget_ops, $control_ops);
 }
 
@@ -15,13 +15,17 @@ function MY_PostsTypeWidget() {
 function widget($args, $instance) {
 	global $post;
 	$post_old = $post; // Save the post object.
-	
+
 	extract( $args );
 	$title = apply_filters( 'widget_title', empty($instance['title']) ? '' : $instance['title'], $instance );
 	if (isset($instance['excerpt_length']))
 		$limit = apply_filters('widget_title', $instance['excerpt_length']);
 	else
 		$limit = 0;
+
+	$more_link_text = apply_filters( 'cherry_text_translate', $instance['more_link_text'], $instance['title'] . ' more_link_text' );
+	$global_link_text = apply_filters( 'cherry_text_translate', $instance['global_link_text'], $instance['title'] . ' global_link_text' );
+
 
 	$valid_sort_orders = array('date', 'title', 'comment_count', 'rand');
 	if ( in_array($instance['sort_by'], $valid_sort_orders) ) {
@@ -32,8 +36,8 @@ function widget($args, $instance) {
 		$sort_by = 'date';
 		$sort_order = 'DESC';
 	}
-	
-	// Get array of post info.	
+
+	// Get array of post info.
 	$args = array(
 		'showposts' => $instance["num"],
 		'post_type' => $instance['posttype'],
@@ -49,11 +53,11 @@ function widget($args, $instance) {
 			)
 		)
 	);
-	
+
 	$cat_posts = new WP_Query($args);
-	
+
 	echo $before_widget;
-	
+
 	// Widget title
 	// If title exist.
 	if( $title ) {
@@ -68,12 +72,12 @@ function widget($args, $instance) {
 	} else {
 		echo "<ul class='post-list unstyled " .$instance['container_class'] ."'>\n";
 	}
-	
+
 	$limittext = $limit;
 	$posts_counter = 0;
 	while ( $cat_posts->have_posts() ) {
 		$cat_posts->the_post(); $posts_counter++;
-		
+
 		if ($instance['posttype'] == "testi") {
 			$testiname = get_post_meta($post->ID, 'my_testi_caption', true);
 			$testiurl  = get_post_meta($post->ID, 'my_testi_url', true);
@@ -91,7 +95,7 @@ function widget($args, $instance) {
 			<?php endif;
 			if($instance['thumb_w']!=="" || $instance['thumb_h']!==""){
 				$thumb_w = $instance['thumb_w'];
-				$thumb_h = $instance['thumb_h']; 
+				$thumb_h = $instance['thumb_h'];
 			?>
 				<img src="<?php echo $image; ?>" width="<?php echo $thumb_w ?>" height="<?php echo $thumb_h ?>" alt="<?php the_title(); ?>" />
 			<?php } else {
@@ -102,8 +106,8 @@ function widget($args, $instance) {
 			<?php endif; ?>
 			</figure>
 		<?php endif;
-		}	
-   
+		}
+
 		if ( $instance['date'] ) : ?>
 			<time datetime="<?php the_time('Y-m-d\TH:i'); ?>"><?php the_date(); ?> <?php the_time() ?></time>
 		<?php endif;
@@ -115,8 +119,8 @@ function widget($args, $instance) {
 		if ( $instance['show_title'] ) : ?>
 			<h4 class="post-list_h"><a class="post-title" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php if ( $instance['show_title_date'] ) {?>[<?php echo get_the_date(); ?>]<?php }else{?><?php the_title(); ?><?php }?></a></h4>
 		<?php endif; ?>
-				
-				
+
+
 		<div class="excerpt">
 		<?php if ( $instance['excerpt'] ) : ?>
 		   <?php if($limittext=="" || $limittext==0){ ?>
@@ -142,19 +146,19 @@ function widget($args, $instance) {
 		<div class="name-testi"><span class="user"><?php echo $testiname; ?></span>, <a target="_blank" href="<?php echo $testiurl; ?>"><?php echo $testiurl; ?></a></div>
 	  <?php }?>
 	  <?php if ( $instance['more_link'] ) : ?>
-		<a href="<?php the_permalink() ?>" class="btn btn-primary <?php if($instance['more_link_class']!="") {echo $instance['more_link_class'];}else{ ?>link<?php } ?>"><?php if($instance['more_link_text']==""){ _e('Read more', CHERRY_PLUGIN_DOMAIN); }else{ ?><?php echo $instance['more_link_text']; ?><?php } ?></a>
+		<a href="<?php the_permalink() ?>" class="btn btn-primary <?php if($instance['more_link_class']!="") {echo $instance['more_link_class'];}else{ ?>link<?php } ?>"><?php if($instance['more_link_text']==""){ _e('Read more', CHERRY_PLUGIN_DOMAIN); }else{ ?><?php echo $more_link_text; ?><?php } ?></a>
 	  <?php endif; ?>
 		</li><!--//.post-list_li -->
-	
+
 	<?php } ?>
 	<?php echo "</ul>\n"; ?>
 	<?php if ( $instance['global_link'] ) : ?>
-	  <a href="<?php echo $instance['global_link_href']; ?>" class="btn btn-primary link_show_all"><?php if($instance['global_link_text']==""){ _e('View all', CHERRY_PLUGIN_DOMAIN); }else{ ?><?php echo $instance['global_link_text']; ?><?php } ?></a>
+	  <a href="<?php echo $instance['global_link_href']; ?>" class="btn btn-primary link_show_all"><?php if($instance['global_link_text']==""){ _e('View all', CHERRY_PLUGIN_DOMAIN); }else{ ?><?php echo $global_link_text; ?><?php } ?></a>
 	<?php endif; ?>
-	
-<?php 	
+
+<?php
 	echo $after_widget;
-	
+
 	$post = $post_old; // Restore the post object.
 }
 
@@ -212,12 +216,12 @@ function form($instance) {
 		  <?php _e('Posts type', CHERRY_PLUGIN_DOMAIN); ?>:
 		  <?php $args=array(); ?>
 		  <select id="<?php echo $this->get_field_id('posttype'); ?>" name="<?php echo $this->get_field_name('posttype'); ?>" class="widefat" style="width:150px;">
-			  <?php foreach(get_post_types($args,'names') as $key => $post_type) { 
-			  
-			  $label_obj = get_post_type_object($post_type); 
+			  <?php foreach(get_post_types($args,'names') as $key => $post_type) {
+
+			  $label_obj = get_post_type_object($post_type);
 			  $labels = $label_obj->labels->name;
 			  ?>
-			  
+
 			  <?php if ($key=='page' || $key=='revision' || $key=='attachment' || $key=='nav_menu_item' || $key=='optionsframework'){continue;} ?>
 			  <option<?php selected( $instance['posttype'], $post_type ); ?> value="<?php echo $post_type; ?>"><?php echo $labels; ?></option>
 			  <?php } ?>
@@ -243,7 +247,7 @@ function form($instance) {
 	</select>
   </label>
 </p>
-  
+
 <p>
   <label for="<?php echo $this->get_field_id("asc_sort_order"); ?>">
 	<input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id("asc_sort_order"); ?>" name="<?php echo $this->get_field_name("asc_sort_order"); ?>" value="1" <?php checked( (bool) $instance["asc_sort_order"], true ); ?> />
@@ -285,7 +289,7 @@ function form($instance) {
 		  <?php _e('Date as title ', CHERRY_PLUGIN_DOMAIN); ?> <span style='font-size:11px; color:#999;'>('[mm-dd-yyyy]')</span>
 	  </label>
   </p>
-  
+
   </fieldset>
 
   <fieldset style="border:1px solid #F1F1F1; padding:10px 10px 0; margin-bottom:1em;">
@@ -319,7 +323,7 @@ function form($instance) {
 		  <?php _e('Show "More link', CHERRY_PLUGIN_DOMAIN); ?>
 	  </label>
   </p>
-  
+
   <p>
   <label for="<?php echo $this->get_field_id("more_link_text"); ?>">
 	<?php _e('Link Text', CHERRY_PLUGIN_DOMAIN); ?>:

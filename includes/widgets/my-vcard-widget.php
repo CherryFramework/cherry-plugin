@@ -30,7 +30,7 @@ class MY_Vcard_Widget extends WP_Widget {
 		extract($args, EXTR_SKIP);
 
 	$title = apply_filters('widget_title', empty($instance['title']) ? __('vCard', CHERRY_PLUGIN_DOMAIN) : $instance['title'], $instance, $this->id_base);
-	$instance['street_address'] = isset($instance['street_address']) ? $instance['street_address'] : ''; 
+	$instance['street_address'] = isset($instance['street_address']) ? $instance['street_address'] : '';
 	$instance['locality'] = isset($instance['locality']) ? $instance['locality'] : '';
 	$instance['region'] = isset($instance['region']) ? $instance['region'] : '';
 	$instance['postal_code'] = isset($instance['postal_code']) ? $instance['postal_code'] : '';
@@ -39,6 +39,10 @@ class MY_Vcard_Widget extends WP_Widget {
 	$instance['gmap_disable'] = isset($instance['gmap_disable']) ? $instance['gmap_disable'] : '';
 	$instance['gmap_html'] = isset($instance['gmap_html']) ? $instance['gmap_html'] : '';
 	$meta_format = isset($instance['meta_format']) ? $instance['meta_format'] : 'none';
+
+	$street_address = apply_filters( 'cherry_text_translate', $instance['street_address'], $instance['title'] . ' street_address' );
+	$locality = apply_filters( 'cherry_text_translate', $instance['locality'], $instance['title'] . ' locality' );
+	$region = apply_filters( 'cherry_text_translate', $instance['region'], $instance['title'] . ' region' );
 
 	if($meta_format=="icons"){
 	  $street_address_format = '<i class="icon-home"></i>';
@@ -77,13 +81,13 @@ class MY_Vcard_Widget extends WP_Widget {
 	  <?php }; ?>
 	  <strong class="adr">
 		<?php if($instance['street_address']!=''){ ?>
-		  <div class="meta_format"><?php echo $street_address_format; ?><span class="street-address"><?php echo $instance['street_address']; ?></span></div>
-		<?php }; 
+		  <div class="meta_format"><?php echo $street_address_format; ?><span class="street-address"><?php echo $street_address; ?></span></div>
+		<?php };
 		if($instance['locality']!=''){ ?>
-		  <div class="meta_format"><?php echo $locality_format; ?><span class="locality"><?php echo $instance['locality']; ?></span></div>  
+		  <div class="meta_format"><?php echo $locality_format; ?><span class="locality"><?php echo $locality; ?></span></div>
 		<?php };
 		if($instance['region']!=''){ ?>
-		 <div class="meta_format"><?php echo $region_format; ?> <span class="region"><?php echo $instance['region']; ?></span></div>
+		 <div class="meta_format"><?php echo $region_format; ?> <span class="region"><?php echo $region; ?></span></div>
 		<?php };
 		if($instance['postal_code']!=''){ ?>
 		  <div class="meta_format"><?php echo $postal_code_format; ?><span class="postal-code"><?php echo $instance['postal_code']; ?></span></div>
@@ -188,8 +192,8 @@ function form($instance) {
 	  <input class="widefat" id="<?php echo esc_attr($this->get_field_id('email')); ?>" name="<?php echo esc_attr($this->get_field_name('email')); ?>" type="text" value="<?php echo esc_attr($email); ?>" />
 	</p>
 	<p>
-	  <label for="<?php echo $this->get_field_id('meta_format'); ?>"><?php _e('Meta format', CHERRY_PLUGIN_DOMAIN); ?>: 
-		<select id="<?php echo $this->get_field_id('meta_format'); ?>" name="<?php echo $this->get_field_name('meta_format'); ?>" style="width:140px;" > 
+	  <label for="<?php echo $this->get_field_id('meta_format'); ?>"><?php _e('Meta format', CHERRY_PLUGIN_DOMAIN); ?>:
+		<select id="<?php echo $this->get_field_id('meta_format'); ?>" name="<?php echo $this->get_field_name('meta_format'); ?>" style="width:140px;" >
 		  <option value="none" <?php echo ($meta_format === 'none' ? ' selected="selected"' : ''); ?>><?php _e('None', CHERRY_PLUGIN_DOMAIN); ?></option>
 		  <option value="icons" <?php echo ($meta_format === 'icons' ? ' selected="selected"' : ''); ?>><?php _e('Icons', CHERRY_PLUGIN_DOMAIN); ?></option>
 		  <option value="labels" <?php echo ($meta_format === 'labels' ? ' selected="selected"' : ''); ?>><?php _e('Labels', CHERRY_PLUGIN_DOMAIN); ?></option>

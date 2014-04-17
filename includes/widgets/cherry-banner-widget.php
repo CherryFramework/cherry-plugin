@@ -11,6 +11,8 @@
 		public function widget($args, $instance) {
 			extract(array_merge($args , $instance));
 
+			$description_text = apply_filters( 'cherry_text_translate', $instance['description_text'], $instance['title'] . ' description_text' );
+
 			$output = $before_widget;
 			$output .= $link_url ? '<a class="banner_link" href="'.$link_url.'" target="_blank">' : '' ;
 			$output .= '<div class="banner_wrapper ';

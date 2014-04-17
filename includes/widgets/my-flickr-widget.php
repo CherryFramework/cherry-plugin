@@ -12,10 +12,10 @@ class MY_FlickrWidget extends WP_Widget {
 		$title     = apply_filters('widget_title', $instance['title']);
 		$flickr_id = apply_filters('flickr_id', $instance['flickr_id']);
 		$amount    = apply_filters('flickr_image_amount', $instance['image_amount']);
-		$linktext  = apply_filters('widget_linktext', $instance['linktext'], $instance['title']);
+		$linktext  = apply_filters('cherry_text_translate', $instance['linktext'], $instance['title'] . ' linktext');
 		$suf       = rand(100000, 999999);
 
-	echo $before_widget; 
+	echo $before_widget;
 		if ( $title )
 			echo $before_title . $title . $after_title; ?>
 

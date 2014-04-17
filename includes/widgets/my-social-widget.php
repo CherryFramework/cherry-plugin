@@ -61,7 +61,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 				<a class="social_link social_link__<?php echo strtolower($network); ?>" rel="tooltip" data-original-title="<?php echo strtolower($networks[$network]['label']); ?>" href="<?php echo $networks[$network]['link']; ?>" target="_blank">
 					<?php if (($display == "both") or ($display =="icons")) { ?>
 						<span class="social_ico"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/<?php echo strtolower($network);?>.png" alt=""></span>
-					<?php } if (($display == "labels") or ($display == "both")) { ?> 
+					<?php } if (($display == "labels") or ($display == "both")) { ?>
 						<?php if ( $networks[$network]['label'] != "" ) { echo '<span class="social_label">'.$networks[$network]['label'].'</span>'; }?>
 					<?php } ?>
 				</a>
@@ -104,7 +104,6 @@ class My_SocialNetworksWidget extends WP_Widget {
 
 		$display         = $instance['display'];
 		$title           = strip_tags($instance['title']);
-		$text            = format_to_edit($instance['text']);
 ?>
 	<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', CHERRY_PLUGIN_DOMAIN) ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
