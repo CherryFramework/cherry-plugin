@@ -4,7 +4,7 @@ frameworkShortcodeAtts={
 				label:"Type of posts",
 				id:"type",
 				help:"This is the type of posts. Use post slug, e.g. \"portfolio\" or blank for posts from Blog"
-			},			
+			},
 			{
 				label:"How many posts to show?",
 				id:"numb",
@@ -13,9 +13,9 @@ frameworkShortcodeAtts={
 			{
 				label:"Thumbnails",
 				id:"thumbs",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['small', 'smaller', 'smallest', 'none'],
-				defaultValue: 'small', 
+				defaultValue: 'small',
 				defaultText: 'small',
 				help:"Size of post thumbnails"
 			},
@@ -32,34 +32,34 @@ frameworkShortcodeAtts={
 			{
 				label:"Meta",
 				id:"meta",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['yes', 'no'],
-				defaultValue: 'yes', 
+				defaultValue: 'yes',
 				defaultText: 'yes',
 				help:"Show a post meta?"
 			},
 			{
 				label:"Order by",
 				id:"order_by",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['date', 'title', 'popular', 'random'],
-				defaultValue: 'date', 
+				defaultValue: 'date',
 				defaultText: 'date',
 				help:"Choose the order by mode."
 			},
 			{
 				label:"Order",
 				id:"order",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['DESC', 'ASC'],
-				defaultValue: 'DESC', 
+				defaultValue: 'DESC',
 				defaultText: 'DESC',
 				help:"Choose the order mode (from Z to A or from A to Z)."
 			},
 			{
-				label:"The number of characters in the excerpt",
+				label:"The number of words in the excerpt",
 				id:"excerpt_count",
-				help:"How many characters are displayed in the excerpt?"
+				help:"How many words are displayed in the excerpt?"
 			},
 			{
 				label:"Custom class",

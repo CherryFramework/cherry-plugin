@@ -11,10 +11,6 @@ if ( !function_exists('chp_pricing_table_shortcode') ) {
 			'custom_class' => ''
 		), $atts));
 
-		if ( $labelled == 'yes' ) {
-			$columns++;
-		}
-
 		$output = '<div class="price-plans price-plans-' . $columns . ' ' . $custom_class . '">' . do_shortcode( $content ) . '</div>';
 		return $output;
 

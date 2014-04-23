@@ -30,7 +30,7 @@ if (!function_exists('button_shortcode')) {
 				'class'   => '',
 				'icon'    => 'no'
 		), $atts));
-		
+
 		$output =  '<a href="'.$link.'" title="'.$text.'" class="btn btn-'.$style.' btn-'.$size.' btn-'.$display.' '.$class.'" target="'.$target.'">';
 		if ($icon != 'no') {
 			$output .= '<i class="icon-'.$icon.'"></i>';
@@ -52,7 +52,7 @@ if (!function_exists('map_shortcode')) {
 				'width'  => '',
 				'height' => ''
 		), $atts));
-		
+
 		$output =  '<div class="google-map">';
 			$output .= '<iframe src="'.$src.'" frameborder="0" width="'.$width.'" height="'.$height.'" marginwidth="0" marginheight="0" scrolling="no">';
 			$output .= '</iframe>';
@@ -128,7 +128,7 @@ if (!function_exists('row_shortcode')) {
 // Row Inner
 if (!function_exists('row_inner_shortcode')) {
 function row_inner_shortcode($atts, $content = null) {
-		// add divs to the content  
+		// add divs to the content
 		$output = '<div class="row">';
 		$output .= do_shortcode($content);
 		$output .= '</div> <!-- .row (end) -->';
@@ -141,7 +141,7 @@ function row_inner_shortcode($atts, $content = null) {
 // Row Fluid
 if (!function_exists('row_fluid_shortcode')) {
 	function row_fluid_shortcode($atts, $content = null) {
-		// add divs to the content  
+		// add divs to the content
 		$output = '<div class="row-fluid">';
 		$output .= do_shortcode($content);
 		$output .= '</div> <!-- .row-fluid (end) -->';
@@ -364,7 +364,7 @@ if ( !function_exists('custom_list_shortcode') ) {
 // Vertical Rule
 if (!function_exists('vr_shortcode')) {
 	function vr_shortcode($atts, $content = null) {
-		
+
 		$output = '<div class="vertical-divider">';
 		$output .= do_shortcode($content);
 		$output .= '</div><!-- divider (end) -->';
@@ -455,7 +455,7 @@ if (!function_exists('template_url_shortcode')) {
 		// get content URL
 		$content_url  = content_url();
 		$content_str  = 'wp-content';
-		
+
 		$pos          = strpos($content_url, $content_str);
 		$template_url = substr($content_url, 0, $pos-1);
 		return $template_url;

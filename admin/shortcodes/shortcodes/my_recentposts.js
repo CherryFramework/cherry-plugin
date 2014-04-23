@@ -13,27 +13,27 @@ frameworkShortcodeAtts={
 			{
 				label:"Post Format",
 				id:"post_format",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['standard', 'aside', 'quote', 'link', 'image', 'audio', 'video'],
-				defaultValue: 'standard', 
+				defaultValue: 'standard',
 				defaultText: 'standard',
 				help:"Choose displaying post format."
 			},
 			{
 				label:"Meta",
 				id:"meta",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['true', 'false'],
-				defaultValue: 'false', 
+				defaultValue: 'false',
 				defaultText: 'false',
 				help:"Enable or disable meta information."
 			},
 			{
 				label:"Do you want to show the featured image?",
 				id:"thumb",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['true', 'false'],
-				defaultValue: 'true', 
+				defaultValue: 'true',
 				defaultText: 'true',
 				help:"Enable or disable featured image."
 			},
@@ -63,9 +63,9 @@ frameworkShortcodeAtts={
 				help:"Enter the slug of the category you'd like to pull posts from. Leave blank if you'd like to pull from all categories."
 			},
 			{
-				label:"The number of characters in the excerpt",
+				label:"The number of words in the excerpt",
 				id:"excerpt_count",
-				help:"How many characters are displayed in the excerpt?"
+				help:"How many words are displayed in the excerpt?"
 			},
 			{
 				label:"Custom class",

@@ -4,7 +4,7 @@ frameworkShortcodeAtts={
 				label:"Type of posts",
 				id:"type",
 				help:"This is the type of posts. Use post slug, e.g. \"portfolio\" or blank for posts from Blog"
-			},			
+			},
 			{
 				label:"How many posts to show?",
 				id:"numb",
@@ -13,9 +13,9 @@ frameworkShortcodeAtts={
 			{
 				label:"Thumbnails",
 				id:"thumbs",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['normal', 'large'],
-				defaultValue: 'large', 
+				defaultValue: 'large',
 				defaultText: 'large',
 				help:"Size of post thumbnails"
 			},
@@ -32,36 +32,36 @@ frameworkShortcodeAtts={
 			{
 				label:"Post Content",
 				id:"post_content",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['excerpt', 'content', 'none'],
-				defaultValue: 'excerpt', 
+				defaultValue: 'excerpt',
 				defaultText: 'excerpt',
 				help:"Show excerpts or full content"
 			},
 			{
 				label:"Order by",
 				id:"order_by",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['date', 'title', 'popular', 'random'],
-				defaultValue: 'date', 
+				defaultValue: 'date',
 				defaultText: 'date',
 				help:"Choose the order by mode."
 			},
 			{
 				label:"Order",
 				id:"order",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['DESC', 'ASC'],
-				defaultValue: 'DESC', 
+				defaultValue: 'DESC',
 				defaultText: 'DESC',
 				help:"Choose the order mode (from Z to A or from A to Z)."
 			},
 			{
 				label:"Link",
 				id:"link",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['yes', 'no'],
-				defaultValue: 'yes', 
+				defaultValue: 'yes',
 				defaultText: 'yes',
 				help:"Show link after posts, yes or no?"
 			},
@@ -73,9 +73,9 @@ frameworkShortcodeAtts={
 			{
 				label:"Tags",
 				id:"tags",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['yes', 'no'],
-				defaultValue: 'yes', 
+				defaultValue: 'yes',
 				defaultText: 'yes',
 				help:"Show post tags, yes or no?"
 			},

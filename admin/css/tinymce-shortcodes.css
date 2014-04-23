@@ -1,35 +1,49 @@
 h3.sc-options-title {
 	margin: 25px 10px;
-	font-family:Georgia, "Times New Roman", Times, serif;
-	font-size:1.6em;
-	font-weight:normal;
-	color:#5a5a5a;
+	font-size: 14px;
 }
-
 #options-table th,
 #options-table td {
 	padding: 10px;
 }
-
-#options-table th label {
+#options-table th > label {
 	display: block;
-	width: 175px;
+	padding: 5px 0 0 !important;
+	width: 160px;
+	text-align: right;
+	font-size: 12px !important;
+	font-weight: bold !important;
 }
-#options-table .input-text {
-	display: block;
-	min-height: 24px;
+#options-table .input-text,
+#options-table .input-select {
+	margin: 0 0 5px;
+	width: 280px;
+	height: 28px;
+	font-size: 13px;
 }
 #options-table .input-help {
-	color: #888888;
 	display: block;
-	font-size: 11px;
-	padding: 5px;
+	padding: 0 5px;
+	width: 270px;
+	color: #888;
+	font: italic 11px/1.2em Arial,sans-serif;
 }
-
 #options-table .select_wrapper span {
 	display: none;
 }
 .buttons-wrapper {
-	overflow:hidden;
-	margin:25px 0 25px 10px;
-	}
+	margin: -3px -15px 0;
+	padding: 10px 20px;
+	border-bottom: 1px solid #ddd;
+	background: #eee;
+}
+i.mce-i-icon {
+	margin-left: -2px;
+	padding: 0;
+	padding-right: 2px;
+	vertical-align: top;
+	font: normal 20px/1 FontAwesome;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
