@@ -1,168 +1,147 @@
 <?php
-//eader("Content-Type:text/javascript");
+	header("Content-Type:text/javascript");
 
-//Setup URL to WordPres
-$absolute_path = __FILE__;
-$path_to_wp = explode( 'wp-content', $absolute_path );
-$wp_url = $path_to_wp[0];
+	// Setup URL to WordPres
+	$absolute_path = __FILE__;
+	$path_to_wp    = explode( 'wp-content', $absolute_path );
+	$wp_url        = $path_to_wp[0];
 
-//Access WordPress
-require_once( $wp_url.'/wp-load.php' );
+	// Access WordPress
+	require_once( $wp_url . '/wp-load.php' );
 
-//Path to TinyMCE plugin folder
-$path_to_wp = explode( 'wp-content', dirname(__FILE__) );
-$plugin_path = trailingslashit( '../wp-content' . substr( $path_to_wp[1], 0, -3 ) );
-
-//URL to TinyMCE plugin folder
+	// Path to TinyMCE plugin folder
+	$path_to_wp  = explode( 'wp-content', dirname(__FILE__) );
+	$plugin_path = trailingslashit( '../wp-content' . substr( $path_to_wp[1], 0, -3 ) );
 ?>
-<script>
-var shortcode_generator_url = "<?php echo CHERRY_PLUGIN_URL.'admin/shortcodes/' ?>";
-
-var tb_dialog_helper = {
-
-	// ---------------------------------------------------------
-	// TickBox popup controls
-	// ---------------------------------------------------------
-
-	needsPreview: false,
-	setUpButtons: function () {
-		var a = this;
-		jQuery("#cancel-button").click(function () {
-			a.closeDialog()
-		});
-		jQuery("#insert-button").click(function () {
-			a.insertAction()
-		});
-	},
-
-	loadShortcodeDetails: function () {
-		if (myThemeSelectedShortcodeType) {
-
+var shortcode_generator_url = "<?php echo esc_url( CHERRY_PLUGIN_URL); ?>" + "admin/shortcodes/",
+	cherrySelectedShortcodeType,
+	tb_dialog_helper = {
+		cherrySelectedShortcodeType: '',
+		needsPreview: false,
+		setUpButtons: function(){
 			var a = this;
-			jQuery.getScript(shortcode_generator_url + "shortcodes/my_" + myThemeSelectedShortcodeType + ".js", function () {
-				a.initializeDialog();
-
-				// Set the default content to the highlighted text, for certain shortcode types.
-				switch ( myThemeSelectedShortcodeType ) {
-
-					case 'box':
-					case 'ilink':
-					case 'quote':
-					case 'button':
-					case 'abbr':
-					case 'unordered_list':
-					case 'ordered_list':
-					case 'typography':
-
-						jQuery('input#value-content').val( selectedText );
-
-					case 'toggle':
-
-						jQuery('textarea#value-content').val( selectedText );
-
-					break;
-
-				} // End SWITCH Statement
-
-				// Automatic preview generation on load.
-				a.previewAction();
-			})
-
-		}
-
-	},
-	initializeDialog: function () {
-
-		if (typeof frameworkShortcodeAtts == "undefined") {
-			jQuery("#shortcode-options").append("<p>Error loading details for shortcode: " + myThemeSelectedShortcodeType + "</p>");
-		} else {
-
-			var a = frameworkShortcodeAtts.attributes,
-				b = jQuery("#options-table");
-
-			for (var c in a) {
-				var f = "mytheme-value-" + a[c].id,
-					d = a[c].isRequired ? "mytheme-required" : "",
-					g = jQuery('<th valign="top" scope="row"></th>');
-
-				var requiredSpan = '<span class="optional"></span>';
-
-				if (a[c].isRequired) {
-
-					requiredSpan = '<span class="required">*</span>';
-
-				} // End IF Statement
-				jQuery("<label/>").attr("for", f).attr("class", a[c].id).html(a[c].label).append(requiredSpan).appendTo(g);
-				f = jQuery("<td/>");
-
-				d = (d = a[c].controlType) ? d : "text-control";
-
-				switch (d) {
-
-				case "tab-control":
-
-					this.createTabControl(a[c], f, c == 0);
-
-					break;
-
-				case "icon-control":
-				case "link-control":
-				case "text-control":
-
-					this.createTextControl(a[c], f, c == 0);
-
-					break;
-
-				case "textarea-control":
-
-					this.createTextAreaControl(a[c], f, c == 0);
-
-					break;
-
-				case "select-control":
-
-					this.createSelectControl(a[c], f, c == 0);
-
-					break;
-
-				}
-
-				jQuery("<tr/>").append(g).append(f).appendTo(b)
-			}
-			jQuery(".mytheme-focus-here:first").focus()
-
-			// Add additional wrappers, etc, to each select box.
-
-			jQuery('#shortcode-options select').wrap( '<div class="select_wrapper"></div>' ).before('<span></span>');
-
-			jQuery('#shortcode-options select option:selected').each( function () {
-
-				jQuery(this).parents('.select_wrapper').find('span').text( jQuery(this).text() );
-
+			jQuery("#cancel-button").click(function(){
+				a.closeDialog()
 			});
+			jQuery("#insert-button").click(function(){
+				a.insertAction()
+			});
+		},
 
-		} // End IF Statement
-	},
+		setupShortcodeType: function ( shortcode ) {
+			cherrySelectedShortcodeType = shortcode;
+			this.cherrySelectedShortcodeType = shortcode;
+		},
+
+		loadShortcodeDetails: function() {
+			if (cherrySelectedShortcodeType) {
+				var a = this;
+				// Clean out the table rows before applying the new ones.
+				jQuery( '#options-table' ).html( '' );
+				jQuery.getScript(shortcode_generator_url + "shortcodes/my_" + cherrySelectedShortcodeType + ".js", function () {
+					a.initializeDialog();
+
+					// Set the default content to the highlighted text, for certain shortcode types.
+					switch ( cherrySelectedShortcodeType ) {
+						case 'box':
+						case 'ilink':
+						case 'quote':
+						case 'button':
+						case 'abbr':
+						case 'unordered_list':
+						case 'ordered_list':
+						case 'typography':
+							jQuery('input#value-content').val( selectedText );
+						case 'toggle':
+							jQuery('textarea#value-content').val( selectedText );
+						break;
+					}
+				})
+			}
+		},
+
+		initializeDialog: function (){
+			if (typeof frameworkShortcodeAtts == "undefined") {
+				jQuery("#shortcode-options").append("<p>Error loading details for shortcode: " + cherrySelectedShortcodeType + "</p>");
+			} else {
+				var a = frameworkShortcodeAtts.attributes,
+					b = jQuery("#options-table");
+
+					// Clean out the table rows before applying the new ones.
+					b.html( '' );
+
+				for (var c in a) {
+					var f = "mytheme-value-" + a[c].id,
+						d = a[c].isRequired ? "mytheme-required" : "",
+						g = jQuery('<th valign="top" scope="row"></th>');
+
+					var requiredSpan = '<span class="optional"></span>';
+
+					if (a[c].isRequired) {
+
+						requiredSpan = '<span class="required">*</span>';
+
+					} // End IF Statement
+					jQuery("<label/>").attr("for", f).attr("class", a[c].id).html(a[c].label).append(requiredSpan).appendTo(g);
+					f = jQuery("<td/>");
+
+					d = (d = a[c].controlType) ? d : "text-control";
+
+					switch (d) {
+						case "tab-control":
+							this.createTabControl(a[c], f, c == 0);
+							break;
+
+						case "icon-control":
+						case "link-control":
+						case "text-control":
+							this.createTextControl(a[c], f, c == 0);
+							break;
+
+						case "textarea-control":
+							this.createTextAreaControl(a[c], f, c == 0);
+							break;
+
+						case "select-control":
+							this.createSelectControl(a[c], f, c == 0);
+							break;
+					}
+
+					jQuery("<tr/>").append(g).append(f).appendTo(b)
+				}
+				jQuery(".mytheme-focus-here:first").focus()
+
+				// Add additional wrappers, etc, to each select box.
+				jQuery( '#woo-options select' ).each( function ( i ) {
+					if ( ! jQuery( this ).parent().hasClass( 'select_wrapper' ) ) {
+						jQuery( this ).wrap( '<div class="select_wrapper"></div>' ).before( '<span></span>' );
+					}
+				});
+
+				jQuery('#shortcode-options select option:selected').each( function () {
+					jQuery(this).parents('.select_wrapper').find('span').text( jQuery(this).text() );
+				});
+
+			} // End IF Statement
+		},
 
 	 /* Tab Generator Element */
 
 	createTabControl: function (a, b, c) {
-		new myThemeTabMaker(b, 6, c ? "mytheme-focus-here" : null);
+		new myThemeTabMaker(b, 10, c ? "mytheme-focus-here" : null);
 		b.addClass("mytheme-marker-tab-control")
 	},
 
-	// ---------------------------------------------------------
-	// Generic Text Element
-	// ---------------------------------------------------------
+	/* Generic Text Element */
 
 	createTextControl: function (a, b, c) {
 
 		var f = a.validateLink ? "mytheme-validation-marker" : "",
 			d = a.isRequired ? "mytheme-required" : "",
 			g = "framework-" + a.id,
-			item_class = (a.item_class!=undefined && a.item_class!="") ? a.item_class : "";
+			defaultValue = a.defaultValue ? a.defaultValue : "";
 
-		jQuery('<input type="text">').attr("id", g).attr("name", g).addClass(f).addClass(d).addClass(item_class).addClass('txt input-text').addClass(c ? "mytheme-focus-here" : "").appendTo(b);
+		jQuery('<input type="text">').attr("id", g).attr("name", g).attr( 'value', defaultValue ).addClass(f).addClass(d).addClass('txt input-text').addClass(c ? "mytheme-focus-here" : "").appendTo(b);
 
 		if (a = a.help) {
 			jQuery("<br/>").appendTo(b);
@@ -171,27 +150,19 @@ var tb_dialog_helper = {
 
 		var h = this;
 		b.find("#" + g).bind("keydown focusout", function (e) {
-			if (e.type == "keydown" && e.which != 13 && e.which != 9 && !e.shiftKey) h.needsPreview = true;
-			else if (h.needsPreview && (e.type == "focusout" || e.which == 13)) {
-				h.previewAction(e.target);
-				h.needsPreview = false
-			}
 		})
 
 	},
 
-	// ---------------------------------------------------------
-	// Generic TextArea Element
-	// ---------------------------------------------------------
+	/* Generic TextArea Element */
 
 	createTextAreaControl: function (a, b, c) {
 
 		var f = a.validateLink ? "mytheme-validation-marker" : "",
 			d = a.isRequired ? "mytheme-required" : "",
-			g = "framework-" + a.id,
-			item_class = (a.item_class!=undefined && a.item_class!="") ? a.item_class : "";
+			g = "framework-" + a.id;
 
-		jQuery('<textarea>').attr("id", g).attr("name", g).attr("rows", 10).attr("cols", 30).addClass(item_class).addClass(f).addClass(d).addClass('txt input-textarea').addClass(c ? "mytheme-focus-here" : "").appendTo(b);
+		jQuery('<textarea>').attr("id", g).attr("name", g).attr("rows", 10).attr("cols", 30).addClass(f).addClass(d).addClass('txt input-textarea').addClass(c ? "mytheme-focus-here" : "").appendTo(b);
 		b.addClass("framework-marker-textarea-control");
 
 		if (a = a.help) {
@@ -201,28 +172,19 @@ var tb_dialog_helper = {
 
 		var h = this;
 		b.find("#" + g).bind("keydown focusout", function (e) {
-			if (e.type == "keydown" && e.which != 13 && e.which != 9 && !e.shiftKey) h.needsPreview = true;
-			else if (h.needsPreview && (e.type == "focusout" || e.which == 13)) {
-				h.previewAction(e.target);
-				h.needsPreview = false
-			}
 		})
 
 	},
 
-
-	// ---------------------------------------------------------
-	// Select Box Element
-	// ---------------------------------------------------------
+	/* Select Box Element */
 
 	createSelectControl: function (a, b, c) {
 
 		var f = a.validateLink ? "mytheme-validation-marker" : "",
 			d = a.isRequired ? "mytheme-required" : "",
-			g = "framework-" + a.id,
-			item_class = (a.item_class!=undefined && a.item_class!="") ? a.item_class : "";
+			g = "framework-" + a.id;
 
-		var selectNode = jQuery('<select>').attr("id", g).attr("name", g).addClass(f).addClass(item_class).addClass(d).addClass('select input-select').addClass(c ? "mytheme-focus-here" : "");
+		var selectNode = jQuery('<select>').attr("id", g).attr("name", g).addClass(f).addClass(d).addClass('select input-select').addClass(c ? "mytheme-focus-here" : "");
 
 		b.addClass('framework-marker-select-control');
 
@@ -267,20 +229,6 @@ var tb_dialog_helper = {
 		var h = this;
 
 		b.find("#" + g).bind("change", function (e) {
-
-			if ((e.type == "change" || e.type == "focusout") || e.which == 9) {
-
-				h.needsPreview = true;
-
-			}
-
-			if (h.needsPreview) {
-
-				h.previewAction(e.target);
-
-				h.needsPreview = false
-			}
-
 			// Update the text in the appropriate span tag.
 			var newText = jQuery(this).children('option:selected').text();
 
@@ -290,9 +238,12 @@ var tb_dialog_helper = {
 	},
 
 	getTextKeyValue: function (a) {
-		var b = a.find("input");
+		var b = a.find( "input" );
 		if (!b.length) return null;
-		a = b.attr("id").substring(10);
+		a = 'text-input-id';
+		if ( b.attr( 'id' ) != undefined ) {
+			a = b.attr( "id" ).substring(10);
+		}
 		b = b.val();
 		return {
 			key: a,
@@ -305,6 +256,7 @@ var tb_dialog_helper = {
 		if (!b.length) return null;
 		a = b.attr("id").substring(10);
 		b = b.val();
+		b = b.replace(/\n\r?/g, '<br />');
 		return {
 			key: a,
 			value: b
@@ -398,8 +350,8 @@ var tb_dialog_helper = {
 				i = 1;
 
 			if (name == 'chp_pricing_table') {
-				columnNum = jQuery('#shortcode-options .columns').parent().parent().find('.select_wrapper > span').html();
-				labelled = jQuery('#shortcode-options .labelled').parent().parent().find('.select_wrapper > span').html();
+				columnNum = jQuery('#framework-columns').val();
+				labelled = jQuery('#framework-labelled').val();
 				a += '<br/><br/>';
 
 				if (labelled == 'yes') {
@@ -412,10 +364,11 @@ var tb_dialog_helper = {
 						}
 					}
 					a += '[/chp_pricing_column_label]<br/><br/>';
+					i++;
 				}
 
 				for(;i<=columnNum;i++) {
-					if(i == 2) {
+					if(2 === i) {
 						a += '[chp_pricing_column title="Column '+i+'" highlight="true" highlight_reason="Most Popular" price="'+100*i+'" currency_symbol="$" interval="Per Month"]<br/>';
 					} else {
 						a += '[chp_pricing_column title="Column '+i+'" price="'+100*i+'" currency_symbol="$" interval="Per Month"]<br/>';
@@ -443,20 +396,7 @@ var tb_dialog_helper = {
 	closeDialog: function () {
 		this.needsPreview = false;
 		tb_remove();
-		jQuery("#dialog").remove()
-	},
-
-	previewAction: function (a) {
-
-		var fontValue = '';
-
-		jQuery('#options-table').find('select.input-select-font').each ( function () {
-
-			fontValue = jQuery(this).val();
-
-		});
-
-		jQuery(a).hasClass("mytheme-validation-marker") && this.validateLinkFor(a);
+		//jQuery("#dialog").remove()
 	},
 
 	validateLinkFor: function (a) {
@@ -487,4 +427,3 @@ var tb_dialog_helper = {
 
 tb_dialog_helper.setUpButtons();
 tb_dialog_helper.loadShortcodeDetails();
-</script>

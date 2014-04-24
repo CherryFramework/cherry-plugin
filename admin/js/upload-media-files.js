@@ -1,19 +1,14 @@
-jQuery(document).ready(function($) {
-    $(document).on("click", ".upload_image_button", function() {
-
-        jQuery.data(document.body, 'prevElement', $(this).prev());
-
-        window.send_to_editor = function(html) {
-            var imgurl = jQuery('img',html).attr('src');
-            var inputText = jQuery.data(document.body, 'prevElement');
-
-            if(inputText != undefined && inputText != '')
-            {
-                inputText.val(imgurl);
-            }
-            tb_remove();
-        };
-        tb_show('', 'media-upload.php?type=image&TB_iframe=true');
-        return false;
+jQuery(document).ready(function() {
+    jQuery('.upload_image_button').live('click', function () {
+        var cherry_uploader,
+            button = jQuery(this);
+        cherry_uploader = wp.media.frames.file_frame = wp.media({
+            multiple: false
+        });
+        cherry_uploader.on('select', function() {
+            var attachment = cherry_uploader.state().get('selection').first().toJSON();
+            button.prev('input[type="text"]').val(attachment.url)
+        }).open();
+        return !1;
     });
 });

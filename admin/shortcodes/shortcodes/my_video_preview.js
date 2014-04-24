@@ -1,7 +1,7 @@
 frameworkShortcodeAtts={
 	attributes:[
 			{
-				label:"Link to post.",
+				label:"Link to post",
 				id:"post_url",
 				help:"You can insert the link into the post that contains video from YouTube or Vimeo. Example link: http://demolink.org/blog/video-post-type/"
 			},
@@ -10,7 +10,7 @@ frameworkShortcodeAtts={
 				id:"title",
 				controlType:"select-control",
 				selectValues:['yes', 'no'],
-				defaultValue: 'yes', 
+				defaultValue: 'yes',
 				defaultText: 'yes',
 				help:"You can display or hide the name of the post with the following shortcode."
 			},
@@ -19,7 +19,7 @@ frameworkShortcodeAtts={
 				id:"date",
 				controlType:"select-control",
 				selectValues:['yes', 'no'],
-				defaultValue: 'yes', 
+				defaultValue: 'yes',
 				defaultText: 'yes',
 				help:"You can show or hide the post creation date with the following shortcode."
 			},
@@ -28,7 +28,7 @@ frameworkShortcodeAtts={
 				id:"author",
 				controlType:"select-control",
 				selectValues:['yes', 'no'],
-				defaultValue: 'yes', 
+				defaultValue: 'yes',
 				defaultText: 'yes',
 				help:"You can show or hide the author of the post with the following shortcode."
 			},

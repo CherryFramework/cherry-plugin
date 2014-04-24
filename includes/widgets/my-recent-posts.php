@@ -9,20 +9,20 @@ class MY_PostWidget extends WP_Widget {
 	/** @see WP_Widget::widget */
 	function widget($args, $instance) {
 		extract( $args );
-		$title         = apply_filters( 'widget_title', empty($instance['title']) ? '' : $instance['title'], $instance );
+		$title         = apply_filters('widget_title', empty($instance['title']) ? '' : $instance['title'], $instance);
 		$category      = apply_filters('widget_category', $instance['category']);
 		$post_format   = apply_filters('widget_post_format', $instance['post_format']);
-		$linktext      = apply_filters('widget_linktext', $instance['linktext'], $instance['title']);
+		$linktext      = apply_filters('cherry_text_translate', $instance['linktext'], $instance['title'] . ' linktext');
 		$linkurl       = apply_filters('widget_linkurl', $instance['linkurl']);
 		$count         = apply_filters('widget_count', $instance['count']);
 		$sort_by       = apply_filters('widget_sort_by', $instance['sort_by']);
 		$excerpt_count = apply_filters('widget_excerpt_count', $instance['excerpt_count']);
-	
+
 		echo $before_widget;
 		if ( $title )
 			echo $before_title . $title . $after_title;
-			
-			if ($post_format == 'post-format-standard') { 
+
+			if ($post_format == 'post-format-standard') {
 				$args = array(
 						'showposts'     => $count,
 						'category_name' => $category,
@@ -37,7 +37,7 @@ class MY_PostWidget extends WP_Widget {
 							)
 						)
 					);
-			} else { 
+			} else {
 				$args = array(
 					'showposts'     => $count,
 					'category_name' => $category,
@@ -55,11 +55,11 @@ class MY_PostWidget extends WP_Widget {
 
 			$wp_query = new WP_Query( $args ); ?>
 			<ul class="post-list unstyled">
-			
+
 			<?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();?>
-			
+
 			<li class="post-list_li clearfix">
-			
+
 				<?php if(has_post_thumbnail()) {
 					$thumb   = get_post_thumbnail_id();
 					$img_url = wp_get_attachment_url( $thumb,'full'); //get img URL
@@ -71,26 +71,26 @@ class MY_PostWidget extends WP_Widget {
 				<?php } ?>
 
 				<time datetime="<?php the_time('Y-m-d\TH:i'); ?>"><?php the_date(); ?></time>
-				
+
 				<h4 class="post-list_h">
 					<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to', CHERRY_PLUGIN_DOMAIN); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 				</h4>
 
 				<?php if($excerpt_count!="") { ?>
 				<div class="excerpt">
-					<?php 
-						$excerpt = get_the_excerpt(); 
+					<?php
+						$excerpt = get_the_excerpt();
 						echo my_string_limit_words($excerpt,$excerpt_count);
 					?>
 				</div>
 				<?php } ?>
 				<a href="<?php the_permalink() ?>" class="btn btn-primary"><?php _e('Read more', CHERRY_PLUGIN_DOMAIN); ?></a>
 			</li>
-			
+
 			<?php endwhile; ?>
 			</ul>
 
-			<?php 
+			<?php
 				endif;
 				$wp_query = null;
 			?>
@@ -129,7 +129,7 @@ class MY_PostWidget extends WP_Widget {
 
 		<p><label for="<?php echo $this->get_field_id('post_format'); ?>"><?php _e('Post format', CHERRY_PLUGIN_DOMAIN); ?>:<br />
 
-			<select id="<?php echo $this->get_field_id('post_format'); ?>" name="<?php echo $this->get_field_name('post_format'); ?>" style="width:150px;" > 
+			<select id="<?php echo $this->get_field_id('post_format'); ?>" name="<?php echo $this->get_field_name('post_format'); ?>" style="width:150px;" >
 				<option value="post-format-standard" <?php echo ($post_format === 'post-format-standard' ? ' selected="selected"' : ''); ?>><?php _e('Standard', CHERRY_PLUGIN_DOMAIN); ?></option>
 				<option value="post-format-aside" <?php echo ($post_format === 'post-format-aside' ? ' selected="selected"' : ''); ?>><?php _e('Aside', CHERRY_PLUGIN_DOMAIN); ?></option>
 				<option value="post-format-quote" <?php echo ($post_format === 'post-format-quote' ? ' selected="selected"' : ''); ?> ><?php _e('Quote', CHERRY_PLUGIN_DOMAIN); ?></option>
@@ -143,7 +143,7 @@ class MY_PostWidget extends WP_Widget {
 
 		<p><label for="<?php echo $this->get_field_id('sort_by'); ?>"><?php _e('Post order', CHERRY_PLUGIN_DOMAIN); ?>:<br />
 
-			<select id="<?php echo $this->get_field_id('sort_by'); ?>" name="<?php echo $this->get_field_name('sort_by'); ?>" style="width:150px;" > 
+			<select id="<?php echo $this->get_field_id('sort_by'); ?>" name="<?php echo $this->get_field_name('sort_by'); ?>" style="width:150px;" >
 				<option value="date" <?php echo ($sort_by === 'date' ? ' selected="selected"' : ''); ?>><?php _e('Date', CHERRY_PLUGIN_DOMAIN); ?></option>
 				<option value="title" <?php echo ($sort_by === 'title' ? ' selected="selected"' : ''); ?>><?php _e('Title', CHERRY_PLUGIN_DOMAIN); ?></option>
 				<option value="comment_count" <?php echo ($sort_by === 'comment_count' ? ' selected="selected"' : ''); ?>><?php _e('Comment count', CHERRY_PLUGIN_DOMAIN); ?></option>
@@ -158,7 +158,7 @@ class MY_PostWidget extends WP_Widget {
 		<p><label for="<?php echo $this->get_field_id('linktext'); ?>"><?php _e('Link Text', CHERRY_PLUGIN_DOMAIN); ?>: <input class="widefat" id="<?php echo $this->get_field_id('linktext'); ?>" name="<?php echo $this->get_field_name('linktext'); ?>" type="text" value="<?php echo $linktext; ?>" /></label></p>
 
 		<p><label for="<?php echo $this->get_field_id('linkurl'); ?>"><?php _e('Link URL', CHERRY_PLUGIN_DOMAIN); ?>: <input class="widefat" id="<?php echo $this->get_field_id('linkurl'); ?>" name="<?php echo $this->get_field_name('linkurl'); ?>" type="text" value="<?php echo $linkurl; ?>" /></label></p>
-		<?php 
+		<?php
 	}
 } // class Widget
 ?>

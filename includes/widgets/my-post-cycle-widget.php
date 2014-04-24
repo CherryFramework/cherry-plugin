@@ -21,7 +21,7 @@ class MY_CycleWidget extends WP_Widget {
 		$show_comments    = $instance['show_comments'] == 'true' ? true : false;
 		$show_excerpt     = $instance['show_excerpt'] == 'true' ? true : false;
 		$excerpt_count    = $instance['excerpt_count'];
-		$more_text_single = apply_filters('widget_more_text_single', $instance['more_text_single']);
+		$more_text_single = apply_filters( 'cherry_text_translate', $instance['more_text_single'], $instance['title'] . ' more_text_single' );
 		$control_nav      = $instance['control_nav'];
 		$direction_nav    = $instance['direction_nav'];
 		$speed            = $instance['speed'];
@@ -139,7 +139,7 @@ class MY_CycleWidget extends WP_Widget {
 								<?php }
 
 								// post excerpt
-								if ( $show_excerpt ) { 
+								if ( $show_excerpt ) {
 									if ( $excerpt_count > 0 ) { ?>
 										<p class="excerpt">
 											<?php echo my_string_limit_words( $excerpt, $excerpt_count ); ?>

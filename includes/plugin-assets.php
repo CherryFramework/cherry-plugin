@@ -1,7 +1,12 @@
 <?php
 	//Widget
 	include_once (CHERRY_PLUGIN_DIR . 'includes/widgets/register-widgets.php');
-	include_once (CHERRY_PLUGIN_DIR . 'includes/widgets/widgets-manager.php');
+
+	// Exclude widget manager for customizer
+	global $wp_customize;
+	if ( !isset( $wp_customize ) ) {
+		include_once (CHERRY_PLUGIN_DIR . 'includes/widgets/widgets-manager.php');
+	}
 
 //-----------------------------------------------------------------------------
 // Maintenance Mode
@@ -47,8 +52,8 @@
 	}
 	function cherry_maintenance_mode_notice(){
 		echo cherry_add_notice(array(
-				'wrapper_id' => 'maintenance_mode_notice', 
-				'wrapper_class' => 'error', 
+				'wrapper_id' => 'maintenance_mode_notice',
+				'wrapper_class' => 'error',
 				'notice_content' => '<strong>'.__('Maintenance mode activated. Website is blocked from public', CHERRY_PLUGIN_DOMAIN).' <a href="'.admin_url().'admin.php?page=maintenance-mode-page" title="'.__('Settings.', CHERRY_PLUGIN_DOMAIN).'">'.__('Settings.', CHERRY_PLUGIN_DOMAIN).'</a></strong>'
 			)
 		);
@@ -71,8 +76,8 @@
 //-----------------------------------------------------------------------------
 	function cherry_add_notice($attr = array()){
 		$default = array(
-			'wrapper_id' => '', 
-			'wrapper_class' => 'error', 
+			'wrapper_id' => '',
+			'wrapper_class' => 'error',
 			'notice_content' => ''
 		);
 		extract(array_merge($default, $attr));
@@ -84,7 +89,7 @@
 		return $output;
 	}
 //-----------------------------------------------------------------------------
-// get now page url 
+// get now page url
 //-----------------------------------------------------------------------------
 	function cherry_get_page_URL(){
 		if(!isset($_SERVER['REQUEST_URI'])){

@@ -13,18 +13,18 @@ frameworkShortcodeAtts={
 			{
 				label:"Meta",
 				id:"meta",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['true', 'false'],
-				defaultValue: 'false', 
+				defaultValue: 'false',
 				defaultText: 'false',
 				help:"Enable or disable meta information."
 			},
 			{
 				label:"Do you want to show the featured image?",
 				id:"thumb",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['true', 'false'],
-				defaultValue: 'true', 
+				defaultValue: 'true',
 				defaultText: 'true',
 				help:"Enable or disable featured image."
 			},
@@ -54,34 +54,34 @@ frameworkShortcodeAtts={
 				help:"Enter the slug of the category you'd like to pull posts from. Leave blank if you'd like to pull from all categories."
 			},
 			{
-				label:"The number of characters in the excerpt",
+				label:"The number of words in the excerpt",
 				id:"excerpt_count",
-				help:"How many characters are displayed in the excerpt?"
+				help:"How many words are displayed in the excerpt?"
 			},
 			{
 				label:"Effect",
 				id:"effect",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['slide', 'fade'],
-				defaultValue: 'slide', 
+				defaultValue: 'slide',
 				defaultText: 'slide',
 				help:"Choose the transition effect."
 			},
 			{
 				label:"Pagination",
 				id:"pagination",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['true', 'false'],
-				defaultValue: 'true', 
+				defaultValue: 'true',
 				defaultText: 'true',
 				help:"Enable or disable pagination."
 			},
 			{
 				label:"Next & Prev navigation",
 				id:"navigation",
-				controlType:"select-control", 
+				controlType:"select-control",
 				selectValues:['true', 'false'],
-				defaultValue: 'true', 
+				defaultValue: 'true',
 				defaultText: 'true',
 				help:"Display next & prev navigation?"
 			},

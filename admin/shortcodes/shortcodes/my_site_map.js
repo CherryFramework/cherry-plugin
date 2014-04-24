@@ -1,7 +1,7 @@
 frameworkShortcodeAtts={
 	attributes:[
 			{
-				label:"Sitemap title.",
+				label:"Sitemap title",
 				id:"title",
 				help:"Enter your title used on sitemap page."
 			},
@@ -10,7 +10,7 @@ frameworkShortcodeAtts={
 				id:"type",
 				controlType:"select-control",
 				selectValues:['Lines', 'Columns'],
-				defaultValue: 'Lines', 
+				defaultValue: 'Lines',
 				defaultText: 'Lines',
 				help:"Select sitemap type which will be displayed."
 			},

@@ -60,7 +60,7 @@
 			)
 		);
 
-		if ($response['response']['code']!='200') {
+		if (is_wp_error($response) || !is_array($response) || $response['response']['code']!='200') {
 			return;
 		}
 		$response = unserialize($response['body']);
