@@ -4,8 +4,11 @@ function cherry_grid_column( $atts, $content = null, $shortcodename = '' ) {
 	//remove wrong nested <p>
 	$content = remove_invalid_tags( $content, array('p') );
 
+	extract(shortcode_atts(array(
+		'custom_class'  => ''
+	), $atts));
 	// add divs to the content
-	$return = '<div class="' . $shortcodename . '">';
+	$return = '<div class="' . $shortcodename . ' ' . $custom_class . '">';
 	$return .= do_shortcode( $content );
 	$return .= '</div>';
 
