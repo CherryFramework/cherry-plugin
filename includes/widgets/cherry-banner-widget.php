@@ -10,19 +10,17 @@
 		/** @see WP_Widget::widget */
 		public function widget($args, $instance) {
 			extract(array_merge($args , $instance));
-
-			$description_text = apply_filters( 'cherry_text_translate', $instance['description_text'], $instance['title'] . ' description_text' );
-
+			$fill = ($fill=='on')? true: false;
 			$output = $before_widget;
-			$output .= $link_url ? '<a class="banner_link" href="'.$link_url.'" target="_blank">' : '' ;
+			$output .= ($link_url && $fill) ? '<a class="banner_link" href="'.$link_url.'" target="_blank">' : '' ;
 			$output .= '<div class="banner_wrapper ';
-			$output .= isset($fill) ? 'fill_class" style="background-image: url('.$image_url.')' : '' ;
+			$output .= $fill ? 'fill_class" style="background-image: url('.$image_url.')' : '' ;
 			$output .= '">';
-				$output .= (!isset($fill) && $image_url)? '<figure class="thumbnail"><a href="'.$link_url.'"><img src="'.$image_url.'" alt=""></a></figure>' : '' ;
+				$output .= (!$fill && $image_url)? '<figure class="thumbnail"><a href="'.$link_url.'"><img src="'.$image_url.'" alt=""></a></figure>' : '' ;
 				$output .= $title ? $before_title . $title . $after_title : '' ;
 				$output .= '<p class="excerpt">'.$description_text.'</p>';
 			$output .= '</div>';
-			$output .= $link_url ? '</a>' : '' ;
+			$output .= ($link_url && $fill) ? '</a>' : '' ;
 			$output .= $after_widget;
 
 			echo $output;
