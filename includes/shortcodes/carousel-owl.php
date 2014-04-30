@@ -40,6 +40,7 @@ if ( !function_exists('shortcode_carousel_owl') ) {
 		$comments           = $author == 'yes' ? true : false;
 		$display_navs       = $display_navs == 'yes' ? 'true' : 'false';
 		$display_pagination = $display_pagination == 'yes' ? 'true' : 'false';
+		$itemcounter = 0;
 
 		switch ( strtolower( str_replace(' ', '-', $post_type) ) ) {
 			case 'blog':
@@ -112,7 +113,7 @@ if ( !function_exists('shortcode_carousel_owl') ) {
 						$excerpt = wp_strip_all_tags( strip_shortcodes (get_the_content() ) );
 					}
 
-					$output .= '<div class="item ' . $format . '">';
+					$output .= '<div class="item ' . $format . ' item-list-'.$itemcounter.'">';
 
 						// post thumbnail
 						if ( $thumb ) :
@@ -196,6 +197,7 @@ if ( !function_exists('shortcode_carousel_owl') ) {
 							}
 						$output .= '</div>';
 					$output .= '</div>';
+					$itemcounter++;
 				endwhile;
 			$output .= '</div></div>';
 		endif;

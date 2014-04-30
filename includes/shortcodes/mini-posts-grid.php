@@ -112,7 +112,7 @@ if (!function_exists('mini_posts_grid_shortcode')) {
 				$mediaType      = get_post_meta($post->ID, 'tz_portfolio_type', true);
 				$prettyType     = 0;
 
-					$output .= '<li class="'.$thumbs.'">';
+					$output .= '<li class="'.$thumbs.' list-item-'.$i.'">';
 						if(has_post_thumbnail($post->ID) && $mediaType == 'Image') {
 
 							$prettyType = 'prettyPhoto';

@@ -103,11 +103,14 @@ if (!function_exists('posts_grid_shortcode')) {
 			$i          = 0;
 			$count      = 1;
 			$output_end = '';
+			$countul = 0;
+
 			if ($numb > count($posts)) {
 				$output_end = '</ul>';
 			}
 
-			$output = '<ul class="posts-grid row-fluid unstyled '. $custom_class .'">';
+			$output = '<ul class="posts-grid row-fluid unstyled '. $custom_class .' ul-item-'.$countul.'">';
+			$countul ++;
 
 			foreach ( $posts as $j => $post ) {
 				$post_id = $posts[$j]->ID;
@@ -137,10 +140,11 @@ if (!function_exists('posts_grid_shortcode')) {
 
 				if ($count > $columns) {
 					$count = 1;
-					$output .= '<ul class="posts-grid row-fluid unstyled '. $custom_class .'">';
+					$output .= '<ul class="posts-grid row-fluid unstyled '. $custom_class .' ul-item-'.$countul.'">';
 				}
+				
 
-				$output .= '<li class="'. $spans .'">';
+				$output .= '<li class="'. $spans .' list-item-'.$count.'">';
 					if(has_post_thumbnail($post_id) && $mediaType == 'Image') {
 
 						$prettyType = 'prettyPhoto-'.$rand;

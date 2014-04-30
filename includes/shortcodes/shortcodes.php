@@ -22,7 +22,7 @@ if (!function_exists('shortcode_recent_posts')) {
 
 		global $post;
 		global $my_string_limit_words;
-
+		$item_counter = 0;
 		// WPML filter
 		$suppress_filters = get_option('suppress_filters');
 
@@ -101,7 +101,7 @@ if (!function_exists('shortcode_recent_posts')) {
 				}
 				$post_classes = implode(' ', $post_classes);
 
-				$output .= '<li class="recent-posts_li ' . $post_classes . '">';
+				$output .= '<li class="recent-posts_li ' . $post_classes . '  list-item-' . $item_counter . '">';
 
 				//Aside
 				if($post_format == "aside") {
@@ -385,6 +385,7 @@ if (!function_exists('shortcode_recent_posts')) {
 					}
 				}
 			$output .= '<div class="clear"></div>';
+			$item_counter ++;
 			$output .= '</li><!-- .entry (end) -->';
 		}
 		wp_reset_postdata(); // restore the global $post variable
@@ -405,6 +406,7 @@ if (!function_exists('shortcode_recent_comments')) {
 		), $atts));
 
 		global $wpdb;
+		$itemcounter = 0;
 
 		if ( function_exists( 'wpml_get_language_information' ) ) {
 			global $sitepress;
@@ -433,12 +435,13 @@ if (!function_exists('shortcode_recent_comments')) {
 		$output = '<ul class="recent-comments unstyled">';
 
 		foreach ($comments as $comment) {
-			$output .= '<li>';
+			$output .= '<li class="list-item-'.$itemcounter.'">';
 				$output .= '<a href="'.get_comment_link($comment->comment_ID).'" title="on '.get_the_title($comment->comment_post_ID).'">';
 					$output .= strip_tags($comment->comment_author).' : ' . strip_tags(substr(apply_filters('get_comment_text', $comment->comment_content), 0, $comment_len));
 					if (strlen($comment->comment_content) > $comment_len) $output .= '...';
 				$output .= '</a>';
 			$output .= '</li>';
+			$itemcounter++;
 		}
 
 		$output .= '</ul>';
@@ -470,6 +473,8 @@ if (!function_exists('shortcode_recenttesti')) {
 			);
 		$testi = get_posts($args);
 
+		$itemcounter = 0;
+
 		$output = '<div class="testimonials '.$custom_class.'">';
 
 		global $post;
@@ -500,7 +505,7 @@ if (!function_exists('shortcode_recenttesti')) {
 			$url            = $attachment_url['0'];
 			$image          = aq_resize($url, 280, 240, true);
 
-			$output .= '<div class="testi-item">';
+			$output .= '<div class="testi-item list-item-'.$itemcounter.'">';
 				$output .= '<blockquote class="testi-item_blockquote">';
 					if ($thumb == 'true') {
 						if ( has_post_thumbnail($post->ID) ){
@@ -537,6 +542,7 @@ if (!function_exists('shortcode_recenttesti')) {
 				$output .= '</small>';
 
 			$output .= '</div>';
+			$itemcounter++;
 
 		}
 		wp_reset_postdata(); // restore the global $post variable

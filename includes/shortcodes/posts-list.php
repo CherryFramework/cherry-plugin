@@ -107,7 +107,7 @@ if (!function_exists('posts_list_shortcode')) {
 			$mediaType = get_post_meta($post->ID, 'tz_portfolio_type', true);
 			$format = get_post_format();
 
-				$output .= '<div class="row-fluid">';
+				$output .= '<div class="row-fluid list-item-'.$i.'">';
 				$output .= '<article class="span12 post__holder">';
 
 					//post header

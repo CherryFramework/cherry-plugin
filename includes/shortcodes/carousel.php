@@ -37,6 +37,7 @@ if ( !function_exists('shortcode_carousel') ) {
 		$thumb_width     = absint( $thumb_width );
 		$thumb_height    = absint( $thumb_height );
 		$excerpt_count   = absint( $excerpt_count );
+		$itemcount = 0;
 
 		$output = '<div class="carousel-wrap ' . $custom_class . '">';
 			if ( !empty( $title{0} ) ) {
@@ -96,7 +97,7 @@ if ( !function_exists('shortcode_carousel') ) {
 							$excerpt = wp_strip_all_tags( strip_shortcodes (get_the_content() ) );
 						}
 
-						$output .= '<li class="es-carousel_li ' . $format . ' clearfix">';
+						$output .= '<li class="es-carousel_li ' . $format . ' clearfix list-item-'.$itemcount.'">';
 
 							if ( $thumb == 'true' ) :
 
@@ -183,6 +184,7 @@ if ( !function_exists('shortcode_carousel') ) {
 								}
 							$output .= '</div>';
 						$output .= '</li>';
+						$itemcount++;
 					}
 					wp_reset_postdata(); // restore the global $post variable
 
