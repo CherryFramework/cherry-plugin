@@ -63,6 +63,11 @@ frameworkShortcodeAtts={
 				help:"Enter the slug of the category you'd like to pull posts from. Leave blank if you'd like to pull from all categories."
 			},
 			{
+				label:"Input post tag",
+				id:"tag",
+				help:"Enter tags for posts filtering. Leave blank to pull all tags"
+			},
+			{
 				label:"The number of words in the excerpt",
 				id:"excerpt_count",
 				help:"How many words are displayed in the excerpt?"

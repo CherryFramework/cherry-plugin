@@ -7,6 +7,7 @@ if (!function_exists('shortcode_recent_posts')) {
 				'type'             => 'post',
 				'category'         => '',
 				'custom_category'  => '',
+				'tag'              => '',
 				'post_format'      => 'standard',
 				'num'              => '5',
 				'meta'             => 'true',
@@ -31,6 +32,7 @@ if (!function_exists('shortcode_recent_posts')) {
 			$args = array(
 						'post_type'         => $type,
 						'category_name'     => $category,
+						'tag'               => $tag,
 						$type . '_category' => $custom_category,
 						'numberposts'       => $num,
 						'orderby'           => 'post_date',
@@ -52,6 +54,7 @@ if (!function_exists('shortcode_recent_posts')) {
 			$args = array(
 				'post_type'         => $type,
 				'category_name'     => $category,
+				'tag'               => $tag,
 				$type . '_category' => $custom_category,
 				'numberposts'       => $num,
 				'orderby'           => 'post_date',
