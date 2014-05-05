@@ -76,6 +76,11 @@ frameworkShortcodeAtts={
 				help:"Enter the slug of the category you'd like to pull posts from. Leave blank if you'd like to pull from all categories."
 			},
 			{
+				label:"Posts tag",
+				id:"tag",
+				help:"Enter tags for posts filtering. Leave blank to pull all tags"
+			},
+			{
 				label:"Custom class",
 				id:"custom_class",
 				help:"Use this field if you want to use a custom class for posts."
