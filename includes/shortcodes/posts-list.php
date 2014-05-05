@@ -17,6 +17,7 @@ if (!function_exists('posts_list_shortcode')) {
 			'order'        => '',
 			'link'         => '',
 			'link_text'    => __('Read more', CHERRY_PLUGIN_DOMAIN),
+			'tag'          => '',
 			'tags'         => '',
 			'custom_class' => ''
 		), $atts));
@@ -56,6 +57,7 @@ if (!function_exists('posts_list_shortcode')) {
 
 		$args = array(
 			'post_type'        => $type,
+			'tag'              => $tag,
 			'numberposts'      => $numb,
 			'orderby'          => $order_by,
 			'order'            => $order,
