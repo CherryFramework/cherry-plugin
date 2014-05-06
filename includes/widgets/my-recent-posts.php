@@ -70,8 +70,7 @@ class MY_PostWidget extends WP_Widget {
 				</figure>
 				<?php } ?>
 
-				<!-- <time datetime="<?php the_time('Y-m-d\TH:i'); ?>"><?php the_date(); ?></time> -->
-				<time datetime="<?php the_time('Y-m-d\H:i'); ?>"><?php the_time('F j, Y'); ?></time>
+				<time datetime="<?php the_time('Y-m-d\H:i'); ?>"><?php echo get_the_date(); ?></time>
 
 				<h4 class="post-list_h">
 					<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to', CHERRY_PLUGIN_DOMAIN); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
