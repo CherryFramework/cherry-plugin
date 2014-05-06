@@ -153,6 +153,7 @@
 					{text: 'Address', onclick: function() { editor.execCommand( 'cherry_insert_immediate', false, 'address', { title: 'Address' } ); } },
 					{text: 'Clear', onclick: function() { editor.execCommand( 'cherry_insert_self_immediate', false, 'clear', { title: 'Clear' } ); } },
 					{text: 'Extra Wrap', onclick: function() { editor.execCommand( 'cherry_insert_immediate', false, 'extra_wrap', { title: 'Extra Wrap' } ); } }
+					{text: 'Content Box', onclick: function() { editor.execCommand( 'cherry_insert_immediate', false, 'content_box', { title: 'Content Box' } ); } }
 				]},
 				// Lists menu.
 				{text: 'Lists', menu: [
