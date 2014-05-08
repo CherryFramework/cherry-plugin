@@ -30,6 +30,11 @@ if (!function_exists('shortcode_post_cycle')) {
 		$i                 = 0;
 		$rand              = rand();
 		$count             = 0;
+		if ( is_rtl() ) {
+			$is_rtl = true;
+		} else {
+			$is_rtl = false;
+		}
 
 		$output = '<script type="text/javascript">
 						jQuery(window).load(function() {
@@ -37,7 +42,8 @@ if (!function_exists('shortcode_post_cycle')) {
 								animation: "'.$effect.'",
 								smoothHeight : true,
 								directionNav: '.$slider_navigation.',
-								controlNav: '.$slider_pagination.'
+								controlNav: '.$slider_pagination.',
+								rtl: '.$is_rtl.'
 							});
 						});';
 		$output .= '</script>';
