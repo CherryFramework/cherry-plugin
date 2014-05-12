@@ -115,8 +115,11 @@ if (!function_exists('blockquote_shortcode')) {
 // Row
 if (!function_exists('row_shortcode')) {
 	function row_shortcode($atts, $content = null) {
+		extract(shortcode_atts(array(
+			'custom_class'  => ''
+		), $atts));
 		// add divs to the content
-		$output = '<div class="row">';
+		$output = '<div class="row '.$custom_class.'">';
 		$output .= do_shortcode($content);
 		$output .= '</div><!-- .row (end) -->';
 
@@ -128,8 +131,11 @@ if (!function_exists('row_shortcode')) {
 // Row Inner
 if (!function_exists('row_inner_shortcode')) {
 function row_inner_shortcode($atts, $content = null) {
+		extract(shortcode_atts(array(
+			'custom_class'  => ''
+		), $atts));
 		// add divs to the content
-		$output = '<div class="row">';
+		$output = '<div class="row '.$custom_class.'">';
 		$output .= do_shortcode($content);
 		$output .= '</div> <!-- .row (end) -->';
 
@@ -141,8 +147,11 @@ function row_inner_shortcode($atts, $content = null) {
 // Row Fluid
 if (!function_exists('row_fluid_shortcode')) {
 	function row_fluid_shortcode($atts, $content = null) {
+		extract(shortcode_atts(array(
+			'custom_class'  => ''
+		), $atts));
 		// add divs to the content
-		$output = '<div class="row-fluid">';
+		$output = '<div class="row-fluid '.$custom_class.'">';
 		$output .= do_shortcode($content);
 		$output .= '</div> <!-- .row-fluid (end) -->';
 

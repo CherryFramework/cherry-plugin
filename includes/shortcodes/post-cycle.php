@@ -29,6 +29,12 @@ if (!function_exists('shortcode_post_cycle')) {
 		$random            = gener_random(10);
 		$i                 = 0;
 		$rand              = rand();
+		$count             = 0;
+		if ( is_rtl() ) {
+			$is_rtl = true;
+		} else {
+			$is_rtl = false;
+		}
 
 		$output = '<script type="text/javascript">
 						jQuery(window).load(function() {
@@ -36,7 +42,8 @@ if (!function_exists('shortcode_post_cycle')) {
 								animation: "'.$effect.'",
 								smoothHeight : true,
 								directionNav: '.$slider_navigation.',
-								controlNav: '.$slider_pagination.'
+								controlNav: '.$slider_pagination.',
+								rtl: '.$is_rtl.'
 							});
 						});';
 		$output .= '</script>';
@@ -83,7 +90,7 @@ if (!function_exists('shortcode_post_cycle')) {
 				$url            = $attachment_url['0'];
 				$image          = aq_resize($url, $thumb_width, $thumb_height, true);
 
-				$output .= '<li>';
+				$output .= '<li class="list-item-'.$count.'">';
 
 					if ($thumb == 'true') {
 
@@ -190,6 +197,7 @@ if (!function_exists('shortcode_post_cycle')) {
 					}
 
 				$output .= '</li>';
+				$count++;
 			}
 			wp_reset_postdata(); // restore the global $post variable
 			$output .= '</ul>';

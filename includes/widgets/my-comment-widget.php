@@ -1,45 +1,52 @@
-<?php 
+<?php
 class MY_CommentWidget extends WP_Widget_Recent_Comments {
+
 	function MY_CommentWidget() {
-		parent::WP_Widget('my-recent-comments', $name = __('Cherry - Recent Comments', CHERRY_PLUGIN_DOMAIN));
+		parent::WP_Widget( 'my-recent-comments', $name = __( 'Cherry - Recent Comments', CHERRY_PLUGIN_DOMAIN ) );
 	}
-	
+
 	function widget( $args, $instance ) {
 		global $wpdb, $comments, $comment;
 
-		extract($args, EXTR_SKIP);
-		$title = apply_filters('widget_title', empty($instance['title']) ? __('My Recent Comments', CHERRY_PLUGIN_DOMAIN) : $instance['title']);
-		$comments_count = apply_filters('widget_title', empty($instance['comments_count']) ? 5 : $instance['comments_count']);
-		$display_avatar = apply_filters('widget_display_avatar', empty($instance['display_avatar']) ? 'off' : 'on' );
-		$avatar_size = apply_filters('widget_avatar_size', empty($instance['avatar_size']) ? '48' : $instance['avatar_size']);
-		$display_author_name = apply_filters('widget_display_author_name', empty($instance['display_author_name']) ? 'off' : 'on' );
-		$display_date = apply_filters('widget_display_date', empty($instance['display_date']) ? 'off' : 'on' );
-		$display_post_title = apply_filters('widget_display_post_title', empty($instance['display_post_title']) ? 'off' : 'on' );
-		$meta_format = apply_filters('widget_meta_format', empty($instance['meta_format']) ? 'none' : $instance['meta_format'] );
+		extract( $args, EXTR_SKIP );
 
-		if ( $comments_count < 1 ){
+		$title               = apply_filters('widget_title', empty($instance['title']) ? __('My Recent Comments', CHERRY_PLUGIN_DOMAIN) : $instance['title']);
+		$comments_count      = apply_filters('widget_title', empty($instance['comments_count']) ? 5 : $instance['comments_count']);
+		$display_avatar      = apply_filters('widget_display_avatar', empty($instance['display_avatar']) ? 'off' : 'on' );
+		$avatar_size         = apply_filters('widget_avatar_size', empty($instance['avatar_size']) ? '48' : $instance['avatar_size']);
+		$display_author_name = apply_filters('widget_display_author_name', empty($instance['display_author_name']) ? 'off' : 'on' );
+		$display_date        = apply_filters('widget_display_date', empty($instance['display_date']) ? 'off' : 'on' );
+		$display_post_title  = apply_filters('widget_display_post_title', empty($instance['display_post_title']) ? 'off' : 'on' );
+		$meta_format         = apply_filters('widget_meta_format', empty($instance['meta_format']) ? 'none' : $instance['meta_format'] );
+
+		if ( $comments_count < 1 ) {
 			$comments_count = 1;
-		}else if ( $comments_count > 15 ){
+		} else if ( $comments_count > 15 ) {
 			$comments_count = 15;
 		}
 		$comment_len = 100;
 
 		if ( function_exists( 'wpml_get_language_information' ) ) {
 			global $sitepress;
+
 			$sql = "
 				SELECT * FROM {$wpdb->comments}
-				JOIN {$wpdb->prefix}icl_translations 
-				ON {$wpdb->comments}.comment_post_id = {$wpdb->prefix}icl_translations.element_id 
-				AND {$wpdb->prefix}icl_translations.element_type='post_post' 
-				WHERE comment_approved = '1' 
-				AND language_code = '".$sitepress->get_current_language()."' 
+				JOIN {$wpdb->prefix}icl_translations
+				ON {$wpdb->comments}.comment_post_id = {$wpdb->prefix}icl_translations.element_id
+				AND {$wpdb->prefix}icl_translations.element_type='post_post'
+				WHERE comment_approved = '1'
+				AND language_code = '".$sitepress->get_current_language()."'
 				ORDER BY comment_date_gmt DESC LIMIT {$comments_count}";
 		} else {
 			$sql = "
-				SELECT * FROM $wpdb->comments 
-				WHERE comment_approved = '1' 
-				AND comment_type not in ('pingback','trackback') 
-				ORDER BY comment_date_gmt 
+				SELECT * FROM $wpdb->comments
+				LEFT OUTER JOIN $wpdb->posts
+				ON ($wpdb->comments.comment_post_ID = $wpdb->posts.ID)
+				WHERE comment_approved = '1'
+				AND comment_type not in ('pingback','trackback')
+				AND post_password = ''
+				AND post_type in ('post','page','attachment','portfolio')
+				ORDER BY comment_date_gmt
 				DESC LIMIT {$comments_count}";
 		}
 
@@ -54,7 +61,7 @@ class MY_CommentWidget extends WP_Widget_Recent_Comments {
 			<?php if ( $title ) echo $before_title . $title . $after_title; ?>
 		<ul class="comments-custom unstyled"><?php
 			if ( $comments ) : foreach ( (array) $comments as $comment) : ?>
-			
+
 			<li class="comments-custom_li">
 				<?php if(function_exists('get_avatar') && $display_avatar != 'off') {
 					echo '<figure class="thumbnail featured-thumbnail">';
@@ -73,7 +80,7 @@ class MY_CommentWidget extends WP_Widget_Recent_Comments {
 					}
 					echo '<div class="meta_format">'.$title_format.'<h4 class="comments-custom_h_title"><a href="'.post_permalink($post_ID).'" title="'.get_post($post_ID)->post_title.'">'.get_post($post_ID)->post_title.'</a></h4></div>';
 				}?>
-				<?php if($display_author_name != 'off') { 
+				<?php if($display_author_name != 'off') {
 					$title_author_name = "";
 					if($meta_format=="icons"){
 						$title_author_name = '<i class="icon-user"></i>';
@@ -110,7 +117,7 @@ class MY_CommentWidget extends WP_Widget_Recent_Comments {
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 
-		//Strip tags from title and name to remove HTML 
+		//Strip tags from title and name to remove HTML
 		$instance['title'] = strip_tags( $new_instance['title'] );
 		$instance['comments_count'] = strip_tags( $new_instance['comments_count'] );
 		$instance['avatar_size'] = $new_instance['avatar_size'];
@@ -140,8 +147,8 @@ class MY_CommentWidget extends WP_Widget_Recent_Comments {
 		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', CHERRY_PLUGIN_DOMAIN).":"; ?><input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
 		<p><label for="<?php echo $this->get_field_id('comments_count'); ?>"><?php _e('Number of comments to show', CHERRY_PLUGIN_DOMAIN).":"; ?><input class="widefat" id="<?php echo $this->get_field_id('comments_count'); ?>" name="<?php echo $this->get_field_name('comments_count'); ?>" type="text" value="<?php echo $comments_count; ?>" /></label></p>
 		<p><input class="checkbox" id="<?php echo $this->get_field_id('display_avatar'); ?>" name="<?php echo $this->get_field_name('display_avatar'); ?>" type="checkbox" <?php checked( $instance['display_avatar'], 'on' ); ?> /> <label for="<?php echo $this->get_field_id('display_avatar'); ?>"><?php _e('Display avatar', CHERRY_PLUGIN_DOMAIN); ?></label></p>
-		<p><label for="<?php echo $this->get_field_id('avatar_size'); ?>"><?php _e('Avatar size (px)', CHERRY_PLUGIN_DOMAIN).":"; ?> 
-			<select id="<?php echo $this->get_field_id('avatar_size'); ?>" name="<?php echo $this->get_field_name('avatar_size'); ?>" style="width:80px;" > 
+		<p><label for="<?php echo $this->get_field_id('avatar_size'); ?>"><?php _e('Avatar size (px)', CHERRY_PLUGIN_DOMAIN).":"; ?>
+			<select id="<?php echo $this->get_field_id('avatar_size'); ?>" name="<?php echo $this->get_field_name('avatar_size'); ?>" style="width:80px;" >
 				<option value="128" <?php echo ($avatar_size === '128' ? ' selected="selected"' : ''); ?>><?php echo "128x128";?></option>
 				<option value="96" <?php echo ($avatar_size === '96' ? ' selected="selected"' : ''); ?>><?php echo "96x96";?></option>
 				<option value="64" <?php echo ($avatar_size === '64' ? ' selected="selected"' : ''); ?>><?php echo "64x64"; ?></option>
@@ -153,7 +160,7 @@ class MY_CommentWidget extends WP_Widget_Recent_Comments {
 		<p><input class="checkbox" id="<?php echo $this->get_field_id('display_date'); ?>" name="<?php echo $this->get_field_name('display_date'); ?>" type="checkbox" <?php checked( $instance['display_date'], 'on' ); ?> /> <label for="<?php echo $this->get_field_id('display_date'); ?>"><?php _e('Display the comment date', CHERRY_PLUGIN_DOMAIN); ?></label></p>
 		<p><input class="checkbox" id="<?php echo $this->get_field_id('display_post_title'); ?>" name="<?php echo $this->get_field_name('display_post_title'); ?>" type="checkbox" <?php checked( $instance['display_post_title'], 'on' ); ?> /> <label for="<?php echo $this->get_field_id('display_post_title'); ?>"><?php _e('Display post title', CHERRY_PLUGIN_DOMAIN); ?></label></p>
 		<p><label for="<?php echo $this->get_field_id('meta_format'); ?>"><?php _e('Meta format', CHERRY_PLUGIN_DOMAIN).":"; ?><br />
-			<select id="<?php echo $this->get_field_id('meta_format'); ?>" name="<?php echo $this->get_field_name('meta_format'); ?>" style="width:150px;" > 
+			<select id="<?php echo $this->get_field_id('meta_format'); ?>" name="<?php echo $this->get_field_name('meta_format'); ?>" style="width:150px;" >
 				<option value="none" <?php echo ($meta_format === 'none' ? ' selected="selected"' : ''); ?>><?php _e('None', CHERRY_PLUGIN_DOMAIN) ?></option>
 				<option value="icons" <?php echo ($meta_format === 'icons' ? ' selected="selected"' : ''); ?>><?php _e('Icons', CHERRY_PLUGIN_DOMAIN) ?></option>
 				<option value="labels" <?php echo ($meta_format === 'labels' ? ' selected="selected"' : ''); ?>><?php _e('Labels', CHERRY_PLUGIN_DOMAIN) ?></option>
@@ -161,4 +168,4 @@ class MY_CommentWidget extends WP_Widget_Recent_Comments {
 		</label></p>
 		<?php
 	}
-}?>
+} ?>

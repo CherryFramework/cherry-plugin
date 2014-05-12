@@ -71,6 +71,11 @@ frameworkShortcodeAtts={
 				help:"Text for the link."
 			},
 			{
+				label:"Posts tag",
+				id:"tag",
+				help:"Enter tags for posts filtering. Leave blank to pull all tags"
+			},
+			{
 				label:"Tags",
 				id:"tags",
 				controlType:"select-control",

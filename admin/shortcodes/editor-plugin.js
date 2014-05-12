@@ -370,6 +370,17 @@
 
 								break;
 
+				// Content Box
+
+								case 'content_box':
+
+								var a = '[content_box]'+selectedText+'[/content_box]';
+
+								tinyMCE.activeEditor.execCommand("mceInsertContent", false, a);
+
+								break;
+
+
 				// row
 
 								case 'row':
@@ -876,6 +887,7 @@
 										a.addWithDialog(c,"Address","address");
 										a.addWithDialog(c,"Clear","clear");
 										a.addWithDialog(c,"Extra Wrap","extra_wrap");
+										a.addWithDialog(c,"Content Box","content_box");
 								c=b.addMenu({title:"Lists"});
 										a.addWithDialog(c,"Unstyled","list_un");
 										a.addWithDialog(c,"Check List","check_list");

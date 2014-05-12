@@ -11,16 +11,28 @@ if (!function_exists('shortcode_audio')) {
 		$template_url = get_template_directory_uri();
 		$id = rand();
 
+		if ( isset( $atts['file'] ) ) {
+			$file = $atts['file'];
+		}
+
+		if ( isset( $atts['url'] ) ) {
+			$file = $atts['url'];
+		}
+
+		if ( isset( $atts['src'] ) ) {
+			$file = $atts['src'];
+		}
+
 		if ( empty($file) ) {
 			$audio_array = array(
-				'mpeg'  => '', 
-				'mp3'   => '', 
-				'mp4'   => '', 
-				'm4a'   => '', 
-				'ogg'   => '', 
-				'oga'   => '', 
-				'webm'  => '', 
-				'webma' => '', 
+				'mpeg'  => '',
+				'mp3'   => '',
+				'mp4'   => '',
+				'm4a'   => '',
+				'ogg'   => '',
+				'oga'   => '',
+				'webm'  => '',
+				'webma' => '',
 				'wav'   => ''
 				);
 
@@ -33,6 +45,14 @@ if (!function_exists('shortcode_audio')) {
 				}
 			} else
 				return;
+		}
+
+		if ( empty( $type ) ) {
+			$type_pos = strripos( $file, '.' );
+
+			if ( $type_pos !== false ) {
+				$type = substr( $file, $type_pos+1 );
+			}
 		}
 
 		// get audio attribute
@@ -227,7 +247,7 @@ if (!function_exists('wp_video_shortcode')) {
 				$output .= '</div></div>';
 				$output .= '<div class="jp-no-solution">';
 				$output .= '<span>'.__('Update Required.', CHERRY_PLUGIN_DOMAIN).'</span>'.__('To play the media you will need to either update your browser to a recent version or update your ', CHERRY_PLUGIN_DOMAIN).'<a href="http://get.adobe.com/flashplayer/" target="_blank">'.__('Flash plugin', CHERRY_PLUGIN_DOMAIN).'</a>';
-				$output .= '</div></div></div></div>'; 
+				$output .= '</div></div></div></div>';
 
 			}
 			$output .= '</div><!-- .video-wrap (end) -->';

@@ -22,7 +22,7 @@ if (!function_exists('shortcode_roundabout')) {
 		wp_enqueue_script( 'roundabout_shape', CHERRY_PLUGIN_URL . 'lib/js/roundabout/jquery.roundabout-shapes.min.js', array('jquery') );
 
 		$ra_id = uniqid();
-
+		$itemcounter = 0;
 		// check what type of post user selected
 		switch ($type) {
 			case 'blog':
@@ -93,13 +93,13 @@ if (!function_exists('shortcode_roundabout')) {
 					$attachment_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 					$url            = $attachment_url['0'];
 					$image          = aq_resize($url, $thumb_width, $thumb_height, true);
-
-					$output .= '<li>';
+					$output .= '<li class="list-item-'.$itemcounter.'">';
 					$output .= '<a href="'.get_permalink($post->ID).'" title="'.get_the_title($post->ID).'">';
 					$output .= '<img src="'.$image.'" alt="'.get_the_title($post->ID).'" />';
 					$output .= '</a>';
 					$output .= '</li>';
 					$i++;
+					$itemcounter++;
 				}
 			}
 		}

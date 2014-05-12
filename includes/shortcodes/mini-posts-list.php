@@ -115,7 +115,7 @@ if (!function_exists('mini_posts_list_shortcode')) {
 				$format         = get_post_format();
 
 					//$output .= '<div class="row-fluid">';
-					$output .= '<li class="mini-post-holder clearfix">';
+					$output .= '<li class="mini-post-holder clearfix list-item-'.$i.'">';
 
 					//post thumbnail
 					if ($thumbs != 'none') {
