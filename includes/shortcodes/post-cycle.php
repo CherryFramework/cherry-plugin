@@ -31,9 +31,9 @@ if (!function_exists('shortcode_post_cycle')) {
 		$rand              = rand();
 		$count             = 0;
 		if ( is_rtl() ) {
-			$is_rtl = true;
+			$is_rtl = 'true';
 		} else {
-			$is_rtl = false;
+			$is_rtl = 'false';
 		}
 
 		$output = '<script type="text/javascript">
