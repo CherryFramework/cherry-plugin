@@ -53,7 +53,8 @@ html[xmlns] .slides {display: block;}
 
 /* FlexSlider Default Theme
 *********************************/
-.flexslider { margin: 0 0 60px; position: relative; zoom: 1; border: none; br }
+.flexslider { margin: 0 0 60px; position: relative; zoom: 1; border: none; }
+.flexslider.no-bg {background: none;}
 .flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
 .loading .flex-viewport { max-height: 300px; }
 .flexslider .slides { zoom: 1; }
