@@ -92,9 +92,9 @@ class MY_CycleWidget extends WP_Widget {
 							$image           = aq_resize( $img_url, $thumb_width, $thumb_height, true );
 							$post_permalink  = ( $format == 'format-link' ) ? esc_url( get_post_meta( $post_id, 'tz_link_url', true ) ) : get_permalink( $post_id ) ;
 							if ( has_excerpt( $post_id ) ) {
-								$excerpt = esc_html( get_the_excerpt() );
+								$excerpt = get_the_excerpt();
 							} else {
-								$excerpt = esc_html( get_the_content() );
+								$excerpt = get_the_content();
 							}
 						?>
 						<li class="slide <?php echo $format; ?> clearfix">
