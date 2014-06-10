@@ -7,6 +7,8 @@ if (!function_exists('mini_posts_grid_shortcode')) {
 	function mini_posts_grid_shortcode($atts, $content = null) {
 		extract(shortcode_atts(array(
 			'type'         => 'post',
+			'category'         => '',
+			'custom_category'  => '',
 			'numb'         => '8',
 			'thumbs'       => '',
 			'thumb_width'  => '',
@@ -77,6 +79,8 @@ if (!function_exists('mini_posts_grid_shortcode')) {
 
 			$args = array(
 				'post_type'        => $type,
+				'category_name'          => $category,
+				$type . '_category' => $custom_category,
 				'numberposts'      => $numb,
 				'orderby'          => $order_by,
 				'order'            => $order,

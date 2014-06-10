@@ -30,6 +30,16 @@ frameworkShortcodeAtts={
 				help:"Set height for your featured images."
 			},
 			{
+				label:"Which category to pull from? (for Blog posts)",
+				id:"category",
+				help:"Enter the slug of the category you'd like to pull posts from. Leave blank if you'd like to pull from all categories."
+			},
+			{
+				label:"Which category to pull from? (for Custom posts)",
+				id:"custom_category",
+				help:"Enter the slug of the category you'd like to pull posts from. Leave blank if you'd like to pull from all categories."
+			},
+			{
 				label:"Order by",
 				id:"order_by",
 				controlType:"select-control", 
