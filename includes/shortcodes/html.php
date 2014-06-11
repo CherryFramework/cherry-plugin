@@ -458,18 +458,29 @@ if (!function_exists('icon_shortcode')) {
 }
 
 // Template URL
-if (!function_exists('template_url_shortcode')) {
-	function template_url_shortcode($atts, $content = null) {
+if ( !function_exists( 'template_url_shortcode' ) ) {
 
-		// get content URL
-		$content_url  = content_url();
-		$content_str  = 'wp-content';
+	function template_url_shortcode( $atts, $content = null ) {
 
-		$pos          = strpos($content_url, $content_str);
-		$template_url = substr($content_url, 0, $pos-1);
-		return $template_url;
+		// Get the URL to the content area.
+		$content_url = untrailingslashit( content_url() );
+
+		// Find latest '/' in content URL.
+		$last_slash_pos = strrpos( $content_url, '/' );
+
+		if ( false === $last_slash_pos ) {
+
+			return $content_url;
+
+		} else {
+
+			$template_url = substr( $content_url, 0, $last_slash_pos );
+
+			return $template_url;
+		}
 	}
-	add_shortcode('template_url', 'template_url_shortcode');
+	add_shortcode( 'template_url', 'template_url_shortcode' );
+
 }
 // Extra Wrap
 if (!function_exists('extra_wrap_shortcode')) {
