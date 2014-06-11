@@ -112,7 +112,7 @@ if (!function_exists('posts_grid_shortcode')) {
 			}
 
 			$output = '<ul class="posts-grid row-fluid unstyled '. $custom_class .' ul-item-'.$countul.'">';
-			$countul ++;
+			
 
 			foreach ( $posts as $j => $post ) {
 				$post_id = $posts[$j]->ID;
@@ -142,9 +142,9 @@ if (!function_exists('posts_grid_shortcode')) {
 
 				if ($count > $columns) {
 					$count = 1;
+					$countul ++;
 					$output .= '<ul class="posts-grid row-fluid unstyled '. $custom_class .' ul-item-'.$countul.'">';
 				}
-				
 
 				$output .= '<li class="'. $spans .' list-item-'.$count.'">';
 					if(has_post_thumbnail($post_id) && $mediaType == 'Image') {
