@@ -167,15 +167,22 @@ if (!function_exists('shortcode_recent_posts')) {
 					$audio_format = get_post_meta(get_the_ID(), 'tz_audio_format', true);
 					$audio_url    = get_post_meta(get_the_ID(), 'tz_audio_url', true);
 
-					$content_url = content_url();
-					$content_str = 'wp-content';
+					// Get the URL to the content area.
+					$content_url = untrailingslashit( content_url() );
 
-					$pos    = strpos($audio_url, $content_str);
-					if ($pos === false) {
+					// Find latest '/' in content URL.
+					$last_slash_pos = strrpos( $content_url, '/' );
+
+					// 'wp-content' or something else.
+					$content_dir_name = substr( $content_url, $last_slash_pos - strlen( $content_url ) + 1 );
+
+					$pos = strpos( $audio_url, $content_dir_name );
+
+					if ( false === $pos ) {
 						$file = $audio_url;
 					} else {
-						$audio_new = substr($audio_url, $pos+strlen($content_str), strlen($audio_url) - $pos);
-						$file      = $content_url.$audio_new;
+						$audio_new = substr( $audio_url, $pos + strlen( $content_dir_name ), strlen( $audio_url ) - $pos );
+						$file     = $content_url . $audio_new;
 					}
 
 					$output .= '<script type="text/javascript">
@@ -259,22 +266,28 @@ if (!function_exists('shortcode_recent_posts')) {
 					$m4v_url      = get_post_meta(get_the_ID(), 'tz_m4v_url', true);
 					$ogv_url      = get_post_meta(get_the_ID(), 'tz_ogv_url', true);
 
-					$content_url = content_url();
-					$content_str = 'wp-content';
+					// Get the URL to the content area.
+					$content_url = untrailingslashit( content_url() );
 
-					$pos1 = strpos($m4v_url, $content_str);
+					// Find latest '/' in content URL.
+					$last_slash_pos = strrpos( $content_url, '/' );
+
+					// 'wp-content' or something else.
+					$content_dir_name = substr( $content_url, $last_slash_pos - strlen( $content_url ) + 1 );
+
+					$pos1     = strpos($m4v_url, $content_dir_name);
 					if ($pos1 === false) {
 						$file1 = $m4v_url;
 					} else {
-						$m4v_new  = substr($m4v_url, $pos1+strlen($content_str), strlen($m4v_url) - $pos1);
+						$m4v_new  = substr($m4v_url, $pos1+strlen($content_dir_name), strlen($m4v_url) - $pos1);
 						$file1    = $content_url.$m4v_new;
 					}
 
-					$pos2 = strpos($ogv_url, $content_str);
+					$pos2     = strpos($ogv_url, $content_dir_name);
 					if ($pos2 === false) {
 						$file2 = $ogv_url;
 					} else {
-						$ogv_new  = substr($ogv_url, $pos2+strlen($content_str), strlen($ogv_url) - $pos2);
+						$ogv_new  = substr($ogv_url, $pos2+strlen($content_dir_name), strlen($ogv_url) - $pos2);
 						$file2    = $content_url.$ogv_new;
 					}
 

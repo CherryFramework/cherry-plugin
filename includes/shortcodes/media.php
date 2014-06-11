@@ -55,14 +55,22 @@ if (!function_exists('shortcode_audio')) {
 			}
 		}
 
-		// get audio attribute
-		$content_url = content_url();
-		$content_str = 'wp-content';
+		// Get the URL to the content area.
+		$content_url = untrailingslashit( content_url() );
 
-		$pos = strpos($file, $content_str);
-		if ($pos !== false) {
-			$audio_new = substr($file, $pos+strlen($content_str), strlen($file) - $pos);
-			$file      = $content_url.$audio_new;
+		// Find latest '/' in content URL.
+		$last_slash_pos = strrpos( $content_url, '/' );
+
+		// 'wp-content' or something else.
+		$content_dir_name = substr( $content_url, $last_slash_pos - strlen( $content_url ) + 1 );
+
+		$pos = strpos( $file, $content_dir_name );
+
+		if ( false !== $pos ) {
+
+			$audio_new = substr( $file, $pos + strlen( $content_dir_name ), strlen( $file ) - $pos );
+			$file     = $content_url . $audio_new;
+
 		}
 
 		$output = '<div class="audio-wrap">';
@@ -142,23 +150,28 @@ if (!function_exists('wp_video_shortcode')) {
 			$m4v_url   = $m4v;
 			$ogv_url   = $ogv;
 
-			// get content URL
-			$content_url = content_url();
-			$content_str = 'wp-content';
+			// Get the URL to the content area.
+			$content_url = untrailingslashit( content_url() );
 
-			$pos1     = strpos($m4v_url, $content_str);
+			// Find latest '/' in content URL.
+			$last_slash_pos = strrpos( $content_url, '/' );
+
+			// 'wp-content' or something else.
+			$content_dir_name = substr( $content_url, $last_slash_pos - strlen( $content_url ) + 1 );
+
+			$pos1     = strpos($m4v_url, $content_dir_name);
 			if ($pos1 === false) {
 				$file1 = $m4v_url;
 			} else {
-				$m4v_new  = substr($m4v_url, $pos1+strlen($content_str), strlen($m4v_url) - $pos1);
+				$m4v_new  = substr($m4v_url, $pos1+strlen($content_dir_name), strlen($m4v_url) - $pos1);
 				$file1    = $content_url.$m4v_new;
 			}
 
-			$pos2     = strpos($ogv_url, $content_str);
+			$pos2     = strpos($ogv_url, $content_dir_name);
 			if ($pos2 === false) {
 				$file2 = $ogv_url;
 			} else {
-				$ogv_new  = substr($ogv_url, $pos2+strlen($content_str), strlen($ogv_url) - $pos2);
+				$ogv_new  = substr($ogv_url, $pos2+strlen($content_dir_name), strlen($ogv_url) - $pos2);
 				$file2    = $content_url.$ogv_new;
 			}
 

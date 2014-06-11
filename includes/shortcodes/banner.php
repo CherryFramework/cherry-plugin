@@ -3,9 +3,10 @@
  * Banner
  *
  */
-if (!function_exists('banner_shortcode')) {
-	function banner_shortcode($atts, $content = null) {
-		extract(shortcode_atts(
+if ( !function_exists( 'banner_shortcode' ) ) {
+
+	function banner_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts(
 			array(
 				'img'          => '',
 				'banner_link'  => '',
@@ -16,17 +17,25 @@ if (!function_exists('banner_shortcode')) {
 				'custom_class' => ''
 		), $atts));
 
-		// get attribute
-		$content_url = content_url();
-		$content_str = 'wp-content';
+		// Get the URL to the content area.
+		$content_url = untrailingslashit( content_url() );
 
-		$pos = strpos($img, $content_str);
-		if ($pos !== false) {
-			$img_new = substr( $img, $pos+strlen($content_str), strlen($img)-$pos );
-			$img     = $content_url.$img_new;
+		// Find latest '/' in content URL.
+		$last_slash_pos = strrpos( $content_url, '/' );
+
+		// 'wp-content' or something else.
+		$content_dir_name = substr( $content_url, $last_slash_pos - strlen( $content_url ) + 1 );
+
+		$pos = strpos( $img, $content_dir_name );
+
+		if ( false !== $pos ) {
+
+			$img_new = substr( $img, $pos + strlen( $content_dir_name ), strlen( $img ) - $pos );
+			$img     = $content_url . $img_new;
+
 		}
 
-		$output =  '<div class="banner-wrap '.$custom_class.'">'; 
+		$output =  '<div class="banner-wrap '.$custom_class.'">';
 		if ($img !="") {
 			$output .= '<figure class="featured-thumbnail">';
 			if ($banner_link != "") {
@@ -55,4 +64,5 @@ if (!function_exists('banner_shortcode')) {
 		return $output;
 	}
 	add_shortcode('banner', 'banner_shortcode');
-}?>
+
+} ?>
