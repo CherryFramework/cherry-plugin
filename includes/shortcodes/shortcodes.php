@@ -531,7 +531,7 @@ if (!function_exists('shortcode_recenttesti')) {
 					}
 
 					if( isset($testiinfo) ) {
-						$output .= ', <span class="info">';
+						$output .= ' <span class="info">';
 							$output .= $testiinfo;
 						$output .= '</span><br>';
 					}

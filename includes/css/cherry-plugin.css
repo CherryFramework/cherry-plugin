@@ -427,6 +427,9 @@
   padding-top: 22px;
   padding-left: 40px;
 }
+.testimonials .testi-item .testi-meta .user:after{
+  content:",";
+}
 /* Roundabout
 ---------------------------------------- */
 .roundabout-holder {
