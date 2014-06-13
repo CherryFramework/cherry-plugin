@@ -15,7 +15,7 @@ frameworkShortcodeAtts={
 				id:"style",
 				controlType:"select-control",
 				selectValues:['default', 'primary', 'info', 'success', 'warning', 'danger', 'inverse', 'link'],
-				defaultValue: 'default', 
+				defaultValue: 'default',
 				defaultText: 'default',
 				help:"Choose button style."
 			},
@@ -24,7 +24,7 @@ frameworkShortcodeAtts={
 				id:"size",
 				controlType:"select-control",
 				selectValues:['mini', 'small', 'normal', 'large'],
-				defaultValue: 'normal', 
+				defaultValue: 'normal',
 				defaultText: 'normal',
 				help:"Choose button size."
 			},
@@ -33,7 +33,7 @@ frameworkShortcodeAtts={
 				id:"target",
 				controlType:"select-control",
 				selectValues:['_blank', '_self', '_parent', '_top'],
-				defaultValue: '_self', 
+				defaultValue: '_self',
 				defaultText: '_self',
 				help:"The target attribute specifies a window or a frame where the linked document is loaded."
 			},
@@ -42,8 +42,8 @@ frameworkShortcodeAtts={
 				id:"display",
 				controlType:"select-control",
 				selectValues:['inline', 'block'],
-				defaultValue: 'normal', 
-				defaultText: 'normal',
+				defaultValue: 'inline',
+				defaultText: 'inline',
 				help:"Choose between inline and block display options."
 			},
 			{
@@ -51,15 +51,15 @@ frameworkShortcodeAtts={
 				id:"class",
 				help:"Any CSS classes you want to add."
 			},
-            {
-                label:"Icon",
-                id:"icon",
+			{
+				label:"Icon",
+				id:"icon",
 				controlType:"select-control",
 				selectValues:['no', 'pencil', 'refresh', 'comment', 'cogs', 'info-sign', 'user', 'book', 'twitter', 'arrow-right', 'circle-arrow-right'],
-				defaultValue: 'no', 
+				defaultValue: 'no',
 				defaultText: 'no',
-                help:"Optional image."
-            }
+				help:"Optional image."
+			}
 	],
 	defaultContent:"",
 	shortcode:"button"
