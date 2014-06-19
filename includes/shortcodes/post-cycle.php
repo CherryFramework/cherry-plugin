@@ -156,19 +156,52 @@ if (!function_exists('shortcode_post_cycle')) {
 					}
 					//display post options
 					$output .= '<div class="post_options">';
-					switch($type_post) {
+
+					switch( $type_post ) {
+
 						case "team":
-							$teampos  = (get_post_meta($post->ID, 'my_team_pos', true)) ? get_post_meta($post->ID, 'my_team_pos', true) : "";
-							$teaminfo = (get_post_meta($post->ID, 'my_team_info', true)) ? get_post_meta($post->ID, 'my_team_info', true) : "";
-							$output .= "<span class='page-desc'>".$teampos."</span><br><span class='team-content post-content'>".$teaminfo."</span>";
+							$teampos    = get_post_meta( $post->ID, 'my_team_pos', true );
+							$team_email = sanitize_email( get_post_meta( $post->ID, 'my_team_email', true ) );
+							$teaminfo   = get_post_meta( $post->ID, 'my_team_info', true );
+
+							if ( !empty( $teampos ) ) {
+								$output .= "<span class='page-desc'>" . $teampos . "</span><br>";
+							}
+
+							if ( !empty( $team_email ) && is_email( $team_email ) ) {
+								$output .= '<span class="team-email"><a href="mailto:' . antispambot( $team_email, 1 ) . '">' . antispambot( $team_email ) . ' </a></span><br>';
+							}
+
+							if ( !empty( $teaminfo ) ) {
+								$output .= '<span class="team-content post-content team-info">' . esc_html( $teaminfo ) . '</span>';
+							}
+
 							$output .= cherry_get_post_networks(array('post_id' => $post->ID, 'display_title' => false, 'output_type' => 'return'));
 							break;
+
 						case "testi":
-							$testiname = (get_post_meta($post->ID, 'my_testi_caption', true)) ? get_post_meta($post->ID, 'my_testi_caption', true) : "";
-							$testiurl  = (get_post_meta($post->ID, 'my_testi_url', true)) ? get_post_meta($post->ID, 'my_testi_url', true) : "";
-							$testiinfo = (get_post_meta($post->ID, 'my_testi_info', true)) ? get_post_meta($post->ID, 'my_testi_info', true) : "";
-							$output .="<span class='user'>".$testiname."</span>, <span class='info'>".$testiinfo."</span><br><a href='".$testiurl."'>".$testiurl."</a>";
+							$testiname  = get_post_meta( $post->ID, 'my_testi_caption', true );
+							$testiurl   = esc_url( get_post_meta( $post->ID, 'my_testi_url', true ) );
+							$testiinfo  = get_post_meta( $post->ID, 'my_testi_info', true );
+							$testiemail = sanitize_email( get_post_meta($post->ID, 'my_testi_email', true ) );
+
+							if ( !empty( $testiname ) ) {
+								$output .= '<span class="user">' . $testiname . '</span>, ';
+							}
+
+							if ( !empty( $testiinfo ) ) {
+								$output .= '<span class="info">' . $testiinfo . '</span><br>';
+							}
+
+							if ( !empty( $testiurl ) ) {
+								$output .= '<a class="testi-url" href="' . $testiurl . '" target="_blank">' . $testiurl . '</a><br>';
+							}
+
+							if ( !empty( $testiemail ) && is_email( $testiemail ) ) {
+								$output .= '<a class="testi-email" href="mailto:' . antispambot( $testiemail, 1 ) . '">' . antispambot( $testiemail ) . ' </a>';
+							}
 							break;
+
 						case "portfolio":
 							$portfolioClient = (get_post_meta($post->ID, 'tz_portfolio_client', true)) ? get_post_meta($post->ID, 'tz_portfolio_client', true) : "";
 							$portfolioDate = (get_post_meta($post->ID, 'tz_portfolio_date', true)) ? get_post_meta($post->ID, 'tz_portfolio_date', true) : "";
@@ -179,6 +212,7 @@ if (!function_exists('shortcode_post_cycle')) {
 							$output .="<strong class='portfolio-meta-key'>".__('Info', CHERRY_PLUGIN_DOMAIN).": </strong><span> ".$portfolioInfo."</span><br>";
 							$output .="<a href='".$portfolioURL."'>".__('Launch Project', CHERRY_PLUGIN_DOMAIN)."</a><br>";
 							break;
+
 						default:
 							$output .="";
 					};

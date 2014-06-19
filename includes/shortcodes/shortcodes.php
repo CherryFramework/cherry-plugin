@@ -512,47 +512,56 @@ if (!function_exists('shortcode_recenttesti')) {
 					$post = get_post( icl_object_id( $post->ID, 'testi', true ) );
 				}
 			}
-			setup_postdata($post);
-			$excerpt        = get_the_excerpt();
-			$testiname      = get_post_meta(get_the_ID(), 'my_testi_caption', true);
-			$testiurl       = get_post_meta(get_the_ID(), 'my_testi_url', true);
-			$testiinfo      = get_post_meta(get_the_ID(), 'my_testi_info', true);
-			$attachment_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+			setup_postdata( $post );
+			$post_id = $post->ID;
+			$excerpt = get_the_excerpt();
+
+			// Get custom metabox value.
+			$testiname  = get_post_meta( $post_id, 'my_testi_caption', true );
+			$testiurl   = esc_url( get_post_meta( $post_id, 'my_testi_url', true ) );
+			$testiinfo  = get_post_meta( $post_id, 'my_testi_info', true );
+			$testiemail = sanitize_email( get_post_meta( $post_id, 'my_testi_email', true ) );
+
+			$attachment_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'full' );
 			$url            = $attachment_url['0'];
 			$image          = aq_resize($url, 280, 240, true);
 
 			$output .= '<div class="testi-item list-item-'.$itemcounter.'">';
 				$output .= '<blockquote class="testi-item_blockquote">';
 					if ($thumb == 'true') {
-						if ( has_post_thumbnail($post->ID) ){
+						if ( has_post_thumbnail( $post_id ) ){
 							$output .= '<figure class="featured-thumbnail">';
 							$output .= '<img src="'.$image.'" alt="" />';
 							$output .= '</figure>';
 						}
 					}
-					$output .= '<a href="'.get_permalink($post->ID).'">';
+					$output .= '<a href="'.get_permalink( $post_id ).'">';
 						$output .= my_string_limit_words($excerpt,$excerpt_count);
 					$output .= '</a><div class="clear"></div>';
 
 				$output .= '</blockquote>';
 
 				$output .= '<small class="testi-meta">';
-					if( isset($testiname) ) {
+					if ( !empty( $testiname ) ) {
 						$output .= '<span class="user">';
 							$output .= $testiname;
 						$output .= '</span>';
 					}
 
-					if( isset($testiinfo) ) {
+					if ( !empty( $testiinfo ) ) {
 						$output .= ' <span class="info">';
 							$output .= $testiinfo;
 						$output .= '</span><br>';
 					}
 
-					if( isset($testiurl) ) {
-						$output .= '<a href="'.$testiurl.'">';
+					if ( !empty( $testiurl ) ) {
+						$output .= '<a class="testi-url" href="'.$testiurl.'">';
 							$output .= $testiurl;
-						$output .= '</a>';
+						$output .= '</a><br>';
+					}
+
+					if ( !empty( $testiemail ) && is_email( $testiemail ) ) {
+						$output .= '<a class="testi-email" href="mailto:' . antispambot( $testiemail, 1 ) . '" >' . antispambot( $testiemail ) . ' </a>';
 					}
 
 				$output .= '</small>';

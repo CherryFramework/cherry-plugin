@@ -79,8 +79,9 @@ function widget($args, $instance) {
 		$cat_posts->the_post(); $posts_counter++;
 
 		if ($instance['posttype'] == "testi") {
-			$testiname = get_post_meta($post->ID, 'my_testi_caption', true);
-			$testiurl  = get_post_meta($post->ID, 'my_testi_url', true);
+			$testiname  = get_post_meta( $post->ID, 'my_testi_caption', true );
+			$testiurl   = esc_url( get_post_meta( $post->ID, 'my_testi_url', true ) );
+			$testiemail = sanitize_email( get_post_meta( $post->ID, 'my_testi_email', true ) );
 		}
 		$thumb   = get_post_thumbnail_id();
 		$img_url = wp_get_attachment_url( $thumb,'full'); //get img URL
@@ -143,7 +144,22 @@ function widget($args, $instance) {
 		<?php endif; ?>
 	  </div>
 			<?php if ($instance['posttype'] == "testi") { ?>
-		<div class="name-testi"><span class="user"><?php echo $testiname; ?></span>, <a target="_blank" href="<?php echo $testiurl; ?>"><?php echo $testiurl; ?></a></div>
+
+			<div class="name-testi">
+
+				<?php if ( !empty( $testiname ) ) { ?>
+					<span class="user"><?php echo $testiname; ?></span><?php echo ', '; ?>
+				<?php } ?>
+
+				<?php if ( !empty( $testiurl ) ) { ?>
+					<a class="testi-url" href="<?php echo $testiurl; ?>" target="_blank"><?php echo $testiurl; ?></a><br>
+				<?php } ?>
+
+				<?php if ( !empty( $testiemail ) && is_email( $testiemail ) ) {
+					echo '<a class="testi-email" href="mailto:' . antispambot( $testiemail, 1 ) . '">' . antispambot( $testiemail ) . ' </a>';
+				} ?>
+
+			</div>
 	  <?php }?>
 	  <?php if ( $instance['more_link'] ) : ?>
 		<a href="<?php the_permalink() ?>" class="btn btn-primary <?php if($instance['more_link_class']!="") {echo $instance['more_link_class'];}else{ ?>link<?php } ?>"><?php if($instance['more_link_text']==""){ _e('Read more', CHERRY_PLUGIN_DOMAIN); }else{ ?><?php echo $more_link_text; ?><?php } ?></a>
