@@ -8,7 +8,7 @@ frameworkShortcodeAtts={
 			{
 				label:"Type of posts",
 				id:"type",
-				help:'This is the type of posts. Use post slug, e.g. "portfolio" or blank for posts from Blog'
+				help:"This is the type of posts. Use post slug, e.g. \"portfolio\" or blank for posts from Blog"
 			},
 			{
 				label:"Meta",
