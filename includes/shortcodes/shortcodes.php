@@ -104,7 +104,7 @@ if (!function_exists('shortcode_recent_posts')) {
 				}
 				$post_classes = implode(' ', $post_classes);
 
-				$output .= '<li class="recent-posts_li ' . $post_classes . '  list-item-' . $item_counter . '">';
+				$output .= '<li class="recent-posts_li ' . $post_classes . '  list-item-' . $item_counter . ' clearfix">';
 
 				//Aside
 				if($post_format == "aside") {
