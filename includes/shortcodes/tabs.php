@@ -3,7 +3,7 @@
  * Tabs
  */
 if ( !function_exists('tabs_shortcode') ) {
-	function tabs_shortcode( $atts, $content = null ) {
+	function tabs_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		if ( !array_key_exists('direction', $atts) ) {
 			$direct = array(
 				'direction' => 'top'
@@ -54,6 +54,8 @@ if ( !function_exists('tabs_shortcode') ) {
 			}
 
 		$output .= '</div><!-- .tabs-wrapper (end) -->';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}

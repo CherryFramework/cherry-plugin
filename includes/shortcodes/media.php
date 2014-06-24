@@ -1,7 +1,7 @@
 <?php
 // Audio Player
 if (!function_exists('shortcode_audio')) {
-	function shortcode_audio( $atts, $content = null ) {
+	function shortcode_audio( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
 			'type'  => '',
 			'file'  => '',
@@ -125,6 +125,8 @@ if (!function_exists('shortcode_audio')) {
 		$output .= '</div></div></div></div>';
 		$output .= '</div><!-- .audio-wrap (end) -->';
 
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('audio', 'shortcode_audio');
@@ -134,7 +136,7 @@ if (!function_exists('shortcode_audio')) {
 // Video Player
 if (!function_exists('wp_video_shortcode')) {
 	if (!function_exists('shortcode_video')) {
-		function shortcode_video( $atts, $content = null ) {
+		function shortcode_video( $atts, $content = null, $shortcodename = '' ) {
 			extract(shortcode_atts(array(
 				'file'   => '',
 				'm4v'    => '',
@@ -264,6 +266,9 @@ if (!function_exists('wp_video_shortcode')) {
 
 			}
 			$output .= '</div><!-- .video-wrap (end) -->';
+
+			$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 			return $output;
 		}
 		add_shortcode('video', 'shortcode_video');

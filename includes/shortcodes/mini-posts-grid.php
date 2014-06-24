@@ -4,7 +4,7 @@
  *
  */
 if (!function_exists('mini_posts_grid_shortcode')) {
-	function mini_posts_grid_shortcode($atts, $content = null) {
+	function mini_posts_grid_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
 			'type'         => 'post',
 			'category'         => '',
@@ -198,6 +198,9 @@ if (!function_exists('mini_posts_grid_shortcode')) {
 			wp_reset_postdata(); // restore the global $post variable
 			$output .= '</ul><!-- .posts-grid (end) -->';
 		$output .= '<div class="clear"></div>';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('mini_posts_grid', 'mini_posts_grid_shortcode');

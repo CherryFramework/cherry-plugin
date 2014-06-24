@@ -18,6 +18,8 @@ function cherry_grid_column( $atts, $content = null, $shortcodename = '' ) {
 	$return .= do_shortcode( $content );
 	$return .= '</div>';
 
+	$return = apply_filters( 'cherry_plugin_shortcode_output', $return, $atts, $shortcodename );
+
 	return $return;
 }
 add_shortcode( 'span1', 'cherry_grid_column' );

@@ -5,7 +5,7 @@
  */
 if (!function_exists('mini_posts_list_shortcode')) {
 
-	function mini_posts_list_shortcode($atts, $content = null) {
+	function mini_posts_list_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
 			'type'          => 'post',
 			'numb'          => '3',
@@ -216,6 +216,9 @@ if (!function_exists('mini_posts_list_shortcode')) {
 			wp_reset_postdata(); // restore the global $post variable
 
 			$output .= '</ul><!-- .mini-posts-list (end) -->';
+
+			$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 			return $output;
 	}
 	add_shortcode('mini_posts_list', 'mini_posts_list_shortcode');

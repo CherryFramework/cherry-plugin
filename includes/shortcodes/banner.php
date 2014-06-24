@@ -5,7 +5,7 @@
  */
 if ( !function_exists( 'banner_shortcode' ) ) {
 
-	function banner_shortcode( $atts, $content = null ) {
+	function banner_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		extract( shortcode_atts(
 			array(
 				'img'          => '',
@@ -61,6 +61,9 @@ if ( !function_exists( 'banner_shortcode' ) ) {
 			$output .= '</a></div>';
 		}
 		$output .= '</div><!-- .banner-wrap (end) -->';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('banner', 'banner_shortcode');

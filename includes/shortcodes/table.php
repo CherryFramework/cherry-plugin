@@ -5,7 +5,7 @@
  */
 if (!function_exists('table_shortcode')) {
 
-	function table_shortcode($atts, $content = null) {
+	function table_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		$output = '<table class="table table-bordered table-striped">';
 
 		//Build thead
@@ -41,7 +41,7 @@ if (!function_exists('table_shortcode')) {
 
 			if ($i > $total) {
 				$i = 1;
-				$output .= '<tr>'; 
+				$output .= '<tr>';
 			}
 
 			$output .= $tableArray[$key];
@@ -55,6 +55,8 @@ if (!function_exists('table_shortcode')) {
 
 		$output .= '</tbody>';
 		$output .= '</table><!-- table (end) -->';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
 
 		return $output;
 

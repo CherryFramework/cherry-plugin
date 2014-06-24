@@ -2,7 +2,7 @@
 //Recent Posts
 if (!function_exists('shortcode_recent_posts')) {
 
-	function shortcode_recent_posts($atts, $content = null) {
+	function shortcode_recent_posts( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
 				'type'             => 'post',
 				'category'         => '',
@@ -406,6 +406,9 @@ if (!function_exists('shortcode_recent_posts')) {
 		}
 		wp_reset_postdata(); // restore the global $post variable
 		$output .= '</ul><!-- .recent-posts (end) -->';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('recent_posts', 'shortcode_recent_posts');
@@ -415,7 +418,7 @@ if (!function_exists('shortcode_recent_posts')) {
 // Recent Comments
 if (!function_exists('shortcode_recent_comments')) {
 
-	function shortcode_recent_comments($atts, $content = null) {
+	function shortcode_recent_comments( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
 			'num'          => '5',
 			'custom_class' => ''
@@ -461,6 +464,9 @@ if (!function_exists('shortcode_recent_comments')) {
 		}
 
 		$output .= '</ul>';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('recent_comments', 'shortcode_recent_comments');
@@ -470,7 +476,7 @@ if (!function_exists('shortcode_recent_comments')) {
 //Recent Testimonials
 if (!function_exists('shortcode_recenttesti')) {
 
-	function shortcode_recenttesti($atts, $content = null) {
+	function shortcode_recenttesti( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
 				'num'           => '5',
 				'thumb'         => 'true',
@@ -572,6 +578,9 @@ if (!function_exists('shortcode_recenttesti')) {
 		}
 		wp_reset_postdata(); // restore the global $post variable
 		$output .= '</div>';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('recenttesti', 'shortcode_recenttesti');
@@ -582,7 +591,7 @@ if (!function_exists('shortcode_recenttesti')) {
 //Tag Cloud
 if (!function_exists('shortcode_tags')) {
 
-	function shortcode_tags($atts, $content = null) {
+	function shortcode_tags( $atts, $content = null, $shortcodename = '' ) {
 		$output = '<div class="tags-cloud clearfix">';
 		$tags = wp_tag_cloud('smallest=8&largest=8&format=array');
 
@@ -591,6 +600,9 @@ if (!function_exists('shortcode_tags')) {
 		}
 
 		$output .= '</div><!-- .tags-cloud (end) -->';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('tags', 'shortcode_tags');
@@ -599,7 +611,7 @@ if (!function_exists('shortcode_tags')) {
 
 //video preview
 if (!function_exists('shortcode_video_preview')) {
-	function shortcode_video_preview($atts, $content = null) {
+	function shortcode_video_preview( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(
 			array(
 				'title' => '',
@@ -632,6 +644,9 @@ if (!function_exists('shortcode_video_preview')) {
 			$img = '<a class="preview_image"  href="'.$post_url.'" title="'.$get_image_url.'"><img src="'.$get_image_url.'" alt=""><span class="icon-play-circle hover"></span></a>';
 		}
 		$output ='<figure class="featured-thumbnail thumbnail video_preview clearfix'.$custom_class.'"><div>'.$img.'<figcaption>'.$output_title.$output_author.$output_date.'</figcaption></div></figure>';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 		}
 	add_shortcode('video_preview', 'shortcode_video_preview');
@@ -639,7 +654,7 @@ if (!function_exists('shortcode_video_preview')) {
 
 /*   CONTENT_BOX_SHORTCODE    */
 if (!function_exists('content_box')) {
-	function content_box_shortcode($atts, $content = null) {
+	function content_box_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
 				'custom_class'  => '',
 		), $atts));
@@ -647,6 +662,9 @@ if (!function_exists('content_box')) {
 		$output .= do_shortcode($content);
 		$output .= '<div class="clear"></div>';
 		$output .= '</div><!-- .content_box (end) -->';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('content_box', 'content_box_shortcode');

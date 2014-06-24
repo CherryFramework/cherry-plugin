@@ -5,7 +5,7 @@
  */
 if (!function_exists('shortcode_post_cycle')) {
 
-	function shortcode_post_cycle($atts, $content = null) {
+	function shortcode_post_cycle( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
 				'num'              => '5',
 				'type'             => 'post',
@@ -236,6 +236,9 @@ if (!function_exists('shortcode_post_cycle')) {
 			wp_reset_postdata(); // restore the global $post variable
 			$output .= '</ul>';
 		$output .= '</div>';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('post_cycle', 'shortcode_post_cycle');

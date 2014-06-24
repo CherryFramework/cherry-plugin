@@ -5,7 +5,7 @@
  */
 if (!function_exists('service_box_shortcode')) {
 
-	function service_box_shortcode($atts, $content = null) { 
+	function service_box_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(
 			array(
 				'title'        => '',
@@ -18,9 +18,9 @@ if (!function_exists('service_box_shortcode')) {
 				'target'       => '',
 				'custom_class' => ''
 		), $atts));
-		
+
 		$output =  '<div class="service-box '.$custom_class.'">';
-	
+
 		if($icon != 'no'){
 			$icon_url = CHERRY_PLUGIN_URL . 'includes/images/' . strtolower($icon) . '.png' ;
 			if( defined ('CHILD_DIR') ) {
@@ -55,6 +55,9 @@ if (!function_exists('service_box_shortcode')) {
 		}
 		$output .= '</div>';
 		$output .= '</div><!-- /Service Box -->';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('service_box', 'service_box_shortcode');
