@@ -23,14 +23,22 @@ if ( !function_exists('shortcode_carousel') ) {
 			'custom_class'     => ''
 		), $atts) );
 
-		// check what type of post user selected
-		switch ( $type ) {
+		switch ( strtolower( str_replace(' ', '-', $type) ) ) {
 			case 'blog':
 				$type = 'post';
+				break;
+			case 'portfolio':
+				$type = 'portfolio';
 				break;
 			case 'testimonial':
 				$type = 'testi';
 				break;
+			case 'services':
+				$type = 'services';
+				break;
+			case 'our-team':
+				$type = 'team';
+			break;
 		}
 
 		$carousel_uniqid = uniqid();
