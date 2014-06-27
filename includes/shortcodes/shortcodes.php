@@ -301,7 +301,12 @@ if (!function_exists('shortcode_recent_posts')) {
 					if ($embed == '') {
 						$output .= '<script type="text/javascript">
 							jQuery(document).ready(function(){
-								jQuery("#jquery_jplayer_'. $id.'").jPlayer({
+								var
+									jPlayerObj = jQuery("#jquery_jplayer_'. $id.'")
+								,	jPlayerContainer = jQuery("#jp_container_'. $id.'")
+								,	isPause = true	
+								;
+								jPlayerObj.jPlayer({
 									ready: function () {
 										jQuery(this).jPlayer("setMedia", {
 											m4v: "'. stripslashes(htmlspecialchars_decode($file1)) .'",
@@ -318,6 +323,42 @@ if (!function_exists('shortcode_recent_posts')) {
 										height: "100%"
 									}
 								});
+								jPlayerObj.on(jQuery.jPlayer.event.ready + ".jp-repeat", function(event) {
+									jQuery("img", this).addClass("poster");
+									jQuery("video", this).addClass("video");
+									jQuery("object", this).addClass("flashObject");
+									jQuery(".video", jPlayerContainer).on("click", function(){
+										jPlayerObj.jPlayer("pause");
+									})
+								})
+								jPlayerObj.on(jQuery.jPlayer.event.ended + ".jp-repeat", function(event) {
+									isPause = true
+									jQuery(".poster", jPlayerContainer).css({display:"inline"});
+								    jQuery(".video", jPlayerContainer).css({width:"0%", height:"0%"});
+								    jQuery(".flashObject", jPlayerContainer).css({width:"0%", height:"0%"});
+								    jPlayerObj.siblings(".jp-gui").find(".jp-video-play").css({display:"block"});
+								});
+								jPlayerObj.on(jQuery.jPlayer.event.play + ".jp-repeat", function(event) {
+								   isPause = false
+								   emulSwitch(isPause);
+								});
+								jPlayerObj.on(jQuery.jPlayer.event.pause + ".jp-repeat", function(event) {
+								   isPause = true
+								   emulSwitch(isPause);
+								});
+								function emulSwitch(_pause){
+									if(_pause){
+										jQuery(".poster", jPlayerContainer).css({display:"none"});
+								    	jQuery(".video", jPlayerContainer).css({width:"100%", height:"100%"});
+								    	jQuery(".flashObject", jPlayerContainer).css({width:"100%", height:"100%"});
+								    	jPlayerObj.siblings(".jp-gui").find(".jp-video-play").css({display:"block"});
+									}else{
+										jQuery(".poster", jPlayerContainer).css({display:"none"});
+								    	jQuery(".video", jPlayerContainer).css({width:"100%", height:"100%"});
+								    	jQuery(".flashObject", jPlayerContainer).css({width:"100%", height:"100%"});
+								    	jPlayerObj.siblings(".jp-gui").find(".jp-video-play").css({display:"none"});
+									}
+								}
 							});
 							</script>';
 							$output .= '<div id="jp_container_'. $id .'" class="jp-video fullwidth">';
