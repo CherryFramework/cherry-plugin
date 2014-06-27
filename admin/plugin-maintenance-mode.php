@@ -54,29 +54,29 @@
 		<tbody>
 			<tr valign="top">
 				<th scope="row">
-					<?php _e('Maintenance Mode') ?>
+					<?php _e('Maintenance Mode', 'cherry-plugin') ?>
 				</th>
 				<td>
 					<label for="mtc_mode_on">
 						<input name="mtc_mode_on" type="checkbox" id="mtc_mode_on" value="1" <?php echo isset($mtc_options['mtc_mode_on']) ? 'checked="checked"' : '' ; ?>>
-						<?php _e('Enable this option to activate website maintenance mode.') ?>
+						<?php _e('Enable this option to activate website maintenance mode.', 'cherry-plugin') ?>
 					</label>
 				</td>
 			</tr>
 			<tr valign="top">
 				<th scope="row">
-					<?php _e('Display Logo?') ?>
+					<?php _e('Display Logo?', 'cherry-plugin') ?>
 				</th>
 				<td>
 					<label for="mtc_mode_logo">
 						<input name="mtc_mode_logo" type="checkbox" id="mtc_mode_logo" value="1" <?php echo isset($mtc_options['mtc_mode_logo']) ? 'checked="checked"' : '' ; ?>>
-						<?php _e('Enable this option to display website logo at the under construction page') ?>
+						<?php _e('Enable this option to display website logo at the under construction page', 'cherry-plugin') ?>
 					</label>
 				</td>
 			</tr>
 			<tr valign="top">
 				<th scope="row">
-					<?php _e('Description.') ?>
+					<?php _e('Description', 'cherry-plugin') ?>
 				</th>
 				<td>
 					<p>
@@ -86,33 +86,33 @@
 			</tr>
 			<tr valign="top">
 				<th scope="row">
-					<?php _e('Display timer?') ?>
+					<?php _e('Display timer?', 'cherry-plugin') ?>
 				</th>
 				<td>
 					<label for="mtc_mode_timer">
 						<input name="mtc_mode_timer" type="checkbox" id="mtc_mode_timer" value="1" <?php echo isset($mtc_options['mtc_mode_timer']) ? 'checked="checked"' : '' ; ?>>
-						<?php _e('Display timer?') ?>
+						<?php _e('Display timer?', 'cherry-plugin') ?>
 					</label>
 				</td>
 			</tr>
 			<tr valign="top">
 				<th scope="row" class="date_input">
-					<?php _e('Website launch date.') ?><br>
-					<span class="error"><?php _e('Date is not correct.') ?></span>
+					<?php _e('Website launch date.', 'cherry-plugin'); ?><br>
+					<span class="error"><?php _e('Date is not correct.', 'cherry-plugin') ?></span>
 				</th>
 				<td>
 					<p>
-						<label for="mtc_mode_year" class="small_size" ><?php _e('Year:') ?></label>
+						<label for="mtc_mode_year" class="small_size" ><?php _e('Year:', 'cherry-plugin') ?></label>
 						<input name="mtc_mode_year" type="text" id="mtc_mode_year" value="<?php echo $set_date['year'] ?>" class="small-text" maxlength="4">
-						<label for="mtc_mode_month" class="small_size" ><?php _e('Month:') ?></label>
+						<label for="mtc_mode_month" class="small_size" ><?php _e('Month:', 'cherry-plugin') ?></label>
 						<input name="mtc_mode_month" type="text" id="mtc_mode_month" value="<?php echo $set_date['month'] ?>" class="small-text" maxlength="2">
-						<label for="mtc_mode_day" class="small_size" ><?php _e('Day:') ?></label>
+						<label for="mtc_mode_day" class="small_size" ><?php _e('Day:', 'cherry-plugin') ?></label>
 						<input name="mtc_mode_day" type="text" id="mtc_mode_day" value="<?php echo $set_date['day'] ?>" class="small-text" maxlength="2">
 					</p>
 					<p>
-						<label for="mtc_mode_hour" class="small_size" ><?php _e('Hour:') ?></label>
+						<label for="mtc_mode_hour" class="small_size" ><?php _e('Hour:', 'cherry-plugin') ?></label>
 						<input name="mtc_mode_hour" type="text" id="mtc_mode_hour" value="<?php echo $set_date['hours'] ?>" class="small-text" maxlength="2">
-						<label for="mtc_mode_minute" class="small_size" ><?php _e('Minute:') ?></label>
+						<label for="mtc_mode_minute" class="small_size" ><?php _e('Minute:', 'cherry-plugin') ?></label>
 						<input name="mtc_mode_minute" type="text" id="mtc_mode_minute" value="<?php echo $set_date['minutes'] ?>" class="small-text" maxlength="2">
 					</p>
 				</td>
@@ -120,6 +120,6 @@
 		</tbody>
 	</table>
 	<p>
-		<a id="mtc_save" class="button button-primary float-left" href="#"><?php _e('Save Changes', CHERRY_PLUGIN_DOMAIN); ?></a><span class="spinner" style="float:left; margin:4px 0 0 8px; "></span>
+		<a id="mtc_save" class="button button-primary float-left" href="#"><?php _e('Save Changes', 'cherry-plugin'); ?></a><span class="spinner" style="float:left; margin:4px 0 0 8px; "></span>
 	</p>
 </form>
