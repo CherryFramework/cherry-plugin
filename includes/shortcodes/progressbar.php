@@ -5,7 +5,7 @@
  */
 if (!function_exists('shortcode_progressbar')) {
 
-	function shortcode_progressbar($atts, $content = null) {
+	function shortcode_progressbar( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(
 			array(
 				'value'        => '50',
@@ -14,7 +14,7 @@ if (!function_exists('shortcode_progressbar')) {
 				'animated'     => '',
 				'custom_class' => ''
 		), $atts));
-		
+
 		// check what type user selected
 		switch ($type) {
 			case 'info':
@@ -30,7 +30,7 @@ if (!function_exists('shortcode_progressbar')) {
 				$bar_type = 'progress-danger';
 				break;
 		}
-		
+
 		// check what gradient type user selected
 		switch ($grad_type) {
 			case 'vertical':
@@ -40,7 +40,7 @@ if (!function_exists('shortcode_progressbar')) {
 				$g_type = 'progress-striped';
 				break;
 		}
-		
+
 		// animated: yes or no
 		switch ($animated) {
 			case 'no':
@@ -50,10 +50,12 @@ if (!function_exists('shortcode_progressbar')) {
 				$bar_animated = 'active';
 				break;
 		}
-		
+
 		$output = '<div class="progress '. $bar_type .' '. $bar_animated .' '. $g_type .' '.$custom_class.'">';
 		$output .= '<div class="bar" style="width: '. $value .'%;"></div>';
 		$output .= '</div><!-- .progressbar (end) -->';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
 
 		return $output;
 

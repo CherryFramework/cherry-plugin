@@ -5,7 +5,7 @@
  */
 if (!function_exists('categories_shortcode')) {
 
-	function categories_shortcode($atts, $content = null) {
+	function categories_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(
 			array(
 				'type'  => '',
@@ -26,7 +26,7 @@ if (!function_exists('categories_shortcode')) {
 			'taxonomy' => $taxonomy_value . 'category'
 		);
 
-		$categories = get_categories($args); 
+		$categories = get_categories($args);
 		$output = '<div class="list styled '.$class.'-list">';
 		$output .= '<ul>';
 		foreach ($categories as $category) {
@@ -37,8 +37,10 @@ if (!function_exists('categories_shortcode')) {
 		$output .= '</ul>';
 		$output .= '</div>';
 
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('categories', 'categories_shortcode');
-	
+
 }?>

@@ -2,7 +2,7 @@
 //Recent Posts
 if (!function_exists('shortcode_recent_posts')) {
 
-	function shortcode_recent_posts($atts, $content = null) {
+	function shortcode_recent_posts( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
 				'type'             => 'post',
 				'category'         => '',
@@ -104,7 +104,7 @@ if (!function_exists('shortcode_recent_posts')) {
 				}
 				$post_classes = implode(' ', $post_classes);
 
-				$output .= '<li class="recent-posts_li ' . $post_classes . '  list-item-' . $item_counter . '">';
+				$output .= '<li class="recent-posts_li ' . $post_classes . '  list-item-' . $item_counter . ' clearfix">';
 
 				//Aside
 				if($post_format == "aside") {
@@ -167,15 +167,22 @@ if (!function_exists('shortcode_recent_posts')) {
 					$audio_format = get_post_meta(get_the_ID(), 'tz_audio_format', true);
 					$audio_url    = get_post_meta(get_the_ID(), 'tz_audio_url', true);
 
-					$content_url = content_url();
-					$content_str = 'wp-content';
+					// Get the URL to the content area.
+					$content_url = untrailingslashit( content_url() );
 
-					$pos    = strpos($audio_url, $content_str);
-					if ($pos === false) {
+					// Find latest '/' in content URL.
+					$last_slash_pos = strrpos( $content_url, '/' );
+
+					// 'wp-content' or something else.
+					$content_dir_name = substr( $content_url, $last_slash_pos - strlen( $content_url ) + 1 );
+
+					$pos = strpos( $audio_url, $content_dir_name );
+
+					if ( false === $pos ) {
 						$file = $audio_url;
 					} else {
-						$audio_new = substr($audio_url, $pos+strlen($content_str), strlen($audio_url) - $pos);
-						$file      = $content_url.$audio_new;
+						$audio_new = substr( $audio_url, $pos + strlen( $content_dir_name ), strlen( $audio_url ) - $pos );
+						$file     = $content_url . $audio_new;
 					}
 
 					$output .= '<script type="text/javascript">
@@ -259,22 +266,28 @@ if (!function_exists('shortcode_recent_posts')) {
 					$m4v_url      = get_post_meta(get_the_ID(), 'tz_m4v_url', true);
 					$ogv_url      = get_post_meta(get_the_ID(), 'tz_ogv_url', true);
 
-					$content_url = content_url();
-					$content_str = 'wp-content';
+					// Get the URL to the content area.
+					$content_url = untrailingslashit( content_url() );
 
-					$pos1 = strpos($m4v_url, $content_str);
+					// Find latest '/' in content URL.
+					$last_slash_pos = strrpos( $content_url, '/' );
+
+					// 'wp-content' or something else.
+					$content_dir_name = substr( $content_url, $last_slash_pos - strlen( $content_url ) + 1 );
+
+					$pos1     = strpos($m4v_url, $content_dir_name);
 					if ($pos1 === false) {
 						$file1 = $m4v_url;
 					} else {
-						$m4v_new  = substr($m4v_url, $pos1+strlen($content_str), strlen($m4v_url) - $pos1);
+						$m4v_new  = substr($m4v_url, $pos1+strlen($content_dir_name), strlen($m4v_url) - $pos1);
 						$file1    = $content_url.$m4v_new;
 					}
 
-					$pos2 = strpos($ogv_url, $content_str);
+					$pos2     = strpos($ogv_url, $content_dir_name);
 					if ($pos2 === false) {
 						$file2 = $ogv_url;
 					} else {
-						$ogv_new  = substr($ogv_url, $pos2+strlen($content_str), strlen($ogv_url) - $pos2);
+						$ogv_new  = substr($ogv_url, $pos2+strlen($content_dir_name), strlen($ogv_url) - $pos2);
 						$file2    = $content_url.$ogv_new;
 					}
 
@@ -288,7 +301,12 @@ if (!function_exists('shortcode_recent_posts')) {
 					if ($embed == '') {
 						$output .= '<script type="text/javascript">
 							jQuery(document).ready(function(){
-								jQuery("#jquery_jplayer_'. $id.'").jPlayer({
+								var
+									jPlayerObj = jQuery("#jquery_jplayer_'. $id.'")
+								,	jPlayerContainer = jQuery("#jp_container_'. $id.'")
+								,	isPause = true	
+								;
+								jPlayerObj.jPlayer({
 									ready: function () {
 										jQuery(this).jPlayer("setMedia", {
 											m4v: "'. stripslashes(htmlspecialchars_decode($file1)) .'",
@@ -305,6 +323,42 @@ if (!function_exists('shortcode_recent_posts')) {
 										height: "100%"
 									}
 								});
+								jPlayerObj.on(jQuery.jPlayer.event.ready + ".jp-repeat", function(event) {
+									jQuery("img", this).addClass("poster");
+									jQuery("video", this).addClass("video");
+									jQuery("object", this).addClass("flashObject");
+									jQuery(".video", jPlayerContainer).on("click", function(){
+										jPlayerObj.jPlayer("pause");
+									})
+								})
+								jPlayerObj.on(jQuery.jPlayer.event.ended + ".jp-repeat", function(event) {
+									isPause = true
+									jQuery(".poster", jPlayerContainer).css({display:"inline"});
+								    jQuery(".video", jPlayerContainer).css({width:"0%", height:"0%"});
+								    jQuery(".flashObject", jPlayerContainer).css({width:"0%", height:"0%"});
+								    jPlayerObj.siblings(".jp-gui").find(".jp-video-play").css({display:"block"});
+								});
+								jPlayerObj.on(jQuery.jPlayer.event.play + ".jp-repeat", function(event) {
+								   isPause = false
+								   emulSwitch(isPause);
+								});
+								jPlayerObj.on(jQuery.jPlayer.event.pause + ".jp-repeat", function(event) {
+								   isPause = true
+								   emulSwitch(isPause);
+								});
+								function emulSwitch(_pause){
+									if(_pause){
+										jQuery(".poster", jPlayerContainer).css({display:"none"});
+								    	jQuery(".video", jPlayerContainer).css({width:"100%", height:"100%"});
+								    	jQuery(".flashObject", jPlayerContainer).css({width:"100%", height:"100%"});
+								    	jPlayerObj.siblings(".jp-gui").find(".jp-video-play").css({display:"block"});
+									}else{
+										jQuery(".poster", jPlayerContainer).css({display:"none"});
+								    	jQuery(".video", jPlayerContainer).css({width:"100%", height:"100%"});
+								    	jQuery(".flashObject", jPlayerContainer).css({width:"100%", height:"100%"});
+								    	jPlayerObj.siblings(".jp-gui").find(".jp-video-play").css({display:"none"});
+									}
+								}
 							});
 							</script>';
 							$output .= '<div id="jp_container_'. $id .'" class="jp-video fullwidth">';
@@ -393,6 +447,9 @@ if (!function_exists('shortcode_recent_posts')) {
 		}
 		wp_reset_postdata(); // restore the global $post variable
 		$output .= '</ul><!-- .recent-posts (end) -->';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('recent_posts', 'shortcode_recent_posts');
@@ -402,7 +459,7 @@ if (!function_exists('shortcode_recent_posts')) {
 // Recent Comments
 if (!function_exists('shortcode_recent_comments')) {
 
-	function shortcode_recent_comments($atts, $content = null) {
+	function shortcode_recent_comments( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
 			'num'          => '5',
 			'custom_class' => ''
@@ -448,6 +505,9 @@ if (!function_exists('shortcode_recent_comments')) {
 		}
 
 		$output .= '</ul>';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('recent_comments', 'shortcode_recent_comments');
@@ -457,7 +517,7 @@ if (!function_exists('shortcode_recent_comments')) {
 //Recent Testimonials
 if (!function_exists('shortcode_recenttesti')) {
 
-	function shortcode_recenttesti($atts, $content = null) {
+	function shortcode_recenttesti( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
 				'num'           => '5',
 				'thumb'         => 'true',
@@ -499,47 +559,56 @@ if (!function_exists('shortcode_recenttesti')) {
 					$post = get_post( icl_object_id( $post->ID, 'testi', true ) );
 				}
 			}
-			setup_postdata($post);
-			$excerpt        = get_the_excerpt();
-			$testiname      = get_post_meta(get_the_ID(), 'my_testi_caption', true);
-			$testiurl       = get_post_meta(get_the_ID(), 'my_testi_url', true);
-			$testiinfo      = get_post_meta(get_the_ID(), 'my_testi_info', true);
-			$attachment_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+			setup_postdata( $post );
+			$post_id = $post->ID;
+			$excerpt = get_the_excerpt();
+
+			// Get custom metabox value.
+			$testiname  = get_post_meta( $post_id, 'my_testi_caption', true );
+			$testiurl   = esc_url( get_post_meta( $post_id, 'my_testi_url', true ) );
+			$testiinfo  = get_post_meta( $post_id, 'my_testi_info', true );
+			$testiemail = sanitize_email( get_post_meta( $post_id, 'my_testi_email', true ) );
+
+			$attachment_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'full' );
 			$url            = $attachment_url['0'];
 			$image          = aq_resize($url, 280, 240, true);
 
 			$output .= '<div class="testi-item list-item-'.$itemcounter.'">';
 				$output .= '<blockquote class="testi-item_blockquote">';
 					if ($thumb == 'true') {
-						if ( has_post_thumbnail($post->ID) ){
+						if ( has_post_thumbnail( $post_id ) ){
 							$output .= '<figure class="featured-thumbnail">';
 							$output .= '<img src="'.$image.'" alt="" />';
 							$output .= '</figure>';
 						}
 					}
-					$output .= '<a href="'.get_permalink($post->ID).'">';
+					$output .= '<a href="'.get_permalink( $post_id ).'">';
 						$output .= my_string_limit_words($excerpt,$excerpt_count);
 					$output .= '</a><div class="clear"></div>';
 
 				$output .= '</blockquote>';
 
 				$output .= '<small class="testi-meta">';
-					if( isset($testiname) ) {
+					if ( !empty( $testiname ) ) {
 						$output .= '<span class="user">';
 							$output .= $testiname;
 						$output .= '</span>';
 					}
 
-					if( isset($testiinfo) ) {
-						$output .= ', <span class="info">';
+					if ( !empty( $testiinfo ) ) {
+						$output .= ' <span class="info">';
 							$output .= $testiinfo;
 						$output .= '</span><br>';
 					}
 
-					if( isset($testiurl) ) {
-						$output .= '<a href="'.$testiurl.'">';
+					if ( !empty( $testiurl ) ) {
+						$output .= '<a class="testi-url" href="'.$testiurl.'">';
 							$output .= $testiurl;
-						$output .= '</a>';
+						$output .= '</a><br>';
+					}
+
+					if ( !empty( $testiemail ) && is_email( $testiemail ) ) {
+						$output .= '<a class="testi-email" href="mailto:' . antispambot( $testiemail, 1 ) . '" >' . antispambot( $testiemail ) . ' </a>';
 					}
 
 				$output .= '</small>';
@@ -550,6 +619,9 @@ if (!function_exists('shortcode_recenttesti')) {
 		}
 		wp_reset_postdata(); // restore the global $post variable
 		$output .= '</div>';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('recenttesti', 'shortcode_recenttesti');
@@ -560,7 +632,7 @@ if (!function_exists('shortcode_recenttesti')) {
 //Tag Cloud
 if (!function_exists('shortcode_tags')) {
 
-	function shortcode_tags($atts, $content = null) {
+	function shortcode_tags( $atts, $content = null, $shortcodename = '' ) {
 		$output = '<div class="tags-cloud clearfix">';
 		$tags = wp_tag_cloud('smallest=8&largest=8&format=array');
 
@@ -569,6 +641,9 @@ if (!function_exists('shortcode_tags')) {
 		}
 
 		$output .= '</div><!-- .tags-cloud (end) -->';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('tags', 'shortcode_tags');
@@ -577,7 +652,7 @@ if (!function_exists('shortcode_tags')) {
 
 //video preview
 if (!function_exists('shortcode_video_preview')) {
-	function shortcode_video_preview($atts, $content = null) {
+	function shortcode_video_preview( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(
 			array(
 				'title' => '',
@@ -610,6 +685,9 @@ if (!function_exists('shortcode_video_preview')) {
 			$img = '<a class="preview_image"  href="'.$post_url.'" title="'.$get_image_url.'"><img src="'.$get_image_url.'" alt=""><span class="icon-play-circle hover"></span></a>';
 		}
 		$output ='<figure class="featured-thumbnail thumbnail video_preview clearfix'.$custom_class.'"><div>'.$img.'<figcaption>'.$output_title.$output_author.$output_date.'</figcaption></div></figure>';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 		}
 	add_shortcode('video_preview', 'shortcode_video_preview');
@@ -617,7 +695,7 @@ if (!function_exists('shortcode_video_preview')) {
 
 /*   CONTENT_BOX_SHORTCODE    */
 if (!function_exists('content_box')) {
-	function content_box_shortcode($atts, $content = null) {
+	function content_box_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
 				'custom_class'  => '',
 		), $atts));
@@ -625,6 +703,9 @@ if (!function_exists('content_box')) {
 		$output .= do_shortcode($content);
 		$output .= '<div class="clear"></div>';
 		$output .= '</div><!-- .content_box (end) -->';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('content_box', 'content_box_shortcode');

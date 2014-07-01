@@ -516,6 +516,11 @@
 			display: block;
 			padding-top: 22px;
 			padding-left: 40px;
+				.user{
+					&:after{
+						content:",";
+					}
+				}
 		}
 
 	}
@@ -1186,7 +1191,7 @@
 	li {
 		overflow:hidden;
 		margin:0;
-		padding:25px 0 25px 0;
+		padding:0 0 25px 0;
 		border-bottom:none;
 		background:none;
 		&:first-child {
@@ -1377,7 +1382,7 @@ iframe .uiHeader h3{
 
 /* Social Networks
 ---------------------------------------- */
-.social { 
+.social {
 	margin: 0;
 
 	&_li {
@@ -1505,24 +1510,28 @@ iframe .uiHeader h3{
 	#under_construction_logo{
 		.logo, h1{
 			float: none;
+			width: 100%;
 		}
 	}
 	#under_construction_description{
 		clear: both;
 	}
 	#under_construction_timer{
-		margin: 40px -20px 40px 0;
+		margin: 40px 0 40px -30px;
 		.box{
 			display: inline-block;
-			margin-right: 30px;
+			margin-left: 30px;
 			&:first-child{
 				.numbers:before{
 					content:'';
 				}
-			};
+			}
 			.lable{
 				font-size: 16px;
 				margin-top: 15px;
+				@media (max-width: 767px) {
+					font-size: 12px;
+				}
 			}
 			.numbers{
 				position: relative;
@@ -1533,8 +1542,11 @@ iframe .uiHeader h3{
 					top: 0px;
 					font-size: 80px;
 					line-height: 1.2em;
-				};
-
+					@media (max-width: 767px) {
+						font-size: 25px;
+						left: -10px;
+					}
+				}
 				span{
 					font-size: 80px;
 					line-height: 1.2em;
@@ -1544,11 +1556,22 @@ iframe .uiHeader h3{
 					border-radius: 5px;
 					display: inline-block;
 					min-width: 44px;
+					@media (max-width: 767px) {
+						font-size: 25px;
+						padding: 0 7px;
+						min-width: inherit;
+					}
 				}
+			}
+			@media (max-width: 767px) {
+				margin-left: 15px;
 			}
 		}
 		.web_site_message{
 			font-size: 40px;
+		}
+		@media (max-width: 767px) {
+			margin-left: 15px;
 		}
 	}
 }
@@ -1560,7 +1583,7 @@ div[id^="cherry_instagram_widget"]{
 		margin: 0;
 		li{
 			list-style: none;
-			
+
 			figure{
 				margin: 0 0 9px 0;
 				position: relative;

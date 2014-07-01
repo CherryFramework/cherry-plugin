@@ -3,7 +3,7 @@
  * Carousel Elastislide
  */
 if ( !function_exists('shortcode_carousel') ) {
-	function shortcode_carousel( $atts ) {
+	function shortcode_carousel( $atts, $content = null, $shortcodename = '' ) {
 		extract( shortcode_atts( array(
 			'title'            => '',
 			'num'              => 8,
@@ -23,14 +23,22 @@ if ( !function_exists('shortcode_carousel') ) {
 			'custom_class'     => ''
 		), $atts) );
 
-		// check what type of post user selected
-		switch ( $type ) {
+		switch ( strtolower( str_replace(' ', '-', $type) ) ) {
 			case 'blog':
 				$type = 'post';
+				break;
+			case 'portfolio':
+				$type = 'portfolio';
 				break;
 			case 'testimonial':
 				$type = 'testi';
 				break;
+			case 'services':
+				$type = 'services';
+				break;
+			case 'our-team':
+				$type = 'team';
+			break;
 		}
 
 		$carousel_uniqid = uniqid();
@@ -203,6 +211,8 @@ if ( !function_exists('shortcode_carousel') ) {
 				})';
 			$output .= '</script>';
 		$output .= '</div>';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}

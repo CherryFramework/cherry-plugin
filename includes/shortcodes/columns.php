@@ -1,16 +1,24 @@
 <?php
 // Columns
 function cherry_grid_column( $atts, $content = null, $shortcodename = '' ) {
+	extract( shortcode_atts( array(
+		'custom_class' => ''
+	), $atts ) );
+
 	//remove wrong nested <p>
 	$content = remove_invalid_tags( $content, array('p') );
 
-	extract(shortcode_atts(array(
-		'custom_class'  => ''
-	), $atts));
-	// add divs to the content
+	$content = wpautop( $content );
+
+	// Allow other shortcodes inside the column content.
+	if ( false !== strpos( $content, '[' ) )
+		$content = do_shortcode( shortcode_unautop( $content ) );
+
 	$return = '<div class="' . $shortcodename . ' ' . $custom_class . '">';
 	$return .= do_shortcode( $content );
 	$return .= '</div>';
+
+	$return = apply_filters( 'cherry_plugin_shortcode_output', $return, $atts, $shortcodename );
 
 	return $return;
 }
@@ -34,6 +42,12 @@ function one_half_column($atts, $content = null) {
 	//remove wrong nested <p>
 	$content = remove_invalid_tags( $content, array('p') );
 
+	$content = wpautop( $content );
+
+	// Allow other shortcodes inside the column content.
+	if ( false !== strpos( $content, '[' ) )
+		$content = do_shortcode( shortcode_unautop( $content ) );
+
 	// add divs to the content
 	$return = '<div class="span6">';
 	$return .= do_shortcode( $content );
@@ -47,6 +61,12 @@ add_shortcode( 'one_half', 'one_half_column' );
 function one_third_column( $atts, $content = null ) {
 	//remove wrong nested <p>
 	$content = remove_invalid_tags( $content, array('p') );
+
+	$content = wpautop( $content );
+
+	// Allow other shortcodes inside the column content.
+	if ( false !== strpos( $content, '[' ) )
+		$content = do_shortcode( shortcode_unautop( $content ) );
 
 	// add divs to the content
 	$return = '<div class="span4">';
@@ -62,6 +82,12 @@ function two_third_column( $atts, $content = null ) {
 	//remove wrong nested <p>
 	$content = remove_invalid_tags( $content, array('p') );
 
+	$content = wpautop( $content );
+
+	// Allow other shortcodes inside the column content.
+	if ( false !== strpos( $content, '[' ) )
+		$content = do_shortcode( shortcode_unautop( $content ) );
+
 	// add divs to the content
 	$return = '<div class="span8">';
 	$return .= do_shortcode( $content );
@@ -75,6 +101,12 @@ add_shortcode( 'two_third', 'two_third_column' );
 function one_fourth_column( $atts, $content = null ) {
 	//remove wrong nested <p>
 	$content = remove_invalid_tags( $content, array('p') );
+
+	$content = wpautop( $content );
+
+	// Allow other shortcodes inside the column content.
+	if ( false !== strpos( $content, '[' ) )
+		$content = do_shortcode( shortcode_unautop( $content ) );
 
 	// add divs to the content
 	$return = '<div class="span3">';
@@ -90,6 +122,12 @@ function three_fourth_column( $atts, $content = null) {
 	//remove wrong nested <p>
 	$content = remove_invalid_tags( $content, array('p') );
 
+	$content = wpautop( $content );
+
+	// Allow other shortcodes inside the column content.
+	if ( false !== strpos( $content, '[' ) )
+		$content = do_shortcode( shortcode_unautop( $content ) );
+
 	// add divs to the content
 	$return = '<div class="span9">';
 	$return .= do_shortcode( $content );
@@ -104,6 +142,12 @@ function one_sixth_column( $atts, $content = null ) {
 	//remove wrong nested <p>
 	$content = remove_invalid_tags( $content, array('p') );
 
+	$content = wpautop( $content );
+
+	// Allow other shortcodes inside the column content.
+	if ( false !== strpos( $content, '[' ) )
+		$content = do_shortcode( shortcode_unautop( $content ) );
+
 	// add divs to the content
 	$return = '<div class="span2">';
 	$return .= do_shortcode( $content );
@@ -117,6 +161,12 @@ add_shortcode( 'one_sixth', 'one_sixth_column' );
 function five_sixth_column( $atts, $content = null ) {
 	//remove wrong nested <p>
 	$content = remove_invalid_tags( $content, array('p') );
+
+	$content = wpautop( $content );
+
+	// Allow other shortcodes inside the column content.
+	if ( false !== strpos( $content, '[' ) )
+		$content = do_shortcode( shortcode_unautop( $content ) );
 
 	// add divs to the content
 	$return = '<div class="span10">';

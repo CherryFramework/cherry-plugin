@@ -5,7 +5,7 @@
  */
 if (!function_exists('posts_grid_shortcode')) {
 
-	function posts_grid_shortcode($atts, $content = null) {
+	function posts_grid_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
 			'type'            => 'post',
 			'category'        => '',
@@ -112,7 +112,7 @@ if (!function_exists('posts_grid_shortcode')) {
 			}
 
 			$output = '<ul class="posts-grid row-fluid unstyled '. $custom_class .' ul-item-'.$countul.'">';
-			$countul ++;
+
 
 			foreach ( $posts as $j => $post ) {
 				$post_id = $posts[$j]->ID;
@@ -142,9 +142,9 @@ if (!function_exists('posts_grid_shortcode')) {
 
 				if ($count > $columns) {
 					$count = 1;
+					$countul ++;
 					$output .= '<ul class="posts-grid row-fluid unstyled '. $custom_class .' ul-item-'.$countul.'">';
 				}
-				
 
 				$output .= '<li class="'. $spans .' list-item-'.$count.'">';
 					if(has_post_thumbnail($post_id) && $mediaType == 'Image') {
@@ -296,6 +296,8 @@ if (!function_exists('posts_grid_shortcode')) {
 
 		} // end for
 		wp_reset_postdata(); // restore the global $post variable
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}

@@ -9,16 +9,16 @@ $my_accordion_shortcode_count = 0;
 global $my_global_var;
 $my_global_var = rand();
 if (!function_exists('my_display_shortcode_accordion')) {
-	function my_display_shortcode_accordion($atts,$content) {
+	function my_display_shortcode_accordion( $atts, $content = null, $shortcodename = '' ) {
 		global $my_global_var, $post, $my_accordion_shortcode_count;
 		extract(shortcode_atts(array(
 			'title' => null,
 			'class' => null,
 			'visible' => null
 		), $atts));
-		
+
 		$toggleid = rand();
-		
+
 		if($visible!='') {
 			$inClass = "in";
 			$activeClass = "active";
@@ -39,13 +39,16 @@ if (!function_exists('my_display_shortcode_accordion')) {
 		$output .= '</div>';
 
 		$my_accordion_shortcode_count++;
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('accordion', 'my_display_shortcode_accordion'); // Single accordion
 }
 if (!function_exists('my_display_shortcode_accordions')) {
-	function my_display_shortcode_accordions($attr,$content){
-		// wordpress function 
+	function my_display_shortcode_accordions( $atts, $content = null, $shortcodename = '' ){
+		// wordpress function
 		global $my_accordion_shortcode_count,$post,$my_global_var;
 
 		$output = '<div id="id-'.$my_global_var.'" class="accordion">';
@@ -53,8 +56,12 @@ if (!function_exists('my_display_shortcode_accordions')) {
 		$output .= '</div>';
 
 		$my_global_var++;
-		return str_replace("\r\n", '',$output);
+		$output = str_replace("\r\n", '',$output);
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
+		return $output;
 	}
-	add_shortcode('accordions', 'my_display_shortcode_accordions'); // Accordion Wrapper 
+	add_shortcode('accordions', 'my_display_shortcode_accordions'); // Accordion Wrapper
 }
 ?>

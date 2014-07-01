@@ -18,7 +18,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 		$networks['Linkedin']['link']   = $instance['linkedin'];
 		$networks['Delicious']['link']  = $instance['delicious'];
 		$networks['Youtube']['link']    = $instance['youtube'];
-		$networks['Google+']['link']    = $instance['google'];
+		$networks['Google']['link']    = $instance['google'];
 
 		$networks['Twitter']['label']   = $instance['twitter_label'];
 		$networks['Facebook']['label']  = $instance['facebook_label'];
@@ -27,7 +27,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 		$networks['Linkedin']['label']  = $instance['linkedin_label'];
 		$networks['Delicious']['label'] = $instance['delicious_label'];
 		$networks['Youtube']['label']   = $instance['youtube_label'];
-		$networks['Google+']['label']   = $instance['google_label'];
+		$networks['Google']['label']   = $instance['google_label'];
 
 		// WPML compatibility
 		// Check if WPML is activated, then reigster labels for translation
@@ -55,7 +55,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 
 		<ul class="social <?php echo $addClass ?> unstyled">
 
-		<?php foreach(array("Facebook", "Twitter", "Flickr", "Feed", "Linkedin", "Delicious", "Youtube", "Google+") as $network) : ?>
+		<?php foreach(array("Facebook", "Twitter", "Flickr", "Feed", "Linkedin", "Delicious", "Youtube", "Google") as $network) : ?>
 			<?php if (!empty($networks[$network]['link'])) : ?>
 			<li class="social_li">
 				<a class="social_link social_link__<?php echo strtolower($network); ?>" rel="tooltip" data-original-title="<?php echo strtolower($networks[$network]['label']); ?>" href="<?php echo $networks[$network]['link']; ?>" target="_blank">
@@ -170,12 +170,12 @@ class My_SocialNetworksWidget extends WP_Widget {
 	</fieldset>
 
 	<fieldset style="border:1px solid #dfdfdf; padding:10px 10px 0; margin-bottom:1em;">
-		<legend style="padding:0 5px;"><?php _e('Google+', CHERRY_PLUGIN_DOMAIN); ?>:</legend>
+		<legend style="padding:0 5px;"><?php _e('Google', CHERRY_PLUGIN_DOMAIN); ?>:</legend>
 		<p>
-			<label for="<?php echo $this->get_field_id('google'); ?>"><?php _e('Google+ URL', CHERRY_PLUGIN_DOMAIN); ?>:</label>
+			<label for="<?php echo $this->get_field_id('google'); ?>"><?php _e('Google URL', CHERRY_PLUGIN_DOMAIN); ?>:</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('google'); ?>" name="<?php echo $this->get_field_name('google'); ?>" type="text" value="<?php echo esc_attr($google); ?>" /></p>
 		<p>
-			<label for="<?php echo $this->get_field_id('google_label'); ?>"><?php _e('Google+ label', CHERRY_PLUGIN_DOMAIN); ?>:</label>
+			<label for="<?php echo $this->get_field_id('google_label'); ?>"><?php _e('Google label', CHERRY_PLUGIN_DOMAIN); ?>:</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('google_label'); ?>" name="<?php echo $this->get_field_name('google_label'); ?>" type="text" value="<?php echo esc_attr($google_label); ?>" />
 		</p>
 	</fieldset>

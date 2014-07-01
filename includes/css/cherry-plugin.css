@@ -9,15 +9,10 @@
   border: none;
   list-style: none;
   /* Images Format Type */
-
   /* Quote Format Type */
-
   /* Link Format Type */
-
   /* Audio Format Type */
-
   /* Video Format Type */
-
 }
 .recent-posts_li {
   margin: 0 0 20px 20px;
@@ -426,6 +421,9 @@
   display: block;
   padding-top: 22px;
   padding-left: 40px;
+}
+.testimonials .testi-item .testi-meta .user:after {
+  content: ",";
 }
 /* Roundabout
 ---------------------------------------- */
@@ -1099,7 +1097,7 @@
 .comments-custom li {
   overflow: hidden;
   margin: 0;
-  padding: 25px 0 25px 0;
+  padding: 0 0 25px 0;
   border-bottom: none;
   background: none;
 }
@@ -1350,7 +1348,6 @@ iframe .uiHeader h3 {
 .content_box:before {
   left: -99%;
 }
-
 #maintenance_mode_notice {
   position: fixed;
   top: 0px;
@@ -1376,16 +1373,17 @@ iframe .uiHeader h3 {
 #under_construction_page #under_construction_logo .logo,
 #under_construction_page #under_construction_logo h1 {
   float: none;
+  width: 100%;
 }
 #under_construction_page #under_construction_description {
   clear: both;
 }
 #under_construction_page #under_construction_timer {
-  margin: 40px -20px 40px 0;
+  margin: 40px 0 40px -30px;
 }
 #under_construction_page #under_construction_timer .box {
   display: inline-block;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 #under_construction_page #under_construction_timer .box:first-child .numbers:before {
   content: '';
@@ -1393,6 +1391,11 @@ iframe .uiHeader h3 {
 #under_construction_page #under_construction_timer .box .lable {
   font-size: 16px;
   margin-top: 15px;
+}
+@media (max-width: 767px) {
+  #under_construction_page #under_construction_timer .box .lable {
+    font-size: 12px;
+  }
 }
 #under_construction_page #under_construction_timer .box .numbers {
   position: relative;
@@ -1405,6 +1408,12 @@ iframe .uiHeader h3 {
   font-size: 80px;
   line-height: 1.2em;
 }
+@media (max-width: 767px) {
+  #under_construction_page #under_construction_timer .box .numbers:before {
+    font-size: 25px;
+    left: -10px;
+  }
+}
 #under_construction_page #under_construction_timer .box .numbers span {
   font-size: 80px;
   line-height: 1.2em;
@@ -1415,8 +1424,25 @@ iframe .uiHeader h3 {
   display: inline-block;
   min-width: 44px;
 }
+@media (max-width: 767px) {
+  #under_construction_page #under_construction_timer .box .numbers span {
+    font-size: 25px;
+    padding: 0 7px;
+    min-width: inherit;
+  }
+}
+@media (max-width: 767px) {
+  #under_construction_page #under_construction_timer .box {
+    margin-left: 15px;
+  }
+}
 #under_construction_page #under_construction_timer .web_site_message {
   font-size: 40px;
+}
+@media (max-width: 767px) {
+  #under_construction_page #under_construction_timer {
+    margin-left: 15px;
+  }
 }
 div[id^="cherry_instagram_widget"] ul {
   margin: 0;
@@ -1544,17 +1570,17 @@ div[id^="cherry_instagram_widget"] .img_thumbnail ul li {
   }
 }
 /*.ie8{
-	div[id^="cherry_instagram_widget"]{
-		.img_likes{
-			i{
-				color: rgba(255, 0, 0);
+  div[id^="cherry_instagram_widget"]{
+    .img_likes{
+      i{
+        color: rgba(255, 0, 0);
 
-			}
-		}
-		.img_commetn_count{
-			i{
-				color: rgba(0, 122, 255);
-			}
-		}
-	}
+      }
+    }
+    .img_commetn_count{
+      i{
+        color: rgba(0, 122, 255);
+      }
+    }
+  }
 }*/

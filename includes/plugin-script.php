@@ -25,7 +25,7 @@
 	if ( !function_exists('cherry_include_script') ) {
 		function cherry_include_script(){
 			wp_deregister_script( 'flexslider' );
-			wp_register_script( 'flexslider', CHERRY_PLUGIN_URL . 'lib/js/FlexSlider/jquery.flexslider-min.js', array('jquery'), '2.2.0', true );
+			wp_register_script( 'flexslider', CHERRY_PLUGIN_URL . 'lib/js/FlexSlider/jquery.flexslider-min.js', array('jquery'), '2.2.2', true );
 			wp_enqueue_script( 'flexslider' );
 
 			wp_deregister_script( 'easing' );

@@ -5,7 +5,7 @@
  */
 if (!function_exists('posts_list_shortcode')) {
 
-	function posts_list_shortcode($atts, $content = null) {
+	function posts_list_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
 			'type'         => 'post',
 			'thumbs'       => '',
@@ -296,6 +296,9 @@ if (!function_exists('posts_list_shortcode')) {
 			} // end foreach
 			wp_reset_postdata(); // restore the global $post variable
 		$output .= '</div><!-- .posts-list (end) -->';
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode('posts_list', 'posts_list_shortcode');

@@ -3,7 +3,7 @@
  * Carousel OWL
  */
 if ( !function_exists('shortcode_carousel_owl') ) {
-	function shortcode_carousel_owl( $args ) {
+	function shortcode_carousel_owl( $atts, $content = null, $shortcodename = '' ) {
 		wp_enqueue_script( 'owl-carousel', CHERRY_PLUGIN_URL . 'lib/js/owl-carousel/owl.carousel.min.js', array('jquery'), '1.31', true );
 
 		extract( shortcode_atts( array(
@@ -204,6 +204,9 @@ if ( !function_exists('shortcode_carousel_owl') ) {
 
 		// Restore original Post Data
 		wp_reset_postdata();
+
+		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+
 		return $output;
 	}
 	add_shortcode( 'carousel_owl', 'shortcode_carousel_owl' );
