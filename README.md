@@ -1,7 +1,10 @@
 cherry_plugin
 =============
 
-Cherry Plugin contains all shortcodes used in Cherry Framework. Also Cherry Framework Import/Export features are also added by Cherry plugin. 
+Cherry Plugin contains all shortcodes used in Cherry Framework. Also Cherry Framework Import/Export features are also added by Cherry plugin.
+
+#### v1.2.3 ####
+* FIX: Reset to the previous columns.php file version
 
 #### v1.2.2 ####
 
@@ -70,14 +73,14 @@ Cherry Plugin contains all shortcodes used in Cherry Framework. Also Cherry Fram
 * Fix: import errors
 * Add: blocking files on upload
 * Fix: sorting errors
-* Add: widgets rewrite 
-* Add: widgets custom classes 
+* Add: widgets rewrite
+* Add: widgets custom classes
 * Fix: shortcode Elastislide
 * Add: styleswitcher
 * Add: plugin-under-construction-content rewrite in child theme
 * Add: plugin updater
 * Add: intagram widget
-* Upd: social widget 
+* Upd: social widget
 * Fix: fixes in social network widget
 * Add: banner widget
 * Upd: improvements in wpml-compatibility
