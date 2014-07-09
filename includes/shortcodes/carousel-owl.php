@@ -25,7 +25,7 @@ if ( !function_exists('shortcode_carousel_owl') ) {
 			'display_navs'       => 'yes',
 			'display_pagination' => 'yes',
 			'custom_class'       => ''
-		), $args) );
+		), $atts ) );
 
 		$random_ID          = uniqid();
 		$posts_count        = intval( $posts_count );
