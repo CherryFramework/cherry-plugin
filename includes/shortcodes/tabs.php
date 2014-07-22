@@ -22,8 +22,7 @@ if ( !function_exists('tabs_shortcode') ) {
 
 				for ( $i = 1; $i <= $num_tabs; $i++ ) {
 					$addclass = ($i == 1) ? 'active tab-' . $i : 'tab-' . $i ;
-					$link     = preg_replace("/\W/", "", strtolower($tab_menu['tab' . $i]) );
-					$nav_tabs .= '<li class="' . $addclass . '"><a href="#tab-' . $link . '-' . $id . '" data-toggle="tab">' . $tab_menu['tab' . $i] . '</a></li>';
+					$nav_tabs .= '<li class="' . $addclass . '"><a href="#tab-' . $i . '-' . $id . '" data-toggle="tab">' . $tab_menu['tab' . $i] . '</a></li>';
 				}
 			$nav_tabs .= '</ul>';
 
@@ -38,8 +37,7 @@ if ( !function_exists('tabs_shortcode') ) {
 					$addclass  = ($i == 1) ? 'in active' : '' ;
 					$find[]    = '[' . $key . ']';
 					$find[]    = '[/' . $key . ']';
-					$link      = preg_replace("/\W/", "", strtolower($tab_menu['tab' . $i]) );
-					$replace[] = '<div id="tab-' . $link . '-' . $id . '" class="tab-pane fade ' . $addclass . '">';
+					$replace[] = '<div id="tab-' . $i . '-' . $id . '" class="tab-pane fade ' . $addclass . '">';
 					$replace[] = '</div><!-- .tab (end) -->';
 					$i++;
 				}
