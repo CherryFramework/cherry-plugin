@@ -180,7 +180,7 @@
 					{text: 'Alert Box', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'alert_box', { title: 'Alert Box' } ); } },
 					{text: 'Well', onclick: function() { editor.execCommand( 'cherry_insert_immediate', false, 'well', { title: 'Well' } ); } },
 					{text: 'Small', onclick: function() { editor.execCommand( 'cherry_insert_immediate', false, 'small', { title: 'Small' } ); } },
-					{text: 'Title', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'title', { title: 'Title' } ); } },
+					{text: 'Title Box', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'title', { title: 'Title Box' } ); } },
 					{text: 'Template URL', onclick: function() { editor.execCommand( 'cherry_insert_self_immediate', false, 'template_url', { title: 'Template URL' } ); } },
 					{text: 'Sitemap', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'site_map', { title: 'Sitemap' } ); } }
 				]},

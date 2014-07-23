@@ -52,51 +52,66 @@ if (!function_exists('shortcode_small')) {
 }
 
 // Title Box
-if (!function_exists('title_shortcode')) {
+if ( !function_exists( 'title_shortcode' ) ) {
 	function title_shortcode( $atts, $content = null, $shortcodename = '' ) {
-		extract(shortcode_atts(
+		extract( shortcode_atts(
 			array(
 				'title'        => '',
 				'subtitle'     => '',
 				'icon'         => '',
-				'custom_class' => ''
-			), $atts));
+				'custom_class' => '',
+			), $atts ) );
 
-		// get site URL
-		$home_url = home_url();
+		$output = '<div class="title-box clearfix ' . $custom_class . '">';
 
-		$output =  '<div class="title-box clearfix '.$custom_class.'">';
+		// Icon.
+		if ( $icon != '' ) {
 
-		if ($icon!="") {
-			$icon_url = CHERRY_PLUGIN_URL . 'includes/images/' . strtolower($icon) . '.png' ;
-			if( defined ('CHILD_DIR') ) {
-				if(file_exists(CHILD_DIR.'/images/'.strtolower($icon).'.png')){
-					$icon_url = CHILD_URL.'/images/'.strtolower($icon).'.png';
-				}
+			// Gets the icon extension.
+			$icon_ext = pathinfo( $icon, PATHINFO_EXTENSION );
+
+			if ( empty( $icon_ext ) ) {
+				$icon .= '.png';
 			}
+
+			$icon_url = CHERRY_PLUGIN_URL . 'includes/images/' . strtolower( $icon );
+
+			if ( defined( 'CHILD_DIR' ) ) {
+
+				if ( file_exists( CHILD_DIR . '/images/' . strtolower( $icon ) ) ) {
+
+					$icon_url = CHILD_URL . '/images/' . strtolower( $icon );
+
+				}
+
+			}
+
 			$output .= '<span class="title-box_icon">';
-			$output .= '<img src="'.$icon_url.'" alt="" />';
+				$output .= '<img src="' . $icon_url . '" alt="" />';
 			$output .= '</span>';
+
 		}
 
-			$output .= '<h2 class="title-box_primary">';
+		// Title.
+		$output .= '<h2 class="title-box_primary">';
 			$output .= $title;
-			$output .= '</h2>';
+		$output .= '</h2>';
 
-		if ($subtitle!="") {
+		// Subtitle.
+		if ( $subtitle != '' ) {
 			$output .= '<h3 class="title-box_secondary">';
-			$output .= $subtitle;
+				$output .= $subtitle;
 			$output .= '</h3>';
 		}
 
 		$output .= '</div><!-- //.title-box -->';
-
 		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
-	add_shortcode('title_box', 'title_shortcode');
+	add_shortcode( 'title_box', 'title_shortcode' );
 }
+
 // Shortcode site map
 if (!function_exists('shortcode_site_map')) {
 	function shortcode_site_map( $atts, $content = null, $shortcodename = '' ) {
