@@ -315,13 +315,13 @@ var shortcode_generator_url = "<?php echo esc_url( CHERRY_PLUGIN_URL); ?>" + "ad
 
 			case 'text-replace':
 
-				var shortcode = "[" + frameworkShortcodeAtts.shortcode + f + "]" + (c ? c + "[/" + frameworkShortcodeAtts.shortcode + "]" : " ")
+				var shortcode = "[" + frameworkShortcodeAtts.shortcode + f + "]" + (c ? c + "[/" + frameworkShortcodeAtts.shortcode + "]" : "")
 
 			break;
 
 			default:
 
-				var shortcode = "[" + frameworkShortcodeAtts.shortcode + f + "]" + (c ? c + "[/" + frameworkShortcodeAtts.shortcode + "] " : " ")
+				var shortcode = "[" + frameworkShortcodeAtts.shortcode + f + "]" + (c ? c + "[/" + frameworkShortcodeAtts.shortcode + "]" : "")
 
 			break;
 

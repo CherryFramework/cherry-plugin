@@ -1,7 +1,9 @@
 jQuery(document).ready(function(){
-// ---------------------------------------------------------
-// OWL Carousel init
-// ---------------------------------------------------------
+	// OWL Carousel init.
+	cherryPluginCarouselInit();
+});
+
+function cherryPluginCarouselInit() {
 	jQuery('div[id^="owl-carousel-"]').each(function(){
 		var carousel = jQuery(this),
 			auto_play = parseInt(carousel.attr('data-auto-play'))<1 ? false : parseInt(carousel.attr('data-auto-play')),
@@ -25,4 +27,4 @@ jQuery(document).ready(function(){
 	})
 	jQuery('.owl-prev').addClass('icon-chevron-left');
 	jQuery('.owl-next').addClass('icon-chevron-right');
-});
+}
