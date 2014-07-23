@@ -304,7 +304,7 @@ if (!function_exists('shortcode_recent_posts')) {
 								var
 									jPlayerObj = jQuery("#jquery_jplayer_'. $id.'")
 								,	jPlayerContainer = jQuery("#jp_container_'. $id.'")
-								,	isPause = true	
+								,	isPause = true
 								;
 								jPlayerObj.jPlayer({
 									ready: function () {
@@ -693,22 +693,24 @@ if (!function_exists('shortcode_video_preview')) {
 	add_shortcode('video_preview', 'shortcode_video_preview');
 }
 
-/*   CONTENT_BOX_SHORTCODE    */
-if (!function_exists('content_box')) {
+// Content Box
+if ( !function_exists( 'content_box_shortcode' ) ) {
 	function content_box_shortcode( $atts, $content = null, $shortcodename = '' ) {
-		extract(shortcode_atts(array(
-				'custom_class'  => '',
-		), $atts));
-		$output = '<div class="content_box '.$custom_class.'">';
-		$output .= do_shortcode($content);
-		$output .= '<div class="clear"></div>';
+		extract( shortcode_atts(
+			array(
+				'custom_class' => '',
+		), $atts ) );
+
+		$output = '<div class="content_box ' . $custom_class . '">';
+			$output .= do_shortcode( $content );
+			$output .= '<div class="clear"></div>';
 		$output .= '</div><!-- .content_box (end) -->';
 
 		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
-	add_shortcode('content_box', 'content_box_shortcode');
+	add_shortcode( 'content_box', 'content_box_shortcode' );
 }
 
 if (!function_exists('parser_video_url')) {
