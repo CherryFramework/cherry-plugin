@@ -189,7 +189,8 @@
 				{text: 'Accordion', onclick: function() { editor.execCommand( 'cherry_insert_accordions', false, 'accordions', { title: 'Accordion' } ); } },
 				{text: 'Table', onclick: function() { editor.execCommand( 'cherry_insert_table', false, 'table', { title: 'Table' } ); } },
 				{text: 'Pricing Table', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'chp_pricing_table', { title: 'Pricing Table' } ); } },
-				{text: 'Google Map', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'map', { title: 'Google Map' } ); } }
+				{text: 'Google Map', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'map', { title: 'Google Map' } ); } },
+				{text: 'Google Map Api', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'google_map_api', { title: 'Google Map Api' } ); } }
 			]
 		});
 	}); // TinyMCE plugin end.

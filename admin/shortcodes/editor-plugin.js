@@ -920,6 +920,7 @@
 								a.addWithDialog(b,"Table","table");
 								a.addWithDialog(b,"Pricing Table","chp_pricing_table");
 								a.addWithDialog(b,"Google Map","map");
+								a.addWithDialog(b,"Google Map Api","google_map_api");
 
 							});
 
