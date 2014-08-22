@@ -10,7 +10,7 @@
 			wp_enqueue_style( 'flexslider' );
 			wp_enqueue_style( 'owl-carousel', CHERRY_PLUGIN_URL . 'lib/js/owl-carousel/owl.carousel.css', false, '1.24', 'all' );
 			wp_enqueue_style( 'owl-theme', CHERRY_PLUGIN_URL . 'lib/js/owl-carousel/owl.theme.css', false, '1.24', 'all' );
-			wp_enqueue_style( 'font-awesome', 'http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', false, '3.2.1', 'all' );
+			wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', false, '3.2.1', 'all' );
 
 			if ( is_rtl() ) {
 				wp_enqueue_style( 'cherry-plugin', CHERRY_PLUGIN_URL . 'includes/css/cherry-plugin-rtl.css', false, CHERRY_PLUGIN_VERSION, 'all' );
