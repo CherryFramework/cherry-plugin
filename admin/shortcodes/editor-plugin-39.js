@@ -14,8 +14,8 @@
 			var f=jQuery(window).width();
 			b=jQuery(window).height();
 			f=720<f?720:f;
-			f-=80;
-			b-=84;
+			f+=32;
+			b-=120;
 
 			tb_show( "Insert ["+ v +"] shortcode", "#TB_inline?width="+f+"&height="+b+"&inlineId=dialog" );
 		});
