@@ -14,8 +14,8 @@
 			var f=jQuery(window).width();
 			b=jQuery(window).height();
 			f=720<f?720:f;
-			f-=80;
-			b-=84;
+			f+=32;
+			b-=120;
 
 			tb_show( "Insert ["+ v +"] shortcode", "#TB_inline?width="+f+"&height="+b+"&inlineId=dialog" );
 		});
@@ -180,7 +180,7 @@
 					{text: 'Alert Box', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'alert_box', { title: 'Alert Box' } ); } },
 					{text: 'Well', onclick: function() { editor.execCommand( 'cherry_insert_immediate', false, 'well', { title: 'Well' } ); } },
 					{text: 'Small', onclick: function() { editor.execCommand( 'cherry_insert_immediate', false, 'small', { title: 'Small' } ); } },
-					{text: 'Title', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'title', { title: 'Title' } ); } },
+					{text: 'Title Box', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'title', { title: 'Title Box' } ); } },
 					{text: 'Template URL', onclick: function() { editor.execCommand( 'cherry_insert_self_immediate', false, 'template_url', { title: 'Template URL' } ); } },
 					{text: 'Sitemap', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'site_map', { title: 'Sitemap' } ); } }
 				]},
@@ -189,7 +189,8 @@
 				{text: 'Accordion', onclick: function() { editor.execCommand( 'cherry_insert_accordions', false, 'accordions', { title: 'Accordion' } ); } },
 				{text: 'Table', onclick: function() { editor.execCommand( 'cherry_insert_table', false, 'table', { title: 'Table' } ); } },
 				{text: 'Pricing Table', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'chp_pricing_table', { title: 'Pricing Table' } ); } },
-				{text: 'Google Map', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'map', { title: 'Google Map' } ); } }
+				{text: 'Google Map', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'map', { title: 'Google Map' } ); } },
+				{text: 'Google Map Api', onclick: function() { editor.execCommand( 'cherry_open_dialog', false, 'google_map_api', { title: 'Google Map Api' } ); } }
 			]
 		});
 	}); // TinyMCE plugin end.

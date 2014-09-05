@@ -68,6 +68,54 @@ if (!function_exists('map_shortcode')) {
 	}
 	add_shortcode('map', 'map_shortcode');
 }
+// google_api_map
+if ( !function_exists('google_map_api_shortcode') ) {
+	function google_map_api_shortcode( $atts, $content = null ) {
+		extract(shortcode_atts(array(
+				'lat_value'      => '41.850033'
+			,	'lng_value'      => '-87.6500523'
+			,	'zoom_value'     => '8'
+			,	'zoom_wheel'     => 'no'
+			,	'custom_class'  => ''
+		), $atts));
+
+		$random_id        = rand();
+		$lat_value        = floatval( $lat_value );
+		$lng_value        = floatval( $lng_value );
+		$zoom_value       = intval( $zoom_value );
+		$zoom_wheel       = $zoom_wheel=='yes' ? 'true' : 'false';
+
+		$output = '<div class="google-map-api '.$custom_class.'">';
+		$output .= '<div id="map-canvas-'.$random_id.'" class="gmap"></div>';
+		$output .= '</div>';
+		$output .= '<script type="text/javascript">
+				google_api_map_init_'.$random_id.'();
+				function google_api_map_init_'.$random_id.'(){
+					var map;
+					var coordData = new google.maps.LatLng(parseFloat('.$lat_value.'), parseFloat('.$lng_value.'));
+					var marker;
+
+					function initialize() {
+						var mapOptions = {
+							zoom: '.$zoom_value.',
+							center: coordData,
+							scrollwheel: '.$zoom_wheel.'
+						}
+						var map = new google.maps.Map(document.getElementById("map-canvas-'.$random_id.'"), mapOptions);
+						marker = new google.maps.Marker({
+							map:map,
+							draggable:true,
+							position: coordData
+						});
+					}
+					google.maps.event.addDomListener(window, "load", initialize);
+				}
+				
+		</script>';
+		return $output;
+	}
+	add_shortcode('google_map_api', 'google_map_api_shortcode');
+}
 
 // Dropcaps
 if (!function_exists('dropcap_shortcode')) {

@@ -911,7 +911,7 @@
 										a.addWithDialog(c,"Close icon","close");
 										a.addWithDialog(c,"Well","well");
 										a.addWithDialog(c,"Small","small");
-										a.addWithDialog(c,"Title","title");
+										a.addWithDialog(c,"Title Box","title");
 										a.addWithDialog(c,"Template URL","template_url");
 										a.addWithDialog(c,"Sitemap","site_map");
 								a.addWithDialog(b,"Video Preview","video_preview");
@@ -920,6 +920,7 @@
 								a.addWithDialog(b,"Table","table");
 								a.addWithDialog(b,"Pricing Table","chp_pricing_table");
 								a.addWithDialog(b,"Google Map","map");
+								a.addWithDialog(b,"Google Map Api","google_map_api");
 
 							});
 

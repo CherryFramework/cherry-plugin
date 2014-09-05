@@ -18,7 +18,8 @@
 
 		$mtc_options = get_option('mtc_options');
 		if(isset($mtc_options['mtc_mode_on'])){
-			if (current_user_can( 'administrator')) {
+			// if (current_user_can( 'administrator')) {
+			if ( is_user_logged_in() ) {
 				if(is_admin()){
 					if($pagenow != "admin.php"){
 						add_action( 'admin_notices', 'cherry_maintenance_mode_notice' );
