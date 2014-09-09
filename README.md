@@ -1,7 +1,10 @@
-cherry_plugin
+Cherry Plugin
 =============
 
-Cherry Plugin contains all shortcodes used in Cherry Framework. Also Cherry Framework Import/Export features are also added by Cherry plugin.
+Cherry Plugin contains all shortcodes and widgets used in Cherry Framework. Also Cherry Framework Import/Export features are also added by Cherry plugin.
+
+#### v1.2.5 ####
+* Not use `wptexturize` in content and excerpt. Removed temporary. (@link  https://core.trac.wordpress.org/ticket/29557)
 
 #### v1.2.4 ####
 * ADD: New google map api shortcode
