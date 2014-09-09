@@ -110,3 +110,12 @@
 		}
 		register_uninstall_hook(__FILE__, 'cherry_plugin_uninstall');
 	};
+/**
+ * Not use `wptexturize` in content and excerpt.
+ * Removed temporary.
+ *
+ * @since 1.2.4.1
+ * @link  https://core.trac.wordpress.org/ticket/29557
+ */
+remove_filter( 'the_content', 'wptexturize' );
+remove_filter( 'the_excerpt', 'wptexturize' );
