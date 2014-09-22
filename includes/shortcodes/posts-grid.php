@@ -21,12 +21,17 @@ if (!function_exists('posts_grid_shortcode')) {
 			'excerpt_count'   => '15',
 			'link'            => 'yes',
 			'link_text'       => __('Read more', CHERRY_PLUGIN_DOMAIN),
-			'custom_class'    => ''
+			'custom_class'    => '',
+			'include_posts'   => ''
 		), $atts));
 
 		$spans = $columns;
 		$rand  = rand();
-
+		
+		if (!empty($include_posts)) {
+			$include_posts = preg_split("/[\s,]+/", $include_posts);
+		}
+		
 		// columns
 		switch ($spans) {
 			case '1':
@@ -98,7 +103,8 @@ if (!function_exists('posts_grid_shortcode')) {
 				'numberposts'       => $numb,
 				'orderby'           => $order_by,
 				'order'             => $order,
-				'suppress_filters'  => $suppress_filters
+				'suppress_filters'  => $suppress_filters,
+				'include' 	    => $include_posts
 			);
 
 			$posts      = get_posts($args);
