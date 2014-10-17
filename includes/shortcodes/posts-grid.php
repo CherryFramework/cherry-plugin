@@ -276,7 +276,7 @@ if (!function_exists('posts_grid_shortcode')) {
 					$output .= cherry_get_post_networks(array('post_id' => $post_id, 'display_title' => false, 'output_type' => 'return'));
 					if($excerpt_count >= 1){
 						$output .= '<p class="excerpt">';
-							$output .= my_string_limit_words($excerpt,$excerpt_count);
+							$output .= wp_trim_words($excerpt,$excerpt_count);
 						$output .= '</p>';
 					}
 					if($link){

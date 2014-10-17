@@ -205,7 +205,7 @@ if (!function_exists('mini_posts_list_shortcode')) {
 							$output .= cherry_get_post_networks(array('post_id' => $post->ID, 'display_title' => false, 'output_type' => 'return'));
 							if($excerpt_count >= 1){
 								$output .= '<div class="excerpt">';
-									$output .= my_string_limit_words($excerpt,$excerpt_count);
+									$output .= wp_trim_words($excerpt,$excerpt_count);
 								$output .= '</div>';
 							}
 						$output .= '</div>';

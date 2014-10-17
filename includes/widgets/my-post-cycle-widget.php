@@ -142,7 +142,7 @@ class MY_CycleWidget extends WP_Widget {
 								if ( $show_excerpt ) {
 									if ( $excerpt_count > 0 ) { ?>
 										<p class="excerpt">
-											<?php echo my_string_limit_words( $excerpt, $excerpt_count ); ?>
+											<?php echo wp_trim_words( $excerpt, $excerpt_count ); ?>
 										</p>
 									<?php }
 								}
