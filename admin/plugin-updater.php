@@ -1,7 +1,8 @@
 <?php
-set_site_transient( 'update_plugins', null );
-add_filter( 'pre_set_site_transient_update_plugins', 'cherry_plugin_check_for_update' );
+// TEMP: Enable update check on every request. Normally you don't need this! This is for testing only!
+// set_site_transient( 'update_plugins', null );
 
+add_filter( 'pre_set_site_transient_update_plugins', 'cherry_plugin_check_for_update' );
 function cherry_plugin_check_for_update( $transient ) {
 	global $cherry_plugin_details_url;
 
@@ -35,11 +36,11 @@ function cherry_change_details_link() {
 }
 
 // Show notice in admin panel. Notice formed in xml file on server
-cherry_plugin_remote_query( array(
-								'data_type'   => 'notice',
-								'output_type' => 'notice',
-								)
-							);
+// cherry_plugin_remote_query( array(
+// 								'data_type'   => 'notice',
+// 								'output_type' => 'notice',
+// 								)
+// 							);
 
 // Remote query, function return any data of xml file on server
 function cherry_plugin_remote_query( $atts ) {
