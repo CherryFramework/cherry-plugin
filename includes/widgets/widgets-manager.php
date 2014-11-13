@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  *
  * Create widget showing manager
@@ -69,16 +69,20 @@ function clean_rules() {
 
 	// get all widgets names
 	$all_widgets = array();
-	$all_widgets_assoc = get_option('sidebars_widgets'); 
-	// iterate throug the sidebar widgets settings to get all active widgets names
-	foreach($all_widgets_assoc as $sidebar_name => $sidebar) {
-		// remember about wp_inactive_widgets and array_version fields!
-		if($sidebar_name != 'wp_inactive_widgets' && is_array($sidebar) && count($sidebar) > 0) {
-			foreach($sidebar as $widget_name) {
-				array_push($all_widgets, $widget_name);
+	$all_widgets_assoc = get_option( 'sidebars_widgets', array() );
+
+	if ( !empty( $all_widgets_assoc ) ) :
+		// iterate throug the sidebar widgets settings to get all active widgets names
+		foreach($all_widgets_assoc as $sidebar_name => $sidebar) {
+			// remember about wp_inactive_widgets and array_version fields!
+			if($sidebar_name != 'wp_inactive_widgets' && is_array($sidebar) && count($sidebar) > 0) {
+				foreach($sidebar as $widget_name) {
+					array_push($all_widgets, $widget_name);
+				}
 			}
 		}
-	}
+	endif;
+
 	// get the widget names from the exisitng settings
 	$widget_names = array_keys($options_type);
 	// check for the unexisting widgets
@@ -268,16 +272,16 @@ function cherry_dynamic_sidebar_params( $params ) {
 	$responsive   = get_option($themename . '_widget_responsive');
 	$custom_class = get_option($themename . '_widget_custom_class');
 
-	if ( !isset($responsive[$widget_id]) && !isset($custom_class[$widget_id]) ) 
+	if ( !isset($responsive[$widget_id]) && !isset($custom_class[$widget_id]) )
 		return $params;
 
 	$haystack_str = htmlspecialchars(stripslashes($params[0]['before_widget']), ENT_QUOTES);
 	$params[0]['before_widget'] = add_widget_class_attr($haystack_str);
 
-	if ( isset($custom_class[$widget_id]) && !empty($custom_class[$widget_id]) ) 
+	if ( isset($custom_class[$widget_id]) && !empty($custom_class[$widget_id]) )
 		$params[0]['before_widget'] = preg_replace( '/class="/', "class=\"{$custom_class[$widget_id]} ", $params[0]['before_widget'], 1 );
 
-	if ( isset($responsive[$widget_id]) && !empty($responsive[$widget_id]) ) 
+	if ( isset($responsive[$widget_id]) && !empty($responsive[$widget_id]) )
 	$params[0]['before_widget'] = preg_replace( '/class="/', "class=\"{$responsive[$widget_id]} ", $params[0]['before_widget'], 1 );
 
 	return $params;
@@ -299,7 +303,7 @@ function add_widget_class_attr($haystack_str) {
 
 add_action( 'sidebar_admin_setup', 'cherry_add_widget_control');
 function cherry_add_widget_control() {
-	global $wp_registered_widgets; 
+	global $wp_registered_widgets;
 	global $wp_registered_widget_controls;
 
 	$themename = 'cherry';
@@ -364,7 +368,7 @@ function cherry_add_widget_control() {
 	}
 }
 
-// function to add the widget control 
+// function to add the widget control
 function cherry_widget_control() {
 	// get the access to the registered widget controls
 	global $wp_registered_widget_controls;
@@ -453,7 +457,7 @@ function cherry_widget_control() {
 	$responsiveMode = !empty($responsive[$id]) ? htmlspecialchars(stripslashes($responsive[$id]),ENT_QUOTES) : '';
 	$usersMode      = !empty($users[$id]) ? htmlspecialchars(stripslashes($users[$id]),ENT_QUOTES) : '';
 
-	// 
+	//
 	// output the custom CSS class field
 	echo '<p class="custom_class"><label for="' . $themename . '_widget_custom_class_'.$id.'">'.__('Custom CSS class', CHERRY_PLUGIN_DOMAIN).': <input type="text" class="widefat" name="' . $themename . '_widget_custom_class_'.$id.'"  id="' . $themename . '_widget_custom_class_'.$id.'" value="'.$c_class.'" /></label></p>';
 	echo '
@@ -581,7 +585,7 @@ function check_widget_visibility($id) {
 	if ( (!isset($options[$id]) || $options[$id] == '') && (!isset($users[$id]) || $users[$id] == '') || $conditional_result === TRUE ) {
 		// return TRUE, because at lease one widget exists in the specific sidebar
 		$sidebar_flag = true;
-	} 
+	}
 	// set the state of the widget
 	$wp_registered_widgets[$id]['cherrystate'] = $conditional_result;
 
@@ -604,7 +608,7 @@ function cherry_condition($mode, $input, $users) {
 	// homepage,page:12,post:10,category:test,tag:test
 
 	$mode_output = '';
-	
+
 	if ( !empty($input) ) :
 		$mode_output = ' (';
 		if ( $mode == 'all' ) {
@@ -613,16 +617,16 @@ function cherry_condition($mode, $input, $users) {
 		} else if (( $mode == 'exclude' )) {
 			$mode_output = ' !(';
 		}
-		
+
 		if($mode != 'all') {
 			$input = substr($input, 1);
 			$input = explode(',', $input);
-			
+
 			for($i = 0; $i < count($input); $i++) {
 				if($i > 0) {
-					$mode_output .= '||'; 
+					$mode_output .= '||';
 				}
-				
+
 				if(stripos($input[$i], 'homepage') !== FALSE) {
 					$mode_output .= ' is_front_page() ';
 				} else if(stripos($input[$i], 'page:') !== FALSE) {
@@ -665,7 +669,7 @@ function cherry_condition($mode, $input, $users) {
 	}
 
 	$output = $mode_output . (($users_output == '') ? '' : $operator . $users_output );
-	
+
 	if ( $output == '' )
 		$output = ' TRUE';
 
