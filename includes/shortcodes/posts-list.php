@@ -256,7 +256,7 @@ if (!function_exists('posts_list_shortcode')) {
 						switch ($post_content){
 							case 'excerpt':
 								$output .= '<p class="excerpt">';
-									$output .= my_string_limit_words(get_the_excerpt(), 50);
+									$output .= wp_trim_words(get_the_excerpt(), 50);
 								$output .= '</p>';
 								break;
 							case 'content':

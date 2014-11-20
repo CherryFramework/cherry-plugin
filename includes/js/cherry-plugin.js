@@ -1,6 +1,20 @@
 jQuery(document).ready(function(){
 	// OWL Carousel init.
 	cherryPluginCarouselInit();
+
+	// Full-width block with left-right paddings.
+	jQuery('.content_box').wrapInner('<div class="full-block-wrap"></div>');
+	jQuery(window).resize(
+		function(){
+			var width_of_viewport = jQuery(window).width(),
+				half_width_of_viewport = width_of_viewport / 2,
+				width_of_container = jQuery('.content-holder > .container').width();
+
+			jQuery('.content_box').width(width_of_container);
+			jQuery('.content_box').css({'padding-left': half_width_of_viewport+'px', 'padding-right': half_width_of_viewport+'px', 'margin-left': '-'+half_width_of_viewport+'px'});
+			jQuery('.full-block-wrap').width(width_of_container);
+		}
+	).trigger('resize');
 });
 
 function cherryPluginCarouselInit() {

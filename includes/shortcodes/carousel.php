@@ -180,7 +180,7 @@ if ( !function_exists('shortcode_carousel') ) {
 
 								// post excerpt
 								if ( !empty($excerpt{0}) ) {
-									$output .= $excerpt_count > 0 ? '<p class="excerpt">' . my_string_limit_words( $excerpt, $excerpt_count ) . '</p>' : '';
+									$output .= $excerpt_count > 0 ? '<p class="excerpt">' . wp_trim_words( $excerpt, $excerpt_count ) . '</p>' : '';
 								}
 
 								// post more button

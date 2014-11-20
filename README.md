@@ -3,10 +3,22 @@ Cherry Plugin
 
 Cherry Plugin contains all shortcodes and widgets used in Cherry Framework. Also Cherry Framework Import/Export features are also added by Cherry plugin.
 
+
+#### v1.2.6 ####
+
+* FIX: `set_site_transient` for update_plugins
+* FIX: Replaced a double quote on a single quote in ru_RU.po file
+* UPD: Replaced using function for trims text
+* UPD: Changed a content_box shortcode logic
+
+
 #### v1.2.5 ####
+
 * Not use `wptexturize` in content and excerpt. Removed temporary. (@link  https://core.trac.wordpress.org/ticket/29557)
 
+
 #### v1.2.4 ####
+
 * ADD: New google map api shortcode
 * FIX: Shortcode dialog (changed sizes)
 * FIX: A wrong function_exists check for content_box shortcode
@@ -15,8 +27,11 @@ Cherry Plugin contains all shortcodes and widgets used in Cherry Framework. Also
 * UPD: Changed maintenance mode user rights
 * UPD: Rename title_box shortcode in wp-editor and edit description
 
+
 #### v1.2.3 ####
+
 * FIX: Reset to the previous columns.php file version
+
 
 #### v1.2.2 ####
 

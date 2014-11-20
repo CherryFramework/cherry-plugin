@@ -80,7 +80,7 @@ class MY_PostWidget extends WP_Widget {
 				<div class="excerpt">
 					<?php
 						$excerpt = get_the_excerpt();
-						echo my_string_limit_words($excerpt,$excerpt_count);
+						echo wp_trim_words($excerpt,$excerpt_count);
 					?>
 				</div>
 				<?php } ?>

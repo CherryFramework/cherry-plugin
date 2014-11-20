@@ -136,7 +136,7 @@ function widget($args, $instance) {
 		  <?php if ( $instance['excerpt_as_link'] ) : ?>
 				<a href="<?php the_permalink() ?>">
 			  <?php endif; ?>
-			<?php $excerpt = get_the_excerpt(); echo my_string_limit_words($excerpt,$limittext);?>
+			<?php $excerpt = get_the_excerpt(); echo wp_trim_words($excerpt,$limittext);?>
 		  <?php if ( $instance['excerpt_as_link'] ) : ?>
 				</a>
 			  <?php endif; ?>
