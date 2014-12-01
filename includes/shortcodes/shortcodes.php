@@ -698,10 +698,13 @@ if ( !function_exists( 'content_box_shortcode' ) ) {
 	function content_box_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		extract( shortcode_atts(
 			array(
+				'full_width' => 'no',
 				'custom_class' => '',
 		), $atts ) );
 
-		$output = '<div class="content_box ' . $custom_class . '">';
+		$full_width = ( $full_width == 'yes' ) ? 'full-width' : '';
+
+		$output = '<div class="content_box ' . $custom_class . ' ' . $full_width . '">';
 			$output .= do_shortcode( $content );
 			$output .= '<div class="clear"></div>';
 		$output .= '</div><!-- .content_box (end) -->';
