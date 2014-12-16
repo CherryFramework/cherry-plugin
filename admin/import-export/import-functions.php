@@ -699,7 +699,19 @@
 			'menu-item-status'      => $item['status']
 		);
 		$id = wp_update_nav_menu_item( $menu_id, 0, $args );
-		if ( $id && ! is_wp_error( $id ) ) $_SESSION['processed_menu_items'][intval($item['post_id'])] = (int) $id;
+		if ( $id && ! is_wp_error( $id ) ) {
+			$_SESSION['processed_menu_items'][intval($item['post_id'])] = (int) $id;
+			
+			/**
+			 * Save menu badges meta data if is WooCommerce template
+			 */
+			if ( isset($_cherry_woo_badge_text) ) {
+				update_post_meta( $id, '_cherry_woo_badge_text', $_cherry_woo_badge_text );
+			}
+			if ( isset($_cherry_woo_badge_type) ) {
+				update_post_meta( $id, '_cherry_woo_badge_type', $_cherry_woo_badge_type );
+			}
+		}
 	}
 	add_action('wp_ajax_import_attachment', 'cherry_plugin_import_attachment');
 	function cherry_plugin_import_attachment() {
