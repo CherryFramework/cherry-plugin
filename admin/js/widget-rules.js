@@ -58,7 +58,7 @@ jQuery(window).on('beforeunload', function() {
 jQuery(document).click(function(e) {
 	if(jQuery(e.target).hasClass('gk_widget_rules_btn')) {
 		var wrap = jQuery(e.target).next('.gk_widget_rules_wrapper');
-		
+
 		if(wrap.hasClass('active')) {
 			wrap.removeClass('active');
 			jQuery.cookie('gk_last_opened_widget_rules_wrap', 0, { expires: 365, path: '/' });
@@ -74,7 +74,7 @@ function gk_widget_control_init(id, inner) {
 	var allForms = jQuery('.gk_widget_rules_form'),
 		newest = null,
 		flag = 0;
-	
+
 	if(!inner) {
 		for(var i = 0; i < allForms.length; i++) {
 			if('#' + jQuery(allForms[i]).attr('id') == id) {
@@ -82,7 +82,7 @@ function gk_widget_control_init(id, inner) {
 				flag += 1;
 			}
 		}
-	
+
 		if(flag > 1) {
 			newest.attr('id', newest.attr('id') + '-' + Math.floor((Math.random() * 10000 + 1)));
 			newest.attr('data-state', 'uninitialized');
@@ -98,7 +98,7 @@ function gk_widget_control_init(id, inner) {
 				jQuery(document).unbind('mouseup', mouseUpEvent);
 			}, 250);
 		};
-		
+
 		jQuery(document).bind('mouseup', mouseUpEvent);
 	} else {
 		gk_widget_control_init_events(id, inner);
@@ -107,16 +107,16 @@ function gk_widget_control_init(id, inner) {
 // function to init form event
 function gk_widget_control_init_events(id, inner) {
 	var form = jQuery(id);
-	
+
 	// if(inner) {
 	// 	form.parent().find('select:last-child').css('opacity', '0.5');
-		
+
 	// 	setTimeout(function() {
 	// 		var btn = form.parent().parent().parent().find('*[name="savewidget"]');
 	// 		btn.click();
 	// 	}, 1000);
 	// }
-	
+
 	if(form.attr('data-state') !== 'initialized') {
 		form.attr('data-state', 'initialized');
 		var firstSelect = form.parent().find('.gk_widget_rules_select'),
@@ -134,7 +134,7 @@ function gk_widget_control_init_events(id, inner) {
 		// change event
 		firstSelect.change(function() {
 			var value = firstSelect.children('option:selected').val();
-			
+
 			if(value == 'all') {
 				form.css('display', 'none');
 			} else {
@@ -146,7 +146,7 @@ function gk_widget_control_init_events(id, inner) {
 		// add onChange event to the selectbox
 		select.change(function() {
 			var value = select.children('option:selected').val()
-			
+
 			if(value == 'homepage' || value == 'page404' || value == 'search' || value == 'archive') {
 				page.css('display', 'none');
 				post.css('display', 'none');
@@ -194,10 +194,10 @@ function gk_widget_control_init_events(id, inner) {
 		// add the onClick event to the button
 		btn.click(function(event) {
 			event.preventDefault();
-			
-			var output = form.find('.gk_widget_rules_output');
-			var value = select.children('option:selected').val()
-			
+
+			var output = form.find('.gk_widget_rules_output'),
+				value = select.children('option:selected').val();
+
 			if(value == 'homepage') {
 				output.val(output.val() + ',homepage');
 			} else if(value == 'search') {
@@ -217,37 +217,37 @@ function gk_widget_control_init_events(id, inner) {
 			} else if(value == 'author:') {
 				output.val(output.val() + ',author:' + form.find('.gk_widget_rules_form_input_author').val());
 			}
-			
+
 			gk_widget_control_refresh(form);
 		});
 		// event to remove the page tags
 		form.find('.gk_widget_rules_pages div').click(function(event) {
 			if(event.target.nodeName.toLowerCase() == 'strong') {
-				var output = form.find('.gk_widget_rules_output');
-				var parent = jQuery(event.target).parent();
+				var output = form.find('.gk_widget_rules_output'),
+					parent = jQuery(event.target).parent();
 				parent.find('strong').remove();
 				var text = parent.text();
-				
+
 				if(text == 'All pages') text = 'page:';
-				else if(text == 'All posts pages') text = 'post';
+				else if(text == 'All posts pages') text = 'post:';
 				else if(text== 'All category pages') text = 'category:';
 				else if(text == 'All tag pages') text = 'tag:';
 				else if(text == 'All author pages') text = 'author:';
-				
+
 				output.val(output.val().replace("," + text, ""));
 				gk_widget_control_refresh(form);
 			}
 		});
-		// event to display the custom CSS class field 
+		// event to display the custom CSS class field
 		var selectStyles = jQuery(document).find('.gk_widget_rules_select_styles');
 		selectStyles.each(function(i, select) {
 			select = jQuery(select);
-			
+
 			if(!select.hasClass('initialized')) {
 				select.change(function() {
 					var value = select.children('option:selected').val();
 					var field = select.parent().parent().next('p');
-					
+
 					if(value != 'gkcustom') {
 						if(!field.hasClass('gk-unvisible')) {
 							field.addClass('gk-unvisible');
@@ -256,9 +256,9 @@ function gk_widget_control_init_events(id, inner) {
 						if(field.hasClass('gk-unvisible')) {
 							field.removeClass('gk-unvisible');
 						}
-					} 
+					}
 				});
-				
+
 				select.addClass('initialized');
 			}
 		});
@@ -271,14 +271,14 @@ function gk_widget_control_refresh(form) {
 	if(output.length > 0) {
 		var list = form.find('.gk_widget_rules_pages div');
 		list.html('');
-		var pages = output.val().split(',');
-		var pages_exist = false;
-		
+		var pages = output.val().split(','),
+			pages_exist = false;
+
 		for(var i = 0; i < pages.length; i++) {
 			if(pages[i] != '') {
 				pages_exist = true;
 				var type = 'homepage';
-				
+
 				if(pages[i].substr(0,5) == 'page:') type = 'page';
 				else if(pages[i].substr(0,5) == 'post:') type = 'post';
 				else if(pages[i].substr(0,9) == 'category:') type = 'category';
@@ -287,15 +287,15 @@ function gk_widget_control_refresh(form) {
 				else if(pages[i].substr(0,7) == 'author:') type = 'author';
 				else if(pages[i].substr(0,7) == 'page404') type = 'page404';
 				else if(pages[i].substr(0,6) == 'search') type = 'search';
-				
+
 				var out = pages[i];
-				
+
 				if(out == 'page:') out = 'All pages';
 				else if(out == 'post:') out = 'All posts pages';
 				else if(out == 'category:') out = 'All category pages';
 				else if(out == 'tag:') out = 'All tag pages';
 				else if(out == 'author:') out = 'All author pages';
-				
+
 				list.html(list.html() + "<span class="+type+">"+out+"<strong>&times;</strong></span>");
 			}
 		}

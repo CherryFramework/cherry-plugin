@@ -69,20 +69,16 @@ function clean_rules() {
 
 	// get all widgets names
 	$all_widgets = array();
-	$all_widgets_assoc = get_option( 'sidebars_widgets', array() );
-
-	if ( !empty( $all_widgets_assoc ) ) :
-		// iterate throug the sidebar widgets settings to get all active widgets names
-		foreach($all_widgets_assoc as $sidebar_name => $sidebar) {
-			// remember about wp_inactive_widgets and array_version fields!
-			if($sidebar_name != 'wp_inactive_widgets' && is_array($sidebar) && count($sidebar) > 0) {
-				foreach($sidebar as $widget_name) {
-					array_push($all_widgets, $widget_name);
-				}
+	$all_widgets_assoc = get_option('sidebars_widgets');
+	// iterate throug the sidebar widgets settings to get all active widgets names
+	foreach($all_widgets_assoc as $sidebar_name => $sidebar) {
+		// remember about wp_inactive_widgets and array_version fields!
+		if($sidebar_name != 'wp_inactive_widgets' && is_array($sidebar) && count($sidebar) > 0) {
+			foreach($sidebar as $widget_name) {
+				array_push($all_widgets, $widget_name);
 			}
 		}
-	endif;
-
+	}
 	// get the widget names from the exisitng settings
 	$widget_names = array_keys($options_type);
 	// check for the unexisting widgets
