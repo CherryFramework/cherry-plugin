@@ -4,17 +4,20 @@ jQuery(document).ready(function(){
 
 	// Full-width block with left-right paddings.
 	jQuery('.content_box.full-width').wrapInner('<div class="full-block-wrap"></div>');
-	jQuery(window).resize(
-		function(){
-			var width_of_viewport = jQuery(window).width(),
-				half_width_of_viewport = width_of_viewport / 2,
-				width_of_container = jQuery('.content-holder > .container').width();
+	jQuery(window).resize( function(){
+		contenBoxResizeFunction();
+	});
 
-			jQuery('.content_box.full-width').width(width_of_container);
-			jQuery('.content_box.full-width').css({'padding-left': half_width_of_viewport+'px', 'padding-right': half_width_of_viewport+'px', 'margin-left': '-'+half_width_of_viewport+'px'});
-			jQuery('.full-block-wrap').width(width_of_container);
-		}
-	).trigger('resize');
+	contenBoxResizeFunction();
+	function contenBoxResizeFunction(){
+		var width_of_viewport = jQuery(window).width(),
+			half_width_of_viewport = width_of_viewport / 2,
+			width_of_container = jQuery('.content-holder > .container').width();
+
+		jQuery('.content_box.full-width').width(width_of_container);
+		jQuery('.content_box.full-width').css({'padding-left': half_width_of_viewport+'px', 'padding-right': half_width_of_viewport+'px', 'margin-left': '-'+half_width_of_viewport+'px'});
+		jQuery('.full-block-wrap').width(width_of_container);
+	}
 });
 
 function cherryPluginCarouselInit() {
