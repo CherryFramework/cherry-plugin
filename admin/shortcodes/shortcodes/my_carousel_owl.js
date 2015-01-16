@@ -13,7 +13,7 @@ frameworkShortcodeAtts={
 			{
 				label:"Which category to pull from?",
 				id:"categories",
-				help:"Enter the slug of the category you'd like to pull posts from. Leave blank if you'd like to pull from all categories."
+				help:"Enter the name of the category you'd like to pull posts from. Leave blank if you'd like to pull from all categories."
 			},
 			{
 				label:"How many posts to show?",
