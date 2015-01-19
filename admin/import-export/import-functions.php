@@ -6,7 +6,7 @@
 		$json_file = isset($_POST['file']) ? $_POST['file'] : 'false' ;
 
 		$json = file_get_contents(UPLOAD_DIR.$json_file);
-		
+
 		$upload_dir = wp_upload_dir();
 		$upload_dir = $upload_dir['url'];
 		$cut_upload_dir = substr($upload_dir, strpos($upload_dir, 'wp-content/uploads'), strlen($upload_dir)-1);
@@ -48,7 +48,7 @@
 		if ( !is_array($users) ) {
 			$users = array();
 		}
-		
+
 		if(!empty($rules_data)) {
 			$new = array('widget_responsive');
 			foreach($rules_data as $key => $value) {
@@ -187,7 +187,7 @@
 
 		$_SESSION = array();
 		do_action( 'cherry_plugin_import_xml' );
-	
+
 		add_filter( 'import_post_meta_key', 'cherry_plugin_is_valid_meta_key' );
 
 		$xml_file = isset($_POST['file']) ? $_POST['file'] : 'false' ;
@@ -378,7 +378,7 @@
 				continue;
 			}
 		}
-	
+
 		unset($_SESSION['terms']);
 		exit('import_posts');
 	}
@@ -402,7 +402,7 @@
 		$posts_array = $_SESSION['posts'];
 		$posts_array = apply_filters( 'wp_import_posts', $posts_array );
 		$attachment_posts = array();
-		
+
 		foreach ( $posts_array as $post ) {
 			$post = apply_filters( 'wp_import_post_data_raw', $post );
 
@@ -701,7 +701,7 @@
 		$id = wp_update_nav_menu_item( $menu_id, 0, $args );
 		if ( $id && ! is_wp_error( $id ) ) {
 			$_SESSION['processed_menu_items'][intval($item['post_id'])] = (int) $id;
-			
+
 			/**
 			 * Save menu badges meta data if is WooCommerce template
 			 */
@@ -737,21 +737,21 @@
 				$post = apply_filters( 'wp_import_post_data_raw', $post );
 
 				$postdata = array(
-					'import_id' => $post['post_id'], 
-					'post_author' => $author, 
+					'import_id' => $post['post_id'],
+					'post_author' => $author,
 					'post_date' => $post['post_date'],
-					'post_date_gmt' => $post['post_date_gmt'], 
+					'post_date_gmt' => $post['post_date_gmt'],
 					'post_content' => $post['post_content'],
-					'post_excerpt' => $post['post_excerpt'], 
+					'post_excerpt' => $post['post_excerpt'],
 					'post_title' => $post['post_title'],
-					'post_status' => $post['status'], 
+					'post_status' => $post['status'],
 					'post_name' => $post['post_name'],
-					'comment_status' => $post['comment_status'], 
+					'comment_status' => $post['comment_status'],
 					'ping_status' => $post['ping_status'],
-					'guid' => $post['guid'], 
-					/*'post_parent' => $post_parent,*/ 
+					'guid' => $post['guid'],
+					/*'post_parent' => $post_parent,*/
 					'menu_order' => $post['menu_order'],
-					'post_type' => $post['post_type'], 
+					'post_type' => $post['post_type'],
 					'post_password' => $post['post_password']
 				);
 
@@ -967,7 +967,7 @@
 			$cut_upload_dir = substr($upload_dir, strpos($upload_dir, 'wp-content/uploads'), strlen($upload_dir)-1);
 			$cut_date_upload_dir = '<![CDATA['.substr($upload_dir, strpos($upload_dir, 'wp-content/uploads')+19, strlen($upload_dir)-1);
 			$cut_date_upload_dir_2 = "\"".substr($upload_dir, strpos($upload_dir, 'wp-content/uploads')+19, strlen($upload_dir)-1);
-			
+
 			$pattern = '/wp-content\/uploads\/\d{4}\/\d{2}/i';
 			$patternCDATA = '/<!\[CDATA\[\d{4}\/\d{2}/i';
 			$pattern_meta_value = '/("|\')\d{4}\/\d{2}/i';
@@ -1047,7 +1047,7 @@
 		update_option( 'permalink_structure', $permalink_structure );
 		$wp_rewrite->set_permalink_structure( $permalink_structure );
 		$wp_rewrite->flush_rules();
-		
+
 
 		//activate plugin form
 		$plugin_path = WP_PLUGIN_DIR.'/contact-form-7/wp-contact-form-7.php';

@@ -16,6 +16,8 @@ function cherry_load_widgets() {
 		'MY_CycleWidget'          => 'my-post-cycle-widget.php',
 		'Cherry_Instagram_Widget' => 'cherry-instagram-widget.php',
 		'Cherry_Banner_Widget'    => 'cherry-banner-widget.php',
+		'Cherry_Twitter_Embed_Widget'     => 'cherry-twitter-embed-widget.php',
+		'Cherry_Pinterest_Embed_Widget'     => 'cherry-pinterest-embed-widget.php',
 	);
 	foreach ( $widget_files as $class_name => $file_name ) {
 		$widget_dir = file_exists( CURRENT_THEME_DIR . '/includes/widgets/' . $file_name ) ? CURRENT_THEME_DIR . '/includes/widgets/' . $file_name : CHERRY_PLUGIN_DIR . 'includes/widgets/' . $file_name ;
