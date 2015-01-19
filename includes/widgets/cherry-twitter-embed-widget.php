@@ -11,7 +11,6 @@ $error = array();
 		public function widget($args, $instance) {
 			extract(array_merge($args , $instance));
 
-			$url = strtolower(esc_html($url));
 			$lang = get_bloginfo('language');
 
 			$output = $before_widget;
@@ -25,9 +24,7 @@ $error = array();
 			}
 			$output .= $after_widget;
 
-			if( !wp_is_mobile() ) {
-				echo $output;
-			}
+			echo $output;
 		}
 
 		/** @see WP_Widget::update */
@@ -62,7 +59,7 @@ $error = array();
 				'color_scheme' => 'light',
 				'error' => ''
 			);
-			
+
 			extract(array_merge($defaults, $instance));
 
 			$form_field_type = array(
@@ -72,18 +69,18 @@ $error = array();
 				'color_scheme' => array('type' => 'select', 'class' => 'widefat', 'inline_style' => '', 'title' => __('Color Scheme', CHERRY_PLUGIN_DOMAIN), 'description' => '', 'value' => $color_scheme, 'value_options' => array('light' => __('Light', CHERRY_PLUGIN_DOMAIN), 'dark' => __('Dark', CHERRY_PLUGIN_DOMAIN)) ),
 			);
 			$output = '';
-			
-			$title = esc_attr($instance['title']);
 
-			if ($instance['error']) {
-				$output .= '<div style="margin:20px 0 15px;padding:10px;background:#ff9b9b">'.$instance['error'].'</div>';
+			$title = esc_attr($title);
+
+			if ($error) {
+				$output .= '<div style="margin:20px 0 15px;padding:10px;background:#ff9b9b">'.$error.'</div>';
 			}
 
 			foreach ($form_field_type as $key => $args) {
 
 				$field_id = esc_attr($this->get_field_id($key));
 				$field_name = esc_attr($this->get_field_name($key));
-				
+
 				$field_class = $args['class'];
 				$field_title = $args['title'];
 				$field_description = $args['description'];

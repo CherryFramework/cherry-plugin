@@ -20,7 +20,7 @@ $error = array();
 			if($instance['error'] === '') {
 				$output .= '<div id="pin-container">
 								<script type="text/javascript">
-									
+
 									jQuery(document).ready(function() {
 										var boardWidth, scaleWidth;
 
@@ -28,12 +28,10 @@ $error = array();
 											function(){
 												boardWidth = jQuery("#pin-container").width();
 												scaleWidth = Math.floor(boardWidth/4.1111);
-
-												console.log(boardWidth+" "+scaleWidth);
 											}
 										).trigger(\'resize\');
 									});
-									
+
 								</script>
 								<a data-pin-do="embedUser" href="'.$url.'"></a>
 								<script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
@@ -42,10 +40,8 @@ $error = array();
 				$output .= '<div style="margin:20px 0 15px;padding:10px;background:#ff9b9b">'.__('There is some errors. Please check widgets page.', CHERRY_PLUGIN_DOMAIN).'</div>';
 			}
 			$output .= $after_widget;
-			
-			if( !wp_is_mobile() ) {
-				echo $output;
-			}
+
+			echo $output;
 		}
 
 		/** @see WP_Widget::update */
@@ -74,7 +70,7 @@ $error = array();
 				'url' => '',
 				'error' => ''
 			);
-			
+
 			extract(array_merge($defaults, $instance));
 
 			$form_field_type = array(
@@ -82,18 +78,18 @@ $error = array();
 				'url' => array('type' => 'text', 'class' => 'widefat', 'inline_style' => '', 'title' => __('Pinterest User URL', CHERRY_PLUGIN_DOMAIN), 'description' => __('Enter Pinterest User URL.', CHERRY_PLUGIN_DOMAIN), 'value' => $url),
 			);
 			$output = '';
-			
-			$title = esc_attr($instance['title']);
 
-			if ($instance['error']) {
-				$output .= '<div style="margin:20px 0 15px;padding:10px;background:#ff9b9b">'.$instance['error'].'</div>';
+			$title = esc_attr($title);
+
+			if ($error) {
+				$output .= '<div style="margin:20px 0 15px;padding:10px;background:#ff9b9b">'.$error.'</div>';
 			}
 
 			foreach ($form_field_type as $key => $args) {
 
 				$field_id = esc_attr($this->get_field_id($key));
 				$field_name = esc_attr($this->get_field_name($key));
-				
+
 				$field_class = $args['class'];
 				$field_title = $args['title'];
 				$field_description = $args['description'];
