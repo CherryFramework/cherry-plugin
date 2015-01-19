@@ -4,7 +4,7 @@ $error = array();
 
 		/* constructor */
 		public function Cherry_Twitter_Embed_Widget() {
-			parent::WP_Widget(false, __('Cherry - Twitter Embed Widget', CHERRY_PLUGIN_DOMAIN), array('description' => __('Widget for Twitter embed content', CHERRY_PLUGIN_DOMAIN)));
+			parent::WP_Widget(false, __('Cherry - Twitter Widget', CHERRY_PLUGIN_DOMAIN), array('description' => __('Widget for Twitter embed content', CHERRY_PLUGIN_DOMAIN)));
 		}
 
 		/** @see WP_Widget::widget */
@@ -56,9 +56,9 @@ $error = array();
 		/** @see WP_Widget::form */
 		public function form($instance) {
 			$defaults = array(
-				'title' => 'Twitter Widget',
-				'widgetId' => '537242496188026880',
-				'userName' => 'templatehelpcom',
+				'title' => '',
+				'widgetId' => '',
+				'userName' => '',
 				'color_scheme' => 'light',
 				'error' => ''
 			);

@@ -4,7 +4,7 @@ $error = array();
 
 		/* constructor */
 		public function Cherry_Pinterest_Embed_Widget() {
-			parent::WP_Widget(false, __('Cherry - Pinterest Embed Widget', CHERRY_PLUGIN_DOMAIN), array('description' => __('Widget for Pinterest embed content', CHERRY_PLUGIN_DOMAIN)));
+			parent::WP_Widget(false, __('Cherry - Pinterest Widget', CHERRY_PLUGIN_DOMAIN), array('description' => __('Widget for Pinterest embed content', CHERRY_PLUGIN_DOMAIN)));
 		}
 
 		/** @see WP_Widget::widget */
@@ -70,8 +70,8 @@ $error = array();
 		/** @see WP_Widget::form */
 		public function form($instance) {
 			$defaults = array(
-				'title' => 'Pinterest Widget',
-				'url' => 'http://www.pinterest.com/templatemonster/',
+				'title' => '',
+				'url' => '',
 				'error' => ''
 			);
 			
