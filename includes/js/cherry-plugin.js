@@ -36,10 +36,7 @@ function cherryPluginCarouselInit() {
 			pagination: display_pagination,
 			navigationText: false,
 			autoHeight: auto_height,
-			itemsDesktop: [1170, 5],
-			itemsDesktopSmall: [980, 4],
-			itemsTablet: [768, 3],
-			itemsMobile: [480, 2]
+			itemsCustom: items_custom
 		});
 	})
 	jQuery('.owl-prev').addClass('icon-chevron-left');
