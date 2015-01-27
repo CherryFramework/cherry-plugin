@@ -27,11 +27,14 @@ function cherryPluginCarouselInit() {
 			items_count = parseInt(carousel.attr('data-items')),
 			display_navs = carousel.attr('data-nav')=='true' ? true : false,
 			display_pagination = carousel.attr('data-pagination')=='true' ? true : false,
-			auto_height = items_count<=1 ? true : false;
+			auto_height = items_count<=1 ? true : false,
+			keys = Object.keys(items_custom),
+			last_key = keys[keys.length-1];
+
+		items_custom[last_key] = [items_custom[last_key][0], items_count];
 
 		jQuery(carousel).owlCarousel({
 			autoPlay: auto_play,
-			items: items_count,
 			navigation: display_navs,
 			pagination: display_pagination,
 			navigationText: false,
