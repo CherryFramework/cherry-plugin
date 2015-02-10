@@ -47,10 +47,14 @@
 			cherry_plugin_delete_file($xml_file);
 		}
 
+		$nonce = wp_create_nonce( 'cherry_plugin_download_content' );
+
+		$file_url = add_query_arg( array( 'action' => 'cherry_plugin_get_export_file', 'file' => $zip_name, '_wpnonce' => $nonce ), admin_url( 'admin-ajax.php' ) );
+
 		if ($result == 0) {
 			$response['data'] = "Error : ".$zip->errorInfo(true);
 		}else{
-			$response_file['data'] = $zip_name;
+			$response_file['data'] = $file_url;
 		}
 
 		$xmlResponse = new WP_Ajax_Response($response);

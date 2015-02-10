@@ -7,7 +7,9 @@
 	//xml parser class
 	include_once (CHERRY_PLUGIN_DIR . 'lib/php/parsers.php');
 
-	//import ajax function
+	//import/export ajax function
+	include_once (CHERRY_PLUGIN_DIR . 'admin/import-export/upload.php');
+	include_once (CHERRY_PLUGIN_DIR . 'admin/import-export/download-content.php');
 	include_once (CHERRY_PLUGIN_DIR . 'admin/import-export/import-functions.php');
 	include_once (CHERRY_PLUGIN_DIR . 'admin/import-export/export-functions.php');
 

@@ -16,9 +16,11 @@
 	} else {
 		$upload_size_unit = (int) $upload_size_unit;
 	}
-	$upload_dir = wp_upload_dir();
-	$upload_dir = $upload_dir['path'].'/';
-	$action_url = CHERRY_PLUGIN_URL.'admin/import-export/upload.php?upload_dir='.str_replace("\\", "/", $upload_dir);
+
+	$upload_dir   = wp_upload_dir();
+	$upload_dir   = trailingslashit( $upload_dir['path'] );
+	$upload_nonce = wp_create_nonce( 'cherry_plugin_upload' );
+	$action_url   = add_query_arg( array( 'action' => 'cherry_import_files', 'dir' => urlencode( $upload_dir ), '_wpnonce' => $upload_nonce ), admin_url( 'admin-ajax.php' ) );
 
 	add_thickbox();
 	echo cherry_plugin_help_import_popup();

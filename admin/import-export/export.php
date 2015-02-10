@@ -9,10 +9,10 @@
 			jQuery.post(ajaxurl, {action: 'export_content'}, function(response) {
 				var res = wpAjax.parseAjaxResponse(response, "ajax-response");
 				if(!res.errors){
-					var file = res.responses[1].data,
+					var file_url = res.responses[1].data,
 						status = res.responses[0].data;
-					if(file.indexOf('.zip')!=-1){
-						window.location.href = '<?php echo (CHERRY_PLUGIN_URL."admin/import-export/download-content.php"); ?>?file=' + file;
+					if ( file_url.indexOf('.zip')!=-1 ) {
+						window.location.href = file_url;
 					}
 				}else{
 					//console.log('error 1');
