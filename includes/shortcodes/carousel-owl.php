@@ -90,9 +90,11 @@ if ( !function_exists('shortcode_carousel_owl') ) {
 
 		// The Query
 		$carousel_query = new WP_Query( $args );
+		$output = '';
+
 		if ( $carousel_query->have_posts() ) :
 
-			$output = '<div class="carousel-wrap ' . $custom_class . '">';
+			$output .= '<div class="carousel-wrap ' . $custom_class . '">';
 				$output .= $title ? '<h2>' . $title . '</h2>' : '';
 				$output .= '<div id="owl-carousel-' . $random_ID . '" class="owl-carousel-' . $post_type . ' owl-carousel" data-items="' . $visibility_items . '" data-auto-play="' . $auto_play . '" data-nav="' . $display_navs . '" data-pagination="' . $display_pagination . '">';
 

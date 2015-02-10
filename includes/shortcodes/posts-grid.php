@@ -101,11 +101,17 @@ if (!function_exists('posts_grid_shortcode')) {
 				'suppress_filters'  => $suppress_filters
 			);
 
-			$posts      = get_posts($args);
+			$posts = get_posts( $args );
+
+			if ( empty( $posts ) ) {
+				wp_reset_postdata();
+				return;
+			}
+
 			$i          = 0;
 			$count      = 1;
 			$output_end = '';
-			$countul = 0;
+			$countul    = 0;
 
 			if ($numb > count($posts)) {
 				$output_end = '</ul>';
