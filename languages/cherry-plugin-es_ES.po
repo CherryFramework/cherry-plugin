@@ -1,208 +1,40 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: es_ES\n"
-"POT-Creation-Date: 2014-02-25 10:49+0200\n"
-"PO-Revision-Date: 2014-03-03 15:09+0200\n"
-"Last-Translator: Alex Ross <alex@template-telp.com>\n"
-"Language-Team:  <demolink@info.org>\n"
+"POT-Creation-Date: 2015-02-11 16:07+0200\n"
+"PO-Revision-Date: 2015-02-11 16:07+0200\n"
+"Last-Translator: \n"
+"Language-Team: Cherry Team <demolink@info.org>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.7.1\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ./\n"
-"Language: es_ES\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../admin/admin.php:28
+#: ../admin/admin.php:30
 msgid "Cherry plugin"
 msgstr "Cherry plugin"
 
-#: ../admin/admin.php:31 ../admin/admin.php:52
+#: ../admin/admin.php:33 ../admin/admin.php:54
 msgid "Summary"
 msgstr "Resumen"
 
-#: ../admin/admin.php:34 ../admin/plugin-maintenance-mode.php:57
+#: ../admin/admin.php:36 ../admin/plugin-maintenance-mode.php:57
 #: ../admin/plugin-pages.php:100
 msgid "Maintenance Mode"
 msgstr "Modo de Mantenimiento"
 
-#: ../admin/admin.php:37
+#: ../admin/admin.php:39
 msgid "Import Content"
 msgstr "Importar Contenidos"
 
-#: ../admin/admin.php:40 ../admin/import-export/export.php:30
+#: ../admin/admin.php:42 ../admin/import-export/export.php:30
 msgid "Export Content"
 msgstr "Exportar Contenidos"
-
-#: ../admin/plugin-components.php:36
-msgid "Documentation"
-msgstr "Documentación"
-
-#: ../admin/plugin-components.php:37
-msgid "Support"
-msgstr "Soporte"
-
-#: ../admin/plugin-function.php:5
-msgid "Remove Inactive Widgets"
-msgstr "Remover Widgets Inactivos"
-
-#: ../admin/plugin-function.php:23
-msgid "CTRL+A (Command-A) to select all files"
-msgstr "CTRL+A (Comando-A) para seleccionar archivos "
-
-#: ../admin/plugin-function.php:37
-msgid "Files are downloaded as a .zip archive"
-msgstr "Los ficheros son descargados como archivos .zip"
-
-#: ../admin/plugin-maintenance-mode.php:62
-msgid "Enable this option to activate website maintenance mode."
-msgstr ""
-"Habilitar esta opción para activar el modo de mantenimiento de la página web"
-
-#: ../admin/plugin-maintenance-mode.php:68
-msgid "Display Logo?"
-msgstr "¿Mostrar logotipo?"
-
-#: ../admin/plugin-maintenance-mode.php:73
-msgid ""
-"Enable this option to display website logo at the under construction page"
-msgstr ""
-"Activar esta opción para mostrar el logotipo en una página en construcción"
-
-#: ../admin/plugin-maintenance-mode.php:79
-msgid "Description."
-msgstr "Descripción"
-
-#: ../admin/plugin-maintenance-mode.php:89
-#: ../admin/plugin-maintenance-mode.php:94
-msgid "Display timer?"
-msgstr "¿Mostrar temporizador?"
-
-#: ../admin/plugin-maintenance-mode.php:100
-msgid "Website launch date."
-msgstr "Fecha de lanzamiento de la página web."
-
-#: ../admin/plugin-maintenance-mode.php:101
-msgid "Date is not correct."
-msgstr "La fecha no está correcta."
-
-#: ../admin/plugin-maintenance-mode.php:105
-msgid "Year:"
-msgstr "Año:"
-
-#: ../admin/plugin-maintenance-mode.php:107
-msgid "Month:"
-msgstr "Mes:"
-
-#: ../admin/plugin-maintenance-mode.php:109
-msgid "Day:"
-msgstr "Día:"
-
-#: ../admin/plugin-maintenance-mode.php:113
-msgid "Hour:"
-msgstr "Hora:"
-
-#: ../admin/plugin-maintenance-mode.php:115
-msgid "Minute:"
-msgstr "Minuto:"
-
-#: ../admin/plugin-maintenance-mode.php:123
-msgid "Save Changes"
-msgstr "Guardar Cambios"
-
-#: ../admin/plugin-pages.php:6
-msgid "Cherry Plugin"
-msgstr "Cherry Plugin"
-
-#: ../admin/plugin-pages.php:11
-msgid ""
-"Cherry Plugin has been released with intention to separate widgets, "
-"shortcodes and data management logics with theme editor options. Cherry "
-"Plugin is installed automatically on CherryFramework installation and is "
-"required for the correct work of CherryFramework.  "
-msgstr ""
-"El Cherry Plugin ha sido lanzado con la intención de separar widgets, "
-"códigos cortos y la administración de datos con un editor de opciones. El "
-"Cherry Plugin se instala automáticamente en la instalación CherryFramework y "
-"es obligatório para el correcto funcionamiento de CherryFramework."
-
-#: ../admin/plugin-pages.php:15 ../admin/import-export/import.php:80
-msgid "Files Import demo"
-msgstr "Demo de Importación de Archivos"
-
-#: ../admin/plugin-pages.php:19
-msgid "Import"
-msgstr "Importar"
-
-#: ../admin/plugin-pages.php:20
-msgid ""
-"Option to import website content from the backup. Select all files from the "
-"backup archive and drag them to the upload files area to start uploading."
-msgstr ""
-"Opción para importar contenido de la página web desde la copia de seguridad. "
-"Seleccione todos los archivos desde el archivo de copia de seguridad y "
-"arrástrelos a la zona apropiada para subir archivos."
-
-#: ../admin/plugin-pages.php:26
-msgid "Files Export demo"
-msgstr "Demo de Exportación de Archivos"
-
-#: ../admin/plugin-pages.php:30
-msgid "Export"
-msgstr "Exportar"
-
-#: ../admin/plugin-pages.php:31
-msgid ""
-"Option to backup your website data creating a downloadable archive. Use this "
-"option to keep your website data on performing some serious modifications or "
-"moving website to other hosting."
-msgstr ""
-"Opción para crear una copia de seguridad de su página web mediante un "
-"archivo descargable. Utilice esta opción para mantener los datos de la "
-"página web, siempre que realizar algunas modificaciones importantes o haga "
-"una transferencia de la página web a otro alojamiento."
-
-#: ../admin/plugin-pages.php:42
-msgid "Widgets"
-msgstr "Widgets"
-
-#: ../admin/plugin-pages.php:43
-msgid ""
-"Cherry Widgets offer additional ways to place content to widget areas. "
-"Several available widget will allow you to add more functionality to your "
-"website."
-msgstr ""
-"El Cherry Widgets ofrece formas adicionales de colocar el contenido en las "
-"áreas destinadas a widgets. Más widgets disponibles le permitirá añadir más "
-"funcionalidades a su página web."
-
-#: ../admin/plugin-pages.php:52
-msgid "Shortcodes"
-msgstr "Códigos cortos"
-
-#: ../admin/plugin-pages.php:53
-msgid ""
-"Cherry Plugin adds various widgets to the post editor. Shortcodes allow to "
-"create various content structures in WordPress posts. Use \"Insert Shortcode"
-"\" icon in post editor toolbar to add shortcodes."
-msgstr ""
-"El Cherry Plugin añade varios widgets al editor de entradas. Los códigos "
-"cortos permiten crear varias estructuras de contenido en las entradas de "
-"WordPress. Utilice el icono \"Inserir Código Corto\" en el editor de "
-"entradas de la barra de herramientas para añadir códigos cortos."
-
-#: ../admin/plugin-pages.php:53
-msgid "Learn more"
-msgstr "Más información"
-
-#: ../admin/plugin-pages.php:79
-msgid "Cherry Content Import"
-msgstr "Importar Contenidos Cherry"
-
-#: ../admin/plugin-pages.php:90
-msgid "Cherry Content Export"
-msgstr "Exportar Contenidos Cherry"
 
 #: ../admin/import-export/export-functions.php:14
 msgid "Export content done"
@@ -297,43 +129,43 @@ msgstr "Obligatorio"
 msgid "Continue"
 msgstr "Continuar"
 
-#: ../admin/import-export/import.php:32
+#: ../admin/import-export/import.php:34
 msgid "Upload Error"
 msgstr "Error de Carga"
 
-#: ../admin/import-export/import.php:33
+#: ../admin/import-export/import.php:35
 msgid "The file is too big!"
 msgstr "¡El archivo es demasiado grande!"
 
-#: ../admin/import-export/import.php:34
+#: ../admin/import-export/import.php:36
 msgid "The file type is error!"
 msgstr "¡El tipo de archivo da error!"
 
-#: ../admin/import-export/import.php:35
+#: ../admin/import-export/import.php:37
 msgid "Folder cannot be uploaded!"
 msgstr "¡La carpeta no se puede cargar!"
 
-#: ../admin/import-export/import.php:36
+#: ../admin/import-export/import.php:38
 msgid "Uploading"
 msgstr "Cargando"
 
-#: ../admin/import-export/import.php:37 ../admin/import-export/import.php:111
+#: ../admin/import-export/import.php:39 ../admin/import-export/import.php:113
 msgid "Upload"
 msgstr "Subir"
 
-#: ../admin/import-export/import.php:38
+#: ../admin/import-export/import.php:40
 msgid "Upload Complete"
 msgstr "Carga Terminada"
 
-#: ../admin/import-export/import.php:39 ../admin/import-export/import.php:95
+#: ../admin/import-export/import.php:41 ../admin/import-export/import.php:97
 msgid "item"
 msgstr "ítem"
 
-#: ../admin/import-export/import.php:40
+#: ../admin/import-export/import.php:42
 msgid "items"
 msgstr "ítems"
 
-#: ../admin/import-export/import.php:41
+#: ../admin/import-export/import.php:43
 msgid ""
 "Sample data installing. Some steps may take some time depending on your "
 "server settings. Please be patient."
@@ -341,81 +173,81 @@ msgstr ""
 "Instalando los datos de muestra. Algunas etapas pueden demorar, depende de "
 "la configuración del servidor. Por favor, sea paciente."
 
-#: ../admin/import-export/import.php:42
+#: ../admin/import-export/import.php:44
 msgid "Upload complete please click Continue Install button to proceed."
 msgstr ""
 "Carga completa, por favor, haga clic en el botón Continuar Instalación para "
 "avanzar."
 
-#: ../admin/import-export/import.php:44
+#: ../admin/import-export/import.php:46
 msgid "Importing XML"
 msgstr "Importando XML"
 
-#: ../admin/import-export/import.php:45
+#: ../admin/import-export/import.php:47
 msgid "Importing categories"
 msgstr "Importando categorías"
 
-#: ../admin/import-export/import.php:46
+#: ../admin/import-export/import.php:48
 msgid "Importing tags"
 msgstr "Importando etiquetas"
 
-#: ../admin/import-export/import.php:47
+#: ../admin/import-export/import.php:49
 msgid "Processing dependencies"
 msgstr "Procesando dependencias"
 
-#: ../admin/import-export/import.php:48
+#: ../admin/import-export/import.php:50
 msgid "Importing posts. This may take some time. Please wait."
 msgstr ""
 "Importando entradas. Esto puede tardar algún tiempo. Por favor aguarde."
 
-#: ../admin/import-export/import.php:49
+#: ../admin/import-export/import.php:51
 msgid "Importing menu items. This may take some time. Please wait."
 msgstr ""
 "Importando ítems de menús. Esto puede tardar algún tiempo. Por favor aguarde."
 
-#: ../admin/import-export/import.php:50
+#: ../admin/import-export/import.php:52
 msgid "Importing media library."
 msgstr "Importando biblioteca de multimedia."
 
-#: ../admin/import-export/import.php:51
+#: ../admin/import-export/import.php:53
 msgid "Importing attachements meta."
 msgstr "Importando datos meta adjuntos."
 
-#: ../admin/import-export/import.php:52
+#: ../admin/import-export/import.php:54
 msgid "Generating attachements meta. This may take some time. Please wait."
 msgstr ""
 "Generando datos meta adjuntos. Esto puede tardar algún tiempo. Por favor "
 "aguarde."
 
-#: ../admin/import-export/import.php:53
+#: ../admin/import-export/import.php:55
 msgid "Generating content hierarchy"
 msgstr "Generando jerarquía de contenido"
 
-#: ../admin/import-export/import.php:54
+#: ../admin/import-export/import.php:56
 msgid "Updating featured images"
 msgstr "Actualizando imágenes destacadas"
 
-#: ../admin/import-export/import.php:55
+#: ../admin/import-export/import.php:57
 msgid "Updating attachments"
 msgstr "Actualizando datos adjuntos"
 
-#: ../admin/import-export/import.php:56
+#: ../admin/import-export/import.php:58
 msgid "Importing JSON"
 msgstr "Importando JSON"
 
-#: ../admin/import-export/import.php:57
+#: ../admin/import-export/import.php:59
 msgid "Installing content complete"
 msgstr "Instalación de contenidos completa"
 
-#: ../admin/import-export/import.php:58
+#: ../admin/import-export/import.php:60
 msgid "Installing content error"
 msgstr "Error en la instalación de contenidos"
 
-#: ../admin/import-export/import.php:64
+#: ../admin/import-export/import.php:66
 msgid "Warning!"
 msgstr "¡Aviso!"
 
-#: ../admin/import-export/import.php:64
+#: ../admin/import-export/import.php:66
 msgid ""
 "Installing sample data will replace your website content. Please make sure "
 "to backup your website data before importing content."
@@ -424,50 +256,54 @@ msgstr ""
 "web. Por favor, asegúrese de hacer una copia de seguridad de los datos de la "
 "página web antes de importar el contenido."
 
-#: ../admin/import-export/import.php:72
+#: ../admin/import-export/import.php:74
 msgid "Please Drop all needed files here <br> to import sample data"
 msgstr ""
 "Por favor Coloque todos los archivos necesarios aquí <br> para importar los "
 "datos de muestra"
 
-#: ../admin/import-export/import.php:73 ../admin/import-export/import.php:133
+#: ../admin/import-export/import.php:75 ../admin/import-export/import.php:135
 msgid "or"
 msgstr "o"
 
-#: ../admin/import-export/import.php:75
+#: ../admin/import-export/import.php:77
 msgid "Browse local files"
 msgstr "Examinar archivos locales"
 
-#: ../admin/import-export/import.php:78
+#: ../admin/import-export/import.php:80
 #, php-format
 msgid "Maximum upload file size: %d %s."
 msgstr "Tamaño máximo para subir un archivo: %d %s."
 
-#: ../admin/import-export/import.php:81
+#: ../admin/import-export/import.php:82 ../admin/plugin-pages.php:15
+msgid "Files Import demo"
+msgstr "Demo de Importación de Archivos"
+
+#: ../admin/import-export/import.php:83
 msgid "View Demo"
 msgstr "Ver Demo"
 
-#: ../admin/import-export/import.php:95
+#: ../admin/import-export/import.php:97
 msgid "File name"
 msgstr "Nombre de archivo"
 
-#: ../admin/import-export/import.php:95
+#: ../admin/import-export/import.php:97
 msgid "File size"
 msgstr "Tamaño de archivo"
 
-#: ../admin/import-export/import.php:95
+#: ../admin/import-export/import.php:97
 msgid "Uploaded file:"
 msgstr "Archivo cargado"
 
-#: ../admin/import-export/import.php:105
+#: ../admin/import-export/import.php:107
 msgid "Installing content started."
 msgstr "Instalación de contenido iniciada."
 
-#: ../admin/import-export/import.php:115
+#: ../admin/import-export/import.php:117
 msgid "Install"
 msgstr "Instalar"
 
-#: ../admin/import-export/import.php:120
+#: ../admin/import-export/import.php:122
 msgid ""
 "Files successfully uploaded. Please make sure you have uploaded <b>.JSON</b> "
 "and <b>.XML</b> files to install theme sample data."
@@ -476,359 +312,227 @@ msgstr ""
 "archivos <b>.JSON</b> y <b>.XML</b> para instalar los datos de muestra del "
 "tema. "
 
-#: ../admin/import-export/import.php:122
+#: ../admin/import-export/import.php:124
 msgid "Add More Files"
 msgstr "Añadir Más Archivos"
 
-#: ../admin/import-export/import.php:124
+#: ../admin/import-export/import.php:126
 msgid "Continue Install"
 msgstr "Continuar Instalación"
 
-#: ../admin/import-export/import.php:124
+#: ../admin/import-export/import.php:126
 msgid "Missing .XML or .JSON file"
 msgstr "Falta el archivo .XML o el archivo .JSON"
 
-#: ../admin/import-export/import.php:130
+#: ../admin/import-export/import.php:132
 msgid "Congratulations"
 msgstr "¡Felicidades"
 
-#: ../admin/import-export/import.php:131
+#: ../admin/import-export/import.php:133
 msgid "Content has been installed successfully"
 msgstr "Contenido instalado con éxito"
 
-#: ../admin/import-export/import.php:133
+#: ../admin/import-export/import.php:135
 msgid "View your site"
 msgstr "Visitar su página web"
 
-#: ../admin/import-export/import.php:134
+#: ../admin/import-export/import.php:136
 msgid "go to Cherry Options"
 msgstr "ir a Opciones del Cherry"
 
-#: ../admin/shortcodes/dialog.php:21
-msgid "Shortcode Options"
-msgstr "Opciones de código corto"
+#: ../admin/plugin-components.php:36
+msgid "Documentation"
+msgstr "Documentación"
 
-#: ../admin/shortcodes/dialog.php:32
+#: ../admin/plugin-components.php:37
+msgid "Support"
+msgstr "Soporte"
+
+#: ../admin/plugin-function.php:5
+msgid "Remove Inactive Widgets"
+msgstr "Remover Widgets Inactivos"
+
+#: ../admin/plugin-function.php:23
+msgid "CTRL+A (Command-A) to select all files"
+msgstr "CTRL+A (Comando-A) para seleccionar archivos "
+
+#: ../admin/plugin-function.php:37
+msgid "Files are downloaded as a .zip archive"
+msgstr "Los ficheros son descargados como archivos .zip"
+
+#: ../admin/plugin-maintenance-mode.php:62
+msgid "Enable this option to activate website maintenance mode."
+msgstr ""
+"Habilitar esta opción para activar el modo de mantenimiento de la página web"
+
+#: ../admin/plugin-maintenance-mode.php:68
+msgid "Display Logo?"
+msgstr "¿Mostrar logotipo?"
+
+#: ../admin/plugin-maintenance-mode.php:73
+msgid ""
+"Enable this option to display website logo at the under construction page"
+msgstr ""
+"Activar esta opción para mostrar el logotipo en una página en construcción"
+
+#: ../admin/plugin-maintenance-mode.php:79
+msgid "Description"
+msgstr ""
+
+#: ../admin/plugin-maintenance-mode.php:89
+#: ../admin/plugin-maintenance-mode.php:94
+msgid "Display timer?"
+msgstr "¿Mostrar temporizador?"
+
+#: ../admin/plugin-maintenance-mode.php:100
+msgid "Website launch date."
+msgstr "Fecha de lanzamiento de la página web."
+
+#: ../admin/plugin-maintenance-mode.php:101
+msgid "Date is not correct."
+msgstr "La fecha no está correcta."
+
+#: ../admin/plugin-maintenance-mode.php:105
+msgid "Year:"
+msgstr "Año:"
+
+#: ../admin/plugin-maintenance-mode.php:107
+msgid "Month:"
+msgstr "Mes:"
+
+#: ../admin/plugin-maintenance-mode.php:109
+msgid "Day:"
+msgstr "Día:"
+
+#: ../admin/plugin-maintenance-mode.php:113
+msgid "Hour:"
+msgstr "Hora:"
+
+#: ../admin/plugin-maintenance-mode.php:115
+msgid "Minute:"
+msgstr "Minuto:"
+
+#: ../admin/plugin-maintenance-mode.php:123
+msgid "Save Changes"
+msgstr "Guardar Cambios"
+
+#: ../admin/plugin-pages.php:6
+msgid "Cherry Plugin"
+msgstr "Cherry Plugin"
+
+#: ../admin/plugin-pages.php:11
+msgid ""
+"Cherry Plugin has been released with intention to separate widgets, "
+"shortcodes and data management logics with theme editor options. Cherry "
+"Plugin is installed automatically on CherryFramework installation and is "
+"required for the correct work of CherryFramework.  "
+msgstr ""
+"El Cherry Plugin ha sido lanzado con la intención de separar widgets, "
+"códigos cortos y la administración de datos con un editor de opciones. El "
+"Cherry Plugin se instala automáticamente en la instalación CherryFramework y "
+"es obligatório para el correcto funcionamiento de CherryFramework."
+
+#: ../admin/plugin-pages.php:19
+msgid "Import"
+msgstr "Importar"
+
+#: ../admin/plugin-pages.php:20
+msgid ""
+"Option to import website content from the backup. Select all files from the "
+"backup archive and drag them to the upload files area to start uploading."
+msgstr ""
+"Opción para importar contenido de la página web desde la copia de seguridad. "
+"Seleccione todos los archivos desde el archivo de copia de seguridad y "
+"arrástrelos a la zona apropiada para subir archivos."
+
+#: ../admin/plugin-pages.php:26
+msgid "Files Export demo"
+msgstr "Demo de Exportación de Archivos"
+
+#: ../admin/plugin-pages.php:30
+msgid "Export"
+msgstr "Exportar"
+
+#: ../admin/plugin-pages.php:31
+msgid ""
+"Option to backup your website data creating a downloadable archive. Use this "
+"option to keep your website data on performing some serious modifications or "
+"moving website to other hosting."
+msgstr ""
+"Opción para crear una copia de seguridad de su página web mediante un "
+"archivo descargable. Utilice esta opción para mantener los datos de la "
+"página web, siempre que realizar algunas modificaciones importantes o haga "
+"una transferencia de la página web a otro alojamiento."
+
+#: ../admin/plugin-pages.php:42
+msgid "Widgets"
+msgstr "Widgets"
+
+#: ../admin/plugin-pages.php:43
+msgid ""
+"Cherry Widgets offer additional ways to place content to widget areas. "
+"Several available widget will allow you to add more functionality to your "
+"website."
+msgstr ""
+"El Cherry Widgets ofrece formas adicionales de colocar el contenido en las "
+"áreas destinadas a widgets. Más widgets disponibles le permitirá añadir más "
+"funcionalidades a su página web."
+
+#: ../admin/plugin-pages.php:52
+msgid "Shortcodes"
+msgstr "Códigos cortos"
+
+#: ../admin/plugin-pages.php:53
+msgid ""
+"Cherry Plugin adds various widgets to the post editor. Shortcodes allow to "
+"create various content structures in WordPress posts. Use \"Insert Shortcode"
+"\" icon in post editor toolbar to add shortcodes."
+msgstr ""
+"El Cherry Plugin añade varios widgets al editor de entradas. Los códigos "
+"cortos permiten crear varias estructuras de contenido en las entradas de "
+"WordPress. Utilice el icono \"Inserir Código Corto\" en el editor de "
+"entradas de la barra de herramientas para añadir códigos cortos."
+
+#: ../admin/plugin-pages.php:53
+msgid "Learn more"
+msgstr "Más información"
+
+#: ../admin/plugin-pages.php:79
+msgid "Cherry Content Import"
+msgstr "Importar Contenidos Cherry"
+
+#: ../admin/plugin-pages.php:90
+msgid "Cherry Content Export"
+msgstr "Exportar Contenidos Cherry"
+
+#: ../admin/shortcodes/dialog.php:20
+#: ../admin/shortcodes/tinymce-shortcodes.php:89
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: ../admin/shortcodes/dialog.php:33 ../admin/shortcodes/editor-plugin.php:782
-msgid "Insert Shortcode"
-msgstr "Insertar código corto"
-
-#: ../admin/shortcodes/editor-plugin.php:788
-msgid "Posts"
-msgstr "Entradas"
-
-#: ../admin/shortcodes/editor-plugin.php:789
-msgid "Posts Grid"
-msgstr "Grid de entradas"
-
-#: ../admin/shortcodes/editor-plugin.php:790
-msgid "Posts List"
-msgstr "Lista de entradas"
-
-#: ../admin/shortcodes/editor-plugin.php:791
-msgid "Mini Posts Grid"
-msgstr "Mini Posts Grid/Entradas Mini Grid"
-
-#: ../admin/shortcodes/editor-plugin.php:792
-msgid "Mini Posts List"
-msgstr "Mini Posts List/Entradas Mini Lista"
-
-#: ../admin/shortcodes/editor-plugin.php:793
-msgid "Recent Posts"
-msgstr "Entradas nuevas"
-
-#: ../admin/shortcodes/editor-plugin.php:794
-msgid "Recent Testimonials"
-msgstr "Testimonios nuevos"
-
-#: ../admin/shortcodes/editor-plugin.php:795
-msgid "Basic"
-msgstr "Básico"
-
-#: ../admin/shortcodes/editor-plugin.php:796
-msgid "Banner"
-msgstr "Banner"
-
-#: ../admin/shortcodes/editor-plugin.php:797
-#: ../includes/shortcodes/carousel-owl.php:171
-#: ../includes/shortcodes/carousel.php:154
-#: ../includes/shortcodes/post-cycle.php:139
-#: ../includes/shortcodes/posts-list.php:161
-#: ../includes/shortcodes/posts-list.php:162
-#: ../includes/widgets/my-post-cycle-widget.php:127
-msgid "Comments"
-msgstr "Comentarios"
-
-#: ../admin/shortcodes/editor-plugin.php:798
-msgid "Post Cycle"
-msgstr "Post Cycle/Ciclo de Entrada"
-
-#: ../admin/shortcodes/editor-plugin.php:799
-msgid "Carousel (Elasti)"
-msgstr "Carrusel (Elasti)"
-
-#: ../admin/shortcodes/editor-plugin.php:800
-msgid "Carousel (OWL)"
-msgstr "Carrusel (OWL)"
-
-#: ../admin/shortcodes/editor-plugin.php:801
-msgid "Roundabout"
-msgstr "Rotonda"
-
-#: ../admin/shortcodes/editor-plugin.php:802
-msgid "Service Box"
-msgstr "Cuadro de Servicio"
-
-#: ../admin/shortcodes/editor-plugin.php:803
-msgid "Hero Unit"
-msgstr "Hero Unit"
-
-#: ../admin/shortcodes/editor-plugin.php:804
-msgid "Categories"
-msgstr "Categorías"
-
-#: ../admin/shortcodes/editor-plugin.php:805
-#: ../includes/shortcodes/posts-list.php:281
-msgid "Tags"
-msgstr "Etiquetas"
-
-#: ../admin/shortcodes/editor-plugin.php:806
-msgid "Columns"
-msgstr "Columnas"
-
-#: ../admin/shortcodes/editor-plugin.php:821
-msgid "Fluid Column"
-msgstr "Columna Fluida"
-
-#: ../admin/shortcodes/editor-plugin.php:830
-msgid "2 Columns"
-msgstr "2 Columnas"
-
-#: ../admin/shortcodes/editor-plugin.php:834
-msgid "3 Columns"
-msgstr "3 Columnas"
-
-#: ../admin/shortcodes/editor-plugin.php:839
-msgid "4 Columns"
-msgstr "4 Columnas"
-
-#: ../admin/shortcodes/editor-plugin.php:841
-msgid "Elements"
-msgstr "Elementos"
-
-#: ../admin/shortcodes/editor-plugin.php:842
-msgid "Label"
-msgstr "Etiqueta"
-
-#: ../admin/shortcodes/editor-plugin.php:843
-msgid "Text Highlight"
-msgstr "Texto destacado"
-
-#: ../admin/shortcodes/editor-plugin.php:844
-msgid "Button"
-msgstr "Botón"
-
-#: ../admin/shortcodes/editor-plugin.php:845
-msgid "Drop Cap"
-msgstr "/Letra Capital"
-
-#: ../admin/shortcodes/editor-plugin.php:846
-msgid "Blockquote"
-msgstr "Bloque de cita"
-
-#: ../admin/shortcodes/editor-plugin.php:847
-msgid "Icon"
-msgstr "Icono"
-
-#: ../admin/shortcodes/editor-plugin.php:848
-msgid "Frame"
-msgstr "Marca"
-
-#: ../admin/shortcodes/editor-plugin.php:849
-msgid "Horizontal Rule"
-msgstr "Regla horizontal"
-
-#: ../admin/shortcodes/editor-plugin.php:850
-msgid "Small Horizontal Rule"
-msgstr "Regla pequeña horizontal"
-
-#: ../admin/shortcodes/editor-plugin.php:851
-msgid "Vertical Rule"
-msgstr "Regla vertical"
-
-#: ../admin/shortcodes/editor-plugin.php:852
-msgid "Spacer"
-msgstr "Spacer"
-
-#: ../admin/shortcodes/editor-plugin.php:853
-msgid "Progressbar"
-msgstr "Barra de progreso"
-
-#: ../admin/shortcodes/editor-plugin.php:854
-msgid "Address"
-msgstr "Dirección"
-
-#: ../admin/shortcodes/editor-plugin.php:855
-msgid "Clear"
-msgstr "Limpio"
-
-#: ../admin/shortcodes/editor-plugin.php:856
-msgid "Extra Wrap"
-msgstr "Envoltura adicional"
-
-#: ../admin/shortcodes/editor-plugin.php:857
-msgid "Lists"
-msgstr "Listas"
-
-#: ../admin/shortcodes/editor-plugin.php:858
-msgid "Unstyled"
-msgstr "Sin estilo"
-
-#: ../admin/shortcodes/editor-plugin.php:859
-msgid "Check List"
-msgstr "Lista de verificación"
-
-#: ../admin/shortcodes/editor-plugin.php:860
-msgid "Check 2 List"
-msgstr "Lista de verificación 2"
-
-#: ../admin/shortcodes/editor-plugin.php:861
-msgid "OK Circle List"
-msgstr "Lista Buena Gente"
-
-#: ../admin/shortcodes/editor-plugin.php:862
-msgid "OK Sign List"
-msgstr "Lista OK de Registro"
-
-#: ../admin/shortcodes/editor-plugin.php:863
-msgid "Arrow List"
-msgstr "Lista de flechas"
-
-#: ../admin/shortcodes/editor-plugin.php:864
-msgid "Arrow 2 List"
-msgstr "Lista de flechas 2"
-
-#: ../admin/shortcodes/editor-plugin.php:865
-msgid "Circle Arrow List"
-msgstr "Lista Flecha Círculo"
-
-#: ../admin/shortcodes/editor-plugin.php:866
-msgid "Caret List"
-msgstr "Lista Símbolo de Intercalación"
-
-#: ../admin/shortcodes/editor-plugin.php:867
-msgid "Angle List"
-msgstr "Lista Ángulo"
-
-#: ../admin/shortcodes/editor-plugin.php:868
-msgid "Double Angle List"
-msgstr "Lista Doble Ángulo"
-
-#: ../admin/shortcodes/editor-plugin.php:869
-msgid "Star List"
-msgstr "Lista de estrellas"
-
-#: ../admin/shortcodes/editor-plugin.php:870
-msgid "Plus List"
-msgstr "Lista de signo más"
-
-#: ../admin/shortcodes/editor-plugin.php:871
-msgid "Minus List"
-msgstr "Lista de signo menos"
-
-#: ../admin/shortcodes/editor-plugin.php:872
-msgid "Circle List"
-msgstr "Lista"
-
-#: ../admin/shortcodes/editor-plugin.php:873
-msgid "Circle Blank List"
-msgstr "Lista en Blanco"
-
-#: ../admin/shortcodes/editor-plugin.php:874
-msgid "Custom List"
-msgstr "Lista personalizada"
-
-#: ../admin/shortcodes/editor-plugin.php:875
-msgid "Misc"
-msgstr "Misceláneo"
-
-#: ../admin/shortcodes/editor-plugin.php:876
-msgid "Alert Box"
-msgstr "Cuadro de advertencia"
-
-#: ../admin/shortcodes/editor-plugin.php:877
-msgid "Close icon"
-msgstr "Cerrar icono"
-
-#: ../admin/shortcodes/editor-plugin.php:878
-msgid "Well"
-msgstr "Bien"
-
-#: ../admin/shortcodes/editor-plugin.php:879
-msgid "Small"
-msgstr "Pequeño"
-
-#: ../admin/shortcodes/editor-plugin.php:880
-#: ../includes/widgets/my-comment-widget.php:140
-#: ../includes/widgets/my-facebook-widget.php:79
-#: ../includes/widgets/my-flickr-widget.php:57
-#: ../includes/widgets/my-posts-type-widget.php:205
-#: ../includes/widgets/my-recent-posts.php:126
-#: ../includes/widgets/my-recent-posts.php:148
-#: ../includes/widgets/my-social-widget.php:132
-#: ../includes/widgets/my-vcard-widget.php:151
-msgid "Title"
-msgstr "Título"
-
-#: ../admin/shortcodes/editor-plugin.php:881
-msgid "Template URL"
-msgstr "URL de Plantilla"
-
-#: ../admin/shortcodes/editor-plugin.php:882
-msgid "Sitemap"
-msgstr "Mapa del sitio"
-
-#: ../admin/shortcodes/editor-plugin.php:883
-msgid "Video Preview"
-msgstr "Vista previa de vídeo"
-
-#: ../admin/shortcodes/editor-plugin.php:884
-msgid "Tabs"
-msgstr "Pestañas"
-
-#: ../admin/shortcodes/editor-plugin.php:885
-msgid "Accordion"
-msgstr "Acordeón"
-
-#: ../admin/shortcodes/editor-plugin.php:886
-msgid "Table"
-msgstr "Tabla"
-
-#: ../admin/shortcodes/editor-plugin.php:887
-msgid "Pricing Table"
-msgstr "Tabla de Determinación de Precios"
-
-#: ../admin/shortcodes/editor-plugin.php:888
-#: ../includes/widgets/my-vcard-widget.php:156
-msgid "Google Map"
-msgstr "Mapa de Google"
-
-#: ../includes/plugin-assets.php:32
+#: ../admin/shortcodes/dialog.php:21
+#: ../admin/shortcodes/tinymce-shortcodes.php:90
+msgid "Insert"
+msgstr ""
+
+#: ../admin/shortcodes/dialog.php:25
+#: ../admin/shortcodes/tinymce-shortcodes.php:94
+msgid "Shortcode Options"
+msgstr "Opciones de código corto"
+
+#: ../includes/plugin-assets.php:38
 msgid "Under Construction Page Widgets Area."
 msgstr "Área de Widgets en Construcción."
 
-#: ../includes/plugin-assets.php:34
+#: ../includes/plugin-assets.php:40
 msgid "Under construction page widgets area."
 msgstr "Área de widgets en construcción."
 
-#: ../includes/plugin-assets.php:52
+#: ../includes/plugin-assets.php:58
 msgid "Maintenance mode activated. Website is blocked from public"
 msgstr "Modo de mantenimiento activado. Página web bloqueada al público"
 
-#: ../includes/plugin-assets.php:52
+#: ../includes/plugin-assets.php:58
 msgid "Settings."
 msgstr "Configuraciones."
 
@@ -852,95 +556,82 @@ msgstr "Minutos"
 msgid "Seconds"
 msgstr "Segundos"
 
-#: ../includes/gt-custom/gt-custom.php:112
-msgid "Style Switcher Preview"
-msgstr "Previsualizar Style Switcher"
-
-#: ../includes/gt-custom/gt-customize.php:17
-msgid "Cheatin&#8217; uh?"
-msgstr "Engañand&#8217; ¿Qué?"
-
-#: ../includes/gt-custom/gt-customize.php:84
-#, php-format
-msgid "%1$s &#8212; WordPress"
-msgstr "%1$s &#8212; WordPress"
-
-#: ../includes/gt-custom/gt-customize.php:84
-#, php-format
-msgid "Customize %s"
-msgstr "Personalizar %s"
-
-#: ../includes/gt-custom/gt-customize.php:112
-msgid "Style Switcher"
-msgstr "Style Switcher"
-
-#: ../includes/shortcodes/carousel-owl.php:165
-#: ../includes/shortcodes/posts-list.php:152
+#: ../includes/shortcodes/carousel-owl.php:168
+#: ../includes/shortcodes/posts-list.php:154
 msgid "by "
 msgstr "por"
 
-#: ../includes/shortcodes/carousel-owl.php:173
-#: ../includes/shortcodes/carousel.php:156
+#: ../includes/shortcodes/carousel-owl.php:174
+#: ../includes/shortcodes/carousel.php:167
+#: ../includes/shortcodes/post-cycle.php:150
+#: ../includes/shortcodes/posts-list.php:163
+#: ../includes/shortcodes/posts-list.php:164
+#: ../includes/widgets/my-post-cycle-widget.php:127
+msgid "Comments"
+msgstr "Comentarios"
+
+#: ../includes/shortcodes/carousel-owl.php:176
+#: ../includes/shortcodes/carousel.php:169
 #: ../includes/widgets/my-post-cycle-widget.php:129
 msgid "Comment"
 msgstr "Comentario"
 
-#: ../includes/shortcodes/carousel.php:147
+#: ../includes/shortcodes/carousel.php:160
 #: ../includes/widgets/my-post-cycle-widget.php:118
 msgid "by"
 msgstr "de"
 
-#: ../includes/shortcodes/hero-unit.php:13 ../includes/shortcodes/html.php:25
+#: ../includes/shortcodes/hero-unit.php:13 ../includes/shortcodes/html.php:27
 #: ../includes/shortcodes/post-cycle.php:17
-#: ../includes/shortcodes/posts-grid.php:22
+#: ../includes/shortcodes/posts-grid.php:23
 #: ../includes/shortcodes/posts-list.php:19
 #: ../includes/shortcodes/service-box.php:15
-#: ../includes/widgets/my-posts-type-widget.php:145
+#: ../includes/widgets/my-posts-type-widget.php:165
 #: ../includes/widgets/my-recent-posts.php:87
 msgid "Read more"
 msgstr "Leer más"
 
-#: ../includes/shortcodes/media.php:82 ../includes/shortcodes/media.php:205
-#: ../includes/shortcodes/media.php:216
-#: ../includes/shortcodes/shortcodes.php:211
-#: ../includes/shortcodes/shortcodes.php:309
-#: ../includes/shortcodes/shortcodes.php:320
+#: ../includes/shortcodes/media.php:110 ../includes/shortcodes/media.php:240
+#: ../includes/shortcodes/media.php:251
+#: ../includes/shortcodes/shortcodes.php:225
+#: ../includes/shortcodes/shortcodes.php:370
+#: ../includes/shortcodes/shortcodes.php:381
 msgid "Play"
 msgstr "Reproducir"
 
-#: ../includes/shortcodes/media.php:83 ../includes/shortcodes/media.php:217
-#: ../includes/shortcodes/shortcodes.php:212
-#: ../includes/shortcodes/shortcodes.php:321
+#: ../includes/shortcodes/media.php:111 ../includes/shortcodes/media.php:252
+#: ../includes/shortcodes/shortcodes.php:226
+#: ../includes/shortcodes/shortcodes.php:382
 msgid "Pause"
 msgstr "Pausa"
 
-#: ../includes/shortcodes/media.php:84 ../includes/shortcodes/media.php:218
-#: ../includes/shortcodes/shortcodes.php:214
-#: ../includes/shortcodes/shortcodes.php:322
+#: ../includes/shortcodes/media.php:112 ../includes/shortcodes/media.php:253
+#: ../includes/shortcodes/shortcodes.php:228
+#: ../includes/shortcodes/shortcodes.php:383
 msgid "Stop"
 msgstr "Parar"
 
-#: ../includes/shortcodes/media.php:90 ../includes/shortcodes/media.php:224
-#: ../includes/shortcodes/shortcodes.php:220
-#: ../includes/shortcodes/shortcodes.php:328
+#: ../includes/shortcodes/media.php:118 ../includes/shortcodes/media.php:259
+#: ../includes/shortcodes/shortcodes.php:234
+#: ../includes/shortcodes/shortcodes.php:389
 msgid "Mute"
 msgstr "Mudo"
 
-#: ../includes/shortcodes/media.php:91 ../includes/shortcodes/media.php:225
-#: ../includes/shortcodes/shortcodes.php:221
-#: ../includes/shortcodes/shortcodes.php:329
+#: ../includes/shortcodes/media.php:119 ../includes/shortcodes/media.php:260
+#: ../includes/shortcodes/shortcodes.php:235
+#: ../includes/shortcodes/shortcodes.php:390
 msgid "Unmute"
 msgstr "Activar el sonido"
 
-#: ../includes/shortcodes/media.php:96 ../includes/shortcodes/media.php:229
-#: ../includes/shortcodes/shortcodes.php:226
-#: ../includes/shortcodes/shortcodes.php:333
+#: ../includes/shortcodes/media.php:124 ../includes/shortcodes/media.php:264
+#: ../includes/shortcodes/shortcodes.php:240
+#: ../includes/shortcodes/shortcodes.php:394
 msgid "Update Required."
 msgstr "Actualización necesaria"
 
-#: ../includes/shortcodes/media.php:96 ../includes/shortcodes/media.php:229
-#: ../includes/shortcodes/shortcodes.php:226
-#: ../includes/shortcodes/shortcodes.php:333
+#: ../includes/shortcodes/media.php:124 ../includes/shortcodes/media.php:264
+#: ../includes/shortcodes/shortcodes.php:240
+#: ../includes/shortcodes/shortcodes.php:394
 msgid ""
 "To play the media you will need to either update your browser to a recent "
 "version or update your "
@@ -948,148 +639,321 @@ msgstr ""
 "Para reproducir el archivo multimedia tendrá que actualizar su navegador a "
 "una versión más reciente o actualizar el"
 
-#: ../includes/shortcodes/media.php:96 ../includes/shortcodes/media.php:229
-#: ../includes/shortcodes/shortcodes.php:226
-#: ../includes/shortcodes/shortcodes.php:333
+#: ../includes/shortcodes/media.php:124 ../includes/shortcodes/media.php:264
+#: ../includes/shortcodes/shortcodes.php:240
+#: ../includes/shortcodes/shortcodes.php:394
 msgid "Flash plugin"
 msgstr "plugin del Flash"
 
-#: ../includes/shortcodes/post-cycle.php:166
+#: ../includes/shortcodes/post-cycle.php:210
 msgid "Client"
 msgstr "Cliente"
 
-#: ../includes/shortcodes/post-cycle.php:167
-#: ../includes/widgets/my-comment-widget.php:91
+#: ../includes/shortcodes/post-cycle.php:211
+#: ../includes/widgets/my-comment-widget.php:98
 #: ../includes/widgets/my-recent-posts.php:147
 msgid "Date"
 msgstr "Fecha"
 
-#: ../includes/shortcodes/post-cycle.php:168
+#: ../includes/shortcodes/post-cycle.php:212
 msgid "Info"
 msgstr "Información"
 
-#: ../includes/shortcodes/post-cycle.php:169
+#: ../includes/shortcodes/post-cycle.php:213
 msgid "Launch Project"
 msgstr "Lanzar proyecto"
 
-#: ../includes/shortcodes/posts-list.php:128
-#: ../includes/shortcodes/posts-list.php:137
+#: ../includes/shortcodes/posts-list.php:130
+#: ../includes/shortcodes/posts-list.php:139
 msgid "Posted in"
 msgstr "Publicado en"
 
-#: ../includes/shortcodes/shortcodes.php:210
+#: ../includes/shortcodes/posts-list.php:283
+msgid "Tags"
+msgstr "Etiquetas"
+
+#: ../includes/shortcodes/shortcodes.php:224
 msgid "Previous"
 msgstr "Anterior"
 
-#: ../includes/shortcodes/shortcodes.php:213
+#: ../includes/shortcodes/shortcodes.php:227
 msgid "Next"
 msgstr "Siguiente"
 
-#: ../includes/widgets/my-banners-widget.php:13
+#: ../includes/widgets/cherry-banner-widget.php:5
+msgid "Cherry - Banner"
+msgstr ""
+
+#: ../includes/widgets/cherry-banner-widget.php:46
+#: ../includes/widgets/my-comment-widget.php:147
+#: ../includes/widgets/my-facebook-widget.php:79
+#: ../includes/widgets/my-flickr-widget.php:57
+#: ../includes/widgets/my-posts-type-widget.php:225
+#: ../includes/widgets/my-recent-posts.php:126
+#: ../includes/widgets/my-recent-posts.php:148
+#: ../includes/widgets/my-social-widget.php:108
+#: ../includes/widgets/my-vcard-widget.php:155
+msgid "Title"
+msgstr "Título"
+
+#: ../includes/widgets/cherry-banner-widget.php:47
+msgid "Banner description"
+msgstr ""
+
+#: ../includes/widgets/cherry-banner-widget.php:48
+#: ../includes/widgets/cherry-instagram-widget.php:79
+msgid "Image URL"
+msgstr ""
+
+#: ../includes/widgets/cherry-banner-widget.php:49
+msgid "Fill image"
+msgstr ""
+
+#: ../includes/widgets/cherry-banner-widget.php:50
+#: ../includes/widgets/my-posts-type-widget.php:398
+#: ../includes/widgets/my-recent-posts.php:160
+msgid "Link URL"
+msgstr "URL de enlace"
+
+#: ../includes/widgets/cherry-banner-widget.php:89
+msgid "Select Image"
+msgstr ""
+
+#: ../includes/widgets/cherry-instagram-widget.php:5
+msgid "Cherry - Instagram"
+msgstr ""
+
+#: ../includes/widgets/cherry-instagram-widget.php:5
+msgid "Widget for popular social network Instagram"
+msgstr ""
+
+#: ../includes/widgets/cherry-instagram-widget.php:71
+#: ../includes/widgets/cherry-pinterest-embed-widget.php:77
+#: ../includes/widgets/cherry-twitter-embed-widget.php:66
+msgid "Widget Title"
+msgstr ""
+
+#: ../includes/widgets/cherry-instagram-widget.php:72
+#: ../includes/widgets/cherry-twitter-embed-widget.php:68
+msgid "User Name"
+msgstr ""
+
+#: ../includes/widgets/cherry-instagram-widget.php:73
+msgid "Number of displayed images"
+msgstr ""
+
+#: ../includes/widgets/cherry-instagram-widget.php:73
+msgid "Max value: 20 images."
+msgstr ""
+
+#: ../includes/widgets/cherry-instagram-widget.php:74
+msgid "Image dimentions"
+msgstr ""
+
+#: ../includes/widgets/cherry-instagram-widget.php:74
+msgid "Large"
+msgstr ""
+
+#: ../includes/widgets/cherry-instagram-widget.php:74
+msgid "Thumbnail"
+msgstr "Thumbnail"
+
+#: ../includes/widgets/cherry-instagram-widget.php:75
+msgid "Show  image description"
+msgstr ""
+
+#: ../includes/widgets/cherry-instagram-widget.php:76
+msgid "Show comments number"
+msgstr ""
+
+#: ../includes/widgets/cherry-instagram-widget.php:77
+msgid "Show likes number"
+msgstr ""
+
+#: ../includes/widgets/cherry-instagram-widget.php:78
+msgid "Show image publication date"
+msgstr ""
+
+#: ../includes/widgets/cherry-instagram-widget.php:80
+msgid "User account button text"
+msgstr ""
+
+#: ../includes/widgets/cherry-pinterest-embed-widget.php:7
+msgid "Cherry - Pinterest Embed"
+msgstr ""
+
+#: ../includes/widgets/cherry-pinterest-embed-widget.php:7
+msgid "Widget for Pinterest embed content"
+msgstr ""
+
+#: ../includes/widgets/cherry-pinterest-embed-widget.php:40
+#: ../includes/widgets/cherry-twitter-embed-widget.php:23
+msgid "There is some errors. Please check widgets page."
+msgstr ""
+
+#: ../includes/widgets/cherry-pinterest-embed-widget.php:58
+#: ../includes/widgets/cherry-twitter-embed-widget.php:41
+msgid "Field is empty"
+msgstr ""
+
+#: ../includes/widgets/cherry-pinterest-embed-widget.php:78
+msgid "Pinterest User URL"
+msgstr ""
+
+#: ../includes/widgets/cherry-pinterest-embed-widget.php:78
+msgid "Enter Pinterest User URL."
+msgstr ""
+
+#: ../includes/widgets/cherry-twitter-embed-widget.php:7
+msgid "Cherry - Twitter Embed"
+msgstr ""
+
+#: ../includes/widgets/cherry-twitter-embed-widget.php:7
+msgid "Widget for Twitter embed content"
+msgstr ""
+
+#: ../includes/widgets/cherry-twitter-embed-widget.php:44
+msgid "Widget ID can contains only numbers"
+msgstr ""
+
+#: ../includes/widgets/cherry-twitter-embed-widget.php:67
+msgid "Widget ID"
+msgstr ""
+
+#: ../includes/widgets/cherry-twitter-embed-widget.php:67
+msgid ""
+"ID of your widget. First of all you need make a new one widget on page "
+"https://twitter.com/settings/widgets/new. After it copy and paste here ID of "
+"widget. You can find it after creating of widget in browser's URL field. It "
+"contents only numbers."
+msgstr ""
+
+#: ../includes/widgets/cherry-twitter-embed-widget.php:68
+msgid ""
+"Twitter username you need to show. If empty, then will shown twitter that "
+"you set in Twitter's configure page."
+msgstr ""
+
+#: ../includes/widgets/cherry-twitter-embed-widget.php:69
+#: ../includes/widgets/my-facebook-widget.php:100
+msgid "Color Scheme"
+msgstr "Esquema de color"
+
+#: ../includes/widgets/cherry-twitter-embed-widget.php:69
+#: ../includes/widgets/my-facebook-widget.php:102
+msgid "Light"
+msgstr "Luz"
+
+#: ../includes/widgets/cherry-twitter-embed-widget.php:69
+#: ../includes/widgets/my-facebook-widget.php:103
+msgid "Dark"
+msgstr "Oscuro"
+
+#: ../includes/widgets/my-banners-widget.php:7
 msgid "Add 125x125 ads."
 msgstr "Agregar anuncios 125x125."
 
-#: ../includes/widgets/my-banners-widget.php:17
-msgid "Cherry - 125x125 Ads."
-msgstr "Cherry - Anuncios 125x125."
+#: ../includes/widgets/my-banners-widget.php:10
+msgid "Cherry - 125x125 Ads"
+msgstr ""
 
-#: ../includes/widgets/my-banners-widget.php:60
+#: ../includes/widgets/my-banners-widget.php:65
 msgid "Ad 1"
 msgstr "Anuncio 1"
 
-#: ../includes/widgets/my-banners-widget.php:62
-#: ../includes/widgets/my-banners-widget.php:71
-#: ../includes/widgets/my-banners-widget.php:80
-#: ../includes/widgets/my-banners-widget.php:89
+#: ../includes/widgets/my-banners-widget.php:67
+#: ../includes/widgets/my-banners-widget.php:76
+#: ../includes/widgets/my-banners-widget.php:85
+#: ../includes/widgets/my-banners-widget.php:94
 msgid "Image Ad Link:"
 msgstr "Enlace de Imagen de anuncio:"
 
-#: ../includes/widgets/my-banners-widget.php:66
-#: ../includes/widgets/my-banners-widget.php:75
-#: ../includes/widgets/my-banners-widget.php:84
-#: ../includes/widgets/my-banners-widget.php:93
+#: ../includes/widgets/my-banners-widget.php:71
+#: ../includes/widgets/my-banners-widget.php:80
+#: ../includes/widgets/my-banners-widget.php:89
+#: ../includes/widgets/my-banners-widget.php:98
 msgid "Ad Link:"
 msgstr "Enlace de Anuncio:"
 
-#: ../includes/widgets/my-banners-widget.php:69
+#: ../includes/widgets/my-banners-widget.php:74
 msgid "Ad 2"
 msgstr "Anuncio 2"
 
-#: ../includes/widgets/my-banners-widget.php:78
+#: ../includes/widgets/my-banners-widget.php:83
 msgid "Ad 3"
 msgstr "Anuncio 3"
 
-#: ../includes/widgets/my-banners-widget.php:87
+#: ../includes/widgets/my-banners-widget.php:92
 msgid "Ad 4"
 msgstr "Anuncio 4"
 
-#: ../includes/widgets/my-comment-widget.php:4
+#: ../includes/widgets/my-comment-widget.php:5
 msgid "Cherry - Recent Comments"
 msgstr "Cherry - Comentarios nuevos"
 
-#: ../includes/widgets/my-comment-widget.php:11
-#: ../includes/widgets/my-comment-widget.php:127
+#: ../includes/widgets/my-comment-widget.php:13
+#: ../includes/widgets/my-comment-widget.php:134
 msgid "My Recent Comments"
 msgstr "Mis comentarios nuevos"
 
-#: ../includes/widgets/my-comment-widget.php:72
+#: ../includes/widgets/my-comment-widget.php:79
 msgid "Comment in"
 msgstr "Comentarios en"
 
-#: ../includes/widgets/my-comment-widget.php:81
+#: ../includes/widgets/my-comment-widget.php:88
 #: ../includes/widgets/widgets-manager.php:479
 #: ../includes/widgets/widgets-manager.php:487
 msgid "Author"
 msgstr "Autor"
 
-#: ../includes/widgets/my-comment-widget.php:99
+#: ../includes/widgets/my-comment-widget.php:106
 msgid "Go to this comment"
 msgstr "Abrir este comentario"
 
-#: ../includes/widgets/my-comment-widget.php:141
+#: ../includes/widgets/my-comment-widget.php:148
 msgid "Number of comments to show"
 msgstr "Numero de comentarios para mostrar"
 
-#: ../includes/widgets/my-comment-widget.php:142
+#: ../includes/widgets/my-comment-widget.php:149
 msgid "Display avatar"
 msgstr "Mostrar avatar"
 
-#: ../includes/widgets/my-comment-widget.php:143
+#: ../includes/widgets/my-comment-widget.php:150
 msgid "Avatar size (px)"
 msgstr "Tamaño de avatar"
 
-#: ../includes/widgets/my-comment-widget.php:152
+#: ../includes/widgets/my-comment-widget.php:159
 msgid "Display the comment author"
 msgstr "Mostrar comentario del autor"
 
-#: ../includes/widgets/my-comment-widget.php:153
+#: ../includes/widgets/my-comment-widget.php:160
 msgid "Display the comment date"
 msgstr "Mostrar fecha del comentario"
 
-#: ../includes/widgets/my-comment-widget.php:154
+#: ../includes/widgets/my-comment-widget.php:161
 msgid "Display post title"
 msgstr "Mostrar titulo de entrada"
 
-#: ../includes/widgets/my-comment-widget.php:155
-#: ../includes/widgets/my-vcard-widget.php:191
+#: ../includes/widgets/my-comment-widget.php:162
+#: ../includes/widgets/my-vcard-widget.php:195
 msgid "Meta format"
 msgstr "Formato meta"
 
-#: ../includes/widgets/my-comment-widget.php:157
-#: ../includes/widgets/my-vcard-widget.php:193
+#: ../includes/widgets/my-comment-widget.php:164
+#: ../includes/widgets/my-vcard-widget.php:197
 #: ../includes/widgets/widgets-manager.php:506
 msgid "None"
 msgstr "Ningún"
 
-#: ../includes/widgets/my-comment-widget.php:158
-#: ../includes/widgets/my-social-widget.php:209
-#: ../includes/widgets/my-vcard-widget.php:194
+#: ../includes/widgets/my-comment-widget.php:165
+#: ../includes/widgets/my-social-widget.php:185
+#: ../includes/widgets/my-vcard-widget.php:198
 msgid "Icons"
 msgstr "Iconos"
 
-#: ../includes/widgets/my-comment-widget.php:159
-#: ../includes/widgets/my-social-widget.php:210
-#: ../includes/widgets/my-vcard-widget.php:195
+#: ../includes/widgets/my-comment-widget.php:166
+#: ../includes/widgets/my-social-widget.php:186
+#: ../includes/widgets/my-vcard-widget.php:199
 msgid "Labels"
 msgstr "Etiquetas"
 
@@ -1114,26 +978,14 @@ msgid "Facebook Pages."
 msgstr "Páginas de Facebook"
 
 #: ../includes/widgets/my-facebook-widget.php:90
-#: ../includes/widgets/my-posts-type-widget.php:347
+#: ../includes/widgets/my-posts-type-widget.php:367
 msgid "Width"
 msgstr "Ancho"
 
 #: ../includes/widgets/my-facebook-widget.php:95
-#: ../includes/widgets/my-posts-type-widget.php:352
+#: ../includes/widgets/my-posts-type-widget.php:372
 msgid "Height"
 msgstr "Altura"
-
-#: ../includes/widgets/my-facebook-widget.php:100
-msgid "Color Scheme"
-msgstr "Esquema de color"
-
-#: ../includes/widgets/my-facebook-widget.php:102
-msgid "Light"
-msgstr "Luz"
-
-#: ../includes/widgets/my-facebook-widget.php:103
-msgid "Dark"
-msgstr "Oscuro"
 
 #: ../includes/widgets/my-facebook-widget.php:109
 msgid "Display header"
@@ -1164,8 +1016,8 @@ msgid "Images count"
 msgstr "Recuento de imágenes"
 
 #: ../includes/widgets/my-flickr-widget.php:61
-#: ../includes/widgets/my-posts-type-widget.php:325
-#: ../includes/widgets/my-posts-type-widget.php:372
+#: ../includes/widgets/my-posts-type-widget.php:345
+#: ../includes/widgets/my-posts-type-widget.php:392
 #: ../includes/widgets/my-recent-posts.php:158
 msgid "Link Text"
 msgstr "Enlace del Texto"
@@ -1266,119 +1118,114 @@ msgstr "Mostrar entradas personalizadas"
 msgid "Cherry - Advanced Cycle"
 msgstr "Cherry - Ciclo avanzado"
 
-#: ../includes/widgets/my-posts-type-widget.php:152
+#: ../includes/widgets/my-posts-type-widget.php:172
 msgid "View all"
 msgstr "Ver todo"
 
-#: ../includes/widgets/my-posts-type-widget.php:212
+#: ../includes/widgets/my-posts-type-widget.php:232
 msgid "Posts type"
 msgstr "Tipo de entrada"
 
-#: ../includes/widgets/my-posts-type-widget.php:229
+#: ../includes/widgets/my-posts-type-widget.php:249
 msgid "Number of posts to show"
 msgstr "Número de entradas mostradas"
 
-#: ../includes/widgets/my-posts-type-widget.php:236
+#: ../includes/widgets/my-posts-type-widget.php:256
 msgid "Sort by"
 msgstr "Ordenar"
 
-#: ../includes/widgets/my-posts-type-widget.php:250
+#: ../includes/widgets/my-posts-type-widget.php:270
 msgid "Reverse sort order (ascending)"
 msgstr "Invertir orden de clasificación (ascendente)"
 
-#: ../includes/widgets/my-posts-type-widget.php:256
+#: ../includes/widgets/my-posts-type-widget.php:276
 msgid "Show number of comments"
 msgstr "Mostrar número de comentarios"
 
-#: ../includes/widgets/my-posts-type-widget.php:263
+#: ../includes/widgets/my-posts-type-widget.php:283
 msgid "Show meta"
 msgstr "Mostrar meta"
 
-#: ../includes/widgets/my-posts-type-widget.php:269
+#: ../includes/widgets/my-posts-type-widget.php:289
 msgid "Container class"
 msgstr "Clase de contenedor"
 
-#: ../includes/widgets/my-posts-type-widget.php:270
+#: ../includes/widgets/my-posts-type-widget.php:290
 msgid "default: \"featured_custom_posts\""
 msgstr "por defecto: \"featured_custom_posts\""
 
-#: ../includes/widgets/my-posts-type-widget.php:275
+#: ../includes/widgets/my-posts-type-widget.php:295
 msgid "Post title"
 msgstr "Título de entrada"
 
-#: ../includes/widgets/my-posts-type-widget.php:279
+#: ../includes/widgets/my-posts-type-widget.php:299
 msgid "Show post title"
 msgstr "Mostrar título de entrada"
 
-#: ../includes/widgets/my-posts-type-widget.php:285
+#: ../includes/widgets/my-posts-type-widget.php:305
 msgid "Date as title "
 msgstr "Fecha como título"
 
-#: ../includes/widgets/my-posts-type-widget.php:292
+#: ../includes/widgets/my-posts-type-widget.php:312
 msgid "Excerpt"
 msgstr "Extracto"
 
-#: ../includes/widgets/my-posts-type-widget.php:296
+#: ../includes/widgets/my-posts-type-widget.php:316
 msgid "Show post excerpt"
 msgstr "Mostrar extracto de entrada"
 
-#: ../includes/widgets/my-posts-type-widget.php:301
+#: ../includes/widgets/my-posts-type-widget.php:321
 #: ../includes/widgets/my-recent-posts.php:156
 msgid "Excerpt length (words)"
 msgstr "Tamaño del extracto (palabras)"
 
-#: ../includes/widgets/my-posts-type-widget.php:308
+#: ../includes/widgets/my-posts-type-widget.php:328
 msgid "Excerpt as link"
 msgstr "Extracto como enlace"
 
-#: ../includes/widgets/my-posts-type-widget.php:315
+#: ../includes/widgets/my-posts-type-widget.php:335
 msgid "More link"
 msgstr "Enlace Más"
 
-#: ../includes/widgets/my-posts-type-widget.php:319
+#: ../includes/widgets/my-posts-type-widget.php:339
 msgid "Show \"More link"
 msgstr "Mostrar enlace  \"More (Más)\""
 
-#: ../includes/widgets/my-posts-type-widget.php:326
+#: ../includes/widgets/my-posts-type-widget.php:346
 msgid "default: \"Read more\""
 msgstr "por defecto: \"Read more\""
 
-#: ../includes/widgets/my-posts-type-widget.php:331
+#: ../includes/widgets/my-posts-type-widget.php:351
 msgid "Link class"
 msgstr "Clase de enlace"
 
-#: ../includes/widgets/my-posts-type-widget.php:332
+#: ../includes/widgets/my-posts-type-widget.php:352
 msgid "default: \"link\""
 msgstr "por defecto:\"link\""
 
-#: ../includes/widgets/my-posts-type-widget.php:337
+#: ../includes/widgets/my-posts-type-widget.php:357
 msgid "Thumbnail dimensions"
 msgstr "Dimensiones miniaturas"
 
-#: ../includes/widgets/my-posts-type-widget.php:342
+#: ../includes/widgets/my-posts-type-widget.php:362
 msgid "Show post thumbnail"
 msgstr "Mostrar thumbnail de entrada"
 
-#: ../includes/widgets/my-posts-type-widget.php:358
+#: ../includes/widgets/my-posts-type-widget.php:378
 msgid "Thumbnail as link"
 msgstr "Thumbnail como enlace"
 
-#: ../includes/widgets/my-posts-type-widget.php:363
+#: ../includes/widgets/my-posts-type-widget.php:383
 msgid "Link to all posts"
 msgstr "Enlace a todas entradas"
 
-#: ../includes/widgets/my-posts-type-widget.php:367
+#: ../includes/widgets/my-posts-type-widget.php:387
 msgid "Show global link to all posts"
 msgstr "Mostrar el enlace global a todas entradas."
 
-#: ../includes/widgets/my-posts-type-widget.php:373
+#: ../includes/widgets/my-posts-type-widget.php:393
 msgid "default: \"View all\""
 msgstr "por defecto:\"View all\""
-
-#: ../includes/widgets/my-posts-type-widget.php:378
-#: ../includes/widgets/my-recent-posts.php:160
-msgid "Link URL"
-msgstr "URL de enlace"
 
 #: ../includes/widgets/my-recent-posts.php:6
 msgid "Cherry - Recent Posts"
@@ -1452,104 +1299,104 @@ msgstr "Enlace a su red social."
 msgid "Cherry - Social Networks"
 msgstr "Cherry - Redes sociales"
 
-#: ../includes/widgets/my-social-widget.php:136
+#: ../includes/widgets/my-social-widget.php:112
 msgid "Facebook"
 msgstr "Facebook"
 
-#: ../includes/widgets/my-social-widget.php:138
+#: ../includes/widgets/my-social-widget.php:114
 msgid "Facebook URL"
 msgstr "Facebook URL"
 
-#: ../includes/widgets/my-social-widget.php:141
+#: ../includes/widgets/my-social-widget.php:117
 msgid "Facebook label"
 msgstr "Etiqueta Facebook"
 
-#: ../includes/widgets/my-social-widget.php:146
+#: ../includes/widgets/my-social-widget.php:122
 msgid "Twitter"
 msgstr "Twitter"
 
-#: ../includes/widgets/my-social-widget.php:147
+#: ../includes/widgets/my-social-widget.php:123
 msgid "Twitter URL"
 msgstr "Twitter URL"
 
-#: ../includes/widgets/my-social-widget.php:149
+#: ../includes/widgets/my-social-widget.php:125
 msgid "Twitter label"
 msgstr "Etiqueta Twitter"
 
-#: ../includes/widgets/my-social-widget.php:154
+#: ../includes/widgets/my-social-widget.php:130
 msgid "Flickr"
 msgstr "Flickr"
 
-#: ../includes/widgets/my-social-widget.php:155
+#: ../includes/widgets/my-social-widget.php:131
 msgid "Flickr URL"
 msgstr "Flickr URL"
 
-#: ../includes/widgets/my-social-widget.php:157
+#: ../includes/widgets/my-social-widget.php:133
 msgid "Flickr label"
 msgstr "Etiqueta Flickr "
 
-#: ../includes/widgets/my-social-widget.php:162
-#: ../includes/widgets/my-social-widget.php:163
+#: ../includes/widgets/my-social-widget.php:138
+#: ../includes/widgets/my-social-widget.php:139
 msgid "RSS feed"
 msgstr "RSS feed"
 
-#: ../includes/widgets/my-social-widget.php:165
+#: ../includes/widgets/my-social-widget.php:141
 msgid "RSS label"
 msgstr "Etiqueta RSS"
 
-#: ../includes/widgets/my-social-widget.php:170
+#: ../includes/widgets/my-social-widget.php:146
 msgid "Linkedin"
 msgstr "Linkedin"
 
-#: ../includes/widgets/my-social-widget.php:171
+#: ../includes/widgets/my-social-widget.php:147
 msgid "Linkedin URL"
 msgstr "Linkedin URL"
 
-#: ../includes/widgets/my-social-widget.php:173
+#: ../includes/widgets/my-social-widget.php:149
 msgid "Linkedin label"
 msgstr "Etiqueta Linkedin "
 
-#: ../includes/widgets/my-social-widget.php:178
+#: ../includes/widgets/my-social-widget.php:154
 msgid "Delicious"
 msgstr "Delicious"
 
-#: ../includes/widgets/my-social-widget.php:179
+#: ../includes/widgets/my-social-widget.php:155
 msgid "Delicious URL"
 msgstr "Delicious URL"
 
-#: ../includes/widgets/my-social-widget.php:181
+#: ../includes/widgets/my-social-widget.php:157
 msgid "Delicious label"
 msgstr "Etiqueta Delicious "
 
-#: ../includes/widgets/my-social-widget.php:186
+#: ../includes/widgets/my-social-widget.php:162
 msgid "Youtube"
 msgstr "Youtube"
 
-#: ../includes/widgets/my-social-widget.php:188
+#: ../includes/widgets/my-social-widget.php:164
 msgid "Youtube URL"
 msgstr "Youtube URL"
 
-#: ../includes/widgets/my-social-widget.php:191
+#: ../includes/widgets/my-social-widget.php:167
 msgid "Youtube label"
 msgstr "Etiqueta Youtube "
 
-#: ../includes/widgets/my-social-widget.php:197
-msgid "Google+"
-msgstr "Google+"
+#: ../includes/widgets/my-social-widget.php:173
+msgid "Google"
+msgstr ""
 
-#: ../includes/widgets/my-social-widget.php:199
-msgid "Google+ URL"
-msgstr "Google+ URL"
+#: ../includes/widgets/my-social-widget.php:175
+msgid "Google URL"
+msgstr ""
 
-#: ../includes/widgets/my-social-widget.php:202
-msgid "Google+ label"
-msgstr "Etiqueta Google+"
+#: ../includes/widgets/my-social-widget.php:178
+msgid "Google label"
+msgstr ""
 
-#: ../includes/widgets/my-social-widget.php:208
+#: ../includes/widgets/my-social-widget.php:184
 msgid "Display"
 msgstr "Mostrar"
 
-#: ../includes/widgets/my-social-widget.php:211
+#: ../includes/widgets/my-social-widget.php:187
 msgid "Both"
 msgstr "Ambos"
 
@@ -1565,41 +1412,45 @@ msgstr "Cherry - vCard"
 msgid "vCard"
 msgstr "vCard"
 
-#: ../includes/widgets/my-vcard-widget.php:51
-#: ../includes/widgets/my-vcard-widget.php:167
+#: ../includes/widgets/my-vcard-widget.php:55
+#: ../includes/widgets/my-vcard-widget.php:171
 msgid "Street Address"
 msgstr "Domicilio"
 
-#: ../includes/widgets/my-vcard-widget.php:52
-#: ../includes/widgets/my-vcard-widget.php:171
+#: ../includes/widgets/my-vcard-widget.php:56
+#: ../includes/widgets/my-vcard-widget.php:175
 msgid "City/Locality"
 msgstr "Ciudad/Localidad"
 
-#: ../includes/widgets/my-vcard-widget.php:53
-#: ../includes/widgets/my-vcard-widget.php:175
+#: ../includes/widgets/my-vcard-widget.php:57
+#: ../includes/widgets/my-vcard-widget.php:179
 msgid "State/Region"
 msgstr "Estado/Región"
 
-#: ../includes/widgets/my-vcard-widget.php:54
-#: ../includes/widgets/my-vcard-widget.php:179
+#: ../includes/widgets/my-vcard-widget.php:58
+#: ../includes/widgets/my-vcard-widget.php:183
 msgid "Zipcode/Postal Code"
 msgstr "Código Postal"
 
-#: ../includes/widgets/my-vcard-widget.php:55
-#: ../includes/widgets/my-vcard-widget.php:183
+#: ../includes/widgets/my-vcard-widget.php:59
+#: ../includes/widgets/my-vcard-widget.php:187
 msgid "Telephone"
 msgstr "Teléfono"
 
-#: ../includes/widgets/my-vcard-widget.php:56
-#: ../includes/widgets/my-vcard-widget.php:187
+#: ../includes/widgets/my-vcard-widget.php:60
+#: ../includes/widgets/my-vcard-widget.php:191
 msgid "Email"
 msgstr "Correo Electrónico"
 
-#: ../includes/widgets/my-vcard-widget.php:158
+#: ../includes/widgets/my-vcard-widget.php:160
+msgid "Google Map"
+msgstr "Mapa de Google"
+
+#: ../includes/widgets/my-vcard-widget.php:162
 msgid "Display map"
 msgstr "Mostrar mapa"
 
-#: ../includes/widgets/my-vcard-widget.php:161
+#: ../includes/widgets/my-vcard-widget.php:165
 msgid "HTML map code"
 msgstr "Código mapa HTML"
 
@@ -1758,6 +1609,240 @@ msgstr ""
 msgid ""
 "This does not appear to be a WXR file, missing/invalid WXR version number"
 msgstr "Esto no es un fichero WXR, falta/número no válido de versión WXR"
+
+#~ msgid "Description."
+#~ msgstr "Descripción"
+
+#~ msgid "Insert Shortcode"
+#~ msgstr "Insertar código corto"
+
+#~ msgid "Posts"
+#~ msgstr "Entradas"
+
+#~ msgid "Posts Grid"
+#~ msgstr "Grid de entradas"
+
+#~ msgid "Posts List"
+#~ msgstr "Lista de entradas"
+
+#~ msgid "Mini Posts Grid"
+#~ msgstr "Mini Posts Grid/Entradas Mini Grid"
+
+#~ msgid "Mini Posts List"
+#~ msgstr "Mini Posts List/Entradas Mini Lista"
+
+#~ msgid "Recent Posts"
+#~ msgstr "Entradas nuevas"
+
+#~ msgid "Recent Testimonials"
+#~ msgstr "Testimonios nuevos"
+
+#~ msgid "Basic"
+#~ msgstr "Básico"
+
+#~ msgid "Banner"
+#~ msgstr "Banner"
+
+#~ msgid "Post Cycle"
+#~ msgstr "Post Cycle/Ciclo de Entrada"
+
+#~ msgid "Carousel (Elasti)"
+#~ msgstr "Carrusel (Elasti)"
+
+#~ msgid "Carousel (OWL)"
+#~ msgstr "Carrusel (OWL)"
+
+#~ msgid "Roundabout"
+#~ msgstr "Rotonda"
+
+#~ msgid "Service Box"
+#~ msgstr "Cuadro de Servicio"
+
+#~ msgid "Hero Unit"
+#~ msgstr "Hero Unit"
+
+#~ msgid "Categories"
+#~ msgstr "Categorías"
+
+#~ msgid "Columns"
+#~ msgstr "Columnas"
+
+#~ msgid "Fluid Column"
+#~ msgstr "Columna Fluida"
+
+#~ msgid "2 Columns"
+#~ msgstr "2 Columnas"
+
+#~ msgid "3 Columns"
+#~ msgstr "3 Columnas"
+
+#~ msgid "4 Columns"
+#~ msgstr "4 Columnas"
+
+#~ msgid "Elements"
+#~ msgstr "Elementos"
+
+#~ msgid "Label"
+#~ msgstr "Etiqueta"
+
+#~ msgid "Text Highlight"
+#~ msgstr "Texto destacado"
+
+#~ msgid "Button"
+#~ msgstr "Botón"
+
+#~ msgid "Drop Cap"
+#~ msgstr "/Letra Capital"
+
+#~ msgid "Blockquote"
+#~ msgstr "Bloque de cita"
+
+#~ msgid "Icon"
+#~ msgstr "Icono"
+
+#~ msgid "Frame"
+#~ msgstr "Marca"
+
+#~ msgid "Horizontal Rule"
+#~ msgstr "Regla horizontal"
+
+#~ msgid "Small Horizontal Rule"
+#~ msgstr "Regla pequeña horizontal"
+
+#~ msgid "Vertical Rule"
+#~ msgstr "Regla vertical"
+
+#~ msgid "Spacer"
+#~ msgstr "Spacer"
+
+#~ msgid "Progressbar"
+#~ msgstr "Barra de progreso"
+
+#~ msgid "Address"
+#~ msgstr "Dirección"
+
+#~ msgid "Clear"
+#~ msgstr "Limpio"
+
+#~ msgid "Extra Wrap"
+#~ msgstr "Envoltura adicional"
+
+#~ msgid "Lists"
+#~ msgstr "Listas"
+
+#~ msgid "Unstyled"
+#~ msgstr "Sin estilo"
+
+#~ msgid "Check List"
+#~ msgstr "Lista de verificación"
+
+#~ msgid "Check 2 List"
+#~ msgstr "Lista de verificación 2"
+
+#~ msgid "OK Circle List"
+#~ msgstr "Lista Buena Gente"
+
+#~ msgid "OK Sign List"
+#~ msgstr "Lista OK de Registro"
+
+#~ msgid "Arrow List"
+#~ msgstr "Lista de flechas"
+
+#~ msgid "Arrow 2 List"
+#~ msgstr "Lista de flechas 2"
+
+#~ msgid "Circle Arrow List"
+#~ msgstr "Lista Flecha Círculo"
+
+#~ msgid "Caret List"
+#~ msgstr "Lista Símbolo de Intercalación"
+
+#~ msgid "Angle List"
+#~ msgstr "Lista Ángulo"
+
+#~ msgid "Double Angle List"
+#~ msgstr "Lista Doble Ángulo"
+
+#~ msgid "Star List"
+#~ msgstr "Lista de estrellas"
+
+#~ msgid "Plus List"
+#~ msgstr "Lista de signo más"
+
+#~ msgid "Minus List"
+#~ msgstr "Lista de signo menos"
+
+#~ msgid "Circle List"
+#~ msgstr "Lista"
+
+#~ msgid "Circle Blank List"
+#~ msgstr "Lista en Blanco"
+
+#~ msgid "Custom List"
+#~ msgstr "Lista personalizada"
+
+#~ msgid "Misc"
+#~ msgstr "Misceláneo"
+
+#~ msgid "Alert Box"
+#~ msgstr "Cuadro de advertencia"
+
+#~ msgid "Close icon"
+#~ msgstr "Cerrar icono"
+
+#~ msgid "Well"
+#~ msgstr "Bien"
+
+#~ msgid "Small"
+#~ msgstr "Pequeño"
+
+#~ msgid "Template URL"
+#~ msgstr "URL de Plantilla"
+
+#~ msgid "Sitemap"
+#~ msgstr "Mapa del sitio"
+
+#~ msgid "Video Preview"
+#~ msgstr "Vista previa de vídeo"
+
+#~ msgid "Tabs"
+#~ msgstr "Pestañas"
+
+#~ msgid "Accordion"
+#~ msgstr "Acordeón"
+
+#~ msgid "Table"
+#~ msgstr "Tabla"
+
+#~ msgid "Pricing Table"
+#~ msgstr "Tabla de Determinación de Precios"
+
+#~ msgid "Style Switcher Preview"
+#~ msgstr "Previsualizar Style Switcher"
+
+#~ msgid "Cheatin&#8217; uh?"
+#~ msgstr "Engañand&#8217; ¿Qué?"
+
+#~ msgid "%1$s &#8212; WordPress"
+#~ msgstr "%1$s &#8212; WordPress"
+
+#~ msgid "Customize %s"
+#~ msgstr "Personalizar %s"
+
+#~ msgid "Style Switcher"
+#~ msgstr "Style Switcher"
+
+#~ msgid "Cherry - 125x125 Ads."
+#~ msgstr "Cherry - Anuncios 125x125."
+
+#~ msgid "Google+"
+#~ msgstr "Google+"
+
+#~ msgid "Google+ URL"
+#~ msgstr "Google+ URL"
+
+#~ msgid "Google+ label"
+#~ msgstr "Etiqueta Google+"
 
 #~ msgid "No Repeat"
 #~ msgstr "No se repite"
@@ -3144,9 +3229,6 @@ msgstr "Esto no es un fichero WXR, falta/número no válido de versión WXR"
 #~ msgid "Category"
 #~ msgstr "Categoría"
 
-#~ msgid "Thumbnail"
-#~ msgstr "Thumbnail"
-
 #~ msgid "Your comment is awaiting moderation."
 #~ msgstr "Su comentario necesita moderación."
 
@@ -4121,8 +4203,8 @@ msgstr "Esto no es un fichero WXR, falta/número no válido de versión WXR"
 
 #~ msgid "WordPress engine system files and folders <em>(recommended)</em>"
 #~ msgstr ""
-#~ "Las carpetas y archivos de sistema del motor de WordPress <em>"
-#~ "(recomendado)</em>"
+#~ "Las carpetas y archivos de sistema del motor de WordPress "
+#~ "<em>(recomendado)</em>"
 
 #~ msgid "Your plugins system files and folders <em>(recommended)</em>"
 #~ msgstr ""
