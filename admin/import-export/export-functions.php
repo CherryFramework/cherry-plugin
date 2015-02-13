@@ -6,7 +6,11 @@
 	add_action('wp_ajax_export_content', 'cherry_plugin_export_content');
 	function cherry_plugin_export_content() {
 		$exclude_files = array('xml', 'json');
-		$exclude_folder = array('woocommerce_uploads');
+		/**
+		 * Filters folders to exclude from export parser
+		 * @var array
+		 */
+		$exclude_folder = apply_filters( 'cherry_export_exclude_folders', array( 'woocommerce_uploads', 'wc-logs' ) );
 		$response = array(
 			'what'=>'status',
 			'action'=>'export_content',
@@ -147,7 +151,7 @@
 
 		return $json_dir;
 	}
-	function sort_widget_array($array){ 
+	function sort_widget_array($array){
 		return (!empty($array) && is_array($array));
 	}
 	function cherry_plugin_delete_file($file){
