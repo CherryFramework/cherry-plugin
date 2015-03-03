@@ -11,7 +11,7 @@ class MY_FlickrWidget extends WP_Widget {
 		extract( $args );
 		$title     = apply_filters('widget_title', $instance['title']);
 		$flickr_id = apply_filters('flickr_id', $instance['flickr_id']);
-		$amount    = apply_filters('flickr_image_amount', $instance['image_amount']);
+		$amount    = intval( apply_filters('flickr_image_amount', $instance['image_amount']) );
 		$linktext  = apply_filters('cherry_text_translate', $instance['linktext'], $instance['title'] . ' linktext');
 		$suf       = rand(100000, 999999);
 
@@ -56,7 +56,7 @@ class MY_FlickrWidget extends WP_Widget {
 
 		$title     = esc_attr($instance['title']);
 		$flickr_id = esc_attr($instance['flickr_id']);
-		$amount    = esc_attr($instance['image_amount']);
+		$amount    = intval($instance['image_amount']);
 		$linktext  = esc_attr($instance['linktext']);
 	?>
 	<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', CHERRY_PLUGIN_DOMAIN); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
