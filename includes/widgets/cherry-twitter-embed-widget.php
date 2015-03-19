@@ -15,9 +15,11 @@ $error = array();
 
 			$output = $before_widget;
 			$output .= $title ? $before_title . $title . $after_title : '' ;
-
+			if($limit) {
+				$limit_string = 'data-tweet-limit="'.$limit.'"';
+			}
 			if($instance['error'] === '') {
-				$output .= '<a class="twitter-timeline" data-screen-name="'.$userName.'" data-theme="'.$color_scheme.'" data-widget-id="'.$widgetId.'"></a>
+				$output .= '<a class="twitter-timeline" data-screen-name="'.$userName.'" data-theme="'.$color_scheme.'" data-widget-id="'.$widgetId.'" '.$limit_string.'></a>
 							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>';
 			} else {
 				$output .= '<div style="margin:20px 0 15px;padding:10px;background:#ff9b9b">'.__('There is some errors. Please check widgets page.', CHERRY_PLUGIN_DOMAIN).'</div>';
@@ -57,6 +59,7 @@ $error = array();
 				'widgetId' => '',
 				'userName' => '',
 				'color_scheme' => 'light',
+				'limit' => '',
 				'error' => ''
 			);
 
@@ -67,6 +70,7 @@ $error = array();
 				'widgetId' => array('type' => 'text', 'class' => 'widefat', 'inline_style' => '', 'title' => __('Widget ID', CHERRY_PLUGIN_DOMAIN), 'description' => __('ID of your widget. First of all you need make a new one widget on page https://twitter.com/settings/widgets/new. After it copy and paste here ID of widget. You can find it after creating of widget in browser\'s URL field. It contents only numbers.', CHERRY_PLUGIN_DOMAIN), 'value' => $widgetId),
 				'userName' => array('type' => 'text', 'class' => 'widefat', 'inline_style' => '', 'title' => __('User Name', CHERRY_PLUGIN_DOMAIN), 'description' => __('Twitter username you need to show. If empty, then will shown twitter that you set in Twitter\'s configure page.', CHERRY_PLUGIN_DOMAIN), 'value' => $userName),
 				'color_scheme' => array('type' => 'select', 'class' => 'widefat', 'inline_style' => '', 'title' => __('Color Scheme', CHERRY_PLUGIN_DOMAIN), 'description' => '', 'value' => $color_scheme, 'value_options' => array('light' => __('Light', CHERRY_PLUGIN_DOMAIN), 'dark' => __('Dark', CHERRY_PLUGIN_DOMAIN)) ),
+				'limit' => array('type' => 'text', 'class' => 'widefat', 'inline_style' => '', 'title' => __('Tweet limit', CHERRY_PLUGIN_DOMAIN), 'description' => __('Number of tweets. Leave blank if you don\'t want to limit tweet\'s number.', CHERRY_PLUGIN_DOMAIN), 'value' => $limit),
 			);
 			$output = '';
 

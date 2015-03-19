@@ -16,6 +16,8 @@ if ( !class_exists('Cherry_TinyMCE_Shortcodes') ) {
 			add_action( 'wp_ajax_cherry_check_url_action', array( $this, 'ajax_action_check_url' ) );
 			add_action( 'wp_ajax_cherry_shortcodes_nonce', array( $this, 'ajax_action_generate_nonce' ) );
 
+			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ), 99 );
+
 			// Output the markup in the footer.
 			add_action( 'admin_footer', array( $this, 'output_dialog_markup' ) );
 		}
@@ -77,10 +79,19 @@ if ( !class_exists('Cherry_TinyMCE_Shortcodes') ) {
 			die();
 		}
 
+		function enqueue_scripts() {
+			wp_register_script( 'tinymce-dialog-script', plugins_url( 'dialog.js', __FILE__ ), array( 'jquery' ), CHERRY_PLUGIN_VERSION, true );
+			wp_enqueue_script( 'tinymce-dialog-script' );
+			$plugin_data = array(
+				'url' => CHERRY_PLUGIN_URL,
+			);
+			wp_localize_script( 'tinymce-dialog-script', 'plugin_data', $plugin_data );
+		}
+
 		/**
 		 * Output the HTML markup for the dialog box.
 		 */
-		public function output_dialog_markup () {
+		function output_dialog_markup () {
 			// URL to TinyMCE plugin folder
 			$plugin_url = CHERRY_PLUGIN_URL . '/includes/shortcodes/'; ?>
 
@@ -98,7 +109,6 @@ if ( !class_exists('Cherry_TinyMCE_Shortcodes') ) {
 					<input type="hidden" id="selected-shortcode" value="">
 				</div>
 				<div class="clear"></div>
-				<script type="text/javascript" id="cherry-shortcode-dialog" src="<?php echo esc_url( CHERRY_PLUGIN_URL . 'admin/shortcodes/dialog-js.php' ); ?>"></script>
 			</div><!-- #dialog (end) -->
 	<?php }
 	}
