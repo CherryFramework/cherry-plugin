@@ -56,5 +56,5 @@
 				) );
 			wp_localize_script( 'cherry-plugin', 'items_custom', $items_custom );
 		}
-		add_action( 'wp_enqueue_scripts', 'cherry_include_script' );
+		add_action( 'wp_enqueue_scripts', 'cherry_include_script', 9 );
 	}
