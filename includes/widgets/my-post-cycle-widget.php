@@ -63,6 +63,15 @@ class MY_CycleWidget extends WP_Widget {
 			} ?>
 
 			<script type="text/javascript">
+				<?php if($direction_nav) { ?>
+					function navigationCenter() {
+						var firstImageHeight = jQuery("#flexslider_<?php echo $random ?> a > img").first().height();
+						var navIconHeight = jQuery('#flexslider_<?php echo $random ?> .flex-direction-nav a').innerHeight();
+						activeImageCenter = firstImageHeight / 2;
+						navObject = jQuery('#flexslider_<?php echo $random ?>').find("ul.flex-direction-nav li a");
+						navObject.animate({"top":activeImageCenter-navIconHeight/2}, 200);
+					}
+				<?php } ?>
 				jQuery(window).load(function() {
 					jQuery('#flexslider_<?php echo $random ?>').flexslider({
 						animation: "slide",
@@ -72,9 +81,26 @@ class MY_CycleWidget extends WP_Widget {
 						controlNav: <?php echo $control_nav; ?>,
 						directionNav: <?php echo $direction_nav; ?>,
 						prevText: '',
-						nextText: ''
-					});
+						nextText: '',
+						<?php if($direction_nav) { ?>
+							/* Centering direction navs relatively on thumbnail height */
+							start: function() {
+								navigationCenter();
+							}
+						<?php } ?>
+					});					
+					
 				});
+				/* Centering direction navs relatively on thumbnail height */
+				<?php if($direction_nav) { ?>
+					jQuery(document).ready(function() {
+						jQuery(window).resize(
+							function(){
+								navigationCenter();
+							}
+						).trigger('resize');
+					});
+				<?php } ?>
 			</script>
 			<div id="flexslider_<?php echo $random ?>" class="flexslider widget-flexslider">
 				<ul class="slides unstyled">
