@@ -15,14 +15,19 @@ frameworkShortcodeAtts={
                 id:"icon",
 				controlType:"select-control",
 				selectValues:['no', 'icon1', 'icon2', 'icon3', 'icon4', 'icon5', 'icon6', 'icon7', 'icon8', 'icon9', 'icon10'],
-				defaultValue: 'icon1', 
+				defaultValue: 'icon1',
 				defaultText: 'icon1',
                 help:"Select the icon image for box."
             },
             {
+                label:"Icon Link",
+                id:"icon_link",
+                help:"Enter the link for icon. (e.g. http://demolink.org)"
+            },
+            {
                 label:"Text",
                 id:"text",
-				controlType:"textarea-control", 
+				controlType:"textarea-control",
                 help:"Enter text for box."
             },
 			{
@@ -40,7 +45,7 @@ frameworkShortcodeAtts={
 				id:"btn_size",
 				controlType:"select-control",
 				selectValues:['small', 'normal', 'large'],
-				defaultValue: 'normal', 
+				defaultValue: 'normal',
 				defaultText: 'normal',
 				help:"Choose button size."
 			},
@@ -49,7 +54,7 @@ frameworkShortcodeAtts={
 				id:"target",
 				controlType:"select-control",
 				selectValues:['_blank', '_self', '_parent', '_top'],
-				defaultValue: '_self', 
+				defaultValue: '_self',
 				defaultText: '_self',
 				help:"The target attribute specifies a window or a frame where the linked document is loaded."
 			},

@@ -11,12 +11,13 @@ if (!function_exists('service_box_shortcode')) {
 				'title'        => '',
 				'subtitle'     => '',
 				'icon'         => '',
+				'icon_link'    => '',
 				'text'         => '',
 				'btn_text'     => __('Read more', CHERRY_PLUGIN_DOMAIN),
 				'btn_link'     => '',
 				'btn_size'     => '',
 				'target'       => '',
-				'custom_class' => ''
+				'custom_class' => '',
 		), $atts));
 
 		$output =  '<div class="service-box '.$custom_class.'">';
@@ -28,7 +29,11 @@ if (!function_exists('service_box_shortcode')) {
 					$icon_url = CHILD_URL.'/images/'.strtolower($icon).'.png';
 				}
 			}
-			$output .= '<figure class="icon"><img src="'.$icon_url.'" alt="" /></figure>';
+			if ( empty( $icon_link ) ) {
+				$output .= '<figure class="icon"><img src="'.$icon_url.'" alt="" /></figure>';
+			} else {
+				$output .= '<figure class="icon"><a href="' . esc_url( $icon_link ) . '"><img src="' . $icon_url . '" alt="" /></a></figure>';
+			}
 		}
 
 		$output .= '<div class="service-box_body">';
