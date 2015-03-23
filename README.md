@@ -6,6 +6,7 @@ Cherry Plugin contains all shortcodes and widgets used in Cherry Framework. Also
 #### v1.2.7 ####
 
 * ADD: `Pinterest` and `Twitter` widgets
+* ADD: icon_link attribute to the `service_box` shortcode
 * FIX: Plugin security bug
 * FIX: Usage of `wp-content` in code
 * FIX: Check and validation for amount parametr in `flickr` widget
