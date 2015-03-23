@@ -37,9 +37,9 @@
 			define('UPLOAD_BASE_DIR', str_replace("\\", "/", $upload_dir['basedir']));
 			define('UPLOAD_DIR', str_replace("\\", "/", $upload_dir['path'].'/'));
 
-			if ( !defined('API_URL') ) {
-				define( 'API_URL', esc_url( 'http://updates.cherry.template-help.com/cherrymoto/v3/api/' ) );
-			}
+			// if ( !defined('API_URL') ) {
+			// 	define( 'API_URL', esc_url( 'http://updates.cherry.template-help.com/cherrymoto/v3/api/' ) );
+			// }
 
 			load_plugin_textdomain( CHERRY_PLUGIN_DOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/'.CHERRY_PLUGIN_DOMAIN_DIR);
 
