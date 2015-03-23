@@ -3,6 +3,24 @@ Cherry Plugin
 
 Cherry Plugin contains all shortcodes and widgets used in Cherry Framework. Also Cherry Framework Import/Export features are also added by Cherry plugin.
 
+#### v1.2.7 ####
+
+* ADD: `Pinterest` and `Twitter` widgets
+* FIX: Plugin security bug
+* FIX: Usage of `wp-content` in code
+* FIX: Check and validation for amount parametr in `flickr` widget
+* FIX: `roundabout` shortcode in home page
+* FIX: a limit parametr for `twitter` widget
+* FIX: Added a check for empty post array in `carousel_owl` and `posts_grid` shortcodes
+* FIX: widget visibility
+* FIX: Save menu badges meta data if is WooCommerce template
+* UPD: Width for pseudo-elements in `content_box` shortcode CSS
+* UPD: Centering of navigation icons in `Post Cycle` widget
+* UPD: Changed a priority for wp_enqueue_scripts
+* UPD: Added a `wc-logs` directory to the exclude folder for export
+* UPD: Visibility items in `carousel_owl` shortcode
+* UPD: Language files
+
 
 #### v1.2.6 ####
 
