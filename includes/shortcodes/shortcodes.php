@@ -659,6 +659,7 @@ if (!function_exists('shortcode_video_preview')) {
 				'post_url' => '',
 				'date' => '',
 				'author' => '',
+				'lightbox' => 'no',
 				'custom_class' => '',
 			), $atts));
 		$output_title = '';
@@ -669,6 +670,13 @@ if (!function_exists('shortcode_video_preview')) {
 		$get_user = get_userdata($get_post->post_author);
 		$user_url = get_bloginfo('url').'/author/'.$get_user->user_nicename;
 		$video_url = parser_video_url(get_post_meta($post_ID, 'tz_video_embed', true));
+		$video_url_popup = str_replace('src=', '', $video_url);
+		$rand = rand();
+
+		if(strpos($video_url, 'youtube') !== false) {
+			$video_url_popup = str_replace('embed/', 'watch?v=', $video_url_popup);
+		}
+
 		$get_image_url = video_image($video_url);
 		$img='';
 
@@ -682,7 +690,22 @@ if (!function_exists('shortcode_video_preview')) {
 			$output_date = '<span class="post_date"><time datetime="'.$get_post->post_date.'"> '.get_the_date().'</time></span>';
 		}
 		if($get_image_url!=false && $get_image_url!=''){
-			$img = '<a class="preview_image"  href="'.$post_url.'" title="'.$get_image_url.'"><img src="'.$get_image_url.'" alt=""><span class="icon-play-circle hover"></span></a>';
+			if($lightbox == 'yes') {
+				$img = ' <script type="text/javascript">
+					jQuery(document).ready(function() {
+						jQuery(\'.popup-video-'.$rand.'\').magnificPopup({
+							type: \'iframe\',
+							mainClass: \'mfp-fade\',
+							removalDelay: 160,
+							preloader: false,
+							fixedContentPos: false
+						});
+					});
+				</script>';
+				$img .= '<a class="popup-video-'.$rand.'" href="'.$video_url_popup.'" title="'.$get_image_url.'"><img src="'.$get_image_url.'" alt=""><span class="icon-play-circle hover"></span></a>';
+			} else {
+				$img = '<a class="preview_image"  href="'.$post_url.'" title="'.$get_image_url.'"><img src="'.$get_image_url.'" alt=""><span class="icon-play-circle hover"></span></a>';
+			}
 		}
 		$output ='<figure class="featured-thumbnail thumbnail video_preview clearfix'.$custom_class.'"><div>'.$img.'<figcaption>'.$output_title.$output_author.$output_date.'</figcaption></div></figure>';
 
