@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fr_FR\n"
-"POT-Creation-Date: 2015-02-11 16:10+0200\n"
-"PO-Revision-Date: 2015-02-11 16:11+0200\n"
+"POT-Creation-Date: 2015-04-17 15:14+0200\n"
+"PO-Revision-Date: 2015-04-17 15:14+0200\n"
 "Last-Translator: \n"
 "Language-Team: Cherry Team <demolink@info.org>\n"
 "Language: fr\n"
@@ -37,7 +37,7 @@ msgstr "Importer le contenu"
 msgid "Export Content"
 msgstr "Exporter le contenu"
 
-#: ../admin/import-export/export-functions.php:14
+#: ../admin/import-export/export-functions.php:18
 msgid "Export content done"
 msgstr "Exportation du contenu terminée"
 
@@ -509,17 +509,17 @@ msgid "Cherry Content Export"
 msgstr "Exportation du contenu de Cherry"
 
 #: ../admin/shortcodes/dialog.php:20
-#: ../admin/shortcodes/tinymce-shortcodes.php:89
+#: ../admin/shortcodes/tinymce-shortcodes.php:100
 msgid "Cancel"
 msgstr "Annuler"
 
 #: ../admin/shortcodes/dialog.php:21
-#: ../admin/shortcodes/tinymce-shortcodes.php:90
+#: ../admin/shortcodes/tinymce-shortcodes.php:101
 msgid "Insert"
 msgstr ""
 
 #: ../admin/shortcodes/dialog.php:25
-#: ../admin/shortcodes/tinymce-shortcodes.php:94
+#: ../admin/shortcodes/tinymce-shortcodes.php:105
 msgid "Shortcode Options"
 msgstr "Options code court"
 
@@ -569,18 +569,18 @@ msgstr "par"
 #: ../includes/shortcodes/post-cycle.php:150
 #: ../includes/shortcodes/posts-list.php:163
 #: ../includes/shortcodes/posts-list.php:164
-#: ../includes/widgets/my-post-cycle-widget.php:127
+#: ../includes/widgets/my-post-cycle-widget.php:153
 msgid "Comments"
 msgstr "Cmmentaires"
 
 #: ../includes/shortcodes/carousel-owl.php:176
 #: ../includes/shortcodes/carousel.php:169
-#: ../includes/widgets/my-post-cycle-widget.php:129
+#: ../includes/widgets/my-post-cycle-widget.php:155
 msgid "Comment"
 msgstr "Commentaire"
 
 #: ../includes/shortcodes/carousel.php:160
-#: ../includes/widgets/my-post-cycle-widget.php:118
+#: ../includes/widgets/my-post-cycle-widget.php:144
 msgid "by"
 msgstr "par"
 
@@ -588,11 +588,11 @@ msgstr "par"
 #: ../includes/shortcodes/post-cycle.php:17
 #: ../includes/shortcodes/posts-grid.php:23
 #: ../includes/shortcodes/posts-list.php:19
-#: ../includes/shortcodes/service-box.php:15
+#: ../includes/shortcodes/service-box.php:16
 #: ../includes/widgets/my-posts-type-widget.php:165
 #: ../includes/widgets/my-recent-posts.php:87
 msgid "Read more"
-msgstr "Lre la suite"
+msgstr "Lire la suite"
 
 #: ../includes/shortcodes/media.php:110 ../includes/shortcodes/media.php:240
 #: ../includes/shortcodes/media.php:251
@@ -690,7 +690,7 @@ msgstr ""
 #: ../includes/widgets/cherry-banner-widget.php:46
 #: ../includes/widgets/my-comment-widget.php:147
 #: ../includes/widgets/my-facebook-widget.php:79
-#: ../includes/widgets/my-flickr-widget.php:57
+#: ../includes/widgets/my-flickr-widget.php:62
 #: ../includes/widgets/my-posts-type-widget.php:225
 #: ../includes/widgets/my-recent-posts.php:126
 #: ../includes/widgets/my-recent-posts.php:148
@@ -732,12 +732,12 @@ msgstr ""
 
 #: ../includes/widgets/cherry-instagram-widget.php:71
 #: ../includes/widgets/cherry-pinterest-embed-widget.php:77
-#: ../includes/widgets/cherry-twitter-embed-widget.php:66
+#: ../includes/widgets/cherry-twitter-embed-widget.php:69
 msgid "Widget Title"
 msgstr ""
 
 #: ../includes/widgets/cherry-instagram-widget.php:72
-#: ../includes/widgets/cherry-twitter-embed-widget.php:68
+#: ../includes/widgets/cherry-twitter-embed-widget.php:71
 msgid "User Name"
 msgstr ""
 
@@ -790,12 +790,12 @@ msgid "Widget for Pinterest embed content"
 msgstr ""
 
 #: ../includes/widgets/cherry-pinterest-embed-widget.php:40
-#: ../includes/widgets/cherry-twitter-embed-widget.php:23
+#: ../includes/widgets/cherry-twitter-embed-widget.php:25
 msgid "There is some errors. Please check widgets page."
 msgstr ""
 
 #: ../includes/widgets/cherry-pinterest-embed-widget.php:58
-#: ../includes/widgets/cherry-twitter-embed-widget.php:41
+#: ../includes/widgets/cherry-twitter-embed-widget.php:43
 msgid "Field is empty"
 msgstr ""
 
@@ -815,15 +815,15 @@ msgstr ""
 msgid "Widget for Twitter embed content"
 msgstr ""
 
-#: ../includes/widgets/cherry-twitter-embed-widget.php:44
+#: ../includes/widgets/cherry-twitter-embed-widget.php:46
 msgid "Widget ID can contains only numbers"
 msgstr ""
 
-#: ../includes/widgets/cherry-twitter-embed-widget.php:67
+#: ../includes/widgets/cherry-twitter-embed-widget.php:70
 msgid "Widget ID"
 msgstr ""
 
-#: ../includes/widgets/cherry-twitter-embed-widget.php:67
+#: ../includes/widgets/cherry-twitter-embed-widget.php:70
 msgid ""
 "ID of your widget. First of all you need make a new one widget on page "
 "https://twitter.com/settings/widgets/new. After it copy and paste here ID of "
@@ -831,26 +831,35 @@ msgid ""
 "contents only numbers."
 msgstr ""
 
-#: ../includes/widgets/cherry-twitter-embed-widget.php:68
+#: ../includes/widgets/cherry-twitter-embed-widget.php:71
 msgid ""
 "Twitter username you need to show. If empty, then will shown twitter that "
 "you set in Twitter's configure page."
 msgstr ""
 
-#: ../includes/widgets/cherry-twitter-embed-widget.php:69
+#: ../includes/widgets/cherry-twitter-embed-widget.php:72
 #: ../includes/widgets/my-facebook-widget.php:100
 msgid "Color Scheme"
 msgstr "Combinaison des couleurs"
 
-#: ../includes/widgets/cherry-twitter-embed-widget.php:69
+#: ../includes/widgets/cherry-twitter-embed-widget.php:72
 #: ../includes/widgets/my-facebook-widget.php:102
 msgid "Light"
 msgstr "Lumière"
 
-#: ../includes/widgets/cherry-twitter-embed-widget.php:69
+#: ../includes/widgets/cherry-twitter-embed-widget.php:72
 #: ../includes/widgets/my-facebook-widget.php:103
 msgid "Dark"
 msgstr "Sombre"
+
+#: ../includes/widgets/cherry-twitter-embed-widget.php:73
+msgid "Tweet limit"
+msgstr ""
+
+#: ../includes/widgets/cherry-twitter-embed-widget.php:73
+msgid ""
+"Number of tweets. Leave blank if you don't want to limit tweet's number."
+msgstr ""
 
 #: ../includes/widgets/my-banners-widget.php:7
 msgid "Add 125x125 ads."
@@ -1010,15 +1019,19 @@ msgstr "Frontière d'affichage"
 msgid "Cherry - Flickr"
 msgstr "Cherry - Flickr"
 
-#: ../includes/widgets/my-flickr-widget.php:59
+#: ../includes/widgets/my-flickr-widget.php:39
+msgid "You need enter number of images in widget settings."
+msgstr ""
+
+#: ../includes/widgets/my-flickr-widget.php:64
 msgid "Flickr ID"
 msgstr "Id Flickr"
 
-#: ../includes/widgets/my-flickr-widget.php:60
+#: ../includes/widgets/my-flickr-widget.php:65
 msgid "Images count"
 msgstr "Compteur d'images"
 
-#: ../includes/widgets/my-flickr-widget.php:61
+#: ../includes/widgets/my-flickr-widget.php:66
 #: ../includes/widgets/my-posts-type-widget.php:345
 #: ../includes/widgets/my-posts-type-widget.php:392
 #: ../includes/widgets/my-recent-posts.php:158
@@ -1029,87 +1042,87 @@ msgstr "Texte du lien"
 msgid "Cherry - Post Cycle"
 msgstr "Cycle des articles Cherry"
 
-#: ../includes/widgets/my-post-cycle-widget.php:195
+#: ../includes/widgets/my-post-cycle-widget.php:221
 msgid "Title:"
 msgstr "Titre :"
 
-#: ../includes/widgets/my-post-cycle-widget.php:197
+#: ../includes/widgets/my-post-cycle-widget.php:223
 msgid "Select post type:"
 msgstr "Sélectionner le type d'article"
 
-#: ../includes/widgets/my-post-cycle-widget.php:227
+#: ../includes/widgets/my-post-cycle-widget.php:253
 msgid "Categories (names separated by \",\"):"
 msgstr "Catégories  (noms séparés par \",\"):"
 
-#: ../includes/widgets/my-post-cycle-widget.php:229
+#: ../includes/widgets/my-post-cycle-widget.php:255
 msgid "Posts count:"
 msgstr "Compteur d'articles"
 
-#: ../includes/widgets/my-post-cycle-widget.php:231
+#: ../includes/widgets/my-post-cycle-widget.php:257
 msgid "Thumbnail Width (in pixels):"
 msgstr "Largeur de la miniature (en pixels) : "
 
-#: ../includes/widgets/my-post-cycle-widget.php:233
+#: ../includes/widgets/my-post-cycle-widget.php:259
 msgid "Thumbnail Height (in pixels):"
 msgstr "Hauteur de la miniature (en pixels) :"
 
-#: ../includes/widgets/my-post-cycle-widget.php:235
+#: ../includes/widgets/my-post-cycle-widget.php:261
 msgid "Show titles:"
 msgstr "Afficher les titres :"
 
-#: ../includes/widgets/my-post-cycle-widget.php:242
-#: ../includes/widgets/my-post-cycle-widget.php:261
-#: ../includes/widgets/my-post-cycle-widget.php:280
-#: ../includes/widgets/my-post-cycle-widget.php:299
-#: ../includes/widgets/my-post-cycle-widget.php:318
-#: ../includes/widgets/my-post-cycle-widget.php:343
-#: ../includes/widgets/my-post-cycle-widget.php:362
+#: ../includes/widgets/my-post-cycle-widget.php:268
+#: ../includes/widgets/my-post-cycle-widget.php:287
+#: ../includes/widgets/my-post-cycle-widget.php:306
+#: ../includes/widgets/my-post-cycle-widget.php:325
+#: ../includes/widgets/my-post-cycle-widget.php:344
+#: ../includes/widgets/my-post-cycle-widget.php:369
+#: ../includes/widgets/my-post-cycle-widget.php:388
 msgid "yes"
 msgstr "oui"
 
-#: ../includes/widgets/my-post-cycle-widget.php:247
-#: ../includes/widgets/my-post-cycle-widget.php:266
-#: ../includes/widgets/my-post-cycle-widget.php:285
-#: ../includes/widgets/my-post-cycle-widget.php:304
-#: ../includes/widgets/my-post-cycle-widget.php:323
-#: ../includes/widgets/my-post-cycle-widget.php:348
-#: ../includes/widgets/my-post-cycle-widget.php:367
+#: ../includes/widgets/my-post-cycle-widget.php:273
+#: ../includes/widgets/my-post-cycle-widget.php:292
+#: ../includes/widgets/my-post-cycle-widget.php:311
+#: ../includes/widgets/my-post-cycle-widget.php:330
+#: ../includes/widgets/my-post-cycle-widget.php:349
+#: ../includes/widgets/my-post-cycle-widget.php:374
+#: ../includes/widgets/my-post-cycle-widget.php:393
 msgid "no"
 msgstr "non"
 
-#: ../includes/widgets/my-post-cycle-widget.php:254
+#: ../includes/widgets/my-post-cycle-widget.php:280
 msgid "Show date:"
 msgstr "Afficher la date :"
 
-#: ../includes/widgets/my-post-cycle-widget.php:273
+#: ../includes/widgets/my-post-cycle-widget.php:299
 msgid "Show author:"
 msgstr "Montrer l'auteur :"
 
-#: ../includes/widgets/my-post-cycle-widget.php:292
+#: ../includes/widgets/my-post-cycle-widget.php:318
 msgid "Show comments:"
 msgstr "Afficher les commentaires :"
 
-#: ../includes/widgets/my-post-cycle-widget.php:311
+#: ../includes/widgets/my-post-cycle-widget.php:337
 msgid "Show excerpt:"
 msgstr "Afficher l'extrait :"
 
-#: ../includes/widgets/my-post-cycle-widget.php:330
+#: ../includes/widgets/my-post-cycle-widget.php:356
 msgid "Excerpt word count:"
 msgstr "Nombre de mots dans l'extrait"
 
-#: ../includes/widgets/my-post-cycle-widget.php:332
+#: ../includes/widgets/my-post-cycle-widget.php:358
 msgid "More Button Text:"
 msgstr "Texte du bouton plus"
 
-#: ../includes/widgets/my-post-cycle-widget.php:334
+#: ../includes/widgets/my-post-cycle-widget.php:360
 msgid "Slideshow cycling speed (in sec.):"
 msgstr "Vitesse d'affichage du diaporama (en secondes) :"
 
-#: ../includes/widgets/my-post-cycle-widget.php:336
+#: ../includes/widgets/my-post-cycle-widget.php:362
 msgid "Arrows:"
 msgstr "Flèches :"
 
-#: ../includes/widgets/my-post-cycle-widget.php:355
+#: ../includes/widgets/my-post-cycle-widget.php:381
 msgid "Pagination:"
 msgstr "Pagination:"
 
