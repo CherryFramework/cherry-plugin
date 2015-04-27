@@ -94,17 +94,19 @@ if ( !function_exists('google_map_api_shortcode') ) {
 					var map;
 					var coordData = new google.maps.LatLng(parseFloat('.$lat_value.'), parseFloat('.$lng_value.'));
 					var marker;
+					var isDraggable = $(document).width() > 768 ? true : false;
 
 					function initialize() {
 						var mapOptions = {
 							zoom: '.$zoom_value.',
 							center: coordData,
+							draggable: isDraggable,
 							scrollwheel: '.$zoom_wheel.'
 						}
 						var map = new google.maps.Map(document.getElementById("map-canvas-'.$random_id.'"), mapOptions);
 						marker = new google.maps.Marker({
-							map:map,
-							draggable:true,
+							map: map,
+							draggable: false,
 							position: coordData
 						});
 					}
