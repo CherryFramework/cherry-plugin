@@ -30,6 +30,15 @@ frameworkShortcodeAtts={
 				help:"Set height for your featured images."
 			},
 			{
+				label:"Lightbox",
+				id:"lightbox",
+				controlType:"select-control",
+				selectValues:['yes', 'no'],
+				defaultValue: 'yes',
+				defaultText: 'yes',
+				help:"Enable Lightbox?"
+			},
+			{
 				label:"Which category to pull from? (for Blog posts)",
 				id:"category",
 				help:"Enter the slug of the category you'd like to pull posts from. Leave blank if you'd like to pull from all categories."

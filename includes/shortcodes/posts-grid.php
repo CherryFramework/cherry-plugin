@@ -17,6 +17,7 @@ if (!function_exists('posts_grid_shortcode')) {
 			'order'           => 'DESC',
 			'thumb_width'     => '370',
 			'thumb_height'    => '250',
+			'lightbox'  	  => 'yes',
 			'meta'            => '',
 			'excerpt_count'   => '15',
 			'link'            => 'yes',
@@ -153,72 +154,82 @@ if (!function_exists('posts_grid_shortcode')) {
 				}
 
 				$output .= '<li class="'. $spans .' list-item-'.$count.'">';
-					if(has_post_thumbnail($post_id) && $mediaType == 'Image') {
 
-						$prettyType = 'prettyPhoto-'.$rand;
+					if($lightbox == 'yes') {
+						if(has_post_thumbnail($post_id) && $mediaType == 'Image') {
 
-						$output .= '<figure class="featured-thumbnail thumbnail">';
-						$output .= '<a href="'.$url.'" title="'.get_the_title($post_id).'" rel="' .$prettyType.'">';
-						$output .= '<img  src="'.$image.'" alt="'.get_the_title($post_id).'" />';
-						$output .= '<span class="zoom-icon"></span></a></figure>';
-					} elseif ($mediaType != 'Video' && $mediaType != 'Audio') {
-
-						$thumbid = 0;
-						$thumbid = get_post_thumbnail_id($post_id);
-
-						$images = get_children( array(
-							'orderby'        => 'menu_order',
-							'order'          => 'ASC',
-							'post_type'      => 'attachment',
-							'post_parent'    => $post_id,
-							'post_mime_type' => 'image',
-							'post_status'    => null,
-							'numberposts'    => -1
-						) );
-
-						if ( $images ) {
-
-							$k = 0;
-							//looping through the images
-							foreach ( $images as $attachment_id => $attachment ) {
-								$prettyType = "prettyPhoto-".$rand ."[gallery".$i."]";
-								//if( $attachment->ID == $thumbid ) continue;
-
-								$image_attributes = wp_get_attachment_image_src( $attachment_id, 'full' ); // returns an array
-								$img = aq_resize( $image_attributes[0], $thumb_width, $thumb_height, true ); //resize & crop img
-								$alt = get_post_meta($attachment->ID, '_wp_attachment_image_alt', true);
-								$image_title = $attachment->post_title;
-
-								if ( $k == 0 ) {
-									if (has_post_thumbnail($post_id)) {
-										$output .= '<figure class="featured-thumbnail thumbnail">';
-										$output .= '<a href="'.$image_attributes[0].'" title="'.get_the_title($post_id).'" rel="' .$prettyType.'">';
-										$output .= '<img src="'.$image.'" alt="'.get_the_title($post_id).'" />';
-									} else {
-										$output .= '<figure class="featured-thumbnail thumbnail">';
-										$output .= '<a href="'.$image_attributes[0].'" title="'.get_the_title($post_id).'" rel="' .$prettyType.'">';
-										$output .= '<img  src="'.$img.'" alt="'.get_the_title($post_id).'" />';
-									}
-								} else {
-									$output .= '<figure class="featured-thumbnail thumbnail" style="display:none;">';
-									$output .= '<a href="'.$image_attributes[0].'" title="'.get_the_title($post_id).'" rel="' .$prettyType.'">';
-								}
-								$output .= '<span class="zoom-icon"></span></a></figure>';
-								$k++;
-							}
-						} elseif (has_post_thumbnail($post_id)) {
 							$prettyType = 'prettyPhoto-'.$rand;
+
 							$output .= '<figure class="featured-thumbnail thumbnail">';
 							$output .= '<a href="'.$url.'" title="'.get_the_title($post_id).'" rel="' .$prettyType.'">';
 							$output .= '<img  src="'.$image.'" alt="'.get_the_title($post_id).'" />';
 							$output .= '<span class="zoom-icon"></span></a></figure>';
+						} elseif ($mediaType != 'Video' && $mediaType != 'Audio') {
+
+							$thumbid = 0;
+							$thumbid = get_post_thumbnail_id($post_id);
+
+							$images = get_children( array(
+								'orderby'        => 'menu_order',
+								'order'          => 'ASC',
+								'post_type'      => 'attachment',
+								'post_parent'    => $post_id,
+								'post_mime_type' => 'image',
+								'post_status'    => null,
+								'numberposts'    => -1
+							) );
+
+							if ( $images ) {
+
+								$k = 0;
+								//looping through the images
+								foreach ( $images as $attachment_id => $attachment ) {
+									$prettyType = "prettyPhoto-".$rand ."[gallery".$i."]";
+									//if( $attachment->ID == $thumbid ) continue;
+
+									$image_attributes = wp_get_attachment_image_src( $attachment_id, 'full' ); // returns an array
+									$img = aq_resize( $image_attributes[0], $thumb_width, $thumb_height, true ); //resize & crop img
+									$alt = get_post_meta($attachment->ID, '_wp_attachment_image_alt', true);
+									$image_title = $attachment->post_title;
+
+									if ( $k == 0 ) {
+										if (has_post_thumbnail($post_id)) {
+											$output .= '<figure class="featured-thumbnail thumbnail">';
+											$output .= '<a href="'.$image_attributes[0].'" title="'.get_the_title($post_id).'" rel="' .$prettyType.'">';
+											$output .= '<img src="'.$image.'" alt="'.get_the_title($post_id).'" />';
+										} else {
+											$output .= '<figure class="featured-thumbnail thumbnail">';
+											$output .= '<a href="'.$image_attributes[0].'" title="'.get_the_title($post_id).'" rel="' .$prettyType.'">';
+											$output .= '<img  src="'.$img.'" alt="'.get_the_title($post_id).'" />';
+										}
+									} else {
+										$output .= '<figure class="featured-thumbnail thumbnail" style="display:none;">';
+										$output .= '<a href="'.$image_attributes[0].'" title="'.get_the_title($post_id).'" rel="' .$prettyType.'">';
+									}
+									$output .= '<span class="zoom-icon"></span></a></figure>';
+									$k++;
+								}
+							} elseif (has_post_thumbnail($post_id)) {
+								$prettyType = 'prettyPhoto-'.$rand;
+								$output .= '<figure class="featured-thumbnail thumbnail">';
+								$output .= '<a href="'.$url.'" title="'.get_the_title($post_id).'" rel="' .$prettyType.'">';
+								$output .= '<img  src="'.$image.'" alt="'.get_the_title($post_id).'" />';
+								$output .= '<span class="zoom-icon"></span></a></figure>';
+							}
+						} else {
+
+							// for Video and Audio post format - no lightbox
+							$output .= '<figure class="featured-thumbnail thumbnail"><a href="'.get_permalink($post_id).'" title="'.get_the_title($post_id).'">';
+							$output .= '<img  src="'.$image.'" alt="'.get_the_title($post_id).'" />';
+							$output .= '</a></figure>';
 						}
 					} else {
-
-						// for Video and Audio post format - no lightbox
-						$output .= '<figure class="featured-thumbnail thumbnail"><a href="'.get_permalink($post_id).'" title="'.get_the_title($post_id).'">';
-						$output .= '<img  src="'.$image.'" alt="'.get_the_title($post_id).'" />';
-						$output .= '</a></figure>';
+						if(has_post_thumbnail($post_id)) {
+							$output .= '<figure class="featured-thumbnail thumbnail">';
+							$output .= '<a href="'.get_permalink($post_id).'" title="'.get_the_title($post_id).'">';
+							$output .= '<img  src="'.$image.'" alt="'.get_the_title($post_id).'" />';
+							$output .= '</a></figure>';
+						} 
 					}
 
 					$output .= '<div class="clear"></div>';

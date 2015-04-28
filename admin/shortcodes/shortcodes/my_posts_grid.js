@@ -40,6 +40,15 @@ frameworkShortcodeAtts={
 				help:"Set height for your featured images."
 			},
 			{
+				label:"Lightbox",
+				id:"lightbox",
+				controlType:"select-control",
+				selectValues:['yes', 'no'],
+				defaultValue: 'yes',
+				defaultText: 'yes',
+				help:"Enable Lightbox?"
+			},
+			{
 				label:"Meta",
 				id:"meta",
 				controlType:"select-control",

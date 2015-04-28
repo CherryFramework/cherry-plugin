@@ -33,6 +33,15 @@ frameworkShortcodeAtts={
 				help:"You can show or hide the author of the post with the following shortcode."
 			},
 			{
+				label:"Lightbox",
+				id:"lightbox",
+				controlType:"select-control",
+				selectValues:['yes', 'no'],
+				defaultValue: 'yes',
+				defaultText: 'yes',
+				help:"Enable Lightbox?"
+			},
+			{
 				label:"Custom class",
 				id:"custom_class",
 				help:"Use this field if you want to use a custom class."
