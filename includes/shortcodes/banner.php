@@ -17,22 +17,17 @@ if ( !function_exists( 'banner_shortcode' ) ) {
 				'custom_class' => ''
 		), $atts));
 
-		// Get the URL to the content area.
-		$content_url = untrailingslashit( content_url() );
+		$uploads          = wp_upload_dir();
+		$uploads_dir_name = end( ( explode( '/', $uploads['baseurl'] ) ) );
 
-		// Find latest '/' in content URL.
-		$last_slash_pos = strrpos( $content_url, '/' );
+		$img_path = explode( 'uploads', $img );
+		if ( 1 == count( $img_path ) ) {
+			$img_path = explode( $uploads_dir_name, $img );
+		}
+		$_img = end( $img_path );
 
-		// 'wp-content' or something else.
-		$content_dir_name = substr( $content_url, $last_slash_pos - strlen( $content_url ) + 1 );
-
-		$pos = strpos( $img, $content_dir_name );
-
-		if ( false !== $pos ) {
-
-			$img_new = substr( $img, $pos + strlen( $content_dir_name ), strlen( $img ) - $pos );
-			$img     = $content_url . $img_new;
-
+		if ( 1 < count( $img_path ) ) {
+			$img = $uploads['baseurl'] . $_img;
 		}
 
 		$output =  '<div class="banner-wrap '.$custom_class.'">';
