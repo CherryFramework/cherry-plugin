@@ -94,7 +94,7 @@ if ( !function_exists('google_map_api_shortcode') ) {
 					var map;
 					var coordData = new google.maps.LatLng(parseFloat('.$lat_value.'), parseFloat('.$lng_value.'));
 					var marker;
-					var isDraggable = $(document).width() > 768 ? true : false;
+					var isDraggable = jQuery(document).width() > 768 ? true : false;
 
 					function initialize() {
 						var mapOptions = {
@@ -112,7 +112,7 @@ if ( !function_exists('google_map_api_shortcode') ) {
 					}
 					google.maps.event.addDomListener(window, "load", initialize);
 				}
-				
+
 		</script>';
 		return $output;
 	}
