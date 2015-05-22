@@ -603,16 +603,6 @@ function check_widget_visibility($id) {
 function cherry_condition($mode, $input, $users) {
 	// Example input:
 	// homepage,page:12,post:10,category:test,tag:test
-
-	// echo "<pre>";
-	// var_dump($mode);
-	// echo "</pre>";
-	// echo "<pre>";
-	// var_dump($input);
-	// echo "</pre>";
-	// echo "<pre>";
-	// var_dump($users);
-	// echo "</pre>";
 	$mode_output = '';
 
 	if ( !empty($input) ) :
