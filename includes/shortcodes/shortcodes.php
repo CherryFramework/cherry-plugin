@@ -653,25 +653,32 @@ if (!function_exists('shortcode_tags')) {
 //video preview
 if (!function_exists('shortcode_video_preview')) {
 	function shortcode_video_preview( $atts, $content = null, $shortcodename = '' ) {
-		extract(shortcode_atts(
-			array(
-				'title' => '',
-				'post_url' => '',
-				'date' => '',
-				'author' => '',
-				'lightbox' => 'no',
+		extract( shortcode_atts( array(
+				'title'        => '',
+				'post_url'     => '',
+				'date'         => '',
+				'author'       => '',
+				'lightbox'     => 'no',
 				'custom_class' => '',
-			), $atts));
-		$output_title = '';
-		$output_author = '';
-		$output_date = '';
-		$post_ID = url_to_postid($post_url);
-		$get_post = get_post($post_ID);
-		$get_user = get_userdata($get_post->post_author);
-		$user_url = get_bloginfo('url').'/author/'.$get_user->user_nicename;
-		$video_url = parser_video_url(get_post_meta($post_ID, 'tz_video_embed', true));
+			), $atts ) );
+
+		$output_title    = '';
+		$output_author   = '';
+		$output_date     = '';
+		$post_ID         = url_to_postid( $post_url);
+		$get_post        = get_post($post_ID);
+		$get_user        = get_userdata($get_post->post_author);
+		$user_url        = get_bloginfo('url').'/author/'.$get_user->user_nicename;
+
+		$video_embed_meta = get_post_meta( $post_ID, 'tz_video_embed', true );
+
+		if ( empty( $video_embed_meta ) ) {
+			return '';
+		}
+
+		$video_url       = parser_video_url( $video_embed_meta );
 		$video_url_popup = str_replace('src=', '', $video_url);
-		$rand = rand();
+		$rand            = rand();
 
 		if(strpos($video_url, 'youtube') !== false) {
 			$video_url_popup = str_replace('embed/', 'watch?v=', $video_url_popup);

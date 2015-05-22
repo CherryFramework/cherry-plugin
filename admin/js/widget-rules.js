@@ -200,6 +200,8 @@ function gk_widget_control_init_events(id, inner) {
 
 			if(value == 'homepage') {
 				output.val(output.val() + ',homepage');
+			} else if(value == 'blog') {
+				output.val(output.val() + ',blog');
 			} else if(value == 'search') {
 				output.val(output.val() + ',search');
 			} else if(value == 'archive') {
@@ -287,6 +289,7 @@ function gk_widget_control_refresh(form) {
 				else if(pages[i].substr(0,7) == 'author:') type = 'author';
 				else if(pages[i].substr(0,7) == 'page404') type = 'page404';
 				else if(pages[i].substr(0,6) == 'search') type = 'search';
+				else if(pages[i].substr(0,4) == 'blog') type = 'blog';
 
 				var out = pages[i];
 

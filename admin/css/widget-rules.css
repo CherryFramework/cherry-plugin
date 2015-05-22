@@ -69,7 +69,7 @@
 }
 
 .gk_widget_rules_form legend,
-.gk_widget_rules_pages legend { 
+.gk_widget_rules_pages legend {
 	margin: 0 0 0 -5px;
 	font-size: 11px;
 	font-weight: bold;
@@ -104,6 +104,9 @@
 
 .gk_widget_rules_pages div span.homepage {
 	background: #049cdb;
+}
+.gk_widget_rules_pages div span.blog {
+	background: #447744;
 }
 
 .gk_widget_rules_pages div span.page {

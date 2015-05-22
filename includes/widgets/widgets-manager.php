@@ -471,6 +471,7 @@ function cherry_widget_control() {
 			<legend>'.__('Select page to add', CHERRY_PLUGIN_DOMAIN).'</legend>
 			<select class="widefat gk_widget_rules_form_select">
 				<option value="homepage">'.__('Homepage', CHERRY_PLUGIN_DOMAIN).'</option>
+				<option value="blog">'.__('Blog', CHERRY_PLUGIN_DOMAIN).'</option>
 				<option value="page:">'.__('Page', CHERRY_PLUGIN_DOMAIN).'</option>
 				<option value="post:">'.__('Post', CHERRY_PLUGIN_DOMAIN).'</option>
 				<option value="category:">'.__('Archive', CHERRY_PLUGIN_DOMAIN).'</option>
@@ -603,6 +604,15 @@ function cherry_condition($mode, $input, $users) {
 	// Example input:
 	// homepage,page:12,post:10,category:test,tag:test
 
+	// echo "<pre>";
+	// var_dump($mode);
+	// echo "</pre>";
+	// echo "<pre>";
+	// var_dump($input);
+	// echo "</pre>";
+	// echo "<pre>";
+	// var_dump($users);
+	// echo "</pre>";
 	$mode_output = '';
 
 	if ( !empty($input) ) :
@@ -625,6 +635,8 @@ function cherry_condition($mode, $input, $users) {
 
 				if(stripos($input[$i], 'homepage') !== FALSE) {
 					$mode_output .= ' is_front_page() ';
+				} else if(stripos($input[$i], 'blog') !== FALSE) {
+					$mode_output .= ' is_home() ';
 				} else if(stripos($input[$i], 'page:') !== FALSE) {
 					$mode_output .= ' is_page(\'' . substr($input[$i], 5) . '\') ';
 				} else if(stripos($input[$i], 'post:') !== FALSE) {
