@@ -8,6 +8,7 @@ if (!function_exists('shortcode_recent_posts')) {
 				'category'         => '',
 				'custom_category'  => '',
 				'tag'              => '',
+				'custom_tag'       => '',
 				'post_format'      => 'standard',
 				'num'              => '5',
 				'meta'             => 'true',
@@ -16,7 +17,7 @@ if (!function_exists('shortcode_recent_posts')) {
 				'thumb_height'     => '120',
 				'more_text_single' => '',
 				'excerpt_count'    => '0',
-				'custom_class'     => ''
+				'custom_class'     => '',
 		), $atts));
 
 		$output = '<ul class="recent-posts '.$custom_class.' unstyled">';
@@ -34,6 +35,7 @@ if (!function_exists('shortcode_recent_posts')) {
 						'category_name'     => $category,
 						'tag'               => $tag,
 						$type . '_category' => $custom_category,
+						$type . '_tag'      => $custom_tag,
 						'numberposts'       => $num,
 						'orderby'           => 'post_date',
 						'order'             => 'DESC',
