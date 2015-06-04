@@ -15,9 +15,26 @@ frameworkShortcodeAtts={
 				help:"Enable or disable featured image."
 			},
 			{
+				label:"Post content",
+				id:"text",
+				controlType:"select-control",
+				selectValues:['part', 'full'],
+				defaultValue: 'part',
+				defaultText: 'part',
+				help:"Choose to display an part or full content."
+			},
+			{
 				label:"The number of words in the excerpt",
 				id:"excerpt_count",
 				help:"How many words are displayed in the excerpt?"
+			},
+			{
+				label:"Linked text?",
+				id:"linked",
+				controlType:"select-control",
+				selectValues:['true', 'false'],
+				defaultValue: 'true',
+				defaultText: 'true',
 			},
 			{
 				label:"Custom class",

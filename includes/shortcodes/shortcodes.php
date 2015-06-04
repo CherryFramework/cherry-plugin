@@ -523,7 +523,9 @@ if (!function_exists('shortcode_recenttesti')) {
 		extract(shortcode_atts(array(
 				'num'           => '5',
 				'thumb'         => 'true',
+				'text'          => 'part', // part|full
 				'excerpt_count' => '30',
+				'linked'        => 'true', // true|false
 				'custom_class'  => '',
 		), $atts));
 
@@ -584,11 +586,21 @@ if (!function_exists('shortcode_recenttesti')) {
 							$output .= '</figure>';
 						}
 					}
-					$output .= '<a href="'.get_permalink( $post_id ).'">';
-						$output .= wp_trim_words($excerpt,$excerpt_count);
-					$output .= '</a><div class="clear"></div>';
 
-				$output .= '</blockquote>';
+					if ( 'full' == $text ) {
+						$_content = apply_filters( 'the_content', get_the_content( '' ) );
+					} else {
+						$_content = wp_trim_words( $excerpt, $excerpt_count, apply_filters( 'cherry_plugin_shortcode_excerpt_more', '', $atts, 'recenttesti' ) );
+					}
+
+					$text_wrap = '<a href="%2$s">%1$s</a>';
+					if ( 'false' == $linked ) {
+						$text_wrap = '%1$s';
+					}
+
+					$output .= sprintf( $text_wrap, $_content, esc_url( get_permalink( $post_id ) ) );
+
+				$output .= '<div class="clear"></div></blockquote>';
 
 				$output .= '<small class="testi-meta">';
 					if ( !empty( $testiname ) ) {
