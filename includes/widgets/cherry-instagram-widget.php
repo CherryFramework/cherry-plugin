@@ -9,8 +9,16 @@
 		public function widget( $args, $instance ) {
 			extract( array_merge( $args, $instance ) );
 
-			if ( empty( $user_name ) ) {
-				return print $before_widget . __( 'Please, enter your username.', CHERRY_PLUGIN_DOMAIN ) . $after_widget;
+			if ( 'hashtag' == $endpoints ) {
+				if ( empty( $tag ) ) {
+					return print $before_widget . __( 'Please, enter #hashtag.', CHERRY_PLUGIN_DOMAIN ) . $after_widget;
+				}
+			}
+
+			if ( 'self' == $endpoints ) {
+				if ( empty( $user_name ) ) {
+					return print $before_widget . __( 'Please, enter your username.', CHERRY_PLUGIN_DOMAIN ) . $after_widget;
+				}
 			}
 
 			if ( empty( $client_id ) ) {
@@ -30,15 +38,21 @@
 			if ( isset( $display_description ) ) $config[] = 'description';
 			if ( isset( $image_size ) ) $config['thumb'] = $image_size;
 
-			// Gets user ID.
-			$user_id = $this->get_user_id( $user_name, $client_id );
+			if ( 'self' == $endpoints ) {
+				$user_id = $this->get_user_id( $user_name, $client_id );
 
-			if ( ! $user_id ) {
-				return print $before_widget . __( 'Please, enter a valid username and CLIENT ID.' ) . $after_widget;
+				if ( ! $user_id ) {
+					return print $before_widget . __( 'Please, enter a valid username and CLIENT ID.' ) . $after_widget;
+				}
+
+				$data = $user_id;
+
+			} else {
+				$data = $tag;
 			}
 
-			// Gets photos.
-			$photos = $this->get_feed( $user_id, $client_id, $image_counter, $config );
+			$config['endpoints'] = $endpoints;
+			$photos = $this->get_photos( $data, $client_id, $image_counter, $config );
 
 			if ( ! $photos ) {
 				return print $before_widget . __( 'Please, enter a valid CLIENT ID.' ) . $after_widget;
@@ -97,10 +111,12 @@
 		public function form($instance) {
 			$defaults = array(
 				'title'               => '',
+				'endpoints'           => 'hashtag', // hashtag or self
 				'user_name'           => '',
+				'tag'                 => '',
 				'client_id'           => '',
-				'image_counter'       => '10',
-				'image_size'          => 'large',
+				'image_counter'       => '4',
+				'image_size'          => 'thumbnail',
 				'display_description' => 'on',
 				'display_comments'    => 'on',
 				'display_likes'       => 'on',
@@ -115,8 +131,14 @@
 				'title' => array(
 					'type' => 'text', 'class' => 'widefat', 'inline_style' => '',  'title' => __('Widget Title', CHERRY_PLUGIN_DOMAIN), 'description' => '', 'value' => $title
 					),
+				'endpoints' => array(
+					'type' => 'select', 'class' => 'widefat', 'inline_style' => '', 'title' => __('Content type', CHERRY_PLUGIN_DOMAIN), 'description' => '', 'value' => $endpoints, 'value_options' => array('self' => __('My Photos', CHERRY_PLUGIN_DOMAIN), 'hashtag' => __('Tagged photos', CHERRY_PLUGIN_DOMAIN))
+					),
 				'user_name' => array(
 					'type' => 'text', 'class' => 'widefat',  'inline_style' => '', 'title' => __('User Name', CHERRY_PLUGIN_DOMAIN), 'description' => __('Widget will work only for users who have full rights opened in Instagram account.', CHERRY_PLUGIN_DOMAIN), 'value' => $user_name
+					),
+				'tag' => array(
+					'type' => 'text', 'class' => 'widefat',  'inline_style' => '', 'title' => __('Hashtag', CHERRY_PLUGIN_DOMAIN), 'description' => __('Enter without #-symbol.', CHERRY_PLUGIN_DOMAIN), 'value' => $tag
 					),
 				'client_id' => array(
 					'type' => 'text', 'class' => 'widefat',  'inline_style' => '', 'title' => __('Client ID', CHERRY_PLUGIN_DOMAIN), 'description' => __('Follow this <a href="https://instagram.com/developer/clients/manage/" target="_blank">link</a> and create the application. After that you will get your applications data where you will see the CLIENT ID.', CHERRY_PLUGIN_DOMAIN), 'value' => $client_id
@@ -201,7 +223,7 @@
 			$response = wp_remote_get( $url );
 
 			if ( is_wp_error( $response ) || empty( $response ) || $response ['response']['code'] != '200' ) {
-				set_transient( 'cherry_plugin_instagram_user_id', false, 12 * HOUR_IN_SECONDS );
+				set_transient( 'cherry_plugin_instagram_user_id', false, HOUR_IN_SECONDS );
 				return false;
 			}
 
@@ -217,26 +239,33 @@
 				$user_id = $data['id'];
 			}
 
-			set_transient( 'cherry_plugin_instagram_user_id', $user_id, 12 * HOUR_IN_SECONDS );
+			set_transient( 'cherry_plugin_instagram_user_id', $user_id, HOUR_IN_SECONDS );
 
 			return $user_id;
 		}
 
-		function get_feed( $user_id, $client_id, $img_counter, $config ) {
+		function get_photos( $data, $client_id, $img_counter, $config ) {
 			$cached = get_transient( 'cherry_plugin_instagram_photos' );
 
 			if ( false !== $cached ) {
 				return $cached;
 			}
 
+			if ( 'self' == $config['endpoints'] ) {
+				$old_url = 'https://api.instagram.com/v1/users/' . $data . '/media/recent/';
+			} else {
+				$old_url = 'https://api.instagram.com/v1/tags/' . $data . '/media/recent/';
+			}
+
 			$url = add_query_arg(
 				array( 'client_id' => esc_attr( $client_id ) ),
-				'https://api.instagram.com/v1/users/' . $user_id . '/media/recent/'
+				$old_url
 			);
+
 			$response = wp_remote_get( $url );
 
 			if ( is_wp_error( $response ) || empty( $response ) || $response ['response']['code'] != '200' ) {
-				set_transient( 'cherry_plugin_instagram_photos', false, 12 * HOUR_IN_SECONDS );
+				set_transient( 'cherry_plugin_instagram_photos', false, HOUR_IN_SECONDS );
 				return false;
 			}
 
@@ -283,7 +312,7 @@
 				$counter++;
 			}
 
-			set_transient( 'cherry_plugin_instagram_photos', $photos, 12 * HOUR_IN_SECONDS );
+			set_transient( 'cherry_plugin_instagram_photos', $photos, HOUR_IN_SECONDS );
 
 			return $photos;
 		}
