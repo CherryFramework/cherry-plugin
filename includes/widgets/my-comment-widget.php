@@ -63,11 +63,10 @@ class MY_CommentWidget extends WP_Widget_Recent_Comments {
 			if ( $comments ) : foreach ( (array) $comments as $comment) : ?>
 
 			<li class="comments-custom_li">
-				<?php if(function_exists('get_avatar') && $display_avatar != 'off') {
+				<?php if ( function_exists( 'get_avatar' ) && $display_avatar != 'off' ) {
 					echo '<figure class="thumbnail featured-thumbnail">';
-					$comment_ID = get_comment_ID();
-					echo get_avatar( get_the_author_meta('email', $id = get_comment( $comment_ID )->user_id), $avatar_size );
-					/* This avatar is the user's gravatar (http://gravatar.com) based on their administrative email address */
+						$comment_ID = get_comment_ID();
+						echo get_avatar( get_comment( $comment_ID )->comment_author_email, $avatar_size );
 					echo '</figure>';
 				} ?>
 				<?php if($display_post_title != 'off') {
