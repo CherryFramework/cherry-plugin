@@ -51,7 +51,7 @@
 	});
 </script>
 <div id="under_construction_page" class="container">
-<?php 
+<?php
 	if(isset($mtc_options['mtc_mode_logo'])){ ?>
 		<div id="under_construction_logo">
 	<?php if($get_theme['Template']=='CherryFramework'){
@@ -82,14 +82,14 @@ if(isset($mtc_options['mtc_mode_timer'])){ ?>
 		</div>
 		<div id="minute_left" class="box">
 			<div class="numbers"></div>
-			<div class="lable"><?php _e('Minuts', CHERRY_PLUGIN_DOMAIN); ?></div>
+			<div class="lable"><?php _e('Minutes', CHERRY_PLUGIN_DOMAIN); ?></div>
 		</div>
 		<div id="seconds_left" class="box">
 			<div class="numbers"></div>
 			<div class="lable"><?php _e('Seconds', CHERRY_PLUGIN_DOMAIN); ?></div>
 		</div>
 	</div>
-<?php 
+<?php
 };
 ?>
 	<div id="under-construction-area">
