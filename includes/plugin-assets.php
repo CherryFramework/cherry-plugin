@@ -46,9 +46,11 @@
 		}
 	}
 	function cherry_under_construction_page_content(){
-		$files = '/plugin-under-construction-content.php';
-		$template_dir = file_exists(CURRENT_THEME_DIR . $files) ? CURRENT_THEME_DIR . $files : CHERRY_PLUGIN_DIR .'includes' . $files ;
-		include_once ($template_dir);
+		echo '<body class="' . join( ' ', get_body_class() ) . '"><div id="motopress-main" class="main-holder"><!--Begin #motopress-main-->';
+			$files = '/plugin-under-construction-content.php';
+			$template_dir = file_exists(CURRENT_THEME_DIR . $files) ? CURRENT_THEME_DIR . $files : CHERRY_PLUGIN_DIR .'includes' . $files ;
+			include_once ($template_dir);
+		echo '</body></div><html>';
 		exit;
 	}
 	function cherry_maintenance_mode_notice(){
