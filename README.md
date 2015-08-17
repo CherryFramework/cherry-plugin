@@ -3,6 +3,20 @@ Cherry Plugin
 
 Cherry Plugin contains all shortcodes and widgets used in Cherry Framework. Also Cherry Framework Import/Export features are also added by Cherry plugin.
 
+#### v1.2.8 ####
+
+* ADD: `lightbox` attibute to `posts_grid`, `mini_posts_grid`, `video-preview`
+* ADD: `custom_tag` attibute in `recentposts` shortcode
+* ADD: `text` and `linked` attibutes to `testi` shortcode
+* ADD: Output photos by hashtag in `Instagram` widget
+* FIX: Disable draggable option in `google_map` on mobile devices
+* FIX: `banner` shortcode logic
+* FIX: Widget visibility on blog page
+* FIX: Gravatar in `Recent Comments` widget
+* FIX: WP 4.3.0 compatibility - updated constructor method for WP_Widget
+* UPD: Language files
+* UPD: Maintenance Mode page
+
 #### v1.2.7 ####
 
 * ADD: `Pinterest` and `Twitter` widgets
