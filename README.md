@@ -5,9 +5,9 @@ Cherry Plugin contains all shortcodes and widgets used in Cherry Framework. Also
 
 #### v1.2.8 ####
 
-* ADD: `lightbox` attibute to `posts_grid`, `mini_posts_grid`, `video-preview`
-* ADD: `custom_tag` attibute in `recentposts` shortcode
-* ADD: `text` and `linked` attibutes to `testi` shortcode
+* ADD: `lightbox` attribute to `posts_grid`, `mini_posts_grid`, `video-preview`
+* ADD: `custom_tag` attribute in `recentposts` shortcode
+* ADD: `text` and `linked` attributes to `testi` shortcode
 * ADD: Output photos by hashtag in `Instagram` widget
 * FIX: Disable draggable option in `google_map` on mobile devices
 * FIX: `banner` shortcode logic
