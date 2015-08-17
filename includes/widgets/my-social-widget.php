@@ -4,7 +4,7 @@ class My_SocialNetworksWidget extends WP_Widget {
 
 	function My_SocialNetworksWidget() {
 		$widget_ops = array('classname' => 'social_networks_widget', 'description' => __('Link to your social networks.', CHERRY_PLUGIN_DOMAIN) );
-		$this->WP_Widget('social_networks', __('Cherry - Social Networks', CHERRY_PLUGIN_DOMAIN), $widget_ops);
+		parent::__construct( false, $name = __( 'Cherry - Social Networks', CHERRY_PLUGIN_DOMAIN ), $widget_ops );
 	}
 
 	function widget( $args, $instance ) {

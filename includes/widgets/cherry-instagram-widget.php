@@ -2,7 +2,7 @@
 	class Cherry_Instagram_Widget extends WP_Widget {
 		/* constructor */
 		public function Cherry_Instagram_Widget() {
-			parent::WP_Widget(false, __('Cherry - Instagram', CHERRY_PLUGIN_DOMAIN), array('description' => __('Widget for popular social network Instagram', CHERRY_PLUGIN_DOMAIN)));
+			parent::__construct(false, __('Cherry - Instagram', CHERRY_PLUGIN_DOMAIN), array('description' => __('Widget for popular social network Instagram', CHERRY_PLUGIN_DOMAIN)));
 		}
 
 		/** @see WP_Widget::widget */

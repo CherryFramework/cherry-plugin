@@ -3,7 +3,7 @@
 class MY_FlickrWidget extends WP_Widget {
 	/* constructor */
 	function MY_FlickrWidget() {
-		parent::WP_Widget(false, $name = __('Cherry - Flickr', CHERRY_PLUGIN_DOMAIN));
+		parent::__construct( false, $name = __( 'Cherry - Flickr', CHERRY_PLUGIN_DOMAIN ) );
 	}
 
 	/** @see WP_Widget::widget */
