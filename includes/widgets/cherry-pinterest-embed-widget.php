@@ -4,7 +4,7 @@ $error = array();
 
 		/* constructor */
 		public function Cherry_Pinterest_Embed_Widget() {
-			parent::WP_Widget(false, __('Cherry - Pinterest Embed', CHERRY_PLUGIN_DOMAIN), array('description' => __('Widget for Pinterest embed content', CHERRY_PLUGIN_DOMAIN)));
+			parent::__construct(false, __('Cherry - Pinterest Embed', CHERRY_PLUGIN_DOMAIN), array('description' => __('Widget for Pinterest embed content', CHERRY_PLUGIN_DOMAIN)));
 		}
 
 		/** @see WP_Widget::widget */

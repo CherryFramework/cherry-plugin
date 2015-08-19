@@ -4,10 +4,10 @@ class Ad_125_125_Widget extends WP_Widget {
 	function Ad_125_125_Widget() {
 		$widget_ops = array(
 			'classname'   => 'ad_125_125',
-			'description' => __('Add 125x125 ads.', CHERRY_PLUGIN_DOMAIN),
-			);
+			'description' => __( 'Add 125x125 ads.', CHERRY_PLUGIN_DOMAIN ),
+		);
 		$control_ops = array( 'id_base' => 'ad_125_125-widget' );
-		$this->WP_Widget( 'ad_125_125-widget', __( 'Cherry - 125x125 Ads', CHERRY_PLUGIN_DOMAIN ), $widget_ops, $control_ops );
+		parent::__construct( 'ad_125_125-widget', $name = __( 'Cherry - 125x125 Ads', CHERRY_PLUGIN_DOMAIN ), $widget_ops, $control_ops );
 	}
 
 	function widget( $args, $instance ) {

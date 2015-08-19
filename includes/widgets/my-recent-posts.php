@@ -3,7 +3,7 @@
 class MY_PostWidget extends WP_Widget {
 	/** constructor */
 	function MY_PostWidget() {
-		parent::WP_Widget(false, $name = __('Cherry - Recent Posts', CHERRY_PLUGIN_DOMAIN));
+		parent::__construct( false, $name = __( 'Cherry - Recent Posts', CHERRY_PLUGIN_DOMAIN ) );
 	}
 
 	/** @see WP_Widget::widget */

@@ -2,7 +2,7 @@
 class MY_CommentWidget extends WP_Widget_Recent_Comments {
 
 	function MY_CommentWidget() {
-		parent::WP_Widget( 'my-recent-comments', $name = __( 'Cherry - Recent Comments', CHERRY_PLUGIN_DOMAIN ) );
+		parent::__construct( 'my-recent-comments', $name = __( 'Cherry - Recent Comments', CHERRY_PLUGIN_DOMAIN ) );
 	}
 
 	function widget( $args, $instance ) {

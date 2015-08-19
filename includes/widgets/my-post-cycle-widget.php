@@ -3,7 +3,7 @@
 class MY_CycleWidget extends WP_Widget {
 	/* constructor */
 	function MY_CycleWidget() {
-		parent::WP_Widget(false, $name = __('Cherry - Post Cycle', CHERRY_PLUGIN_DOMAIN));
+		parent::__construct( false, $name = __( 'Cherry - Post Cycle', CHERRY_PLUGIN_DOMAIN ) );
 	}
 
 	/* @see WP_Widget::widget */
@@ -88,8 +88,8 @@ class MY_CycleWidget extends WP_Widget {
 								navigationCenter();
 							}
 						<?php } ?>
-					});					
-					
+					});
+
 				});
 				/* Centering direction navs relatively on thumbnail height */
 				<?php if($direction_nav) { ?>

@@ -4,7 +4,7 @@ $error = array();
 
 		/* constructor */
 		public function Cherry_Twitter_Embed_Widget() {
-			parent::WP_Widget(false, __('Cherry - Twitter Embed', CHERRY_PLUGIN_DOMAIN), array('description' => __('Widget for Twitter embed content', CHERRY_PLUGIN_DOMAIN)));
+			parent::__construct(false, __('Cherry - Twitter Embed', CHERRY_PLUGIN_DOMAIN), array('description' => __('Widget for Twitter embed content', CHERRY_PLUGIN_DOMAIN)));
 		}
 
 		/** @see WP_Widget::widget */
