@@ -53,10 +53,10 @@ class MY_PostWidget extends WP_Widget {
 				);
 			}
 
-			$wp_query = new WP_Query( $args ); ?>
+			$recent_posts = new WP_Query( $args ); ?>
 			<ul class="post-list unstyled">
 
-			<?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();?>
+			<?php if ($recent_posts->have_posts()) : while ($recent_posts->have_posts()) : $recent_posts->the_post();?>
 
 			<li class="post-list_li clearfix">
 
@@ -92,7 +92,7 @@ class MY_PostWidget extends WP_Widget {
 
 			<?php
 				endif;
-				$wp_query = null;
+				wp_reset_postdata();
 			?>
 
 			<!-- Link under post cycle -->
