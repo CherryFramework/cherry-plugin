@@ -13,6 +13,7 @@ Cherry Plugin contains all shortcodes and widgets used in Cherry Framework. Also
 * FIX: `banner` shortcode logic
 * FIX: Widget visibility on blog page
 * FIX: Gravatar in `Recent Comments` widget
+* FIX: WP_Query in `My Recent Posts widget`
 * FIX: WP 4.3.0 compatibility - updated constructor method for WP_Widget
 * UPD: Language files
 * UPD: Maintenance Mode page
