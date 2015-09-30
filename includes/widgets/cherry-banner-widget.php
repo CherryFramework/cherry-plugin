@@ -95,7 +95,12 @@
 			echo $output;
 		}
 
-		public function upload_scripts(){
+		public function upload_scripts( $hook ){
+
+				if ( 'widgets.php' !== $hook ) {
+					return;
+				}
+
 				wp_enqueue_media();
 				wp_print_media_templates();
 				wp_enqueue_script('upload_media_widget', CHERRY_PLUGIN_URL . 'admin/js/upload-media-files.js');
