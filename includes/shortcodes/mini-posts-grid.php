@@ -6,18 +6,19 @@
 if (!function_exists('mini_posts_grid_shortcode')) {
 	function mini_posts_grid_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
-			'type'         => 'post',
+			'type'             => 'post',
 			'category'         => '',
 			'custom_category'  => '',
-			'numb'         => '8',
-			'thumbs'       => '',
-			'thumb_width'  => '',
-			'thumb_height' => '',
-			'lightbox'	   => 'yes',
-			'order_by'     => 'date',
-			'order'        => 'DESC',
-			'align'        => '',
-			'custom_class' => ''
+			'numb'             => '8',
+			'thumbs'           => '',
+			'thumb_width'      => '',
+			'thumb_height'     => '',
+			'lightbox'	       => 'yes',
+			'order_by'         => 'date',
+			'order'            => 'DESC',
+			'align'            => '',
+			'custom_class'     => '',
+			'only_child_posts' => ''
 		), $atts));
 
 		$template_url = get_stylesheet_directory_uri();
@@ -87,6 +88,10 @@ if (!function_exists('mini_posts_grid_shortcode')) {
 				'order'            => $order,
 				'suppress_filters' => $suppress_filters
 			);
+
+			if ($only_child_posts == 'yes') {
+				$args['post_parent'] = $post->ID;
+			}
 
 			$posts = get_posts($args);
 			$i = 0;
