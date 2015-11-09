@@ -99,60 +99,25 @@
 		};
 	}
 	function cherry_plugin_parse_import_data( $import_array ) {
-		$sidebars_data = $import_array[0];
-		$widget_data = $import_array[1];
-		$current_sidebars = get_option( 'sidebars_widgets' );
-		$new_widgets = array();
-		$inactive_widgets  = array();
-		foreach ( $current_sidebars as $import_sidebars => $import_sidebar ){
-			if(is_array($import_sidebar)){
-				array_push($import_sidebar, array());
-			}
+
+		if ( !is_array($import_array) ) {
+			return false;
 		}
-		foreach ( $sidebars_data as $import_sidebar => $import_widgets ) :
-			$current_sidebars[$import_sidebar] = array();
-			foreach ( $import_widgets as $import_widget ) :
-					$title = trim( substr( $import_widget, 0, strrpos( $import_widget, '-' ) ) );
-					$index = trim( substr( $import_widget, strrpos( $import_widget, '-' ) + 1 ) );
-					$current_widget_data = get_option( 'widget_' . $title );
-					$new_widget_name = get_new_widget_name( $title, $index );
-					$new_index = trim( substr( $new_widget_name, strrpos( $new_widget_name, '-' ) + 1 ) );
 
-					if ( !empty( $new_widgets[ $title ] ) && is_array( $new_widgets[$title] ) ) {
-						while ( array_key_exists( $new_index, $new_widgets[$title] ) ) {
-							$new_index++;
-						}
-					}
+		$sidebars_data    = $import_array[0];
+		$widget_data      = $import_array[1];
+		$new_widgets      = array();
+		$inactive_widgets = array();
 
-					$current_sidebars[$import_sidebar][] = $title . '-' . $new_index;
-					if ( array_key_exists( $title, $new_widgets ) ) {
-						$new_widgets[$title][$new_index] = $widget_data[$title][$index];
-						$multiwidget = $new_widgets[$title]['_multiwidget'];
-						unset( $new_widgets[$title]['_multiwidget'] );
-						$new_widgets[$title]['_multiwidget'] = $multiwidget;
-					} else {
-						$current_widget_data[$new_index] = $widget_data[$title][$index];
-						$current_multiwidget = array_key_exists('_multiwidget', $current_widget_data ) ? $current_widget_data['_multiwidget'] : null ;
-						$new_multiwidget = $widget_data[$title]['_multiwidget'];
-						$multiwidget = ($current_multiwidget != $new_multiwidget) ? $current_multiwidget : 1;
-						unset( $current_widget_data['_multiwidget'] );
-						$current_widget_data['_multiwidget'] = $multiwidget;
-						$new_widgets[$title] = $current_widget_data;
-					}
-			endforeach;
-		endforeach;
-		if ( isset( $new_widgets ) && isset( $current_sidebars ) ) {
-			if(!empty($inactive_widgets)){
-				$current_sidebars['wp_inactive_widgets'] = $inactive_widgets;
-			}
-			update_option( 'sidebars_widgets', $current_sidebars );
+		$sidebars_data['wp_inactive_widgets'] = array();
+		update_option( 'sidebars_widgets', $sidebars_data );
 
-			foreach ( $new_widgets as $title => $content )
-				update_option( 'widget_' . $title, $content );
-
-			return true;
+		foreach ( $widget_data as $title => $content ) {
+			update_option( 'widget_' . $title, $content );
 		}
-		return false;
+
+		return true;
+
 	}
 	function get_new_widget_name( $widget_name, $widget_index ) {
 		$current_sidebars = get_option( 'sidebars_widgets' );
