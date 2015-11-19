@@ -81,8 +81,8 @@
 						$output .= '<div class="img_wrapp">';
 							$output .= isset( $link ) ? '<a href="' . esc_url( $photo['link'] ) . '" title="' . esc_attr( $desc ) . '" target="_blank" >' : '';
 								$output .= '<img class="inst_img" src="' . esc_url( $photo['thumb'] ) . '" alt="' . esc_attr( $desc ) . '">';
-								$output .= isset( $display_comments ) ? '<span class="img_likes"><i class="icon-heart"></i><span class="counter">' . $photo['comments'] . '</span></span>' : '';
-								$output .= isset( $display_likes ) ? '<span class="img_commetn_count"><i class="icon-comment"></i><span class="counter">' . $photo['likes'] . '</span></span>' : '';
+								$output .= isset( $display_likes ) ? '<span class="img_likes"><i class="icon-heart"></i><span class="counter">' . $photo['likes'] . '</span></span>' : '';
+								$output .= isset( $display_comments ) ? '<span class="img_commetn_count"><i class="icon-comment"></i><span class="counter">' . $photo['comments'] . '</span></span>' : '';
 							$output .= isset( $link ) ? '</a>' : '';
 						$output .= '</div>';
 
