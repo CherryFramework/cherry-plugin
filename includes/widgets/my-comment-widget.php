@@ -77,7 +77,7 @@ class MY_CommentWidget extends WP_Widget {
 					} else  if($meta_format=="labels"){
 						$title_format = '<span class="ladle">'.__('Comment in', CHERRY_PLUGIN_DOMAIN).':</span> ';
 					}
-					echo '<div class="meta_format">'.$title_format.'<h4 class="comments-custom_h_title"><a href="'.post_permalink($post_ID).'" title="'.get_post($post_ID)->post_title.'">'.get_post($post_ID)->post_title.'</a></h4></div>';
+					echo '<div class="meta_format">'.$title_format.'<h4 class="comments-custom_h_title"><a href="'.get_permalink($post_ID).'" title="'.get_post($post_ID)->post_title.'">'.get_post($post_ID)->post_title.'</a></h4></div>';
 				}?>
 				<?php if($display_author_name != 'off') {
 					$title_author_name = "";
