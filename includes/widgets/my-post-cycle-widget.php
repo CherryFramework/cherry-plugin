@@ -2,7 +2,7 @@
 // =============================== My Post Cycle widget ======================================
 class MY_CycleWidget extends WP_Widget {
 	/* constructor */
-	function MY_CycleWidget() {
+	function __construct() {
 		parent::__construct( false, $name = __( 'Cherry - Post Cycle', CHERRY_PLUGIN_DOMAIN ) );
 	}
 

@@ -1,7 +1,7 @@
 <?php
 class MY_CommentWidget extends WP_Widget {
 
-	function MY_CommentWidget() {
+	function __construct() {
 		parent::__construct( 'my-recent-comments', $name = __( 'Cherry - Recent Comments', CHERRY_PLUGIN_DOMAIN ) );
 	}
 

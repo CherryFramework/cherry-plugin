@@ -7,7 +7,7 @@ if ( !class_exists('Cherry_TinyMCE_Shortcodes') ) {
 	class Cherry_TinyMCE_Shortcodes {
 
 		// Constructor
-		function Cherry_TinyMCE_Shortcodes() {
+		function __construct() {
 
 			// Init
 			add_action( 'admin_init', array( $this, 'init' ) );

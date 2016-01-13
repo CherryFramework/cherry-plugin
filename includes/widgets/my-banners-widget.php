@@ -1,7 +1,7 @@
 <?php
 class Ad_125_125_Widget extends WP_Widget {
 
-	function Ad_125_125_Widget() {
+	function __construct() {
 		$widget_ops = array(
 			'classname'   => 'ad_125_125',
 			'description' => __( 'Add 125x125 ads.', CHERRY_PLUGIN_DOMAIN ),

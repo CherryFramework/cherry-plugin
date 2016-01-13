@@ -1,7 +1,7 @@
 <?php
 	class Cherry_Banner_Widget extends WP_Widget {
 		/* constructor */
-		public function Cherry_Banner_Widget() {
+		public function __construct() {
 			parent::__construct( false, __( 'Cherry - Banner', CHERRY_PLUGIN_DOMAIN ), array( 'description'=>'Cherry Banner Widget' ) );
 
 			add_action( 'admin_enqueue_scripts', array( $this, 'upload_scripts' ) );

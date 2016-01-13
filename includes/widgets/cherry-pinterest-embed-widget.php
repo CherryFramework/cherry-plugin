@@ -3,7 +3,7 @@ $error = array();
 	class Cherry_Pinterest_Embed_Widget extends WP_Widget {
 
 		/* constructor */
-		public function Cherry_Pinterest_Embed_Widget() {
+		public function __construct() {
 			parent::__construct(false, __('Cherry - Pinterest Embed', CHERRY_PLUGIN_DOMAIN), array('description' => __('Widget for Pinterest embed content', CHERRY_PLUGIN_DOMAIN)));
 		}
 

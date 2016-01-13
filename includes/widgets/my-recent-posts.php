@@ -2,7 +2,7 @@
 // =============================== My Recent Posts (News widget) ======================================
 class MY_PostWidget extends WP_Widget {
 	/** constructor */
-	function MY_PostWidget() {
+	function __construct() {
 		parent::__construct( false, $name = __( 'Cherry - Recent Posts', CHERRY_PLUGIN_DOMAIN ) );
 	}
 

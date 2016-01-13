@@ -1,6 +1,6 @@
 <?php
 class MY_Vcard_Widget extends WP_Widget {
-	function MY_Vcard_Widget() {
+	function __construct() {
 		$widget_ops = array('classname' => 'widget_cherry_vcard', 'description' => __('Use this widget to add a vCard', CHERRY_PLUGIN_DOMAIN));
 		parent::__construct( 'widget_cherry_vcard', $name = __( 'Cherry - vCard', CHERRY_PLUGIN_DOMAIN ), $widget_ops );
 		$this->alt_option_name = 'widget_cherry_vcard';

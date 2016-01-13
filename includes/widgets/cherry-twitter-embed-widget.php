@@ -3,7 +3,7 @@ $error = array();
 	class Cherry_Twitter_Embed_Widget extends WP_Widget {
 
 		/* constructor */
-		public function Cherry_Twitter_Embed_Widget() {
+		public function __construct() {
 			parent::__construct(false, __('Cherry - Twitter Embed', CHERRY_PLUGIN_DOMAIN), array('description' => __('Widget for Twitter embed content', CHERRY_PLUGIN_DOMAIN)));
 		}
 

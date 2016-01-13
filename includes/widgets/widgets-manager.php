@@ -561,7 +561,7 @@ function check_widget_visibility($id) {
 	$users        = get_option($themename . '_widget_users');
 
 	// if widget doesn't exists - skip this iteration
-	if ( !isset($wp_registered_widgets[$id]) ) continue;
+	if ( !isset($wp_registered_widgets[$id]) ) return false;
 
 	// check the widget rules
 	$conditional_result = false;
