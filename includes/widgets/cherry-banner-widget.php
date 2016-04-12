@@ -154,8 +154,14 @@
 			}
 
 			wp_enqueue_media();
-			wp_print_media_templates();
-			wp_enqueue_script( 'upload_media_widget', CHERRY_PLUGIN_URL . 'admin/js/upload-media-files.js' );
+			// wp_print_media_templates();
+			wp_enqueue_script(
+				'upload_media_widget',
+				CHERRY_PLUGIN_URL . 'admin/js/upload-media-files.js',
+				array( 'jquery' ),
+				CHERRY_PLUGIN_VERSION,
+				true
+			);
 		}
 
 		public function upload_styles() {
