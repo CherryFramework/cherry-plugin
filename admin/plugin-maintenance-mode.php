@@ -80,7 +80,7 @@
 				</th>
 				<td>
 					<p>
-						<textarea name="mtc_mode_description" rows="10" cols="50" id="mtc_mode_description" class="large-text code"><?php echo isset($mtc_options['mtc_mode_description']) ? $mtc_options['mtc_mode_description'] : '' ; ?></textarea>
+						<textarea name="mtc_mode_description" rows="10" cols="50" id="mtc_mode_description" class="large-text code"><?php echo isset($mtc_options['mtc_mode_description']) ? stripslashes( $mtc_options['mtc_mode_description'] ) : '' ; ?></textarea>
 					</p>
 				</td>
 			</tr>

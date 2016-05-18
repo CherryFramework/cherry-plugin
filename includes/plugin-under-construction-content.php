@@ -67,7 +67,7 @@
 <?php };
 
 if(isset($mtc_options['mtc_mode_description'])){ ?>
-	<p id="under_construction_description"><?php echo $mtc_options['mtc_mode_description']; ?></p>
+	<p id="under_construction_description"><?php echo stripslashes( $mtc_options['mtc_mode_description'] ); ?></p>
 <?php
 };
 if(isset($mtc_options['mtc_mode_timer'])){ ?>
