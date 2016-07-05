@@ -36,7 +36,7 @@
 			wp_register_script( 'elastislide', CHERRY_PLUGIN_URL . 'lib/js/elasti-carousel/jquery.elastislide.js', array('jquery', 'easing'), CHERRY_PLUGIN_VERSION );
 			wp_enqueue_script( 'elastislide' );
 
-			wp_register_script( 'googlemapapis', '//maps.googleapis.com/maps/api/js?v=3.exp', array('jquery'), false, false );
+			wp_register_script( 'googlemapapis', cherry_plugin_get_google_map_url(), array('jquery'), false, false );
 			wp_enqueue_script( 'googlemapapis' );
 
 			wp_enqueue_script( 'cherry-plugin', CHERRY_PLUGIN_URL . 'includes/js/cherry-plugin.js', array('jquery'), CHERRY_PLUGIN_VERSION, true );

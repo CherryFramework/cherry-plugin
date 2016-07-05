@@ -65,13 +65,13 @@
 		function cherry_plugin_import_page(){
 			?>
 			<script>
-				if (typeof(window.FileReader) == 'undefined' && window.location.search.indexOf('not_supported=true')==-1) { 
-					window.location.search = '?page=import-page&not_supported=true'; 
+				if (typeof(window.FileReader) == 'undefined' && window.location.search.indexOf('not_supported=true')==-1) {
+					window.location.search = '?page=import-page&not_supported=true';
 				}
 			</script>
 			<?php
 			$response = wp_check_browser_version();
-			$browser_not_supported = isset($_GET['not_supported']) 
+			$browser_not_supported = isset($_GET['not_supported'])
 									|| $response['name'] == 'Internet Explorer' && $response['version'] <= 9
 									|| $response['name'] == 'Safari' && $response['version'] <= 6 ? true : false ;
 			$holder_id = $browser_not_supported ? 'browser_nag' : '' ;
@@ -102,5 +102,20 @@
 			include_once (CHERRY_PLUGIN_DIR.'admin/plugin-maintenance-mode.php');
 
 			$cherry_plugin_components -> get_footer();
+		}
+	}
+
+	if ( ! function_exists( 'cherry_plugin_shortcodes_page' ) ) {
+		function cherry_plugin_shortcodes_page() {
+			$shortcodes_page = new cherry_plugin_components;
+			$shortcodes_page->get_header(
+				array(
+					'title'         => __( 'Shortcode Settings', CHERRY_PLUGIN_DOMAIN ),
+					'wrapper_class' => '',
+			) );
+
+			include_once ( CHERRY_PLUGIN_DIR . 'admin/shortcodes/settings-page.php' );
+
+			$shortcodes_page->get_footer();
 		}
 	}
