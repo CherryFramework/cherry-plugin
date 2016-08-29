@@ -795,5 +795,4 @@ if (!function_exists('video_image')) {
 			return false;
 		}
 	}
-}
-?>
+} ?>
