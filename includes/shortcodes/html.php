@@ -638,5 +638,4 @@ if (!function_exists('extra_wrap_shortcode')) {
 		return $output;
 	}
 	add_shortcode('extra_wrap', 'extra_wrap_shortcode');
-}
-?>
+} ?>
