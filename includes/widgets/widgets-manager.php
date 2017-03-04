@@ -463,8 +463,8 @@ function cherry_widget_control() {
 			<label for="' . $themename . '_widget_rules_'.$id.'">'.__('Visible at', CHERRY_PLUGIN_DOMAIN).': </label>
 			<select name="' . $themename . '_widget_rules_type_'.$id.'" id="' . $themename . '_widget_rules_type_'.$id.'" class="widefat gk_widget_rules_select">
 				<option value="all"'.(($value_type != "include" && $value_type != 'exclude') ? " selected=\"selected\"":"").'>'.__('All pages', CHERRY_PLUGIN_DOMAIN).'</option>
-				<option value="exclude"'.(($value_type == "exclude") ? " selected=\"selected\"":"").'>'.__('All pages expecting', CHERRY_PLUGIN_DOMAIN).':</option>
-				<option value="include"'.(($value_type == "include") ? " selected=\"selected\"":"").'>'.__('No pages expecting', CHERRY_PLUGIN_DOMAIN).':</option>
+				<option value="exclude"'.(($value_type == "exclude") ? " selected=\"selected\"":"").'>'.__('All pages except', CHERRY_PLUGIN_DOMAIN).':</option>
+				<option value="include"'.(($value_type == "include") ? " selected=\"selected\"":"").'>'.__('No pages except', CHERRY_PLUGIN_DOMAIN).':</option>
 			</select>
 		</p>
 		<fieldset class="gk_widget_rules_form" id="gk_widget_rules_form_'.$unique_id.'" data-id="gk_widget_rules_form_'.$id.'">
