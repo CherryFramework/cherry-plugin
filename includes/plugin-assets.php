@@ -65,10 +65,12 @@
 			echo '<script>jQuery(window).on("load", function() { setTimeout(function(){ jQuery("#maintenance_mode_notice").fadeOut(); }, 3000) })</script>';
 		}
 	}
-	add_action('wp_ajax_mtc_save', 'cherry_mtc_save');
+	add_action( 'wp_ajax_mtc_save', 'cherry_mtc_save' );
 	function cherry_mtc_save() {
-		$post_date = isset($data) ? $data : $_POST['data'] ;
-		update_option('mtc_options', $post_date);
+		$post_data = isset( $data ) ? $data : $_POST['data'];
+		$post_data = array_map( 'sanitize_text_field', $post_data );
+
+		update_option( 'mtc_options', $post_data );
 		exit();
 	}
 //-----------------------------------------------------------------------------
