@@ -29,7 +29,7 @@
 			define('CHERRY_PLUGIN_NAME', $plugin_data['Name']);
 			define('CHERRY_PLUGIN_SLUG', plugin_basename( __FILE__ ));
 			define('CHERRY_PLUGIN_DB', $wpdb->prefix.CHERRY_PLUGIN_DOMAIN);
-			define('CHERRY_PLUGIN_REMOTE_SERVER', esc_url( 'http://tmbhtest.com/cherryframework.com/components_update/' ));
+			define('CHERRY_PLUGIN_REMOTE_SERVER', esc_url( 'http://cherryframework.com/components_update/' ));
 
 			//Other constant variables
 			define('CURRENT_THEME_DIR', get_stylesheet_directory());
