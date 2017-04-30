@@ -67,10 +67,14 @@
 	}
 	add_action( 'wp_ajax_mtc_save', 'cherry_mtc_save' );
 	function cherry_mtc_save() {
-		$post_data = isset( $data ) ? $data : $_POST['data'];
-		$post_data = array_map( 'sanitize_text_field', $post_data );
 
-		update_option( 'mtc_options', $post_data );
+		if ( current_user_can( 'manage_options' ) ) {
+			$post_data = isset( $data ) ? $data : $_POST['data'];
+			$post_data = array_map( 'sanitize_text_field', $post_data );
+
+			update_option( 'mtc_options', $post_data );
+		}
+
 		exit();
 	}
 //-----------------------------------------------------------------------------
