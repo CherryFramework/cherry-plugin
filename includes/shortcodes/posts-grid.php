@@ -7,22 +7,23 @@ if (!function_exists('posts_grid_shortcode')) {
 
 	function posts_grid_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
-			'type'            => 'post',
-			'category'        => '',
-			'custom_category' => '',
-			'tag'             => '',
-			'columns'         => '3',
-			'rows'            => '3',
-			'order_by'        => 'date',
-			'order'           => 'DESC',
-			'thumb_width'     => '370',
-			'thumb_height'    => '250',
-			'lightbox'  	  => 'yes',
-			'meta'            => '',
-			'excerpt_count'   => '15',
-			'link'            => 'yes',
-			'link_text'       => __('Read more', CHERRY_PLUGIN_DOMAIN),
-			'custom_class'    => ''
+			'type'             => 'post',
+			'category'         => '',
+			'custom_category'  => '',
+			'tag'              => '',
+			'columns'          => '3',
+			'rows'             => '3',
+			'order_by'         => 'date',
+			'order'            => 'DESC',
+			'thumb_width'      => '370',
+			'thumb_height'     => '250',
+			'lightbox'  	   => 'yes',
+			'meta'             => '',
+			'excerpt_count'    => '15',
+			'link'             => 'yes',
+			'link_text'        => __('Read more', CHERRY_PLUGIN_DOMAIN),
+			'custom_class'     => '',
+			'only_child_posts' => ''
 		), $atts));
 
 		$spans = $columns;
@@ -101,6 +102,10 @@ if (!function_exists('posts_grid_shortcode')) {
 				'order'             => $order,
 				'suppress_filters'  => $suppress_filters
 			);
+
+			if ($only_child_posts == 'yes') {
+				$args['post_parent'] = $post->ID;
+			}
 
 			$posts = get_posts( $args );
 

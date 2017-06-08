@@ -62,6 +62,15 @@ frameworkShortcodeAtts={
 				help:"How many words are displayed in the excerpt?"
 			},
 			{
+				label:"Display only child posts",
+				id:"only_child_posts",
+				controlType:"select-control",
+				selectValues:['yes', 'no'],
+				defaultValue: 'no',
+				defaultText: 'no',
+				help:"Display only child posts of the current post."
+			},
+			{
 				label:"Custom class",
 				id:"custom_class",
 				help:"Use this field if you want to use a custom class."

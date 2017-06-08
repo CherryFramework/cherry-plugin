@@ -76,6 +76,15 @@ frameworkShortcodeAtts={
 				help:"Enter tags for posts filtering. Leave blank to pull all tags"
 			},
 			{
+			label:"Display only child posts",
+			id:"only_child_posts",
+			controlType:"select-control",
+			selectValues:['yes', 'no'],
+			defaultValue: 'no',
+			defaultText: 'no',
+			help:"Display only child posts of the current post."
+			},
+			{
 				label:"Tags",
 				id:"tags",
 				controlType:"select-control",

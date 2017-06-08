@@ -7,19 +7,20 @@ if (!function_exists('posts_list_shortcode')) {
 
 	function posts_list_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		extract(shortcode_atts(array(
-			'type'         => 'post',
-			'thumbs'       => '',
-			'thumb_width'  => '',
-			'thumb_height' => '',
-			'post_content' => '',
-			'numb'         => '5',
-			'order_by'     => '',
-			'order'        => '',
-			'link'         => '',
-			'link_text'    => __('Read more', CHERRY_PLUGIN_DOMAIN),
-			'tag'          => '',
-			'tags'         => '',
-			'custom_class' => ''
+			'type'             => 'post',
+			'thumbs'           => '',
+			'thumb_width'      => '',
+			'thumb_height'     => '',
+			'post_content'     => '',
+			'numb'             => '5',
+			'order_by'         => '',
+			'order'            => '',
+			'link'             => '',
+			'link_text'        => __('Read more', CHERRY_PLUGIN_DOMAIN),
+			'tag'              => '',
+			'tags'             => '',
+			'custom_class'     => '',
+			'only_child_posts' => '',
 		), $atts));
 
 		// check what order by method user selected
@@ -63,6 +64,10 @@ if (!function_exists('posts_list_shortcode')) {
 			'order'            => $order,
 			'suppress_filters' => $suppress_filters
 		);
+
+		if ($only_child_posts == 'yes') {
+			$args['post_parent'] = $post->ID;
+		}
 
 		$posts = get_posts($args);
 		$i = 0;
