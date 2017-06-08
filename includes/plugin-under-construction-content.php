@@ -1,8 +1,8 @@
 <?php
-	$mtc_options = get_option('mtc_options');
-	$get_theme= wp_get_theme();
-	$date_ms = (float) $mtc_options['date_ms'];
-	$left_time = $date_ms-(gmdate("U"));
+	$mtc_options = get_option( 'mtc_options' );
+	$get_theme   = wp_get_theme();
+	$date_ms     = (float) $mtc_options['date_ms'];
+	$left_time   = $date_ms - ( gmdate( 'U') );
 ?>
 <script>
 	jQuery(document).ready(function() {
@@ -67,7 +67,7 @@
 <?php };
 
 if(isset($mtc_options['mtc_mode_description'])){ ?>
-	<p id="under_construction_description"><?php echo stripslashes( $mtc_options['mtc_mode_description'] ); ?></p>
+	<p id="under_construction_description"><?php echo wp_unslash( wp_kses_post( $mtc_options['mtc_mode_description'] ) ); ?></p>
 <?php
 };
 if(isset($mtc_options['mtc_mode_timer'])){ ?>

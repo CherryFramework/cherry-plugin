@@ -1,12 +1,12 @@
 <?php
-	$mtc_options = get_option('mtc_options');
-	$to_day = getdate();
-	$set_date = array(
-		'year' => isset($mtc_options['mtc_mode_year']) ? $mtc_options['mtc_mode_year'] : $to_day['year'],
-		'month' => isset($mtc_options['mtc_mode_month']) ? $mtc_options['mtc_mode_month'] : $to_day['mon'],
-		'day' => isset($mtc_options['mtc_mode_day']) ? $mtc_options['mtc_mode_day'] : $to_day['mday'],
-		'hours' => isset($mtc_options['mtc_mode_hour']) ? $mtc_options['mtc_mode_hour'] : $to_day['hours'],
-		'minutes' => isset($mtc_options['mtc_mode_minute']) ? $mtc_options['mtc_mode_minute'] : $to_day['minutes'],
+	$mtc_options = get_option( 'mtc_options' );
+	$to_day      = getdate();
+	$set_date    = array(
+		'year'    => isset($mtc_options['mtc_mode_year']) ? absint( $mtc_options['mtc_mode_year'] ) : $to_day['year'],
+		'month'   => isset($mtc_options['mtc_mode_month']) ? absint( $mtc_options['mtc_mode_month'] ) : $to_day['mon'],
+		'day'     => isset($mtc_options['mtc_mode_day']) ? absint( $mtc_options['mtc_mode_day'] ) : $to_day['mday'],
+		'hours'   => isset($mtc_options['mtc_mode_hour']) ? absint( $mtc_options['mtc_mode_hour'] ) : $to_day['hours'],
+		'minutes' => isset($mtc_options['mtc_mode_minute']) ? absint( $mtc_options['mtc_mode_minute'] ) : $to_day['minutes'],
 		);
 ?>
 <script>
@@ -80,7 +80,7 @@
 				</th>
 				<td>
 					<p>
-						<textarea name="mtc_mode_description" rows="10" cols="50" id="mtc_mode_description" class="large-text code"><?php echo isset($mtc_options['mtc_mode_description']) ? stripslashes( $mtc_options['mtc_mode_description'] ) : '' ; ?></textarea>
+						<textarea name="mtc_mode_description" rows="10" cols="50" id="mtc_mode_description" class="large-text code"><?php echo isset($mtc_options['mtc_mode_description']) ? wp_unslash( esc_textarea( $mtc_options['mtc_mode_description'] ) ) : '' ; ?></textarea>
 					</p>
 				</td>
 			</tr>
