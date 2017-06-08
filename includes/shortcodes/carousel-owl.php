@@ -63,7 +63,7 @@ if ( !function_exists('shortcode_carousel_owl') ) {
 		$get_category_type = $post_type == 'post' ? 'category' : $post_type.'_category';
 		$categories_ids = array();
 		foreach ( explode(',', str_replace(', ', ',', $categories)) as $category ) {
-			$get_cat_id = get_term_by( 'name', $category, $get_category_type );
+			$get_cat_id = get_category_by_slug($category);
 			if ( $get_cat_id ) {
 				$categories_ids[] = $get_cat_id->term_id;
 			}
