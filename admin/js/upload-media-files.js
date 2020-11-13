@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-    jQuery('.upload_image_button').live('click', function () {
+    jQuery('.upload_image_button').on('click', function () {
         var cherry_uploader,
             button = jQuery(this);
         cherry_uploader = wp.media.frames.file_frame = wp.media({
